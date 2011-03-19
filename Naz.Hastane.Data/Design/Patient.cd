@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Naz.Hastane.Data.Entities.Patient">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IKAGQVCEBCC5BAAAALAgUQ+IgA5hBAgOIKXiBQSQCFg=</HashCode>
+      <FileName>Entities\Patient\Patient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_PatientVisits" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientVisit">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>SZKAQYE8TAQnAwYAoCDgAAwJqoKDYISAAUgUHAABCIA=</HashCode>
+      <FileName>Entities\Patient\PatientVisit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_PatientVisitDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientVisitDetail">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SQgASBAEIIAQcADCmSIACBAYiAiAdIWCCQICASACAAk=</HashCode>
+      <FileName>Entities\Patient\PatientVisitDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientVisitRecord">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CACAQAAMBERAlAAggCEIIAApgAAhIYAGIAgAHQBCAAg=</HashCode>
+      <FileName>Entities\Patient\PatientVisitRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientContribution">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Patient\PatientContribution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientDiscount">
+    <Position X="9.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAQEEAAgCCAQAACAgAAgIAAAAAQAAAAAAgA=</HashCode>
+      <FileName>Entities\Patient\PatientDiscount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientDiscountDetail">
+    <Position X="9.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAQAAAAAIAgIAAAAAAAAAAAiAA=</HashCode>
+      <FileName>Entities\Patient\PatientDiscountDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,325 @@
+        If lYeni Then
+            
+'
+'     xSql = "SELECT FIXKURUM FROM ADRES,KURADR WHERE ADRES.PSG=KURADR.PSG AND ADRES.KNR='" + sKNR + "'"
+'          Set_Rs2
+'     If Not Rs2.EOF Then
+'
+'       GSSKURUM = Rs2("FIXKURUM") + 1
+'    End If
+'
+' If Rs2("FIXKURUM") = 3 Then
+'            If strAcýklama = "" Then
+'                If ProvizyonKontrol(strAcýklama, strProvizyonNo, True) = False Then
+'                    cn.RollbackTrans
+'                    uMsgBox strAcýklama
+'                    Exit Sub
+'                End If
+'            End If
+'
+'        End If
+        
+'            xSql = "select SEVKGECSURE,DESTEKPSG from KURADR where PSG='" & YENIORNEKARAMA.MLblKurumKodu.Caption & "'"
+'            Set_Rs2
+'            nSevkGecSure = Rs2("SEVKGECSURE")
+'            DESTEKPSG = Rs2("SEVKGECSURE")
+'            Rs2.Close
+'            If DESTEKPSG <> "" Then
+'              DESTEKPSG1 = DESTEKPSG
+'              Else
+'              DESTEKPSG1 = YENIORNEKARAMA.MLblKurumKodu1
+'            End If
+            
+            
+'            MsgBox YENIORNEKARAMA.MLblKurumKodu1
+'
+'If YENIORNEKARAMA.MLblKurumKodu1 = "" Then
+'DESTEKPSG1 = "11"
+'
+' Else
+' DESTEKPSG1 = YENIORNEKARAMA.MLblKurumKodu1
+'End If
+     xSql = "select SEVKGECSURE from KURADR where PSG='" & YENIORNEKARAMA.MLblKurumKodu.Caption & "'"
+            Set_Rs2
+            nSevkGecSure = Rs2("SEVKGECSURE")
+            Rs2.Close
+            
+               xSql = "INSERT into BEHAND (KNR, SNR, BHDAT, SEVKGECSURE, ARZT, SERVIS, SERNO, AMBU, SIRAID, HZLNO, PROVIZYONNO, USER_ID,DESTEKPSG,PSG, DATE_CREATE)"
+            xSql = xSql & " values ('" & _
+                    SKNR & "','" & _	KNR
+                    MSNR & "','" & _	SNR
+                    TxtYatýþTarihi.Value & "'," & _ BHDAT
+                    nSevkGecSure & ",'" & _	SEVKGECSURE
+                    LswDoktorKodu.SelectedItem.SubItems(1) & "','" & _	ARZT
+                    LswServisKodu.SelectedItem.SubItems(1) & "','" & _	SERVIS
+                    txtfiþno.Text & "','" & _	SERNO
+                    cKartTipi & "'," & _	AMBU
+                    YENI_ICMAL_ID(YENIORNEKARAMA.MLblKurumKodu.Caption) & "," & _	SIRAID
+                    0 & ",'" & _	HZLNO
+                    strProvizyonNo & "','" & _	PROVIZYONNO
+                    ActiveUser & "','" & _	USER_ID
+                    YENIORNEKARAMA.MLblKurumKodu1 & "','" & _	DESTEKPSG
+                    YENIORNEKARAMA.MLblKurumKodu & "','" & _	PSG
+                    Now & "')"	DATE_CREATE
+            cn.Execute xSql
+          
+'             cn.CommitTrans
+        End If
+        
+        xSql = "update BEHAND set HZLNO=HZLNO + 1 where KNR='" & SKNR & "' and SNR='" & MSNR & "'"
+        cn.Execute xSql
+        xSql = "select HZLNO from BEHAND where KNR='" & SKNR & "' and SNR='" & MSNR & "'"
+        Set_Rs2
+        nHZLNO = Rs2("HZLNO")
+            
+        dGELISTARIHI = TxtYatýþTarihi.Value & " " & Time
+        
+        xSql = "INSERT into BEHAND_DETAY (KNR, SNR, GELISTARIHI, ARZT, SERVIS, SERNO, AMBU, USER_ID, DATE_CREATE)"
+        xSql = xSql & " values ('" & _
+                SKNR & "','" & _
+                MSNR & "','" & _
+                dGELISTARIHI & "','" & _
+                LswDoktorKodu.SelectedItem.SubItems(1) & "','" & _
+                LswServisKodu.SelectedItem.SubItems(1) & "','" & _
+                txtfiþno.Text & "','" & _
+                cKartTipi & "','" & _
+                ActiveUser & "','" & _
+                Now & "')"
+        cn.Execute xSql
+        
+        cn.CommitTrans
+        Me.Hide
+        
+    SLY = 0
+
+
+    xSql = "select SERVIS FROM BEHAND_DETAY Where KNR='" & SKNR & "' and sNR='" & MSNR & "' ORDER BY DATE_CREATE DESC"
+    Set_Rs2
+
+    SERVIS = Rs2("SERVIS")
+    Rs2.Close
+    xSql = "select SLY FROM KEYDAT Where SLK='17' and SLB='" & LswServisKodu.SelectedItem.SubItems(1) & "'"
+
+    Set_Rs2
+    If Rs2.EOF Then
+        Rs2.Close
+        GoTo 50
+    End If
+    If IsNull(Rs2("SLY")) Then
+        Rs2.Close
+        GoTo 50
+    End If
+    SLY = Rs2("SLY")
+    Rs2.Close
+
+    xSql = "select  PSG FROM ADRES Where KNR='" & SKNR & "'"
+    Set_Rs2
+    PSG = Rs2("PSG")
+    Rs2.Close
+    
+    xSql = "select  YFIYLIST,SEVKBASAMAK,ACILKATILIM FROM KURADR Where PSG='" & PSG & "'"
+    Set_Rs2
+    FiyatListesiKodu1 = Rs2("YFIYLIST")
+    If Not IsNull(Rs2("SEVKBASAMAK")) Then
+    SEVKBASAMAK = Rs2("SEVKBASAMAK")
+    End If
+    
+    If Not IsNull(Rs2("ACILKATILIM")) Then
+    ACILKATILIM = Rs2("ACILKATILIM")
+    End If
+    
+    Rs2.Close
+    
+    If SLY = 1 Then StrFiyatListeKodu = FiyatListesiKodu1
+    
+    
+    If chkbasamak.Value = 1 Then
+     xSql = "SELECT SLT FROM KEYDAT WHERE SLK='00' AND SLB='HSTBASAMAK'"
+        Set_Rs1
+        If SEVKBASAMAK = 1 Then
+      StrFiyatListeKodu = Mid(Rs1("SLT"), 1, 2)
+      
+        Else
+        
+        StrFiyatListeKodu = FiyatListesiKodu1
+      End If
+      
+  End If
+  
+  Behand_Update
+  
+  
+50
+        
+        
+        ' buradan otomatik muayene ücreti iþlenir
+        ' Özel Hastalarýn Muayene ücretleri "seçeneklerde" iþaretli ise hastaya, diðerleri kuruma iþlenir.
+        ' Hastanýn daha sonra "Girilmiþ Hizmetlere Makbuz Kes" Ekranýndan tahsilatý yapýlmalýdýr.
+        lOzel = (Trim(YENIORNEKARAMA.MLblKurumKodu) = Trim(KeyGet("00", "OZHASKOD", 6)))
+        If (Not lOzel) Or (lOzel And KeyGet("00", "OZHASOTMUA", 1) = "1") Then
+            If True Then
+                SSNR = MSNR
+                
+         
+         
+               
+               xSql = "select SERVISKODU,TANIM,GRUP,CODE,KATILIM from OTOMATIK_MUAYENELER where   SERVISKODU='" & LswServisKodu.SelectedItem.SubItems(1) & "'"
+                Set_Rs3 , adOpenStatic
+               
+                
+                
+'                If Rs3.EOF Then
+'                    Rs3.Close
+'                    xSql = "select SLT from KEYDAT where SLK='22' and SLB='00'"
+'                    Set_Rs3 , adOpenStatic
+'                End If
+'                cn.BeginTrans
+                kDate = Now
+                Do While Not Rs3.EOF
+                
+        
+                
+                
+                    sTANIM = Rs3("TANIM")
+                    sGRUP = Rs3("GRUP")
+                    sCODE = Rs3("CODE")
+                    
+                    ' Farklý Fiyat LÝstesi Ýçin Farklý Ad Varsa O kaydedilecek
+                    xSql = "select H.CODE, H.NAME1, H.KDV, H.SATISF" & StrFiyatListeKodu & " As SATISF, H.KSATISF" & StrFiyatListeKodu & " As KSATISF from HIZMET H where H.TANIM='" & sTANIM & "' and H.GRUP='" & sGRUP & "' and H.CODE = '" & sCODE & "'"
+                    Set_Rs4
+                    If Not Rs4.EOF Then
+                        sNAME1 = Rs4("NAME1")
+                        sKURUM = YENIORNEKARAMA.MLblKurumKodu
+                        sSATISF = IIf(IsNull(Rs4("SATISF")), 0, Rs4("SATISF"))
+                        sKSATISF = IIf(IsNull(Rs4("KSATISF")), 0, Rs4("KSATISF"))
+                        
+                        If lOzel Then
+                            FTANIM = sTANIM
+                            FGRUP = sGRUP
+                            xSql = "SELECT PSG FROM ADRES WHERE KNR='" & SKNR & "'"
+                            Set_Rs2 , adOpenStatic
+                            FKNR = Rs2("PSG")
+                            Rs2.Close
+                            xSql = "SELECT KNR FROM KURADR WHERE PSG='" & FKNR & "'"
+                            Set_Rs2 , adOpenStatic
+                            FKNR = Rs2("KNR")
+                            Rs2.Close
+                            
+                            xSql = "SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR='" & FKNR & "' AND TANIM='" & FTANIM & "' AND GRUP='" & FGRUP & "'"
+                            Set_Rs2 , adOpenStatic
+                            If Rs2.EOF = True Then
+                                FORAN = 0
+                            Else
+                                FORAN = Rs2("INDIRIMORANI")
+                            End If
+                            Rs2.Close
+                            FDEGER = (sSATISF + sKSATISF)
+                            sSATISF = Round(CDbl(FDEGER) - (CDbl(FDEGER) * (FORAN / 100)), 2)
+                            sKSATISF = 0
+                        Else
+                            ' Hizmet Girilmekte Olan Ana Grubun Ýndirimi Hesaplanýyor.
+                            FTANIM = sTANIM
+                            FGRUP = sGRUP
+                            xSql = "SELECT PSG FROM ADRES WHERE KNR='" & SKNR & "'"
+                            Set_Rs2 , adOpenStatic
+                            FKNR = Rs2("PSG")
+                            Rs2.Close
+                            xSql = "SELECT KNR FROM KURADR WHERE PSG='" & FKNR & "'"
+                            Set_Rs2 , adOpenStatic
+                            FKNR = Rs2("KNR")
+                            Rs2.Close
+                            
+                            xSql = "SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR='" & FKNR & "' AND TANIM='" & FTANIM & "' AND GRUP='" & FGRUP & "'"
+                            Set_Rs2 , adOpenStatic
+                            If Rs2.EOF = True Then
+                                FORAN = 0
+                            Else
+                                FORAN = Rs2("INDIRIMORANI")
+                            End If
+                            Rs2.Close
+                            FDEGER = sSATISF
+                            sSATISF = Round(CDbl(FDEGER) - (CDbl(FDEGER) * (FORAN / 100)), 2)
+                            FDEGER = sKSATISF
+                            sKSATISF = Round(CDbl(FDEGER) - (CDbl(FDEGER) * (FORAN / 100)), 2)
+                            
+                            ' Hasta Katýlým Oranaý Varsa
+                            If YENIORNEKARAMA.lKATILIM Then
+'                                Dim TopSATISF As Double
+                                cORAN = Val(Mid(YENIORNEKARAMA.cKATILIM, Val(sTANIM) * 3 + 1, 3))
+                                TopSATISF = sSATISF + sKSATISF
+                                sSATISF = Round((TopSATISF - DestekKurumTutar(sKURUM, sTANIM, sGRUP, sCODE, TopSATISF, "P")) * cORAN / 100, 2)
+                                
+                           
+                                
+                                sKSATISF = TopSATISF - sSATISF
+                                
+                                DSATISF = Round(TopSATISF - (sKSATISF + sSATISF), 2)
+                                
+                                
+'                                MsgBox DSATISF
+                                
+                            End If
+                        End If
+                        
+                        sDOKTOR = LswDoktorKodu.SelectedItem.SubItems(1)
+                        sKDV = Rs4("KDV")
+    
+                        xSql = "SELECT max(SIRANO) as SIRANO1 FROM HIZIL WHERE KNR='" & SKNR & "' AND SNR='" & SSNR & "'"
+                        Set_Rs2
+                        nNumber = CLng("0" & DataBaseToString(Rs2("SIRANO1"))) + 1
+                        
+                        
+                 Rs2.Close
+   
+        
+                
+                xSql = "UPDATE  BEHAND_DETAY SET PSG='" & sKURUM & "'  WHERE KNR='" + SKNR + "' AND SNR='" + SSNR + "'"
+                 cn.Execute xSql
+                   xSql = "UPDATE  BEHAND SET PSG='" & sKURUM & "'  WHERE KNR='" + SKNR + "' AND SNR='" + SSNR + "'"
+                 cn.Execute xSql
+                 
+      xSql = "UPDATE BEHAND SET DESTEKPSG='" + YENIORNEKARAMA.MLblKurumKodu1.Caption + "' WHERE KNR='" + SKNR + "' AND SNR='" + SSNR + "' "
+          cn.Execute xSql
+          
+          
+       
+           
+        
+                        If sSATISF > 0 Or sKSATISF > 0 Then
+                                If ACILKATILIM = 1 And cKartTipi = "A" Then
+            
+         sSATISF = 0
+     
+         End If
+                            xSql = "INSERT into HIZIL(KNR, SNR, TARIH, TANIM, GRUP, CODE, NAME1, KDV, ADET, SATISF, KSATISF, PSG, ARZT, ARZT2, HZLNO, USER_ID, DATE_CREATE, SIRANO)" & _
+                                    "values ( '" & _
+                                            SKNR & "','" & _
+                                            SSNR & "','" & _
+                                            kDate & "','" & _
+                                            sTANIM & "','" & _
+                                            sGRUP & "','" & _
+                                            sCODE & "','" & _
+                                            sNAME1 & "'," & _
+                                            sKDV & "," & _
+                                            "1," & _
+                                            Dbl2StrDbl(sSATISF) & "," & _
+                                            Dbl2StrDbl(sKSATISF) & ",'" & _
+                                            sKURUM & "','" & _
+                                            sDOKTOR & "','" & _
+                                            sDOKTOR & "'," & _
+                                            nHZLNO & ",'" & _
+                                            ActiveUser & "','" & _
+                                            Now & _
+                                            "'," & nNumber & ")"
+                            cn.Execute xSql
+                            Behand_Update SKNR, SSNR
+                            
+                        End If
+                    End If
+                    Rs4.Close
+                    Rs3.MoveNext
+                Loop
+                Rs3.Close
+'                cn.CommitTrans
+                
+          End If

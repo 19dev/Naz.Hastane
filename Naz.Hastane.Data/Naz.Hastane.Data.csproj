@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF03AAE9-DB3A-40B4-94C7-74AA954B93BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naz.Hastane.Data</RootNamespace>
+    <AssemblyName>Naz.Hastane.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\Naz.Shared\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\Naz.Shared\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Naz.Shared\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Naz.Shared\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\Naz.Shared\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini">
+      <HintPath>..\Naz.Shared\Nini.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\CashDesk.cs" />
+    <Compile Include="Entities\Doctor\DoctorAccount.cs" />
+    <Compile Include="Entities\Doctor\DoctorAccountDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorInvoiceDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorPool.cs" />
+    <Compile Include="Entities\Doctor\DoctorProcess.cs" />
+    <Compile Include="Entities\Doctor\DoctorVoucherDetail.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyContribution.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDetail.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceTemp.cs" />
+    <Compile Include="Entities\LookUp\BloodType.cs" />
+    <Compile Include="Entities\LookUp\Depository.cs" />
+    <Compile Include="Entities\LookUp\Doctor.cs" />
+    <Compile Include="Entities\LookUp\City.cs" />
+    <Compile Include="Entities\LookUp\IDType.cs" />
+    <Compile Include="Entities\LookUp\Medula\FollowUpType.cs" />
+    <Compile Include="Entities\LookUp\FunctionGroup.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompany.cs" />
+    <Compile Include="Entities\LookUp\FunctionGroupType.cs" />
+    <Compile Include="Entities\LookUp\Medula\InsuranceType.cs" />
+    <Compile Include="Entities\LookUp\LookUpBase.cs" />
+    <Compile Include="Entities\LookUp\Nationality.cs" />
+    <Compile Include="Entities\LookUp\PatientRelation.cs" />
+    <Compile Include="Entities\LookUp\Medula\ProvisionType.cs" />
+    <Compile Include="Entities\LookUp\Medula\RelationType.cs" />
+    <Compile Include="Entities\LookUp\Room.cs" />
+    <Compile Include="Entities\LookUp\Medula\TransferorInstitution.cs" />
+    <Compile Include="Entities\LookUp\Medula\TreatmentStyle.cs" />
+    <Compile Include="Entities\LookUp\Medula\TreatmentType.cs" />
+    <Compile Include="Entities\Product\Product.cs" />
+    <Compile Include="Entities\Product\ProductCoefficient.cs" />
+    <Compile Include="Entities\Product\ProductDoctorPercent.cs" />
+    <Compile Include="Entities\Product\ProductOld.cs" />
+    <Compile Include="Entities\Product\ProductOtherCode.cs" />
+    <Compile Include="Entities\Product\ProductOtherName.cs" />
+    <Compile Include="Entities\LookUp\Service.cs" />
+    <Compile Include="Entities\LookUp\VAT.cs" />
+    <Compile Include="Entities\LookUp\Warehouse.cs" />
+    <Compile Include="Entities\Patient\PatientDiscount.cs" />
+    <Compile Include="Entities\Patient\PatientDiscountDetail.cs" />
+    <Compile Include="Entities\Patient\Patient.cs" />
+    <Compile Include="Entities\Patient\PatientContribution.cs" />
+    <Compile Include="Entities\Patient\PatientVisit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\LookUp\SystemSetting.cs" />
+    <Compile Include="Entities\Patient\PatientVisitRecord.cs" />
+    <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Mappings\CashDeskMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorAccountDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorAccountMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorInvoiceDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorPoolMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorProcessMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorVoucherDetailMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyContributionMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDetailMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDiscountMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyMap.cs" />
+    <Compile Include="Mappings\InvoiceMap.cs" />
+    <Compile Include="Mappings\InvoiceTempMap.cs" />
+    <Compile Include="Mappings\LookUp\BloodTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\DepositoryMap.cs" />
+    <Compile Include="Mappings\LookUp\DoctorMap.cs" />
+    <Compile Include="Mappings\LookUp\CityMap.cs" />
+    <Compile Include="Mappings\LookUp\IDTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\FollowUpTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\FunctionGroupMap.cs" />
+    <Compile Include="Mappings\LookUp\FunctionGroupTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\InsuranceTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\LookUpBaseMap.cs" />
+    <Compile Include="Mappings\LookUp\NationalityMap.cs" />
+    <Compile Include="Mappings\LookUp\PatientRelationMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\ProvisionTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\RelationTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\RoomMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\TransferorInstitutionMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\TreatmentStyleMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\TreatmentTypeMap.cs" />
+    <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
+    <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
+    <Compile Include="Mappings\Product\ProductMap.cs" />
+    <Compile Include="Mappings\Product\ProductOldMap.cs" />
+    <Compile Include="Mappings\Product\ProductOtherCodeMap.cs" />
+    <Compile Include="Mappings\Product\ProductOtherNameMap.cs" />
+    <Compile Include="Mappings\LookUp\ServiceMap.cs" />
+    <Compile Include="Mappings\LookUp\VATMap.cs" />
+    <Compile Include="Mappings\LookUp\WarehouseMap.cs" />
+    <Compile Include="Mappings\Patient\PatientDiscountDetailMap.cs" />
+    <Compile Include="Mappings\Patient\PatientDiscountMap.cs" />
+    <Compile Include="Mappings\Patient\PatientContributionMap.cs" />
+    <Compile Include="Mappings\Patient\PatientMap.cs" />
+    <Compile Include="Entities\Patient\PatientVisitDetail.cs" />
+    <Compile Include="Mappings\Patient\PatientVisitDetailMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappings\Patient\PatientVisitMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappings\LookUp\SystemSettingMap.cs" />
+    <Compile Include="Mappings\Patient\PatientVisitRecordMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
+    <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="NHibernateSessionManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataBindingFactory.cs" />
+    <Compile Include="Services\DataBindingIntercepter .cs" />
+    <Compile Include="Services\LookUpServices.cs" />
+    <Compile Include="Services\PatientServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Design\Doctor.cd" />
+    <None Include="Design\InsuranceCompany.cd" />
+    <None Include="Design\LookUp.cd" />
+    <None Include="Design\Patient.cd" />
+    <None Include="Design\Product.cd" />
+    <None Include="Docs\TıpdataTables.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Docs\NHibernateCode.txt" />
+    <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HBM\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

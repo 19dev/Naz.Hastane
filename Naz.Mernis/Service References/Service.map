@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceReference>
+	<ProxyGenerationParameters
+		ServiceReferenceUri="https://kps.nvi.gov.tr/Mernis.KPS.Web.SI/KPS.asmx?wsdl"
+		Name="Service"
+		NotifyPropertyChange="True"
+		UseObservableCollection="False">
+	</ProxyGenerationParameters>
+	<EndPoints>
+		<EndPoint
+			Address="https://kps.nvi.gov.tr/Mernis.KPS.Web.SI/KPS.asmx"
+			BindingConfiguration="KPSSoap"
+			Contract="Naz.Mernis.Service.KPSSoap"
+			>
+		</EndPoint>
+		<EndPoint
+			Address="https://kps.nvi.gov.tr/Mernis.KPS.Web.SI/KPS.asmx"
+			BindingConfiguration="KPSSoap12"
+			Contract="Naz.Mernis.Service.KPSSoap"
+			>
+		</EndPoint>
+	</EndPoints>
+</ServiceReference>

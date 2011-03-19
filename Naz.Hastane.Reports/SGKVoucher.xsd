@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SGKVoucher" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TIPDATAConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TIPDATAConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Naz.Hastane.Reports.Properties.Settings.GlobalReference.Default.TIPDATAConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TIPDATAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TIPDATAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Naz.Hastane.Reports.Properties.Settings.GlobalReference.Default.TIPDATAConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIPDATAConnectionString1 (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ADRES.HASTAADI, ADRES.HASTASOYADI, BEHAND.BHDAT, BEHAND.ARZT, BEHAND.SERVIS, BEHAND.AMBU, HIZIL.GRUP, HIZIL.CODE, KASA.MAKBUZNO, 
+                         KASA.MAKBUZTIPI, KASA.ODEMESEKLI
+FROM            ADRES INNER JOIN
+                         BEHAND ON ADRES.KNR = BEHAND.KNR INNER JOIN
+                         HIZIL ON BEHAND.KNR = HIZIL.KNR AND BEHAND.SNR = HIZIL.SNR AND BEHAND.ARZT = HIZIL.ARZT AND BEHAND.USER_ID = HIZIL.USER_ID AND 
+                         BEHAND.DATE_CREATE = HIZIL.DATE_CREATE AND BEHAND.USER_ID_UPDATE = HIZIL.USER_ID_UPDATE AND 
+                         BEHAND.DATE_UPDATE = HIZIL.DATE_UPDATE AND BEHAND.HZLNO = HIZIL.HZLNO INNER JOIN
+                         KASA ON HIZIL.MAKNO = KASA.MAKNO INNER JOIN
+                         KEYDAT ON HIZIL.TANIM = KEYDAT.SLB</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HASTAADI" DataSetColumn="HASTAADI" />
+              <Mapping SourceColumn="HASTASOYADI" DataSetColumn="HASTASOYADI" />
+              <Mapping SourceColumn="BHDAT" DataSetColumn="BHDAT" />
+              <Mapping SourceColumn="ARZT" DataSetColumn="ARZT" />
+              <Mapping SourceColumn="SERVIS" DataSetColumn="SERVIS" />
+              <Mapping SourceColumn="AMBU" DataSetColumn="AMBU" />
+              <Mapping SourceColumn="GRUP" DataSetColumn="GRUP" />
+              <Mapping SourceColumn="CODE" DataSetColumn="CODE" />
+              <Mapping SourceColumn="MAKBUZNO" DataSetColumn="MAKBUZNO" />
+              <Mapping SourceColumn="MAKBUZTIPI" DataSetColumn="MAKBUZTIPI" />
+              <Mapping SourceColumn="ODEMESEKLI" DataSetColumn="ODEMESEKLI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SGKVoucher" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="SGKVoucher" msprop:Generator_UserDSName="SGKVoucher">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HASTAADI" msprop:Generator_ColumnVarNameInTable="columnHASTAADI" msprop:Generator_ColumnPropNameInRow="HASTAADI" msprop:Generator_ColumnPropNameInTable="HASTAADIColumn" msprop:Generator_UserColumnName="HASTAADI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HASTASOYADI" msprop:Generator_ColumnVarNameInTable="columnHASTASOYADI" msprop:Generator_ColumnPropNameInRow="HASTASOYADI" msprop:Generator_ColumnPropNameInTable="HASTASOYADIColumn" msprop:Generator_UserColumnName="HASTASOYADI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BHDAT" msprop:Generator_ColumnVarNameInTable="columnBHDAT" msprop:Generator_ColumnPropNameInRow="BHDAT" msprop:Generator_ColumnPropNameInTable="BHDATColumn" msprop:Generator_UserColumnName="BHDAT" type="xs:dateTime" />
+              <xs:element name="ARZT" msprop:Generator_ColumnVarNameInTable="columnARZT" msprop:Generator_ColumnPropNameInRow="ARZT" msprop:Generator_ColumnPropNameInTable="ARZTColumn" msprop:Generator_UserColumnName="ARZT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERVIS" msprop:Generator_ColumnVarNameInTable="columnSERVIS" msprop:Generator_ColumnPropNameInRow="SERVIS" msprop:Generator_ColumnPropNameInTable="SERVISColumn" msprop:Generator_UserColumnName="SERVIS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMBU" msprop:Generator_ColumnVarNameInTable="columnAMBU" msprop:Generator_ColumnPropNameInRow="AMBU" msprop:Generator_ColumnPropNameInTable="AMBUColumn" msprop:Generator_UserColumnName="AMBU">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GRUP" msprop:Generator_ColumnVarNameInTable="columnGRUP" msprop:Generator_ColumnPropNameInRow="GRUP" msprop:Generator_ColumnPropNameInTable="GRUPColumn" msprop:Generator_UserColumnName="GRUP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE" msprop:Generator_ColumnVarNameInTable="columnCODE" msprop:Generator_ColumnPropNameInRow="CODE" msprop:Generator_ColumnPropNameInTable="CODEColumn" msprop:Generator_UserColumnName="CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKBUZNO" msprop:Generator_ColumnVarNameInTable="columnMAKBUZNO" msprop:Generator_ColumnPropNameInRow="MAKBUZNO" msprop:Generator_ColumnPropNameInTable="MAKBUZNOColumn" msprop:Generator_UserColumnName="MAKBUZNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKBUZTIPI" msprop:Generator_ColumnVarNameInTable="columnMAKBUZTIPI" msprop:Generator_ColumnPropNameInRow="MAKBUZTIPI" msprop:Generator_ColumnPropNameInTable="MAKBUZTIPIColumn" msprop:Generator_UserColumnName="MAKBUZTIPI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ODEMESEKLI" msprop:Generator_ColumnVarNameInTable="columnODEMESEKLI" msprop:Generator_ColumnPropNameInRow="ODEMESEKLI" msprop:Generator_ColumnPropNameInTable="ODEMESEKLIColumn" msprop:Generator_UserColumnName="ODEMESEKLI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

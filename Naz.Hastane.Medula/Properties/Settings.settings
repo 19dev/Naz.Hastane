@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Naz.Hastane.Medula.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Naz_Medula_RaporIslemleri_RaporIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/RaporIslemleri</Value>
+    </Setting>
+    <Setting Name="Naz_Medula_YardimciIslemler_YardimciIslemlerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/YardimciIslemler</Value>
+    </Setting>
+    <Setting Name="Naz_Medula_TakipFormuIslemleri_TakipFormuIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/TakipFormuIslemleri</Value>
+    </Setting>
+    <Setting Name="Naz_Medula_FaturaKayitIslemleri_FaturaKayitIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/FaturaKayitIslemleri</Value>
+    </Setting>
+    <Setting Name="Naz_Medula_HastaKabulIslemleri_HastaKabulIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/HastaKabulIslemleri</Value>
+    </Setting>
+    <Setting Name="Naz_Medula_HizmetKayitIslemleri_HizmetKayitIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://medula.sgk.gov.tr:80/medulaws/services/HizmetKayitIslemleri</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

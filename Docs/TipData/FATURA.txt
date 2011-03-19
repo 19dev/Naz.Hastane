@@ -1,0 +1,311 @@
+ 'Fatura tablosuna gerekli olan key bulunuyor
+    R_Lock ("FATNO")
+    CFATNO = cNull(Val(KeyGet("00", "FATNO", 7)) + 1, 7)
+    KeyPut "00", "FATNO", CFATNO
+    R_UnLock ("FATNO")
+    
+    
+    
+    
+    
+    
+       If txtBanka.Visible = True Then
+    a = Mid(txtBanka.Text, 1, 2)
+    
+    xSql = "SeleCT SLX FROM KEYDAT WHERE SLK='55' AND SLB='" + a + "'"
+    Set_Rs1
+    If Not Rs1.EOF Then
+      HESAPKODU = Rs1("SLX")
+    End If
+    
+     Else
+       HESAPKODU = ""
+       
+    
+    End If
+
+  
+    
+        If TXTbankaalthesap.Visible = True Then
+       b = Mid(TXTbankaalthesap.Text, 1, 2)
+    xSql = "SeleCT HESAPCODE FROM BANKAALTHESAP WHERE GRUP='" + a + "' AND CODE='" + b + "'"
+    Set_Rs1
+      
+    If Not Rs1.EOF Then
+    
+    
+
+    
+      ALTHESAPKODU = Rs1("HESAPCODE")
+      
+      
+          Rs1.Close
+    
+    End If
+    
+     Else
+       ALTHESAPKODU = ""
+       
+    
+    End If
+    
+
+    
+   If Not Left(TxtÖdemeÞekli.Text, 1) = "A" Then
+    
+    Toplam = 0
+    nAvans = CDbl(TxtKullanýlanAvans.Text)
+    For i = LswAvanslar.ListItems.Count To 1 Step -1
+        If nAvans > 0 Then
+            nDüþMiktar = Min(nAvans, LswAvanslar.ListItems.Item(i).SubItems(1))
+            
+            ' Avans Kaydýna Kullanýlan Miktar Ekleniyor
+            xSql = "UPDATE AVANSLAR " & _
+                    "SET KULLANILAN = KULLANILAN + " & Dbl2StrDbl(nDüþMiktar) & " " & _
+                    "WHERE AV_ID = " & LswAvanslar.ListItems.Item(i).SubItems(2)
+            cn.Execute xSql
+            
+            ' Avanslar Detayýna Kullanýldýðý Fatura ve Kullaným miktarý bilgileri yazýlýyor
+            xSql = "INSERT into AVANSLAR_KULLANILAN (AV_ID, TARIH, FATURANO, TUTAR, USER_ID, DATE_CREATE) values(" & _
+                    LswAvanslar.ListItems.Item(i).SubItems(2) & ", '" & _
+                    kDate & "', '" & _
+                    CFATNO & "', " & _
+                    Dbl2StrDbl(nDüþMiktar) & ", '" & _
+                    ActiveUser & "', '" & _
+                    Now & "')"
+            cn.Execute xSql
+            nAvans = nAvans - nDüþMiktar
+        Else
+            Exit For
+        End If
+    Next
+    
+    nNakit = CDbl(TxtNakit)
+    If nNakit > 0 Then
+        ' Kasa Kaydý için gerekli key bulunuyor
+        R_Lock ("MAKNO")
+        CMAKNO = cNull(Val(KeyGet("00", "MAKNO", 7)) + 1, 7)
+        KeyPut "00", "MAKNO", CMAKNO
+        R_UnLock ("MAKNO")
+        
+        ' Avans Kaydý için gerekli key bulunuyor
+        nAV_ID = Val(KeyGet("00", "AVANS_ID", 10)) + 1
+        KeyPut "00", "AVANS_ID", nAV_ID
+        
+        ' Nakit Miktar Avans gibi iþleniyor. Seçilen En Son Karta Avans Girilmiþ Gibi
+        xSql = "INSERT into AVANSLAR (AV_ID, KNR, SNR, TARIH, TUTAR, KULLANILAN, ODEMESEKLI, POSNO, MAKNO,HESAPKODU,ALTHESAPKODU, USER_ID, DATE_CREATE) values (" & _
+                nAV_ID & ", '" & _
+                SKNR & "', '" & _
+                cSNR & "', '" & _
+                kDate & "', " & _
+                Dbl2StrDbl(nNakit) & ", " & _
+                Dbl2StrDbl(nNakit) & ", '" & _
+                cODEMESEKLI & "', " & _
+                IIf(TxtPOS.Visible And TxtPOS.ListIndex <> -1, "'" & Left(TxtPOS.Text, 2) & "'", "Null") & ", '" & _
+                CMAKNO & "', '" & _
+                 HESAPKODU & "', '" & _
+                  ALTHESAPKODU & "', '" & _
+                ActiveUser & "', '" & _
+                Now & "')"
+        cn.Execute xSql
+        
+        ' Nakit Miktar Avans Kullanýlmýþ gibi Kullanýlan dosyaya yazýlýyor. Yeni Fatura no ile beraber
+        xSql = "INSERT into AVANSLAR_KULLANILAN (AV_ID, TARIH, FATURANO, TUTAR, USER_ID, DATE_CREATE) values(" & _
+                nAV_ID & ", '" & _
+                kDate & "', '" & _
+                CFATNO & "', " & _
+                Dbl2StrDbl(nNakit) & ", '" & _
+                ActiveUser & "', '" & _
+                Now & "')"
+        cn.Execute xSql
+        
+        ' Nakit Miktarýn Avans Gibi Kasa Kaydýda Yapýlýyor. Yeni Fatura No ile birlikte
+        xSql = "INSERT into KASA(MAKNO, KNR, SNR, TARIH, MAKBUZNO, MAKBUZTIPI, ODEMESEKLI, POSNO, TUTAR, BORCALACAK, FATURANO, VEZNE,HESAPKODU,ALTHESAPKODU, USER_ID, DATE_CREATE)" & _
+                "values ( '" & _
+                        CMAKNO & "', '" & _
+                        SKNR & "', '" & _
+                        cSNR & "', '" & _
+                        kDate & "', '" & _
+                        "F-" & TxtFaturaNo.Text & "', '" & _
+                        "A" & "', '" & _
+                        cODEMESEKLI & "', " & _
+                        IIf(TxtPOS.Visible And TxtPOS.ListIndex <> -1, "'" & Left(TxtPOS.Text, 2) & "'", "Null") & ", " & _
+                        Dbl2StrDbl(nNakit) & ", '" & _
+                        "B" & "', '" & _
+                        CFATNO & "', '" & _
+                        Activevezne & "', '" & _
+                        HESAPKODU & "', '" & _
+                        ALTHESAPKODU & "', '" & _
+                        ActiveUser & "', '" & Now & "')"
+        cn.Execute xSql
+    End If
+    
+'      'Fatura-Avanslar Odeme Sekli Bulunuyor
+'       xSql = "SELECT ODEMESEKLI,USER_ID,TUTAR,VEZNE FROM AVANSLAR WHERE KNR='" + sKNR + "' and MAKNO='" + cMakNo + "'"
+'            Set_Rs1
+'         Do While Rs1.EOF
+'
+'        ODEMESEKLI = Rs1("ODEMESEKLI")
+'        K = Rs1("USER_ID")
+'        TUTARODEME = Rs1("TUTAR")
+''        VEZNEODEME = Rs1("VEZNE")
+'      Loop
+'      Rs1.Close
+'
+     '------Faodeme
+    
+    ' Hizil da Ödenmiþ Kayýtlara ulaþabilmek için gerekli makbuz no key bulunuyor
+    ' üretilen makbuz no key kasa tablosunda kullanýlamayaktýr. Böylece
+    ' makbuz iptalleri yanlýþlýkla direk kesilen faturanýn hizil kayýtlarýný
+    ' açýða çýkartmayacaktýr.
+    ' Bu baðlantý sadece faturalarda fatura tip 'H' olan Hasta faturalarýnýn iptalinde
+    ' hizildaki kayýtlarýn açýða çýkartýlmasý için kullanýlacaktýr.
+    ' Bu faturanýn iptalinde avanslar_kullanýlan -> avanslar -> kasa baðlantýlarý kullanýlacaktýr.
+    R_Lock ("MAKNO")
+    CMAKNO = cNull(Val(KeyGet("00", "MAKNO", 7)) + 1, 7)
+    KeyPut "00", "MAKNO", CMAKNO
+    R_UnLock ("MAKNO")
+    
+    
+    ' Fatura Kaydý Yapýlýyor
+    xSql = "INSERT into FATURA (KNR, FATURA_ID, SLNR, FATURANO, FATURATARIHI, " & _
+            "HIZMETTUTARI, INDIRIM, KDVTUTARI, YUVARLAMA, FATURATUTARI, KDVORANI, NAME, FATURATIPI, FAK, ZHLKZ, " & _
+            "PSG, ISODENDI, MAKNO, VEZNE, USER_ID, DATE_CREATE) VALUES ('" & _
+                SKNR & "','" & _
+                CFATNO & "','" & _
+                TxtFaturaNo.Text & "','" & _
+                TxtFaturaNo.Text & "','" & _
+                kDate & "'," & _
+                Dbl2StrDbl(CDbl(TxtHastaTutar.Text)) & "," & _
+                Dbl2StrDbl(CDbl(TxtÝndirimTutarý.Text)) & "," & _
+                Dbl2StrDbl(CDbl(TxtKDVTutarý.Text)) & "," & _
+                Dbl2StrDbl(CDbl(TxtYuvarlamaTutarý.Text)) & "," & _
+                Dbl2StrDbl(CDbl(TxtFaturaToplamý1.Text)) & ",'" & _
+                Left(TxtKDVOraný.Text, 1) & "','" & _
+                lblhastaadisoyadi & "','" & _
+                "H" & "','" & _
+                "K" & "','" & _
+                "N" & "','" & _
+                "" & "','" & _
+                "1" & "','" & _
+                CMAKNO & "','" & _
+                Activevezne & "','" & _
+                ActiveUser & "','" & _
+                Now & "')"
+    cn.Execute xSql
+    
+    For i = 1 To LswHizmetler.ListItems.Count
+        If LswHizmetler.ListItems.Item(i).Checked Then
+            xSql = "UPDATE HIZIL set MAKNO='" & CMAKNO & "' where " & _
+                    "KNR='" & SKNR & "' and " & _
+                    "SNR='" & LswHizmetler.ListItems.Item(i).Text & "' and " & _
+                    "SIRANO=" & LswHizmetler.ListItems.Item(i).SubItems(8)
+            cn.Execute xSql
+        End If
+    Next
+    
+    ' Doktor Paylarý varsa Doktor Hesaplarýna Paylarý Kaydet
+    For i = 1 To LswHizmetler.ListItems.Count
+        ' Seçilmiþ ve Ýlaç veya Sarf Deðilse
+        If LswHizmetler.ListItems.Item(i).Checked And LswHizmetler.ListItems(i).SubItems(1) <> ActiveÝlaçGrubu And LswHizmetler.ListItems(i).SubItems(1) <> ActiveSarfGrubu Then
+'            xSql = "select B.AMBU, H.DRYUZDE, H.PHYUZDE, H.HAVUZ, HZ.* from HIZMET H, HIZIL HZ, BEHAND B " & _
+                    "where " & _
+                    "B.KNR=HZ.KNR and " & _
+                    "B.SNR=HZ.SNR and " & _
+                    "H.TANIM=HZ.TANIM and " & _
+                    "H.GRUP=HZ.GRUP and " & _
+                    "H.CODE=HZ.CODE and " & _
+                    "HZ.KNR='" & sKNR & "' and " & _
+                    "HZ.SNR='" & LswHizmetler.ListItems.Item(i).Text & "' and " & _
+                    "HZ.SIRANO=" & LswHizmetler.ListItems.Item(i).SubItems(8)
+            xSql = "select B.AMBU, H.DRYUZDE, H.PHYUZDE, H.HAVUZ, HZ.*, HDY.YUZDE from HIZMET H inner join HIZIL HZ on H.TANIM=HZ.TANIM and H.GRUP=HZ.GRUP and H.CODE=HZ.CODE inner join BEHAND B on B.KNR=HZ.KNR and B.SNR=HZ.SNR left join HIZMETDOKTORYUZDE HDY on H.TANIM=HDY.TANIM and H.GRUP=HDY.GRUP and H.CODE=HDY.CODE and HDY.ARZT=HZ.ARZT2" & _
+                    " where HZ.KNR='" & SKNR & "' and " & _
+                    "HZ.SNR='" & LswHizmetler.ListItems.Item(i).Text & "' and " & _
+                    "HZ.SIRANO=" & LswHizmetler.ListItems.Item(i).SubItems(8)
+'            cn.Execute xSql
+            Set_Rs3
+            If Rs3.EOF Then
+                If uMsgBox("Silinmiþ Hizmet Bulundu. Doktor Payý Hesaplanamayabilir." & vbCrLf & "Kaydetmeden Çýkmak Ýstemisiniz?", vbQuestion + vbYesNo) = vbYes Then
+                    Rs3.Close
+                    cn.RollbackTrans
+                    Exit Sub
+                End If
+            Else
+                dblDrYüzde = IIf(IsNull(Rs3("YUZDE")), Rs3("DRYUZDE"), Rs3("YUZDE"))
+                If dblDrYüzde <> 0 Then
+                    xSql = "select KNR from DOKTORLAR where ARZT='" & Rs3("ARZT2") & "'"
+                    Set_Rs2
+                    If Rs2.EOF Then
+                        uMsgBox "Hakediþ Payý Ýþlenecek Doktor Cari Kartý Bulunamadý. Fatura Kesilmesi Durduruldu."
+                        Rs3.Close
+                        Rs2.Close
+                        cn.RollbackTrans
+                        Exit Sub
+                    Else
+                        xSql = "select isnull(max(SIRA),0) as SIRA from DOKTORLAR_FATURA_DETAY where KNR='" & Rs2("KNR") & "'"
+                        Set_Rs1
+                        xSql = "Insert into DOKTORLAR_FATURA_DETAY (KNR, SIRA, HKNR, HSNR, HSIRANO, HAREKETTIPI, FATNO, FATURANO, FATURATARIHI, MAKNO, AMBU, TANIM, GRUP, CODE, TOPLAM, PAY, USER_ID, DATE_CREATE) values ('" & _
+                                Rs2("KNR") & "', " & _
+                                Rs1("SIRA") + 1 & ", '" & _
+                                SKNR & "', '" & _
+                                Rs3("SNR") & "', '" & _
+                                Rs3("SIRANO") & "', '" & _
+                                "F" & "', '" & _
+                                CFATNO & "', '" & _
+                                TxtFaturaNo.Text & "', '" & _
+                                Format(kDate, "dd.mm.yyyy") & "', '" & _
+                                CMAKNO & "', '" & _
+                                Rs3("AMBU") & "', '" & _
+                                Rs3("TANIM") & "', '" & _
+                                Rs3("GRUP") & "', '" & _
+                                Rs3("CODE") & "', " & _
+                                Dbl2StrDbl(Rs3("ADET") * Rs3("SATISF")) & ", " & _
+                                Dbl2StrDbl(Round(Rs3("ADET") * Rs3("SATISF") * dblDrYüzde / 100, 2)) & ", '" & _
+                                ActiveUser & "', '" & _
+                                Now & "')"
+                        cn.Execute xSql
+                        Rs1.Close
+                    End If
+                    Rs2.Close
+                End If
+                If Rs3("PHYUZDE") <> 0 Then
+                    xSql = "select KNR from DOKTORLAR where ARZT='" & Rs3("HAVUZ") & "'"
+                    Set_Rs2
+                    If Rs2.EOF Then
+                        uMsgBox "Doktor Payý Ýþlenecek Havuz Bulumadý. Fatura Kesilmesi Durduruldu."
+                        Rs3.Close
+                        Rs2.Close
+                        cn.RollbackTrans
+                        Exit Sub
+                    Else
+                        xSql = "select isnull(max(SIRA),0) as SIRA from DOKTORLAR_FATURA_DETAY where KNR='" & Rs2("KNR") & "'"
+                        Set_Rs1
+                        xSql = "Insert into DOKTORLAR_FATURA_DETAY (KNR, SIRA, HKNR, HSNR, HSIRANO, HAREKETTIPI, FATNO, FATURANO, FATURATARIHI, MAKNO, AMBU, TANIM, GRUP, CODE, TOPLAM, PAY, USER_ID, DATE_CREATE) values ('" & _
+                                Rs2("KNR") & "', " & _
+                                Rs1("SIRA") + 1 & ", '" & _
+                                SKNR & "', '" & _
+                                Rs3("SNR") & "', '" & _
+                                Rs3("SIRANO") & "', '" & _
+                                "F" & "', '" & _
+                                CFATNO & "', '" & _
+                                TxtFaturaNo.Text & "', '" & _
+                                Format(kDate, "dd.mm.yyyy") & "', '" & _
+                                CMAKNO & "', '" & _
+                                Rs3("AMBU") & "', '" & _
+                                Rs3("TANIM") & "', '" & _
+                                Rs3("GRUP") & "', '" & _
+                                Rs3("CODE") & "', " & _
+                                Dbl2StrDbl(Rs3("ADET") * Rs3("SATISF")) & ", " & _
+                                Dbl2StrDbl(Round(Rs3("ADET") * Rs3("SATISF") * Rs3("PHYUZDE") / 100, 2)) & ", '" & _
+                                ActiveUser & "', '" & _
+                                Now & "')"
+                        cn.Execute xSql
+                        Rs1.Close
+                    End If
+                    Rs2.Close
+                End If
+            End If
+            Rs3.Close
+        End If
+    Next
+    

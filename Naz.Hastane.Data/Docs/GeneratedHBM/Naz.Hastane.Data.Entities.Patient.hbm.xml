@@ -1,0 +1,200 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.Patient, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="ADRES">
+    <id name="PatientNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KNR" length="6" />
+      <generator class="assigned" />
+    </id>
+    <property name="FirstName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTAADI" length="15" not-null="true" />
+    </property>
+    <property name="LastName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTASOYADI" length="30" not-null="true" />
+    </property>
+    <property name="TCId" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TCKIMLIKNO" length="15" />
+    </property>
+    <property name="FatherName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BABAADI" length="15" />
+    </property>
+    <property name="MotherName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ANAADI" length="15" />
+    </property>
+    <property name="Sex" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="CINSIYETI" length="1" not-null="true" />
+    </property>
+    <property name="MaritalStatus" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDENI" length="1" not-null="true" />
+    </property>
+    <property name="BirthPlace" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DOGUMYERI" length="15" />
+    </property>
+    <property name="BirthDate" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DOGUMTARIHI" not-null="true" />
+    </property>
+    <property name="Nationality" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="UYRUGU" length="5" />
+    </property>
+    <property name="RegisteredTown" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NUFUSKAYITLIILCE" length="50" />
+    </property>
+    <property name="RegisteredCity" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NUFUSKAYITLIIL" length="50" />
+    </property>
+    <property name="BloodType" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KANGRUBU" />
+    </property>
+    <property name="CanBeBloodDonour" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KANVEREBILIR" length="1" not-null="true" />
+    </property>
+    <property name="MedControl" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ILACKONTROL" length="1" not-null="true" />
+    </property>
+    <property name="CV" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="OZGECMIS" length="5000" />
+    </property>
+    <property name="HomeAddress" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_ADRES" length="60" />
+    </property>
+    <property name="HomeDistrict" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_MAHALLE" length="50" />
+    </property>
+    <property name="HomeTown" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_ILCE" length="50" />
+    </property>
+    <property name="HomePostCode" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_PK" length="5" />
+    </property>
+    <property name="HomeCity" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_SEHIR" length="20" />
+    </property>
+    <property name="HomePhone1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_TEL1" length="15" />
+    </property>
+    <property name="HomePhone2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EV_TEL2" length="15" />
+    </property>
+    <property name="JobName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_ADI" length="25" />
+    </property>
+    <property name="JobAddress" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_ADRESI" length="60" />
+    </property>
+    <property name="JobPostCode" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_PK" length="5" />
+    </property>
+    <property name="JobCity" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_SEHIR" length="20" />
+    </property>
+    <property name="JobPhone1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_TEL1" length="15" />
+    </property>
+    <property name="JobPhone2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_TEL2" length="15" />
+    </property>
+    <property name="JobFax" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_FAX" length="15" />
+    </property>
+    <property name="JobNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IS_YERINO" length="25" />
+    </property>
+    <property name="Email" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EMAIL" length="50" />
+    </property>
+    <property name="Profession" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MESLEK" length="20" />
+    </property>
+    <property name="InsuranceCompany" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PSG" length="6" not-null="true" />
+    </property>
+    <property name="ProtocolNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PROTNO" length="20" />
+    </property>
+    <property name="PatientContribution" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTAKATILIM" length="1" not-null="true" />
+    </property>
+    <property name="PatientLimit" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTALIMIT" not-null="true" />
+    </property>
+    <property name="InsuranceType" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIGORTATURU" length="2" />
+    </property>
+    <property name="TransferorInstitution" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DEVREDILENKURUM" length="2" />
+    </property>
+    <property name="Officer" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEMUR" length="20" />
+    </property>
+    <property name="Relation" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="YAKINLIK" length="20" />
+    </property>
+    <property name="Status" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DURUM" length="1" />
+    </property>
+    <property name="SIGMUD" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIGMUD" length="2" />
+    </property>
+    <property name="SIGORTANO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIGORTANO" length="15" />
+    </property>
+    <property name="SIGORTALIKARTNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIGORTALIKARTNO" length="20" />
+    </property>
+    <property name="EMSNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EMSNO" length="29" />
+    </property>
+    <property name="BAGNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BAGNO" length="20" />
+    </property>
+    <property name="BAGKARNENO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BAGKARNENO" length="20" />
+    </property>
+    <property name="IDType" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HUVIYETTIPI" length="1" />
+    </property>
+    <property name="IDNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HUVIYETNO" length="15" />
+    </property>
+    <property name="IDDate" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HUVIYETTARIHI" length="10" />
+    </property>
+    <property name="IDPlace" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HUVIYETVYER" length="50" />
+    </property>
+    <property name="ArchiveID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ARSIVNO" length="10" />
+    </property>
+    <property name="CriminalArchiveID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ADLIARSIVNO" length="10" />
+    </property>
+    <property name="YKARTNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="YKARTNO" length="10" />
+    </property>
+    <property name="GELHAST" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="GELHAST" length="20" />
+    </property>
+    <property name="BORC" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BORC" not-null="true" />
+    </property>
+    <property name="ALACAK" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ALACAK" not-null="true" />
+    </property>
+    <property name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID" length="20" not-null="true" />
+    </property>
+    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATE" not-null="true" />
+    </property>
+    <property name="USER_ID_UPDATE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID_UPDATE" length="20" />
+    </property>
+    <property name="DATE_UPDATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_UPDATE" />
+    </property>
+    <bag inverse="true" lazy="false" name="PatientVisits" mutable="true">
+      <key>
+        <column name="KNR" />
+      </key>
+      <one-to-many class="Naz.Hastane.Data.Entities.PatientVisit, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
+  </class>
+</hibernate-mapping>

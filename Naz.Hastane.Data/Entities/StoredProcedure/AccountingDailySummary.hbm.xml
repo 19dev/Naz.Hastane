@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="sp_GetGunlukMuhasebeFisi">
+    <return alias="AccountingDailySummary" class="Naz.Hastane.Data.Entities.StoredProcedure.AccountingDailySummary, Naz.Hastane.Data">
+      <return-property name="RowNumber" column="RowNumber"></return-property>
+      <return-property name="FTARIH" column="FTARIH"></return-property>
+      <return-property name="TCKIMLIKNO" column="TCKIMLIKNO"></return-property>
+      <return-property name="HesapKodu" column="HesapKodu"></return-property>
+      <return-property name="Aciklama" column="Aciklama"></return-property>
+      <return-property name="MakbuzNo" column="MakbuzNo"></return-property>
+      <return-property name="Tutar" column="Tutar"></return-property>
+      <return-property name="FaturaTutari" column="FaturaTutari"></return-property>
+    </return>
+    exec sp_GetGunlukMuhasebeFisi :Date
+  </sql-query>
+</hibernate-mapping>

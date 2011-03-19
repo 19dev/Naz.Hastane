@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:import namespace="http://servisler.ws.gss.sgk.gov.tr" />
+      <xsd:complexType name="FaturaGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_FaturaBilgisiDVO" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaKurumKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaNo" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="basariliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_FaturaBasariliKayitDVO" />
+          <xsd:element name="hataliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_FaturaHataliKayitDVO" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaBasariliKayitDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaTeslimNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hesaplananTutar" type="xsd:double" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaHataliKayitDVO">
+        <xsd:sequence>
+          <xsd:element name="hataKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hataMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaIptalGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaTeslimNo" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaIptalCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hataliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_FaturaIptalHataliKayitDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaIptalHataliKayitDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaTeslimNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hataKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hataMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IcmalFaturaGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaKurumKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaNo" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNumaralari" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IcmalFaturaCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaTeslimNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hataliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_FaturaHataliKayitDVO" />
+          <xsd:element name="hesaplananTutar" type="xsd:double" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaOkuGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaTeslimNo" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FaturaOkuCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="faturaKurumKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaSeriNo" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaTeslimNo" nillable="true" type="xsd:string" />
+          <xsd:element name="faturaTutari" type="xsd:double" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipler" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+          <xsd:element name="takipSayisi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:complexType name="ArrayOf_tns2_nillable_FaturaBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="FaturaBilgisiDVO" nillable="true" type="tns2:FaturaBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="faturaBilgisiKaydetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaBilgisiKaydetReturn" nillable="true" type="tns2:FaturaCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="faturaBilgisiSil">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaIptalGiris" nillable="true" type="tns2:FaturaIptalGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="faturaBilgisiSilResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaBilgisiSilReturn" nillable="true" type="tns2:FaturaIptalCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="icmalFaturaBilgisiKaydet">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="icmalFaturaGiris" nillable="true" type="tns2:IcmalFaturaGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="icmalFaturaBilgisiKaydetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="icmalFaturaBilgisiKaydetReturn" nillable="true" type="tns2:IcmalFaturaCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="faturaBilgisiOku">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaOkuGiris" nillable="true" type="tns2:FaturaOkuGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="faturaBilgisiOkuResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaBilgisiOkuReturn" nillable="true" type="tns2:FaturaOkuCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="faturaBilgisiKaydet">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="faturaGiris" nillable="true" type="tns2:FaturaGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_tns2_nillable_FaturaBasariliKayitDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="FaturaBasariliKayitDVO" nillable="true" type="tns2:FaturaBasariliKayitDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_FaturaHataliKayitDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="FaturaHataliKayitDVO" nillable="true" type="tns2:FaturaHataliKayitDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_nillable_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_FaturaIptalHataliKayitDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="FaturaIptalHataliKayitDVO" nillable="true" type="tns2:FaturaIptalHataliKayitDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="faturaBilgisiOkuResponse">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiOkuResponse" />
+  </wsdl:message>
+  <wsdl:message name="icmalFaturaBilgisiKaydetRequest">
+    <wsdl:part name="parameters" element="impl:icmalFaturaBilgisiKaydet" />
+  </wsdl:message>
+  <wsdl:message name="faturaBilgisiKaydetRequest">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiKaydet" />
+  </wsdl:message>
+  <wsdl:message name="faturaBilgisiSilResponse">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="faturaBilgisiSilRequest">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiSil" />
+  </wsdl:message>
+  <wsdl:message name="icmalFaturaBilgisiKaydetResponse">
+    <wsdl:part name="parameters" element="impl:icmalFaturaBilgisiKaydetResponse" />
+  </wsdl:message>
+  <wsdl:message name="faturaBilgisiKaydetResponse">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiKaydetResponse" />
+  </wsdl:message>
+  <wsdl:message name="faturaBilgisiOkuRequest">
+    <wsdl:part name="parameters" element="impl:faturaBilgisiOku" />
+  </wsdl:message>
+  <wsdl:portType name="FaturaBilgisiIslemleri">
+    <wsdl:operation name="faturaBilgisiKaydet">
+      <wsdl:input name="faturaBilgisiKaydetRequest" message="impl:faturaBilgisiKaydetRequest" />
+      <wsdl:output name="faturaBilgisiKaydetResponse" message="impl:faturaBilgisiKaydetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="faturaBilgisiSil">
+      <wsdl:input name="faturaBilgisiSilRequest" message="impl:faturaBilgisiSilRequest" />
+      <wsdl:output name="faturaBilgisiSilResponse" message="impl:faturaBilgisiSilResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="icmalFaturaBilgisiKaydet">
+      <wsdl:input name="icmalFaturaBilgisiKaydetRequest" message="impl:icmalFaturaBilgisiKaydetRequest" />
+      <wsdl:output name="icmalFaturaBilgisiKaydetResponse" message="impl:icmalFaturaBilgisiKaydetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="faturaBilgisiOku">
+      <wsdl:input name="faturaBilgisiOkuRequest" message="impl:faturaBilgisiOkuRequest" />
+      <wsdl:output name="faturaBilgisiOkuResponse" message="impl:faturaBilgisiOkuResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FaturaBilgisiIslemleriSoapBinding" type="impl:FaturaBilgisiIslemleri">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="faturaBilgisiKaydet">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="faturaBilgisiKaydetRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="faturaBilgisiKaydetResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaBilgisiSil">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="faturaBilgisiSilRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="faturaBilgisiSilResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="icmalFaturaBilgisiKaydet">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="icmalFaturaBilgisiKaydetRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="icmalFaturaBilgisiKaydetResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaBilgisiOku">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="faturaBilgisiOkuRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="faturaBilgisiOkuResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FaturaBilgisiIslemleriService">
+    <wsdl:port name="FaturaBilgisiIslemleri" binding="impl:FaturaBilgisiIslemleriSoapBinding">
+      <wsdlsoap:address location="http://saglik.sgk.gov.tr:80/saglikws/services/FaturaBilgisiIslemleri" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

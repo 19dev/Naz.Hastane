@@ -1,0 +1,53 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.User, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="KULLANICILAR">
+    <id name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ARZT" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ARZT" length="4" />
+    </property>
+    <property name="DATE_CREATED" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATED" length="8" />
+    </property>
+    <property name="DATE_UPDATED" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_UPDATED" length="8" />
+    </property>
+    <property name="INDIRIMYUZDE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="INDIRIMYUZDE" length="5" />
+    </property>
+    <property name="ISBUSY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISBUSY" length="1" />
+    </property>
+    <property name="LASTACCESS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="LASTACCESS" length="10" />
+    </property>
+    <property name="PR2WIN" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PR2WIN" length="1" />
+    </property>
+    <property name="REV" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="REV" length="4" />
+    </property>
+    <property name="STARTOBJ" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="STARTOBJ" length="100" />
+    </property>
+    <property name="TARIH" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TARIH" length="8" />
+    </property>
+    <property name="TERM_PASS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TERM_PASS" length="10" />
+    </property>
+    <property name="TESTER" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TESTER" length="1" />
+    </property>
+    <property name="USER_GRUP" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_GRUP" length="2" />
+    </property>
+    <property name="USER_PASS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_PASS" length="10" />
+    </property>
+    <property name="VEZNE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="VEZNE" length="2" />
+    </property>
+  </class>
+</hibernate-mapping>

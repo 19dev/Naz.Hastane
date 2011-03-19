@@ -1,0 +1,618 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.ProductOld, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HIZMET_ESKI">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="TANIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="TANIM" />
+      </key-property>
+      <key-property name="GRUP" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="GRUP" />
+      </key-property>
+      <key-property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="CODE" />
+      </key-property>
+    </composite-id>
+    <property name="KSATISF00" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF00" length="8" />
+    </property>
+    <property name="KSATISF01" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF01" length="8" />
+    </property>
+    <property name="KSATISF02" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF02" length="8" />
+    </property>
+    <property name="KSATISF03" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF03" length="8" />
+    </property>
+    <property name="KSATISF04" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF04" length="8" />
+    </property>
+    <property name="KSATISF05" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF05" length="8" />
+    </property>
+    <property name="KSATISF06" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF06" length="8" />
+    </property>
+    <property name="KSATISF07" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF07" length="8" />
+    </property>
+    <property name="KSATISF08" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF08" length="8" />
+    </property>
+    <property name="KSATISF09" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF09" length="8" />
+    </property>
+    <property name="KSATISF10" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF10" length="8" />
+    </property>
+    <property name="KSATISF11" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF11" length="8" />
+    </property>
+    <property name="KSATISF12" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF12" length="8" />
+    </property>
+    <property name="KSATISF13" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF13" length="8" />
+    </property>
+    <property name="KSATISF14" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF14" length="8" />
+    </property>
+    <property name="KSATISF15" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF15" length="8" />
+    </property>
+    <property name="KSATISF16" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF16" length="8" />
+    </property>
+    <property name="KSATISF17" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF17" length="8" />
+    </property>
+    <property name="KSATISF18" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF18" length="8" />
+    </property>
+    <property name="KSATISF19" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF19" length="8" />
+    </property>
+    <property name="KSATISF20" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF20" length="8" />
+    </property>
+    <property name="KSATISF21" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF21" length="8" />
+    </property>
+    <property name="KSATISF22" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF22" length="8" />
+    </property>
+    <property name="KSATISF23" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF23" length="8" />
+    </property>
+    <property name="KSATISF24" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF24" length="8" />
+    </property>
+    <property name="KSATISF25" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF25" length="8" />
+    </property>
+    <property name="KSATISF26" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF26" length="8" />
+    </property>
+    <property name="KSATISF27" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF27" length="8" />
+    </property>
+    <property name="KSATISF28" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF28" length="8" />
+    </property>
+    <property name="KSATISF29" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF29" length="8" />
+    </property>
+    <property name="KSATISF30" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF30" length="8" />
+    </property>
+    <property name="KSATISF31" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF31" length="8" />
+    </property>
+    <property name="KSATISF32" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF32" length="8" />
+    </property>
+    <property name="KSATISF33" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF33" length="8" />
+    </property>
+    <property name="KSATISF34" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF34" length="8" />
+    </property>
+    <property name="KSATISF35" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF35" length="8" />
+    </property>
+    <property name="KSATISF36" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF36" length="8" />
+    </property>
+    <property name="KSATISF37" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF37" length="8" />
+    </property>
+    <property name="KSATISF38" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF38" length="8" />
+    </property>
+    <property name="KSATISF39" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF39" length="8" />
+    </property>
+    <property name="KSATISF40" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF40" length="8" />
+    </property>
+    <property name="KSATISF41" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF41" length="8" />
+    </property>
+    <property name="KSATISF42" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF42" length="8" />
+    </property>
+    <property name="KSATISF43" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF43" length="8" />
+    </property>
+    <property name="KSATISF44" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF44" length="8" />
+    </property>
+    <property name="KSATISF45" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF45" length="8" />
+    </property>
+    <property name="KSATISF46" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF46" length="8" />
+    </property>
+    <property name="KSATISF47" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF47" length="8" />
+    </property>
+    <property name="KSATISF48" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF48" length="8" />
+    </property>
+    <property name="KSATISF49" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF49" length="8" />
+    </property>
+    <property name="KSATISF50" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF50" length="8" />
+    </property>
+    <property name="KSATISF51" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF51" length="8" />
+    </property>
+    <property name="KSATISF52" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF52" length="8" />
+    </property>
+    <property name="KSATISF53" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF53" length="8" />
+    </property>
+    <property name="KSATISF54" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF54" length="8" />
+    </property>
+    <property name="KSATISF55" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF55" length="8" />
+    </property>
+    <property name="KSATISF56" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF56" length="8" />
+    </property>
+    <property name="KSATISF57" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF57" length="8" />
+    </property>
+    <property name="KSATISF58" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF58" length="8" />
+    </property>
+    <property name="KSATISF59" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF59" length="8" />
+    </property>
+    <property name="KSATISF60" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF60" length="8" />
+    </property>
+    <property name="KSATISF61" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF61" length="8" />
+    </property>
+    <property name="KSATISF62" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF62" length="8" />
+    </property>
+    <property name="KSATISF63" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF63" length="8" />
+    </property>
+    <property name="KSATISF64" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF64" length="8" />
+    </property>
+    <property name="KSATISF65" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF65" length="8" />
+    </property>
+    <property name="KSATISF66" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF66" length="8" />
+    </property>
+    <property name="KSATISF67" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF67" length="8" />
+    </property>
+    <property name="KSATISF68" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF68" length="8" />
+    </property>
+    <property name="KSATISF69" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF69" length="8" />
+    </property>
+    <property name="KSATISF70" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF70" length="8" />
+    </property>
+    <property name="KSATISF71" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF71" length="8" />
+    </property>
+    <property name="KSATISF72" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF72" length="8" />
+    </property>
+    <property name="KSATISF73" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF73" length="8" />
+    </property>
+    <property name="KSATISF74" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF74" length="8" />
+    </property>
+    <property name="KSATISF75" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF75" length="8" />
+    </property>
+    <property name="KSATISF76" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF76" length="8" />
+    </property>
+    <property name="KSATISF77" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF77" length="8" />
+    </property>
+    <property name="KSATISF78" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF78" length="8" />
+    </property>
+    <property name="KSATISF79" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF79" length="8" />
+    </property>
+    <property name="KSATISF80" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF80" length="8" />
+    </property>
+    <property name="KSATISF81" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF81" length="8" />
+    </property>
+    <property name="KSATISF82" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF82" length="8" />
+    </property>
+    <property name="KSATISF83" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF83" length="8" />
+    </property>
+    <property name="KSATISF84" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF84" length="8" />
+    </property>
+    <property name="KSATISF85" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF85" length="8" />
+    </property>
+    <property name="KSATISF86" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF86" length="8" />
+    </property>
+    <property name="KSATISF87" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF87" length="8" />
+    </property>
+    <property name="KSATISF88" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF88" length="8" />
+    </property>
+    <property name="KSATISF89" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF89" length="8" />
+    </property>
+    <property name="KSATISF90" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF90" length="8" />
+    </property>
+    <property name="KSATISF91" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF91" length="8" />
+    </property>
+    <property name="KSATISF92" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF92" length="8" />
+    </property>
+    <property name="KSATISF93" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF93" length="8" />
+    </property>
+    <property name="KSATISF94" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF94" length="8" />
+    </property>
+    <property name="KSATISF95" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF95" length="8" />
+    </property>
+    <property name="KSATISF96" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF96" length="8" />
+    </property>
+    <property name="KSATISF97" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF97" length="8" />
+    </property>
+    <property name="KSATISF98" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF98" length="8" />
+    </property>
+    <property name="KSATISF99" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF99" length="8" />
+    </property>
+    <property name="NAME1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NAME1" length="100" />
+    </property>
+    <property name="SATISF00" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF00" length="8" />
+    </property>
+    <property name="SATISF01" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF01" length="8" />
+    </property>
+    <property name="SATISF02" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF02" length="8" />
+    </property>
+    <property name="SATISF03" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF03" length="8" />
+    </property>
+    <property name="SATISF04" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF04" length="8" />
+    </property>
+    <property name="SATISF05" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF05" length="8" />
+    </property>
+    <property name="SATISF06" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF06" length="8" />
+    </property>
+    <property name="SATISF07" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF07" length="8" />
+    </property>
+    <property name="SATISF08" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF08" length="8" />
+    </property>
+    <property name="SATISF09" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF09" length="8" />
+    </property>
+    <property name="SATISF10" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF10" length="8" />
+    </property>
+    <property name="SATISF11" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF11" length="8" />
+    </property>
+    <property name="SATISF12" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF12" length="8" />
+    </property>
+    <property name="SATISF13" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF13" length="8" />
+    </property>
+    <property name="SATISF14" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF14" length="8" />
+    </property>
+    <property name="SATISF15" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF15" length="8" />
+    </property>
+    <property name="SATISF16" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF16" length="8" />
+    </property>
+    <property name="SATISF17" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF17" length="8" />
+    </property>
+    <property name="SATISF18" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF18" length="8" />
+    </property>
+    <property name="SATISF19" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF19" length="8" />
+    </property>
+    <property name="SATISF20" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF20" length="8" />
+    </property>
+    <property name="SATISF21" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF21" length="8" />
+    </property>
+    <property name="SATISF22" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF22" length="8" />
+    </property>
+    <property name="SATISF23" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF23" length="8" />
+    </property>
+    <property name="SATISF24" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF24" length="8" />
+    </property>
+    <property name="SATISF25" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF25" length="8" />
+    </property>
+    <property name="SATISF26" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF26" length="8" />
+    </property>
+    <property name="SATISF27" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF27" length="8" />
+    </property>
+    <property name="SATISF28" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF28" length="8" />
+    </property>
+    <property name="SATISF29" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF29" length="8" />
+    </property>
+    <property name="SATISF30" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF30" length="8" />
+    </property>
+    <property name="SATISF31" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF31" length="8" />
+    </property>
+    <property name="SATISF32" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF32" length="8" />
+    </property>
+    <property name="SATISF33" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF33" length="8" />
+    </property>
+    <property name="SATISF34" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF34" length="8" />
+    </property>
+    <property name="SATISF35" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF35" length="8" />
+    </property>
+    <property name="SATISF36" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF36" length="8" />
+    </property>
+    <property name="SATISF37" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF37" length="8" />
+    </property>
+    <property name="SATISF38" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF38" length="8" />
+    </property>
+    <property name="SATISF39" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF39" length="8" />
+    </property>
+    <property name="SATISF40" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF40" length="8" />
+    </property>
+    <property name="SATISF41" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF41" length="8" />
+    </property>
+    <property name="SATISF42" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF42" length="8" />
+    </property>
+    <property name="SATISF43" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF43" length="8" />
+    </property>
+    <property name="SATISF44" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF44" length="8" />
+    </property>
+    <property name="SATISF45" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF45" length="8" />
+    </property>
+    <property name="SATISF46" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF46" length="8" />
+    </property>
+    <property name="SATISF47" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF47" length="8" />
+    </property>
+    <property name="SATISF48" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF48" length="8" />
+    </property>
+    <property name="SATISF49" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF49" length="8" />
+    </property>
+    <property name="SATISF50" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF50" length="8" />
+    </property>
+    <property name="SATISF51" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF51" length="8" />
+    </property>
+    <property name="SATISF52" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF52" length="8" />
+    </property>
+    <property name="SATISF53" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF53" length="8" />
+    </property>
+    <property name="SATISF54" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF54" length="8" />
+    </property>
+    <property name="SATISF55" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF55" length="8" />
+    </property>
+    <property name="SATISF56" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF56" length="8" />
+    </property>
+    <property name="SATISF57" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF57" length="8" />
+    </property>
+    <property name="SATISF58" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF58" length="8" />
+    </property>
+    <property name="SATISF59" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF59" length="8" />
+    </property>
+    <property name="SATISF60" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF60" length="8" />
+    </property>
+    <property name="SATISF61" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF61" length="8" />
+    </property>
+    <property name="SATISF62" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF62" length="8" />
+    </property>
+    <property name="SATISF63" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF63" length="8" />
+    </property>
+    <property name="SATISF64" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF64" length="8" />
+    </property>
+    <property name="SATISF65" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF65" length="8" />
+    </property>
+    <property name="SATISF66" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF66" length="8" />
+    </property>
+    <property name="SATISF67" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF67" length="8" />
+    </property>
+    <property name="SATISF68" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF68" length="8" />
+    </property>
+    <property name="SATISF69" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF69" length="8" />
+    </property>
+    <property name="SATISF70" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF70" length="8" />
+    </property>
+    <property name="SATISF71" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF71" length="8" />
+    </property>
+    <property name="SATISF72" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF72" length="8" />
+    </property>
+    <property name="SATISF73" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF73" length="8" />
+    </property>
+    <property name="SATISF74" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF74" length="8" />
+    </property>
+    <property name="SATISF75" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF75" length="8" />
+    </property>
+    <property name="SATISF76" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF76" length="8" />
+    </property>
+    <property name="SATISF77" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF77" length="8" />
+    </property>
+    <property name="SATISF78" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF78" length="8" />
+    </property>
+    <property name="SATISF79" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF79" length="8" />
+    </property>
+    <property name="SATISF80" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF80" length="8" />
+    </property>
+    <property name="SATISF81" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF81" length="8" />
+    </property>
+    <property name="SATISF82" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF82" length="8" />
+    </property>
+    <property name="SATISF83" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF83" length="8" />
+    </property>
+    <property name="SATISF84" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF84" length="8" />
+    </property>
+    <property name="SATISF85" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF85" length="8" />
+    </property>
+    <property name="SATISF86" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF86" length="8" />
+    </property>
+    <property name="SATISF87" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF87" length="8" />
+    </property>
+    <property name="SATISF88" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF88" length="8" />
+    </property>
+    <property name="SATISF89" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF89" length="8" />
+    </property>
+    <property name="SATISF90" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF90" length="8" />
+    </property>
+    <property name="SATISF91" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF91" length="8" />
+    </property>
+    <property name="SATISF92" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF92" length="8" />
+    </property>
+    <property name="SATISF93" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF93" length="8" />
+    </property>
+    <property name="SATISF94" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF94" length="8" />
+    </property>
+    <property name="SATISF95" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF95" length="8" />
+    </property>
+    <property name="SATISF96" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF96" length="8" />
+    </property>
+    <property name="SATISF97" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF97" length="8" />
+    </property>
+    <property name="SATISF98" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF98" length="8" />
+    </property>
+    <property name="SATISF99" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF99" length="8" />
+    </property>
+  </class>
+</hibernate-mapping>

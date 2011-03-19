@@ -1,0 +1,21 @@
+﻿var dtos = Session.CreateCriteria<Authorization>()
+  .CreateAlias("Application", "a", JoinType.InnerJoin)
+  .CreateAlias("User", "u", JoinType.LeftOuterJoin)
+  .CreateAlias("UserGroup", "g", JoinType.LeftOuterJoin)
+  .CreateAlias("Permission", "p", JoinType.InnerJoin)
+  .SetProjection(Projections.ProjectionList()
+    .Add(Projections.Id(), "Id")
+    .Add(Projections.Property("a.Id"), "ApplicationId")
+    .Add(Projections.Property("a.Name"), "ApplicationName")
+    .Add(Projections.Property("u.Id"), "UserId")
+    .Add(Projections.Property("u.UserName"), "Username")
+    .Add(Projections.Property("g.Id"), "UserGroupId")
+    .Add(Projections.Property("g.Name"), "UserGroupName")
+    .Add(Projections.Property("p.Id"), "PermissionId")
+    .Add(Projections.Property("p.Name"), "PermissionName")
+    .Add(Projections.Property("p.Description"), "PermissionDescription"))
+  .SetResultTransformer(new AliasToBeanResultTransformer(typeof(AuthorizationDto)))
+  .Future<AuthorizationDto>();
+
+
+

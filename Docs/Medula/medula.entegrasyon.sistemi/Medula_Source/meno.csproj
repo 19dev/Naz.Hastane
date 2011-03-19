@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E21C957-1954-4456-9DB5-4545E96734D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>meno</RootNamespace>
+    <AssemblyName>meno</AssemblyName>
+    <ApplicationIcon>doc_f2.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>83AE94F6B791FFF9984002E197B628258398D545</ManifestCertificateThumbprint>
+    <ManifestKeyFile>meno_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/meno/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A00.Designer.cs">
+      <DependentUpon>A00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A00_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A00_2.Designer.cs">
+      <DependentUpon>A00_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A00_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A00_3.Designer.cs">
+      <DependentUpon>A00_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A00_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A00_4.Designer.cs">
+      <DependentUpon>A00_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A00_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A00_5.Designer.cs">
+      <DependentUpon>A00_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appabout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appabout.Designer.cs">
+      <DependentUpon>appabout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appstng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appstng.Designer.cs">
+      <DependentUpon>appstng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\c00_ds.cs">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\c00_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\f00_ds.cs">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\f00_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\other_ds.cs">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\other_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="B00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B00.Designer.cs">
+      <DependentUpon>B00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C00.Designer.cs">
+      <DependentUpon>C00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C00_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C00_2.Designer.cs">
+      <DependentUpon>C00_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C00_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C00_3.Designer.cs">
+      <DependentUpon>C00_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C01.Designer.cs">
+      <DependentUpon>C01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00.Designer.cs">
+      <DependentUpon>E00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_2.Designer.cs">
+      <DependentUpon>E00_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_3.Designer.cs">
+      <DependentUpon>E00_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_4.Designer.cs">
+      <DependentUpon>E00_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_5.Designer.cs">
+      <DependentUpon>E00_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_6.Designer.cs">
+      <DependentUpon>E00_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E00_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E00_7.Designer.cs">
+      <DependentUpon>E00_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrFrm.Designer.cs">
+      <DependentUpon>ErrFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_1.Designer.cs">
+      <DependentUpon>F00_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_2.Designer.cs">
+      <DependentUpon>F00_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_3.Designer.cs">
+      <DependentUpon>F00_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_4.Designer.cs">
+      <DependentUpon>F00_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_5.Designer.cs">
+      <DependentUpon>F00_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_6.Designer.cs">
+      <DependentUpon>F00_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_7.Designer.cs">
+      <DependentUpon>F00_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_8.Designer.cs">
+      <DependentUpon>F00_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_9.Designer.cs">
+      <DependentUpon>F00_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_A.Designer.cs">
+      <DependentUpon>F00_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_B.Designer.cs">
+      <DependentUpon>F00_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F00_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_C.Designer.cs">
+      <DependentUpon>F00_C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDr.Designer.cs">
+      <DependentUpon>frmDr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmtesisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtesisler.Designer.cs">
+      <DependentUpon>frmtesisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="other_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other_1.Designer.cs">
+      <DependentUpon>other_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="A00.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>A00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A00_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>A00_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A00_3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>A00_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A00_4.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>A00_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A00_5.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>A00_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appabout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>appabout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appstng.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>appstng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B00.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>B00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C00.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>C00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C00_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>C00_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C00_3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>C00_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C01.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>C01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_4.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_5.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_6.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E00_7.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>E00_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_4.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_5.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_6.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_7.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_8.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_9.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_A.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_B.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_C.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F00_C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtesisler.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmtesisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other_1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>other_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resultForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>resultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>uLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS_RaporDVO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WS_RaporDVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS_Result.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WS_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS_Result2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WS_Result2.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="AppTables\c00_ds.xsc">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\c00_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>c00_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AppTables\c00_ds.xss">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\other_ds.xsc">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\other_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>other_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AppTables\other_ds.xss">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </None>
+    <None Include="meno_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="resultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resultForm.Designer.cs">
+      <DependentUpon>resultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uLogin.Designer.cs">
+      <DependentUpon>uLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_A00\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_B00\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_C00\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_C01\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_E00\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_F00\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWSDL_OTHER\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WS_RaporDVO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WS_RaporDVO.Designer.cs">
+      <DependentUpon>WS_RaporDVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WS_Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WS_Result.Designer.cs">
+      <DependentUpon>WS_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WS_Result2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WS_Result2.Designer.cs">
+      <DependentUpon>WS_Result2.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/FaturaBilgisiIslemleri/wsdl/FaturaBilgisiIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_E00\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/FaturaBilgisiIslemleri/wsdl/FaturaBilgisiIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_E00_FaturaBilgisiIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/OdemeBilgisiIslemleri/wsdl/OdemeBilgisiIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_C00\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/OdemeBilgisiIslemleri/wsdl/OdemeBilgisiIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_C00_OdemeBilgisiIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/OdemeDurumKontrolIslemleri/wsdl/OdemeDurumKontrolIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_C01\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/OdemeDurumKontrolIslemleri/wsdl/OdemeDurumKontrolIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_C01_OdemeDurumKontrolIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/ProvizyonIslemleri/wsdl/ProvizyonIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_A00\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/ProvizyonIslemleri/wsdl/ProvizyonIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_A00_ProvizyonIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/RaporIslemleri/wsdl/RaporIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_F00\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/RaporIslemleri/wsdl/RaporIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_F00_RaporIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/SevkBildirimIslemleri/wsdl/SevkBildirimIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_B00\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/SevkBildirimIslemleri/wsdl/SevkBildirimIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_B00_SevkBildirimIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://saglik.sgk.gov.tr/saglikws/services/YardimciIslemler/wsdl/YardimciIslemler.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWSDL_OTHER\</RelPath>
+      <UpdateFromURL>http://saglik.sgk.gov.tr/saglikws/services/YardimciIslemler/wsdl/YardimciIslemler.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>meno_MyWSDL_OTHER_YardimciIslemlerService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="branslar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="datalogo.JPG" />
+    <Content Include="doc_f2.ico" />
+    <Content Include="iller.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\img1.jpg" />
+    <Content Include="st_iller.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="st_kamu_ozel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="st_tesisler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="st_tesis_turleri.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="yakinlik_kodlari.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\MyWSDL_A00\HastaTakipAraCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_A00\ProvizyonCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_A00\ProvizyonIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_A00\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_A00\SistemDisiSevkCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_A00\TakipDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_A00\TakipSilCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_B00\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_B00\SevkBildirimIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_B00\TakipCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_C00\OdemeBilgisiIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_C00\OdemeSorguCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_C00\OdemeSorguOkuCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_C00\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_C01\OdemeDurumKontrolIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_C01\OdemeSorguCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_C01\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_E00\FaturaBilgisiIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_E00\FaturaCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_E00\FaturaIptalCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_E00\FaturaOkuCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_E00\IcmalFaturaCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_E00\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_F00\RaporCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_F00\RaporIslemleri.wsdl" />
+    <None Include="Web References\MyWSDL_F00\RaporUzatCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_F00\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_OTHER\DoktorAraCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_OTHER\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyWSDL_OTHER\SaglikTesisiAraCevapDVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyWSDL_OTHER\YardimciIslemler.wsdl" />
+    <None Include="AppTables\f00_ds.xsc">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\f00_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>f00_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AppTables\f00_ds.xss">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

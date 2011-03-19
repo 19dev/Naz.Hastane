@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="meno.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="meno_MyWSDL_A00_ProvizyonIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/ProvizyonIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_B00_SevkBildirimIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/SevkBildirimIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_C00_OdemeBilgisiIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/OdemeBilgisiIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_C01_OdemeDurumKontrolIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/OdemeDurumKontrolIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_E00_FaturaBilgisiIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/FaturaBilgisiIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_F00_RaporIslemleriService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/RaporIslemleri</Value>
+    </Setting>
+    <Setting Name="meno_MyWSDL_OTHER_YardimciIslemlerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://saglik.sgk.gov.tr:80/saglikws/services/YardimciIslemler</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

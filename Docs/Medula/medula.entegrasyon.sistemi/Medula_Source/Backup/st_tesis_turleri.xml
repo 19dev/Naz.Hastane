@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<st_tesis_turleri>
+<rid>1</rid>
+<aciklama>Fizik Tesdavi, Rehabilitasyon Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>2</rid>
+<aciklama>KİT, Belediye, Diğer Bakanlık 1.Basamak</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>3</rid>
+<aciklama>KİT, Belediye, Diğer Bakanlık 2.Basamak</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>4</rid>
+<aciklama>Özel - Dal Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>5</rid>
+<aciklama>Özel - Diyaliz Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>6</rid>
+<aciklama>Özel - Görüntüleme Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>7</rid>
+<aciklama>Özel - Hastane</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>8</rid>
+<aciklama>Özel - Klinik</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>9</rid>
+<aciklama>Özel - Laboratuvar</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>10</rid>
+<aciklama>Özel - Muayenehane</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>11</rid>
+<aciklama>Özel - Poliklinik</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>12</rid>
+<aciklama>Özel - Tıp Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>13</rid>
+<aciklama>Özel - Tüp Bebek Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>14</rid>
+<aciklama>SB - Ağız ve Diş Sağlığı Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>15</rid>
+<aciklama>SB - Ana Çocuk Sağlığı ve Aile Planlama Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>16</rid>
+<aciklama>SB - Bölge Hıfzısıhha Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>17</rid>
+<aciklama>SB - Çocuk Hastalıkları Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>18</rid>
+<aciklama>SB - Deri/Zührevi ve Lepra Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>19</rid>
+<aciklama>SB - Devlet Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>20</rid>
+<aciklama>SB - Doğum ve Çocuk Bakımevi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>21</rid>
+<aciklama>SB - Eğitim ve Araştırma Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>22</rid>
+<aciklama>SB - Fizik Ted. Rehabilitasyon Hast</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>23</rid>
+<aciklama>SB - Göğüs Hastalıkları Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>24</rid>
+<aciklama>SB - İlçe/Belde Gün Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>25</rid>
+<aciklama>SB - Kemik Hastalıkları Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>26</rid>
+<aciklama>SB - Onkoloji Hastanesi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>27</rid>
+<aciklama>SB - Ruh Sağlığı Hastalıkları Hast.</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>28</rid>
+<aciklama>SB - Sağlık İl Müdürlüğü</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>29</rid>
+<aciklama>SB - Sağlık Merkezi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>30</rid>
+<aciklama>SB - Semt Polikliniği</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>31</rid>
+<aciklama>SB - Sıtma Savaş Dispanseri</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>32</rid>
+<aciklama>SB - Trahom Savaş Dispanseri</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>33</rid>
+<aciklama>SB - Verem Savaş Dispanseri</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>34</rid>
+<aciklama>TSK - 1. Basamak Sağlık Tesisi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>35</rid>
+<aciklama>TSK - 2. Basamak Sağlık Tesisi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>36</rid>
+<aciklama>TSK - 3. Basamak Sağlık Tesisi</aciklama>
+</st_tesis_turleri>
+<st_tesis_turleri>
+<rid>37</rid>
+<aciklama>Üniversite Hastaneleri</aciklama>
+</st_tesis_turleri>
+</dataroot>

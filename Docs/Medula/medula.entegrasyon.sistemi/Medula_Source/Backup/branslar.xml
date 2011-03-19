@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DSBrans>
+<brans>
+<kod>4400</kod>
+<aciklama>Acil Tıp</aciklama>
+</brans>
+<brans>
+<kod>4500</kod>
+<aciklama>Adli Tıp</aciklama>
+</brans>
+<brans>
+<kod>5300</kod>
+<aciklama>Ağız, Diş, Çene Hastalıkları ve Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>4800</kod>
+<aciklama>Aile Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>1099</kod>
+<aciklama>Alerji Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1198</kod>
+<aciklama>Alerjik Göğüs Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>3197</kod>
+<aciklama>Algoloji</aciklama>
+</brans>
+<brans>
+<kod>4900</kod>
+<aciklama>Anatomi</aciklama>
+</brans>
+<brans>
+<kod>2796</kod>
+<aciklama>Androloji</aciklama>
+</brans>
+<brans>
+<kod>3100</kod>
+<aciklama>Anesteziyoloji ve Reanimasyon</aciklama>
+</brans>
+<brans>
+<kod>4100</kod>
+<aciklama>Askeri Sahra Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>2400</kod>
+<aciklama>Beyin ve Sinir Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>4695</kod>
+<aciklama>Çevre Sağlığı</aciklama>
+</brans>
+<brans>
+<kod>1594</kod>
+<aciklama>Çocuk Alerjisi</aciklama>
+</brans>
+<brans>
+<kod>2000</kod>
+<aciklama>Çocuk Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>1593</kod>
+<aciklama>Çocuk Endokrinolojisi</aciklama>
+</brans>
+<brans>
+<kod>1592</kod>
+<aciklama>Çocuk Enfeksiyon Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1591</kod>
+<aciklama>Çocuk Gastroenteroloji, Hepatoloji ve Beslenme</aciklama>
+</brans>
+<brans>
+<kod>1590</kod>
+<aciklama>Çocuk Göğüs Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1589</kod>
+<aciklama>Çocuk Hematolojisi</aciklama>
+</brans>
+<brans>
+<kod>1588</kod>
+<aciklama>Çocuk İmmünolojisi</aciklama>
+</brans>
+<brans>
+<kod>2387</kod>
+<aciklama>Çocuk Kalp ve Damar Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>1586</kod>
+<aciklama>Çocuk Kardiyolojisi</aciklama>
+</brans>
+<brans>
+<kod>1585</kod>
+<aciklama>Çocuk Metabolizma Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1584</kod>
+<aciklama>Çocuk Nefrolojisi</aciklama>
+</brans>
+<brans>
+<kod>1583</kod>
+<aciklama>Çocuk Nörolojisi</aciklama>
+</brans>
+<brans>
+<kod>1582</kod>
+<aciklama>Çocuk Onkolojisi</aciklama>
+</brans>
+<brans>
+<kod>1600</kod>
+<aciklama>Çocuk Psikiyatrisi</aciklama>
+</brans>
+<brans>
+<kod>1500</kod>
+<aciklama>Çocuk Sağlığı ve Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>2781</kod>
+<aciklama>Çocuk Ürolojisi</aciklama>
+</brans>
+<brans>
+<kod>1700</kod>
+<aciklama>Dermatoloji</aciklama>
+</brans>
+<brans>
+<kod>3580</kod>
+<aciklama>Dermatopatoloji</aciklama>
+</brans>
+<brans>
+<kod>5700</kod>
+<aciklama>Diş Hastalıkları ve Tedavisi</aciklama>
+</brans>
+<brans>
+<kod>2579</kod>
+<aciklama>El Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>5000</kod>
+<aciklama>Embriyoloji ve Histoloji</aciklama>
+</brans>
+<brans>
+<kod>1078</kod>
+<aciklama>Endokrinoloji ve Metabolizma Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1200</kod>
+<aciklama>Enfeksiyon Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>4677</kod>
+<aciklama>Epidemiyoloji</aciklama>
+</brans>
+<brans>
+<kod>1800</kod>
+<aciklama>Fiziksel Tıp ve Rehabilitasyon</aciklama>
+</brans>
+<brans>
+<kod>4700</kod>
+<aciklama>Fizyoloji</aciklama>
+</brans>
+<brans>
+<kod>1076</kod>
+<aciklama>Gastroenteroloji</aciklama>
+</brans>
+<brans>
+<kod>1975</kod>
+<aciklama>Gastroentroloji Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>1900</kod>
+<aciklama>Genel Cerrahi</aciklama>
+</brans>
+<brans>
+<kod>1574</kod>
+<aciklama>Genetik</aciklama>
+</brans>
+<brans>
+<kod>1073</kod>
+<aciklama>Geriatri</aciklama>
+</brans>
+<brans>
+<kod>3372</kod>
+<aciklama>Girişimsel Radyoloji</aciklama>
+</brans>
+<brans>
+<kod>2200</kod>
+<aciklama>Göğüs Cerrahisi.</aciklama>
+</brans>
+<brans>
+<kod>1171</kod>
+<aciklama>Göğüs Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>2900</kod>
+<aciklama>Göz Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>4600</kod>
+<aciklama>Halk Sağlığı</aciklama>
+</brans>
+<brans>
+<kod>4200</kod>
+<aciklama>Hava ve Uzay Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>1070</kod>
+<aciklama>Hematoloji</aciklama>
+</brans>
+<brans>
+<kod>9901</kod>
+<aciklama>Hemodiyaliz Kliniği</aciklama>
+</brans>
+<brans>
+<kod>1000</kod>
+<aciklama>İç Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>1069</kod>
+<aciklama>İmmünoloji</aciklama>
+</brans>
+<brans>
+<kod>1068</kod>
+<aciklama>İş ve Meslek Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>4667</kod>
+<aciklama>İşyeri Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>3000</kod>
+<aciklama>Kadın Hastalıkları ve Doğum</aciklama>
+</brans>
+<brans>
+<kod>2300</kod>
+<aciklama>Kalp ve Damar Cerrahisi</aciklama>
+</brans>
+<brans>
+<kod>1100</kod>
+<aciklama>Kardiyoloji</aciklama>
+</brans>
+<brans>
+<kod>3666</kod>
+<aciklama>Klinik Genetik</aciklama>
+</brans>
+<brans>
+<kod>3665</kod>
+<aciklama>Klinik Moleküler Genetik</aciklama>
+</brans>
+<brans>
+<kod>3664</kod>
+<aciklama>Klinik Sitogenetik</aciklama>
+</brans>
+<brans>
+<kod>2800</kod>
+<aciklama>Kulak-Burun-Boğaz Hastalıkları</aciklama>
+</brans>
+<brans>
+<kod>3863</kod>
+<aciklama>Mikoloji</aciklama>
+</brans>
+<brans>
+<kod>1062</kod>
+<aciklama>Nefroloji</aciklama>
+</brans>
+<brans>
+<kod>1561</kod>
+<aciklama>Neonatoloji</aciklama>
+</brans>
+<brans>
+<kod>1300</kod>
+<aciklama>Nöroloji</aciklama>
+</brans>
+<brans>
+<kod>3560</kod>
+<aciklama>Nöropatoloji</aciklama>
+</brans>
+<brans>
+<kod>3359</kod>
+<aciklama>Nöroradyoloji</aciklama>
+</brans>
+<brans>
+<kod>3400</kod>
+<aciklama>Nükleer Tıp</aciklama>
+</brans>
+<brans>
+<kod>4658</kod>
+<aciklama>Okul Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>5600</kod>
+<aciklama>Oral Diagnoz Radyoloji</aciklama>
+</brans>
+<brans>
+<kod>5100</kod>
+<aciklama>Ortodonti</aciklama>
+</brans>
+<brans>
+<kod>2600</kod>
+<aciklama>Ortopedi ve Travmatoloji</aciklama>
+</brans>
+<brans>
+<kod>3357</kod>
+<aciklama>Pediyatrik Radyoloji</aciklama>
+</brans>
+<brans>
+<kod>5400</kod>
+<aciklama>Pedodonti</aciklama>
+</brans>
+<brans>
+<kod>3056</kod>
+<aciklama>Perinatoloji</aciklama>
+</brans>
+<brans>
+<kod>5500</kod>
+<aciklama>Periodontoloji</aciklama>
+</brans>
+<brans>
+<kod>2500</kod>
+<aciklama>Plastik, Rekonstrüktif ve Estetik Cerrahi</aciklama>
+</brans>
+<brans>
+<kod>9999</kod>
+<aciklama>Pratisyen Hekim (Geçici kodlama)</aciklama>
+</brans>
+<brans>
+<kod>5200</kod>
+<aciklama>Protetik Diş Tedavisi</aciklama>
+</brans>
+<brans>
+<kod>1400</kod>
+<aciklama>Psikiyatri</aciklama>
+</brans>
+<brans>
+<kod>3200</kod>
+<aciklama>Radyasyon Onkolojisi</aciklama>
+</brans>
+<brans>
+<kod>3300</kod>
+<aciklama>Radyoloji</aciklama>
+</brans>
+<brans>
+<kod>1055</kod>
+<aciklama>Romatoloji</aciklama>
+</brans>
+<brans>
+<kod>3554</kod>
+<aciklama>Sitopatoloji</aciklama>
+</brans>
+<brans>
+<kod>4000</kod>
+<aciklama>Spor Hekimliği</aciklama>
+</brans>
+<brans>
+<kod>4300</kod>
+<aciklama>Sualtı Hekimliği ve Hiperbarik Tıp</aciklama>
+</brans>
+<brans>
+<kod>3700</kod>
+<aciklama>Tıbbi Biyokimya</aciklama>
+</brans>
+<brans>
+<kod>3900</kod>
+<aciklama>Tıbbi Farmakoloji</aciklama>
+</brans>
+<brans>
+<kod>3600</kod>
+<aciklama>Tıbbi Genetik</aciklama>
+</brans>
+<brans>
+<kod>3800</kod>
+<aciklama>Tıbbi Mikrobiyoloji</aciklama>
+</brans>
+<brans>
+<kod>1053</kod>
+<aciklama>Tıbbi Onkoloji</aciklama>
+</brans>
+<brans>
+<kod>3852</kod>
+<aciklama>Tıbbi Parazitoloji</aciklama>
+</brans>
+<brans>
+<kod>3500</kod>
+<aciklama>Tıbbi Patoloji</aciklama>
+</brans>
+<brans>
+<kod>3951</kod>
+<aciklama>Toksikoloji</aciklama>
+</brans>
+<brans>
+<kod>3050</kod>
+<aciklama>Üreme Endokrinolojisi ve İnfertilite</aciklama>
+</brans>
+<brans>
+<kod>2700</kod>
+<aciklama>Üroloji</aciklama>
+</brans>
+<brans>
+<kod>3849</kod>
+<aciklama>Viroloji</aciklama>
+</brans>
+<brans>
+<kod>1048</kod>
+<aciklama>Yoğun Bakım</aciklama>
+</brans>
+</DSBrans>

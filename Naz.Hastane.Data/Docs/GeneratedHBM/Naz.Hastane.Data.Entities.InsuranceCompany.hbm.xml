@@ -1,0 +1,182 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.InsuranceCompany, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="KURADR">
+    <id name="PSG" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PSG" length="6" />
+      <generator class="assigned" />
+    </id>
+    <property name="ACILKATILIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ACILKATILIM" length="1" />
+    </property>
+    <property name="ADI1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ADI1" length="200" />
+    </property>
+    <property name="ADRZUS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ADRZUS" length="200" />
+    </property>
+    <property name="ALACAK" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ALACAK" length="8" />
+    </property>
+    <property name="ANLASMADURUMU" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ANLASMADURUMU" length="1" />
+    </property>
+    <property name="BORC" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BORC" length="8" />
+    </property>
+    <property name="c_alacak" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="c_alacak" length="8" />
+    </property>
+    <property name="c_borc" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="c_borc" length="8" />
+    </property>
+    <property name="c_hesap_kodu" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="c_hesap_kodu" length="20" />
+    </property>
+    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATE" length="8" />
+    </property>
+    <property name="DATE_UPDATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_UPDATE" length="8" />
+    </property>
+    <property name="DESTEKPSG" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DESTEKPSG" length="6" />
+    </property>
+    <property name="DRPAYNEZAMAN" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRPAYNEZAMAN" length="1" />
+    </property>
+    <property name="DSTKDUS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DSTKDUS" length="1" />
+    </property>
+    <property name="ECZBILGKATPAYI" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ECZBILGKATPAYI" length="8" />
+    </property>
+    <property name="ECZKATPAYI" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ECZKATPAYI" length="8" />
+    </property>
+    <property name="ECZMUAUCRETI" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ECZMUAUCRETI" length="8" />
+    </property>
+    <property name="EKSIKODENEN" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EKSIKODENEN" length="8" />
+    </property>
+    <property name="EPOSTA" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EPOSTA" length="50" />
+    </property>
+    <property name="FAX" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FAX" length="20" />
+    </property>
+    <property name="FIXKURUM" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FIXKURUM" length="2" />
+    </property>
+    <property name="FIYLIST" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FIYLIST" length="2" />
+    </property>
+    <property name="HASTAKATILIM" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTAKATILIM" length="1" />
+    </property>
+    <property name="HASTALIMIT" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTALIMIT" length="8" />
+    </property>
+    <property name="hesap_kodu" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="hesap_kodu" length="100" />
+    </property>
+    <property name="ILACINDIRIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ILACINDIRIM" length="1" />
+    </property>
+    <property name="ILACODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ILACODE" length="1" />
+    </property>
+    <property name="KNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KNR" length="5" />
+    </property>
+    <property name="KURUMTIPI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KURUMTIPI" length="4" />
+    </property>
+    <property name="lngKurumTipiID" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="lngKurumTipiID" length="4" />
+    </property>
+    <property name="MKURUM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MKURUM" length="50" />
+    </property>
+    <property name="MLIMIT" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MLIMIT" length="50" />
+    </property>
+    <property name="ORAN1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORAN1" length="150" />
+    </property>
+    <property name="ORAN2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORAN2" length="150" />
+    </property>
+    <property name="ORKA1" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORKA1" length="10" />
+    </property>
+    <property name="ORKA2" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORKA2" length="10" />
+    </property>
+    <property name="ORKA3" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORKA3" length="10" />
+    </property>
+    <property name="ORT" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ORT" length="20" />
+    </property>
+    <property name="OZELNOT" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="OZELNOT" length="16" />
+    </property>
+    <property name="PFIYLIST" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PFIYLIST" length="2" />
+    </property>
+    <property name="PLZ" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PLZ" length="5" />
+    </property>
+    <property name="POLSURE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="POLSURE" length="50" />
+    </property>
+    <property name="SARFODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SARFODE" length="1" />
+    </property>
+    <property name="SEVKBASAMAK" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SEVKBASAMAK" length="1" />
+    </property>
+    <property name="SEVKGECSURE" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SEVKGECSURE" length="2" />
+    </property>
+    <property name="SIFIRGOSTER" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIFIRGOSTER" length="50" />
+    </property>
+    <property name="SIRAID" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIRAID" length="8" />
+    </property>
+    <property name="STR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="STR" length="30" />
+    </property>
+    <property name="TEL1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TEL1" length="20" />
+    </property>
+    <property name="TEL2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TEL2" length="20" />
+    </property>
+    <property name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID" length="20" />
+    </property>
+    <property name="USER_ID_UPDATE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID_UPDATE" length="20" />
+    </property>
+    <property name="VADESURESI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="VADESURESI" length="50" />
+    </property>
+    <property name="VER" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="VER" length="20" />
+    </property>
+    <property name="VERDAR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="VERDAR" length="20" />
+    </property>
+    <property name="VERNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="VERNO" length="20" />
+    </property>
+    <property name="YETKILI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="YETKILI" length="28" />
+    </property>
+    <property name="YFIYLIST" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="YFIYLIST" length="2" />
+    </property>
+  </class>
+</hibernate-mapping>

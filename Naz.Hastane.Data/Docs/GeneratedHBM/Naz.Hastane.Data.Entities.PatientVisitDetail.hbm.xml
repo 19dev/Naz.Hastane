@@ -1,0 +1,169 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.PatientVisitDetail, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HIZIL">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-many-to-one name="PatientVisit" class="Naz.Hastane.Data.Entities.PatientVisit, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="KNR" />
+        <column name="SNR" />
+      </key-many-to-one>
+      <key-property name="DetailNo" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="SIRANO" />
+      </key-property>
+    </composite-id>
+    <property name="AKOD" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AKOD" />
+    </property>
+    <property name="TANIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TANIM" />
+    </property>
+    <property name="GRUP" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="GRUP" />
+    </property>
+    <property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="CODE" />
+    </property>
+    <property name="ADET" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ADET" />
+    </property>
+    <property name="UNITE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="UNITE" />
+    </property>
+    <property name="NAME1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NAME1" />
+    </property>
+    <property name="SATISF" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SATISF" />
+    </property>
+    <property name="KSATISF" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KSATISF" />
+    </property>
+    <property name="DSATISF" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DSATISF" />
+    </property>
+    <property name="KDV" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KDV" />
+    </property>
+    <property name="TARIH" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TARIH" />
+    </property>
+    <property name="Doctor" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ARZT" />
+    </property>
+    <property name="Doktor2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ARZT2" />
+    </property>
+    <property name="PSG" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PSG" />
+    </property>
+    <property name="HZLNO" type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HZLNO" />
+    </property>
+    <property name="MAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MAKNO" />
+    </property>
+    <property name="KFATNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KFATNO" />
+    </property>
+    <property name="FATURAEDILSIN" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FATURAEDILSIN" />
+    </property>
+    <property name="ISLENDIMI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISLENDIMI" />
+    </property>
+    <property name="PAKET" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PAKET" />
+    </property>
+    <property name="LRGOR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="LRGOR" />
+    </property>
+    <property name="BUTCODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BUTCODE" />
+    </property>
+    <property name="BUTNAME" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BUTNAME" />
+    </property>
+    <property name="ESKI_SATISF" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESKI_SATISF" />
+    </property>
+    <property name="KABUL" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KABUL" />
+    </property>
+    <property name="ISODENDI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISODENDI" />
+    </property>
+    <property name="CARIFIYAT" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="CARIFIYAT" />
+    </property>
+    <property name="ODEMETARIHI" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ODEMETARIHI" />
+    </property>
+    <property name="ISDURUM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISDURUM" />
+    </property>
+    <property name="PSEANS" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PSEANS" />
+    </property>
+    <property name="SAGSOL" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SAGSOL" />
+    </property>
+    <property name="EUSCORE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EUSCORE" />
+    </property>
+    <property name="HMAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HMAKNO" />
+    </property>
+    <property name="HODENDI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HODENDI" />
+    </property>
+    <property name="AMAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AMAKNO" />
+    </property>
+    <property name="HYATISTARIHI" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HYATISTARIHI" />
+    </property>
+    <property name="HCIKISTARIHI" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HCIKISTARIHI" />
+    </property>
+    <property name="REFGUNSAY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="REFGUNSAY" />
+    </property>
+    <property name="ISLEMSIRANO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISLEMSIRANO" />
+    </property>
+    <property name="MEDSIRANO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDSIRANO" />
+    </property>
+    <property name="MEDONAY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDONAY" />
+    </property>
+    <property name="MEDTUTAR" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDTUTAR" />
+    </property>
+    <property name="TBASLANGICSAATI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TBASLANGICSAATI" />
+    </property>
+    <property name="TBITISSAATI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TBITISSAATI" />
+    </property>
+    <property name="MEDOZDURUM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDOZDURUM" />
+    </property>
+    <property name="MEDANOMALI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MEDANOMALI" />
+    </property>
+    <property name="TG" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TG" />
+    </property>
+    <property name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID" />
+    </property>
+    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATE" />
+    </property>
+    <property name="USER_ID_UPDATE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID_UPDATE" />
+    </property>
+    <property name="DATE_UPDATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_UPDATE" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D1368C4-4238-4DCD-8B2E-20DCA3A166F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naz.Hastane.Resources</RootNamespace>
+    <AssemblyName>Naz.Hastane.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ResourcesHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutPage\Buy.png" />
+    <EmbeddedResource Include="AboutPage\Charts.png" />
+    <EmbeddedResource Include="AboutPage\Download.png" />
+    <EmbeddedResource Include="AboutPage\Grid.png" />
+    <EmbeddedResource Include="AboutPage\Learn-More.png" />
+    <EmbeddedResource Include="AboutPage\PivotGrid.png" />
+    <EmbeddedResource Include="AboutPage\Reports.png" />
+    <EmbeddedResource Include="AboutPage\Scheduler.png" />
+    <EmbeddedResource Include="Images\About.png" />
+    <EmbeddedResource Include="Images\Action_Report_ShowDesigner.png" />
+    <EmbeddedResource Include="Images\Action_Report_ShowDesigner_32x32.png" />
+    <EmbeddedResource Include="Images\ActiveRents.png" />
+    <EmbeddedResource Include="Images\BarImages16x16.png" />
+    <EmbeddedResource Include="Images\ColumnHeaderImages.png" />
+    <EmbeddedResource Include="Images\DiskFormats.png" />
+    <EmbeddedResource Include="Images\FolderIcons16x16.png" />
+    <EmbeddedResource Include="Images\Persons.png" />
+    <EmbeddedResource Include="Images\RatingsLarge.png" />
+    <EmbeddedResource Include="Images\RatingsSmall.png" />
+    <EmbeddedResource Include="Images\ReceiptType.png" />
+    <EmbeddedResource Include="SingleImages\ActiveCustomersList_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ActiveCustomersList_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ActiveRents_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ActiveRents_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Actor_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Actor_32x32.png" />
+    <EmbeddedResource Include="SingleImages\AddItem_16x16.png" />
+    <EmbeddedResource Include="SingleImages\AddItem_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Add_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Add_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Categories_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Categories_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CloseDetails_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CloseDetails_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Close_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Close_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Company_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Company_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CustomerFilmRentsList_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CustomerFilmRentsList_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CustomerInfoCards_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CustomerInfoCards_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CustomerRevenue_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CustomerRevenue_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CustomersByDate_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CustomersByDate_32x32.png" />
+    <EmbeddedResource Include="SingleImages\CustomersKPI_16x16.png" />
+    <EmbeddedResource Include="SingleImages\CustomersKPI_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Delete_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Delete_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Edit_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Edit_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Employee_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Employee_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToExcel_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToExcel_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToHTML_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToHTML_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToIMG_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToIMG_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToMHT_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToMHT_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToPDF_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToPDF_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToRTF_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToRTF_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToTXT_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToTXT_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ExportToXML_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ExportToXML_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Export_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Export_32x32.png" />
+    <EmbeddedResource Include="SingleImages\FilmItemInfoCards_16x16.png" />
+    <EmbeddedResource Include="SingleImages\FilmItemInfoCards_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Group_Administrator.png" />
+    <EmbeddedResource Include="SingleImages\Group_Catalog.png" />
+    <EmbeddedResource Include="SingleImages\Group_KPI.png" />
+    <EmbeddedResource Include="SingleImages\Group_Rental.png" />
+    <EmbeddedResource Include="SingleImages\Group_Reports.png" />
+    <EmbeddedResource Include="SingleImages\Group_Statistics.png" />
+    <EmbeddedResource Include="SingleImages\Home_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Home_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Info_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Info_32x32.png" />
+    <EmbeddedResource Include="SingleImages\LayoutFlip_16x16.png" />
+    <EmbeddedResource Include="SingleImages\LayoutFlip_32x32.png" />
+    <EmbeddedResource Include="SingleImages\LayoutOptions_16x16.png" />
+    <EmbeddedResource Include="SingleImages\LayoutOptions_32x32.png" />
+    <EmbeddedResource Include="SingleImages\LayoutRotate_16x16.png" />
+    <EmbeddedResource Include="SingleImages\LayoutRotate_32x32.png" />
+    <EmbeddedResource Include="SingleImages\ManageItems_16x16.png" />
+    <EmbeddedResource Include="SingleImages\ManageItems_32x32.png" />
+    <EmbeddedResource Include="SingleImages\MediaPerformance_16x16.png" />
+    <EmbeddedResource Include="SingleImages\MediaPerformance_32x32.png" />
+    <EmbeddedResource Include="SingleImages\MoviesKPI_16x16.png" />
+    <EmbeddedResource Include="SingleImages\MoviesKPI_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Movie_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Movie_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Navigation_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Navigation_32x32.png" />
+    <EmbeddedResource Include="SingleImages\New_16x16.png" />
+    <EmbeddedResource Include="SingleImages\New_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Next_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Next_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Open_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Open_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Order_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Order_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Palette_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Palette_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Period_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Period_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Person_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Person_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Preview_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Preview_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Previous_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Previous_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Refresh_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Refresh_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Return_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Return_32x32.png" />
+    <EmbeddedResource Include="SingleImages\RevenueSplit_16x16.png" />
+    <EmbeddedResource Include="SingleImages\RevenueSplit_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Revenue_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Revenue_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Sale_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Sale_32x32.png" />
+    <EmbeddedResource Include="SingleImages\SaveAndClose_16x16.png" />
+    <EmbeddedResource Include="SingleImages\SaveAndClose_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Save_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Save_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Scheduler_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Scheduler_32x32.png" />
+    <EmbeddedResource Include="SingleImages\TheMostProfitableGenresList_16x16.png" />
+    <EmbeddedResource Include="SingleImages\TheMostProfitableGenresList_32x32.png" />
+    <EmbeddedResource Include="SingleImages\TopCustomers_16x16.png" />
+    <EmbeddedResource Include="SingleImages\TopCustomers_32x32.png" />
+    <EmbeddedResource Include="SingleImages\TopFilmList_16x16.png" />
+    <EmbeddedResource Include="SingleImages\TopFilmList_32x32.png" />
+    <EmbeddedResource Include="SingleImages\UserKey_16x16.png" />
+    <EmbeddedResource Include="SingleImages\UserKey_32x32.png" />
+    <EmbeddedResource Include="SingleImages\Views_16x16.png" />
+    <EmbeddedResource Include="SingleImages\Views_32x32.png" />
+    <EmbeddedResource Include="SingleImages\View_16x16.png" />
+    <EmbeddedResource Include="SingleImages\View_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

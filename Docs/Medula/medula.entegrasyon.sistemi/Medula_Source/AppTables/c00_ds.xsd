@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="c00_ds" targetNamespace="http://tempuri.org/c00_ds.xsd" xmlns:mstns="http://tempuri.org/c00_ds.xsd" xmlns="http://tempuri.org/c00_ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="c00_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="c00_ds" msprop:Generator_DataSetName="c00_ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_TaniBlg" msprop:Generator_UserTableName="tbl_TaniBlg" msprop:Generator_RowDeletedName="tbl_TaniBlgRowDeleted" msprop:Generator_RowChangedName="tbl_TaniBlgRowChanged" msprop:Generator_RowClassName="tbl_TaniBlgRow" msprop:Generator_RowChangingName="tbl_TaniBlgRowChanging" msprop:Generator_RowEvArgName="tbl_TaniBlgRowChangeEvent" msprop:Generator_RowEvHandlerName="tbl_TaniBlgRowChangeEventHandler" msprop:Generator_TableClassName="tbl_TaniBlgDataTable" msprop:Generator_TableVarName="tabletbl_TaniBlg" msprop:Generator_RowDeletingName="tbl_TaniBlgRowDeleting" msprop:Generator_TablePropName="tbl_TaniBlg">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="taniKodu" msdata:Caption="Tanı Kodu" msprop:Generator_UserColumnName="taniKodu" msprop:Generator_ColumnPropNameInRow="taniKodu" msprop:Generator_ColumnVarNameInTable="columntaniKodu" msprop:Generator_ColumnPropNameInTable="taniKoduColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="taniTipi" msdata:Caption="Tanı tipi" msprop:Generator_UserColumnName="taniTipi" msprop:Generator_ColumnPropNameInRow="taniTipi" msprop:Generator_ColumnVarNameInTable="columntaniTipi" msprop:Generator_ColumnPropNameInTable="taniTipiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="birincilTani" msdata:Caption="Birincil Tanı" msprop:Generator_UserColumnName="birincilTani" msprop:Generator_ColumnPropNameInRow="birincilTani" msprop:Generator_ColumnVarNameInTable="columnbirincilTani" msprop:Generator_ColumnPropNameInTable="birincilTaniColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msdata:Caption="Hizmet sunucu referans" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblKonsultasyonBilgisi" msprop:Generator_UserTableName="tblKonsultasyonBilgisi" msprop:Generator_RowDeletedName="tblKonsultasyonBilgisiRowDeleted" msprop:Generator_RowChangedName="tblKonsultasyonBilgisiRowChanged" msprop:Generator_RowClassName="tblKonsultasyonBilgisiRow" msprop:Generator_RowChangingName="tblKonsultasyonBilgisiRowChanging" msprop:Generator_RowEvArgName="tblKonsultasyonBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblKonsultasyonBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblKonsultasyonBilgisiDataTable" msprop:Generator_TableVarName="tabletblKonsultasyonBilgisi" msprop:Generator_RowDeletingName="tblKonsultasyonBilgisiRowDeleting" msprop:Generator_TablePropName="tblKonsultasyonBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doktorTescilNo" msprop:Generator_UserColumnName="doktorTescilNo" msprop:Generator_ColumnPropNameInRow="doktorTescilNo" msprop:Generator_ColumnVarNameInTable="columndoktorTescilNo" msprop:Generator_ColumnPropNameInTable="doktorTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbkBranj" msprop:Generator_UserTableName="tbkBranj" msprop:Generator_RowDeletedName="tbkBranjRowDeleted" msprop:Generator_RowChangedName="tbkBranjRowChanged" msprop:Generator_RowClassName="tbkBranjRow" msprop:Generator_RowChangingName="tbkBranjRowChanging" msprop:Generator_RowEvArgName="tbkBranjRowChangeEvent" msprop:Generator_RowEvHandlerName="tbkBranjRowChangeEventHandler" msprop:Generator_TableClassName="tbkBranjDataTable" msprop:Generator_TableVarName="tabletbkBranj" msprop:Generator_RowDeletingName="tbkBranjRowDeleting" msprop:Generator_TablePropName="tbkBranj">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kod" msprop:Generator_UserColumnName="kod" msprop:Generator_ColumnPropNameInRow="kod" msprop:Generator_ColumnVarNameInTable="columnkod" msprop:Generator_ColumnPropNameInTable="kodColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="aciklama" msprop:Generator_UserColumnName="aciklama" msprop:Generator_ColumnPropNameInRow="aciklama" msprop:Generator_ColumnVarNameInTable="columnaciklama" msprop:Generator_ColumnPropNameInTable="aciklamaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbkHastaYatisBilgisi" msprop:Generator_UserTableName="tbkHastaYatisBilgisi" msprop:Generator_RowDeletedName="tbkHastaYatisBilgisiRowDeleted" msprop:Generator_RowChangedName="tbkHastaYatisBilgisiRowChanged" msprop:Generator_RowClassName="tbkHastaYatisBilgisiRow" msprop:Generator_RowChangingName="tbkHastaYatisBilgisiRowChanging" msprop:Generator_RowEvArgName="tbkHastaYatisBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tbkHastaYatisBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tbkHastaYatisBilgisiDataTable" msprop:Generator_TableVarName="tabletbkHastaYatisBilgisi" msprop:Generator_RowDeletingName="tbkHastaYatisBilgisiRowDeleting" msprop:Generator_TablePropName="tbkHastaYatisBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="yatisBaslangicTarihi" msprop:Generator_UserColumnName="yatisBaslangicTarihi" msprop:Generator_ColumnPropNameInRow="yatisBaslangicTarihi" msprop:Generator_ColumnVarNameInTable="columnyatisBaslangicTarihi" msprop:Generator_ColumnPropNameInTable="yatisBaslangicTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="yatisBitisTarihi" msprop:Generator_UserColumnName="yatisBitisTarihi" msprop:Generator_ColumnPropNameInRow="yatisBitisTarihi" msprop:Generator_ColumnVarNameInTable="columnyatisBitisTarihi" msprop:Generator_ColumnPropNameInTable="yatisBitisTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drTescilNo" msprop:Generator_UserColumnName="drTescilNo" msprop:Generator_ColumnPropNameInRow="drTescilNo" msprop:Generator_ColumnVarNameInTable="columndrTescilNo" msprop:Generator_ColumnPropNameInTable="drTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="refakatciGunSayisi" msprop:Generator_UserColumnName="refakatciGunSayisi" msprop:Generator_ColumnPropNameInRow="refakatciGunSayisi" msprop:Generator_ColumnVarNameInTable="columnrefakatciGunSayisi" msprop:Generator_ColumnPropNameInTable="refakatciGunSayisiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblDisBilgisi" msprop:Generator_UserTableName="tblDisBilgisi" msprop:Generator_RowDeletedName="tblDisBilgisiRowDeleted" msprop:Generator_RowChangedName="tblDisBilgisiRowChanged" msprop:Generator_RowClassName="tblDisBilgisiRow" msprop:Generator_RowChangingName="tblDisBilgisiRowChanging" msprop:Generator_RowEvArgName="tblDisBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblDisBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblDisBilgisiDataTable" msprop:Generator_TableVarName="tabletblDisBilgisi" msprop:Generator_RowDeletingName="tblDisBilgisiRowDeleting" msprop:Generator_TablePropName="tblDisBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="sagAltCene" msprop:Generator_UserColumnName="sagAltCene" msprop:Generator_ColumnPropNameInRow="sagAltCene" msprop:Generator_ColumnVarNameInTable="columnsagAltCene" msprop:Generator_ColumnPropNameInTable="sagAltCeneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sagUstCene" msprop:Generator_UserColumnName="sagUstCene" msprop:Generator_ColumnPropNameInRow="sagUstCene" msprop:Generator_ColumnVarNameInTable="columnsagUstCene" msprop:Generator_ColumnPropNameInTable="sagUstCeneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="solAltCene" msprop:Generator_UserColumnName="solAltCene" msprop:Generator_ColumnPropNameInRow="solAltCene" msprop:Generator_ColumnVarNameInTable="columnsolAltCene" msprop:Generator_ColumnPropNameInTable="solAltCeneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="solUstCene" msprop:Generator_UserColumnName="solUstCene" msprop:Generator_ColumnPropNameInRow="solUstCene" msprop:Generator_ColumnVarNameInTable="columnsolUstCene" msprop:Generator_ColumnPropNameInTable="solUstCeneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="acilDurum" msprop:Generator_UserColumnName="acilDurum" msprop:Generator_ColumnPropNameInRow="acilDurum" msprop:Generator_ColumnVarNameInTable="columnacilDurum" msprop:Generator_ColumnPropNameInTable="acilDurumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblAmeliyatveGirisimBilgisi" msprop:Generator_UserTableName="tblAmeliyatveGirisimBilgisi" msprop:Generator_RowDeletedName="tblAmeliyatveGirisimBilgisiRowDeleted" msprop:Generator_RowChangedName="tblAmeliyatveGirisimBilgisiRowChanged" msprop:Generator_RowClassName="tblAmeliyatveGirisimBilgisiRow" msprop:Generator_RowChangingName="tblAmeliyatveGirisimBilgisiRowChanging" msprop:Generator_RowEvArgName="tblAmeliyatveGirisimBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblAmeliyatveGirisimBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblAmeliyatveGirisimBilgisiDataTable" msprop:Generator_TableVarName="tabletblAmeliyatveGirisimBilgisi" msprop:Generator_RowDeletingName="tblAmeliyatveGirisimBilgisiRowDeleting" msprop:Generator_TablePropName="tblAmeliyatveGirisimBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drTescilNo" msprop:Generator_UserColumnName="drTescilNo" msprop:Generator_ColumnVarNameInTable="columndrTescilNo" msprop:Generator_ColumnPropNameInRow="drTescilNo" msprop:Generator_ColumnPropNameInTable="drTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ayniFarkliKesi" msprop:Generator_UserColumnName="ayniFarkliKesi" msprop:Generator_ColumnVarNameInTable="columnayniFarkliKesi" msprop:Generator_ColumnPropNameInRow="ayniFarkliKesi" msprop:Generator_ColumnPropNameInTable="ayniFarkliKesiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sagSol" msprop:Generator_UserColumnName="sagSol" msprop:Generator_ColumnVarNameInTable="columnsagSol" msprop:Generator_ColumnPropNameInRow="sagSol" msprop:Generator_ColumnPropNameInTable="sagSolColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="acilDurum" msprop:Generator_UserColumnName="acilDurum" msprop:Generator_ColumnVarNameInTable="columnacilDurum" msprop:Generator_ColumnPropNameInRow="acilDurum" msprop:Generator_ColumnPropNameInTable="acilDurumColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="aciklama" msprop:Generator_UserColumnName="aciklama" msprop:Generator_ColumnVarNameInTable="columnaciklama" msprop:Generator_ColumnPropNameInRow="aciklama" msprop:Generator_ColumnPropNameInTable="aciklamaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblTetkikveRadyolojiBilgisi" msprop:Generator_UserTableName="tblTetkikveRadyolojiBilgisi" msprop:Generator_RowDeletedName="tblTetkikveRadyolojiBilgisiRowDeleted" msprop:Generator_RowChangedName="tblTetkikveRadyolojiBilgisiRowChanged" msprop:Generator_RowClassName="tblTetkikveRadyolojiBilgisiRow" msprop:Generator_RowChangingName="tblTetkikveRadyolojiBilgisiRowChanging" msprop:Generator_RowEvArgName="tblTetkikveRadyolojiBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblTetkikveRadyolojiBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblTetkikveRadyolojiBilgisiDataTable" msprop:Generator_TableVarName="tabletblTetkikveRadyolojiBilgisi" msprop:Generator_RowDeletingName="tblTetkikveRadyolojiBilgisiRowDeleting" msprop:Generator_TablePropName="tblTetkikveRadyolojiBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drTescilNo" msprop:Generator_UserColumnName="drTescilNo" msprop:Generator_ColumnVarNameInTable="columndrTescilNo" msprop:Generator_ColumnPropNameInRow="drTescilNo" msprop:Generator_ColumnPropNameInTable="drTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbkTahlilBilgisi" msprop:Generator_UserTableName="tbkTahlilBilgisi" msprop:Generator_RowDeletedName="tbkTahlilBilgisiRowDeleted" msprop:Generator_RowChangedName="tbkTahlilBilgisiRowChanged" msprop:Generator_RowClassName="tbkTahlilBilgisiRow" msprop:Generator_RowChangingName="tbkTahlilBilgisiRowChanging" msprop:Generator_RowEvArgName="tbkTahlilBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tbkTahlilBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tbkTahlilBilgisiDataTable" msprop:Generator_TableVarName="tabletbkTahlilBilgisi" msprop:Generator_RowDeletingName="tbkTahlilBilgisiRowDeleting" msprop:Generator_TablePropName="tbkTahlilBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drTescilNo" msprop:Generator_UserColumnName="drTescilNo" msprop:Generator_ColumnVarNameInTable="columndrTescilNo" msprop:Generator_ColumnPropNameInRow="drTescilNo" msprop:Generator_ColumnPropNameInTable="drTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblDigerIslemBilgileri" msprop:Generator_UserTableName="tblDigerIslemBilgileri" msprop:Generator_RowDeletedName="tblDigerIslemBilgileriRowDeleted" msprop:Generator_RowChangedName="tblDigerIslemBilgileriRowChanged" msprop:Generator_RowClassName="tblDigerIslemBilgileriRow" msprop:Generator_RowChangingName="tblDigerIslemBilgileriRowChanging" msprop:Generator_RowEvArgName="tblDigerIslemBilgileriRowChangeEvent" msprop:Generator_RowEvHandlerName="tblDigerIslemBilgileriRowChangeEventHandler" msprop:Generator_TableClassName="tblDigerIslemBilgileriDataTable" msprop:Generator_TableVarName="tabletblDigerIslemBilgileri" msprop:Generator_RowDeletingName="tblDigerIslemBilgileriRowDeleting" msprop:Generator_TablePropName="tblDigerIslemBilgileri">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="butKodu" msprop:Generator_UserColumnName="butKodu" msprop:Generator_ColumnVarNameInTable="columnbutKodu" msprop:Generator_ColumnPropNameInRow="butKodu" msprop:Generator_ColumnPropNameInTable="butKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drTescilNo" msprop:Generator_UserColumnName="drTescilNo" msprop:Generator_ColumnVarNameInTable="columndrTescilNo" msprop:Generator_ColumnPropNameInRow="drTescilNo" msprop:Generator_ColumnPropNameInTable="drTescilNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bransKodu" msprop:Generator_UserColumnName="bransKodu" msprop:Generator_ColumnVarNameInTable="columnbransKodu" msprop:Generator_ColumnPropNameInRow="bransKodu" msprop:Generator_ColumnPropNameInTable="bransKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="acilDurum" msprop:Generator_UserColumnName="acilDurum" msprop:Generator_ColumnVarNameInTable="columnacilDurum" msprop:Generator_ColumnPropNameInRow="acilDurum" msprop:Generator_ColumnPropNameInTable="acilDurumColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblIlacBilgisi" msprop:Generator_UserTableName="tblIlacBilgisi" msprop:Generator_RowDeletedName="tblIlacBilgisiRowDeleted" msprop:Generator_RowChangedName="tblIlacBilgisiRowChanged" msprop:Generator_RowClassName="tblIlacBilgisiRow" msprop:Generator_RowChangingName="tblIlacBilgisiRowChanging" msprop:Generator_RowEvArgName="tblIlacBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblIlacBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblIlacBilgisiDataTable" msprop:Generator_TableVarName="tabletblIlacBilgisi" msprop:Generator_RowDeletingName="tblIlacBilgisiRowDeleting" msprop:Generator_TablePropName="tblIlacBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Barkod" msprop:Generator_UserColumnName="Barkod" msprop:Generator_ColumnVarNameInTable="columnBarkod" msprop:Generator_ColumnPropNameInRow="Barkod" msprop:Generator_ColumnPropNameInTable="BarkodColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ilacTuru" msprop:Generator_UserColumnName="ilacTuru" msprop:Generator_ColumnVarNameInTable="columnilacTuru" msprop:Generator_ColumnPropNameInRow="ilacTuru" msprop:Generator_ColumnPropNameInTable="ilacTuruColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="aciklama" msprop:Generator_UserColumnName="aciklama" msprop:Generator_ColumnVarNameInTable="columnaciklama" msprop:Generator_ColumnPropNameInRow="aciklama" msprop:Generator_ColumnPropNameInTable="aciklamaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tutar" msprop:Generator_UserColumnName="tutar" msprop:Generator_ColumnVarNameInTable="columntutar" msprop:Generator_ColumnPropNameInRow="tutar" msprop:Generator_ColumnPropNameInTable="tutarColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblMalzemeBilgileri" msprop:Generator_UserTableName="tblMalzemeBilgileri" msprop:Generator_RowDeletedName="tblMalzemeBilgileriRowDeleted" msprop:Generator_RowChangedName="tblMalzemeBilgileriRowChanged" msprop:Generator_RowClassName="tblMalzemeBilgileriRow" msprop:Generator_RowChangingName="tblMalzemeBilgileriRowChanging" msprop:Generator_RowEvArgName="tblMalzemeBilgileriRowChangeEvent" msprop:Generator_RowEvHandlerName="tblMalzemeBilgileriRowChangeEventHandler" msprop:Generator_TableClassName="tblMalzemeBilgileriDataTable" msprop:Generator_TableVarName="tabletblMalzemeBilgileri" msprop:Generator_RowDeletingName="tblMalzemeBilgileriRowDeleting" msprop:Generator_TablePropName="tblMalzemeBilgileri">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="malzemeKodu" msprop:Generator_UserColumnName="malzemeKodu" msprop:Generator_ColumnVarNameInTable="columnmalzemeKodu" msprop:Generator_ColumnPropNameInRow="malzemeKodu" msprop:Generator_ColumnPropNameInTable="malzemeKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adet" msprop:Generator_UserColumnName="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="islemTarihi" msprop:Generator_UserColumnName="islemTarihi" msprop:Generator_ColumnVarNameInTable="columnislemTarihi" msprop:Generator_ColumnPropNameInRow="islemTarihi" msprop:Generator_ColumnPropNameInTable="islemTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="malzemeTuru" msprop:Generator_UserColumnName="malzemeTuru" msprop:Generator_ColumnVarNameInTable="columnmalzemeTuru" msprop:Generator_ColumnPropNameInRow="malzemeTuru" msprop:Generator_ColumnPropNameInTable="malzemeTuruColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kodsuzMalzemeAdi" msprop:Generator_UserColumnName="kodsuzMalzemeAdi" msprop:Generator_ColumnVarNameInTable="columnkodsuzMalzemeAdi" msprop:Generator_ColumnPropNameInRow="kodsuzMalzemeAdi" msprop:Generator_ColumnPropNameInTable="kodsuzMalzemeAdiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="kodsuzMalzemeFiyati" msprop:Generator_UserColumnName="kodsuzMalzemeFiyati" msprop:Generator_ColumnVarNameInTable="columnkodsuzMalzemeFiyati" msprop:Generator_ColumnPropNameInRow="kodsuzMalzemeFiyati" msprop:Generator_ColumnPropNameInTable="kodsuzMalzemeFiyatiColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblRaporBilgileri" msprop:Generator_UserTableName="tblRaporBilgileri" msprop:Generator_RowDeletedName="tblRaporBilgileriRowDeleted" msprop:Generator_RowChangedName="tblRaporBilgileriRowChanged" msprop:Generator_RowClassName="tblRaporBilgileriRow" msprop:Generator_RowChangingName="tblRaporBilgileriRowChanging" msprop:Generator_RowEvArgName="tblRaporBilgileriRowChangeEvent" msprop:Generator_RowEvHandlerName="tblRaporBilgileriRowChangeEventHandler" msprop:Generator_TableClassName="tblRaporBilgileriDataTable" msprop:Generator_TableVarName="tabletblRaporBilgileri" msprop:Generator_RowDeletingName="tblRaporBilgileriRowDeleting" msprop:Generator_TablePropName="tblRaporBilgileri">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="raporNo" msprop:Generator_UserColumnName="raporNo" msprop:Generator_ColumnVarNameInTable="columnraporNo" msprop:Generator_ColumnPropNameInRow="raporNo" msprop:Generator_ColumnPropNameInTable="raporNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="raporVerenTesisKodu" msprop:Generator_UserColumnName="raporVerenTesisKodu" msprop:Generator_ColumnVarNameInTable="columnraporVerenTesisKodu" msprop:Generator_ColumnPropNameInRow="raporVerenTesisKodu" msprop:Generator_ColumnPropNameInTable="raporVerenTesisKoduColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="raporVerilisTarihi" msprop:Generator_UserColumnName="raporVerilisTarihi" msprop:Generator_ColumnVarNameInTable="columnraporVerilisTarihi" msprop:Generator_ColumnPropNameInRow="raporVerilisTarihi" msprop:Generator_ColumnPropNameInTable="raporVerilisTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblOdemeSorguHataBilgisi" msprop:Generator_UserTableName="tblOdemeSorguHataBilgisi" msprop:Generator_RowDeletedName="tblOdemeSorguHataBilgisiRowDeleted" msprop:Generator_RowChangedName="tblOdemeSorguHataBilgisiRowChanged" msprop:Generator_RowClassName="tblOdemeSorguHataBilgisiRow" msprop:Generator_RowChangingName="tblOdemeSorguHataBilgisiRowChanging" msprop:Generator_RowEvArgName="tblOdemeSorguHataBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblOdemeSorguHataBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblOdemeSorguHataBilgisiDataTable" msprop:Generator_TableVarName="tabletblOdemeSorguHataBilgisi" msprop:Generator_RowDeletingName="tblOdemeSorguHataBilgisiRowDeleting" msprop:Generator_TablePropName="tblOdemeSorguHataBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hataKodu" msprop:Generator_UserColumnName="hataKodu" msprop:Generator_ColumnPropNameInRow="hataKodu" msprop:Generator_ColumnVarNameInTable="columnhataKodu" msprop:Generator_ColumnPropNameInTable="hataKoduColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hataMesaji" msprop:Generator_UserColumnName="hataMesaji" msprop:Generator_ColumnPropNameInRow="hataMesaji" msprop:Generator_ColumnVarNameInTable="columnhataMesaji" msprop:Generator_ColumnPropNameInTable="hataMesajiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="islemSiraNo" msprop:Generator_UserColumnName="islemSiraNo" msprop:Generator_ColumnPropNameInRow="islemSiraNo" msprop:Generator_ColumnVarNameInTable="columnislemSiraNo" msprop:Generator_ColumnPropNameInTable="islemSiraNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="islemBUTKodu" msprop:Generator_UserColumnName="islemBUTKodu" msprop:Generator_ColumnPropNameInRow="islemBUTKodu" msprop:Generator_ColumnVarNameInTable="columnislemBUTKodu" msprop:Generator_ColumnPropNameInTable="islemBUTKoduColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblIslemFiyatBilgisi" msprop:Generator_UserTableName="tblIslemFiyatBilgisi" msprop:Generator_RowDeletedName="tblIslemFiyatBilgisiRowDeleted" msprop:Generator_RowChangedName="tblIslemFiyatBilgisiRowChanged" msprop:Generator_RowClassName="tblIslemFiyatBilgisiRow" msprop:Generator_RowChangingName="tblIslemFiyatBilgisiRowChanging" msprop:Generator_RowEvArgName="tblIslemFiyatBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblIslemFiyatBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblIslemFiyatBilgisiDataTable" msprop:Generator_TableVarName="tabletblIslemFiyatBilgisi" msprop:Generator_RowDeletingName="tblIslemFiyatBilgisiRowDeleting" msprop:Generator_TablePropName="tblIslemFiyatBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tutar" msprop:Generator_UserColumnName="tutar" msprop:Generator_ColumnPropNameInRow="tutar" msprop:Generator_ColumnVarNameInTable="columntutar" msprop:Generator_ColumnPropNameInTable="tutarColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="hizmetSunucuRefNo" msprop:Generator_UserColumnName="hizmetSunucuRefNo" msprop:Generator_ColumnPropNameInRow="hizmetSunucuRefNo" msprop:Generator_ColumnVarNameInTable="columnhizmetSunucuRefNo" msprop:Generator_ColumnPropNameInTable="hizmetSunucuRefNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="islemSiraNo" msprop:Generator_UserColumnName="islemSiraNo" msprop:Generator_ColumnPropNameInRow="islemSiraNo" msprop:Generator_ColumnVarNameInTable="columnislemSiraNo" msprop:Generator_ColumnPropNameInTable="islemSiraNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="islemBUTKodu" msprop:Generator_UserColumnName="islemBUTKodu" msprop:Generator_ColumnPropNameInRow="islemBUTKodu" msprop:Generator_ColumnVarNameInTable="columnislemBUTKodu" msprop:Generator_ColumnPropNameInTable="islemBUTKoduColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblHastaTakipList" msprop:Generator_UserTableName="tblHastaTakipList" msprop:Generator_RowDeletedName="tblHastaTakipListRowDeleted" msprop:Generator_RowChangedName="tblHastaTakipListRowChanged" msprop:Generator_RowClassName="tblHastaTakipListRow" msprop:Generator_RowChangingName="tblHastaTakipListRowChanging" msprop:Generator_RowEvArgName="tblHastaTakipListRowChangeEvent" msprop:Generator_RowEvHandlerName="tblHastaTakipListRowChangeEventHandler" msprop:Generator_TableClassName="tblHastaTakipListDataTable" msprop:Generator_TableVarName="tabletblHastaTakipList" msprop:Generator_RowDeletingName="tblHastaTakipListRowDeleting" msprop:Generator_TablePropName="tblHastaTakipList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takipNo" msprop:Generator_UserColumnName="takipNo" msprop:Generator_ColumnVarNameInTable="columntakipNo" msprop:Generator_ColumnPropNameInRow="takipNo" msprop:Generator_ColumnPropNameInTable="takipNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sevkEdenTesisKodu" msprop:Generator_UserColumnName="sevkEdenTesisKodu" msprop:Generator_ColumnVarNameInTable="columnsevkEdenTesisKodu" msprop:Generator_ColumnPropNameInRow="sevkEdenTesisKodu" msprop:Generator_ColumnPropNameInTable="sevkEdenTesisKoduColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sevkEdenTesisAdi" msprop:Generator_UserColumnName="sevkEdenTesisAdi" msprop:Generator_ColumnVarNameInTable="columnsevkEdenTesisAdi" msprop:Generator_ColumnPropNameInRow="sevkEdenTesisAdi" msprop:Generator_ColumnPropNameInTable="sevkEdenTesisAdiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sevkEdilenBransKodu" msprop:Generator_UserColumnName="sevkEdilenBransKodu" msprop:Generator_ColumnVarNameInTable="columnsevkEdilenBransKodu" msprop:Generator_ColumnPropNameInRow="sevkEdilenBransKodu" msprop:Generator_ColumnPropNameInTable="sevkEdilenBransKoduColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sevkEdilenBransAdi" msprop:Generator_UserColumnName="sevkEdilenBransAdi" msprop:Generator_ColumnVarNameInTable="columnsevkEdilenBransAdi" msprop:Generator_ColumnPropNameInRow="sevkEdilenBransAdi" msprop:Generator_ColumnPropNameInTable="sevkEdilenBransAdiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sevkEdilisTarihi" msprop:Generator_UserColumnName="sevkEdilisTarihi" msprop:Generator_ColumnVarNameInTable="columnsevkEdilisTarihi" msprop:Generator_ColumnPropNameInRow="sevkEdilisTarihi" msprop:Generator_ColumnPropNameInTable="sevkEdilisTarihiColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblFaturaBilgisi" msprop:Generator_UserTableName="tblFaturaBilgisi" msprop:Generator_RowDeletedName="tblFaturaBilgisiRowDeleted" msprop:Generator_RowChangedName="tblFaturaBilgisiRowChanged" msprop:Generator_RowClassName="tblFaturaBilgisiRow" msprop:Generator_RowChangingName="tblFaturaBilgisiRowChanging" msprop:Generator_RowEvArgName="tblFaturaBilgisiRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFaturaBilgisiRowChangeEventHandler" msprop:Generator_TableClassName="tblFaturaBilgisiDataTable" msprop:Generator_TableVarName="tabletblFaturaBilgisi" msprop:Generator_RowDeletingName="tblFaturaBilgisiRowDeleting" msprop:Generator_TablePropName="tblFaturaBilgisi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takipNo" msprop:Generator_UserColumnName="takipNo" msprop:Generator_ColumnPropNameInRow="takipNo" msprop:Generator_ColumnVarNameInTable="columntakipNo" msprop:Generator_ColumnPropNameInTable="takipNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faturaNo" msprop:Generator_UserColumnName="faturaNo" msprop:Generator_ColumnPropNameInRow="faturaNo" msprop:Generator_ColumnVarNameInTable="columnfaturaNo" msprop:Generator_ColumnPropNameInTable="faturaNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faturaTarihi" msprop:Generator_UserColumnName="faturaTarihi" msprop:Generator_ColumnPropNameInRow="faturaTarihi" msprop:Generator_ColumnVarNameInTable="columnfaturaTarihi" msprop:Generator_ColumnPropNameInTable="faturaTarihiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblFaturaHataliKayit" msprop:Generator_UserTableName="tblFaturaHataliKayit" msprop:Generator_RowDeletedName="tblFaturaHataliKayitRowDeleted" msprop:Generator_RowChangedName="tblFaturaHataliKayitRowChanged" msprop:Generator_RowClassName="tblFaturaHataliKayitRow" msprop:Generator_RowChangingName="tblFaturaHataliKayitRowChanging" msprop:Generator_RowEvArgName="tblFaturaHataliKayitRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFaturaHataliKayitRowChangeEventHandler" msprop:Generator_TableClassName="tblFaturaHataliKayitDataTable" msprop:Generator_TableVarName="tabletblFaturaHataliKayit" msprop:Generator_RowDeletingName="tblFaturaHataliKayitRowDeleting" msprop:Generator_TablePropName="tblFaturaHataliKayit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takipNo" msprop:Generator_UserColumnName="takipNo" msprop:Generator_ColumnPropNameInRow="takipNo" msprop:Generator_ColumnVarNameInTable="columntakipNo" msprop:Generator_ColumnPropNameInTable="takipNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hataKodu" msprop:Generator_UserColumnName="hataKodu" msprop:Generator_ColumnPropNameInRow="hataKodu" msprop:Generator_ColumnVarNameInTable="columnhataKodu" msprop:Generator_ColumnPropNameInTable="hataKoduColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hataMesaji" msprop:Generator_UserColumnName="hataMesaji" msprop:Generator_ColumnPropNameInRow="hataMesaji" msprop:Generator_ColumnVarNameInTable="columnhataMesaji" msprop:Generator_ColumnPropNameInTable="hataMesajiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblFaturaBasariliKayit" msprop:Generator_UserTableName="tblFaturaBasariliKayit" msprop:Generator_RowDeletedName="tblFaturaBasariliKayitRowDeleted" msprop:Generator_RowChangedName="tblFaturaBasariliKayitRowChanged" msprop:Generator_RowClassName="tblFaturaBasariliKayitRow" msprop:Generator_RowChangingName="tblFaturaBasariliKayitRowChanging" msprop:Generator_RowEvArgName="tblFaturaBasariliKayitRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFaturaBasariliKayitRowChangeEventHandler" msprop:Generator_TableClassName="tblFaturaBasariliKayitDataTable" msprop:Generator_TableVarName="tabletblFaturaBasariliKayit" msprop:Generator_RowDeletingName="tblFaturaBasariliKayitRowDeleting" msprop:Generator_TablePropName="tblFaturaBasariliKayit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takipNo" msprop:Generator_UserColumnName="takipNo" msprop:Generator_ColumnPropNameInRow="takipNo" msprop:Generator_ColumnVarNameInTable="columntakipNo" msprop:Generator_ColumnPropNameInTable="takipNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faturaTeslimNo" msprop:Generator_UserColumnName="faturaTeslimNo" msprop:Generator_ColumnPropNameInRow="faturaTeslimNo" msprop:Generator_ColumnVarNameInTable="columnfaturaTeslimNo" msprop:Generator_ColumnPropNameInTable="faturaTeslimNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hesaplananTutar" msprop:Generator_UserColumnName="hesaplananTutar" msprop:Generator_ColumnPropNameInRow="hesaplananTutar" msprop:Generator_ColumnVarNameInTable="columnhesaplananTutar" msprop:Generator_ColumnPropNameInTable="hesaplananTutarColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblTakipNumaralari" msprop:Generator_UserTableName="tblTakipNumaralari" msprop:Generator_RowDeletedName="tblTakipNumaralariRowDeleted" msprop:Generator_RowChangedName="tblTakipNumaralariRowChanged" msprop:Generator_RowClassName="tblTakipNumaralariRow" msprop:Generator_RowChangingName="tblTakipNumaralariRowChanging" msprop:Generator_RowEvArgName="tblTakipNumaralariRowChangeEvent" msprop:Generator_RowEvHandlerName="tblTakipNumaralariRowChangeEventHandler" msprop:Generator_TableClassName="tblTakipNumaralariDataTable" msprop:Generator_TableVarName="tabletblTakipNumaralari" msprop:Generator_RowDeletingName="tblTakipNumaralariRowDeleting" msprop:Generator_TablePropName="tblTakipNumaralari">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takipNo" msprop:Generator_UserColumnName="takipNo" msprop:Generator_ColumnVarNameInTable="columntakipNo" msprop:Generator_ColumnPropNameInRow="takipNo" msprop:Generator_ColumnPropNameInTable="takipNoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="tbkBranjKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbkBranj" />
+      <xs:field xpath="mstns:kod" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="tbkBranj_tblKonsultasyonBilgisi" msdata:parent="tbkBranj" msdata:child="tblKonsultasyonBilgisi" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tblKonsultasyonBilgisi" msprop:Generator_RelationVarName="relationtbkBranj_tblKonsultasyonBilgisi" msprop:Generator_UserChildTable="tblKonsultasyonBilgisi" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettblKonsultasyonBilgisiRows" />
+      <msdata:Relationship name="tbkBranj_tbkHastaYatisBilgisi" msdata:parent="tbkBranj" msdata:child="tbkHastaYatisBilgisi" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tbkHastaYatisBilgisi" msprop:Generator_RelationVarName="relationtbkBranj_tbkHastaYatisBilgisi" msprop:Generator_UserChildTable="tbkHastaYatisBilgisi" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettbkHastaYatisBilgisiRows" />
+      <msdata:Relationship name="tbkBranj_tblAmeliyatveGirisimBilgisi" msdata:parent="tbkBranj" msdata:child="tblAmeliyatveGirisimBilgisi" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tblAmeliyatveGirisimBilgisi" msprop:Generator_RelationVarName="relationtbkBranj_tblAmeliyatveGirisimBilgisi" msprop:Generator_UserChildTable="tblAmeliyatveGirisimBilgisi" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettblAmeliyatveGirisimBilgisiRows" />
+      <msdata:Relationship name="tbkBranj_tblTetkikveRadyolojiBilgisi" msdata:parent="tbkBranj" msdata:child="tblTetkikveRadyolojiBilgisi" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tblTetkikveRadyolojiBilgisi" msprop:Generator_RelationVarName="relationtbkBranj_tblTetkikveRadyolojiBilgisi" msprop:Generator_UserChildTable="tblTetkikveRadyolojiBilgisi" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettblTetkikveRadyolojiBilgisiRows" />
+      <msdata:Relationship name="tbkBranj_tbkTahlilBilgisi" msdata:parent="tbkBranj" msdata:child="tbkTahlilBilgisi" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tbkTahlilBilgisi" msprop:Generator_RelationVarName="relationtbkBranj_tbkTahlilBilgisi" msprop:Generator_UserChildTable="tbkTahlilBilgisi" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettbkTahlilBilgisiRows" />
+      <msdata:Relationship name="tbkBranj_tblDigerIslemBilgileri" msdata:parent="tbkBranj" msdata:child="tblDigerIslemBilgileri" msdata:parentkey="kod" msdata:childkey="bransKodu" msprop:Generator_UserRelationName="tbkBranj_tblDigerIslemBilgileri" msprop:Generator_RelationVarName="relationtbkBranj_tblDigerIslemBilgileri" msprop:Generator_UserChildTable="tblDigerIslemBilgileri" msprop:Generator_UserParentTable="tbkBranj" msprop:Generator_ParentPropName="tbkBranjRow" msprop:Generator_ChildPropName="GettblDigerIslemBilgileriRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

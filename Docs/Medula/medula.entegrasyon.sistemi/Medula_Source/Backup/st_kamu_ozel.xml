@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<st_kamu_ozel>
+<rid>1</rid>
+<aciklama>KAMU</aciklama>
+</st_kamu_ozel>
+<st_kamu_ozel>
+<rid>2</rid>
+<aciklama>OZEL</aciklama>
+</st_kamu_ozel>
+</dataroot>

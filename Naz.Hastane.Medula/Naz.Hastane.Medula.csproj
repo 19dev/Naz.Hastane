@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF0B5F45-51DC-4A85-B05B-5FB59E739A55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naz.Hastane.Medula</RootNamespace>
+    <AssemblyName>NazH.Hastane.Medula</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppTables\c00_ds.cs">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\c00_ds.Designer.cs">
+      <DependentUpon>c00_ds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\c00_ds1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\f00_ds.cs">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\f00_ds.Designer.cs">
+      <DependentUpon>f00_ds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\f00_ds1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\other_ds.cs">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppTables\other_ds.Designer.cs">
+      <DependentUpon>other_ds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppTables\other_ds1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedulaHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HastaKabulIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\A00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\A00.designer.cs">
+      <DependentUpon>A00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\appstng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\appstng.designer.cs">
+      <DependentUpon>appstng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\ErrFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\ErrFrm.designer.cs">
+      <DependentUpon>ErrFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\frmtesisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\frmtesisler.designer.cs">
+      <DependentUpon>frmtesisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\GlobalClass.cs" />
+    <Compile Include="TestForms\resultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\resultForm.designer.cs">
+      <DependentUpon>resultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\uLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\uLogin.designer.cs">
+      <DependentUpon>uLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\WS_RaporDVO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestForms\WS_RaporDVO.designer.cs">
+      <DependentUpon>WS_RaporDVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\WS_Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestForms\WS_Result.designer.cs">
+      <DependentUpon>WS_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\WS_Result2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestForms\WS_Result2.designer.cs">
+      <DependentUpon>WS_Result2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FaturaKayitIslemleriWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HastaKabulIslemleriWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HizmetKayitIslemleriWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RaporIslemleriWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TakipFormuIslemleriWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\YardimciIslemlerWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/FaturaKayitIslemleri/wsdl/FaturaKayitIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FaturaKayitIslemleriWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/FaturaKayitIslemleri/wsdl/FaturaKayitIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_FaturaKayitIslemleri_FaturaKayitIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HastaKabulIslemleriWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_HastaKabulIslemleri_HastaKabulIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/HizmetKayitIslemleri/wsdl/HizmetKayitIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HizmetKayitIslemleriWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/HizmetKayitIslemleri/wsdl/HizmetKayitIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_HizmetKayitIslemleri_HizmetKayitIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/RaporIslemleri/wsdl/RaporIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RaporIslemleriWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/RaporIslemleri/wsdl/RaporIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_RaporIslemleri_RaporIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/TakipFormuIslemleri/wsdl/TakipFormuIslemleri.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TakipFormuIslemleriWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/TakipFormuIslemleri/wsdl/TakipFormuIslemleri.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_TakipFormuIslemleri_TakipFormuIslemleriService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://medula.sgk.gov.tr/medulaws/services/YardimciIslemler/wsdl/YardimciIslemler.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\YardimciIslemlerWeb\</RelPath>
+      <UpdateFromURL>http://medula.sgk.gov.tr/medulaws/services/YardimciIslemler/wsdl/YardimciIslemler.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Naz_Medula_YardimciIslemler_YardimciIslemlerService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AppTables\c00_ds.xsc">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\c00_ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>c00_ds1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppTables\c00_ds.xss">
+      <DependentUpon>c00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\f00_ds.xsc">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\f00_ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>f00_ds1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppTables\f00_ds.xss">
+      <DependentUpon>f00_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\other_ds.xsc">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </None>
+    <None Include="AppTables\other_ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>other_ds1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppTables\other_ds.xss">
+      <DependentUpon>other_ds.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\HastaKabulIslemleri.wsdl" />
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.BasvuruTakipOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.HastaCikisCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.HastaYatisOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.ProvizyonCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.ProvizyonDegistirCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.SevkBildirSonucDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.TakipDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.TakipSilCevapDVO1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\FaturaKayitIslemleriWeb\FaturaCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FaturaKayitIslemleriWeb\FaturaIptalCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FaturaKayitIslemleriWeb\FaturaKayitIslemleri.wsdl" />
+    <None Include="Web References\FaturaKayitIslemleriWeb\FaturaOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FaturaKayitIslemleriWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\BasvuruTakipOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\HastaCikisCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\HastaKabulIslemleri.wsdl" />
+    <None Include="Web References\HastaKabulIslemleriWeb\HastaYatisOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\ProvizyonCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\ProvizyonDegistirCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\SevkBildirSonucDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\TakipDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HastaKabulIslemleriWeb\TakipSilCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HizmetKayitIslemleriWeb\HizmetIptalCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HizmetKayitIslemleriWeb\HizmetKayitCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HizmetKayitIslemleriWeb\HizmetKayitIslemleri.wsdl" />
+    <None Include="Web References\HizmetKayitIslemleriWeb\HizmetOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HizmetKayitIslemleriWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RaporIslemleriWeb\RaporCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RaporIslemleriWeb\RaporCevapTCKimlikNodanDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RaporIslemleriWeb\RaporIslemleri.wsdl" />
+    <None Include="Web References\RaporIslemleriWeb\RaporUzatCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RaporIslemleriWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TakipFormuIslemleriWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TakipFormuIslemleriWeb\TakipFormuIslemleri.wsdl" />
+    <None Include="Web References\TakipFormuIslemleriWeb\TakipFormuKaydetCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TakipFormuIslemleriWeb\TakipFormuOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TakipFormuIslemleriWeb\TakipFormuSilCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\DoktorAraCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\EtkinMaddeOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\EtkinMaddeSUTCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\EvrakKesintiCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\IlacAraCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\OrneklenmisCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\SaglikTesisiAraCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\TakipAraCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\TeshisOkuCevapDVO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\YardimciIslemlerWeb\YardimciIslemler.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestForms\A00.resx">
+      <DependentUpon>A00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\appstng.resx">
+      <DependentUpon>appstng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\ErrFrm.resx">
+      <DependentUpon>ErrFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\frmtesisler.resx">
+      <DependentUpon>frmtesisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\resultForm.resx">
+      <DependentUpon>resultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\uLogin.resx">
+      <DependentUpon>uLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\WS_RaporDVO.resx">
+      <DependentUpon>WS_RaporDVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\WS_Result.resx">
+      <DependentUpon>WS_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\WS_Result2.resx">
+      <DependentUpon>WS_Result2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HastaKabulIslemleri\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HastaKabulIslemleri\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HastaKabulIslemleri\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HastaKabulIslemleri\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

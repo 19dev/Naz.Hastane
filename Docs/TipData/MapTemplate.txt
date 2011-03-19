@@ -1,0 +1,17 @@
+using System;
+using Naz.Hastane.Data.Entities;
+using FluentNHibernate.Mapping;
+
+namespace Naz.Hastane.Data.Mappings
+{
+    public class PatientMap : ClassMap<Patient>
+    {
+        public PatientMap()
+        {
+            Table("ADRES");
+            
+            Id(x => x.PatientNo)        .Column("KNR")          .Length(6);
+
+        }
+    }
+}

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Naz.Hastane.Data.Entities.DoctorAccount">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAABAAAAIAAiICAAAAmohFwoAAAAAABAAMAAIAA=</HashCode>
+      <FileName>Entities\Doctor\DoctorAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorAccountDetail">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAFAAIACAAAAAAgAAgQAACAAAEAAAAAAA=</HashCode>
+      <FileName>Entities\Doctor\DoctorAccountDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorInvoiceDetail">
+    <Position X="5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACADAAAIARAAAAACCgADAAAkCAgQAACIAAEAAAgABQ=</HashCode>
+      <FileName>Entities\Doctor\DoctorInvoiceDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorPool">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAAAAAAACAAAAAAgAAgQAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Doctor\DoctorPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorProcess">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAIAAAgACAAAIAIgAAgIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Doctor\DoctorProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorVoucherDetail">
+    <Position X="7" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACACAAAIAAAAAAAACgADAAAkCAgQAACIAAEAAAgABQ=</HashCode>
+      <FileName>Entities\Doctor\DoctorVoucherDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

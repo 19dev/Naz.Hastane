@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:import namespace="http://servisler.ws.gss.sgk.gov.tr" />
+      <xsd:complexType name="SaglikTesisiAraGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="tesisAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisIlKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisTuru" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SaglikTesisiAraCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisler" nillable="true" type="impl:ArrayOf_tns2_nillable_SaglikTesisiListDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SaglikTesisiListDVO">
+        <xsd:sequence>
+          <xsd:element name="tesisIl" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisKodu" type="xsd:int" />
+          <xsd:element name="tesisSinifKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisTuru" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DoktorAraGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="drAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="drBransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drDiplomaNo" nillable="true" type="xsd:string" />
+          <xsd:element name="drSoyadi" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisiKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DoktorAraCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="doktorlar" nillable="true" type="impl:ArrayOf_tns2_nillable_DoktorListDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DoktorListDVO">
+        <xsd:sequence>
+          <xsd:element name="drAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="drDiplomaNo" nillable="true" type="xsd:string" />
+          <xsd:element name="drSoyadi" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:element name="saglikTesisiAraResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="saglikTesisiAraReturn" nillable="true" type="tns2:SaglikTesisiAraCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doktorAra">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doktorAraGiris" nillable="true" type="tns2:DoktorAraGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doktorAraResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doktorAraReturn" nillable="true" type="tns2:DoktorAraCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="saglikTesisiAra">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="saglikTesisiAraGiris" nillable="true" type="tns2:SaglikTesisiAraGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_tns2_nillable_SaglikTesisiListDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="SaglikTesisiListDVO" nillable="true" type="tns2:SaglikTesisiListDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_DoktorListDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="DoktorListDVO" nillable="true" type="tns2:DoktorListDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="saglikTesisiAraResponse">
+    <wsdl:part name="parameters" element="impl:saglikTesisiAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="saglikTesisiAraRequest">
+    <wsdl:part name="parameters" element="impl:saglikTesisiAra" />
+  </wsdl:message>
+  <wsdl:message name="doktorAraRequest">
+    <wsdl:part name="parameters" element="impl:doktorAra" />
+  </wsdl:message>
+  <wsdl:message name="doktorAraResponse">
+    <wsdl:part name="parameters" element="impl:doktorAraResponse" />
+  </wsdl:message>
+  <wsdl:portType name="YardimciIslemler">
+    <wsdl:operation name="saglikTesisiAra">
+      <wsdl:input name="saglikTesisiAraRequest" message="impl:saglikTesisiAraRequest" />
+      <wsdl:output name="saglikTesisiAraResponse" message="impl:saglikTesisiAraResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doktorAra">
+      <wsdl:input name="doktorAraRequest" message="impl:doktorAraRequest" />
+      <wsdl:output name="doktorAraResponse" message="impl:doktorAraResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="YardimciIslemlerSoapBinding" type="impl:YardimciIslemler">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="saglikTesisiAra">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="saglikTesisiAraRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="saglikTesisiAraResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doktorAra">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doktorAraRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="doktorAraResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="YardimciIslemlerService">
+    <wsdl:port name="YardimciIslemler" binding="impl:YardimciIslemlerSoapBinding">
+      <wsdlsoap:address location="http://saglik.sgk.gov.tr:80/saglikws/services/YardimciIslemler" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,615 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.ProductCoefficient, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HIZMET_KATSAYI">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="TANIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="TANIM" />
+      </key-property>
+      <key-property name="GRUP" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="GRUP" />
+      </key-property>
+      <key-property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="CODE" />
+      </key-property>
+    </composite-id>
+    <property name="KATSAY00" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY00" length="8" />
+    </property>
+    <property name="KATSAY01" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY01" length="8" />
+    </property>
+    <property name="KATSAY02" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY02" length="8" />
+    </property>
+    <property name="KATSAY03" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY03" length="8" />
+    </property>
+    <property name="KATSAY04" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY04" length="8" />
+    </property>
+    <property name="KATSAY05" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY05" length="8" />
+    </property>
+    <property name="KATSAY06" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY06" length="8" />
+    </property>
+    <property name="KATSAY07" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY07" length="8" />
+    </property>
+    <property name="KATSAY08" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY08" length="8" />
+    </property>
+    <property name="KATSAY09" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY09" length="8" />
+    </property>
+    <property name="KATSAY10" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY10" length="8" />
+    </property>
+    <property name="KATSAY11" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY11" length="8" />
+    </property>
+    <property name="KATSAY12" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY12" length="8" />
+    </property>
+    <property name="KATSAY13" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY13" length="8" />
+    </property>
+    <property name="KATSAY14" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY14" length="8" />
+    </property>
+    <property name="KATSAY15" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY15" length="8" />
+    </property>
+    <property name="KATSAY16" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY16" length="8" />
+    </property>
+    <property name="KATSAY17" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY17" length="8" />
+    </property>
+    <property name="KATSAY18" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY18" length="8" />
+    </property>
+    <property name="KATSAY19" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY19" length="8" />
+    </property>
+    <property name="KATSAY20" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY20" length="8" />
+    </property>
+    <property name="KATSAY21" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY21" length="8" />
+    </property>
+    <property name="KATSAY22" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY22" length="8" />
+    </property>
+    <property name="KATSAY23" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY23" length="8" />
+    </property>
+    <property name="KATSAY24" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY24" length="8" />
+    </property>
+    <property name="KATSAY25" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY25" length="8" />
+    </property>
+    <property name="KATSAY26" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY26" length="8" />
+    </property>
+    <property name="KATSAY27" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY27" length="8" />
+    </property>
+    <property name="KATSAY28" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY28" length="8" />
+    </property>
+    <property name="KATSAY29" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY29" length="8" />
+    </property>
+    <property name="KATSAY30" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY30" length="8" />
+    </property>
+    <property name="KATSAY31" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY31" length="8" />
+    </property>
+    <property name="KATSAY32" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY32" length="8" />
+    </property>
+    <property name="KATSAY33" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY33" length="8" />
+    </property>
+    <property name="KATSAY34" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY34" length="8" />
+    </property>
+    <property name="KATSAY35" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY35" length="8" />
+    </property>
+    <property name="KATSAY36" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY36" length="8" />
+    </property>
+    <property name="KATSAY37" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY37" length="8" />
+    </property>
+    <property name="KATSAY38" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY38" length="8" />
+    </property>
+    <property name="KATSAY39" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY39" length="8" />
+    </property>
+    <property name="KATSAY40" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY40" length="8" />
+    </property>
+    <property name="KATSAY41" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY41" length="8" />
+    </property>
+    <property name="KATSAY42" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY42" length="8" />
+    </property>
+    <property name="KATSAY43" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY43" length="8" />
+    </property>
+    <property name="KATSAY44" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY44" length="8" />
+    </property>
+    <property name="KATSAY45" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY45" length="8" />
+    </property>
+    <property name="KATSAY46" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY46" length="8" />
+    </property>
+    <property name="KATSAY47" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY47" length="8" />
+    </property>
+    <property name="KATSAY48" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY48" length="8" />
+    </property>
+    <property name="KATSAY49" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY49" length="8" />
+    </property>
+    <property name="KATSAY50" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY50" length="8" />
+    </property>
+    <property name="KATSAY51" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY51" length="8" />
+    </property>
+    <property name="KATSAY52" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY52" length="8" />
+    </property>
+    <property name="KATSAY53" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY53" length="8" />
+    </property>
+    <property name="KATSAY54" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY54" length="8" />
+    </property>
+    <property name="KATSAY55" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY55" length="8" />
+    </property>
+    <property name="KATSAY56" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY56" length="8" />
+    </property>
+    <property name="KATSAY57" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY57" length="8" />
+    </property>
+    <property name="KATSAY58" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY58" length="8" />
+    </property>
+    <property name="KATSAY59" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY59" length="8" />
+    </property>
+    <property name="KATSAY60" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY60" length="8" />
+    </property>
+    <property name="KATSAY61" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY61" length="8" />
+    </property>
+    <property name="KATSAY62" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY62" length="8" />
+    </property>
+    <property name="KATSAY63" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY63" length="8" />
+    </property>
+    <property name="KATSAY64" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY64" length="8" />
+    </property>
+    <property name="KATSAY65" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY65" length="8" />
+    </property>
+    <property name="KATSAY66" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY66" length="8" />
+    </property>
+    <property name="KATSAY67" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY67" length="8" />
+    </property>
+    <property name="KATSAY68" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY68" length="8" />
+    </property>
+    <property name="KATSAY69" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY69" length="8" />
+    </property>
+    <property name="KATSAY70" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY70" length="8" />
+    </property>
+    <property name="KATSAY71" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY71" length="8" />
+    </property>
+    <property name="KATSAY72" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY72" length="8" />
+    </property>
+    <property name="KATSAY73" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY73" length="8" />
+    </property>
+    <property name="KATSAY74" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY74" length="8" />
+    </property>
+    <property name="KATSAY75" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY75" length="8" />
+    </property>
+    <property name="KATSAY76" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY76" length="8" />
+    </property>
+    <property name="KATSAY77" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY77" length="8" />
+    </property>
+    <property name="KATSAY78" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY78" length="8" />
+    </property>
+    <property name="KATSAY79" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY79" length="8" />
+    </property>
+    <property name="KATSAY80" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY80" length="8" />
+    </property>
+    <property name="KATSAY81" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY81" length="8" />
+    </property>
+    <property name="KATSAY82" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY82" length="8" />
+    </property>
+    <property name="KATSAY83" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY83" length="8" />
+    </property>
+    <property name="KATSAY84" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY84" length="8" />
+    </property>
+    <property name="KATSAY85" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY85" length="8" />
+    </property>
+    <property name="KATSAY86" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY86" length="8" />
+    </property>
+    <property name="KATSAY87" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY87" length="8" />
+    </property>
+    <property name="KATSAY88" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY88" length="8" />
+    </property>
+    <property name="KATSAY89" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY89" length="8" />
+    </property>
+    <property name="KATSAY90" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY90" length="8" />
+    </property>
+    <property name="KATSAY91" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY91" length="8" />
+    </property>
+    <property name="KATSAY92" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY92" length="8" />
+    </property>
+    <property name="KATSAY93" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY93" length="8" />
+    </property>
+    <property name="KATSAY94" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY94" length="8" />
+    </property>
+    <property name="KATSAY95" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY95" length="8" />
+    </property>
+    <property name="KATSAY96" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY96" length="8" />
+    </property>
+    <property name="KATSAY97" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY97" length="8" />
+    </property>
+    <property name="KATSAY98" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY98" length="8" />
+    </property>
+    <property name="KATSAY99" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KATSAY99" length="8" />
+    </property>
+    <property name="KKATSAY00" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY00" length="8" />
+    </property>
+    <property name="KKATSAY01" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY01" length="8" />
+    </property>
+    <property name="KKATSAY02" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY02" length="8" />
+    </property>
+    <property name="KKATSAY03" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY03" length="8" />
+    </property>
+    <property name="KKATSAY04" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY04" length="8" />
+    </property>
+    <property name="KKATSAY05" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY05" length="8" />
+    </property>
+    <property name="KKATSAY06" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY06" length="8" />
+    </property>
+    <property name="KKATSAY07" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY07" length="8" />
+    </property>
+    <property name="KKATSAY08" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY08" length="8" />
+    </property>
+    <property name="KKATSAY09" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY09" length="8" />
+    </property>
+    <property name="KKATSAY10" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY10" length="8" />
+    </property>
+    <property name="KKATSAY11" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY11" length="8" />
+    </property>
+    <property name="KKATSAY12" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY12" length="8" />
+    </property>
+    <property name="KKATSAY13" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY13" length="8" />
+    </property>
+    <property name="KKATSAY14" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY14" length="8" />
+    </property>
+    <property name="KKATSAY15" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY15" length="8" />
+    </property>
+    <property name="KKATSAY16" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY16" length="8" />
+    </property>
+    <property name="KKATSAY17" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY17" length="8" />
+    </property>
+    <property name="KKATSAY18" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY18" length="8" />
+    </property>
+    <property name="KKATSAY19" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY19" length="8" />
+    </property>
+    <property name="KKATSAY20" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY20" length="8" />
+    </property>
+    <property name="KKATSAY21" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY21" length="8" />
+    </property>
+    <property name="KKATSAY22" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY22" length="8" />
+    </property>
+    <property name="KKATSAY23" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY23" length="8" />
+    </property>
+    <property name="KKATSAY24" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY24" length="8" />
+    </property>
+    <property name="KKATSAY25" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY25" length="8" />
+    </property>
+    <property name="KKATSAY26" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY26" length="8" />
+    </property>
+    <property name="KKATSAY27" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY27" length="8" />
+    </property>
+    <property name="KKATSAY28" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY28" length="8" />
+    </property>
+    <property name="KKATSAY29" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY29" length="8" />
+    </property>
+    <property name="KKATSAY30" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY30" length="8" />
+    </property>
+    <property name="KKATSAY31" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY31" length="8" />
+    </property>
+    <property name="KKATSAY32" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY32" length="8" />
+    </property>
+    <property name="KKATSAY33" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY33" length="8" />
+    </property>
+    <property name="KKATSAY34" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY34" length="8" />
+    </property>
+    <property name="KKATSAY35" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY35" length="8" />
+    </property>
+    <property name="KKATSAY36" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY36" length="8" />
+    </property>
+    <property name="KKATSAY37" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY37" length="8" />
+    </property>
+    <property name="KKATSAY38" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY38" length="8" />
+    </property>
+    <property name="KKATSAY39" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY39" length="8" />
+    </property>
+    <property name="KKATSAY40" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY40" length="8" />
+    </property>
+    <property name="KKATSAY41" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY41" length="8" />
+    </property>
+    <property name="KKATSAY42" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY42" length="8" />
+    </property>
+    <property name="KKATSAY43" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY43" length="8" />
+    </property>
+    <property name="KKATSAY44" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY44" length="8" />
+    </property>
+    <property name="KKATSAY45" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY45" length="8" />
+    </property>
+    <property name="KKATSAY46" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY46" length="8" />
+    </property>
+    <property name="KKATSAY47" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY47" length="8" />
+    </property>
+    <property name="KKATSAY48" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY48" length="8" />
+    </property>
+    <property name="KKATSAY49" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY49" length="8" />
+    </property>
+    <property name="KKATSAY50" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY50" length="8" />
+    </property>
+    <property name="KKATSAY51" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY51" length="8" />
+    </property>
+    <property name="KKATSAY52" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY52" length="8" />
+    </property>
+    <property name="KKATSAY53" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY53" length="8" />
+    </property>
+    <property name="KKATSAY54" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY54" length="8" />
+    </property>
+    <property name="KKATSAY55" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY55" length="8" />
+    </property>
+    <property name="KKATSAY56" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY56" length="8" />
+    </property>
+    <property name="KKATSAY57" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY57" length="8" />
+    </property>
+    <property name="KKATSAY58" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY58" length="8" />
+    </property>
+    <property name="KKATSAY59" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY59" length="8" />
+    </property>
+    <property name="KKATSAY60" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY60" length="8" />
+    </property>
+    <property name="KKATSAY61" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY61" length="8" />
+    </property>
+    <property name="KKATSAY62" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY62" length="8" />
+    </property>
+    <property name="KKATSAY63" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY63" length="8" />
+    </property>
+    <property name="KKATSAY64" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY64" length="8" />
+    </property>
+    <property name="KKATSAY65" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY65" length="8" />
+    </property>
+    <property name="KKATSAY66" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY66" length="8" />
+    </property>
+    <property name="KKATSAY67" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY67" length="8" />
+    </property>
+    <property name="KKATSAY68" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY68" length="8" />
+    </property>
+    <property name="KKATSAY69" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY69" length="8" />
+    </property>
+    <property name="KKATSAY70" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY70" length="8" />
+    </property>
+    <property name="KKATSAY71" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY71" length="8" />
+    </property>
+    <property name="KKATSAY72" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY72" length="8" />
+    </property>
+    <property name="KKATSAY73" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY73" length="8" />
+    </property>
+    <property name="KKATSAY74" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY74" length="8" />
+    </property>
+    <property name="KKATSAY75" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY75" length="8" />
+    </property>
+    <property name="KKATSAY76" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY76" length="8" />
+    </property>
+    <property name="KKATSAY77" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY77" length="8" />
+    </property>
+    <property name="KKATSAY78" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY78" length="8" />
+    </property>
+    <property name="KKATSAY79" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY79" length="8" />
+    </property>
+    <property name="KKATSAY80" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY80" length="8" />
+    </property>
+    <property name="KKATSAY81" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY81" length="8" />
+    </property>
+    <property name="KKATSAY82" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY82" length="8" />
+    </property>
+    <property name="KKATSAY83" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY83" length="8" />
+    </property>
+    <property name="KKATSAY84" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY84" length="8" />
+    </property>
+    <property name="KKATSAY85" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY85" length="8" />
+    </property>
+    <property name="KKATSAY86" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY86" length="8" />
+    </property>
+    <property name="KKATSAY87" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY87" length="8" />
+    </property>
+    <property name="KKATSAY88" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY88" length="8" />
+    </property>
+    <property name="KKATSAY89" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY89" length="8" />
+    </property>
+    <property name="KKATSAY90" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY90" length="8" />
+    </property>
+    <property name="KKATSAY91" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY91" length="8" />
+    </property>
+    <property name="KKATSAY92" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY92" length="8" />
+    </property>
+    <property name="KKATSAY93" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY93" length="8" />
+    </property>
+    <property name="KKATSAY94" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY94" length="8" />
+    </property>
+    <property name="KKATSAY95" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY95" length="8" />
+    </property>
+    <property name="KKATSAY96" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY96" length="8" />
+    </property>
+    <property name="KKATSAY97" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY97" length="8" />
+    </property>
+    <property name="KKATSAY98" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY98" length="8" />
+    </property>
+    <property name="KKATSAY99" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KKATSAY99" length="8" />
+    </property>
+  </class>
+</hibernate-mapping>

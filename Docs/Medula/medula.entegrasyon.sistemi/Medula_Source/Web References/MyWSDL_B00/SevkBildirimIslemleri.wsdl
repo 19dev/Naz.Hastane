@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:complexType name="TakipGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="gidecegiTesisTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="sevkEdenDrTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilenBrans" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TakipCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBilgileri" nillable="true" type="tns2:HastaBilgileriDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaBilgileriDVO">
+        <xsd:sequence>
+          <xsd:element name="ad" nillable="true" type="xsd:string" />
+          <xsd:element name="cinsiyet" nillable="true" type="xsd:string" />
+          <xsd:element name="dogumTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="karneNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sosyalGuvenlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="soyad" nillable="true" type="xsd:string" />
+          <xsd:element name="tcKimlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="yakinlikKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:element name="sevkBildirResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sevkBildirReturn" nillable="true" type="tns2:TakipCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sevkBildir">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipGiris" nillable="true" type="tns2:TakipGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sevkBildirResponse">
+    <wsdl:part name="parameters" element="impl:sevkBildirResponse" />
+  </wsdl:message>
+  <wsdl:message name="sevkBildirRequest">
+    <wsdl:part name="parameters" element="impl:sevkBildir" />
+  </wsdl:message>
+  <wsdl:portType name="SevkBildirimIslemleri">
+    <wsdl:operation name="sevkBildir">
+      <wsdl:input name="sevkBildirRequest" message="impl:sevkBildirRequest" />
+      <wsdl:output name="sevkBildirResponse" message="impl:sevkBildirResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SevkBildirimIslemleriSoapBinding" type="impl:SevkBildirimIslemleri">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sevkBildir">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sevkBildirRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sevkBildirResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SevkBildirimIslemleriService">
+    <wsdl:port name="SevkBildirimIslemleri" binding="impl:SevkBildirimIslemleriSoapBinding">
+      <wsdlsoap:address location="http://saglik.sgk.gov.tr:80/saglikws/services/SevkBildirimIslemleri" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

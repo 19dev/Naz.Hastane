@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:import namespace="http://servisler.ws.gss.sgk.gov.tr" />
+      <xsd:complexType name="TakipSilGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TakipSilCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TakipOkuGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TakipDVO">
+        <xsd:sequence>
+          <xsd:element name="gidecegiTesisTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaBilgileri" nillable="true" type="tns2:HastaBilgileriDVO" />
+          <xsd:element name="kayitTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdenDrTescil" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdenTesis" type="xsd:int" />
+          <xsd:element name="sevkEdilenBransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilisTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipDurumu" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="takipTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="takipTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="tesisKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaBilgileriDVO">
+        <xsd:sequence>
+          <xsd:element name="ad" nillable="true" type="xsd:string" />
+          <xsd:element name="cinsiyet" nillable="true" type="xsd:string" />
+          <xsd:element name="dogumTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="karneNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sosyalGuvenlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="soyad" nillable="true" type="xsd:string" />
+          <xsd:element name="tcKimlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="yakinlikKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SistemDisiSevkGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="sevkTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="devredilenKurum" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaKarneNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaSosyalGuvNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaTCKimlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="muayeneAcilisTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="provizyonTipi" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="sevkEdenDrTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdenTesisKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilenBransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkKabulTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sigortaliTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="yakinlikKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SistemDisiSevkCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBilgileri" nillable="true" type="tns2:HastaBilgileriDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaTakipAraGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="tesisKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaSosyalGuvenlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaTCKimlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="karneNo" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaTakipAraCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBilgileri" nillable="true" type="tns2:HastaBilgileriDVO" />
+          <xsd:element name="hastaTakipleri" nillable="true" type="impl:ArrayOf_tns2_nillable_HastaTakipListDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaTakipListDVO">
+        <xsd:sequence>
+          <xsd:element name="sevkEdenTesisAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdenTesisKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilenBransAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilenBransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sevkEdilisTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProvizyonGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="devredilenKurum" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaKarneNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaSosyalGuvNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaTCKimlikNo" nillable="true" type="xsd:string" />
+          <xsd:element name="provizyonTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="provizyonTipi" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="sigortaliTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="takipTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="yakinlikKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProvizyonCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBilgileri" nillable="true" type="tns2:HastaBilgileriDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:element name="takipSilResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipSilReturn" nillable="true" type="tns2:TakipSilCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="takipOku">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipOkuGiris" nillable="true" type="tns2:TakipOkuGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="takipOkuResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipOkuReturn" nillable="true" type="tns2:TakipDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="takipNumarasiOlmayanSevkiKabul">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sistemDisiSevkGiris" nillable="true" type="tns2:SistemDisiSevkGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="takipNumarasiOlmayanSevkiKabulResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipNumarasiOlmayanSevkiKabulReturn" nillable="true" type="tns2:SistemDisiSevkCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hastaninTakipleriniBul">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hastaTakipAraGiris" nillable="true" type="tns2:HastaTakipAraGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hastaninTakipleriniBulResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hastaninTakipleriniBulReturn" nillable="true" type="tns2:HastaTakipAraCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hastaKabul">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="provizyonGiris" nillable="true" type="tns2:ProvizyonGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hastaKabulResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hastaKabulReturn" nillable="true" type="tns2:ProvizyonCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="takipSil">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="takipSilGiris" nillable="true" type="tns2:TakipSilGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_tns2_nillable_HastaTakipListDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="HastaTakipListDVO" nillable="true" type="tns2:HastaTakipListDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="takipNumarasiOlmayanSevkiKabulResponse">
+    <wsdl:part name="parameters" element="impl:takipNumarasiOlmayanSevkiKabulResponse" />
+  </wsdl:message>
+  <wsdl:message name="takipOkuRequest">
+    <wsdl:part name="parameters" element="impl:takipOku" />
+  </wsdl:message>
+  <wsdl:message name="hastaninTakipleriniBulResponse">
+    <wsdl:part name="parameters" element="impl:hastaninTakipleriniBulResponse" />
+  </wsdl:message>
+  <wsdl:message name="takipNumarasiOlmayanSevkiKabulRequest">
+    <wsdl:part name="parameters" element="impl:takipNumarasiOlmayanSevkiKabul" />
+  </wsdl:message>
+  <wsdl:message name="hastaKabulRequest">
+    <wsdl:part name="parameters" element="impl:hastaKabul" />
+  </wsdl:message>
+  <wsdl:message name="hastaKabulResponse">
+    <wsdl:part name="parameters" element="impl:hastaKabulResponse" />
+  </wsdl:message>
+  <wsdl:message name="takipSilRequest">
+    <wsdl:part name="parameters" element="impl:takipSil" />
+  </wsdl:message>
+  <wsdl:message name="takipSilResponse">
+    <wsdl:part name="parameters" element="impl:takipSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="takipOkuResponse">
+    <wsdl:part name="parameters" element="impl:takipOkuResponse" />
+  </wsdl:message>
+  <wsdl:message name="hastaninTakipleriniBulRequest">
+    <wsdl:part name="parameters" element="impl:hastaninTakipleriniBul" />
+  </wsdl:message>
+  <wsdl:portType name="ProvizyonIslemleri">
+    <wsdl:operation name="takipSil">
+      <wsdl:input name="takipSilRequest" message="impl:takipSilRequest" />
+      <wsdl:output name="takipSilResponse" message="impl:takipSilResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="takipOku">
+      <wsdl:input name="takipOkuRequest" message="impl:takipOkuRequest" />
+      <wsdl:output name="takipOkuResponse" message="impl:takipOkuResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="takipNumarasiOlmayanSevkiKabul">
+      <wsdl:input name="takipNumarasiOlmayanSevkiKabulRequest" message="impl:takipNumarasiOlmayanSevkiKabulRequest" />
+      <wsdl:output name="takipNumarasiOlmayanSevkiKabulResponse" message="impl:takipNumarasiOlmayanSevkiKabulResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hastaninTakipleriniBul">
+      <wsdl:input name="hastaninTakipleriniBulRequest" message="impl:hastaninTakipleriniBulRequest" />
+      <wsdl:output name="hastaninTakipleriniBulResponse" message="impl:hastaninTakipleriniBulResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hastaKabul">
+      <wsdl:input name="hastaKabulRequest" message="impl:hastaKabulRequest" />
+      <wsdl:output name="hastaKabulResponse" message="impl:hastaKabulResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProvizyonIslemleriSoapBinding" type="impl:ProvizyonIslemleri">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="takipSil">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="takipSilRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="takipSilResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="takipOku">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="takipOkuRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="takipOkuResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="takipNumarasiOlmayanSevkiKabul">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="takipNumarasiOlmayanSevkiKabulRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="takipNumarasiOlmayanSevkiKabulResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaninTakipleriniBul">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hastaninTakipleriniBulRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hastaninTakipleriniBulResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaKabul">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hastaKabulRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hastaKabulResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProvizyonIslemleriService">
+    <wsdl:port name="ProvizyonIslemleri" binding="impl:ProvizyonIslemleriSoapBinding">
+      <wsdlsoap:address location="http://saglik.sgk.gov.tr:80/saglikws/services/ProvizyonIslemleri" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

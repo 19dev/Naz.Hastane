@@ -1,0 +1,43 @@
+  kDate = getServerDate()
+    For j = 1 To Lstverilecekler1.ListItems.Count
+        If Lstverilecekler1.ListItems.Item(j).Checked Then
+            xSql = "update HIZIL set MAKNO='" & CMAKNO & "' " & _
+                    "where KNR='" & SKNR & "' and " & _
+                    "SNR='" & SSNR & "' and " & _
+                    "SIRANO=" & Lstverilecekler1.ListItems.Item(j).SubItems(8)
+            cn.Execute xSql
+        End If
+    Next
+    xSql = "INSERT into KASA(MAKNO, KNR, SNR, TARIH, MAKBUZNO, MAKBUZTIPI, ODEMESEKLI, POSNO, TUTAR, BORCALACAK, VEZNE, USER_ID, DATE_CREATE)" & _
+            "values ( '" & _
+                    CMAKNO & "', '" & _
+                    SKNR & "', '" & _
+                    SSNR & "', '" & _
+                    kDate & "', '" & _
+                    TxtMakbuzNo.Text & "', '" & _
+                    "V" & "', '" & _
+                    cODEMESEKLI & "', " & _
+                    IIf(TxtPOS.Visible And TxtPOS.ListIndex <> -1, "'" & Left(TxtPOS.Text, 2) & "'", "Null") & ", " & _
+                    Dbl2StrDbl(CDbl(LblHastaToplam.Caption)) & ", '" & _
+                    "B" & "', '" & _
+                    Activevezne & "', '" & _
+                    ActiveUser & "', '" & Now & "')"
+    cn.Execute xSql
+    
+    xSql = "delete from FATURA_KESERKEN where USER_ID='" & ActiveUser & "'"
+    cn.Execute xSql
+    
+    xSql = "INSERT into FATURA_KESERKEN(KNR, SNR, YAZIYLA, USER_ID)" & _
+            "values ( '" & _
+                    SKNR & "','" & _
+                    SSNR & "','" & _
+                    NumToStr(CDbl(LblHastaToplam.Caption)) & "','" & _
+                    ActiveUser & "')"
+    cn.Execute xSql
+    
+    KeyPut "00", "MAKNUM" & Activevezne, TxtMakbuzNo.Text
+    
+    cn.CommitTrans
+ 
+    BASLA.REportX.ReportFileName = ActiveRPTPath & "\VEZNE MAKBUZ.RPT"
+   

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:import namespace="http://servisler.ws.gss.sgk.gov.tr" />
+      <xsd:complexType name="OdemeDurumKontrolGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OdemeSorguCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="islemBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_IslemFiyatBilgisiDVO" />
+          <xsd:element name="toplamTutar" type="xsd:double" />
+          <xsd:element name="durum" nillable="true" type="xsd:string" />
+          <xsd:element name="hataliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_OdemeSorguHataBilgisiDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IslemFiyatBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="islemButKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="tutar" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OdemeSorguHataBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="islemButKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hataKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hataMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:element name="odemeDurumunuKontrolEtResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="odemeDurumunuKontrolEtReturn" nillable="true" type="tns2:OdemeSorguCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="odemeDurumunuKontrolEt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="durumKontrolGiris" nillable="true" type="tns2:OdemeDurumKontrolGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_tns2_nillable_IslemFiyatBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IslemFiyatBilgisiDVO" nillable="true" type="tns2:IslemFiyatBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_OdemeSorguHataBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="OdemeSorguHataBilgisiDVO" nillable="true" type="tns2:OdemeSorguHataBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="odemeDurumunuKontrolEtResponse">
+    <wsdl:part name="parameters" element="impl:odemeDurumunuKontrolEtResponse" />
+  </wsdl:message>
+  <wsdl:message name="odemeDurumunuKontrolEtRequest">
+    <wsdl:part name="parameters" element="impl:odemeDurumunuKontrolEt" />
+  </wsdl:message>
+  <wsdl:portType name="OdemeDurumKontrolIslemleri">
+    <wsdl:operation name="odemeDurumunuKontrolEt">
+      <wsdl:input name="odemeDurumunuKontrolEtRequest" message="impl:odemeDurumunuKontrolEtRequest" />
+      <wsdl:output name="odemeDurumunuKontrolEtResponse" message="impl:odemeDurumunuKontrolEtResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OdemeDurumKontrolIslemleriSoapBinding" type="impl:OdemeDurumKontrolIslemleri">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="odemeDurumunuKontrolEt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="odemeDurumunuKontrolEtRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="odemeDurumunuKontrolEtResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OdemeDurumKontrolIslemleriService">
+    <wsdl:port name="OdemeDurumKontrolIslemleri" binding="impl:OdemeDurumKontrolIslemleriSoapBinding">
+      <wsdlsoap:address location="http://saglik.sgk.gov.tr:80/saglikws/services/OdemeDurumKontrolIslemleri" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
