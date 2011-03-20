@@ -7,19 +7,21 @@ namespace Naz.Hastane.Data.Entities
 {
     public class Product
     {
+        public virtual string TANIM { get; set; } // TANIM; length(2); 0
+        public virtual string GRUP { get; set; } // GRUP; length(3); 0
+        public virtual string CODE { get; set; } // CODE; length(15); 0
+
         public virtual string ANAHIZ { get; set; } // ANAHIZ; length(1); 1
         public virtual string ANHIZ { get; set; } // ANHIZ; length(1); 1
         public virtual string APHIZMET { get; set; } // APHIZMET; length(1); 1
         public virtual string ARZT { get; set; } // ARZT; length(4); 1
         public virtual string BKODU { get; set; } // BKODU; length(15); 1
         public virtual string BUT { get; set; } // BUT; length(50); 1
-        public virtual string CODE { get; set; } // CODE; length(15); 0
         public virtual string CODE1 { get; set; } // CODE1; length(20); 1
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 1
         public virtual string DATE_UPDATE { get; set; } // DATE_UPDATE; length(50); 1
         public virtual double DRYUZDE { get; set; } // DRYUZDE; length(8); 0
         public virtual string GELIRGRUBU { get; set; } // GELIRGRUBU; length(10); 1
-        public virtual string GRUP { get; set; } // GRUP; length(3); 0
         public virtual string HAVUZ { get; set; } // HAVUZ; length(4); 1
         public virtual string HKILIT { get; set; } // HKILIT; length(1); 1
         public virtual double HMALIYET { get; set; } // HMALIYET; length(8); 1
@@ -245,7 +247,6 @@ namespace Naz.Hastane.Data.Entities
         public virtual double SATISF98 { get; set; } // SATISF98; length(8); 1
         public virtual double SATISF99 { get; set; } // SATISF99; length(8); 1
         public virtual string SIRANO { get; set; } // SIRANO; length(20); 1
-        public virtual string TANIM { get; set; } // TANIM; length(2); 0
         public virtual string TANIMEk { get; set; } // TANIMEk; length(20); 1
         public virtual string TESTSAAT { get; set; } // TESTSAAT; length(3); 1
         public virtual string USER_ID { get; set; } // USER_ID; length(50); 1

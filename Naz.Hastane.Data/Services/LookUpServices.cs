@@ -192,7 +192,17 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static List<AccountingDailySummary>  GetAccountingDailySummary(DateTime date)
+        public static List<SGKAutoExamination> GetSGKAutoExaminations(string servisCode)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                return (List<SGKAutoExamination>)session.QueryOver<SGKAutoExamination>()
+                    .Where(s => s.SERVISKODU == servisCode)
+                    .List<SGKAutoExamination>();
+            }
+        }
+
+        public static List<AccountingDailySummary> GetAccountingDailySummary(DateTime date)
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {

@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Entities\LookUp\SystemSetting.cs" />
     <Compile Include="Entities\Patient\PatientVisitRecord.cs" />
+    <Compile Include="Entities\SGKAutoExamination.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Mappings\CashDeskMap.cs" />
@@ -174,6 +175,7 @@
     </Compile>
     <Compile Include="Mappings\LookUp\SystemSettingMap.cs" />
     <Compile Include="Mappings\Patient\PatientVisitRecordMap.cs" />
+    <Compile Include="Mappings\SGKAutoExaminationMap.cs" />
     <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
     <Compile Include="NHibernateSessionManager.cs" />
@@ -205,9 +207,7 @@
     <Content Include="Docs\NHibernateCode.txt" />
     <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HBM\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

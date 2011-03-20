@@ -125,7 +125,7 @@ namespace Naz.Hastane.Data
                     .Username(Instance.DatabaseUserName)
                     .Password(Instance.DatabasePassword)))
                 .Mappings(m =>m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly())
-                    .ExportTo("D:\\Projects\\Naz.Hastane\\Naz.Hastane.Data\\Docs\\GeneratedHBM"))
+                    .ExportTo("D:\\Projects\\Naz.Hastane.Git\\Naz.Hastane.Data\\Docs\\GeneratedHBM"))
                 .Mappings(m => m.HbmMappings.AddClasses(typeof(AccountingDailySummary)))
 
                 .ExposeConfiguration(x => x.SetInterceptor(intercepter))
