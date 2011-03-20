@@ -187,7 +187,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbMedula_Click(object sender, EventArgs e)
         {
             //this.medulaSorgu.TCKimlikNo = Convert.ToInt64(_patient.TCId);
-            //this.medulaSorgu.CallMedula();
+            int TCID = 0;
+            this.medulaSorgu.CallMedula(TCID);
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)

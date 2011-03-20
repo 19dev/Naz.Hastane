@@ -52,6 +52,8 @@
             this.lciRelatedFollowUpNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciFollowUpNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPatientApplicationNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lblStatus = new DevExpress.XtraEditors.LabelControl();
+            this.lciStatus = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tePatientApplicationNo.Properties)).BeginInit();
@@ -77,10 +79,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciRelatedFollowUpNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciFollowUpNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientApplicationNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lblStatus);
             this.layoutControl1.Controls.Add(this.tePatientApplicationNo);
             this.layoutControl1.Controls.Add(this.teFollowUpNo);
             this.layoutControl1.Controls.Add(this.teRelatedFollowUpNo);
@@ -269,7 +273,8 @@
             this.lciTransferorInstitution,
             this.lciRelatedFollowUpNo,
             this.lciFollowUpNo,
-            this.lciPatientApplicationNo});
+            this.lciPatientApplicationNo,
+            this.lciStatus});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -384,9 +389,29 @@
             this.lciPatientApplicationNo.CustomizationFormText = "Hasta Başvuru No";
             this.lciPatientApplicationNo.Location = new System.Drawing.Point(0, 240);
             this.lciPatientApplicationNo.Name = "lciPatientApplicationNo";
-            this.lciPatientApplicationNo.Size = new System.Drawing.Size(270, 72);
+            this.lciPatientApplicationNo.Size = new System.Drawing.Size(270, 24);
             this.lciPatientApplicationNo.Text = "Hasta Başvuru No";
             this.lciPatientApplicationNo.TextSize = new System.Drawing.Size(86, 13);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Location = new System.Drawing.Point(2, 266);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(266, 13);
+            this.lblStatus.StyleController = this.layoutControl1;
+            this.lblStatus.TabIndex = 19;
+            // 
+            // lciStatus
+            // 
+            this.lciStatus.Control = this.lblStatus;
+            this.lciStatus.CustomizationFormText = "lciStatus";
+            this.lciStatus.Location = new System.Drawing.Point(0, 264);
+            this.lciStatus.Name = "lciStatus";
+            this.lciStatus.Size = new System.Drawing.Size(270, 48);
+            this.lciStatus.Text = "lciStatus";
+            this.lciStatus.TextSize = new System.Drawing.Size(0, 0);
+            this.lciStatus.TextToControlDistance = 0;
+            this.lciStatus.TextVisible = false;
             // 
             // MedulaSorgu
             // 
@@ -421,6 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciRelatedFollowUpNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciFollowUpNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientApplicationNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,5 +477,7 @@
         public DevExpress.XtraEditors.LookUpEdit lueTreatmentStyle;
         public DevExpress.XtraEditors.LookUpEdit lueFollowUpType;
         public DevExpress.XtraEditors.LookUpEdit lueRelationType;
+        private DevExpress.XtraEditors.LabelControl lblStatus;
+        private DevExpress.XtraLayout.LayoutControlItem lciStatus;
     }
 }

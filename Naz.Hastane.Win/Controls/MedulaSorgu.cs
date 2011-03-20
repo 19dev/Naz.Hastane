@@ -59,6 +59,9 @@ namespace Naz.Hastane.Win.Controls
             hki = new HastaKabulIslemleriClient();
             hki.ClientCredentials.UserName.UserName = "10343154";
             hki.ClientCredentials.UserName.Password = "19031903";
+            //hki.ClientCredentials.UserName.Password = "123456";
+            //hki.ClientCredentials.HttpDigest.ClientCredential = new System.Net.NetworkCredential("10343154", "19031903");
+            //hki.ClientCredentials.HttpDigest.AllowedImpersonationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation;
 
             hki.hastaKabulCompleted += new EventHandler<hastaKabulCompletedEventArgs>(OnHastaKabulCompleted);
             
@@ -77,14 +80,16 @@ namespace Naz.Hastane.Win.Controls
             pgd.tedaviTuru = lueTreatmentStyle.EditValue.ToString();
             pgd.yakinlikKodu = lueRelationType.EditValue.ToString();
             pgd.yatisBitisTarihi = "";
-            pgd.yeniDoganBilgisi = new YeniDoganBilgisiDVO();
+            //pgd.yeniDoganBilgisi = new YeniDoganBilgisiDVO();
 
+            this.lblStatus.Text = "Medula Sorgusu Yapılıyor...";
             hki.hastaKabulAsync(pgd);
 
         }
 
         void OnHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e)
         {
+            this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
             if (OnMedulaHastaKabulCompleted != null)
                 OnMedulaHastaKabulCompleted(this, e);
            //hki.end
