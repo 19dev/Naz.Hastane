@@ -7,6 +7,7 @@ using NHibernate.Criterion;
 using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.StoredProcedure;
+using NHibernate.Transform;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -188,6 +189,10 @@ namespace Naz.Hastane.Data.Services
                     .OrderBy(x => x.Value).Asc
                     .JoinQueryOver(x => x.Service)
                         .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
+                    .JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
+                    .JoinQueryOver<Product>(x => x.Product)
+                    .TransformUsing(Transformers.DistinctRootEntity)
+                    
                     .List<Doctor>();
             }
         }
@@ -197,7 +202,7 @@ namespace Naz.Hastane.Data.Services
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 return (List<SGKAutoExamination>)session.QueryOver<SGKAutoExamination>()
-                    .Where(s => s.Service == servisCode)
+                    .Where(s => s.Service.ID == servisCode)
                     .List<SGKAutoExamination>();
             }
         }

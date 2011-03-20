@@ -6,7 +6,7 @@ using Naz.Hastane.Data.Entities.LookUp;
 namespace Naz.Hastane.Data.Entities {
     
     public class SGKAutoExamination {
-        public virtual string Service { get; set; }
+        public virtual Service Service { get; set; }
         public virtual Product Product { get; set; }
         public virtual string KATILIM { get; set; }
         public virtual string AYKATILIM { get; set; }

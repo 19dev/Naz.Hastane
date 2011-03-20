@@ -35,6 +35,12 @@
       <property name="Type" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <column name="SLXX" />
       </property>
+      <bag inverse="true" lazy="false" name="SGKAutoExaminations" mutable="true">
+        <key>
+          <column name="SERVISKODU" />
+        </key>
+        <one-to-many class="Naz.Hastane.Data.Entities.SGKAutoExamination, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      </bag>
     </subclass>
     <subclass name="Naz.Hastane.Data.Entities.LookUp.VAT, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="02" />
     <subclass name="Naz.Hastane.Data.Entities.LookUp.Warehouse, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="04" />

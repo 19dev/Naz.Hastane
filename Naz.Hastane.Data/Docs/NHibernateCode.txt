@@ -18,4 +18,28 @@
   .Future<AuthorizationDto>();
 
 
+Person personAlias = null;
+
+IList<Person> persons = 
+        session.QueryOver<Person>(() => personAlias).WithSubquery
+          .WhereExists(QueryOver.Of<Cat>()
+             .Where(c => c.Age > 5)
+             .And(c => c.Owner.Id == personAlias.Id)
+             .Select(c => c.Owner))
+          .List<Person>();
+
+IQueryOver<Relation> actual =
+   CreateTestQueryOver<Relation>()
+    .Inner.JoinQueryOver(r => r.Related1)
+    .Left.JoinQueryOver(r => r.Related2)
+    .Right.JoinQueryOver(r => r.Related3)
+    .Full.JoinQueryOver(r => r.Related4)
+    .JoinQueryOver(r => r.Collection1, () => collection1Alias)
+    .Left.JoinQueryOver(r => r.Collection2, () => collection2Alias)
+    .Right.JoinQueryOver(r => r.Collection3)
+    .Full.JoinQueryOver(r => r.People, () => personAlias); 
+
+	DbSession.CreateCriteria(myDynamicallyDeterminedType)
+    .Add(Restrictions.On<Listing>(l => l.field == value))
+    .List<Listing>();
 

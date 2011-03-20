@@ -197,7 +197,7 @@
     <None Include="Design\LookUp.cd" />
     <None Include="Design\Patient.cd" />
     <None Include="Design\Product.cd" />
-    <None Include="Docs\TıpdataTables.xlsx" />
+    <None Include="Docs\TipdataTables.xlsx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

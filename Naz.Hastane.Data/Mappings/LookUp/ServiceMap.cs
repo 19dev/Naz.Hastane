@@ -13,10 +13,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp
 
             Map(x => x.Type).Column("SLXX");
 
-            //HasMany(x => x.SGKAutoExaminations)
-            //    .KeyColumn("SERVISKODU")
-            //    .Inverse()
-            //    .Not.LazyLoad();
+            HasMany(x => x.SGKAutoExaminations)
+                .KeyColumn("SERVISKODU")
+                .Inverse()
+                .Not.LazyLoad();
         }
     }
 }
