@@ -12,6 +12,11 @@ namespace Naz.Hastane.Data.Mappings.LookUp
             DiscriminatorValue("17");
 
             Map(x => x.Type).Column("SLXX");
+
+            //HasMany(x => x.SGKAutoExaminations)
+            //    .KeyColumn("SERVISKODU")
+            //    .Inverse()
+            //    .Not.LazyLoad();
         }
     }
 }

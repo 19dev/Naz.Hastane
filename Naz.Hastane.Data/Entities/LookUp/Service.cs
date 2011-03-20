@@ -32,5 +32,19 @@ namespace Naz.Hastane.Data.Entities.LookUp
         //Map(x => x.Value).Column("Servis").Length(50);
         //Map(x => x.Value).Column("Sekreter").Length(50);
         //Map(x => x.Value).Column("SLBEk").Length(10);
+
+        //private IList<SGKAutoExamination> _SGKAutoExaminations = new List<SGKAutoExamination>();
+
+        //public virtual IList<SGKAutoExamination> SGKAutoExaminations
+        //{
+        //    get { return _SGKAutoExaminations; }
+        //    set { _SGKAutoExaminations = value; }
+        //}
+
+        //public virtual void AddSGKAutoExamination(SGKAutoExamination ae)
+        //{
+        //    ae.Service = this;
+        //    this.SGKAutoExaminations.Add(ae);
+        //}
     }
 }

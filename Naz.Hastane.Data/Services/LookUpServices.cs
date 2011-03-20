@@ -197,7 +197,7 @@ namespace Naz.Hastane.Data.Services
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 return (List<SGKAutoExamination>)session.QueryOver<SGKAutoExamination>()
-                    .Where(s => s.SERVISKODU == servisCode)
+                    .Where(s => s.Service == servisCode)
                     .List<SGKAutoExamination>();
             }
         }

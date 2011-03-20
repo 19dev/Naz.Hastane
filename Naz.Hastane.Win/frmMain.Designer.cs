@@ -106,6 +106,7 @@ namespace Naz.Hastane.Win {
             this.iTreatmentStyle = new DevExpress.XtraBars.BarButtonItem();
             this.iTreatmentType = new DevExpress.XtraBars.BarButtonItem();
             this.iPrinterSettings = new DevExpress.XtraBars.BarButtonItem();
+            this.iAccDailyReport = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -133,7 +134,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iAccDailyReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -188,7 +188,7 @@ namespace Naz.Hastane.Win {
             this.iPaste.Caption = "&Paste";
             this.iPaste.CategoryGuid = new System.Guid("7c2486e1-92ea-4293-ad55-b819f61ff7f1");
             this.iPaste.Description = "Inserts the contents of the Clipboard at the insertion point, and replaces any se" +
-                "lection. This command is available only if you have cut or copied a text.";
+    "lection. This command is available only if you have cut or copied a text.";
             this.iPaste.Hint = "Paste";
             this.iPaste.Id = 11;
             this.iPaste.ImageIndex = 8;
@@ -374,7 +374,7 @@ namespace Naz.Hastane.Win {
             this.iAccDailyReport});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 194;
+            this.ribbonControl1.MaxItemId = 196;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -614,7 +614,7 @@ namespace Naz.Hastane.Win {
             this.iBold.Caption = "&Bold";
             this.iBold.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iBold.Description = "Makes selected text and numbers bold. If the selection is already bold, clicking " +
-                "button removes bold formatting.";
+    "button removes bold formatting.";
             this.iBold.Hint = "Bold";
             this.iBold.Id = 24;
             this.iBold.ImageIndex = 15;
@@ -628,7 +628,7 @@ namespace Naz.Hastane.Win {
             this.iItalic.Caption = "&Italic";
             this.iItalic.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iItalic.Description = "Makes selected text and numbers italic. If the selection is already italic, click" +
-                "ing button removes italic formatting.";
+    "ing button removes italic formatting.";
             this.iItalic.Hint = "Italic";
             this.iItalic.Id = 25;
             this.iItalic.ImageIndex = 16;
@@ -642,7 +642,7 @@ namespace Naz.Hastane.Win {
             this.iUnderline.Caption = "&Underline";
             this.iUnderline.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iUnderline.Description = "Underlines selected text and numbers. If the selection is already underlined, cli" +
-                "cking button removes underlining.";
+    "cking button removes underlining.";
             this.iUnderline.Hint = "Underline";
             this.iUnderline.Id = 26;
             this.iUnderline.ImageIndex = 17;
@@ -781,8 +781,8 @@ namespace Naz.Hastane.Win {
             this.sbiFind.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.iReplace)});
             this.sbiFind.Name = "sbiFind";
-            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
-                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // iPasteSpecial
             // 
@@ -1095,6 +1095,13 @@ namespace Naz.Hastane.Win {
             this.iPrinterSettings.Name = "iPrinterSettings";
             this.iPrinterSettings.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPrinterSettings_ItemClick);
             // 
+            // iAccDailyReport
+            // 
+            this.iAccDailyReport.Caption = "Muhasebe Entegrasyon";
+            this.iAccDailyReport.Id = 193;
+            this.iAccDailyReport.Name = "iAccDailyReport";
+            this.iAccDailyReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAccDailyReport_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1373,13 +1380,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // iAccDailyReport
-            // 
-            this.iAccDailyReport.Caption = "Muhasebe Entegrasyon";
-            this.iAccDailyReport.Id = 193;
-            this.iAccDailyReport.Name = "iAccDailyReport";
-            this.iAccDailyReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAccDailyReport_ItemClick);
             // 
             // frmMain
             // 

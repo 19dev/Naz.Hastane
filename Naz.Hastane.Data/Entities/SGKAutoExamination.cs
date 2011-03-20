@@ -1,12 +1,12 @@
 using System.Collections.Generic; 
 using System.Text; 
-using System; 
-
+using System;
+using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Entities {
     
     public class SGKAutoExamination {
-        public virtual string SERVISKODU { get; set; }
+        public virtual string Service { get; set; }
         public virtual Product Product { get; set; }
         public virtual string KATILIM { get; set; }
         public virtual string AYKATILIM { get; set; }
@@ -15,10 +15,10 @@ namespace Naz.Hastane.Data.Entities {
         {
             if (obj == null)
                 return false;
-            SGKAutoExamination pv = obj as SGKAutoExamination;
-            if (pv == null)
+            SGKAutoExamination ae = obj as SGKAutoExamination;
+            if (ae == null)
                 return false;
-            if (this.SERVISKODU == pv.SERVISKODU && this.Product == pv.Product)
+            if (this.Service == ae.Service && this.Product == ae.Product)
                 return true;
             else
                 return false;
@@ -27,7 +27,7 @@ namespace Naz.Hastane.Data.Entities {
         public override int GetHashCode()
         {
             int hash = 13;
-            hash += (null == this.SERVISKODU ? 0 : this.SERVISKODU.GetHashCode());
+            hash += (null == this.Service ? 0 : this.Service.GetHashCode());
             hash += (null == this.Product ? 0 : this.Product.GetHashCode());
 
             return hash;

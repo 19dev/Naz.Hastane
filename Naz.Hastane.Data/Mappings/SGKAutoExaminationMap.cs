@@ -13,7 +13,7 @@ namespace Naz.Hastane.Data.Mappings {
 			Table("OTOMATIK_MUAYENELER");
 
             CompositeId()
-                .KeyProperty(x => x.SERVISKODU)
+                .KeyProperty(x => x.Service, "SERVISKODU")
                 .KeyReference(x => x.Product, "TANIM", "GRUP", "CODE");
 
 			Map(x => x.KATILIM).Column("KATILIM").Length(50);

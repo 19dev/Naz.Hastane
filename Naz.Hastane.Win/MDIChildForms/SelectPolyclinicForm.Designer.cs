@@ -32,8 +32,8 @@
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.gcView = new DevExpress.XtraGrid.GridControl();
             this.gvPolyclinics = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colService = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -96,14 +96,6 @@
             this.gvPolyclinics.Name = "gvPolyclinics";
             this.gvPolyclinics.OptionsView.ShowGroupPanel = false;
             // 
-            // colDoctor
-            // 
-            this.colDoctor.Caption = "Doktor";
-            this.colDoctor.FieldName = "Value";
-            this.colDoctor.Name = "colDoctor";
-            this.colDoctor.Visible = true;
-            this.colDoctor.VisibleIndex = 0;
-            // 
             // colService
             // 
             this.colService.Caption = "Servis";
@@ -111,6 +103,14 @@
             this.colService.Name = "colService";
             this.colService.Visible = true;
             this.colService.VisibleIndex = 1;
+            // 
+            // colDoctor
+            // 
+            this.colDoctor.Caption = "Doktor";
+            this.colDoctor.FieldName = "Value";
+            this.colDoctor.Name = "colDoctor";
+            this.colDoctor.Visible = true;
+            this.colDoctor.VisibleIndex = 0;
             // 
             // sbSelect
             // 
@@ -120,6 +120,7 @@
             this.sbSelect.StyleController = this.layoutControl1;
             this.sbSelect.TabIndex = 6;
             this.sbSelect.Text = "Seç";
+            this.sbSelect.Click += new System.EventHandler(this.sbSelect_Click);
             // 
             // layoutControlGroup1
             // 

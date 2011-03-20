@@ -175,9 +175,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbPoliklinik_Click(object sender, EventArgs e)
         {
-            //frmMain frm = (frmMain)(this.MdiParent);
-            //frm.ShowNewDocument<SelectPolyclinicForm>();
-            List<SGKAutoExamination> la = LookUpServices.GetSGKAutoExaminations("01");
+            frmMain frm = (frmMain)(this.MdiParent);
+            frm.ShowNewDocument<SelectPolyclinicForm>();
+            //List<SGKAutoExamination> la = LookUpServices.GetSGKAutoExaminations("01");
         }
 
         private void sbMernis_Click(object sender, EventArgs e)
