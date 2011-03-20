@@ -97,7 +97,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(2131, -190, 392, 564);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(270, 268);
+            this.layoutControl1.Size = new System.Drawing.Size(270, 312);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -273,7 +273,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(270, 268);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(270, 312);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
@@ -384,7 +384,7 @@
             this.lciPatientApplicationNo.CustomizationFormText = "Hasta Başvuru No";
             this.lciPatientApplicationNo.Location = new System.Drawing.Point(0, 240);
             this.lciPatientApplicationNo.Name = "lciPatientApplicationNo";
-            this.lciPatientApplicationNo.Size = new System.Drawing.Size(270, 28);
+            this.lciPatientApplicationNo.Size = new System.Drawing.Size(270, 72);
             this.lciPatientApplicationNo.Text = "Hasta Başvuru No";
             this.lciPatientApplicationNo.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -394,7 +394,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "MedulaSorgu";
-            this.Size = new System.Drawing.Size(270, 268);
+            this.Size = new System.Drawing.Size(270, 312);
             this.Load += new System.EventHandler(this.MedulaSorgu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

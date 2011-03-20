@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvIslemler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -466,10 +466,10 @@
             // gcIslemler
             // 
             this.gcIslemler.DataMember = null;
-            gridLevelNode2.LevelTemplate = this.gvIslemler;
-            gridLevelNode2.RelationName = "VisitDetails";
+            gridLevelNode1.LevelTemplate = this.gvIslemler;
+            gridLevelNode1.RelationName = "VisitDetails";
             this.gcIslemler.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcIslemler.Location = new System.Drawing.Point(12, 430);
             this.gcIslemler.MainView = this.gvZiyaret;
             this.gcIslemler.Name = "gcIslemler";
@@ -868,6 +868,7 @@
             this.medulaSorgu.Name = "medulaSorgu";
             this.medulaSorgu.Size = new System.Drawing.Size(314, 317);
             this.medulaSorgu.TabIndex = 110;
+            this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaSorgu.MedulaHastaKabulCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
             // 
             // sbDetayDok
             // 

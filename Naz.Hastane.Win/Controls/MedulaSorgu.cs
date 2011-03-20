@@ -17,9 +17,11 @@ namespace Naz.Hastane.Win.Controls
 {
     public partial class MedulaSorgu : DevExpress.XtraEditors.XtraUserControl
     {
-        public event RunWorkerCompletedEventHandler RunWorkerCompleted;
+        public delegate void MedulaHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e);
 
-        private HastaKabulIslemleriClient hki = new HastaKabulIslemleriClient();
+        public event MedulaHastaKabulCompleted OnMedulaHastaKabulCompleted;
+
+        private HastaKabulIslemleriClient hki;
 
         private bool _IsWorking = false;
         public bool IsWorking
@@ -54,16 +56,20 @@ namespace Naz.Hastane.Win.Controls
 
             IsWorking = true;
 
+            hki = new HastaKabulIslemleriClient();
+            hki.ClientCredentials.UserName.UserName = "10343154";
+            hki.ClientCredentials.UserName.Password = "19031903";
+
             hki.hastaKabulCompleted += new EventHandler<hastaKabulCompletedEventArgs>(OnHastaKabulCompleted);
             
             ProvizyonGirisDVO pgd = new ProvizyonGirisDVO();
             pgd.bransKodu = lueBranchCode.EditValue.ToString();
             pgd.devredilenKurum = lueTransferorInstitution.EditValue.ToString();
             pgd.donorTCKimlikNo = "";
-            pgd.hastaTCKimlikNo = "";
+            pgd.hastaTCKimlikNo = "38872435224";
             pgd.provizyonTarihi = DateTime.Now.ToString("dd/MM/yyyy");
             pgd.provizyonTipi = lueProvisionType.EditValue.ToString();
-            pgd.saglikTesisKodu = 0;
+            pgd.saglikTesisKodu = 10343154;
             pgd.sigortaliTuru = lueInsuranceType.EditValue.ToString();
             pgd.takipNo = "";
             pgd.takipTipi = lueFollowUpType.EditValue.ToString();
@@ -79,6 +85,8 @@ namespace Naz.Hastane.Win.Controls
 
         void OnHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e)
         {
+            if (OnMedulaHastaKabulCompleted != null)
+                OnMedulaHastaKabulCompleted(this, e);
            //hki.end
         }
 

@@ -190,6 +190,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             //this.medulaSorgu.CallMedula();
         }
 
+        private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)
+        {
+            MessageBox.Show("Medula Sonucu :" + e.Result.sonucMesaji);
+        }
+
 //        private void button1_Click(object sender, EventArgs e) {
 //    ReportPrintTool pt = new ReportPrintTool(new XtraReport1());
 //    pt.PrintingSystem.StartPrint += 
