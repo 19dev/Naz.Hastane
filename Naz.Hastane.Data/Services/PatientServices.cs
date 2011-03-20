@@ -10,6 +10,7 @@ namespace Naz.Hastane.Data.Services
 {
     public static class PatientServices
     {
+
         public static Patient GetByNo(string aPatientNo)
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())

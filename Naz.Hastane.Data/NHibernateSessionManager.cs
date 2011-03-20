@@ -13,6 +13,7 @@ using Naz.Hastane.Data.Entities.StoredProcedure;
 
 namespace Naz.Hastane.Data
 {
+
     /// <summary>
     /// Handles creation and management of sessions and transactions.  It is a singleton because 
     /// building the initial session factory is very expensive. Inspiration for this class came 
