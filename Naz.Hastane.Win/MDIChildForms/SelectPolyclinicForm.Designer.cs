@@ -76,6 +76,7 @@
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 7;
             this.sbClose.Text = "Kapat";
+            this.sbClose.Click += new System.EventHandler(this.sbClose_Click);
             // 
             // gcView
             // 
@@ -94,7 +95,9 @@
             this.colDoctor});
             this.gvPolyclinics.GridControl = this.gcView;
             this.gvPolyclinics.Name = "gvPolyclinics";
+            this.gvPolyclinics.OptionsBehavior.Editable = false;
             this.gvPolyclinics.OptionsView.ShowGroupPanel = false;
+            this.gvPolyclinics.DoubleClick += new System.EventHandler(this.gvPolyclinics_DoubleClick);
             // 
             // colService
             // 

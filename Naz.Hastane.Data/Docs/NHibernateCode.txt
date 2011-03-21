@@ -43,3 +43,46 @@ IQueryOver<Relation> actual =
     .Add(Restrictions.On<Listing>(l => l.field == value))
     .List<Listing>();
 
+public IEnumerable<ordereventrollup> GetRolledUpEventsFor(DateTime tradeDate, IEnumerable<string> tickers)  
+        {  
+            return worker.On(connection, session =>  
+                                             {  
+                                                 OrderEventRollup rollup = null;  
+                                                 return session.QueryOver<orderevent>()  
+                                                     .Where(x => x.TradeDate == tradeDate)  
+                                                     .WhereRestrictionOn(x => x.Ticker).IsIn(tickers.ToArray())  
+                                                     .Select(  
+                                                         list =>  
+                                                         list.SelectGroup(x => x.Ticker).WithAlias(() => rollup.Ticker)  
+                                                             .SelectSum(x => x.Shares).WithAlias(() => rollup.SharesTotal))  
+                                                     .TransformUsing(Transformers.AliasToBean<ordereventrollup>())  
+                                                     .List<ordereventrollup>();  
+                                             });  
+        }  
+</ordereventrollup></ordereventrollup></orderevent></string></ordereventrollup>  
+public IEnumerable<broker> GetBrokersByCode(IEnumerable<string> brokerCodes)  
+       {  
+           if (brokerCodes.Count() == 0) return Enumerable.Empty<broker>();  
+           return worker.On(connection, session =>  
+                                        session.Query<broker>()  
+                                            .Where(x => brokerCodes.Contains(x.Code))  
+                                            .ToList()  
+               );  
+       }  
+/broker></broker></string></broker>  
+public IEnumerable<order> GetByTradeDateAndTicker(DateTime tradeDate, string ticker)  
+        {  
+            return worker.On(connection, session =>  
+                                             {  
+                                                 CSMSecurity security = null;  
+                                                 return session.QueryOver<crd.order>()  
+                                                     .Fetch(x => x.CSMSecurity).Eager  
+                                                     .Fetch(x => x.TSOrderSecuritySpec).Eager  
+                                                     .Fetch(x => x.CSMSecurity.CSMSecurityType).Eager  
+                                                     .JoinAlias(x => x.CSMSecurity,() => security)  
+                                                     .Where(x => x.TradeDate == tradeDate)  
+                                                     .Where(() => security.Ticker == ticker)  
+                                                     .List();  
+                                             });  
+        }  
+</crd.order></order>  

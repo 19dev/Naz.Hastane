@@ -63,7 +63,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string REFGUNSAY { get; set; } //REFGUNSAY Refekatçi Gün Sayısı
         public virtual string TABKODU { get; set; } //TABKODU Taburcu Kodu (01..11) KEYDAT.SLK = 56 
 
-        public virtual string SERNO { get; set; } //SERNO ??
+        public virtual string QueueNo { get; set; } //SERNO ??
         public virtual string GEL { get; set; } //GEL ?? (1,2,3,5,6,7)
         public virtual string FIYATARTISMUAF { get; set; } //FIYATARTISMUAF
 
@@ -71,7 +71,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual DateTime ICMALTARIHI { get; set; } //ICMALTARIHI x
 
         public virtual short HZLNO { get; set; } //HZLNO ??
-        public virtual double QueueNo { get; set; } //SIRAID ??
+        public virtual double SIRAID { get; set; } //SIRAID ??
         public virtual string SpecialNote { get; set; } //OZELNOT
         public virtual bool XLOCK { get; set; } //XLOCK x
         public virtual string MYBUTKOD { get; set; } //MYBUTKOD xx

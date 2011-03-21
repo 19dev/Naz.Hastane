@@ -6,8 +6,8 @@ namespace Naz.Hastane.Data.Entities.LookUp
     public class Doctor : LookUpBase
     {
         public virtual Service Service { get; set; } // SLXX
+        public virtual float QueueNo { get; set; } // SLX Günlük Doktor SıraNo  => BEHAND.SERNO
 
-        //Map(x => x.Value).Column("SLX"); // float Günlük Doktor SıraNo  => BEHAND.SERNO
         //Map(x => x.Value).Column("SLY"); // float
         //Map(x => x.Value).Column("SLZ"); // float
         //Map(x => x.Value).Column("SLVV").Length(100);

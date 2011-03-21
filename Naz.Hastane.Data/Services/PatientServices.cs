@@ -5,6 +5,8 @@ using System.Text;
 using Naz.Hastane.Data.Entities;
 using NHibernate;
 using NHibernate.Criterion;
+using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Medula.HastaKabulIslemleri;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -45,7 +47,7 @@ namespace Naz.Hastane.Data.Services
             {
                 if (patient.PatientNo == null || patient.PatientNo == "")
                 {
-                    patient.PatientNo = LookUpServices.GetNewPatientNo();
+                    patient.PatientNo = GetNewPatientNo();
                     session.Save(patient);
                 }
                 else
@@ -63,7 +65,7 @@ namespace Naz.Hastane.Data.Services
             {
                 if (pv.VisitNo == null || pv.VisitNo == "")
                 {
-                    pv.VisitNo = LookUpServices.GetNewPatientNo();
+                    pv.VisitNo = GetNewPatientNo();
                     session.Save(pv);
                 }
                 else
@@ -164,10 +166,108 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
-        public static void AddSGKPolyclinic(Patient patient, DoctorAccount doctor)
+        public static void AddSGKPolyclinic(Patient patient, Doctor doctor, ProvizyonCevapDVO provizyonCevapDVO)
         {
+            if (patient == null || doctor == null)
+                return;
+
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                InsuranceCompany ic = session.Get<InsuranceCompany>("SGK");
+                ic.SIRAID += 1;
+                session.Save(ic);
+
+                // Get No QueueNo for the Doctor, If new date reset the number
+                SystemSetting ss = session.Get<SystemSetting>("TARIH");
+                string today = DateTime.Now.ToString("dd/MM/yyyy");
+                if (today != ss.Value)
+                {
+                    ss.Value = today;
+                    doctor.QueueNo = 0;
+                    session.Save(ss);
+                }
+                doctor.QueueNo += 1;
+                session.Save(doctor);
+
+                PatientVisit pv = new PatientVisit();
+                pv.VisitNo = GetNewPatientVisitNo(patient, session);
+                pv.Doctor = doctor.ID;
+                pv.SIRAID = doctor.QueueNo;
+                pv.Servis = doctor.Service.ID;
+                pv.VisitDate = DateTime.Now;
+                pv.TransferValidityPeriod = (short)ic.SEVKGECSURE;
+                pv.VisitType = "P";
+                pv.HZLNO = 1;
+                pv.PSG = "SGK";
+                pv.USER_ID = "Aydin";
+                pv.DATE_CREATE = DateTime.Now;
+
+                patient.AddPatientVisit(pv);
+
+                //PatientVisitDetail pvd = new PatientVisitDetail();
+                //pv.AddPatientVisitDetail(pvd);
+                //pvd.DetailNo = LookUpServices.GetNewPatientVisitDetailNo(pv);
+            }
+
 
         }
+
+        #region New Key Generators
+        public static string GetNewPatientNo()
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                SystemSetting ss = session
+                    .CreateCriteria(typeof(SystemSetting))
+                    .Add(Restrictions.Eq("ID0", "00"))
+                    .Add(Restrictions.Eq("ID", "KNR"))
+                    .UniqueResult<SystemSetting>();
+                int id = Convert.ToInt32(ss.Value);
+                id += 1;
+                ss.Value = id.ToString();
+                session.Update(ss);
+                transaction.Commit();
+                return ss.Value;
+            }
+        }
+
+        public static string GetNewPatientVisitNo(Patient patient)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetNewPatientVisitNo(patient, session);
+        }
+        public static string GetNewPatientVisitNo(Patient patient, ISession session)
+        {
+            var ss = session
+                .CreateQuery("SELECT MIN(VisitNo) FROM PatientVisit as visit WHERE visit.Patient.PatientNo =" + patient.PatientNo)
+                .List();
+            int id = 1000;
+            if (ss[0] != null)
+                id = Convert.ToInt32(ss[0].ToString());
+            id -= 1;
+            return id.ToString();
+        }
+
+        public static double GetNewPatientVisitDetailNo(PatientVisit pv)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetNewPatientVisitDetailNo(pv, session);
+        }
+        public static double GetNewPatientVisitDetailNo(PatientVisit pv, ISession session)
+        {
+            var ss = session
+                .CreateQuery("SELECT MAX(DetailNo) FROM PatientVisitDetail as pvd WHERE pvd.PatientVisit.Patient.PatientNo =" + pv.Patient.PatientNo +
+                " and pvd.PatientVisit.VisitNo = " + pv.VisitNo)
+                .List();
+            double id = 0;
+            if (ss[0] != null)
+                id = Convert.ToDouble(ss[0].ToString());
+            id += 1;
+            return id;
+        }
+        #endregion
 
     }
 }

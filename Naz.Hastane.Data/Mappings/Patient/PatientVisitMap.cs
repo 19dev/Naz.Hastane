@@ -50,7 +50,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.AMELIYAT).Column("AMELIYAT").Length(1);
             Map(x => x.DOGUM).Column("DOGUM").Length(1);
             Map(x => x.UCRETDURUMU).Column("UCRETDURUMU").Length(1);
-            Map(x => x.SERNO).Column("SERNO").Length(5);
+            Map(x => x.QueueNo).Column("SERNO").Length(5);
             Map(x => x.GEL).Column("GEL").Length(1);
             Map(x => x.FIYATARTISMUAF).Column("FIYATARTISMUAF").Length(1);
 
@@ -64,7 +64,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.SEVKTAKIPNO).Column("SEVKTAKIPNO").Length(20);
 
             Map(x => x.HZLNO).Column("HZLNO");
-            Map(x => x.QueueNo).Column("SIRAID");
+            Map(x => x.SIRAID).Column("SIRAID");
             Map(x => x.SpecialNote).Column("OZELNOT");
             Map(x => x.SupportInsCompany).Column("DESTEKPSG");
             Map(x => x.XLOCK).Column("XLOCK");

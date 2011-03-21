@@ -17,6 +17,9 @@
     <subclass name="Naz.Hastane.Data.Entities.LookUp.City, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="37" />
     <subclass name="Naz.Hastane.Data.Entities.LookUp.Depository, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="03" />
     <subclass name="Naz.Hastane.Data.Entities.LookUp.Doctor, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="07">
+      <property name="QueueNo" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="SLX" />
+      </property>
       <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Service">
         <column name="SLXX" />
       </many-to-one>
@@ -32,8 +35,17 @@
     <subclass name="Naz.Hastane.Data.Entities.LookUp.Nationality, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="51" />
     <subclass name="Naz.Hastane.Data.Entities.LookUp.PatientRelation, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="10" />
     <subclass name="Naz.Hastane.Data.Entities.LookUp.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="17">
+      <property name="SorguTuru" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="SLY" />
+      </property>
       <property name="Type" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <column name="SLXX" />
+      </property>
+      <property name="BranchCode" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="SLXA" />
+      </property>
+      <property name="TreatmentType" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="SLYA" />
       </property>
       <bag inverse="true" lazy="false" name="SGKAutoExaminations" mutable="true">
         <key>

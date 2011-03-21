@@ -12,6 +12,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp
             DiscriminatorValue("07" );
 
             References(x => x.Service).Column("SLXX");
+            Map(x => x.QueueNo).Column("SLX");
         }
     }
 }

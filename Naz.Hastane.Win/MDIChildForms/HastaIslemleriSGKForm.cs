@@ -23,8 +23,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class HastaIslemleriSGKForm : MDIChildForm
     {
-        Patient _patient;
-        //List<InsuranceType> insuranceTypes;
+        private Patient _Patient;
+        private Doctor _Doctor;
+        private bool _IsWaitingForPolyclinic = false;
 
         public HastaIslemleriSGKForm()
         {
@@ -32,14 +33,14 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
         public HastaIslemleriSGKForm(Patient aPatient)
         {
-            _patient = aPatient;
+            _Patient = aPatient;
             InitializeComponent();
 
             //insuranceTypes = LookUpServices.GetAll<InsuranceType>();
 
             InitBindings();
 
-            this.gcIslemler.DataSource = _patient.PatientVisits;
+            this.gcIslemler.DataSource = _Patient.PatientVisits;
 
             this.medulaSorgu.lueProvisionType.EditValue = "N";
             this.medulaSorgu.lueInsuranceType.EditValue = "1";
@@ -51,62 +52,60 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueTreatmentStyle.EditValue = "A";
 
         }
-
         private void InitBindings()
         {
 
-            this.tePatientNo.DataBindings.Add("EditValue", _patient, "PatientNo");
-            this.teInsuranceCompany.DataBindings.Add("EditValue", _patient, "InsuranceCompany");
-            this.teTCKimlikNo.DataBindings.Add("EditValue", _patient, "TCId");
-            this.teFirstName.DataBindings.Add("EditValue", _patient, "FirstName");
-            this.teLastName.DataBindings.Add("EditValue", _patient, "LastName");
-            this.rgSex.DataBindings.Add("EditValue", _patient, "Sex");
-            this.rgMaritalStatus.DataBindings.Add("EditValue", _patient, "MaritalStatus");
-            this.teFatherName.DataBindings.Add("EditValue", _patient, "FatherName");
-            this.teMotherName.DataBindings.Add("EditValue", _patient, "MotherName");
-            this.teBirthPlace.DataBindings.Add("EditValue", _patient, "BirthPlace");
-            this.deBirthDate.DataBindings.Add("EditValue", _patient, "BirthDate");
-            BindLookUpEdit(this.lueStatus, _patient, "Status", LookUpServices.PatientRelations);
-            BindLookUpEdit(this.lueInsuranceType, _patient, "InsuranceType", LookUpServices.InsuranceTypes);
-            BindLookUpEdit(this.medulaSorgu.lueInsuranceType, _patient, "InsuranceType", LookUpServices.InsuranceTypes);
-            this.teHomePhone2.DataBindings.Add("EditValue", _patient, "HomePhone2");
-            this.teHomePhone1.DataBindings.Add("EditValue", _patient, "HomePhone1");
+            this.tePatientNo.DataBindings.Add("EditValue", _Patient, "PatientNo");
+            this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany");
+            this.teTCKimlikNo.DataBindings.Add("EditValue", _Patient, "TCId");
+            this.teFirstName.DataBindings.Add("EditValue", _Patient, "FirstName");
+            this.teLastName.DataBindings.Add("EditValue", _Patient, "LastName");
+            this.rgSex.DataBindings.Add("EditValue", _Patient, "Sex");
+            this.rgMaritalStatus.DataBindings.Add("EditValue", _Patient, "MaritalStatus");
+            this.teFatherName.DataBindings.Add("EditValue", _Patient, "FatherName");
+            this.teMotherName.DataBindings.Add("EditValue", _Patient, "MotherName");
+            this.teBirthPlace.DataBindings.Add("EditValue", _Patient, "BirthPlace");
+            this.deBirthDate.DataBindings.Add("EditValue", _Patient, "BirthDate");
+            BindLookUpEdit(this.lueStatus, _Patient, "Status", LookUpServices.PatientRelations);
+            BindLookUpEdit(this.lueInsuranceType, _Patient, "InsuranceType", LookUpServices.InsuranceTypes);
+            BindLookUpEdit(this.medulaSorgu.lueInsuranceType, _Patient, "InsuranceType", LookUpServices.InsuranceTypes);
+            this.teHomePhone2.DataBindings.Add("EditValue", _Patient, "HomePhone2");
+            this.teHomePhone1.DataBindings.Add("EditValue", _Patient, "HomePhone1");
 
-            this.rgIDType.DataBindings.Add("EditValue", _patient, "IDType");
-            this.teIDNO.DataBindings.Add("EditValue", _patient, "IDNO");
-            this.deIDDate.DataBindings.Add("EditValue", _patient, "IDDate");
-            this.teIDPlace.DataBindings.Add("EditValue", _patient, "IDPlace");
-            BindLookUpEdit(this.lueNationality, _patient, "Nationality", LookUpServices.Nationalities);
-            this.teHomeAddress.DataBindings.Add("EditValue", _patient, "HomeAddress");
-            this.teHomeDistrict.DataBindings.Add("EditValue", _patient, "HomeDistrict");
-            this.teHomeTown.DataBindings.Add("EditValue", _patient, "HomeTown");
-            this.teHomePostCode.DataBindings.Add("EditValue", _patient, "HomePostCode");
-            BindLookUpEdit(this.lueHomeCity, _patient, "HomeCity", LookUpServices.Cities, "Value", "Value");
+            this.rgIDType.DataBindings.Add("EditValue", _Patient, "IDType");
+            this.teIDNO.DataBindings.Add("EditValue", _Patient, "IDNO");
+            this.deIDDate.DataBindings.Add("EditValue", _Patient, "IDDate");
+            this.teIDPlace.DataBindings.Add("EditValue", _Patient, "IDPlace");
+            BindLookUpEdit(this.lueNationality, _Patient, "Nationality", LookUpServices.Nationalities);
+            this.teHomeAddress.DataBindings.Add("EditValue", _Patient, "HomeAddress");
+            this.teHomeDistrict.DataBindings.Add("EditValue", _Patient, "HomeDistrict");
+            this.teHomeTown.DataBindings.Add("EditValue", _Patient, "HomeTown");
+            this.teHomePostCode.DataBindings.Add("EditValue", _Patient, "HomePostCode");
+            BindLookUpEdit(this.lueHomeCity, _Patient, "HomeCity", LookUpServices.Cities, "Value", "Value");
 
-            this.teOfficer.DataBindings.Add("EditValue", _patient, "Officer");
-            this.teProfession.DataBindings.Add("EditValue", _patient, "Profession");
-            this.teEMSNo.DataBindings.Add("EditValue", _patient, "EMSNO");
-            this.teProtocolNo.DataBindings.Add("EditValue", _patient, "ProtocolNo");
-            this.teBAGNO.DataBindings.Add("EditValue", _patient, "BAGNO");
-            this.teSSKSicilNo.DataBindings.Add("EditValue", _patient, "YKARTNO");
-            this.teSevkEdilenYer.DataBindings.Add("EditValue", _patient, "GELHAST");
-            this.lueSigortaMudurlugu.DataBindings.Add("EditValue", _patient, "SIGMUD");
-            this.teNufusaKayitliIl.DataBindings.Add("EditValue", _patient, "RegisteredCity");
-            this.teNufusaKayitliIlce.DataBindings.Add("EditValue", _patient, "RegisteredTown");
-            this.teSigortaliKartNo.DataBindings.Add("EditValue", _patient, "SIGORTALIKARTNO");
+            this.teOfficer.DataBindings.Add("EditValue", _Patient, "Officer");
+            this.teProfession.DataBindings.Add("EditValue", _Patient, "Profession");
+            this.teEMSNo.DataBindings.Add("EditValue", _Patient, "EMSNO");
+            this.teProtocolNo.DataBindings.Add("EditValue", _Patient, "ProtocolNo");
+            this.teBAGNO.DataBindings.Add("EditValue", _Patient, "BAGNO");
+            this.teSSKSicilNo.DataBindings.Add("EditValue", _Patient, "YKARTNO");
+            this.teSevkEdilenYer.DataBindings.Add("EditValue", _Patient, "GELHAST");
+            this.lueSigortaMudurlugu.DataBindings.Add("EditValue", _Patient, "SIGMUD");
+            this.teNufusaKayitliIl.DataBindings.Add("EditValue", _Patient, "RegisteredCity");
+            this.teNufusaKayitliIlce.DataBindings.Add("EditValue", _Patient, "RegisteredTown");
+            this.teSigortaliKartNo.DataBindings.Add("EditValue", _Patient, "SIGORTALIKARTNO");
 
-            this.teJobName.DataBindings.Add("EditValue", _patient, "JobName");
-            this.teJobNo.DataBindings.Add("EditValue", _patient, "JobNo");
-            this.meJobAddress.DataBindings.Add("EditValue", _patient, "JobAddress");
-            BindLookUpEdit(this.lueJobCity, _patient, "JobCity", LookUpServices.Cities, "Value", "Value");
-            this.teJobPostCode.DataBindings.Add("EditValue", _patient, "JobPostCode");
-            this.teJobPhone1.DataBindings.Add("EditValue", _patient, "JobPhone1");
-            this.teJobPhone2.DataBindings.Add("EditValue", _patient, "JobPhone2");
-            this.teJobFax.DataBindings.Add("EditValue", _patient, "JobFax");
-            this.teEmail.DataBindings.Add("EditValue", _patient, "Email");
+            this.teJobName.DataBindings.Add("EditValue", _Patient, "JobName");
+            this.teJobNo.DataBindings.Add("EditValue", _Patient, "JobNo");
+            this.meJobAddress.DataBindings.Add("EditValue", _Patient, "JobAddress");
+            BindLookUpEdit(this.lueJobCity, _Patient, "JobCity", LookUpServices.Cities, "Value", "Value");
+            this.teJobPostCode.DataBindings.Add("EditValue", _Patient, "JobPostCode");
+            this.teJobPhone1.DataBindings.Add("EditValue", _Patient, "JobPhone1");
+            this.teJobPhone2.DataBindings.Add("EditValue", _Patient, "JobPhone2");
+            this.teJobFax.DataBindings.Add("EditValue", _Patient, "JobFax");
+            this.teEmail.DataBindings.Add("EditValue", _Patient, "Email");
 
         }
-
         private void BindLookUpEdit(LookUpEdit lue, Object dataSource, string property, Object dataSourceList,
             string displayMember = "Value", string valueMember = "ID")
         {
@@ -132,16 +131,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             //_patient.DATE_CREATE = DateTime.Now;
             //_patient.DATE_UPDATE = DateTime.Now;
 
-            PatientServices.SavePatient(_patient);
-
-            LookUpServices.GetNewPatientVisitNo(_patient);
-
-            PatientVisit pv = new PatientVisit();
-            pv.VisitNo = LookUpServices.GetNewPatientVisitNo(_patient);
-            _patient.AddPatientVisit(pv);
-            PatientVisitDetail pvd = new PatientVisitDetail();
-            pv.AddPatientVisitDetail(pvd);
-            pvd.DetailNo = LookUpServices.GetNewPatientVisitDetailNo(pv);
+            PatientServices.SavePatient(_Patient);
         }
 
         #region GridBindings
@@ -175,26 +165,52 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbPoliklinik_Click(object sender, EventArgs e)
         {
-            frmMain frm = (frmMain)(this.MdiParent);
-            frm.ShowNewDocument<SelectPolyclinicForm>();
-            //List<SGKAutoExamination> la = LookUpServices.GetSGKAutoExaminations("01");
+            //frmMain frm = (frmMain)(this.MdiParent);
+            //frm.ShowNewDocument<SelectPolyclinicForm>();
+
+            SelectPolyclinicForm frm = new SelectPolyclinicForm();
+            frm.ShowDialog();
+            if (frm.IsSelected)
+            {
+                if (_IsWaitingForPolyclinic)
+                {
+                    // Should cancel the previous request?
+                }
+                _IsWaitingForPolyclinic = true;
+                _Doctor = frm.Doctor;
+                CallMedulaProvision();
+            }
+
         }
 
         private void sbMernis_Click(object sender, EventArgs e)
         {
-
+            this.mernisSorgu.CallMernis(this.teTCKimlikNo.Text);
         }
 
         private void sbMedula_Click(object sender, EventArgs e)
         {
-            //this.medulaSorgu.TCKimlikNo = Convert.ToInt64(_patient.TCId);
-            int TCID = 0;
-            this.medulaSorgu.CallMedula(TCID);
+            CallMedulaProvision();
+        }
+
+        private void CallMedulaProvision()
+        {
+            if (this._Doctor == null)
+                return;
+
+            this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+            this.medulaSorgu.CallMedula(this.teTCKimlikNo.Text);
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)
         {
-            MessageBox.Show("Medula Sonucu :" + e.Result.sonucMesaji);
+            MessageBox.Show(e.Result.sonucKodu + ": " + e.Result.sonucMesaji, "Medula Sorgu Sonucu");
+            if (_IsWaitingForPolyclinic)
+            {
+                _IsWaitingForPolyclinic = false;
+                if (e.Result.sonucKodu == "0000")
+                    PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor, e.Result);
+            }
         }
 
 //        private void button1_Click(object sender, EventArgs e) {

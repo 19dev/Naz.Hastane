@@ -207,7 +207,12 @@
     <Content Include="Docs\NHibernateCode.txt" />
     <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Naz.Hastane.Medula\Naz.Hastane.Medula.csproj">
+      <Project>{CF0B5F45-51DC-4A85-B05B-5FB59E739A55}</Project>
+      <Name>Naz.Hastane.Medula</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

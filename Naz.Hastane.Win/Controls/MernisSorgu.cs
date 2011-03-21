@@ -18,7 +18,8 @@ namespace Naz.Hastane.Win.Controls
     {
         public event RunWorkerCompletedEventHandler RunWorkerCompleted;
 
-        public TCKimlikResponse _TCKimlikResponse = new TCKimlikResponse();
+        public TCKimlikResponse TCKimlikResponse = new TCKimlikResponse();
+
         private long _TCID = 0;
 
         private bool _IsWorking = false;
@@ -35,13 +36,13 @@ namespace Naz.Hastane.Win.Controls
         private StandartBackgroundWorker backgroundWorker;
         private KisiBilgisiC[] _KisiBilgisi;
 
-        public void CallMernis(int TCID)
+        public void CallMernis(string TCID)
         {
             if (IsWorking) return;
 
             IsWorking = true;
 
-            _TCID = TCID;
+            _TCID = long.Parse(TCID);
             backgroundWorker = new StandartBackgroundWorker();
             backgroundWorker.WorkerReportsProgress = true;
             backgroundWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker_RunWorkerCompleted);
@@ -58,7 +59,7 @@ namespace Naz.Hastane.Win.Controls
             KPSConfiguration.Instance.Username = HUser;
             KPSConfiguration.Instance.Password = HPass;
 
-            _TCKimlikResponse = new TCKimlikResponse();
+            TCKimlikResponse = new TCKimlikResponse();
             KPSSoap service = KPSServiceFactory.Create();
 
             //TC Kimlik No Giriş 
@@ -82,18 +83,18 @@ namespace Naz.Hastane.Win.Controls
         void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             //Servis Cevap Dönüş Bilgileri
-            _TCKimlikResponse.Adı = _KisiBilgisi[0].TemelBilgisi.Ad.ToString();
-            _TCKimlikResponse.Soyadı = _KisiBilgisi[0].TemelBilgisi.Soyad.ToString();
-            _TCKimlikResponse.AnaAdı = _KisiBilgisi[0].TemelBilgisi.AnaAd.ToString();
-            _TCKimlikResponse.BabaAdı = _KisiBilgisi[0].TemelBilgisi.BabaAd.ToString();
-            _TCKimlikResponse.Cinsiyeti = _KisiBilgisi[0].TemelBilgisi.Cinsiyet.ToString();
-            _TCKimlikResponse.Dogumtarihi = _KisiBilgisi[0].TemelBilgisi.DogumTarih.Gun.ToString() + "." + 
+            TCKimlikResponse.Adı = _KisiBilgisi[0].TemelBilgisi.Ad.ToString();
+            TCKimlikResponse.Soyadı = _KisiBilgisi[0].TemelBilgisi.Soyad.ToString();
+            TCKimlikResponse.AnaAdı = _KisiBilgisi[0].TemelBilgisi.AnaAd.ToString();
+            TCKimlikResponse.BabaAdı = _KisiBilgisi[0].TemelBilgisi.BabaAd.ToString();
+            TCKimlikResponse.Cinsiyeti = _KisiBilgisi[0].TemelBilgisi.Cinsiyet.ToString();
+            TCKimlikResponse.Dogumtarihi = _KisiBilgisi[0].TemelBilgisi.DogumTarih.Gun.ToString() + "." + 
                 _KisiBilgisi[0].TemelBilgisi.DogumTarih.Ay.ToString() + "." + 
                 _KisiBilgisi[0].TemelBilgisi.DogumTarih.Yil.ToString(); ;
-            _TCKimlikResponse.DoğumYeri = _KisiBilgisi[0].TemelBilgisi.DogumYer.ToString();
-            _TCKimlikResponse.OzurDurumu = _KisiBilgisi[0].TemelBilgisi.OzurOran;
-            _TCKimlikResponse.IlAd = _KisiBilgisi[0].KayitYeriBilgisi.IlAd.ToString();
-            _TCKimlikResponse.IlceAd = _KisiBilgisi[0].KayitYeriBilgisi.IlceAd.ToString();
+            TCKimlikResponse.DoğumYeri = _KisiBilgisi[0].TemelBilgisi.DogumYer.ToString();
+            TCKimlikResponse.OzurDurumu = _KisiBilgisi[0].TemelBilgisi.OzurOran;
+            TCKimlikResponse.IlAd = _KisiBilgisi[0].KayitYeriBilgisi.IlAd.ToString();
+            TCKimlikResponse.IlceAd = _KisiBilgisi[0].KayitYeriBilgisi.IlceAd.ToString();
 
             IsWorking = false;
 

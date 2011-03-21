@@ -15,7 +15,10 @@ namespace Naz.Hastane.Data.Entities.LookUp
 
     public class Service : LookUpBase
     {
+        public virtual float SorguTuru { get; set; } // SLY Sorgu Turu Medula ??
         public virtual string Type { get; set; } // SLXX 0: Poliklinik, 1:Yatış, 2:Acil SLXX
+        public virtual string BranchCode { get; set; } // SLXA  Branş Kodu Medula
+        public virtual string TreatmentType { get; set; } // SLYA Tedavi Tipi Medula
 
         //Map(x => x.Value).Column("SLX"); // float
         //Map(x => x.Value).Column("SLY"); // float Sorgu Turu Medula
@@ -23,8 +26,6 @@ namespace Naz.Hastane.Data.Entities.LookUp
         //Map(x => x.Value).Column("SLVV").Length(100);
         //Map(x => x.Value).Column("SLYY").Length(100);
         //Map(x => x.Value).Column("SLZZ").Length(100);
-        //Map(x => x.Value).Column("SLXA").Length(20);  Branş Kodu Medula
-        //Map(x => x.Value).Column("SLYA").Length(53); Tedavi Tipi Medula
         //Map(x => x.Value).Column("SLXB").Length(10); Takip Tipi Yoğun Bakım
         //Map(x => x.Value).Column("SEC"); // bit
         //Map(x => x.Value).Column("lngAnaIslemID"); //int

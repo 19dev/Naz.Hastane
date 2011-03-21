@@ -11,7 +11,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         {
             DiscriminatorValue("17");
 
+            Map(x => x.SorguTuru).Column("SLY");
             Map(x => x.Type).Column("SLXX");
+            Map(x => x.BranchCode).Column("SLXA");
+            Map(x => x.TreatmentType).Column("SLYA");
 
             HasMany(x => x.SGKAutoExaminations)
                 .KeyColumn("SERVISKODU")

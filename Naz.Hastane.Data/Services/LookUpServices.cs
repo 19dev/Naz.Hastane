@@ -127,60 +127,6 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
-        #region New Key Generators
-        public static string GetNewPatientNo()
-        {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                SystemSetting ss = session
-                    .CreateCriteria(typeof(SystemSetting))
-                    .Add(Restrictions.Eq("ID0", "00"))
-                    .Add(Restrictions.Eq("ID", "KNR"))
-                    .UniqueResult<SystemSetting>();
-                int id = Convert.ToInt32(ss.Value);
-                id += 1;
-                ss.Value = id.ToString();
-                session.Update(ss);
-                transaction.Commit();
-                return ss.Value;
-            }
-        }
-
-        public static string GetNewPatientVisitNo(Patient patient)
-        {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                var ss = session
-                    .CreateQuery("SELECT MIN(VisitNo) FROM PatientVisit as visit WHERE visit.Patient.PatientNo =" + patient.PatientNo)
-                    .List();
-                int id = 1000;
-                if (ss[0] != null)
-                    id = Convert.ToInt32(ss[0].ToString());
-                id -= 1;
-                return id.ToString();
-            }
-        }
-
-        public static double GetNewPatientVisitDetailNo(PatientVisit pv)
-        {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                var ss = session
-                    .CreateQuery("SELECT MAX(DetailNo) FROM PatientVisitDetail as pvd WHERE pvd.PatientVisit.Patient.PatientNo =" + pv.Patient.PatientNo +
-                    " and pvd.PatientVisit.VisitNo = " + pv.VisitNo)
-                    .List();
-                double id = 0;
-                if (ss[0] != null)
-                    id = Convert.ToDouble(ss[0].ToString());
-                id += 1;
-                return id;
-            }
-        }
-        #endregion
-
         public static List<Doctor> GetSGKDoctors()
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())

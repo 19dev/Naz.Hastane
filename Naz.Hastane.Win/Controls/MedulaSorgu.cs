@@ -50,7 +50,7 @@ namespace Naz.Hastane.Win.Controls
             }
         }
 
-        public void CallMedula(int TCID)
+        public void CallMedula(string TCID)
         {
             if (IsWorking) return;
 
@@ -58,8 +58,8 @@ namespace Naz.Hastane.Win.Controls
 
             hki = new HastaKabulIslemleriClient();
             hki.ClientCredentials.UserName.UserName = "10343154";
-            hki.ClientCredentials.UserName.Password = "19031903";
-            //hki.ClientCredentials.UserName.Password = "123456";
+            //hki.ClientCredentials.UserName.Password = "19031903";
+            hki.ClientCredentials.UserName.Password = "123456";
             //hki.ClientCredentials.HttpDigest.ClientCredential = new System.Net.NetworkCredential("10343154", "19031903");
             //hki.ClientCredentials.HttpDigest.AllowedImpersonationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation;
 
@@ -69,7 +69,7 @@ namespace Naz.Hastane.Win.Controls
             pgd.bransKodu = lueBranchCode.EditValue.ToString();
             pgd.devredilenKurum = lueTransferorInstitution.EditValue.ToString();
             pgd.donorTCKimlikNo = "";
-            pgd.hastaTCKimlikNo = "38872435224";
+            pgd.hastaTCKimlikNo = TCID;
             pgd.provizyonTarihi = DateTime.Now.ToString("dd/MM/yyyy");
             pgd.provizyonTipi = lueProvisionType.EditValue.ToString();
             pgd.saglikTesisKodu = 10343154;
@@ -89,10 +89,10 @@ namespace Naz.Hastane.Win.Controls
 
         void OnHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e)
         {
+            IsWorking = false;
             this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
             if (OnMedulaHastaKabulCompleted != null)
                 OnMedulaHastaKabulCompleted(this, e);
-           //hki.end
         }
 
 
