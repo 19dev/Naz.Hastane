@@ -6,12 +6,15 @@ namespace Naz.Hastane.Data.Entities
     public class PatientVisitDetail
     {
         public virtual PatientVisit PatientVisit { get; set; } //KNR; SNR
+        //public virtual string KNR { get; set; } //KNR; SNR
+        //public virtual string SNR { get; set; } //KNR; SNR
         public virtual double DetailNo { get; set; } //SIRANO
 
         public virtual string AKOD { get; set; } //AKOD Ambar Kodu
         public virtual string TANIM { get; set; } //TANIM
         public virtual string GRUP { get; set; } //GRUP
         public virtual string CODE { get; set; } //CODE
+
         public virtual string NAME1 { get; set; } //NAME1    
         public virtual double ADET { get; set; } //ADET
         public virtual string UNITE { get; set; } //UNITE xx
@@ -20,9 +23,9 @@ namespace Naz.Hastane.Data.Entities
         public virtual double DSATISF { get; set; } //DSATISF
         public virtual double KDV { get; set; } //KDV
         public virtual DateTime TARIH { get; set; } //TARIH
-        
+
         public virtual string Doctor { get; set; } //Doctor; //ARZT
-        public virtual string Doktor2 { get; set; } //doktor2; //ARZT2
+        public virtual string Doctor2 { get; set; } //doktor2; //ARZT2
 
         public virtual string PSG { get; set; } //PSG
         public virtual short HZLNO { get; set; } //HZLNO
@@ -57,7 +60,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual double MEDTUTAR { get; set; } //MEDTUTAR
         public virtual string MEDOZDURUM { get; set; } //MEDOZDURUM
         public virtual string MEDANOMALI { get; set; } //MEDANOMALI
-        
+
         public virtual string TBASLANGICSAATI { get; set; } //TBASLANGICSAATI
         public virtual string TBITISSAATI { get; set; } //TBITISSAATI
         public virtual int TG { get; set; } //TG
@@ -74,8 +77,9 @@ namespace Naz.Hastane.Data.Entities
             PatientVisitDetail pv = obj as PatientVisitDetail;
             if (pv == null)
                 return false;
+            //if (this.PatientVisit == pv.KNR && this.SNR == pv.SNR && this.DetailNo == pv.DetailNo)
             if (this.PatientVisit == pv.PatientVisit && this.DetailNo == pv.DetailNo)
-                return true;
+                    return true;
             else
                 return false;
         }
@@ -83,6 +87,8 @@ namespace Naz.Hastane.Data.Entities
         public override int GetHashCode()
         {
             int hash = 13;
+            //hash += (null == this.KNR ? 0 : this.KNR.GetHashCode());
+            //hash += (null == this.SNR ? 0 : this.SNR.GetHashCode());
             hash += (null == this.PatientVisit ? 0 : this.PatientVisit.GetHashCode());
             hash += Convert.ToInt32(this.DetailNo);
 

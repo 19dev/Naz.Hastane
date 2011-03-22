@@ -138,7 +138,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void gvZiyaret_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
         {
             PatientVisit pv = (PatientVisit)gvZiyaret.GetRow(e.RowHandle);
-            e.IsEmpty = pv.PatientVisitDetails.Count == 0;
+            //e.IsEmpty = pv.PatientVisitDetails.Count == 0;
         }
 
         private void gvZiyaret_MasterRowGetRelationCount(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventArgs e)
@@ -199,6 +199,8 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return;
 
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+
+            //PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
             this.medulaSorgu.CallMedula(this.teTCKimlikNo.Text);
         }
 
@@ -209,7 +211,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _IsWaitingForPolyclinic = false;
                 if (e.Result.sonucKodu == "0000")
-                    PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor, e.Result);
+                    PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
             }
         }
 

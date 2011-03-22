@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a63843e6-eac1-406e-be83-cd7dc5eeea7c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f11688c4-2f31-4d3e-9e12-7822237dc64e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -8,7 +8,9 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -18,10 +20,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://saglikt.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://medula.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="HastaKabulIslemleri.wsdl" MetadataType="Wsdl" ID="a1d14271-ffe2-4339-a5de-91b247661328" SourceId="1" SourceUrl="http://saglikt.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl" />
+    <MetadataFile FileName="HastaKabulIslemleri.wsdl" MetadataType="Wsdl" ID="43b91e1e-bb92-4ad8-9ab2-f4b5a942ef61" SourceId="1" SourceUrl="http://medula.sgk.gov.tr/medulaws/services/HastaKabulIslemleri/wsdl/HastaKabulIslemleri.wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

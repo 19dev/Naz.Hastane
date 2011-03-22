@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UAPrG7I/keoAR8bUz7JdAVjAah8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="3JyvITcwpRmoi0MKtSTMTHQqkFQ=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="HastaKabulIslemleriSoapBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="HastaKabulIslemleri" contract="HastaKabulIslemleri.HastaKabulIslemleri" bindingType="basicHttpBinding" address="http://saglikt.sgk.gov.tr/medulaws/services/HastaKabulIslemleri" bindingConfiguration="HastaKabulIslemleriSoapBinding">
+    <endpoint name="HastaKabulIslemleri" contract="HastaKabulIslemleri.HastaKabulIslemleri" bindingType="basicHttpBinding" address="http://medula.sgk.gov.tr:9084/medulaws/services/HastaKabulIslemleri" bindingConfiguration="HastaKabulIslemleriSoapBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://saglikt.sgk.gov.tr:80/medulaws/services/HastaKabulIslemleri</serializedValue>
+          <serializedValue>http://medula.sgk.gov.tr:9084/medulaws/services/HastaKabulIslemleri</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

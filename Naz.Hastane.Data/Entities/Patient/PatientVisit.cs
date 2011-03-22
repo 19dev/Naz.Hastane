@@ -101,6 +101,8 @@ namespace Naz.Hastane.Data.Entities
         public virtual void AddPatientVisitDetail(PatientVisitDetail pvd)
         {
             pvd.PatientVisit = this;
+            //pvd.KNR = this.Patient.PatientNo;
+            //pvd.SNR = this.VisitNo;
             this.PatientVisitDetails.Add(pvd);
         }
 

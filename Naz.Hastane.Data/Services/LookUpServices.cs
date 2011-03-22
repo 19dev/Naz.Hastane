@@ -25,6 +25,8 @@ namespace Naz.Hastane.Data.Services
         #region LookUpLists
 
         #region privates
+        private static List<Doctor> sgkDoctors;
+
         private static List<BloodType> bloodTypes;
         private static List<City> cities;
         private static List<Depository> depositories;
@@ -129,18 +131,22 @@ namespace Naz.Hastane.Data.Services
 
         public static List<Doctor> GetSGKDoctors()
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            if (sgkDoctors == null)
             {
-                return (List<Doctor>)session.QueryOver<Doctor>()
-                    .OrderBy(x => x.Value).Asc
-                    .JoinQueryOver(x => x.Service)
-                        .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
-                    .JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
-                    .JoinQueryOver<Product>(x => x.Product)
-                    .TransformUsing(Transformers.DistinctRootEntity)
-                    
-                    .List<Doctor>();
+                using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                {
+                    sgkDoctors = (List<Doctor>)session.QueryOver<Doctor>()
+                        .OrderBy(x => x.Value).Asc
+                        .JoinQueryOver(x => x.Service)
+                            .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
+                        .JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
+                        .JoinQueryOver<Product>(x => x.Product)
+                        .TransformUsing(Transformers.DistinctRootEntity)
+
+                        .List<Doctor>();
+                }
             }
+            return sgkDoctors;
         }
 
         public static List<SGKAutoExamination> GetSGKAutoExaminations(string servisCode)

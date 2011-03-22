@@ -57,9 +57,11 @@ namespace Naz.Hastane.Win.Controls
             IsWorking = true;
 
             hki = new HastaKabulIslemleriClient();
+            System.Net.ServicePointManager.Expect100Continue = false;
+
             hki.ClientCredentials.UserName.UserName = "10343154";
-            //hki.ClientCredentials.UserName.Password = "19031903";
-            hki.ClientCredentials.UserName.Password = "123456";
+            hki.ClientCredentials.UserName.Password = "19031903";
+            //hki.ClientCredentials.UserName.Password = "123456";
             //hki.ClientCredentials.HttpDigest.ClientCredential = new System.Net.NetworkCredential("10343154", "19031903");
             //hki.ClientCredentials.HttpDigest.AllowedImpersonationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation;
 

@@ -638,7 +638,7 @@
   </wsdl:binding>
   <wsdl:service name="HastaKabulIslemleriService">
     <wsdl:port name="HastaKabulIslemleri" binding="impl:HastaKabulIslemleriSoapBinding">
-      <wsdlsoap:address location="http://saglikt.sgk.gov.tr:80/medulaws/services/HastaKabulIslemleri" />
+      <wsdlsoap:address location="http://medula.sgk.gov.tr:9084/medulaws/services/HastaKabulIslemleri" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

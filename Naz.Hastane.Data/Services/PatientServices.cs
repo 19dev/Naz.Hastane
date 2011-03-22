@@ -166,7 +166,7 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
-        public static void AddSGKPolyclinic(Patient patient, Doctor doctor, ProvizyonCevapDVO provizyonCevapDVO)
+        public static void AddSGKPolyclinic(Patient patient, Doctor doctor)
         {
             if (patient == null || doctor == null)
                 return;
@@ -179,7 +179,7 @@ namespace Naz.Hastane.Data.Services
                 session.Save(ic);
 
                 // Get No QueueNo for the Doctor, If new date reset the number
-                SystemSetting ss = session.Get<SystemSetting>("TARIH");
+                SystemSetting ss = session.Get<SystemSetting>("TARİH");
                 string today = DateTime.Now.ToString("dd/MM/yyyy");
                 if (today != ss.Value)
                 {
@@ -204,10 +204,36 @@ namespace Naz.Hastane.Data.Services
                 pv.DATE_CREATE = DateTime.Now;
 
                 patient.AddPatientVisit(pv);
+                session.Save(pv);
 
-                //PatientVisitDetail pvd = new PatientVisitDetail();
-                //pv.AddPatientVisitDetail(pvd);
-                //pvd.DetailNo = LookUpServices.GetNewPatientVisitDetailNo(pv);
+                foreach (SGKAutoExamination sa in doctor.Service.SGKAutoExaminations)
+                {
+                    PatientVisitDetail pvd = new PatientVisitDetail();
+
+                    pvd.DetailNo = GetNewPatientVisitDetailNo(pv);
+
+                    //pvd.TARIH = DateTime.Now;
+
+                    //pvd.TANIM = sa.Product.TANIM;
+                    //pvd.GRUP = sa.Product.GRUP;
+                    //pvd.CODE = sa.Product.CODE;
+                    //pvd.NAME1 = sa.Product.NAME1;
+
+                    //pvd.KDV = 0;
+                    //pvd.ADET = 1;
+                    //pvd.SATISF = 0;
+                    //pvd.KSATISF = 0;
+                    //pvd.PSG = pv.PSG;
+                    //pvd.Doctor = doctor.ID;
+                    //pvd.Doctor2 = doctor.ID;
+                    //pvd.HZLNO = 0;
+
+                    pv.USER_ID = "Aydin";
+                    pv.DATE_CREATE = DateTime.Now;
+
+                    //pv.AddPatientVisitDetail(pvd);
+                    //session.Save(pvd);
+                }
             }
 
 
@@ -240,14 +266,22 @@ namespace Naz.Hastane.Data.Services
         }
         public static string GetNewPatientVisitNo(Patient patient, ISession session)
         {
-            var ss = session
-                .CreateQuery("SELECT MIN(VisitNo) FROM PatientVisit as visit WHERE visit.Patient.PatientNo =" + patient.PatientNo)
-                .List();
-            int id = 1000;
-            if (ss[0] != null)
-                id = Convert.ToInt32(ss[0].ToString());
-            id -= 1;
-            return id.ToString();
+            string a = session.QueryOver<PatientVisit>()
+                .Where(x => x.Patient == patient)
+                .Select(
+                    Projections
+                        .ProjectionList()
+                        .Add(Projections.Min<PatientVisit>(x => x.VisitNo)))
+                .List<string>().First();
+
+            int newNo = 1000;
+
+            if (a != null)
+                newNo = int.Parse(a);
+
+            newNo--;
+
+            return newNo.ToString("D3");
         }
 
         public static double GetNewPatientVisitDetailNo(PatientVisit pv)
@@ -257,15 +291,15 @@ namespace Naz.Hastane.Data.Services
         }
         public static double GetNewPatientVisitDetailNo(PatientVisit pv, ISession session)
         {
-            var ss = session
-                .CreateQuery("SELECT MAX(DetailNo) FROM PatientVisitDetail as pvd WHERE pvd.PatientVisit.Patient.PatientNo =" + pv.Patient.PatientNo +
-                " and pvd.PatientVisit.VisitNo = " + pv.VisitNo)
-                .List();
-            double id = 0;
-            if (ss[0] != null)
-                id = Convert.ToDouble(ss[0].ToString());
-            id += 1;
-            return id;
+            double? a = session.QueryOver<PatientVisitDetail>()
+                .Where(x => x.PatientVisit == pv)
+                .Select(
+                    Projections
+                        .ProjectionList()
+                        .Add(Projections.Max<PatientVisitDetail>(x => x.DetailNo)))
+                .List<double?>().First();
+
+            return a.GetValueOrDefault() + 1;
         }
         #endregion
 

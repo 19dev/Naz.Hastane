@@ -209,7 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naz.Hastane.Medula\Naz.Hastane.Medula.csproj">
-      <Project>{CF0B5F45-51DC-4A85-B05B-5FB59E739A55}</Project>
+      <Project>{2F79C8A5-6235-4D45-8C9C-28BEC3C33C51}</Project>
       <Name>Naz.Hastane.Medula</Name>
     </ProjectReference>
   </ItemGroup>

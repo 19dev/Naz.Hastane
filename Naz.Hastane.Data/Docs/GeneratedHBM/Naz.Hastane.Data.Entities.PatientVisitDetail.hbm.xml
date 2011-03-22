@@ -21,14 +21,14 @@
     <property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="CODE" />
     </property>
+    <property name="NAME1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NAME1" />
+    </property>
     <property name="ADET" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="ADET" />
     </property>
     <property name="UNITE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="UNITE" />
-    </property>
-    <property name="NAME1" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="NAME1" />
     </property>
     <property name="SATISF" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="SATISF" />
@@ -48,7 +48,7 @@
     <property name="Doctor" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="ARZT" />
     </property>
-    <property name="Doktor2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <property name="Doctor2" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="ARZT2" />
     </property>
     <property name="PSG" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

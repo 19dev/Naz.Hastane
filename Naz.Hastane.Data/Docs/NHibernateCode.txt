@@ -86,3 +86,18 @@ public IEnumerable<order> GetByTradeDateAndTicker(DateTime tradeDate, string tic
                                              });  
         }  
 </crd.order></order>  
+
+sortOrder = _nHibernateSession.QueryOver<DeclinedReason>() 
+         .Where(dr => dr.Unit.Id == newReason.Unit.Id) 
+         .SelectList(x => x.SelectMax(y => y.SortOrder)) 
+         .Take(1) 
+.SingleOrDefault<int>();
+
+var ss = session
+    .CreateQuery("SELECT MIN(VisitNo) FROM PatientVisit as visit WHERE visit.Patient.PatientNo =" + patient.PatientNo)
+    .List();
+int id = 1000;
+if (ss[0] != null)
+    id = Convert.ToInt32(ss[0].ToString());
+id -= 1;
+return id.ToString();
