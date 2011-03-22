@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.ProvizyonGirisDVO">
+    <Position X="0.75" Y="0.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>wAECgAECQCEwAAgAEAUQECAggAgBQiAACAEABAIAAIA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="yeniDoganBilgisi" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.ProvizyonCevapDVO">
+    <Position X="4.25" Y="0.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAASAARAAAAAACAAAKAAgAAAICAAAIMAAAAAACA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="hastaBilgileri" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.HastaBilgileriDVO">
+    <Position X="7.75" Y="0.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAwAACAAAQgAAAAAAIAAAAgAAIIgAgKAAAAAACAAA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.YeniDoganBilgisiDVO">
+    <Position X="4.5" Y="4.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAEAAAAAAAAgAAAIgAAAAAAAIAAAAA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

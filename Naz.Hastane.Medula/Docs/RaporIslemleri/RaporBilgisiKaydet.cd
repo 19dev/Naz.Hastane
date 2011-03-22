@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.RaporGirisDVO">
+    <Position X="0.5" Y="0.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAAGAAAIAAAAACACAlBBgAAAAACIAQAACCAQAAQ=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="analikRapor" />
+      <Property Name="dogumOncesiCalisabilirRapor" />
+      <Property Name="dogumRapor" />
+      <Property Name="ilacRapor" />
+      <Property Name="maluliyetRapor" />
+      <Property Name="protezRapor" />
+      <Property Name="tedaviRapor" />
+      <Property Name="isgoremezlikRapor" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.RaporCevapDVO">
+    <Position X="0.75" Y="6.25" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAAGAABIAAAABCACAlBRgACAIACIAwAACCBAAAU=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="analikRapor" />
+      <Property Name="dogumOncesiCalisabilirRapor" />
+      <Property Name="dogumRapor" />
+      <Property Name="ilacRapor" />
+      <Property Name="maluliyetRapor" />
+      <Property Name="protezRapor" />
+      <Property Name="tedaviRapor" />
+      <Property Name="isgoremezlikRapor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="isgoremezlikRaporEkleri" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.AnalikIsgoremezlikRaporDVO" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAAAACAQAAAAAAAAAAAACIgAAAAAEAAAQAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporDVO" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.RaporDVO">
+    <Position X="9.75" Y="0.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAACEAACAAAAAIIAIBgAhCAAwgCMAAYgASECXGAABAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporBilgisi" />
+      <Property Name="hakSahibi" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="doktorlar" />
+      <Property Name="tanilar" />
+      <Property Name="teshisler" />
+      <Property Name="ilacTeshisler" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.DoktorBilgisiDVO" Collapsed="true">
+    <Position X="13.5" Y="0.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQCACGQAAAAAAAAAAAAAAAgAAAgAgAAAAAAAAAEgg=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.HakSahibiBilgisiDVO" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAwAACQAAQBAAAAFAYEAAAgAAIQBAACAAAAAACAKA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.IlacTeshisBilgiDVO" Collapsed="true">
+    <Position X="13.5" Y="2.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAEgAEAoAAAAAAAAAwAAIAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.DogumOncesiCalisabilirRaporDVO" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>MAAAAAACAAAAAAAAAAAAAICIgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporDVO" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.RaporBilgisiDVO" Collapsed="true">
+    <Position X="13.5" Y="3.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CBAAAAACAAAAAAAAAAAAIACAgAAAAAIABAAAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.TaniBilgisiDVO" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAAAAABAAAAQAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.TeshisBilgisiDVO">
+    <Position X="13.5" Y="5.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAEgAAAIAAAAAAAAAwAAIAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.DogumRaporDVO" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IIAQAAACAQAAAAACACAAAASIgAAEAAEAAAQDCACAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporDVO" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="cocuklar" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.CocukBilgisiDVO" Collapsed="true">
+    <Position X="10.75" Y="7.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAACAAAAAAAgBAAABAAAgAAAAAAAIAAAAAAIAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.IlacRaporDVO">
+    <Position X="6" Y="10.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAAAAABAAAABAAACIgIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporDVO" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="raporEtkinMaddeler" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.RaporEtkinMaddeDVO" Collapsed="true">
+    <Position X="11.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACCACAAAEAAAABAAAAACAgBAQAAAAEAAgAIAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.IsgoremezlikRaporDVO">
+    <Position X="1.25" Y="13.25" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAAAAAAAgAgCoiAAAAAAEAgAAAAAAEAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="raporDVO" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="yatislar" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.HastaYatisBilgisiDVO">
+    <Position X="6.75" Y="13.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAAAAAAAEAAgAAAAAAABAAAAAAAAAE=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.MaluliyetRaporDVO" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAACAABAAAABAAgAAACIgAEAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.ProtezRaporDVO" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAACAAAAAAAAAAAAAACIgAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.TedaviRaporDVO" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAgAAAAAACIgACAABAAAAgAAAAAAAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.RaporIslemleri.IsgoremezlikRaporEkDVO" Collapsed="true">
+    <Position X="0.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAAAACAAAAAgIAIAgghgAgigCEAAUEAyAAGCAQFAA=</HashCode>
+      <FileName>Service References\RaporIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

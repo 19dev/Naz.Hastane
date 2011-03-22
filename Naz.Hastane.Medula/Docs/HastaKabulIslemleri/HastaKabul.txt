@@ -1,0 +1,7 @@
+﻿
+
+HastaKabul
+
+	Giriş: ProvizyonGirisDVO
+	Çıkış: ProvizyonCevapDVO
+

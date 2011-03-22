@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.YardimciIslemler.OrneklenmisGirisDVO">
+    <Position X="1.25" Y="1" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAAAkAgAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\YardimciIslemler\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.YardimciIslemler.OrneklenmisCevapDVO">
+    <Position X="3.75" Y="1" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABACAACAABAAAAAAgAAAAAAgAAAICAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\YardimciIslemler\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

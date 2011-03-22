@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.TakipSilGirisDVO">
+    <Position X="0.75" Y="1.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAEAAAACAAgAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HastaKabulIslemleri.TakipSilCevapDVO">
+    <Position X="3.25" Y="1.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAABAAAAAAAAAACAAgAAAICAAAIEAAAAAAAA=</HashCode>
+      <FileName>Service References\HastaKabulIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

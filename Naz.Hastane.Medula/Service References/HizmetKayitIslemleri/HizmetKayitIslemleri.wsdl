@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:tns2="http://dvo.gss.sgk.gov.tr" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://servisler.ws.gss.sgk.gov.tr" targetNamespace="http://servisler.ws.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dvo.gss.sgk.gov.tr">
+      <xsd:import namespace="http://servisler.ws.gss.sgk.gov.tr" />
+      <xsd:complexType name="HizmetIptalGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="islemSiraNumaralari" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetIptalCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetKayitGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="ameliyatveGirisimBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_AmeliyatveGirisimBilgisiDVO" />
+          <xsd:element name="digerIslemBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_DigerIslemBilgisiDVO" />
+          <xsd:element name="disBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_DisBilgisiDVO" />
+          <xsd:element name="hastaBasvuruNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hastaYatisBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_HastaYatisBilgisiDVO" />
+          <xsd:element name="ilacBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_IlacBilgisiDVO" />
+          <xsd:element name="konsultasyonBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_KonsultasyonBilgisiDVO" />
+          <xsd:element name="malzemeBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_MalzemeBilgisiDVO" />
+          <xsd:element name="muayeneBilgisi" nillable="true" type="tns2:MuayeneBilgisiDVO" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="tahlilBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_TahlilBilgisiDVO" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="tanilar" nillable="true" type="impl:ArrayOf_tns2_nillable_TaniBilgisiDVO" />
+          <xsd:element name="tetkikveRadyolojiBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_TetkikveRadyolojiBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AmeliyatveGirisimBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="euroscore" nillable="true" type="xsd:string" />
+          <xsd:element name="aciklama" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:int" />
+          <xsd:element name="ayniFarkliKesi" nillable="true" type="xsd:string" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sagSol" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DigerIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ayniFarkliKesi" nillable="true" type="xsd:string" />
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:int" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="raporTakipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DisBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="disTaahhutNo" type="xsd:int" />
+          <xsd:element name="ayniFarkliKesi" nillable="true" type="xsd:string" />
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:int" />
+          <xsd:element name="anomali" nillable="true" type="xsd:string" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sagAltCene" nillable="true" type="xsd:string" />
+          <xsd:element name="sagSutAltCene" nillable="true" type="xsd:string" />
+          <xsd:element name="sagSutUstCene" nillable="true" type="xsd:string" />
+          <xsd:element name="sagUstCene" nillable="true" type="xsd:string" />
+          <xsd:element name="solAltCene" nillable="true" type="xsd:string" />
+          <xsd:element name="solSutAltCene" nillable="true" type="xsd:string" />
+          <xsd:element name="solSutUstCene" nillable="true" type="xsd:string" />
+          <xsd:element name="solUstCene" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sagAltCeneAnomaliDis" nillable="true" type="xsd:string" />
+          <xsd:element name="sagUstCeneAnomaliDis" nillable="true" type="xsd:string" />
+          <xsd:element name="solAltCeneAnomaliDis" nillable="true" type="xsd:string" />
+          <xsd:element name="solUstCeneAnomaliDis" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HastaYatisBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="refakatciGunSayisi" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="yatisBaslangicTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="yatisBitisTarihi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IlacBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="paketHaric" nillable="true" type="xsd:string" />
+          <xsd:element name="aciklama" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:double" />
+          <xsd:element name="barkod" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="ilacTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="tutar" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KonsultasyonBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MalzemeBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="katkiPayi" nillable="true" type="xsd:string" />
+          <xsd:element name="kodsuzMalzemeAdi" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:double" />
+          <xsd:element name="barkod" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="kodsuzMalzemeFiyati" type="xsd:double" />
+          <xsd:element name="malzemeKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="malzemeTuru" nillable="true" type="xsd:string" />
+          <xsd:element name="paketHaric" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MuayeneBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="muayeneTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TahlilBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="tahlilSonuclari" nillable="true" type="impl:ArrayOf_tns2_nillable_TahlilSonucDVO" />
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:int" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TahlilSonucDVO">
+        <xsd:sequence>
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="sonuc" nillable="true" type="xsd:string" />
+          <xsd:element name="tahlilTipi" nillable="true" type="xsd:string" />
+          <xsd:element name="birim" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TaniBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="birincilTani" nillable="true" type="xsd:string" />
+          <xsd:element name="taniKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="taniTipi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TetkikveRadyolojiBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="ayniFarkliKesi" nillable="true" type="xsd:string" />
+          <xsd:element name="aciklama" nillable="true" type="xsd:string" />
+          <xsd:element name="birim" nillable="true" type="xsd:string" />
+          <xsd:element name="sonuc" nillable="true" type="xsd:string" />
+          <xsd:element name="ozelDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="adet" type="xsd:int" />
+          <xsd:element name="bransKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="drTescilNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="sutKodu" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetKayitCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBasvuruNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hataliKayitlar" nillable="true" type="impl:ArrayOf_tns2_nillable_HataliIslemBilgisiDVO" />
+          <xsd:element name="islemBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_KayitliIslemBilgisiDVO" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HataliIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="hataKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="hataMesaji" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="oncekiIslemBilgisi" nillable="true" type="tns2:OncekiIslemBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OncekiIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="islemAdedi" type="xsd:int" />
+          <xsd:element name="islemTarihi" nillable="true" type="xsd:string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="tesisAdi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KayitliIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element name="hizmetSunucuRefNo" nillable="true" type="xsd:string" />
+          <xsd:element name="islemSiraNo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetOkuGirisDVO">
+        <xsd:sequence>
+          <xsd:element name="islemSiraNumaralari" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+          <xsd:element name="saglikTesisKodu" type="xsd:int" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetSunucuRefNolari" nillable="true" type="impl:ArrayOf_xsd_nillable_string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetOkuCevapDVO">
+        <xsd:sequence>
+          <xsd:element name="hastaBasvuruNo" nillable="true" type="xsd:string" />
+          <xsd:element name="hizmetler" nillable="true" type="tns2:HizmetDVO" />
+          <xsd:element name="sonucKodu" nillable="true" type="xsd:string" />
+          <xsd:element name="sonucMesaji" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HizmetDVO">
+        <xsd:sequence>
+          <xsd:element name="odemeSorguDurum" nillable="true" type="xsd:string" />
+          <xsd:element name="ameliyatveGirisimBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_AmeliyatveGirisimBilgisiDVO" />
+          <xsd:element name="digerIslemBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_DigerIslemBilgisiDVO" />
+          <xsd:element name="disBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_DisBilgisiDVO" />
+          <xsd:element name="hastaYatisBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_HastaYatisBilgisiDVO" />
+          <xsd:element name="ilacBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_IlacBilgisiDVO" />
+          <xsd:element name="konsultasyonBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_KonsultasyonBilgisiDVO" />
+          <xsd:element name="malzemeBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_MalzemeBilgisiDVO" />
+          <xsd:element name="muayeneBilgisi" nillable="true" type="tns2:MuayeneBilgisiDVO" />
+          <xsd:element name="tahlilBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_TahlilBilgisiDVO" />
+          <xsd:element name="takipNo" nillable="true" type="xsd:string" />
+          <xsd:element name="tanilar" nillable="true" type="impl:ArrayOf_tns2_nillable_TaniBilgisiDVO" />
+          <xsd:element name="tetkikveRadyolojiBilgileri" nillable="true" type="impl:ArrayOf_tns2_nillable_TetkikveRadyolojiBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://servisler.ws.gss.sgk.gov.tr">
+      <xsd:import namespace="http://dvo.gss.sgk.gov.tr" />
+      <xsd:complexType name="ArrayOf_xsd_nillable_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="hizmetKaydiIptalResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetKaydiIptalReturn" nillable="true" type="tns2:HizmetIptalCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hizmetKayit">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetKayitGiris" nillable="true" type="tns2:HizmetKayitGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hizmetKayitResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetKayitReturn" nillable="true" type="tns2:HizmetKayitCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hizmetKaydiOku">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetOkuGiris" nillable="true" type="tns2:HizmetOkuGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hizmetKaydiOkuResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetKaydiOkuReturn" nillable="true" type="tns2:HizmetOkuCevapDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hizmetKaydiIptal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hizmetIptalGirisDVO" nillable="true" type="tns2:HizmetIptalGirisDVO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_tns2_nillable_AmeliyatveGirisimBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AmeliyatveGirisimBilgisiDVO" nillable="true" type="tns2:AmeliyatveGirisimBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_DigerIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="DigerIslemBilgisiDVO" nillable="true" type="tns2:DigerIslemBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_DisBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="DisBilgisiDVO" nillable="true" type="tns2:DisBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_HastaYatisBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="HastaYatisBilgisiDVO" nillable="true" type="tns2:HastaYatisBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_IlacBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IlacBilgisiDVO" nillable="true" type="tns2:IlacBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_KonsultasyonBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="KonsultasyonBilgisiDVO" nillable="true" type="tns2:KonsultasyonBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_MalzemeBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="MalzemeBilgisiDVO" nillable="true" type="tns2:MalzemeBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_TahlilSonucDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TahlilSonucDVO" nillable="true" type="tns2:TahlilSonucDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_TahlilBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TahlilBilgisiDVO" nillable="true" type="tns2:TahlilBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_TaniBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TaniBilgisiDVO" nillable="true" type="tns2:TaniBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_TetkikveRadyolojiBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TetkikveRadyolojiBilgisiDVO" nillable="true" type="tns2:TetkikveRadyolojiBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_HataliIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="HataliIslemBilgisiDVO" nillable="true" type="tns2:HataliIslemBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_nillable_KayitliIslemBilgisiDVO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="KayitliIslemBilgisiDVO" nillable="true" type="tns2:KayitliIslemBilgisiDVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hizmetKayitResponse">
+    <wsdl:part name="parameters" element="impl:hizmetKayitResponse" />
+  </wsdl:message>
+  <wsdl:message name="hizmetKaydiOkuRequest">
+    <wsdl:part name="parameters" element="impl:hizmetKaydiOku" />
+  </wsdl:message>
+  <wsdl:message name="hizmetKaydiIptalRequest">
+    <wsdl:part name="parameters" element="impl:hizmetKaydiIptal" />
+  </wsdl:message>
+  <wsdl:message name="hizmetKaydiIptalResponse">
+    <wsdl:part name="parameters" element="impl:hizmetKaydiIptalResponse" />
+  </wsdl:message>
+  <wsdl:message name="hizmetKayitRequest">
+    <wsdl:part name="parameters" element="impl:hizmetKayit" />
+  </wsdl:message>
+  <wsdl:message name="hizmetKaydiOkuResponse">
+    <wsdl:part name="parameters" element="impl:hizmetKaydiOkuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HizmetKayitIslemleri">
+    <wsdl:operation name="hizmetKaydiIptal">
+      <wsdl:input name="hizmetKaydiIptalRequest" message="impl:hizmetKaydiIptalRequest" />
+      <wsdl:output name="hizmetKaydiIptalResponse" message="impl:hizmetKaydiIptalResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hizmetKayit">
+      <wsdl:input name="hizmetKayitRequest" message="impl:hizmetKayitRequest" />
+      <wsdl:output name="hizmetKayitResponse" message="impl:hizmetKayitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hizmetKaydiOku">
+      <wsdl:input name="hizmetKaydiOkuRequest" message="impl:hizmetKaydiOkuRequest" />
+      <wsdl:output name="hizmetKaydiOkuResponse" message="impl:hizmetKaydiOkuResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HizmetKayitIslemleriSoapBinding" type="impl:HizmetKayitIslemleri">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="hizmetKaydiIptal">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hizmetKaydiIptalRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hizmetKaydiIptalResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hizmetKayit">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hizmetKayitRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hizmetKayitResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hizmetKaydiOku">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hizmetKaydiOkuRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hizmetKaydiOkuResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HizmetKayitIslemleriService">
+    <wsdl:port name="HizmetKayitIslemleri" binding="impl:HizmetKayitIslemleriSoapBinding">
+      <wsdlsoap:address location="http://medula.sgk.gov.tr:9084/medulaws/services/HizmetKayitIslemleri" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

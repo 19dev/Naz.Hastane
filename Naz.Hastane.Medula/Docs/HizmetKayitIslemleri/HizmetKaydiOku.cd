@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetOkuGirisDVO">
+    <Position X="1" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAACACAAAAAAEAAAACgAgAAAAAAAAAEAQQAAAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetOkuCevapDVO">
+    <Position X="1" Y="3.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAASAAVAAAAAAAAAAAAAgAAAICAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="hizmetler" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetDVO">
+    <Position X="5" Y="2.75" Width="4.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AGAAEABCDAAAhAAAAAOAACEAgCCAAAQAAAUEAANBgAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

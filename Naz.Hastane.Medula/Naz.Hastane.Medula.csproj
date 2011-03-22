@@ -42,9 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\FaturaKayitIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\HastaKabulIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HizmetKayitIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RaporIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\YardimciIslemler\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -55,6 +74,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Docs\FaturaKayitIslemleri\FaturaIptal.cd" />
+    <None Include="Docs\FaturaKayitIslemleri\FaturaKayit.cd" />
+    <None Include="Docs\FaturaKayitIslemleri\FaturaOku.cd" />
+    <None Include="Docs\HastaKabulIslemleri\BasvuruTakipOku.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaCikisIptal.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaCikisKayit.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaKabul.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaKabulIptal.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaKabulOku.cd" />
+    <None Include="Docs\HastaKabulIslemleri\HastaYatisOku.cd" />
+    <None Include="Docs\HastaKabulIslemleri\SevkBildir.cd" />
+    <None Include="Docs\HastaKabulIslemleri\UpdateProvizyonTipi.cd" />
+    <None Include="Docs\HastaKabulIslemleri\UpdateTedaviTipi.cd" />
+    <None Include="Docs\HizmetKayitIslemleri\HizmetKaydiIptal.cd" />
+    <None Include="Docs\HizmetKayitIslemleri\HizmetKaydiOku.cd" />
+    <None Include="Docs\HizmetKayitIslemleri\HizmetKayit.cd" />
+    <None Include="Docs\RaporIslemleri\IlacRaporDuzelt.cd" />
+    <None Include="Docs\RaporIslemleri\RaporBilgisiBul.cd" />
+    <None Include="Docs\RaporIslemleri\RaporBilgisiBulRaporTakipNodan.cd" />
+    <None Include="Docs\RaporIslemleri\RaporBilgisiBulTCKimlikNodan.cd" />
+    <None Include="Docs\RaporIslemleri\RaporBilgisiKaydet.cd" />
+    <None Include="Docs\RaporIslemleri\RaporBilgisiSil.cd" />
+    <None Include="Docs\RaporIslemleri\RaporUzat.cd" />
+    <None Include="Docs\RaporIslemleri\TakipNoIleRaporBilgisiKaydet.cd" />
+    <None Include="Docs\YardimciIslemler\DoktorAra.cd" />
+    <None Include="Docs\YardimciIslemler\getOrneklenmisTakipler.cd" />
+    <None Include="Docs\YardimciIslemler\IlacAra.cd" />
+    <None Include="Docs\YardimciIslemler\kesintiYapilmisIslemler.cd" />
+    <None Include="Docs\YardimciIslemler\SaglikTesisiAra.cd" />
+    <None Include="Docs\YardimciIslemler\TakipAra.cd" />
+    <None Include="Service References\FaturaKayitIslemleri\FaturaKayitIslemleri.wsdl" />
+    <None Include="Service References\FaturaKayitIslemleri\Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FaturaKayitIslemleri\Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaIptalCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FaturaKayitIslemleri\Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaOkuCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\HastaKabulIslemleri\HastaKabulIslemleri.wsdl" />
     <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.BasvuruTakipOkuCevapDVO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -80,9 +139,61 @@
     <None Include="Service References\HastaKabulIslemleri\Naz.Hastane.Medula.HastaKabulIslemleri.TakipSilCevapDVO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\HizmetKayitIslemleri\HizmetKayitIslemleri.wsdl" />
+    <None Include="Service References\HizmetKayitIslemleri\Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetIptalCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HizmetKayitIslemleri\Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetKayitCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HizmetKayitIslemleri\Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetOkuCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RaporIslemleri\Naz.Hastane.Medula.RaporIslemleri.RaporCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RaporIslemleri\Naz.Hastane.Medula.RaporIslemleri.RaporCevapTCKimlikNodanDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RaporIslemleri\Naz.Hastane.Medula.RaporIslemleri.RaporUzatCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RaporIslemleri\RaporIslemleri.wsdl" />
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.DoktorAraCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.EtkinMaddeOkuCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.EtkinMaddeSUTCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.EvrakKesintiCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.IlacAraCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.OrneklenmisCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.SaglikTesisiAraCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.TakipAraCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.TeshisOkuCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YardimciIslemler\YardimciIslemler.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FaturaKayitIslemleri\" />
     <WCFMetadataStorage Include="Service References\HastaKabulIslemleri\" />
+    <WCFMetadataStorage Include="Service References\HizmetKayitIslemleri\" />
+    <WCFMetadataStorage Include="Service References\RaporIslemleri\" />
+    <WCFMetadataStorage Include="Service References\YardimciIslemler\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\HastaKabulIslemleri\configuration91.svcinfo" />
@@ -95,6 +206,36 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Docs\HastaKabulIslemleri\HastaKabul.txt" />
+    <None Include="Service References\YardimciIslemler\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\YardimciIslemler\configuration.svcinfo" />
+    <None Include="Service References\YardimciIslemler\configuration91.svcinfo" />
+    <None Include="Service References\RaporIslemleri\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RaporIslemleri\configuration.svcinfo" />
+    <None Include="Service References\RaporIslemleri\configuration91.svcinfo" />
+    <None Include="Service References\FaturaKayitIslemleri\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FaturaKayitIslemleri\configuration.svcinfo" />
+    <None Include="Service References\FaturaKayitIslemleri\configuration91.svcinfo" />
+    <None Include="Service References\HizmetKayitIslemleri\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HizmetKayitIslemleri\configuration.svcinfo" />
+    <None Include="Service References\HizmetKayitIslemleri\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\RaporIslemleri\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetKayitGirisDVO">
+    <Position X="5.5" Y="1.25" Width="4" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AGAAEABSDCQAhAAAEAMAACEAgCCAAAQAAAUEAANBgAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="muayeneBilgisi" />
+      <Property Name="ameliyatveGirisimBilgileri" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="hastaYatisBilgileri" />
+      <Property Name="digerIslemBilgileri" />
+      <Property Name="disBilgileri" />
+      <Property Name="ilacBilgileri" />
+      <Property Name="konsultasyonBilgileri" />
+      <Property Name="malzemeBilgileri" />
+      <Property Name="tahlilBilgileri" />
+      <Property Name="tanilar" />
+      <Property Name="tetkikveRadyolojiBilgileri" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HizmetKayitCevapDVO">
+    <Position X="0.75" Y="7.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAASACRAECAAEAAAACAAgAQAICAAAIMAAAAAAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="hataliKayitlar" />
+      <Property Name="islemBilgileri" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.DigerIslemBilgisiDVO" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AFQAAACGAAAAACAAQAAAAEAgkCCAAAAgAAQABhEgAAE=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.DisBilgisiDVO" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>C1YACMCGAAQCACBARAAEAMGgnKAAUAEgAgUABhkwAJA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HastaYatisBilgisiDVO" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEQAAACGAAAAAAAAAAwAAEAgkiACACAgAAQABgAgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.IlacBilgisiDVO" Collapsed="true">
+    <Position X="12" Y="3.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gNAAgAACAAABACAAQAgAAEAAkAAAAAAoGAAAAgEgABA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.KonsultasyonBilgisiDVO" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAACGAAAAAAAAQAAAAEAgkCAAAAAgAAQABgEgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.MalzemeBilgisiDVO" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AFAEgQACAAgAACAAQQgAAEAAkAEAAACgGCAAAgEhABA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.MuayeneBilgisiDVO" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAQAACGAAAAAAAAAAAAAEAgkCAAAAAgAAQABgAgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.TahlilBilgisiDVO" Collapsed="true">
+    <Position X="12" Y="4.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AFAAAACGAAAAACAAQAAAAEAgkCAAAAAgAAQABsEgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.TaniBilgisiDVO" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAACAAQAAAAIAAAAAEAAkAAAAABgAIAQAgAgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.HataliIslemBilgisiDVO" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAACAAAAAAAAAAAAAAAAgAAgBAAgAAAAAgUAACA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="oncekiIslemBilgisi" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.KayitliIslemBilgisiDVO" Collapsed="true">
+    <Position X="5" Y="10.5" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAACAAAAAAAAAAAAAAAAkAAAAAAgAAAAAgAAAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.OncekiIslemBilgisiDVO" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAUAAAAAAAgAAAAAAAABAAAGUAAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.AmeliyatveGirisimBilgisiDVO" Collapsed="true">
+    <Position X="12" Y="2.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gFQAAACGAAAAACAAQAwAAEAokCAAAAAwAAQABhEgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.HizmetKayitIslemleri.TetkikveRadyolojiBilgisiDVO" Collapsed="true">
+    <Position X="0.5" Y="5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gFQAAACmAAAAACEAQAgAAEAgkCAAAAAgAASABhEgAAA=</HashCode>
+      <FileName>Service References\HizmetKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

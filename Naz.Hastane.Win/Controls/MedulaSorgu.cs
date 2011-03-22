@@ -18,7 +18,6 @@ namespace Naz.Hastane.Win.Controls
     public partial class MedulaSorgu : DevExpress.XtraEditors.XtraUserControl
     {
         public delegate void MedulaHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e);
-
         public event MedulaHastaKabulCompleted OnMedulaHastaKabulCompleted;
 
         private HastaKabulIslemleriClient hki;
@@ -61,7 +60,7 @@ namespace Naz.Hastane.Win.Controls
 
             hki.ClientCredentials.UserName.UserName = "10343154";
             hki.ClientCredentials.UserName.Password = "19031903";
-            //hki.ClientCredentials.UserName.Password = "123456";
+            //hki.ClientCredentials.UserName.Password = "123456"; for Test site
 
             hki.hastaKabulCompleted += new EventHandler<hastaKabulCompletedEventArgs>(OnHastaKabulCompleted);
             
@@ -80,7 +79,6 @@ namespace Naz.Hastane.Win.Controls
             pgd.tedaviTuru = lueTreatmentStyle.EditValue.ToString();
             pgd.yakinlikKodu = lueRelationType.EditValue.ToString();
             pgd.yatisBitisTarihi = "";
-            //pgd.yeniDoganBilgisi = new YeniDoganBilgisiDVO();
 
             this.lblStatus.Text = "Medula Sorgusu Yapılıyor...";
             hki.hastaKabulAsync(pgd);

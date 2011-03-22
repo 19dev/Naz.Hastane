@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaOkuGirisDVO">
+    <Position X="0.5" Y="0.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAABACACAAAAAAEAAAACAAgAAAAIAgAAAABAAAAAA=</HashCode>
+      <FileName>Service References\FaturaKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaOkuCevapDVO">
+    <Position X="4.25" Y="0.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAhAARACQABAAAAAAAAAACAAgAACIKAgAIAABAAAAAA=</HashCode>
+      <FileName>Service References\FaturaKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="faturaDetaylari" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.FaturaKayitIslemleri.FaturaCevapDetayDVO">
+    <Position X="9" Y="0.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAgQCAAAIAAAAIAgABKAAoAAAAAAAAAEAAIAAAAA=</HashCode>
+      <FileName>Service References\FaturaKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="islemDetaylari" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naz.Hastane.Medula.FaturaKayitIslemleri.IslemDetayDVO">
+    <Position X="13" Y="0.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AFAEAAACAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\FaturaKayitIslemleri\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

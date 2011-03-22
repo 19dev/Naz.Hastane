@@ -165,20 +165,25 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbPoliklinik_Click(object sender, EventArgs e)
         {
-            //frmMain frm = (frmMain)(this.MdiParent);
-            //frm.ShowNewDocument<SelectPolyclinicForm>();
-
             SelectPolyclinicForm frm = new SelectPolyclinicForm();
             frm.ShowDialog();
-            if (frm.IsSelected)
+            if (frm.IsSelected && frm.Doctor != null)
+                ProcessNewPolyclinic(frm.Doctor);
+        }
+
+        private void ProcessNewPolyclinic(Doctor doctor)
+        {
+            if (_IsWaitingForPolyclinic)
             {
-                if (_IsWaitingForPolyclinic)
-                {
-                    // Should cancel the previous request?
-                }
+                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
+                // Should cancel the previous request?
+            }
+            else
+            {
                 _IsWaitingForPolyclinic = true;
-                _Doctor = frm.Doctor;
+                _Doctor = doctor;
                 CallMedulaProvision();
+                PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
             }
 
         }
@@ -197,9 +202,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (this._Doctor == null)
                 return;
-
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
-
             this.medulaSorgu.CallMedula(this.teTCKimlikNo.Text);
         }
 

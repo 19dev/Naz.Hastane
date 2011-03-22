@@ -101,15 +101,16 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(2131, -190, 392, 564);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(195, 294);
+            this.layoutControl1.Size = new System.Drawing.Size(212, 322);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // lblStatus
             // 
+            this.lblStatus.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.lblStatus.Location = new System.Drawing.Point(2, 266);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(191, 13);
+            this.lblStatus.Size = new System.Drawing.Size(208, 54);
             this.lblStatus.StyleController = this.layoutControl1;
             this.lblStatus.TabIndex = 19;
             // 
@@ -117,7 +118,7 @@
             // 
             this.tePatientApplicationNo.Location = new System.Drawing.Point(92, 242);
             this.tePatientApplicationNo.Name = "tePatientApplicationNo";
-            this.tePatientApplicationNo.Size = new System.Drawing.Size(101, 20);
+            this.tePatientApplicationNo.Size = new System.Drawing.Size(118, 20);
             this.tePatientApplicationNo.StyleController = this.layoutControl1;
             this.tePatientApplicationNo.TabIndex = 18;
             // 
@@ -125,7 +126,7 @@
             // 
             this.teFollowUpNo.Location = new System.Drawing.Point(92, 218);
             this.teFollowUpNo.Name = "teFollowUpNo";
-            this.teFollowUpNo.Size = new System.Drawing.Size(101, 20);
+            this.teFollowUpNo.Size = new System.Drawing.Size(118, 20);
             this.teFollowUpNo.StyleController = this.layoutControl1;
             this.teFollowUpNo.TabIndex = 17;
             // 
@@ -133,7 +134,7 @@
             // 
             this.teRelatedFollowUpNo.Location = new System.Drawing.Point(92, 194);
             this.teRelatedFollowUpNo.Name = "teRelatedFollowUpNo";
-            this.teRelatedFollowUpNo.Size = new System.Drawing.Size(101, 20);
+            this.teRelatedFollowUpNo.Size = new System.Drawing.Size(118, 20);
             this.teRelatedFollowUpNo.StyleController = this.layoutControl1;
             this.teRelatedFollowUpNo.TabIndex = 16;
             // 
@@ -149,7 +150,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueTransferorInstitution.Properties.DisplayMember = "Value";
             this.lueTransferorInstitution.Properties.ValueMember = "Code";
-            this.lueTransferorInstitution.Size = new System.Drawing.Size(101, 20);
+            this.lueTransferorInstitution.Size = new System.Drawing.Size(118, 20);
             this.lueTransferorInstitution.StyleController = this.layoutControl1;
             this.lueTransferorInstitution.TabIndex = 15;
             // 
@@ -165,7 +166,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueInsuranceType.Properties.DisplayMember = "Value";
             this.lueInsuranceType.Properties.ValueMember = "ID";
-            this.lueInsuranceType.Size = new System.Drawing.Size(101, 20);
+            this.lueInsuranceType.Size = new System.Drawing.Size(118, 20);
             this.lueInsuranceType.StyleController = this.layoutControl1;
             this.lueInsuranceType.TabIndex = 14;
             // 
@@ -181,7 +182,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueProvisionType.Properties.DisplayMember = "Value";
             this.lueProvisionType.Properties.ValueMember = "Code";
-            this.lueProvisionType.Size = new System.Drawing.Size(101, 20);
+            this.lueProvisionType.Size = new System.Drawing.Size(118, 20);
             this.lueProvisionType.StyleController = this.layoutControl1;
             this.lueProvisionType.TabIndex = 13;
             // 
@@ -197,7 +198,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueTreatmentStyle.Properties.DisplayMember = "Value";
             this.lueTreatmentStyle.Properties.ValueMember = "Code";
-            this.lueTreatmentStyle.Size = new System.Drawing.Size(101, 20);
+            this.lueTreatmentStyle.Size = new System.Drawing.Size(118, 20);
             this.lueTreatmentStyle.StyleController = this.layoutControl1;
             this.lueTreatmentStyle.TabIndex = 12;
             // 
@@ -213,7 +214,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueFollowUpType.Properties.DisplayMember = "Value";
             this.lueFollowUpType.Properties.ValueMember = "Code";
-            this.lueFollowUpType.Size = new System.Drawing.Size(101, 20);
+            this.lueFollowUpType.Size = new System.Drawing.Size(118, 20);
             this.lueFollowUpType.StyleController = this.layoutControl1;
             this.lueFollowUpType.TabIndex = 11;
             // 
@@ -229,7 +230,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueRelationType.Properties.DisplayMember = "Value";
             this.lueRelationType.Properties.ValueMember = "Code";
-            this.lueRelationType.Size = new System.Drawing.Size(101, 20);
+            this.lueRelationType.Size = new System.Drawing.Size(118, 20);
             this.lueRelationType.StyleController = this.layoutControl1;
             this.lueRelationType.TabIndex = 10;
             // 
@@ -245,7 +246,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueTreatmentType.Properties.DisplayMember = "Value";
             this.lueTreatmentType.Properties.ValueMember = "Code";
-            this.lueTreatmentType.Size = new System.Drawing.Size(101, 20);
+            this.lueTreatmentType.Size = new System.Drawing.Size(118, 20);
             this.lueTreatmentType.StyleController = this.layoutControl1;
             this.lueTreatmentType.TabIndex = 9;
             // 
@@ -261,7 +262,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueBranchCode.Properties.DisplayMember = "Value";
             this.lueBranchCode.Properties.ValueMember = "Code";
-            this.lueBranchCode.Size = new System.Drawing.Size(101, 20);
+            this.lueBranchCode.Size = new System.Drawing.Size(118, 20);
             this.lueBranchCode.StyleController = this.layoutControl1;
             this.lueBranchCode.TabIndex = 8;
             // 
@@ -286,7 +287,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(195, 294);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(212, 322);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
@@ -297,7 +298,7 @@
             this.lciBranchCode.CustomizationFormText = "Branş Kodu";
             this.lciBranchCode.Location = new System.Drawing.Point(0, 72);
             this.lciBranchCode.Name = "lciBranchCode";
-            this.lciBranchCode.Size = new System.Drawing.Size(195, 24);
+            this.lciBranchCode.Size = new System.Drawing.Size(212, 24);
             this.lciBranchCode.Text = "Branş Kodu";
             this.lciBranchCode.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -307,7 +308,7 @@
             this.lciTreatmentType.CustomizationFormText = "Tedavi Tipi";
             this.lciTreatmentType.Location = new System.Drawing.Point(0, 96);
             this.lciTreatmentType.Name = "lciTreatmentType";
-            this.lciTreatmentType.Size = new System.Drawing.Size(195, 24);
+            this.lciTreatmentType.Size = new System.Drawing.Size(212, 24);
             this.lciTreatmentType.Text = "Tedavi Tipi";
             this.lciTreatmentType.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -317,7 +318,7 @@
             this.lciRelationType.CustomizationFormText = "Yakınlık Kodu";
             this.lciRelationType.Location = new System.Drawing.Point(0, 120);
             this.lciRelationType.Name = "lciRelationType";
-            this.lciRelationType.Size = new System.Drawing.Size(195, 24);
+            this.lciRelationType.Size = new System.Drawing.Size(212, 24);
             this.lciRelationType.Text = "Yakınlık Kodu";
             this.lciRelationType.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -327,7 +328,7 @@
             this.lciFollowUpType.CustomizationFormText = "Takip Tipi";
             this.lciFollowUpType.Location = new System.Drawing.Point(0, 144);
             this.lciFollowUpType.Name = "lciFollowUpType";
-            this.lciFollowUpType.Size = new System.Drawing.Size(195, 24);
+            this.lciFollowUpType.Size = new System.Drawing.Size(212, 24);
             this.lciFollowUpType.Text = "Takip Tipi";
             this.lciFollowUpType.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -337,7 +338,7 @@
             this.lciTreatmentStyle.CustomizationFormText = "Tedavi Türü";
             this.lciTreatmentStyle.Location = new System.Drawing.Point(0, 168);
             this.lciTreatmentStyle.Name = "lciTreatmentStyle";
-            this.lciTreatmentStyle.Size = new System.Drawing.Size(195, 24);
+            this.lciTreatmentStyle.Size = new System.Drawing.Size(212, 24);
             this.lciTreatmentStyle.Text = "Tedavi Türü";
             this.lciTreatmentStyle.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -347,7 +348,7 @@
             this.lciProvisionType.CustomizationFormText = "Provizyon Türü";
             this.lciProvisionType.Location = new System.Drawing.Point(0, 0);
             this.lciProvisionType.Name = "lciProvisionType";
-            this.lciProvisionType.Size = new System.Drawing.Size(195, 24);
+            this.lciProvisionType.Size = new System.Drawing.Size(212, 24);
             this.lciProvisionType.Text = "Provizyon Türü";
             this.lciProvisionType.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -357,7 +358,7 @@
             this.lciInsuranceType.CustomizationFormText = "Sigortalı Türü";
             this.lciInsuranceType.Location = new System.Drawing.Point(0, 24);
             this.lciInsuranceType.Name = "lciInsuranceType";
-            this.lciInsuranceType.Size = new System.Drawing.Size(195, 24);
+            this.lciInsuranceType.Size = new System.Drawing.Size(212, 24);
             this.lciInsuranceType.Text = "Sigortalı Türü";
             this.lciInsuranceType.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -367,7 +368,7 @@
             this.lciTransferorInstitution.CustomizationFormText = "Devreden Kurum";
             this.lciTransferorInstitution.Location = new System.Drawing.Point(0, 48);
             this.lciTransferorInstitution.Name = "lciTransferorInstitution";
-            this.lciTransferorInstitution.Size = new System.Drawing.Size(195, 24);
+            this.lciTransferorInstitution.Size = new System.Drawing.Size(212, 24);
             this.lciTransferorInstitution.Text = "Devreden Kurum";
             this.lciTransferorInstitution.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -377,7 +378,7 @@
             this.lciRelatedFollowUpNo.CustomizationFormText = "İlişkili Takip No";
             this.lciRelatedFollowUpNo.Location = new System.Drawing.Point(0, 192);
             this.lciRelatedFollowUpNo.Name = "lciRelatedFollowUpNo";
-            this.lciRelatedFollowUpNo.Size = new System.Drawing.Size(195, 24);
+            this.lciRelatedFollowUpNo.Size = new System.Drawing.Size(212, 24);
             this.lciRelatedFollowUpNo.Text = "İlişkili Takip No";
             this.lciRelatedFollowUpNo.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -387,7 +388,7 @@
             this.lciFollowUpNo.CustomizationFormText = "Takip No";
             this.lciFollowUpNo.Location = new System.Drawing.Point(0, 216);
             this.lciFollowUpNo.Name = "lciFollowUpNo";
-            this.lciFollowUpNo.Size = new System.Drawing.Size(195, 24);
+            this.lciFollowUpNo.Size = new System.Drawing.Size(212, 24);
             this.lciFollowUpNo.Text = "Takip No";
             this.lciFollowUpNo.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -397,7 +398,7 @@
             this.lciPatientApplicationNo.CustomizationFormText = "Hasta Başvuru No";
             this.lciPatientApplicationNo.Location = new System.Drawing.Point(0, 240);
             this.lciPatientApplicationNo.Name = "lciPatientApplicationNo";
-            this.lciPatientApplicationNo.Size = new System.Drawing.Size(195, 24);
+            this.lciPatientApplicationNo.Size = new System.Drawing.Size(212, 24);
             this.lciPatientApplicationNo.Text = "Hasta Başvuru No";
             this.lciPatientApplicationNo.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -407,7 +408,7 @@
             this.lciStatus.CustomizationFormText = "lciStatus";
             this.lciStatus.Location = new System.Drawing.Point(0, 264);
             this.lciStatus.Name = "lciStatus";
-            this.lciStatus.Size = new System.Drawing.Size(195, 30);
+            this.lciStatus.Size = new System.Drawing.Size(212, 58);
             this.lciStatus.Text = "lciStatus";
             this.lciStatus.TextSize = new System.Drawing.Size(0, 0);
             this.lciStatus.TextToControlDistance = 0;
@@ -419,7 +420,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "MedulaSorgu";
-            this.Size = new System.Drawing.Size(195, 294);
+            this.Size = new System.Drawing.Size(212, 322);
             this.Load += new System.EventHandler(this.MedulaSorgu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
