@@ -39,7 +39,7 @@ namespace Naz.Hastane.Win.Controls
         {
             if (!DesignMode)
             {
-                this.lueBranchCode.Properties.DataSource = LookUpServices.ProvisionTypes;
+                this.lueBranchCode.Properties.DataSource = LookUpServices.BranchCodes;
                 this.lueFollowUpType.Properties.DataSource = LookUpServices.FollowUpTypes;
                 this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
                 this.lueProvisionType.Properties.DataSource = LookUpServices.ProvisionTypes;
@@ -62,8 +62,6 @@ namespace Naz.Hastane.Win.Controls
             hki.ClientCredentials.UserName.UserName = "10343154";
             hki.ClientCredentials.UserName.Password = "19031903";
             //hki.ClientCredentials.UserName.Password = "123456";
-            //hki.ClientCredentials.HttpDigest.ClientCredential = new System.Net.NetworkCredential("10343154", "19031903");
-            //hki.ClientCredentials.HttpDigest.AllowedImpersonationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation;
 
             hki.hastaKabulCompleted += new EventHandler<hastaKabulCompletedEventArgs>(OnHastaKabulCompleted);
             

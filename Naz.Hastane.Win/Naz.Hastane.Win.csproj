@@ -349,6 +349,9 @@
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Docs\PrinterCodes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>

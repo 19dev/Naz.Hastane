@@ -957,5 +957,10 @@ namespace Naz.Hastane.Win {
             ShowNewDocument<AccountingDailySummaryForm>();
         }
 
+        private void iBranchCodes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<BranchCode>(LookUpServices.BranchCodes, e.Item.Caption);
+        }
+
     }
 }

@@ -200,13 +200,12 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
 
-            //PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
             this.medulaSorgu.CallMedula(this.teTCKimlikNo.Text);
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)
         {
-            MessageBox.Show(e.Result.sonucKodu + ": " + e.Result.sonucMesaji, "Medula Sorgu Sonucu");
+            //MessageBox.Show(e.Result.sonucKodu + ": " + e.Result.sonucMesaji, "Medula Sorgu Sonucu");
             if (_IsWaitingForPolyclinic)
             {
                 _IsWaitingForPolyclinic = false;
@@ -215,30 +214,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-//        private void button1_Click(object sender, EventArgs e) {
-//    ReportPrintTool pt = new ReportPrintTool(new XtraReport1());
-//    pt.PrintingSystem.StartPrint += 
-//        new PrintDocumentEventHandler(printingSystem_StartPrint);
-//    pt.PrintDialog();
-//}
-
-//        private void printingSystem_StartPrint(object sender, PrintDocumentEventArgs e) {
-//            for (int i = 0; i < e.PrintDocument.PrinterSettings.PaperSources.Count; i++)
-//                if (e.PrintDocument.PrinterSettings.PaperSources[i].Kind == 
-//                    PaperSourceKind.TractorFeed) {
-//                    e.PrintDocument.DefaultPageSettings.PaperSource = 
-//                        e.PrintDocument.PrinterSettings.PaperSources[i];
-//                    break;
-//                }
-
-//            for (int i = 0; i < e.PrintDocument.PrinterSettings.PrinterResolutions.Count; i++)
-//                if (e.PrintDocument.PrinterSettings.PrinterResolutions[i].Kind == 
-//                    PrinterResolutionKind.High) {
-//                    e.PrintDocument.DefaultPageSettings.PrinterResolution = 
-//                        e.PrintDocument.PrinterSettings.PrinterResolutions[i];
-//                    break;
-//                }
-//        }
 
     }
 }

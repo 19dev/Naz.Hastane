@@ -43,6 +43,7 @@ namespace Naz.Hastane.Data.Services
         private static List<VAT> vats;
         private static List<Warehouse> warehouses;
 
+        private static List<BranchCode> branchCodes;
         private static List<FollowUpType> followUpTypes;
         private static List<InsuranceType> insuranceTypes;
         private static List<ProvisionType> provisionTypes;
@@ -105,6 +106,9 @@ namespace Naz.Hastane.Data.Services
         { get { return LookUpTable<Warehouse>(ref warehouses); } }
 
         #region Medula LookUp Tables
+        public static List<BranchCode> BranchCodes
+        { get { return LookUpTable<BranchCode>(ref branchCodes); } }
+
         public static List<FollowUpType> FollowUpTypes
         { get { return LookUpTable<FollowUpType>(ref followUpTypes); } }
 

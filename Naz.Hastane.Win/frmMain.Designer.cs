@@ -134,6 +134,7 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.iBranchCodes = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -371,10 +372,11 @@ namespace Naz.Hastane.Win {
             this.iTreatmentStyle,
             this.iTreatmentType,
             this.iPrinterSettings,
-            this.iAccDailyReport});
+            this.iAccDailyReport,
+            this.iBranchCodes});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 196;
+            this.ribbonControl1.MaxItemId = 199;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -391,7 +393,7 @@ namespace Naz.Hastane.Win {
             this.riicStyle});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.SelectedPage = this.ribbonPage1;
-            this.ribbonControl1.Size = new System.Drawing.Size(892, 149);
+            this.ribbonControl1.Size = new System.Drawing.Size(1274, 149);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iSakla);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iReplace, true);
@@ -1245,6 +1247,7 @@ namespace Naz.Hastane.Win {
             this.rpgDefinitions.ItemLinks.Add(this.iTransferorIns);
             this.rpgDefinitions.ItemLinks.Add(this.iTreatmentStyle);
             this.rpgDefinitions.ItemLinks.Add(this.iTreatmentType);
+            this.rpgDefinitions.ItemLinks.Add(this.iBranchCodes);
             this.rpgDefinitions.Name = "rpgDefinitions";
             this.rpgDefinitions.Text = "Tanýmlar";
             // 
@@ -1342,10 +1345,10 @@ namespace Naz.Hastane.Win {
             this.ribbonStatusBar1.ItemLinks.Add(this.siPosition);
             this.ribbonStatusBar1.ItemLinks.Add(this.siModified, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.siDocName, true);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 576);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 754);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(892, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1274, 23);
             // 
             // pmNew
             // 
@@ -1381,10 +1384,17 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
+            // iBranchCodes
+            // 
+            this.iBranchCodes.Caption = "Branþ Kodlarý";
+            this.iBranchCodes.Id = 198;
+            this.iBranchCodes.Name = "iBranchCodes";
+            this.iBranchCodes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iBranchCodes_ItemClick);
+            // 
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
-            this.ClientSize = new System.Drawing.Size(892, 599);
+            this.ClientSize = new System.Drawing.Size(1274, 777);
             this.Controls.Add(this.pccBottom);
             this.Controls.Add(this.pccAppMenu);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -1532,6 +1542,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iTreatmentType;
         private DevExpress.XtraBars.BarButtonItem iPrinterSettings;
         private DevExpress.XtraBars.BarButtonItem iAccDailyReport;
+        private DevExpress.XtraBars.BarButtonItem iBranchCodes;
 
     }
 }

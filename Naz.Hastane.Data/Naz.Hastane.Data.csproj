@@ -87,6 +87,7 @@
     <Compile Include="Entities\LookUp\Doctor.cs" />
     <Compile Include="Entities\LookUp\City.cs" />
     <Compile Include="Entities\LookUp\IDType.cs" />
+    <Compile Include="Entities\LookUp\Medula\BranchCode.cs" />
     <Compile Include="Entities\LookUp\Medula\FollowUpType.cs" />
     <Compile Include="Entities\LookUp\FunctionGroup.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompany.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Mappings\LookUp\DoctorMap.cs" />
     <Compile Include="Mappings\LookUp\CityMap.cs" />
     <Compile Include="Mappings\LookUp\IDTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Medula\BranchCodeMap.cs" />
     <Compile Include="Mappings\LookUp\Medula\FollowUpTypeMap.cs" />
     <Compile Include="Mappings\LookUp\FunctionGroupMap.cs" />
     <Compile Include="Mappings\LookUp\FunctionGroupTypeMap.cs" />
@@ -194,7 +196,8 @@
     <None Include="App.Config" />
     <None Include="Design\Doctor.cd" />
     <None Include="Design\InsuranceCompany.cd" />
-    <None Include="Design\LookUp.cd" />
+    <None Include="Design\LookUpBase.cd" />
+    <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
     <None Include="Design\Product.cd" />
     <None Include="Docs\TipdataTables.xlsx" />
