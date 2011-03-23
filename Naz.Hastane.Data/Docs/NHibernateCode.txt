@@ -101,3 +101,84 @@ if (ss[0] != null)
     id = Convert.ToInt32(ss[0].ToString());
 id -= 1;
 return id.ToString();
+
+
+var catDetails =
+    session.QueryOver<Cat>()
+        .Select(
+            c => c.Name,
+            c => c.Age)
+        .List<object[]>()
+        .Select(properties => new {
+            CatName = (string)properties[0],
+            CatAge = (int)properties[1],
+            });
+            
+Console.WriteLine(catDetails[0].CatName);
+Console.WriteLine(catDetails[0].CatAge);
+
+If I have a QueryOver like this: 
+var result = Session.QueryOver<Parent>().JoinQueryOver(p => 
+p.Child).SelectList(list => list.SelectGroup(p => p.Child.Property)); 
+
+I get an error 'could not resolve property: Child.Property of: Parent'. 
+However, if I rewrite it to look like this: 
+
+var result = Session.QueryOver<Parent>().JoinQueryOver(p => p.Child, () => 
+childAlias).SelectList(list => list.SelectGroup(childAlias.Property)); 
+It works fine. How would I do this without the alias? 
+
+Approach one:
+
+Session.QueryOver<Foo>().Fetch(x => x.A).Fetch(x => x.A.B).Fetch(x => x.A.B.C)
+Approach two:
+
+A a = null;
+B b = null;
+C c = null;
+
+Session.QueryOver<Foo>()
+    .JoinAlias(x => x.A, () => a)
+    .JoinAlias(() => a.B, () => b)
+    .JoinAlias(() => b.C, () => c)
+Both work (altough I'm not exactly sure if one of them generated "inner" and the other one "outer" joins).
+
+
+    Client clientAlias = null;
+
+    var query = Session.QueryOver<Client>(() => clientAlias)
+
+        .Select(
+            Projections.Distinct(
+                Projections.ProjectionList()
+                    .Add(Projections.Property<Client>(x => x.Id).As("Id"))
+                    .Add(Projections.Property<Client>(x => x.Name).As("Name"))
+                    .Add(Projections.Property<Client>(x => x.Surname).As("Surname"))
+                    .Add(Projections.Property<Client>(x => x.GivenName).As("GivenName"))
+                    .Add(Projections.Property<Client>(x => x.EmailAddress).As("EmailAddress"))
+                    .Add(Projections.Property<Client>(x => x.MobilePhone).As("MobilePhone"))
+            )
+        )
+        .TransformUsing(Transformers.AliasToBean<Client>())
+
+        .OrderBy(() => clientAlias.Surname).Asc
+        .ThenBy(() => clientAlias.GivenName).Asc;
+
+    var count = query
+        .ToRowCountQuery()
+        .FutureValue<int>();
+
+    return query
+        .Take(pageSize)
+        .Skip(Pagination.FirstResult(pageIndex, pageSize))
+        .List<Client>()
+        .ToPagedList(pageIndex, pageSize, count.Value);
+}
+
+
+var moviesOnCDs = 
+    s.QueryOver<MovieOnCd>() 
+        .Select(Projections.Distinct(Projections.Property<MovieOnCd>(moc => 
+moc.Movie))) 
+        .List<int>(); 
+

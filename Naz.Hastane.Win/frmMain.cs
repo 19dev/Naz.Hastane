@@ -962,5 +962,10 @@ namespace Naz.Hastane.Win {
             ShowNewLookUpForm<BranchCode>(LookUpServices.BranchCodes, e.Item.Caption);
         }
 
+        private void iSGKInvoiceVoucher_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewDocument<SGKInvoiveVoucherForm>();
+        }
+
     }
 }

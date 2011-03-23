@@ -303,5 +303,88 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
 
+        public static IList<Patient> GetPatientsForInvoice()
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                IList<Patient> result = session.QueryOver<Patient>()
+                    .JoinQueryOver<PatientVisit>(x => x.PatientVisits)
+                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
+                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
+                        .And(d => d.ADET != 0)
+                        .And(d => d.SATISF != 0)
+                        .And(d => d.TARIH >= new DateTime(2011, 3, 1))
+                    .List<Patient>().Distinct<Patient>().ToList<Patient>();
+                return result;
+            }
+        }
+
+        public static IList<object[]> GetPatientVisitsForInvoice()
+        {
+            Patient patient = null;
+
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                var result = (List<object[]>)session.QueryOver<PatientVisit>()
+                    .Fetch(x => x.Patient).Eager
+                    .JoinAlias(x => x.Patient, () => patient)
+                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
+                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
+                        .And(d => d.ADET != 0)
+                        .And(d => d.SATISF != 0)
+                        .And(d => d.TARIH >= new DateTime(2011, 3, 1))
+                    .SelectList(list => list
+                        .Select(() => patient.FirstName)
+                        .Select(() => patient.LastName)
+                        .Select(x => x.VisitNo)
+                        .Select(x => x.VisitDate)
+                        .Select(x => x.ExitDate)
+                        .Select(x => x.PatientTotal))
+                    //.Select(x => x.Patient.FirstName,
+                    //        x => x.Patient.LastName,
+                    //        x => x.VisitNo,
+                    //        x => x.VisitDate,
+                    //        x => x.ExitDate,
+                    //        x => x.PatientTotal)
+                    .List<object[]>()
+                    .Select(properties => new {
+                        PatientFirstName = (string)properties[0],
+                        PatientLastName = (string)properties[1],
+                        VisitNo = (string)properties[2],
+                        VisitDate = (DateTime?)properties[3],
+                        ExitDate = (DateTime?)properties[4],
+                        PatientTotal = (double)properties[5],
+                    });
+                return result;
+            }
+        }
+
+        public static IList<PatientVisit> GetPatientVisitsForInvoice(Patient patient)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                IList<PatientVisit> result = session.QueryOver<PatientVisit>()
+                    .Where(x => x.Patient == patient)
+                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
+                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
+                        .And(d => d.ADET != 0)
+                        .And(d => d.SATISF != 0)
+                    .List().Distinct().ToList();
+                return result;
+            }
+        }
+
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(PatientVisit pv)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                IList<PatientVisitDetail> result = session.QueryOver<PatientVisitDetail>()
+                    .Where(d => d.PatientVisit == pv && d.MAKNO == null && d.AMAKNO == null)
+                    .And(d => d.ADET != 0)
+                    .And(d => d.SATISF != 0)
+                    .List().Distinct().ToList();
+                return result;
+            }
+        }
     }
 }

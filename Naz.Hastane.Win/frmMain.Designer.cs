@@ -83,7 +83,7 @@ namespace Naz.Hastane.Win {
             this.iYeniSGKHastasi = new DevExpress.XtraBars.BarButtonItem();
             this.iSGKHastaAra = new DevExpress.XtraBars.BarButtonItem();
             this.iHastaAra = new DevExpress.XtraBars.BarButtonItem();
-            this.iRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.iSGKInvoiceVoucher = new DevExpress.XtraBars.BarButtonItem();
             this.iBloodType = new DevExpress.XtraBars.BarButtonItem();
             this.iCity = new DevExpress.XtraBars.BarButtonItem();
             this.iDoctor = new DevExpress.XtraBars.BarButtonItem();
@@ -107,6 +107,7 @@ namespace Naz.Hastane.Win {
             this.iTreatmentType = new DevExpress.XtraBars.BarButtonItem();
             this.iPrinterSettings = new DevExpress.XtraBars.BarButtonItem();
             this.iAccDailyReport = new DevExpress.XtraBars.BarButtonItem();
+            this.iBranchCodes = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -134,7 +135,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iBranchCodes = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -349,7 +349,7 @@ namespace Naz.Hastane.Win {
             this.iYeniSGKHastasi,
             this.iSGKHastaAra,
             this.iHastaAra,
-            this.iRapor,
+            this.iSGKInvoiceVoucher,
             this.iBloodType,
             this.iCity,
             this.iDoctor,
@@ -376,7 +376,7 @@ namespace Naz.Hastane.Win {
             this.iBranchCodes});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 199;
+            this.ribbonControl1.MaxItemId = 201;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -937,12 +937,13 @@ namespace Naz.Hastane.Win {
             this.iHastaAra.Name = "iHastaAra";
             this.iHastaAra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iHastaAra_ItemClick);
             // 
-            // iRapor
+            // iSGKInvoiceVoucher
             // 
-            this.iRapor.Caption = "Rapor";
-            this.iRapor.CategoryGuid = new System.Guid("0d511733-cea9-49de-8348-66c767e5e503");
-            this.iRapor.Id = 150;
-            this.iRapor.Name = "iRapor";
+            this.iSGKInvoiceVoucher.Caption = "SGK Fatura Makbuz";
+            this.iSGKInvoiceVoucher.CategoryGuid = new System.Guid("0d511733-cea9-49de-8348-66c767e5e503");
+            this.iSGKInvoiceVoucher.Id = 150;
+            this.iSGKInvoiceVoucher.Name = "iSGKInvoiceVoucher";
+            this.iSGKInvoiceVoucher.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGKInvoiceVoucher_ItemClick);
             // 
             // iBloodType
             // 
@@ -1104,6 +1105,13 @@ namespace Naz.Hastane.Win {
             this.iAccDailyReport.Name = "iAccDailyReport";
             this.iAccDailyReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAccDailyReport_ItemClick);
             // 
+            // iBranchCodes
+            // 
+            this.iBranchCodes.Caption = "Branþ Kodlarý";
+            this.iBranchCodes.Id = 198;
+            this.iBranchCodes.Name = "iBranchCodes";
+            this.iBranchCodes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iBranchCodes_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1193,7 +1201,7 @@ namespace Naz.Hastane.Win {
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ImageIndex = 2;
-            this.ribbonPageGroup2.ItemLinks.Add(this.iRapor);
+            this.ribbonPageGroup2.ItemLinks.Add(this.iSGKInvoiceVoucher);
             this.ribbonPageGroup2.ItemLinks.Add(this.iPrinterSettings);
             this.ribbonPageGroup2.ItemLinks.Add(this.iAccDailyReport);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -1384,13 +1392,6 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
-            // iBranchCodes
-            // 
-            this.iBranchCodes.Caption = "Branþ Kodlarý";
-            this.iBranchCodes.Id = 198;
-            this.iBranchCodes.Name = "iBranchCodes";
-            this.iBranchCodes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iBranchCodes_ItemClick);
-            // 
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
@@ -1517,7 +1518,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iSGKHastaAra;
         private DevExpress.XtraBars.BarButtonItem iHastaAra;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDosya;
-        private DevExpress.XtraBars.BarButtonItem iRapor;
+        private DevExpress.XtraBars.BarButtonItem iSGKInvoiceVoucher;
         private DevExpress.XtraBars.BarButtonItem iBloodType;
         private DevExpress.XtraBars.BarButtonItem iCity;
         private DevExpress.XtraBars.BarButtonItem iDoctor;
