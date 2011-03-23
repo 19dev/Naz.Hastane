@@ -319,42 +319,48 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static IList<object[]> GetPatientVisitsForInvoice()
+        public static IList<object> GetPatientVisitsForInvoice()
         {
             Patient patient = null;
+            PatientVisit pv = null;
+            PatientVisitDetail pvd = null;
 
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
-                var result = (List<object[]>)session.QueryOver<PatientVisit>()
-                    .Fetch(x => x.Patient).Eager
-                    .JoinAlias(x => x.Patient, () => patient)
-                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
-                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
+                var result = session.QueryOver<Patient>(() => patient)
+                    .JoinQueryOver<PatientVisit>(x => x.PatientVisits, () => pv)
+                    .JoinQueryOver<PatientVisitDetail>(() => pv.PatientVisitDetails, () => pvd)
+                        .Where(d => d.MAKNO == null)
+                        .And(d => d.AMAKNO == null)
                         .And(d => d.ADET != 0)
                         .And(d => d.SATISF != 0)
                         .And(d => d.TARIH >= new DateTime(2011, 3, 1))
+                    //.Select(Projections.ProjectionList()
+                    //.Add(Projections.Property(() => patient.FirstName), "First Name")
+                    //.Add(Projections.Property(() => patient.LastName), "LastName")
+                    //.Add(Projections.Property(() => pv.VisitNo), "VisitNo")
+                    //.Add(Projections.Property(() => pv.VisitDate), "VisitDate")
+                    //.Add(Projections.Property(() => pv.ExitDate), "ExitDate")
+                    //.Add(Projections.Property(() => pv.PatientTotal), "PatientTotal"))
                     .SelectList(list => list
                         .Select(() => patient.FirstName)
                         .Select(() => patient.LastName)
-                        .Select(x => x.VisitNo)
-                        .Select(x => x.VisitDate)
-                        .Select(x => x.ExitDate)
-                        .Select(x => x.PatientTotal))
-                    //.Select(x => x.Patient.FirstName,
-                    //        x => x.Patient.LastName,
-                    //        x => x.VisitNo,
-                    //        x => x.VisitDate,
-                    //        x => x.ExitDate,
-                    //        x => x.PatientTotal)
+                        .Select(() => pv.VisitNo)
+                        .Select(() => pv.VisitDate)
+                        .Select(() => pv.ExitDate)
+                        .Select(() => pv.PatientTotal))
                     .List<object[]>()
-                    .Select(properties => new {
-                        PatientFirstName = (string)properties[0],
-                        PatientLastName = (string)properties[1],
+                    .Select(properties => new
+                    {
+                        FirstName = (string)properties[0],
+                        LastName = (string)properties[1],
                         VisitNo = (string)properties[2],
                         VisitDate = (DateTime?)properties[3],
                         ExitDate = (DateTime?)properties[4],
-                        PatientTotal = (double)properties[5],
-                    });
+                        PatientTotal = (double)properties[5]
+                    })
+                    .Distinct()
+                    .ToList<object>();
                 return result;
             }
         }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcPatients = new DevExpress.XtraGrid.GridControl();
             this.gvPatients = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPatientNo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,8 +67,17 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisitDetails)).BeginInit();
@@ -86,10 +97,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.gcPatients);
             this.layoutControl1.Controls.Add(this.gcPatientVisitDetails);
             this.layoutControl1.Controls.Add(this.sbRefresh);
@@ -105,6 +118,28 @@
             this.layoutControl1.Size = new System.Drawing.Size(965, 685);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(12, 344);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(300, 329);
+            this.gridControl1.TabIndex = 11;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // gcPatients
             // 
@@ -154,12 +189,12 @@
             // 
             // gcPatientVisitDetails
             // 
-            this.gcPatientVisitDetails.Location = new System.Drawing.Point(12, 344);
+            this.gcPatientVisitDetails.Location = new System.Drawing.Point(316, 344);
             this.gcPatientVisitDetails.MainView = this.gvPatientVisitDetails;
             this.gcPatientVisitDetails.Name = "gcPatientVisitDetails";
             this.gcPatientVisitDetails.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gcPatientVisitDetails.Size = new System.Drawing.Size(786, 329);
+            this.gcPatientVisitDetails.Size = new System.Drawing.Size(482, 329);
             this.gcPatientVisitDetails.TabIndex = 9;
             this.gcPatientVisitDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisitDetails});
@@ -343,7 +378,8 @@
             this.layoutControlItem5,
             this.emptySpaceItem4,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(965, 685);
@@ -360,7 +396,7 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(479, 316);
             this.layoutControlItem1.Text = "Kartlar";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(40, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 13);
             // 
             // layoutControlItem2
             // 
@@ -450,12 +486,12 @@
             // 
             this.layoutControlItem6.Control = this.gcPatientVisitDetails;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 316);
+            this.layoutControlItem6.Location = new System.Drawing.Point(304, 316);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(790, 349);
+            this.layoutControlItem6.Size = new System.Drawing.Size(486, 349);
             this.layoutControlItem6.Text = "İşlemler";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(40, 13);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 13);
             // 
             // layoutControlItem7
             // 
@@ -466,7 +502,66 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(311, 316);
             this.layoutControlItem7.Text = "Hastalar";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(40, 13);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.gridControl1;
+            this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 316);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(304, 349);
+            this.layoutControlItem8.Text = "layoutControlItem8";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Ad";
+            this.gridColumn1.FieldName = "FirstName";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Soyad";
+            this.gridColumn2.FieldName = "LastName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "VisitNo";
+            this.gridColumn3.FieldName = "VisitNo";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "VisitDate";
+            this.gridColumn4.FieldName = "VisitDate";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "ExitDate";
+            this.gridColumn5.FieldName = "ExitDate";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "PatientTotal";
+            this.gridColumn6.FieldName = "PatientTotal";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
             // 
             // SGKInvoiveVoucherForm
             // 
@@ -478,6 +573,8 @@
             this.Text = "SGK Fatura/Makbuz Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisitDetails)).EndInit();
@@ -497,6 +594,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,5 +638,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPatientNo;
         private DevExpress.XtraGrid.Columns.GridColumn colFirstName;
         private DevExpress.XtraGrid.Columns.GridColumn colLastName;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }
