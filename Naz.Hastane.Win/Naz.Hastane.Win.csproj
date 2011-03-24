@@ -138,6 +138,18 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\DiabetReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DiabetReportControl.Designer.cs">
+      <DependentUpon>DiabetReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MedulaReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MedulaReport.Designer.cs">
+      <DependentUpon>MedulaReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MedulaSorgu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +176,18 @@
     </Compile>
     <Compile Include="MDIChildForms\AccountingDailySummaryForm.Designer.cs">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\DiabetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\DiabetForm.Designer.cs">
+      <DependentUpon>DiabetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\MedulaMedicationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\MedulaMedicationReportForm.Designer.cs">
+      <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\HastaAraSGKForm.cs">
       <SubType>Form</SubType>
@@ -240,8 +264,20 @@
     <Compile Include="SplashForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Controls\DiabetReportControl.resx">
+      <DependentUpon>DiabetReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MedulaReport.resx">
+      <DependentUpon>MedulaReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\AccountingDailySummaryForm.resx">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\DiabetForm.resx">
+      <DependentUpon>DiabetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\MedulaMedicationReportForm.resx">
+      <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\PrinterSettingsForm.resx">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>

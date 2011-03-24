@@ -967,5 +967,20 @@ namespace Naz.Hastane.Win {
             ShowNewDocument<SGKInvoiveVoucherForm>();
         }
 
+        private void iDiabetReports_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewDocument<DiabetForm>();
+        }
+
+        private void iMedulaMedicationReports_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewDocument<MedulaMedicationReportForm>();
+        }
+
+        private void iTreatmentReports_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewDocument<MedulaMedicationReportForm>();
+        }
+
     }
 }
