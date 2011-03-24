@@ -177,6 +177,12 @@
     <Compile Include="MDIChildForms\AccountingDailySummaryForm.Designer.cs">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\DBTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\DBTestForm.Designer.cs">
+      <DependentUpon>DBTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\DiabetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\AccountingDailySummaryForm.resx">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\DBTestForm.resx">
+      <DependentUpon>DBTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DiabetForm.resx">
       <DependentUpon>DiabetForm.cs</DependentUpon>

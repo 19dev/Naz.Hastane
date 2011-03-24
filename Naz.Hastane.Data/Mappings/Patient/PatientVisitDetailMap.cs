@@ -13,8 +13,6 @@ namespace Naz.Hastane.Data.Mappings
 
             CompositeId()
                 .KeyReference(x => x.PatientVisit, "KNR", "SNR")
-                //.KeyProperty(x => x.KNR, "KNR")
-                //.KeyProperty(x => x.SNR,  "SNR")
                 .KeyProperty(x => x.DetailNo, "SIRANO");
 
             Map(x => x.AKOD).Column("AKOD");

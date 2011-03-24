@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\TakipFormuIslemleri\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\YardimciIslemler\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +164,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RaporIslemleri\RaporIslemleri.wsdl" />
+    <None Include="Service References\TakipFormuIslemleri\Naz.Hastane.Medula.TakipFormuIslemleri.TakipFormuKaydetCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TakipFormuIslemleri\Naz.Hastane.Medula.TakipFormuIslemleri.TakipFormuOkuCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TakipFormuIslemleri\Naz.Hastane.Medula.TakipFormuIslemleri.TakipFormuSilCevapDVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TakipFormuIslemleri\TakipFormuIslemleri.wsdl" />
     <None Include="Service References\YardimciIslemler\Naz.Hastane.Medula.YardimciIslemler.DoktorAraCevapDVO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -193,6 +208,7 @@
     <WCFMetadataStorage Include="Service References\HastaKabulIslemleri\" />
     <WCFMetadataStorage Include="Service References\HizmetKayitIslemleri\" />
     <WCFMetadataStorage Include="Service References\RaporIslemleri\" />
+    <WCFMetadataStorage Include="Service References\TakipFormuIslemleri\" />
     <WCFMetadataStorage Include="Service References\YardimciIslemler\" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\HastaKabulIslemleri\HastaKabul.txt" />
+    <None Include="Service References\TakipFormuIslemleri\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TakipFormuIslemleri\configuration.svcinfo" />
+    <None Include="Service References\TakipFormuIslemleri\configuration91.svcinfo" />
     <None Include="Service References\YardimciIslemler\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

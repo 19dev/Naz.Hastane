@@ -1,0 +1,264 @@
+     
+ Diabet gönderilmemiþ hastalar = "select  M.knr as HastaNo ,M.snr,b.bhdat,A.hastaadý as HastaAdý  ,A.hastasoyadý as hastaSoyAdý ,(case when (b.ambu = 'P' or  b.ambu = 'A') then 'A' else 'Y' end) as TedaviTuru  from MEDDIABETTAKIPFORMU m ,BEHAND b , ADRES A where A.KNR=B.KNR AND     GONDERILDI='0' and m.knr=b.knr and m.snr=b.snr and convert(varchar,BHDAT,112)>='" + S1 + "'  and convert(varchar,BHDAT,112)<='" + S2 + "' ";
+
+ Diabet gönderilmiþ hastalar= "select  M.knr as HastaNo ,M.snr,b.bhdat,A.hastaadý as HastaAdý  ,A.hastasoyadý as hastaSoyAdý ,(case when (b.ambu = 'P' or  b.ambu = 'A') then 'A' else 'Y' end) as TedaviTuru,TAKIPFORMUNO,A.TCKIMLIKNO from MEDDIABETTAKIPFORMU m ,BEHAND b , ADRES A where A.KNR=B.KNR AND     GONDERILDI='1' and m.knr=b.knr and m.snr=b.snr and convert(varchar,BHDAT,112)>='" + S1 + "'  and convert(varchar,BHDAT,112)<='" + S2 + "' ";
+
+
+  try
+            {
+                string sql1 = "select  * from KEYDAT WHERE SLK='00' and slb='INT_GSADI'";
+                SqlDataAdapter sda = new SqlDataAdapter(sql1, cnn);
+                DataSet dtset = new DataSet();
+                sda.Fill(dtset, "KEYDAT");
+                DataTable dt = dtset.Tables["KEYDAT"];
+
+
+                string _kullaniciAdi = dt.Rows[0]["SLT"].ToString();
+
+
+                string sql2 = "select  * from KEYDAT WHERE SLK='00' AND SLB='INT_GSSSIF'";
+                SqlDataAdapter sda2 = new SqlDataAdapter(sql2, cnn);
+                DataSet dtset2 = new DataSet();
+                sda2.Fill(dtset2, "KEYDAT");
+                DataTable dt2 = dtset2.Tables["KEYDAT"];
+
+
+                string _sifre = dt2.Rows[0]["SLT"].ToString();
+
+
+                TakipFormuIslemleriService _TakipFormuIslemleriService = new TakipFormuIslemleriService();
+
+                _TakipFormuIslemleriService.PreAuthenticate = true;
+                NetworkCredential credentials = new NetworkCredential(_kullaniciAdi, _sifre, null);
+                _TakipFormuIslemleriService.Credentials = credentials;
+
+                TakipFormuKaydetGirisDVO _TakipFormuKaydetGirisDVO = new TakipFormuKaydetGirisDVO();
+                TakipFormuKaydetCevapDVO _TakipFormuKaydetCevapDVO = new TakipFormuKaydetCevapDVO();
+
+
+                for (int i = 0; i < listView3.Items.Count; i++)
+                {
+                    if (listView3.Items[i].Selected == true)
+                    {
+                        String KNR = listView3.Items[i].Text;
+                        String SNR = listView3.Items[i].SubItems[1].Text;
+
+                        string sql3 = "select  * from MEDDIABETTAKIPFORMU  where GONDERILDI='0' and  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                        SqlDataAdapter sda3 = new SqlDataAdapter(sql3, cnn);
+                        DataSet dtset3 = new DataSet();
+                        sda3.Fill(dtset3, "MEDDIABETTAKIPFORMU");
+                        DataTable dt3 = dtset3.Tables["MEDDIABETTAKIPFORMU"];
+
+
+                        _TakipFormuKaydetGirisDVO.kullaniciTesisKodu = int.Parse(_kullaniciAdi);
+
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu = new DiabetTakipFormuKayitDVO();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.tcKimlikNo = dt3.Rows[0]["TCKIMLIKNO"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.ad = dt3.Rows[0]["AD"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.soyad = dt3.Rows[0]["SOYAD"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.cepTel = dt3.Rows[0]["CEPTEL"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.protokolNo = dt3.Rows[0]["PROTOKOLNO"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.vizitTarihi = dt3.Rows[0]["VIZITTARIHI"].ToString().Substring(0, 10);
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.saglikTesisKodu = int.Parse(dt3.Rows[0]["SAGLIKTESISKODU"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.cinsiyet = dt3.Rows[0]["CINSIYET"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.ikametTuru = int.Parse(dt3.Rows[0]["IKAMETTURU"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.taniKodu = dt3.Rows[0]["ICD10TANI"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.taniTarihi = dt3.Rows[0]["TANITARIHI"].ToString().Substring(0, 10);
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.tibbiBeslenmeTedavisi = int.Parse(dt3.Rows[0]["TIBBIBESLENMETEDAVISI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.egzersiz = int.Parse(dt3.Rows[0]["EGZERSIZ"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.basvuruNedeni = int.Parse(dt3.Rows[0]["BASVURUNEDENI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.glukoMetre = dt3.Rows[0]["GLUKOMETRE"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.kanSekeriTakipSayisi = int.Parse(dt3.Rows[0]["KANSEKERITAKIPSAYISI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.sistolikKanBasinci = int.Parse(dt3.Rows[0]["SISTOLIKKANBASINICI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.diyastolikKanBasinci = int.Parse(dt3.Rows[0]["DIYOSTOLIKKANBASINCI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.boy = double.Parse(dt3.Rows[0]["BOY"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.kilo = double.Parse(dt3.Rows[0]["KILO"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.vki = double.Parse(dt3.Rows[0]["VKI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.apg = double.Parse(dt3.Rows[0]["APG"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.tpg = double.Parse(dt3.Rows[0]["TPG"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.hbA1c = double.Parse(dt3.Rows[0]["HBA1C"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.kreatinin = double.Parse(dt3.Rows[0]["KREATININ"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.trigliserid = double.Parse(dt3.Rows[0]["TRIGLISERID"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.ldlKol = double.Parse(dt3.Rows[0]["LDLKKOL"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.hdlKol = double.Parse(dt3.Rows[0]["HDLKOL"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.alt = double.Parse(dt3.Rows[0]["ALT"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.antiGAD = dt3.Rows[0]["ANTIGAD"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.ekg = int.Parse(dt3.Rows[0]["EKG"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.mikroalbuminuri = dt3.Rows[0]["MIKROALBUMINURI"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.gozMuayenesi = int.Parse(dt3.Rows[0]["GOZMUAYENE"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.periferikSensoryal = dt3.Rows[0]["PERIFERIKSENSORYAL"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.koronerArterH = dt3.Rows[0]["KRONERARTER"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.serebrovaskulerH = dt3.Rows[0]["SEREBOVASKULERH"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.ayakMuayenesi = dt3.Rows[0]["AYAKMUAYENSI"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.akutKomplikasyon = int.Parse(dt3.Rows[0]["AKUTKOMLIKASYON"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.yatisGun = int.Parse(dt3.Rows[0]["YATISGUN"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.insulinPompasi = dt3.Rows[0]["INSULINPOMPASI"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.insulinPompasiVerTarihi = dt3.Rows[0]["INSULINPOMPASIVERTARIH"].ToString().Substring(0, 10);
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.insulinPompasiDegTarihi = dt3.Rows[0]["INSULINPOMPDEGTARIH"].ToString().Substring(0, 10);
+
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.diabetEgitimi = new TakipFormuDiabetEgitimiDVO();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.diabetEgitimi.bireyselEgitimSayisi = int.Parse(dt3.Rows[0]["BIREYSELEGITIMSAYISI"].ToString());
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.diabetEgitimi.dmEgitimiAlmisMi = dt3.Rows[0]["EGITIMDM"].ToString();
+                        _TakipFormuKaydetGirisDVO.diabetTakipFormu.diabetEgitimi.grupEgitimiSayisi = int.Parse(dt3.Rows[0]["GRUPEGITIMSAYISI"].ToString());
+
+
+                        ////Doktorlar
+
+                        string sql15 = "select  * from MEDDIABETDOKTORLAR  where  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                        SqlDataAdapter sda15 = new SqlDataAdapter(sql15, cnn);
+                        DataSet dtset15 = new DataSet();
+                        sda15.Fill(dtset15, "MEDDIABETDOKTORLAR");
+                        DataTable dt15 = dtset15.Tables["MEDDIABETDOKTORLAR"];
+
+
+                        TakipFormuDoktorBilgisiDVO[] _DoktorBilgisiDVO = new TakipFormuDoktorBilgisiDVO[dt15.Rows.Count];
+                        int DR = 0;
+                        //    TeshisBilgisiDVO[] _TeshisBilgisiDVO = new TeshisBilgisiDVO[dt4.Rows.Count];
+
+
+                        foreach (DataRow dtRow15 in dt15.Rows)
+                        {
+                            _DoktorBilgisiDVO[DR] = new TakipFormuDoktorBilgisiDVO();
+                            _DoktorBilgisiDVO[DR].drTescilNo = dt15.Rows[DR]["DRTESCIL"].ToString();
+                            _DoktorBilgisiDVO[DR].drBransKodu = dt15.Rows[DR]["DRBRANS"].ToString();
+                            _DoktorBilgisiDVO[DR].dmEgitimiAlmisMi = dt15.Rows[DR]["DRDM"].ToString();
+
+
+
+                            _TakipFormuKaydetGirisDVO.diabetTakipFormu.doktorBilgileri = _DoktorBilgisiDVO;
+                            DR = DR + 1;
+                        }
+
+
+                        //****************************************************************
+
+
+                        //Hastalýklar
+
+                        string sql16 = "select  * from MEDDIABETHASTALIKLAR  where  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                        SqlDataAdapter sda16 = new SqlDataAdapter(sql16, cnn);
+                        DataSet dtset16 = new DataSet();
+                        sda16.Fill(dtset16, "MEDDIABETHASTALIKLAR");
+                        DataTable dt16 = dtset16.Tables["MEDDIABETHASTALIKLAR"];
+
+
+                        TakipFormuHastalikDVO[] _TakipFormuHastalikDVO = new TakipFormuHastalikDVO[dt16.Rows.Count];
+                        int hst = 0;
+                        //    TeshisBilgisiDVO[] _TeshisBilgisiDVO = new TeshisBilgisiDVO[dt4.Rows.Count];
+
+
+                        foreach (DataRow dtRow16 in dt16.Rows)
+                        {
+                            _TakipFormuHastalikDVO[hst] = new TakipFormuHastalikDVO();
+                            _TakipFormuHastalikDVO[hst].hastalikKodu = int.Parse(dt16.Rows[hst]["HASTALIKKODU"].ToString());
+
+                            if (dt16.Rows[hst]["HASTALIKTANIKODU"].ToString() != "")
+                            {
+                                _TakipFormuHastalikDVO[hst].digerHastalikTaniKodu = dt16.Rows[hst]["HASTALIKTANIKODU"].ToString();
+                            }
+                            else
+                            {
+                                _TakipFormuHastalikDVO[hst].digerHastalikTaniKodu = "";
+                            }
+                            _TakipFormuKaydetGirisDVO.diabetTakipFormu.hastaliklar = _TakipFormuHastalikDVO;
+                            hst = hst + 1;
+                        }
+
+
+                        //****************************
+
+
+                        //Alýskanlýklar
+
+                        string sql17 = "select  * from MEDDIABETALISKANLIKLAR  where  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                        SqlDataAdapter sda17 = new SqlDataAdapter(sql17, cnn);
+                        DataSet dtset17 = new DataSet();
+                        sda17.Fill(dtset17, "MEDDIABETALISKANLIKLAR");
+                        DataTable dt17 = dtset17.Tables["MEDDIABETALISKANLIKLAR"];
+
+
+                        TakipFormuAliskanlikDVO[] _TakipFormuAliskanlikDVO = new TakipFormuAliskanlikDVO[dt17.Rows.Count];
+                        int alýs = 0;
+                        //    TeshisBilgisiDVO[] _TeshisBilgisiDVO = new TeshisBilgisiDVO[dt4.Rows.Count];
+
+
+                        foreach (DataRow dtRow17 in dt17.Rows)
+                        {
+                            _TakipFormuAliskanlikDVO[alýs] = new TakipFormuAliskanlikDVO();
+                            _TakipFormuAliskanlikDVO[alýs].aliskanlik = int.Parse(dt17.Rows[alýs]["ALISKANLIKKODU"].ToString());
+
+
+                            _TakipFormuKaydetGirisDVO.diabetTakipFormu.aliskanliklar = _TakipFormuAliskanlikDVO;
+                            alýs = alýs + 1;
+                        }
+
+
+
+                        //******************************************************************
+
+
+
+                        //Ýlaçlar
+
+                        string sql18 = "select  * from MEDDIABETILACLAR  where  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                        SqlDataAdapter sda18 = new SqlDataAdapter(sql18, cnn);
+                        DataSet dtset18 = new DataSet();
+                        sda18.Fill(dtset18, "MEDDIABETILACLAR");
+                        DataTable dt18 = dtset18.Tables["MEDDIABETILACLAR"];
+
+
+                        TakipFormuKullanilanIlaclarDVO[] _TakipFormuKullanilanIlaclarDVO = new TakipFormuKullanilanIlaclarDVO[dt18.Rows.Count];
+                        int ilac = 0;
+                        //    TeshisBilgisiDVO[] _TeshisBilgisiDVO = new TeshisBilgisiDVO[dt4.Rows.Count];
+
+
+                        foreach (DataRow dtRow18 in dt18.Rows)
+                        {
+                            _TakipFormuKullanilanIlaclarDVO[ilac] = new TakipFormuKullanilanIlaclarDVO();
+                            _TakipFormuKullanilanIlaclarDVO[ilac].barkod = dt18.Rows[ilac]["ILACKODU"].ToString();
+                            _TakipFormuKullanilanIlaclarDVO[ilac].gunlukDoz = dt18.Rows[ilac]["GUNLUKDOZ"].ToString();
+
+                            _TakipFormuKaydetGirisDVO.diabetTakipFormu.kullanilanIlaclar = _TakipFormuKullanilanIlaclarDVO;
+                            ilac = ilac + 1;
+                        }
+
+
+
+                        //******************************************************************
+
+                        try
+                        {
+                            _TakipFormuKaydetCevapDVO = _TakipFormuIslemleriService.takipFormuKaydet(_TakipFormuKaydetGirisDVO);
+
+                            MessageBox.Show(_TakipFormuKaydetCevapDVO.sonucMesaji.ToString());
+
+                            if (_TakipFormuKaydetCevapDVO.sonucKodu == "0000")
+                            {
+                                IDbCommand com = cnn.CreateCommand();
+                                com.CommandType = CommandType.Text;
+                                com.CommandText = "UPDATE MEDDIABETTAKIPFORMU SET  GONDERILDI='1' , TAKIPFORMUNO='" + _TakipFormuKaydetCevapDVO.diabetTakipFormu.takipFormuNo.ToString() + "'  WHERE  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                                int result = com.ExecuteNonQuery();
+
+                                IDbCommand com1 = cnn.CreateCommand();
+                                com1.CommandType = CommandType.Text;
+                                com1.CommandText = "UPDATE MEDILACRAPOR SET  TAKIPFORMUNO='" + _TakipFormuKaydetCevapDVO.diabetTakipFormu.takipFormuNo.ToString() + "'  WHERE  KNR='" + KNR + "' AND SNR='" + SNR + "'";
+                                int result1 = com1.ExecuteNonQuery();
+
+                            }
+                            DiabetList();
+                        }
+                        catch (Exception ee)
+                        {
+                            MessageBox.Show(ee.Message.ToString());
+                        }
+
+
+
+
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message.ToString());
+            }

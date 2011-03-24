@@ -6,8 +6,6 @@ namespace Naz.Hastane.Data.Entities
     public class PatientVisitDetail
     {
         public virtual PatientVisit PatientVisit { get; set; } //KNR; SNR
-        //public virtual string KNR { get; set; } //KNR; SNR
-        //public virtual string SNR { get; set; } //KNR; SNR
         public virtual double DetailNo { get; set; } //SIRANO
 
         public virtual string AKOD { get; set; } //AKOD Ambar Kodu

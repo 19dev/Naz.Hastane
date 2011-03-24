@@ -982,5 +982,10 @@ namespace Naz.Hastane.Win {
             ShowNewDocument<MedulaMedicationReportForm>();
         }
 
+        private void iDatabaseTest_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewDocument<DBTestForm>();
+        }
+
     }
 }

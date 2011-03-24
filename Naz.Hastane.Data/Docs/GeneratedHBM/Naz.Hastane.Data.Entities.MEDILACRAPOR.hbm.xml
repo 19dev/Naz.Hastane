@@ -1,0 +1,157 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="Naz.Hastane.Data.Entities.MEDILACRAPOR, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="MEDILACRAPOR">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-many-to-one name="PatientVisit" class="Naz.Hastane.Data.Entities.PatientVisit, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="KNR" />
+        <column name="SNR" />
+      </key-many-to-one>
+    </composite-id>
+    <property name="RAPORNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORNO" length="20" />
+    </property>
+    <property name="RAPORTARIHI" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORTARIHI" />
+    </property>
+    <property name="RAPORTURU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORTURU" length="50" />
+    </property>
+    <property name="RAPORBASTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORBASTARIH" />
+    </property>
+    <property name="RAPORBITTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORBITTARIH" />
+    </property>
+    <property name="RAPORDTUR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPORDTUR" length="50" />
+    </property>
+    <property name="RAPPROTNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPPROTNO" length="20" />
+    </property>
+    <property name="RAPPROTTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPPROTTARIH" />
+    </property>
+    <property name="RAPDURUM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPDURUM" length="50" />
+    </property>
+    <property name="RAPACIKLAMA" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPACIKLAMA" length="1000" />
+    </property>
+    <property name="RAPKTANI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPKTANI" length="255" />
+    </property>
+    <property name="HSTTAKIPNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTTAKIPNO" length="50" />
+    </property>
+    <property name="HSTTCNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTTCNO" length="50" />
+    </property>
+    <property name="HSTSNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTSNO" length="50" />
+    </property>
+    <property name="HSTKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTKNO" length="50" />
+    </property>
+    <property name="HSTYKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTYKODU" length="50" />
+    </property>
+    <property name="HSTPTIPI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTPTIPI" length="50" />
+    </property>
+    <property name="HSTPTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTPTARIH" />
+    </property>
+    <property name="HSTDEVKURUM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTDEVKURUM" length="50" />
+    </property>
+    <property name="HSTSGTURU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSTSGTURU" length="50" />
+    </property>
+    <property name="DRTESNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRTESNO" length="50" />
+    </property>
+    <property name="DRADI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRADI" length="50" />
+    </property>
+    <property name="DRSOYADI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRSOYADI" length="50" />
+    </property>
+    <property name="DRBRANSKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRBRANSKODU" length="10" />
+    </property>
+    <property name="DRTIPI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRTIPI" length="50" />
+    </property>
+    <property name="DRTANIKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DRTANIKODU" length="50" />
+    </property>
+    <property name="HASTAADI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTAADI" length="50" />
+    </property>
+    <property name="HASTASOYADI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HASTASOYADI" length="50" />
+    </property>
+    <property name="RAPTESBASTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTESBASTARIH" />
+    </property>
+    <property name="RAPTESBITTARIH" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTESBITTARIH" />
+    </property>
+    <property name="RAPTESKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTESKODU" length="50" />
+    </property>
+    <property name="TAKIPNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TAKIPNO" length="50" />
+    </property>
+    <property name="RAPGONDERILDI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPGONDERILDI" length="50" />
+    </property>
+    <property name="RAPTAKIPNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTAKIPNO" length="20" />
+    </property>
+    <property name="RAPTURU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTURU" length="50" />
+    </property>
+    <property name="RAPTEDAVITURU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="RAPTEDAVITURU" length="10" />
+    </property>
+    <property name="ESWTVBKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWTVBKODU" length="10" />
+    </property>
+    <property name="ESWTSGUN" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWTSGUN" length="10" />
+    </property>
+    <property name="ESWTSSAY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWTSSAY" length="10" />
+    </property>
+    <property name="ESWTBUTKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWTBUTKODU" length="10" />
+    </property>
+    <property name="FTRVBKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FTRVBKODU" length="10" />
+    </property>
+    <property name="FTRSGUN" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FTRSGUN" length="10" />
+    </property>
+    <property name="FTRSSAY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FTRSSAY" length="10" />
+    </property>
+    <property name="FTRBUTKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FTRBUTKODU" length="10" />
+    </property>
+    <property name="ESWLBUTKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWLBUTKODU" length="10" />
+    </property>
+    <property name="ESWLTASSAYI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWLTASSAYI" length="10" />
+    </property>
+    <property name="ESWLSSAY" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWLSSAY" length="10" />
+    </property>
+    <property name="ESWLBBILG" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ESWLBBILG" length="10" />
+    </property>
+    <property name="TAKIPFORMUNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TAKIPFORMUNO" length="10" />
+    </property>
+  </class>
+</hibernate-mapping>
