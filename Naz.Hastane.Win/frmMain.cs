@@ -1,33 +1,25 @@
 using System;
-using System.Drawing;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Forms;
-using System.Data;
+using System.Drawing;
 using System.IO;
-using System.Diagnostics;
 using System.Threading;
+using System.Windows.Forms;
 
-using DevExpress.XtraEditors;
-using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using DevExpress.Utils;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.Gallery;
-using DevExpress.Utils.Drawing;
-using DevExpress.Utils;
-using DevExpress.Tutorials.Controls;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using DevExpress.LookAndFeel;
-using DevExpress.XtraBars;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraPrinting.Preview;
 
-using Naz.Hastane.Reports.Classes;
-using Naz.Hastane.Reports;
 using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Data.Entities.LookUp.MedulaDiabet;
+using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
+using Naz.Hastane.Data.Services;
+using Naz.Hastane.Reports;
 using Naz.Hastane.Win.MDIChildForms;
 using Naz.Utilities.Classes;
 
@@ -986,6 +978,68 @@ namespace Naz.Hastane.Win {
         {
             ShowNewDocument<DBTestForm>();
         }
+
+        #region MedulaDiabet
+        private void iAcuteComplication_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<AcuteComplication>(LookUpServices.AcuteComplication, e.Item.Caption);
+        }
+
+        private void iApplicationReason_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<ApplicationReason>(LookUpServices.ApplicationReason, e.Item.Caption);
+        }
+
+        private void iDiseaseCode_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<DiseaseCode>(LookUpServices.DiseaseCode, e.Item.Caption);
+        }
+
+        private void iEKG_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<EKG>(LookUpServices.EKG, e.Item.Caption);
+        }
+
+        private void iExercise_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Exercise>(LookUpServices.Exercise, e.Item.Caption);
+        }
+
+        private void iEyeExam_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<EyeExam>(LookUpServices.EyeExam, e.Item.Caption);
+        }
+
+        private void iFootExam_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<FootExam>(LookUpServices.FootExam, e.Item.Caption);
+        }
+
+        private void iHabitCode_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<HabitCode>(LookUpServices.HabitCode, e.Item.Caption);
+        }
+
+        private void iPositiveNegative_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<PositiveNegative>(LookUpServices.PositiveNegative, e.Item.Caption);
+        }
+
+        private void iResidentialType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<ResidentialType>(LookUpServices.ResidentialType, e.Item.Caption);
+        }
+
+        private void iTBT_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<TBT>(LookUpServices.TBT, e.Item.Caption);
+        }
+
+        private void iVarYok_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<VarYok>(LookUpServices.VarYok, e.Item.Caption);
+        }
+        #endregion
 
     }
 }

@@ -95,7 +95,6 @@ namespace Naz.Hastane.Win {
             this.iUser = new DevExpress.XtraBars.BarButtonItem();
             this.iFollowUpType = new DevExpress.XtraBars.BarButtonItem();
             this.iInsuranceType = new DevExpress.XtraBars.BarButtonItem();
-            this.iProvisionType = new DevExpress.XtraBars.BarButtonItem();
             this.iRelationType = new DevExpress.XtraBars.BarButtonItem();
             this.iTransferorIns = new DevExpress.XtraBars.BarButtonItem();
             this.iTreatmentStyle = new DevExpress.XtraBars.BarButtonItem();
@@ -106,6 +105,19 @@ namespace Naz.Hastane.Win {
             this.iMedulaMedicationReports = new DevExpress.XtraBars.BarButtonItem();
             this.iTreatmentReports = new DevExpress.XtraBars.BarButtonItem();
             this.iDiabetReports = new DevExpress.XtraBars.BarButtonItem();
+            this.iDatabaseTest = new DevExpress.XtraBars.BarButtonItem();
+            this.iAcuteComplication = new DevExpress.XtraBars.BarButtonItem();
+            this.iApplicationReason = new DevExpress.XtraBars.BarButtonItem();
+            this.iDiseaseCode = new DevExpress.XtraBars.BarButtonItem();
+            this.iEKG = new DevExpress.XtraBars.BarButtonItem();
+            this.iExercise = new DevExpress.XtraBars.BarButtonItem();
+            this.iEyeExam = new DevExpress.XtraBars.BarButtonItem();
+            this.iFootExam = new DevExpress.XtraBars.BarButtonItem();
+            this.iHabitCode = new DevExpress.XtraBars.BarButtonItem();
+            this.iPositiveNegative = new DevExpress.XtraBars.BarButtonItem();
+            this.iResidentialType = new DevExpress.XtraBars.BarButtonItem();
+            this.iTBT = new DevExpress.XtraBars.BarButtonItem();
+            this.iVarYok = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -118,10 +130,12 @@ namespace Naz.Hastane.Win {
             this.rpgDosya = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgAccounting = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgTest = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgMedula = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgGeneralDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgMedulaProvision = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgMedulaDiabet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFont = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -134,8 +148,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.rpgTest = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.iDatabaseTest = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -367,7 +379,6 @@ namespace Naz.Hastane.Win {
             this.iUser,
             this.iFollowUpType,
             this.iInsuranceType,
-            this.iProvisionType,
             this.iRelationType,
             this.iTransferorIns,
             this.iTreatmentStyle,
@@ -378,10 +389,22 @@ namespace Naz.Hastane.Win {
             this.iMedulaMedicationReports,
             this.iTreatmentReports,
             this.iDiabetReports,
-            this.iDatabaseTest});
+            this.iDatabaseTest,
+            this.iAcuteComplication,
+            this.iApplicationReason,
+            this.iDiseaseCode,
+            this.iEKG,
+            this.iExercise,
+            this.iEyeExam,
+            this.iFootExam,
+            this.iHabitCode,
+            this.iPositiveNegative,
+            this.iResidentialType,
+            this.iTBT,
+            this.iVarYok});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 208;
+            this.ribbonControl1.MaxItemId = 226;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -397,7 +420,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPage1;
+            this.ribbonControl1.SelectedPage = this.ribbonPage2;
             this.ribbonControl1.Size = new System.Drawing.Size(1274, 149);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1061,13 +1084,6 @@ namespace Naz.Hastane.Win {
             this.iInsuranceType.Name = "iInsuranceType";
             this.iInsuranceType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iInsuranceType_ItemClick);
             // 
-            // iProvisionType
-            // 
-            this.iProvisionType.Caption = "Provizyon Türleri";
-            this.iProvisionType.Id = 176;
-            this.iProvisionType.Name = "iProvisionType";
-            this.iProvisionType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iProvisionType_ItemClick);
-            // 
             // iRelationType
             // 
             this.iRelationType.Caption = "Yakýnlýk Kodlarý";
@@ -1137,6 +1153,97 @@ namespace Naz.Hastane.Win {
             this.iDiabetReports.Id = 205;
             this.iDiabetReports.Name = "iDiabetReports";
             this.iDiabetReports.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDiabetReports_ItemClick);
+            // 
+            // iDatabaseTest
+            // 
+            this.iDatabaseTest.Caption = "Database Test";
+            this.iDatabaseTest.Id = 207;
+            this.iDatabaseTest.Name = "iDatabaseTest";
+            this.iDatabaseTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDatabaseTest_ItemClick);
+            // 
+            // iAcuteComplication
+            // 
+            this.iAcuteComplication.Caption = "Akute Komplikasyon";
+            this.iAcuteComplication.Id = 209;
+            this.iAcuteComplication.Name = "iAcuteComplication";
+            this.iAcuteComplication.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAcuteComplication_ItemClick);
+            // 
+            // iApplicationReason
+            // 
+            this.iApplicationReason.Caption = "Baþvuru Sebebi";
+            this.iApplicationReason.Id = 210;
+            this.iApplicationReason.Name = "iApplicationReason";
+            this.iApplicationReason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iApplicationReason_ItemClick);
+            // 
+            // iDiseaseCode
+            // 
+            this.iDiseaseCode.Caption = "Hastalýk Kodu";
+            this.iDiseaseCode.Id = 211;
+            this.iDiseaseCode.Name = "iDiseaseCode";
+            this.iDiseaseCode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDiseaseCode_ItemClick);
+            // 
+            // iEKG
+            // 
+            this.iEKG.Caption = "EKG";
+            this.iEKG.Id = 212;
+            this.iEKG.Name = "iEKG";
+            this.iEKG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iEKG_ItemClick);
+            // 
+            // iExercise
+            // 
+            this.iExercise.Caption = "Ekzersiz";
+            this.iExercise.Id = 213;
+            this.iExercise.Name = "iExercise";
+            this.iExercise.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExercise_ItemClick);
+            // 
+            // iEyeExam
+            // 
+            this.iEyeExam.Caption = "Göz Muayenesi";
+            this.iEyeExam.Id = 214;
+            this.iEyeExam.Name = "iEyeExam";
+            this.iEyeExam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iEyeExam_ItemClick);
+            // 
+            // iFootExam
+            // 
+            this.iFootExam.Caption = "Ayak Muayenesi";
+            this.iFootExam.Id = 215;
+            this.iFootExam.Name = "iFootExam";
+            this.iFootExam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iFootExam_ItemClick);
+            // 
+            // iHabitCode
+            // 
+            this.iHabitCode.Caption = "Alýþkanlýklar";
+            this.iHabitCode.Id = 216;
+            this.iHabitCode.Name = "iHabitCode";
+            this.iHabitCode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iHabitCode_ItemClick);
+            // 
+            // iPositiveNegative
+            // 
+            this.iPositiveNegative.Caption = "Pozitif/Negatif";
+            this.iPositiveNegative.Id = 217;
+            this.iPositiveNegative.Name = "iPositiveNegative";
+            this.iPositiveNegative.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPositiveNegative_ItemClick);
+            // 
+            // iResidentialType
+            // 
+            this.iResidentialType.Caption = "Yerleþim Yeri";
+            this.iResidentialType.Id = 218;
+            this.iResidentialType.Name = "iResidentialType";
+            this.iResidentialType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iResidentialType_ItemClick);
+            // 
+            // iTBT
+            // 
+            this.iTBT.Caption = "TBT";
+            this.iTBT.Id = 219;
+            this.iTBT.Name = "iTBT";
+            this.iTBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iTBT_ItemClick);
+            // 
+            // iVarYok
+            // 
+            this.iVarYok.Caption = "Var/Yok";
+            this.iVarYok.Id = 220;
+            this.iVarYok.Name = "iVarYok";
+            this.iVarYok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iVarYok_ItemClick);
             // 
             // imageCollection1
             // 
@@ -1251,12 +1358,19 @@ namespace Naz.Hastane.Win {
             this.rpgAccounting.Name = "rpgAccounting";
             this.rpgAccounting.Text = "Muhasebe";
             // 
+            // rpgTest
+            // 
+            this.rpgTest.ItemLinks.Add(this.iDatabaseTest);
+            this.rpgTest.Name = "rpgTest";
+            this.rpgTest.Text = "Test";
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgDefinitions,
-            this.rpgMedula,
-            this.rpgGeneralDefinitions});
+            this.rpgGeneralDefinitions,
+            this.rpgMedulaProvision,
+            this.rpgMedulaDiabet});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Tanýmlar";
             // 
@@ -1272,21 +1386,6 @@ namespace Naz.Hastane.Win {
             this.rpgDefinitions.Name = "rpgDefinitions";
             this.rpgDefinitions.Text = "Tanýmlar";
             // 
-            // rpgMedula
-            // 
-            this.rpgMedula.ItemLinks.Add(this.iBranchCodes);
-            this.rpgMedula.ItemLinks.Add(this.iTreatmentType);
-            this.rpgMedula.ItemLinks.Add(this.iTreatmentStyle);
-            this.rpgMedula.ItemLinks.Add(this.iTransferorIns);
-            this.rpgMedula.ItemLinks.Add(this.iRelationType);
-            this.rpgMedula.ItemLinks.Add(this.iPatientRelations);
-            this.rpgMedula.ItemLinks.Add(this.iProvisionType);
-            this.rpgMedula.ItemLinks.Add(this.iProvisionType);
-            this.rpgMedula.ItemLinks.Add(this.iInsuranceType);
-            this.rpgMedula.ItemLinks.Add(this.iFollowUpType);
-            this.rpgMedula.Name = "rpgMedula";
-            this.rpgMedula.Text = "Medula";
-            // 
             // rpgGeneralDefinitions
             // 
             this.rpgGeneralDefinitions.ItemLinks.Add(this.iCity);
@@ -1297,6 +1396,36 @@ namespace Naz.Hastane.Win {
             this.rpgGeneralDefinitions.ItemLinks.Add(this.iIDType);
             this.rpgGeneralDefinitions.Name = "rpgGeneralDefinitions";
             this.rpgGeneralDefinitions.Text = "Genel Tanýmlar";
+            // 
+            // rpgMedulaProvision
+            // 
+            this.rpgMedulaProvision.ItemLinks.Add(this.iBranchCodes);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iTreatmentType);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iTreatmentStyle);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iTransferorIns);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iRelationType);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iPatientRelations);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iInsuranceType);
+            this.rpgMedulaProvision.ItemLinks.Add(this.iFollowUpType);
+            this.rpgMedulaProvision.Name = "rpgMedulaProvision";
+            this.rpgMedulaProvision.Text = "Medula Provizyon";
+            // 
+            // rpgMedulaDiabet
+            // 
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iAcuteComplication);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iApplicationReason);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iDiseaseCode);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iEKG);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iExercise);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iEyeExam);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iFootExam);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iHabitCode);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iPositiveNegative);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iResidentialType);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iTBT);
+            this.rpgMedulaDiabet.ItemLinks.Add(this.iVarYok);
+            this.rpgMedulaDiabet.Name = "rpgMedulaDiabet";
+            this.rpgMedulaDiabet.Text = "Medula Diabet";
             // 
             // ribbonPage3
             // 
@@ -1403,19 +1532,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // rpgTest
-            // 
-            this.rpgTest.ItemLinks.Add(this.iDatabaseTest);
-            this.rpgTest.Name = "rpgTest";
-            this.rpgTest.Text = "Test";
-            // 
-            // iDatabaseTest
-            // 
-            this.iDatabaseTest.Caption = "Database Test";
-            this.iDatabaseTest.Id = 207;
-            this.iDatabaseTest.Name = "iDatabaseTest";
-            this.iDatabaseTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDatabaseTest_ItemClick);
             // 
             // frmMain
             // 
@@ -1558,7 +1674,6 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iUser;
         private DevExpress.XtraBars.BarButtonItem iFollowUpType;
         private DevExpress.XtraBars.BarButtonItem iInsuranceType;
-        private DevExpress.XtraBars.BarButtonItem iProvisionType;
         private DevExpress.XtraBars.BarButtonItem iRelationType;
         private DevExpress.XtraBars.BarButtonItem iTransferorIns;
         private DevExpress.XtraBars.BarButtonItem iTreatmentStyle;
@@ -1566,7 +1681,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iPrinterSettings;
         private DevExpress.XtraBars.BarButtonItem iAccDailyReport;
         private DevExpress.XtraBars.BarButtonItem iBranchCodes;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedula;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedulaProvision;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgGeneralDefinitions;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSGK;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAccounting;
@@ -1575,6 +1690,19 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iDiabetReports;
         private DevExpress.XtraBars.BarButtonItem iDatabaseTest;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTest;
+        private DevExpress.XtraBars.BarButtonItem iAcuteComplication;
+        private DevExpress.XtraBars.BarButtonItem iApplicationReason;
+        private DevExpress.XtraBars.BarButtonItem iDiseaseCode;
+        private DevExpress.XtraBars.BarButtonItem iEKG;
+        private DevExpress.XtraBars.BarButtonItem iExercise;
+        private DevExpress.XtraBars.BarButtonItem iEyeExam;
+        private DevExpress.XtraBars.BarButtonItem iFootExam;
+        private DevExpress.XtraBars.BarButtonItem iHabitCode;
+        private DevExpress.XtraBars.BarButtonItem iPositiveNegative;
+        private DevExpress.XtraBars.BarButtonItem iResidentialType;
+        private DevExpress.XtraBars.BarButtonItem iTBT;
+        private DevExpress.XtraBars.BarButtonItem iVarYok;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedulaDiabet;
 
     }
 }

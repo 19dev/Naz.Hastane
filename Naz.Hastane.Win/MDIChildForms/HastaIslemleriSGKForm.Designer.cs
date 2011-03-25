@@ -77,7 +77,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbMedula = new DevExpress.XtraEditors.SimpleButton();
             this.sbMernis = new DevExpress.XtraEditors.SimpleButton();
-            this.medulaSorgu = new Naz.Hastane.Win.Controls.MedulaSorgu();
+            this.medulaSorgu = new Naz.Hastane.Win.Controls.MedulaProvisionControl();
             this.sbDetayDok = new DevExpress.XtraEditors.SimpleButton();
             this.sbIslemDetay = new DevExpress.XtraEditors.SimpleButton();
             this.sbBelgeBas = new DevExpress.XtraEditors.SimpleButton();
@@ -868,7 +868,7 @@
             this.medulaSorgu.Name = "medulaSorgu";
             this.medulaSorgu.Size = new System.Drawing.Size(259, 317);
             this.medulaSorgu.TabIndex = 110;
-            this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaSorgu.MedulaHastaKabulCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
+            this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaProvisionControl.MedulaHastaKabulCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
             // 
             // sbDetayDok
             // 
@@ -2674,7 +2674,7 @@
         private Controls.MernisSorgu mernisSorgu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private Controls.MedulaSorgu medulaSorgu;
+        private Controls.MedulaProvisionControl medulaSorgu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.Columns.GridColumn colPatientVisitDetails;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;

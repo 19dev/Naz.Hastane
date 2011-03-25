@@ -144,17 +144,17 @@
     <Compile Include="Controls\DiabetReportControl.Designer.cs">
       <DependentUpon>DiabetReportControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MedulaReport.cs">
+    <Compile Include="Controls\MedulaReportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\MedulaReport.Designer.cs">
-      <DependentUpon>MedulaReport.cs</DependentUpon>
+    <Compile Include="Controls\MedulaReportControl.Designer.cs">
+      <DependentUpon>MedulaReportControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MedulaSorgu.cs">
+    <Compile Include="Controls\MedulaProvisionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\MedulaSorgu.Designer.cs">
-      <DependentUpon>MedulaSorgu.cs</DependentUpon>
+    <Compile Include="Controls\MedulaProvisionControl.Designer.cs">
+      <DependentUpon>MedulaProvisionControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ColorBox.cs">
       <SubType>Code</SubType>
@@ -273,8 +273,8 @@
     <EmbeddedResource Include="Controls\DiabetReportControl.resx">
       <DependentUpon>DiabetReportControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MedulaReport.resx">
-      <DependentUpon>MedulaReport.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\MedulaReportControl.resx">
+      <DependentUpon>MedulaReportControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\AccountingDailySummaryForm.resx">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
@@ -303,8 +303,8 @@
     <EmbeddedResource Include="Controls\MernisSorgu.resx">
       <DependentUpon>MernisSorgu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MedulaSorgu.resx">
-      <DependentUpon>MedulaSorgu.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\MedulaProvisionControl.resx">
+      <DependentUpon>MedulaProvisionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmFind.resx">
       <DependentUpon>frmFind.cs</DependentUpon>
