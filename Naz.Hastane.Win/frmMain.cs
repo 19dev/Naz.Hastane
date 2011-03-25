@@ -982,62 +982,62 @@ namespace Naz.Hastane.Win {
         #region MedulaDiabet
         private void iAcuteComplication_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<AcuteComplication>(LookUpServices.AcuteComplication, e.Item.Caption);
+            ShowNewLookUpForm<AcuteComplication>(LookUpServices.AcuteComplications, e.Item.Caption);
         }
 
         private void iApplicationReason_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<ApplicationReason>(LookUpServices.ApplicationReason, e.Item.Caption);
+            ShowNewLookUpForm<ApplicationReason>(LookUpServices.ApplicationReasons, e.Item.Caption);
         }
 
         private void iDiseaseCode_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<DiseaseCode>(LookUpServices.DiseaseCode, e.Item.Caption);
+            ShowNewLookUpForm<DiseaseCode>(LookUpServices.DiseaseCodes, e.Item.Caption);
         }
 
         private void iEKG_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<EKG>(LookUpServices.EKG, e.Item.Caption);
+            ShowNewLookUpForm<EKG>(LookUpServices.EKGs, e.Item.Caption);
         }
 
         private void iExercise_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<Exercise>(LookUpServices.Exercise, e.Item.Caption);
+            ShowNewLookUpForm<Exercise>(LookUpServices.Exercises, e.Item.Caption);
         }
 
         private void iEyeExam_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<EyeExam>(LookUpServices.EyeExam, e.Item.Caption);
+            ShowNewLookUpForm<EyeExam>(LookUpServices.EyeExams, e.Item.Caption);
         }
 
         private void iFootExam_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<FootExam>(LookUpServices.FootExam, e.Item.Caption);
+            ShowNewLookUpForm<FootExam>(LookUpServices.FootExams, e.Item.Caption);
         }
 
         private void iHabitCode_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<HabitCode>(LookUpServices.HabitCode, e.Item.Caption);
+            ShowNewLookUpForm<HabitCode>(LookUpServices.HabitCodes, e.Item.Caption);
         }
 
         private void iPositiveNegative_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<PositiveNegative>(LookUpServices.PositiveNegative, e.Item.Caption);
+            ShowNewLookUpForm<PositiveNegative>(LookUpServices.PositiveNegatives, e.Item.Caption);
         }
 
         private void iResidentialType_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<ResidentialType>(LookUpServices.ResidentialType, e.Item.Caption);
+            ShowNewLookUpForm<ResidentialType>(LookUpServices.ResidentialTypes, e.Item.Caption);
         }
 
         private void iTBT_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<TBT>(LookUpServices.TBT, e.Item.Caption);
+            ShowNewLookUpForm<TBT>(LookUpServices.TBTs, e.Item.Caption);
         }
 
         private void iVarYok_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowNewLookUpForm<VarYok>(LookUpServices.VarYok, e.Item.Caption);
+            ShowNewLookUpForm<VarYok>(LookUpServices.VarYoks, e.Item.Caption);
         }
         #endregion
 

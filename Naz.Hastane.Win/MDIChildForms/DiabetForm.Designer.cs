@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.diabetReportControl1 = new Naz.Hastane.Win.Controls.DiabetReportControl();
+            this.diabetReportControl1 = new Naz.Hastane.Win.Controls.MedulaDiabetReportControl();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -331,7 +331,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private Controls.DiabetReportControl diabetReportControl1;
+        private Controls.MedulaDiabetReportControl diabetReportControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

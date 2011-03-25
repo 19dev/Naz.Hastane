@@ -414,14 +414,14 @@
             this.lciStatus.TextToControlDistance = 0;
             this.lciStatus.TextVisible = false;
             // 
-            // MedulaSorgu
+            // MedulaProvisionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "MedulaSorgu";
+            this.Name = "MedulaProvisionControl";
             this.Size = new System.Drawing.Size(212, 322);
-            this.Load += new System.EventHandler(this.MedulaSorgu_Load);
+            this.Load += new System.EventHandler(this.MedulaProvisionControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tePatientApplicationNo.Properties)).EndInit();

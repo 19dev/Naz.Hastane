@@ -110,7 +110,7 @@
             this.teEMSNo = new DevExpress.XtraEditors.TextEdit();
             this.teProfession = new DevExpress.XtraEditors.TextEdit();
             this.teOfficer = new DevExpress.XtraEditors.TextEdit();
-            this.teTCKimlikNo = new DevExpress.XtraEditors.TextEdit();
+            this.teTCID = new DevExpress.XtraEditors.TextEdit();
             this.lueNationality = new DevExpress.XtraEditors.LookUpEdit();
             this.teHomePostCode = new DevExpress.XtraEditors.TextEdit();
             this.lueHomeCity = new DevExpress.XtraEditors.LookUpEdit();
@@ -164,7 +164,7 @@
             this.lciHomePhone2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomeCity = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciTCKimlikNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDigerBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -242,7 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teEMSNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProfession.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teOfficer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teTCKimlikNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).BeginInit();
@@ -298,7 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTCKimlikNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).BeginInit();
@@ -805,7 +805,7 @@
             this.layoutControl1.Controls.Add(this.teEMSNo);
             this.layoutControl1.Controls.Add(this.teProfession);
             this.layoutControl1.Controls.Add(this.teOfficer);
-            this.layoutControl1.Controls.Add(this.teTCKimlikNo);
+            this.layoutControl1.Controls.Add(this.teTCID);
             this.layoutControl1.Controls.Add(this.lueNationality);
             this.layoutControl1.Controls.Add(this.teHomePostCode);
             this.layoutControl1.Controls.Add(this.lueHomeCity);
@@ -1156,13 +1156,13 @@
             this.teOfficer.StyleController = this.layoutControl1;
             this.teOfficer.TabIndex = 41;
             // 
-            // teTCKimlikNo
+            // teTCID
             // 
-            this.teTCKimlikNo.Location = new System.Drawing.Point(115, 92);
-            this.teTCKimlikNo.Name = "teTCKimlikNo";
-            this.teTCKimlikNo.Size = new System.Drawing.Size(152, 20);
-            this.teTCKimlikNo.StyleController = this.layoutControl1;
-            this.teTCKimlikNo.TabIndex = 32;
+            this.teTCID.Location = new System.Drawing.Point(115, 92);
+            this.teTCID.Name = "teTCID";
+            this.teTCID.Size = new System.Drawing.Size(152, 20);
+            this.teTCID.StyleController = this.layoutControl1;
+            this.teTCID.TabIndex = 32;
             // 
             // lueNationality
             // 
@@ -1266,6 +1266,9 @@
             this.lueInsuranceType.Name = "lueInsuranceType";
             this.lueInsuranceType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueInsuranceType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Kod"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueInsuranceType.Properties.DisplayMember = "Value";
             this.lueInsuranceType.Properties.ValueMember = "ID";
             this.lueInsuranceType.Size = new System.Drawing.Size(152, 20);
@@ -1422,7 +1425,7 @@
             this.lueStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueStatus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Kod"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Değer")});
             this.lueStatus.Properties.DisplayMember = "Value";
             this.lueStatus.Properties.NullText = "";
@@ -1500,12 +1503,12 @@
             this.lciHomePhone2,
             this.lciHomePhone1,
             this.lciHomeCity,
-            this.lciTCKimlikNo,
+            this.lciTCID,
             this.lciSex,
             this.lciMaritalStatus});
             this.lcgHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.lcgHastaBilgileri.Name = "lcgHastaBilgileri";
-            this.lcgHastaBilgileri.Size = new System.Drawing.Size(951, 357);
+            this.lcgHastaBilgileri.Size = new System.Drawing.Size(788, 357);
             this.lcgHastaBilgileri.Text = "Hasta Bilgileri";
             // 
             // lciBirthDate
@@ -1758,15 +1761,15 @@
             this.lciHomeCity.Text = "İl";
             this.lciHomeCity.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // lciTCKimlikNo
+            // lciTCID
             // 
-            this.lciTCKimlikNo.Control = this.teTCKimlikNo;
-            this.lciTCKimlikNo.CustomizationFormText = "T.C. Kimlik No";
-            this.lciTCKimlikNo.Location = new System.Drawing.Point(0, 48);
-            this.lciTCKimlikNo.Name = "lciTCKimlikNo";
-            this.lciTCKimlikNo.Size = new System.Drawing.Size(247, 24);
-            this.lciTCKimlikNo.Text = "T.C. Kimlik No";
-            this.lciTCKimlikNo.TextSize = new System.Drawing.Size(87, 13);
+            this.lciTCID.Control = this.teTCID;
+            this.lciTCID.CustomizationFormText = "T.C. Kimlik No";
+            this.lciTCID.Location = new System.Drawing.Point(0, 48);
+            this.lciTCID.Name = "lciTCID";
+            this.lciTCID.Size = new System.Drawing.Size(247, 24);
+            this.lciTCID.Text = "T.C. Kimlik No";
+            this.lciTCID.TextSize = new System.Drawing.Size(87, 13);
             // 
             // lciSex
             // 
@@ -1798,7 +1801,7 @@
             this.lcgIsYeriBilgileri});
             this.lcgDigerBilgiler.Location = new System.Drawing.Point(0, 0);
             this.lcgDigerBilgiler.Name = "lcgDigerBilgiler";
-            this.lcgDigerBilgiler.Size = new System.Drawing.Size(951, 357);
+            this.lcgDigerBilgiler.Size = new System.Drawing.Size(788, 357);
             this.lcgDigerBilgiler.Text = "Diğer Bilgileri";
             // 
             // lcgEkBilgiler
@@ -2046,7 +2049,7 @@
             this.lciKurumOzelNot});
             this.lcgKurumOzelNot.Location = new System.Drawing.Point(0, 0);
             this.lcgKurumOzelNot.Name = "lcgKurumOzelNot";
-            this.lcgKurumOzelNot.Size = new System.Drawing.Size(951, 357);
+            this.lcgKurumOzelNot.Size = new System.Drawing.Size(788, 357);
             this.lcgKurumOzelNot.Text = "Kurum Özel Not";
             // 
             // lciKurumOzelNot
@@ -2382,7 +2385,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teEMSNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProfession.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teOfficer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teTCKimlikNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).EndInit();
@@ -2438,7 +2441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTCKimlikNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).EndInit();
@@ -2559,7 +2562,7 @@
         private DevExpress.XtraEditors.TextEdit teEMSNo;
         private DevExpress.XtraEditors.TextEdit teProfession;
         private DevExpress.XtraEditors.TextEdit teOfficer;
-        private DevExpress.XtraEditors.TextEdit teTCKimlikNo;
+        private DevExpress.XtraEditors.TextEdit teTCID;
         private DevExpress.XtraEditors.LookUpEdit lueNationality;
         private DevExpress.XtraEditors.TextEdit teHomePostCode;
         private DevExpress.XtraEditors.LookUpEdit lueHomeCity;
@@ -2573,7 +2576,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciHomeCity;
         private DevExpress.XtraLayout.LayoutControlItem lciHomePostCode;
         private DevExpress.XtraLayout.LayoutControlItem lciNationality;
-        private DevExpress.XtraLayout.LayoutControlItem lciTCKimlikNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciTCID;
         private DevExpress.XtraLayout.LayoutControlItem lciStatus;
         private DevExpress.XtraLayout.LayoutControlGroup lcgDigerBilgiler;
         private DevExpress.XtraLayout.LayoutControlGroup lcgEkBilgiler;

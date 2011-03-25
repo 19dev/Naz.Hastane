@@ -100,54 +100,54 @@ namespace Naz.Hastane.Data.Services
         #endregion
 
         #region MedulaDiabet
-        private static List<AcuteComplication> acuteComplication;
-        private static List<ApplicationReason> applicationReason;
-        private static List<DiseaseCode> diseaseCode;
-        private static List<EKG> ekg;
-        private static List<Exercise> exercise;
-        private static List<EyeExam> eyeExam;
-        private static List<FootExam> footExam;
-        private static List<HabitCode> habitCode;
-        private static List<PositiveNegative> positiveNegative;
-        private static List<ResidentialType> residentialType;
-        private static List<TBT> tbt;
-        private static List<VarYok> varYok;
+        private static List<AcuteComplication> acuteComplications;
+        private static List<ApplicationReason> applicationReasons;
+        private static List<DiseaseCode> diseaseCodes;
+        private static List<EKG> ekgs;
+        private static List<Exercise> exercises;
+        private static List<EyeExam> eyeExams;
+        private static List<FootExam> footExams;
+        private static List<HabitCode> habitCodes;
+        private static List<PositiveNegative> positiveNegatives;
+        private static List<ResidentialType> residentialTypes;
+        private static List<TBT> tbts;
+        private static List<VarYok> varYoks;
 
-        public static List<AcuteComplication> AcuteComplication
-        { get { return LookUpTable<AcuteComplication>(ref acuteComplication); } }
+        public static List<AcuteComplication> AcuteComplications
+        { get { return LookUpTable<AcuteComplication>(ref acuteComplications); } }
 
-        public static List<ApplicationReason> ApplicationReason
-        { get { return LookUpTable<ApplicationReason>(ref applicationReason); } }
+        public static List<ApplicationReason> ApplicationReasons
+        { get { return LookUpTable<ApplicationReason>(ref applicationReasons); } }
 
-        public static List<DiseaseCode> DiseaseCode
-        { get { return LookUpTable<DiseaseCode>(ref diseaseCode); } }
+        public static List<DiseaseCode> DiseaseCodes
+        { get { return LookUpTable<DiseaseCode>(ref diseaseCodes); } }
 
-        public static List<EKG> EKG
-        { get { return LookUpTable<EKG>(ref ekg); } }
+        public static List<EKG> EKGs
+        { get { return LookUpTable<EKG>(ref ekgs); } }
 
-        public static List<Exercise> Exercise
-        { get { return LookUpTable<Exercise>(ref exercise); } }
+        public static List<Exercise> Exercises
+        { get { return LookUpTable<Exercise>(ref exercises); } }
 
-        public static List<EyeExam> EyeExam
-        { get { return LookUpTable<EyeExam>(ref eyeExam); } }
+        public static List<EyeExam> EyeExams
+        { get { return LookUpTable<EyeExam>(ref eyeExams); } }
 
-        public static List<FootExam> FootExam
-        { get { return LookUpTable<FootExam>(ref footExam); } }
+        public static List<FootExam> FootExams
+        { get { return LookUpTable<FootExam>(ref footExams); } }
 
-        public static List<HabitCode> HabitCode
-        { get { return LookUpTable<HabitCode>(ref habitCode); } }
+        public static List<HabitCode> HabitCodes
+        { get { return LookUpTable<HabitCode>(ref habitCodes); } }
 
-        public static List<PositiveNegative> PositiveNegative
-        { get { return LookUpTable<PositiveNegative>(ref positiveNegative); } }
+        public static List<PositiveNegative> PositiveNegatives
+        { get { return LookUpTable<PositiveNegative>(ref positiveNegatives); } }
 
-        public static List<ResidentialType> ResidentialType
-        { get { return LookUpTable<ResidentialType>(ref residentialType); } }
+        public static List<ResidentialType> ResidentialTypes
+        { get { return LookUpTable<ResidentialType>(ref residentialTypes); } }
 
-        public static List<TBT> TBT
-        { get { return LookUpTable<TBT>(ref tbt); } }
+        public static List<TBT> TBTs
+        { get { return LookUpTable<TBT>(ref tbts); } }
 
-        public static List<VarYok> VarYok
-        { get { return LookUpTable<VarYok>(ref varYok); } }
+        public static List<VarYok> VarYoks
+        { get { return LookUpTable<VarYok>(ref varYoks); } }
         #endregion
 
         #region MedulaProvision

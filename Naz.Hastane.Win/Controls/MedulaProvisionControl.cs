@@ -34,19 +34,21 @@ namespace Naz.Hastane.Win.Controls
             InitializeComponent();
         }
 
-        private void MedulaSorgu_Load(object sender, EventArgs e)
+        private void MedulaProvisionControl_Load(object sender, EventArgs e)
         {
-            if (!DesignMode)
-            {
-                this.lueBranchCode.Properties.DataSource = LookUpServices.BranchCodes;
-                this.lueFollowUpType.Properties.DataSource = LookUpServices.FollowUpTypes;
-                this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
-                this.lueProvisionType.Properties.DataSource = LookUpServices.ProvisionTypes;
-                this.lueRelationType.Properties.DataSource = LookUpServices.RelationTypes;
-                this.lueTransferorInstitution.Properties.DataSource = LookUpServices.TransferorInstitutions;
-                this.lueTreatmentStyle.Properties.DataSource = LookUpServices.TreatmentStyles;
-                this.lueTreatmentType.Properties.DataSource = LookUpServices.TreatmentTypes;
-            }
+            if (!DesignMode) LoadLookUps();
+        }
+
+        private void LoadLookUps()
+        {
+            this.lueBranchCode.Properties.DataSource = LookUpServices.BranchCodes;
+            this.lueFollowUpType.Properties.DataSource = LookUpServices.FollowUpTypes;
+            this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
+            this.lueProvisionType.Properties.DataSource = LookUpServices.ProvisionTypes;
+            this.lueRelationType.Properties.DataSource = LookUpServices.RelationTypes;
+            this.lueTransferorInstitution.Properties.DataSource = LookUpServices.TransferorInstitutions;
+            this.lueTreatmentStyle.Properties.DataSource = LookUpServices.TreatmentStyles;
+            this.lueTreatmentType.Properties.DataSource = LookUpServices.TreatmentTypes;
         }
 
         public void CallMedula(string TCID)

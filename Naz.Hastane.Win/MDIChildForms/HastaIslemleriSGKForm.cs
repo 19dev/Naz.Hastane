@@ -52,12 +52,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueTreatmentStyle.EditValue = "A";
 
         }
+
+        private void LoadLookUps()
+        {
+            this.lueStatus.Properties.DataSource = LookUpServices.PatientRelations;
+            this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
+            this.lueNationality.Properties.DataSource = LookUpServices.Nationalities;
+            this.lueHomeCity.Properties.DataSource = LookUpServices.Cities;
+            this.lueJobCity.Properties.DataSource = LookUpServices.Cities;
+        }
+
         private void InitBindings()
         {
-
+            LoadLookUps();
             this.tePatientNo.DataBindings.Add("EditValue", _Patient, "PatientNo");
             this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany");
-            this.teTCKimlikNo.DataBindings.Add("EditValue", _Patient, "TCId");
+            this.teTCID.DataBindings.Add("EditValue", _Patient, "TCId");
             this.teFirstName.DataBindings.Add("EditValue", _Patient, "FirstName");
             this.teLastName.DataBindings.Add("EditValue", _Patient, "LastName");
             this.rgSex.DataBindings.Add("EditValue", _Patient, "Sex");
@@ -66,9 +76,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teMotherName.DataBindings.Add("EditValue", _Patient, "MotherName");
             this.teBirthPlace.DataBindings.Add("EditValue", _Patient, "BirthPlace");
             this.deBirthDate.DataBindings.Add("EditValue", _Patient, "BirthDate");
-            BindLookUpEdit(this.lueStatus, _Patient, "Status", LookUpServices.PatientRelations);
-            BindLookUpEdit(this.lueInsuranceType, _Patient, "InsuranceType", LookUpServices.InsuranceTypes);
-            BindLookUpEdit(this.medulaSorgu.lueInsuranceType, _Patient, "InsuranceType", LookUpServices.InsuranceTypes);
+            this.lueStatus.DataBindings.Add("EditValue", _Patient, "Status");
+            this.lueInsuranceType.DataBindings.Add("EditValue", _Patient, "InsuranceType");
+            this.medulaSorgu.lueInsuranceType.DataBindings.Add("EditValue", _Patient, "InsuranceType");
             this.teHomePhone2.DataBindings.Add("EditValue", _Patient, "HomePhone2");
             this.teHomePhone1.DataBindings.Add("EditValue", _Patient, "HomePhone1");
 
@@ -76,12 +86,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teIDNO.DataBindings.Add("EditValue", _Patient, "IDNO");
             this.deIDDate.DataBindings.Add("EditValue", _Patient, "IDDate");
             this.teIDPlace.DataBindings.Add("EditValue", _Patient, "IDPlace");
-            BindLookUpEdit(this.lueNationality, _Patient, "Nationality", LookUpServices.Nationalities);
+            this.lueNationality.DataBindings.Add("EditValue", _Patient, "Nationality");
             this.teHomeAddress.DataBindings.Add("EditValue", _Patient, "HomeAddress");
             this.teHomeDistrict.DataBindings.Add("EditValue", _Patient, "HomeDistrict");
             this.teHomeTown.DataBindings.Add("EditValue", _Patient, "HomeTown");
             this.teHomePostCode.DataBindings.Add("EditValue", _Patient, "HomePostCode");
-            BindLookUpEdit(this.lueHomeCity, _Patient, "HomeCity", LookUpServices.Cities, "Value", "Value");
+            this.lueHomeCity.DataBindings.Add("EditValue", _Patient, "HomeCity");
 
             this.teOfficer.DataBindings.Add("EditValue", _Patient, "Officer");
             this.teProfession.DataBindings.Add("EditValue", _Patient, "Profession");
@@ -98,21 +108,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teJobName.DataBindings.Add("EditValue", _Patient, "JobName");
             this.teJobNo.DataBindings.Add("EditValue", _Patient, "JobNo");
             this.meJobAddress.DataBindings.Add("EditValue", _Patient, "JobAddress");
-            BindLookUpEdit(this.lueJobCity, _Patient, "JobCity", LookUpServices.Cities, "Value", "Value");
+            this.lueJobCity.DataBindings.Add("EditValue", _Patient, "JobCity");
             this.teJobPostCode.DataBindings.Add("EditValue", _Patient, "JobPostCode");
             this.teJobPhone1.DataBindings.Add("EditValue", _Patient, "JobPhone1");
             this.teJobPhone2.DataBindings.Add("EditValue", _Patient, "JobPhone2");
             this.teJobFax.DataBindings.Add("EditValue", _Patient, "JobFax");
             this.teEmail.DataBindings.Add("EditValue", _Patient, "Email");
 
-        }
-        private void BindLookUpEdit(LookUpEdit lue, Object dataSource, string property, Object dataSourceList,
-            string displayMember = "Value", string valueMember = "ID")
-        {
-            lue.Properties.DisplayMember = displayMember;
-            lue.Properties.ValueMember = valueMember;
-            lue.Properties.DataSource = dataSourceList;
-            lue.DataBindings.Add("EditValue", dataSource, property);
         }
 
         private void sbKaydet_Click(object sender, EventArgs e)
@@ -190,7 +192,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbMernis_Click(object sender, EventArgs e)
         {
-            this.mernisSorgu.CallMernis(this.teTCKimlikNo.Text);
+            this.mernisSorgu.CallMernis(this.teTCID.Text);
         }
 
         private void sbMedula_Click(object sender, EventArgs e)
@@ -203,7 +205,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (this._Doctor == null)
                 return;
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
-            this.medulaSorgu.CallMedula(this.teTCKimlikNo.Text);
+            this.medulaSorgu.CallMedula(this.teTCID.Text);
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)
