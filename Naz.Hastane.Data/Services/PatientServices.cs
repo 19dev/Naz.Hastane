@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 using NHibernate;
 using NHibernate.Criterion;
-using Naz.Hastane.Data.Entities.LookUp;
-using Naz.Hastane.Medula.HastaKabulIslemleri;
 
 namespace Naz.Hastane.Data.Services
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
+﻿using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using FluentNHibernate.Mapping;
 
 namespace Naz.Hastane.Data.Mappings.LookUp

@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-
 using DevExpress.LookAndFeel;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
@@ -13,15 +12,16 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-
 using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Data.Entities.LookUp.General;
 using Naz.Hastane.Data.Entities.LookUp.MedulaDiabet;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Reports;
 using Naz.Hastane.Win.MDIChildForms;
 using Naz.Utilities.Classes;
+using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm {
@@ -90,6 +90,7 @@ namespace Naz.Hastane.Win {
                 }
             }
         }
+
         /// <summary>
         /// The form is ready so do our application specific loading and
         /// initialization
@@ -839,205 +840,218 @@ namespace Naz.Hastane.Win {
             ShowNewDocument(newForm);
 
         }
-        private void iBloodType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<BloodType>(LookUpServices.BloodTypes, e.Item.Caption);
-        }
 
-        private void iCity_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<City>(LookUpServices.Cities, e.Item.Caption);
-        }
-
-        private void iDepository_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Depository>(LookUpServices.Depositories, e.Item.Caption);
-        }
-
-        private void iDoctor_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Doctor>(LookUpServices.Doctors, e.Item.Caption);
-        }
-
-        private void iFunctionGroup_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FunctionGroup>(LookUpServices.FunctionGroups, e.Item.Caption);
-        }
-
-        private void iFunctionType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FunctionGroupType>(LookUpServices.FunctionGroupTypes, e.Item.Caption);
-        }
-
-        private void iInsuranceType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<InsuranceType>(LookUpServices.InsuranceTypes, e.Item.Caption);
-        }
-
-        private void iService_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Service>(LookUpServices.Services, e.Item.Caption);
-        }
-
-        private void iIDType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<IDType>(LookUpServices.IDTypes, e.Item.Caption);
-        }
-
-        private void iNationality_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Nationality>(LookUpServices.Nationalities, e.Item.Caption);
-        }
-
-        private void iPatientRelations_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<PatientRelation>(LookUpServices.PatientRelations, e.Item.Caption);
-        }
-
-        private void iProvisionType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<ProvisionType>(LookUpServices.ProvisionTypes, e.Item.Caption);
-        }
-
-        private void iRelationType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<RelationType>(LookUpServices.RelationTypes, e.Item.Caption);
-        }
-
-        private void iSystemSettings_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<SystemSetting>(LookUpServices.SystemSettings, e.Item.Caption);
-        }
-
-        private void iTransferorIns_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TransferorInstitution>(LookUpServices.TransferorInstitutions, e.Item.Caption);
-        }
-
-        private void iTreatmentStyle_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TreatmentStyle>(LookUpServices.TreatmentStyles, e.Item.Caption);
-        }
-
-        private void iTreatmentType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TreatmentType>(LookUpServices.TreatmentTypes, e.Item.Caption);
-        }
-
-        private void iUser_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //ShowNewLookUpForm<User>(LookUpServices.Users, e.Item.Caption);
-        }
-
-        private void iVAT_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<VAT>(LookUpServices.VATs, e.Item.Caption);
-        }
-
-        private void iWareHouse_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Warehouse>(LookUpServices.Warehouses, e.Item.Caption);
-        }
-
+        #region MDIChildForms
         private void iPrinterSettings_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<PrinterSettingsForm>();
         }
-
         private void iAccDailyReport_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<AccountingDailySummaryForm>();
         }
-
-        private void iBranchCodes_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<BranchCode>(LookUpServices.BranchCodes, e.Item.Caption);
-        }
-
         private void iSGKInvoiceVoucher_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<SGKInvoiveVoucherForm>();
         }
-
         private void iDiabetReports_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<DiabetForm>();
         }
-
         private void iMedulaMedicationReports_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<MedulaMedicationReportForm>();
         }
-
         private void iTreatmentReports_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<MedulaMedicationReportForm>();
         }
-
         private void iDatabaseTest_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewDocument<DBTestForm>();
         }
+        private void iProvisionType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<ProvisionType>(LookUpServices.ProvisionTypes, e.Item.Caption);
+        }
+        #endregion
 
-        #region MedulaDiabet
+        #region General Definitions
+        private void iBloodType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<BloodType>(LookUpServices.BloodTypes, e.Item.Caption);
+        }
+        private void iCity_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<City>(LookUpServices.Cities, e.Item.Caption);
+        }
+        private void iIDType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<IDType>(LookUpServices.IDTypes, e.Item.Caption);
+        }
+        private void iNationality_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Nationality>(LookUpServices.Nationalities, e.Item.Caption);
+        }
+        private void iPatientRelations_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<PatientRelation>(LookUpServices.PatientRelations, e.Item.Caption);
+        }
+        private void iVAT_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<VAT>(LookUpServices.VATs, e.Item.Caption);
+        }
+        private void iYesNo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<YesNo>(LookUpServices.YesNos, e.Item.Caption);
+        }
+        #endregion
+
+        #region Medula Diabet
         private void iAcuteComplication_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<AcuteComplication>(LookUpServices.AcuteComplications, e.Item.Caption);
         }
-
         private void iApplicationReason_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<ApplicationReason>(LookUpServices.ApplicationReasons, e.Item.Caption);
         }
-
         private void iDiseaseCode_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<DiseaseCode>(LookUpServices.DiseaseCodes, e.Item.Caption);
         }
-
         private void iEKG_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<EKG>(LookUpServices.EKGs, e.Item.Caption);
         }
-
         private void iExercise_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<Exercise>(LookUpServices.Exercises, e.Item.Caption);
         }
-
         private void iEyeExam_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<EyeExam>(LookUpServices.EyeExams, e.Item.Caption);
         }
-
         private void iFootExam_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<FootExam>(LookUpServices.FootExams, e.Item.Caption);
         }
-
         private void iHabitCode_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<HabitCode>(LookUpServices.HabitCodes, e.Item.Caption);
         }
-
         private void iPositiveNegative_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<PositiveNegative>(LookUpServices.PositiveNegatives, e.Item.Caption);
         }
-
         private void iResidentialType_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<ResidentialType>(LookUpServices.ResidentialTypes, e.Item.Caption);
         }
-
         private void iTBT_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<TBT>(LookUpServices.TBTs, e.Item.Caption);
         }
-
         private void iVarYok_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowNewLookUpForm<VarYok>(LookUpServices.VarYoks, e.Item.Caption);
+        }
+        #endregion
+
+        #region Medula Provizyon
+        private void iBranchCodes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<BranchCode>(LookUpServices.BranchCodes, e.Item.Caption);
+        }
+        private void iFollowUpType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<FollowUpType>(LookUpServices.FollowUpTypes, e.Item.Caption);
+        }
+        private void iInsuranceType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<InsuranceType>(LookUpServices.InsuranceTypes, e.Item.Caption);
+        }
+        private void iTreatmentType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<TreatmentType>(LookUpServices.TreatmentTypes, e.Item.Caption);
+        }
+        private void iTreatmentStyle_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<TreatmentStyle>(LookUpServices.TreatmentStyles, e.Item.Caption);
+        }
+        private void iTransferorIns_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<TransferorInstitution>(LookUpServices.TransferorInstitutions, e.Item.Caption);
+        }
+        private void iRelationType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<RelationType>(LookUpServices.RelationTypes, e.Item.Caption);
+        }
+        #endregion
+
+        #region Medula Report
+        private void iDoctorType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<DoctorType>(LookUpServices.DoctorTypes, e.Item.Caption);
+        }
+        private void iMedulaReportType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<MedulaReportType>(LookUpServices.MedulaReportTypes, e.Item.Caption);
+        }
+        private void iEditingType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<EditingType>(LookUpServices.EditingTypes, e.Item.Caption);
+        }
+        private void iMedulaReportTreatmentType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<MedulaReportTreatmentType>(LookUpServices.MedulaReportTreatmentTypes, e.Item.Caption);
+        }
+        private void iESWTBodyPart_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<ESWTBodyPart>(LookUpServices.ESWTBodyParts, e.Item.Caption);
+        }
+        private void iFTRBodyPart_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<FTRBodyPart>(LookUpServices.FTRBodyParts, e.Item.Caption);
+        }
+        #endregion
+
+        #region Special Definitions
+        private void iDepository_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Depository>(LookUpServices.Depositories, e.Item.Caption);
+        }
+        private void iDoctor_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Doctor>(LookUpServices.Doctors, e.Item.Caption);
+        }
+        private void iFunctionGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<FunctionGroup>(LookUpServices.FunctionGroups, e.Item.Caption);
+        }
+        private void iFunctionType_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<FunctionGroupType>(LookUpServices.FunctionGroupTypes, e.Item.Caption);
+        }
+        private void iRooms_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Room>(LookUpServices.Rooms, e.Item.Caption);
+        }
+        private void iService_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Service>(LookUpServices.Services, e.Item.Caption);
+        }
+        private void iSystemSettings_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<SystemSetting>(LookUpServices.SystemSettings, e.Item.Caption);
+        }
+        private void iUser_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<User>(LookUpServices.Users, e.Item.Caption);
+        }
+        private void iWareHouse_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowNewLookUpForm<Warehouse>(LookUpServices.Warehouses, e.Item.Caption);
         }
         #endregion
 

@@ -1,7 +1,4 @@
-using System.Collections.Generic; 
-using System.Text; 
-using System;
-using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 
 namespace Naz.Hastane.Data.Entities {
     

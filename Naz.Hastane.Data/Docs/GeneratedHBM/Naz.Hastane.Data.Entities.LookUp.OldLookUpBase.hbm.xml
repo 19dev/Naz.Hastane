@@ -13,28 +13,29 @@
     <property name="Value" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="SLT" length="150" />
     </property>
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.SystemSetting, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="00" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.City, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="37" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.Depository, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="03" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.Doctor, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="07">
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.SystemSetting, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="00" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.General.City, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="37" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.General.Nationality, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="51" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.General.PatientRelation, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="10" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.General.VAT, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="02" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.Depository, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="03" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.Doctor, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="07">
       <property name="QueueNo" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <column name="SLX" />
       </property>
-      <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Service">
+      <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Special.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Service">
         <column name="SLXX" />
       </many-to-one>
     </subclass>
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.FunctionGroup, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="01">
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.FunctionGroup, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="01">
       <property name="FunctionGroupCode" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <column name="SLX" />
       </property>
-      <many-to-one class="Naz.Hastane.Data.Entities.LookUp.FunctionGroupType, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FunctionGroupType">
+      <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Special.FunctionGroupType, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FunctionGroupType">
         <column name="lngAnaIslemID" />
       </many-to-one>
     </subclass>
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.Nationality, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="51" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.PatientRelation, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="10" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="17">
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="17">
       <property name="SorguTuru" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <column name="SLY" />
       </property>
@@ -54,7 +55,6 @@
         <one-to-many class="Naz.Hastane.Data.Entities.SGKAutoExamination, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
       </bag>
     </subclass>
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.VAT, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="02" />
-    <subclass name="Naz.Hastane.Data.Entities.LookUp.Warehouse, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="04" />
+    <subclass name="Naz.Hastane.Data.Entities.LookUp.Special.Warehouse, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" discriminator-value="04" />
   </class>
 </hibernate-mapping>

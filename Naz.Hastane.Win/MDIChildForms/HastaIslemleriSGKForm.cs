@@ -1,22 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using Naz;
-using DevExpress.Skins;
-using DevExpress.XtraBars.Ribbon;
-using DevExpress.XtraBars.Ribbon.Gallery;
-using DevExpress.Utils.Drawing;
-using DevExpress.Utils;
-using DevExpress.Tutorials.Controls;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.LookAndFeel;
 using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
