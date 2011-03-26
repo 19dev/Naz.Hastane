@@ -1,5 +1,6 @@
 ﻿using Naz.Hastane.Data.Entities.LookUp.Special;
 using FluentNHibernate.Mapping;
+using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.Special
 {
@@ -7,7 +8,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
     {
         public ServiceMap()
         {
-            DiscriminatorValue("17");
+            DiscriminatorValue(LookUpDiscriminators.Service.GetDescription());
 
             Map(x => x.SorguTuru).Column("SLY");
             Map(x => x.Type).Column("SLXX");

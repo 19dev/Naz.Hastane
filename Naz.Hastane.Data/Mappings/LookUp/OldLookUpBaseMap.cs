@@ -31,6 +31,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         [Description("51")]
         Nationality
     }
+
     public class OldLookUpBaseMap : ClassMap<OldLookUpBase>
     {
         public OldLookUpBaseMap()

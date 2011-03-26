@@ -1,5 +1,7 @@
 ﻿using Naz.Hastane.Data.Entities.LookUp.Special;
 using FluentNHibernate.Mapping;
+using Naz.Hastane.Data.Services;
+using Naz.Hastane.Data.Mappings.LookUp;
 
 namespace Naz.Hastane.Data.Entities.Special
 {
@@ -7,7 +9,7 @@ namespace Naz.Hastane.Data.Entities.Special
     {
         public SystemSettingMap()
         {
-            DiscriminatorValue("00");
+            DiscriminatorValue(LookUpDiscriminators.SystemSettings.GetDescription());
         }
     }
 }
