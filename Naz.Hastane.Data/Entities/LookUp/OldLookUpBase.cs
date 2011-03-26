@@ -1,11 +1,14 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
     public class OldLookUpBase
     {
         public virtual string ID0 { get; set; }
+        [Description("Kod")]
         public virtual string ID { get; set; }
+        [Description("Değer")]
         public virtual string Value { get; set; }
 
         public override bool Equals(object obj)

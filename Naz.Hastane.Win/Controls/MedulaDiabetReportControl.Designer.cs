@@ -549,6 +549,7 @@
             // 
             // lueResidentialType
             // 
+            this.lueResidentialType.EnterMoveNextControl = true;
             this.lueResidentialType.Location = new System.Drawing.Point(173, 209);
             this.lueResidentialType.Name = "lueResidentialType";
             this.lueResidentialType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -576,6 +577,7 @@
             // deVisitDate
             // 
             this.deVisitDate.EditValue = null;
+            this.deVisitDate.EnterMoveNextControl = true;
             this.deVisitDate.Location = new System.Drawing.Point(173, 281);
             this.deVisitDate.Name = "deVisitDate";
             this.deVisitDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -588,6 +590,7 @@
             // 
             // teHealthInstituteCode
             // 
+            this.teHealthInstituteCode.EnterMoveNextControl = true;
             this.teHealthInstituteCode.Location = new System.Drawing.Point(173, 257);
             this.teHealthInstituteCode.Name = "teHealthInstituteCode";
             this.teHealthInstituteCode.Size = new System.Drawing.Size(218, 20);
@@ -596,6 +599,7 @@
             // 
             // teProtocolNo
             // 
+            this.teProtocolNo.EnterMoveNextControl = true;
             this.teProtocolNo.Location = new System.Drawing.Point(173, 233);
             this.teProtocolNo.Name = "teProtocolNo";
             this.teProtocolNo.Size = new System.Drawing.Size(218, 20);
@@ -605,6 +609,7 @@
             // deInsulinePompChangeDate
             // 
             this.deInsulinePompChangeDate.EditValue = null;
+            this.deInsulinePompChangeDate.EnterMoveNextControl = true;
             this.deInsulinePompChangeDate.Location = new System.Drawing.Point(830, 544);
             this.deInsulinePompChangeDate.Name = "deInsulinePompChangeDate";
             this.deInsulinePompChangeDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -618,6 +623,7 @@
             // deInsulinePumpDate
             // 
             this.deInsulinePumpDate.EditValue = null;
+            this.deInsulinePumpDate.EnterMoveNextControl = true;
             this.deInsulinePumpDate.Location = new System.Drawing.Point(830, 520);
             this.deInsulinePumpDate.Name = "deInsulinePumpDate";
             this.deInsulinePumpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -630,6 +636,7 @@
             // 
             // lueHasInsulinePump
             // 
+            this.lueHasInsulinePump.EnterMoveNextControl = true;
             this.lueHasInsulinePump.Location = new System.Drawing.Point(830, 472);
             this.lueHasInsulinePump.Name = "lueHasInsulinePump";
             this.lueHasInsulinePump.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -645,6 +652,7 @@
             // 
             // tePatientHospitalizedDay
             // 
+            this.tePatientHospitalizedDay.EnterMoveNextControl = true;
             this.tePatientHospitalizedDay.Location = new System.Drawing.Point(830, 448);
             this.tePatientHospitalizedDay.Name = "tePatientHospitalizedDay";
             this.tePatientHospitalizedDay.Size = new System.Drawing.Size(129, 20);
@@ -653,6 +661,7 @@
             // 
             // lueAcute
             // 
+            this.lueAcute.EnterMoveNextControl = true;
             this.lueAcute.Location = new System.Drawing.Point(830, 424);
             this.lueAcute.Name = "lueAcute";
             this.lueAcute.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -668,6 +677,7 @@
             // 
             // lueFootExam
             // 
+            this.lueFootExam.EnterMoveNextControl = true;
             this.lueFootExam.Location = new System.Drawing.Point(830, 400);
             this.lueFootExam.Name = "lueFootExam";
             this.lueFootExam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -683,6 +693,7 @@
             // 
             // lueSerebrovaskuler
             // 
+            this.lueSerebrovaskuler.EnterMoveNextControl = true;
             this.lueSerebrovaskuler.Location = new System.Drawing.Point(830, 376);
             this.lueSerebrovaskuler.Name = "lueSerebrovaskuler";
             this.lueSerebrovaskuler.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -698,6 +709,7 @@
             // 
             // lueKoroner
             // 
+            this.lueKoroner.EnterMoveNextControl = true;
             this.lueKoroner.Location = new System.Drawing.Point(830, 352);
             this.lueKoroner.Name = "lueKoroner";
             this.lueKoroner.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -713,6 +725,7 @@
             // 
             // lueMikroAlbumin
             // 
+            this.lueMikroAlbumin.EnterMoveNextControl = true;
             this.lueMikroAlbumin.Location = new System.Drawing.Point(568, 544);
             this.lueMikroAlbumin.Name = "lueMikroAlbumin";
             this.lueMikroAlbumin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -728,6 +741,7 @@
             // 
             // lueEKG
             // 
+            this.lueEKG.EnterMoveNextControl = true;
             this.lueEKG.Location = new System.Drawing.Point(568, 520);
             this.lueEKG.Name = "lueEKG";
             this.lueEKG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -743,6 +757,7 @@
             // 
             // lueAntiGAD
             // 
+            this.lueAntiGAD.EnterMoveNextControl = true;
             this.lueAntiGAD.Location = new System.Drawing.Point(568, 496);
             this.lueAntiGAD.Name = "lueAntiGAD";
             this.lueAntiGAD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -758,6 +773,7 @@
             // 
             // teALT
             // 
+            this.teALT.EnterMoveNextControl = true;
             this.teALT.Location = new System.Drawing.Point(568, 472);
             this.teALT.Name = "teALT";
             this.teALT.Size = new System.Drawing.Size(121, 20);
@@ -766,6 +782,7 @@
             // 
             // teHDL
             // 
+            this.teHDL.EnterMoveNextControl = true;
             this.teHDL.Location = new System.Drawing.Point(568, 448);
             this.teHDL.Name = "teHDL";
             this.teHDL.Size = new System.Drawing.Size(121, 20);
@@ -774,6 +791,7 @@
             // 
             // teLDL
             // 
+            this.teLDL.EnterMoveNextControl = true;
             this.teLDL.Location = new System.Drawing.Point(568, 424);
             this.teLDL.Name = "teLDL";
             this.teLDL.Size = new System.Drawing.Size(121, 20);
@@ -782,6 +800,7 @@
             // 
             // teTrigliserid
             // 
+            this.teTrigliserid.EnterMoveNextControl = true;
             this.teTrigliserid.Location = new System.Drawing.Point(568, 400);
             this.teTrigliserid.Name = "teTrigliserid";
             this.teTrigliserid.Size = new System.Drawing.Size(121, 20);
@@ -790,6 +809,7 @@
             // 
             // teKreatinin
             // 
+            this.teKreatinin.EnterMoveNextControl = true;
             this.teKreatinin.Location = new System.Drawing.Point(568, 376);
             this.teKreatinin.Name = "teKreatinin";
             this.teKreatinin.Size = new System.Drawing.Size(121, 20);
@@ -798,6 +818,7 @@
             // 
             // teHbA1C
             // 
+            this.teHbA1C.EnterMoveNextControl = true;
             this.teHbA1C.Location = new System.Drawing.Point(568, 352);
             this.teHbA1C.Name = "teHbA1C";
             this.teHbA1C.Size = new System.Drawing.Size(121, 20);
@@ -806,6 +827,7 @@
             // 
             // luePeriferik
             // 
+            this.luePeriferik.EnterMoveNextControl = true;
             this.luePeriferik.Location = new System.Drawing.Point(830, 328);
             this.luePeriferik.Name = "luePeriferik";
             this.luePeriferik.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -821,6 +843,7 @@
             // 
             // lueEyeExam
             // 
+            this.lueEyeExam.EnterMoveNextControl = true;
             this.lueEyeExam.Location = new System.Drawing.Point(830, 304);
             this.lueEyeExam.Name = "lueEyeExam";
             this.lueEyeExam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -836,6 +859,7 @@
             // 
             // teTPG
             // 
+            this.teTPG.EnterMoveNextControl = true;
             this.teTPG.Location = new System.Drawing.Point(568, 328);
             this.teTPG.Name = "teTPG";
             this.teTPG.Size = new System.Drawing.Size(121, 20);
@@ -844,6 +868,7 @@
             // 
             // teAPG
             // 
+            this.teAPG.EnterMoveNextControl = true;
             this.teAPG.Location = new System.Drawing.Point(568, 304);
             this.teAPG.Name = "teAPG";
             this.teAPG.Size = new System.Drawing.Size(121, 20);
@@ -861,6 +886,7 @@
             // 
             // lueDMTraining
             // 
+            this.lueDMTraining.EnterMoveNextControl = true;
             this.lueDMTraining.Location = new System.Drawing.Point(173, 397);
             this.lueDMTraining.Name = "lueDMTraining";
             this.lueDMTraining.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -871,6 +897,7 @@
             // 
             // teVKI
             // 
+            this.teVKI.EnterMoveNextControl = true;
             this.teVKI.Location = new System.Drawing.Point(829, 256);
             this.teVKI.Name = "teVKI";
             this.teVKI.Size = new System.Drawing.Size(130, 20);
@@ -879,6 +906,7 @@
             // 
             // teWeight
             // 
+            this.teWeight.EnterMoveNextControl = true;
             this.teWeight.Location = new System.Drawing.Point(829, 232);
             this.teWeight.Name = "teWeight";
             this.teWeight.Size = new System.Drawing.Size(130, 20);
@@ -887,6 +915,7 @@
             // 
             // teHeight
             // 
+            this.teHeight.EnterMoveNextControl = true;
             this.teHeight.Location = new System.Drawing.Point(829, 208);
             this.teHeight.Name = "teHeight";
             this.teHeight.Size = new System.Drawing.Size(130, 20);
@@ -895,6 +924,7 @@
             // 
             // teDiyastolik
             // 
+            this.teDiyastolik.EnterMoveNextControl = true;
             this.teDiyastolik.Location = new System.Drawing.Point(568, 256);
             this.teDiyastolik.Name = "teDiyastolik";
             this.teDiyastolik.Size = new System.Drawing.Size(120, 20);
@@ -903,6 +933,7 @@
             // 
             // teSistolik
             // 
+            this.teSistolik.EnterMoveNextControl = true;
             this.teSistolik.Location = new System.Drawing.Point(568, 232);
             this.teSistolik.Name = "teSistolik";
             this.teSistolik.Size = new System.Drawing.Size(120, 20);
@@ -911,6 +942,7 @@
             // 
             // teBloodSugar
             // 
+            this.teBloodSugar.EnterMoveNextControl = true;
             this.teBloodSugar.Location = new System.Drawing.Point(568, 208);
             this.teBloodSugar.Name = "teBloodSugar";
             this.teBloodSugar.Size = new System.Drawing.Size(120, 20);
@@ -919,6 +951,7 @@
             // 
             // lueGlucometre
             // 
+            this.lueGlucometre.EnterMoveNextControl = true;
             this.lueGlucometre.Location = new System.Drawing.Point(568, 160);
             this.lueGlucometre.Name = "lueGlucometre";
             this.lueGlucometre.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -934,6 +967,7 @@
             // 
             // lueApplicationReason
             // 
+            this.lueApplicationReason.EnterMoveNextControl = true;
             this.lueApplicationReason.Location = new System.Drawing.Point(568, 136);
             this.lueApplicationReason.Name = "lueApplicationReason";
             this.lueApplicationReason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -949,6 +983,7 @@
             // 
             // lueExercise
             // 
+            this.lueExercise.EnterMoveNextControl = true;
             this.lueExercise.Location = new System.Drawing.Point(568, 112);
             this.lueExercise.Name = "lueExercise";
             this.lueExercise.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -964,6 +999,7 @@
             // 
             // lueTBT
             // 
+            this.lueTBT.EnterMoveNextControl = true;
             this.lueTBT.Location = new System.Drawing.Point(568, 88);
             this.lueTBT.Name = "lueTBT";
             this.lueTBT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1006,6 +1042,7 @@
             // deDiagnosisDate
             // 
             this.deDiagnosisDate.EditValue = null;
+            this.deDiagnosisDate.EnterMoveNextControl = true;
             this.deDiagnosisDate.Location = new System.Drawing.Point(173, 604);
             this.deDiagnosisDate.Name = "deDiagnosisDate";
             this.deDiagnosisDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1018,6 +1055,7 @@
             // 
             // teDiagnosisCode
             // 
+            this.teDiagnosisCode.EnterMoveNextControl = true;
             this.teDiagnosisCode.Location = new System.Drawing.Point(173, 580);
             this.teDiagnosisCode.Name = "teDiagnosisCode";
             this.teDiagnosisCode.Size = new System.Drawing.Size(218, 20);
@@ -1026,6 +1064,7 @@
             // 
             // lueDoctorBranch
             // 
+            this.lueDoctorBranch.EnterMoveNextControl = true;
             this.lueDoctorBranch.Location = new System.Drawing.Point(173, 373);
             this.lueDoctorBranch.Name = "lueDoctorBranch";
             this.lueDoctorBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1036,6 +1075,7 @@
             // 
             // lueDoctorRegistration
             // 
+            this.lueDoctorRegistration.EnterMoveNextControl = true;
             this.lueDoctorRegistration.Location = new System.Drawing.Point(173, 349);
             this.lueDoctorRegistration.Name = "lueDoctorRegistration";
             this.lueDoctorRegistration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1046,6 +1086,7 @@
             // 
             // teLastName
             // 
+            this.teLastName.EnterMoveNextControl = true;
             this.teLastName.Location = new System.Drawing.Point(173, 124);
             this.teLastName.Name = "teLastName";
             this.teLastName.Size = new System.Drawing.Size(218, 20);
@@ -1054,6 +1095,7 @@
             // 
             // teFirstName
             // 
+            this.teFirstName.EnterMoveNextControl = true;
             this.teFirstName.Location = new System.Drawing.Point(173, 100);
             this.teFirstName.Name = "teFirstName";
             this.teFirstName.Size = new System.Drawing.Size(218, 20);
@@ -1062,6 +1104,7 @@
             // 
             // teTCID
             // 
+            this.teTCID.EnterMoveNextControl = true;
             this.teTCID.Location = new System.Drawing.Point(173, 76);
             this.teTCID.Name = "teTCID";
             this.teTCID.Size = new System.Drawing.Size(218, 20);
@@ -1070,6 +1113,7 @@
             // 
             // teHomePhone2
             // 
+            this.teHomePhone2.EnterMoveNextControl = true;
             this.teHomePhone2.Location = new System.Drawing.Point(173, 185);
             this.teHomePhone2.Name = "teHomePhone2";
             this.teHomePhone2.Properties.DisplayFormat.FormatString = "d";

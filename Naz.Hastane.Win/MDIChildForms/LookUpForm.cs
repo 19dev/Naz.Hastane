@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Naz.Hastane.Data.Services;
+using System.Reflection;
+using DevExpress.XtraGrid.Columns;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -21,6 +23,22 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             _lookUpTable = lookUpTable;
             InitializeComponent();
+
+            foreach (var member in typeof(T).GetMembers())
+            {
+                var attributes = member.GetCustomAttributes(true);
+                foreach (Attribute a in attributes)
+                {
+                    DescriptionAttribute da = a as DescriptionAttribute;
+                    if (da != null)
+                    {
+                        GridColumn column = this.gvLookUp.Columns.AddField(member.Name);
+                        column.Caption = da.Description;
+                        column.Visible = true;
+                    }
+                }
+            }
+
             this.gcLookUp.DataSource = _lookUpTable;
         }
 

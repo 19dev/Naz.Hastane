@@ -1,5 +1,8 @@
-﻿namespace Naz.Hastane.Data.Entities.LookUp.Special
+﻿using System.ComponentModel;
+
+namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    [Description("Ambar Tanımları")]
     public class Warehouse : OldLookUpBase
     {
     }

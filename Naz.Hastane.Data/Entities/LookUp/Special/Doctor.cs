@@ -1,8 +1,13 @@
-﻿namespace Naz.Hastane.Data.Entities.LookUp.Special
+﻿using System.ComponentModel;
+
+namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    [Description("Doktor Tanımları")]
     public class Doctor : OldLookUpBase
     {
+        [Description("Servis")]
         public virtual Service Service { get; set; } // SLXX
+        [Description("Sıra No")]
         public virtual float QueueNo { get; set; } // SLX Günlük Doktor SıraNo  => BEHAND.SERNO
 
         //Map(x => x.Value).Column("SLY"); // float

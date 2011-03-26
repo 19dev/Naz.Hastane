@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
@@ -10,11 +11,16 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
 
     }
 
+    [Description("Servis Tanımları")]
     public class Service : OldLookUpBase
     {
+        [Description("Sorgu Türü")]
         public virtual float SorguTuru { get; set; } // SLY Sorgu Turu Medula ??
+        [Description("Tipi")]
         public virtual string Type { get; set; } // SLXX 0: Poliklinik, 1:Yatış, 2:Acil SLXX
+        [Description("Branş Kodu")]
         public virtual string BranchCode { get; set; } // SLXA  Branş Kodu Medula
+        [Description("Tedavi Tipi")]
         public virtual string TreatmentType { get; set; } // SLYA Tedavi Tipi Medula
 
         //Map(x => x.Value).Column("SLX"); // float

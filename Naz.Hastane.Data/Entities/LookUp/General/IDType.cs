@@ -1,9 +1,9 @@
-﻿
+﻿using System.ComponentModel;
+
 namespace Naz.Hastane.Data.Entities.LookUp.General
 {
-    public class IDType
+    [Description("Kimlik Tipi")]
+    public class IDType : LookUpBase
     {
-        public virtual int ID { get; set; }
-        public virtual string Value { get; set; }
     }
 }
