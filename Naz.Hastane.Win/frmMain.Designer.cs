@@ -31,7 +31,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.bbiFontColorPopup = new DevExpress.XtraBars.BarButtonItem();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.pccBottom = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.sbExit = new DevExpress.XtraEditors.SimpleButton();
@@ -118,6 +118,14 @@ namespace Naz.Hastane.Win {
             this.iResidentialType = new DevExpress.XtraBars.BarButtonItem();
             this.iTBT = new DevExpress.XtraBars.BarButtonItem();
             this.iVarYok = new DevExpress.XtraBars.BarButtonItem();
+            this.iDoctorType = new DevExpress.XtraBars.BarButtonItem();
+            this.iMedulaReportType = new DevExpress.XtraBars.BarButtonItem();
+            this.iEditingType = new DevExpress.XtraBars.BarButtonItem();
+            this.iMedulaReportTreatmentType = new DevExpress.XtraBars.BarButtonItem();
+            this.iESWTBodyPart = new DevExpress.XtraBars.BarButtonItem();
+            this.iFTRBodyPart = new DevExpress.XtraBars.BarButtonItem();
+            this.iYesNo = new DevExpress.XtraBars.BarButtonItem();
+            this.iRooms = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -134,8 +142,10 @@ namespace Naz.Hastane.Win {
             this.rbDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgGeneralDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbMedulaDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgMedulaProvision = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaDiabet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgMedulaReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFont = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -148,20 +158,10 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.rbMedulaDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgMedulaReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.iDoctorType = new DevExpress.XtraBars.BarButtonItem();
-            this.iMedulaReportType = new DevExpress.XtraBars.BarButtonItem();
-            this.iEditingType = new DevExpress.XtraBars.BarButtonItem();
-            this.iMedulaReportTreatmentType = new DevExpress.XtraBars.BarButtonItem();
-            this.iESWTBodyPart = new DevExpress.XtraBars.BarButtonItem();
-            this.iFTRBodyPart = new DevExpress.XtraBars.BarButtonItem();
-            this.iYesNo = new DevExpress.XtraBars.BarButtonItem();
-            this.iRooms = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmAppMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pccBottom)).BeginInit();
             this.pccBottom.SuspendLayout();
@@ -260,7 +260,7 @@ namespace Naz.Hastane.Win {
             this.gddFont.ItemLinks.Add(this.beiFontSize);
             this.gddFont.ItemLinks.Add(this.bbiFontColorPopup);
             this.gddFont.Name = "gddFont";
-            this.gddFont.Ribbon = this.ribbonControl1;
+            this.gddFont.Ribbon = this.rcMain;
             this.gddFont.Popup += new System.EventHandler(this.gddFont_Popup);
             // 
             // beiFontSize
@@ -311,11 +311,11 @@ namespace Naz.Hastane.Win {
             this.popupControlContainer1.TabIndex = 6;
             this.popupControlContainer1.Visible = false;
             // 
-            // ribbonControl1
+            // rcMain
             // 
-            this.ribbonControl1.ApplicationButtonDropDownControl = this.pmAppMain;
-            this.ribbonControl1.ApplicationButtonText = null;
-            this.ribbonControl1.Categories.AddRange(new DevExpress.XtraBars.BarManagerCategory[] {
+            this.rcMain.ApplicationButtonDropDownControl = this.pmAppMain;
+            this.rcMain.ApplicationButtonText = null;
+            this.rcMain.Categories.AddRange(new DevExpress.XtraBars.BarManagerCategory[] {
             new DevExpress.XtraBars.BarManagerCategory("File", new System.Guid("4b511317-d784-42ba-b4ed-0d2a746d6c1f")),
             new DevExpress.XtraBars.BarManagerCategory("Edit", new System.Guid("7c2486e1-92ea-4293-ad55-b819f61ff7f1")),
             new DevExpress.XtraBars.BarManagerCategory("Format", new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258")),
@@ -330,11 +330,11 @@ namespace Naz.Hastane.Win {
             // 
             // 
             // 
-            this.ribbonControl1.ExpandCollapseItem.Id = 0;
-            this.ribbonControl1.ExpandCollapseItem.Name = "";
-            this.ribbonControl1.Images = this.imageCollection2;
-            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem,
+            this.rcMain.ExpandCollapseItem.Id = 0;
+            this.rcMain.ExpandCollapseItem.Name = "";
+            this.rcMain.Images = this.imageCollection2;
+            this.rcMain.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.rcMain.ExpandCollapseItem,
             this.iSakla,
             this.iReplace,
             this.iYeni,
@@ -425,33 +425,33 @@ namespace Naz.Hastane.Win {
             this.iFTRBodyPart,
             this.iYesNo,
             this.iRooms});
-            this.ribbonControl1.LargeImages = this.imageCollection1;
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 235;
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
+            this.rcMain.LargeImages = this.imageCollection1;
+            this.rcMain.Location = new System.Drawing.Point(0, 0);
+            this.rcMain.MaxItemId = 236;
+            this.rcMain.Name = "rcMain";
+            this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
-            this.ribbonControl1.PageCategoryAlignment = DevExpress.XtraBars.Ribbon.RibbonPageCategoryAlignment.Right;
-            this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
-            this.ribbonControl1.PageHeaderItemLinks.Add(this.iHakkinda);
-            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.rcMain.PageCategoryAlignment = DevExpress.XtraBars.Ribbon.RibbonPageCategoryAlignment.Right;
+            this.rcMain.PageHeaderItemLinks.Add(this.biStyle);
+            this.rcMain.PageHeaderItemLinks.Add(this.iHakkinda);
+            this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPatient,
             this.rbDefinitions,
             this.rbMedulaDefinitions,
             this.ribbonPage3});
-            this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemPictureEdit1,
             this.riicStyle});
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.rbMedulaDefinitions;
-            this.ribbonControl1.Size = new System.Drawing.Size(1274, 149);
-            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
-            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iSakla);
-            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iReplace, true);
-            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iPaintStyle);
-            this.ribbonControl1.TransparentEditors = true;
-            this.ribbonControl1.ApplicationButtonDoubleClick += new System.EventHandler(this.ribbonControl1_ApplicationButtonDoubleClick);
+            this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
+            this.rcMain.SelectedPage = this.rbMedulaDefinitions;
+            this.rcMain.Size = new System.Drawing.Size(1274, 149);
+            this.rcMain.StatusBar = this.ribbonStatusBar1;
+            this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
+            this.rcMain.Toolbar.ItemLinks.Add(this.iReplace, true);
+            this.rcMain.Toolbar.ItemLinks.Add(this.iPaintStyle);
+            this.rcMain.TransparentEditors = true;
+            this.rcMain.ApplicationButtonDoubleClick += new System.EventHandler(this.ribbonControl1_ApplicationButtonDoubleClick);
             // 
             // pmAppMain
             // 
@@ -461,7 +461,7 @@ namespace Naz.Hastane.Win {
             this.pmAppMain.ItemLinks.Add(this.iPrint);
             this.pmAppMain.ItemLinks.Add(this.iKapat, true);
             this.pmAppMain.Name = "pmAppMain";
-            this.pmAppMain.Ribbon = this.ribbonControl1;
+            this.pmAppMain.Ribbon = this.rcMain;
             this.pmAppMain.RightPaneControlContainer = this.pccAppMenu;
             this.pmAppMain.ShowRightPane = true;
             // 
@@ -473,7 +473,7 @@ namespace Naz.Hastane.Win {
             this.pccBottom.Controls.Add(this.sbExit);
             this.pccBottom.Location = new System.Drawing.Point(260, 409);
             this.pccBottom.Name = "pccBottom";
-            this.pccBottom.Ribbon = this.ribbonControl1;
+            this.pccBottom.Ribbon = this.rcMain;
             this.pccBottom.Size = new System.Drawing.Size(115, 28);
             this.pccBottom.TabIndex = 6;
             this.pccBottom.Visible = false;
@@ -580,7 +580,7 @@ namespace Naz.Hastane.Win {
             this.pccAppMenu.Controls.Add(this.panelControl1);
             this.pccAppMenu.Location = new System.Drawing.Point(260, 241);
             this.pccAppMenu.Name = "pccAppMenu";
-            this.pccAppMenu.Ribbon = this.ribbonControl1;
+            this.pccAppMenu.Ribbon = this.rcMain;
             this.pccAppMenu.Size = new System.Drawing.Size(310, 162);
             this.pccAppMenu.TabIndex = 3;
             this.pccAppMenu.Visible = false;
@@ -766,7 +766,7 @@ namespace Naz.Hastane.Win {
             this.gddFontColor.Gallery.ShowItemText = true;
             this.gddFontColor.Gallery.SizeMode = DevExpress.XtraBars.Ribbon.GallerySizeMode.Both;
             this.gddFontColor.Name = "gddFontColor";
-            this.gddFontColor.Ribbon = this.ribbonControl1;
+            this.gddFontColor.Ribbon = this.rcMain;
             this.gddFontColor.Popup += new System.EventHandler(this.gddFontColor_Popup);
             // 
             // siPosition
@@ -1305,6 +1305,70 @@ namespace Naz.Hastane.Win {
             this.iVarYok.Name = "iVarYok";
             this.iVarYok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iVarYok_ItemClick);
             // 
+            // iDoctorType
+            // 
+            this.iDoctorType.Caption = "Doktor Tipi";
+            this.iDoctorType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iDoctorType.Id = 227;
+            this.iDoctorType.Name = "iDoctorType";
+            this.iDoctorType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDoctorType_ItemClick);
+            // 
+            // iMedulaReportType
+            // 
+            this.iMedulaReportType.Caption = "Rapor Tipi";
+            this.iMedulaReportType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iMedulaReportType.Id = 228;
+            this.iMedulaReportType.Name = "iMedulaReportType";
+            this.iMedulaReportType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMedulaReportType_ItemClick);
+            // 
+            // iEditingType
+            // 
+            this.iEditingType.Caption = "Düzenleme Türü";
+            this.iEditingType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iEditingType.Id = 229;
+            this.iEditingType.Name = "iEditingType";
+            this.iEditingType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iEditingType_ItemClick);
+            // 
+            // iMedulaReportTreatmentType
+            // 
+            this.iMedulaReportTreatmentType.Caption = "Tedavi Raporu Türü";
+            this.iMedulaReportTreatmentType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iMedulaReportTreatmentType.Id = 230;
+            this.iMedulaReportTreatmentType.Name = "iMedulaReportTreatmentType";
+            this.iMedulaReportTreatmentType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMedulaReportTreatmentType_ItemClick);
+            // 
+            // iESWTBodyPart
+            // 
+            this.iESWTBodyPart.Caption = "ESWT Vücut Bölgesi Kodu";
+            this.iESWTBodyPart.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iESWTBodyPart.Id = 231;
+            this.iESWTBodyPart.Name = "iESWTBodyPart";
+            this.iESWTBodyPart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iESWTBodyPart_ItemClick);
+            // 
+            // iFTRBodyPart
+            // 
+            this.iFTRBodyPart.Caption = "FTR Vücut Bölgesi Kodu";
+            this.iFTRBodyPart.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iFTRBodyPart.Id = 232;
+            this.iFTRBodyPart.Name = "iFTRBodyPart";
+            this.iFTRBodyPart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iFTRBodyPart_ItemClick);
+            // 
+            // iYesNo
+            // 
+            this.iYesNo.Caption = "Evet Hayýr";
+            this.iYesNo.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
+            this.iYesNo.Id = 233;
+            this.iYesNo.Name = "iYesNo";
+            this.iYesNo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYesNo_ItemClick);
+            // 
+            // iRooms
+            // 
+            this.iRooms.Caption = "Odalar";
+            this.iRooms.CategoryGuid = new System.Guid("5196fd68-73d2-4c7c-9cc9-938d35cfbbf0");
+            this.iRooms.Id = 234;
+            this.iRooms.Name = "iRooms";
+            this.iRooms.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iRooms_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1458,6 +1522,15 @@ namespace Naz.Hastane.Win {
             this.rpgGeneralDefinitions.Name = "rpgGeneralDefinitions";
             this.rpgGeneralDefinitions.Text = "Genel Tanýmlar";
             // 
+            // rbMedulaDefinitions
+            // 
+            this.rbMedulaDefinitions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgMedulaProvision,
+            this.rpgMedulaDiabet,
+            this.rpgMedulaReport});
+            this.rbMedulaDefinitions.Name = "rbMedulaDefinitions";
+            this.rbMedulaDefinitions.Text = "Medula Tanýmlarý";
+            // 
             // rpgMedulaProvision
             // 
             this.rpgMedulaProvision.ItemLinks.Add(this.iBranchCodes);
@@ -1486,6 +1559,17 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaDiabet.ItemLinks.Add(this.iVarYok);
             this.rpgMedulaDiabet.Name = "rpgMedulaDiabet";
             this.rpgMedulaDiabet.Text = "Medula Diabet";
+            // 
+            // rpgMedulaReport
+            // 
+            this.rpgMedulaReport.ItemLinks.Add(this.iDoctorType);
+            this.rpgMedulaReport.ItemLinks.Add(this.iMedulaReportType);
+            this.rpgMedulaReport.ItemLinks.Add(this.iEditingType);
+            this.rpgMedulaReport.ItemLinks.Add(this.iMedulaReportTreatmentType);
+            this.rpgMedulaReport.ItemLinks.Add(this.iESWTBodyPart);
+            this.rpgMedulaReport.ItemLinks.Add(this.iFTRBodyPart);
+            this.rpgMedulaReport.Name = "rpgMedulaReport";
+            this.rpgMedulaReport.Text = "Medula Raporlarý";
             // 
             // ribbonPage3
             // 
@@ -1556,7 +1640,7 @@ namespace Naz.Hastane.Win {
             this.ribbonStatusBar1.ItemLinks.Add(this.siDocName, true);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 754);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Ribbon = this.rcMain;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1274, 23);
             // 
             // pmNew
@@ -1564,7 +1648,7 @@ namespace Naz.Hastane.Win {
             this.pmNew.ItemLinks.Add(this.iYeniHasta);
             this.pmNew.ItemLinks.Add(this.iTemplate);
             this.pmNew.Name = "pmNew";
-            this.pmNew.Ribbon = this.ribbonControl1;
+            this.pmNew.Ribbon = this.rcMain;
             // 
             // defaultLookAndFeel1
             // 
@@ -1585,97 +1669,13 @@ namespace Naz.Hastane.Win {
             this.pmMain.ItemLinks.Add(this.iBullets);
             this.pmMain.MenuCaption = "Edit Menu";
             this.pmMain.Name = "pmMain";
-            this.pmMain.Ribbon = this.ribbonControl1;
+            this.pmMain.Ribbon = this.rcMain;
             this.pmMain.ShowCaption = true;
             // 
             // imageCollection3
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // rbMedulaDefinitions
-            // 
-            this.rbMedulaDefinitions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgMedulaProvision,
-            this.rpgMedulaDiabet,
-            this.rpgMedulaReport});
-            this.rbMedulaDefinitions.Name = "rbMedulaDefinitions";
-            this.rbMedulaDefinitions.Text = "Medula Tanýmlarý";
-            // 
-            // rpgMedulaReport
-            // 
-            this.rpgMedulaReport.ItemLinks.Add(this.iDoctorType);
-            this.rpgMedulaReport.ItemLinks.Add(this.iMedulaReportType);
-            this.rpgMedulaReport.ItemLinks.Add(this.iEditingType);
-            this.rpgMedulaReport.ItemLinks.Add(this.iMedulaReportTreatmentType);
-            this.rpgMedulaReport.ItemLinks.Add(this.iESWTBodyPart);
-            this.rpgMedulaReport.ItemLinks.Add(this.iFTRBodyPart);
-            this.rpgMedulaReport.Name = "rpgMedulaReport";
-            this.rpgMedulaReport.Text = "Medula Raporlarý";
-            // 
-            // iDoctorType
-            // 
-            this.iDoctorType.Caption = "Doktor Tipi";
-            this.iDoctorType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iDoctorType.Id = 227;
-            this.iDoctorType.Name = "iDoctorType";
-            this.iDoctorType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDoctorType_ItemClick);
-            // 
-            // iMedulaReportType
-            // 
-            this.iMedulaReportType.Caption = "Rapor Tipi";
-            this.iMedulaReportType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iMedulaReportType.Id = 228;
-            this.iMedulaReportType.Name = "iMedulaReportType";
-            this.iMedulaReportType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMedulaReportType_ItemClick);
-            // 
-            // iEditingType
-            // 
-            this.iEditingType.Caption = "Düzenleme Türü";
-            this.iEditingType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iEditingType.Id = 229;
-            this.iEditingType.Name = "iEditingType";
-            this.iEditingType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iEditingType_ItemClick);
-            // 
-            // iMedulaReportTreatmentType
-            // 
-            this.iMedulaReportTreatmentType.Caption = "Tedavi Raporu Türü";
-            this.iMedulaReportTreatmentType.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iMedulaReportTreatmentType.Id = 230;
-            this.iMedulaReportTreatmentType.Name = "iMedulaReportTreatmentType";
-            this.iMedulaReportTreatmentType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMedulaReportTreatmentType_ItemClick);
-            // 
-            // iESWTBodyPart
-            // 
-            this.iESWTBodyPart.Caption = "ESWT Vücut Bölgesi Kodu";
-            this.iESWTBodyPart.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iESWTBodyPart.Id = 231;
-            this.iESWTBodyPart.Name = "iESWTBodyPart";
-            this.iESWTBodyPart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iESWTBodyPart_ItemClick);
-            // 
-            // iFTRBodyPart
-            // 
-            this.iFTRBodyPart.Caption = "FTR Vücut Bölgesi Kodu";
-            this.iFTRBodyPart.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iFTRBodyPart.Id = 232;
-            this.iFTRBodyPart.Name = "iFTRBodyPart";
-            this.iFTRBodyPart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iFTRBodyPart_ItemClick);
-            // 
-            // iYesNo
-            // 
-            this.iYesNo.Caption = "Evet Hayýr";
-            this.iYesNo.CategoryGuid = new System.Guid("3212104e-d1d0-42c7-b7ff-4782e2865654");
-            this.iYesNo.Id = 233;
-            this.iYesNo.Name = "iYesNo";
-            this.iYesNo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYesNo_ItemClick);
-            // 
-            // iRooms
-            // 
-            this.iRooms.Caption = "Odalar";
-            this.iRooms.CategoryGuid = new System.Guid("5196fd68-73d2-4c7c-9cc9-938d35cfbbf0");
-            this.iRooms.Id = 234;
-            this.iRooms.Name = "iRooms";
-            this.iRooms.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iRooms_ItemClick);
             // 
             // frmMain
             // 
@@ -1684,11 +1684,11 @@ namespace Naz.Hastane.Win {
             this.Controls.Add(this.pccBottom);
             this.Controls.Add(this.pccAppMenu);
             this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.rcMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMain";
-            this.Ribbon = this.ribbonControl1;
+            this.Ribbon = this.rcMain;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "SurpMed";
@@ -1698,7 +1698,7 @@ namespace Naz.Hastane.Win {
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rcMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmAppMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pccBottom)).EndInit();
             this.pccBottom.ResumeLayout(false);
@@ -1744,7 +1744,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.PopupControlContainer popupControlContainer1;
         private System.ComponentModel.IContainer components;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl rcMain;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbPatient;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedulaReports;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;

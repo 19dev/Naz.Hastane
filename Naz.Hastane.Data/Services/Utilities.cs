@@ -32,7 +32,18 @@ namespace Naz.Hastane.Data.Services
             }
             //If we have no description attribute, just return the ToString of the enum
             return enumerationValue.ToString();
-
         }
+
+        public static string GetDescription(this Type t)
+        {
+            object[] attrs = t.GetCustomAttributes(typeof(DescriptionAttribute), false);
+
+            if (attrs != null && attrs.Length > 0)
+            {
+                return ((DescriptionAttribute)attrs[0]).Description;
+            }
+            return t.ToString();
+        }
+
     }
 }

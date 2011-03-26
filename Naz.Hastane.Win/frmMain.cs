@@ -107,12 +107,13 @@ namespace Naz.Hastane.Win {
             arMRUList = new MRUArrayList(pcAppMenuFileLabels, imageCollection3.Images[0], imageCollection3.Images[1]);
             arMRUList.LabelClicked += new EventHandler(OnLabelClicked);
             InitMostRecentFiles(arMRUList);
-            ribbonControl1.ForceInitialize();
+            rcMain.ForceInitialize();
             GalleryDropDown skins = new GalleryDropDown();
-            skins.Ribbon = ribbonControl1;
+            skins.Ribbon = rcMain;
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
             CreateHastaAraSGKForm();
+            this.rcMain.SelectedPage = rbPatient;
 
             // Force the loading of the database
             var doctors = LookUpServices.Doctors;
@@ -131,7 +132,7 @@ namespace Naz.Hastane.Win {
         void InitEditors() {
             riicStyle.Items.Add(new ImageComboBoxItem("Office 2007", RibbonControlStyle.Office2007, -1));
             riicStyle.Items.Add(new ImageComboBoxItem("Office 2010", RibbonControlStyle.Office2010, -1));
-            biStyle.EditValue = ribbonControl1.RibbonStyle;
+            biStyle.EditValue = rcMain.RibbonStyle;
         }
         public void ShowHideFormatCategory() {
             RibbonPageCategory selectionCategory = Ribbon.PageCategories[0] as RibbonPageCategory;
@@ -190,7 +191,7 @@ namespace Naz.Hastane.Win {
         }
         #region Init
         public void UpdateText() {
-            ribbonControl1.ApplicationCaption = "SurpMed V" + Application.ProductVersion;
+            rcMain.ApplicationCaption = "SurpMed V" + Application.ProductVersion;
             //ribbonControl1.ApplicationDocumentCaption = CurrentDocName + (CurrentModified ? "*" : "");
             //Text = string.Format("Ribbon Simple Pad ({0})", CurrentDocName);
             //siDocName.Caption = string.Format("  {0}", CurrentDocName);
@@ -461,7 +462,7 @@ namespace Naz.Hastane.Win {
             //CurrentRichTextBox.SelectAll();
         }
         private void ribbonPageGroup2_CaptionButtonClick(object sender, DevExpress.XtraBars.Ribbon.RibbonPageGroupEventArgs e) {
-            pmMain.ShowPopup(ribbonControl1.Manager, MousePosition);
+            pmMain.ShowPopup(rcMain.Manager, MousePosition);
         }
         #endregion
         #region SkinGallery
@@ -792,7 +793,7 @@ namespace Naz.Hastane.Win {
         #endregion
 
         private void ribbonControl1_ApplicationButtonDoubleClick(object sender, EventArgs e) {
-            if(ribbonControl1.RibbonStyle == RibbonControlStyle.Office2007)
+            if(rcMain.RibbonStyle == RibbonControlStyle.Office2007)
                 this.Close();
         }
 
@@ -801,7 +802,7 @@ namespace Naz.Hastane.Win {
         }
 
         private void biStyle_EditValueChanged(object sender, EventArgs e) {
-            ribbonControl1.RibbonStyle = (RibbonControlStyle)biStyle.EditValue;
+            rcMain.RibbonStyle = (RibbonControlStyle)biStyle.EditValue;
         }
 
         private void sbExit_Click(object sender, EventArgs e) {
