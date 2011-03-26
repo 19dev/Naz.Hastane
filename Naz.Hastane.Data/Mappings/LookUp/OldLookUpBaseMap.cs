@@ -31,9 +31,9 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         [Description("51")]
         Nationality
     }
-    public class LookUpBaseMap : ClassMap<LookUpBase>
+    public class OldLookUpBaseMap : ClassMap<OldLookUpBase>
     {
-        public LookUpBaseMap()
+        public OldLookUpBaseMap()
         {
             Table("KEYDAT");
             DiscriminateSubClassesOnColumn("SLK");

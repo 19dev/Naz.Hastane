@@ -5,10 +5,10 @@
       <generator class="identity" />
     </id>
     <property name="Value" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="Value" length="500" />
+      <column name="Value" length="255" />
     </property>
     <property name="Code" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="Code" />
+      <column name="Code" length="255" />
     </property>
   </class>
 </hibernate-mapping>

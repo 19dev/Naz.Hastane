@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
-    public class Doctor : LookUpBase
+    public class Doctor : OldLookUpBase
     {
         public virtual Service Service { get; set; } // SLXX
         public virtual float QueueNo { get; set; } // SLX Günlük Doktor SıraNo  => BEHAND.SERNO

@@ -1,11 +1,9 @@
 ﻿using System;
+using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
 {
-    public class RelationType
+    public class RelationType : LookUpBase
     {
-        public virtual int ID { get; set; }
-        public virtual string Value { get; set; }
-        public virtual int Code { get; set; }
     }
 }

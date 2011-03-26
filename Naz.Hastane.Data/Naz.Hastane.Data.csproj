@@ -87,6 +87,7 @@
     <Compile Include="Entities\LookUp\Doctor.cs" />
     <Compile Include="Entities\LookUp\City.cs" />
     <Compile Include="Entities\LookUp\IDType.cs" />
+    <Compile Include="Entities\LookUp\LookUpBase.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\AcuteComplication.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\ApplicationReason.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\DiseaseCode.cs" />
@@ -105,7 +106,7 @@
     <Compile Include="Entities\InsuranceCompany\InsuranceCompany.cs" />
     <Compile Include="Entities\LookUp\FunctionGroupType.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\InsuranceType.cs" />
-    <Compile Include="Entities\LookUp\LookUpBase.cs" />
+    <Compile Include="Entities\LookUp\OldLookUpBase.cs" />
     <Compile Include="Entities\LookUp\Nationality.cs" />
     <Compile Include="Entities\LookUp\PatientRelation.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\ProvisionType.cs" />
@@ -181,7 +182,7 @@
     <Compile Include="Mappings\LookUp\FunctionGroupMap.cs" />
     <Compile Include="Mappings\LookUp\FunctionGroupTypeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\InsuranceTypeMap.cs" />
-    <Compile Include="Mappings\LookUp\LookUpBaseMap.cs" />
+    <Compile Include="Mappings\LookUp\OldLookUpBaseMap.cs" />
     <Compile Include="Mappings\LookUp\NationalityMap.cs" />
     <Compile Include="Mappings\LookUp\PatientRelationMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\ProvisionTypeMap.cs" />

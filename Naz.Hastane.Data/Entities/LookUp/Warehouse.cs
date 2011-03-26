@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
-    public class Warehouse : LookUpBase
+    public class Warehouse : OldLookUpBase
     {
     }
 }

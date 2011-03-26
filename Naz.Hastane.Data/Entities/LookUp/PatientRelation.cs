@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
-    public class PatientRelation : LookUpBase
+    public class PatientRelation : OldLookUpBase
     {
     }
 }

@@ -13,7 +13,7 @@ namespace Naz.Hastane.Data.Entities.LookUp
 
     }
 
-    public class Service : LookUpBase
+    public class Service : OldLookUpBase
     {
         public virtual float SorguTuru { get; set; } // SLY Sorgu Turu Medula ??
         public virtual string Type { get; set; } // SLXX 0: Poliklinik, 1:Yatış, 2:Acil SLXX

@@ -1,10 +1,9 @@
 ﻿using System;
+using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
-    public class TBT
+    public class TBT : LookUpBase
     {
-        public virtual int ID { get; set; }
-        public virtual string Value { get; set; }
     }
 }

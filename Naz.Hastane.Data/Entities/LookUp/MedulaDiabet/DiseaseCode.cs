@@ -1,11 +1,9 @@
 ﻿using System;
+using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
-    public class DiseaseCode
+    public class DiseaseCode : LookUpBase
     {
-        public virtual int ID { get; set; }
-        public virtual string Value { get; set; }
-        public virtual int Code { get; set; }
     }
 }

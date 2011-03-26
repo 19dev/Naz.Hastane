@@ -11,8 +11,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         {
             Table("tlkpMedulaProvisionInsuranceType");
 
-            Id(x => x.ID);
-            Map(x => x.Value).Length(20);
+            Id(x => x.ID).Column("ID");
+
+            Map(x => x.Value).Column("Value").Length(255);
+            Map(x => x.Code).Column("Code").Length(255);
         }
     }
 }

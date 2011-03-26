@@ -11,9 +11,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         {
             Table("tlkpMedulaDiabetDiseaseCode");
 
-            Id(x => x.ID);
-            Map(x => x.Value).Length(255);
-            Map(x => x.Code);
+            Id(x => x.ID).Column("ID");
+
+            Map(x => x.Value).Column("Value").Length(255);
+            Map(x => x.Code).Column("Code").Length(255);
         }
     }
 }
