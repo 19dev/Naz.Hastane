@@ -128,6 +128,7 @@ namespace Naz.Hastane.Win {
             this.iRooms = new DevExpress.XtraBars.BarButtonItem();
             this.iKidneyType = new DevExpress.XtraBars.BarButtonItem();
             this.iKidneyStoneLocalisationCode = new DevExpress.XtraBars.BarButtonItem();
+            this.iProvisionType = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -160,7 +161,7 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iProvisionType = new DevExpress.XtraBars.BarButtonItem();
+            this.iEffectiveSubstances = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -431,10 +432,11 @@ namespace Naz.Hastane.Win {
             this.iRooms,
             this.iKidneyType,
             this.iKidneyStoneLocalisationCode,
-            this.iProvisionType});
+            this.iProvisionType,
+            this.iEffectiveSubstances});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 241;
+            this.rcMain.MaxItemId = 243;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1342,6 +1344,13 @@ namespace Naz.Hastane.Win {
             this.iKidneyStoneLocalisationCode.Id = 238;
             this.iKidneyStoneLocalisationCode.Name = "iKidneyStoneLocalisationCode";
             // 
+            // iProvisionType
+            // 
+            this.iProvisionType.Caption = "Provizyon Tipleri";
+            this.iProvisionType.CategoryGuid = new System.Guid("76f6c3fe-6b1a-4a71-a9ff-e65f77effefa");
+            this.iProvisionType.Id = 240;
+            this.iProvisionType.Name = "iProvisionType";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1544,6 +1553,7 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaReport.ItemLinks.Add(this.iFTRBodyPart);
             this.rpgMedulaReport.ItemLinks.Add(this.iKidneyType);
             this.rpgMedulaReport.ItemLinks.Add(this.iKidneyStoneLocalisationCode);
+            this.rpgMedulaReport.ItemLinks.Add(this.iEffectiveSubstances);
             this.rpgMedulaReport.Name = "rpgMedulaReport";
             this.rpgMedulaReport.Text = "Medula Raporlarý";
             // 
@@ -1653,12 +1663,11 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
-            // iProvisionType
+            // iEffectiveSubstances
             // 
-            this.iProvisionType.Caption = "Provizyon Tipleri";
-            this.iProvisionType.CategoryGuid = new System.Guid("76f6c3fe-6b1a-4a71-a9ff-e65f77effefa");
-            this.iProvisionType.Id = 240;
-            this.iProvisionType.Name = "iProvisionType";
+            this.iEffectiveSubstances.Caption = "barButtonItem1";
+            this.iEffectiveSubstances.Id = 242;
+            this.iEffectiveSubstances.Name = "iEffectiveSubstances";
             // 
             // frmMain
             // 
@@ -1843,6 +1852,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iKidneyType;
         private DevExpress.XtraBars.BarButtonItem iKidneyStoneLocalisationCode;
         private DevExpress.XtraBars.BarButtonItem iProvisionType;
+        private DevExpress.XtraBars.BarButtonItem iEffectiveSubstances;
 
     }
 }

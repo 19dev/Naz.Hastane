@@ -862,6 +862,7 @@ namespace Naz.Hastane.Win {
             iFTRBodyPart.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FTRBodyParts, args.Item.Caption);
             iKidneyType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.KidneyTypes, args.Item.Caption);           
             iKidneyStoneLocalisationCode.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.KidneyStoneLocalisationCodes, args.Item.Caption);
+            iEffectiveSubstances.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.EffectiveSubstances, args.Item.Caption);
 
             //Special LookUps
             iDepository.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Depositories, args.Item.Caption);

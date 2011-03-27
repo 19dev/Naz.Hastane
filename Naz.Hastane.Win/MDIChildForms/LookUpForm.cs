@@ -14,32 +14,17 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class LookUpForm<T> : MDIChildForm where T : new()
     {
-        IList<T> _lookUpTable;
+        IList<T> _LookUpTable;
         public LookUpForm()
         {
             InitializeComponent();
         }
         public LookUpForm(IList<T> lookUpTable)
         {
-            _lookUpTable = lookUpTable;
+            _LookUpTable = lookUpTable;
             InitializeComponent();
 
-            foreach (var member in typeof(T).GetMembers())
-            {
-                var attributes = member.GetCustomAttributes(true);
-                foreach (Attribute a in attributes)
-                {
-                    DescriptionAttribute da = a as DescriptionAttribute;
-                    if (da != null)
-                    {
-                        GridColumn column = this.gvLookUp.Columns.AddField(member.Name);
-                        column.Caption = da.Description;
-                        column.Visible = true;
-                    }
-                }
-            }
-
-            this.gcLookUp.DataSource = _lookUpTable;
+            UIUtilities.BindGrid(this.gvLookUp, _LookUpTable);
         }
 
         private void sbClose_Click(object sender, EventArgs e)

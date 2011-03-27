@@ -262,6 +262,7 @@ namespace Naz.Hastane.Data.Services
                             .OrderBy(x => x.Value).Asc
                             .Where(x => x.LicenseNo != "0")
                             .And(x => x.LicenseNo != null)
+                            .And(x => x.LicenseNo != "")
                             .List();
                     }
                 }
