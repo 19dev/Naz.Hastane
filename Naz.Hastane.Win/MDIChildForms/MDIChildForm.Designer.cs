@@ -21,13 +21,14 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void InitializeComponent() {
             this.SuspendLayout();
             // 
-            // frmMDIChild
+            // MDIChildForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
             this.ClientSize = new System.Drawing.Size(347, 201);
-            this.Name = "frmMDIChild";
+            this.Name = "MDIChildForm";
             this.Text = "frmMDIChild";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.frmPad_Closing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIChildForm_FormClosing);
             this.ResumeLayout(false);
 
         }

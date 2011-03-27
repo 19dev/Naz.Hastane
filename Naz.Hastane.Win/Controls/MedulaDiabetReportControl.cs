@@ -24,6 +24,8 @@ namespace Naz.Hastane.Win.Controls
 
         private void LoadLookUps()
         {
+            UIUtilities.BindLookUpEdit(this.lueDoctorBranch, LookUpServices.ServiceBranchCodes);
+            UIUtilities.BindLookUpEdit(this.lueDoctorRegistrationNo, LookUpServices.SGKLicensedDoctors);
             UIUtilities.BindLookUpEdit(this.lueResidentialType, LookUpServices.ResidentialTypes);
             UIUtilities.BindLookUpEdit(this.lueDMTraining,      LookUpServices.YesNos);
             UIUtilities.BindLookUpEdit(this.lueTBT,             LookUpServices.TBTs);

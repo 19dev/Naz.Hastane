@@ -91,7 +91,7 @@
             this.deDiagnosisDate = new DevExpress.XtraEditors.DateEdit();
             this.teDiagnosisCode = new DevExpress.XtraEditors.TextEdit();
             this.lueDoctorBranch = new DevExpress.XtraEditors.LookUpEdit();
-            this.lueDoctorRegistration = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueDoctorRegistrationNo = new DevExpress.XtraEditors.LookUpEdit();
             this.teLastName = new DevExpress.XtraEditors.TextEdit();
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.teTCID = new DevExpress.XtraEditors.TextEdit();
@@ -111,7 +111,7 @@
             this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciResidentialType = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDoctorInfo = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciDoctorRegistration = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorRegistrationNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDoctorBranch = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciAddDoctor = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDMTraining = new DevExpress.XtraLayout.LayoutControlItem();
@@ -235,7 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deDiagnosisDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teDiagnosisCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDoctorBranch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistration.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistrationNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).BeginInit();
@@ -255,7 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciResidentialType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDoctorInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistrationNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDoctorBranch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddDoctor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDMTraining)).BeginInit();
@@ -377,7 +377,7 @@
             this.lcDiabet.Controls.Add(this.deDiagnosisDate);
             this.lcDiabet.Controls.Add(this.teDiagnosisCode);
             this.lcDiabet.Controls.Add(this.lueDoctorBranch);
-            this.lcDiabet.Controls.Add(this.lueDoctorRegistration);
+            this.lcDiabet.Controls.Add(this.lueDoctorRegistrationNo);
             this.lcDiabet.Controls.Add(this.teLastName);
             this.lcDiabet.Controls.Add(this.teFirstName);
             this.lcDiabet.Controls.Add(this.teTCID);
@@ -636,6 +636,7 @@
             // 
             // lueHasInsulinePump
             // 
+            this.lueHasInsulinePump.EditValue = "";
             this.lueHasInsulinePump.EnterMoveNextControl = true;
             this.lueHasInsulinePump.Location = new System.Drawing.Point(830, 472);
             this.lueHasInsulinePump.Name = "lueHasInsulinePump";
@@ -661,6 +662,7 @@
             // 
             // lueAcute
             // 
+            this.lueAcute.EditValue = "";
             this.lueAcute.EnterMoveNextControl = true;
             this.lueAcute.Location = new System.Drawing.Point(830, 424);
             this.lueAcute.Name = "lueAcute";
@@ -677,6 +679,7 @@
             // 
             // lueFootExam
             // 
+            this.lueFootExam.EditValue = "";
             this.lueFootExam.EnterMoveNextControl = true;
             this.lueFootExam.Location = new System.Drawing.Point(830, 400);
             this.lueFootExam.Name = "lueFootExam";
@@ -693,6 +696,7 @@
             // 
             // lueSerebrovaskuler
             // 
+            this.lueSerebrovaskuler.EditValue = "";
             this.lueSerebrovaskuler.EnterMoveNextControl = true;
             this.lueSerebrovaskuler.Location = new System.Drawing.Point(830, 376);
             this.lueSerebrovaskuler.Name = "lueSerebrovaskuler";
@@ -709,6 +713,7 @@
             // 
             // lueKoroner
             // 
+            this.lueKoroner.EditValue = "";
             this.lueKoroner.EnterMoveNextControl = true;
             this.lueKoroner.Location = new System.Drawing.Point(830, 352);
             this.lueKoroner.Name = "lueKoroner";
@@ -725,6 +730,7 @@
             // 
             // lueMikroAlbumin
             // 
+            this.lueMikroAlbumin.EditValue = "";
             this.lueMikroAlbumin.EnterMoveNextControl = true;
             this.lueMikroAlbumin.Location = new System.Drawing.Point(568, 544);
             this.lueMikroAlbumin.Name = "lueMikroAlbumin";
@@ -741,6 +747,7 @@
             // 
             // lueEKG
             // 
+            this.lueEKG.EditValue = "";
             this.lueEKG.EnterMoveNextControl = true;
             this.lueEKG.Location = new System.Drawing.Point(568, 520);
             this.lueEKG.Name = "lueEKG";
@@ -757,6 +764,7 @@
             // 
             // lueAntiGAD
             // 
+            this.lueAntiGAD.EditValue = "";
             this.lueAntiGAD.EnterMoveNextControl = true;
             this.lueAntiGAD.Location = new System.Drawing.Point(568, 496);
             this.lueAntiGAD.Name = "lueAntiGAD";
@@ -827,6 +835,7 @@
             // 
             // luePeriferik
             // 
+            this.luePeriferik.EditValue = "";
             this.luePeriferik.EnterMoveNextControl = true;
             this.luePeriferik.Location = new System.Drawing.Point(830, 328);
             this.luePeriferik.Name = "luePeriferik";
@@ -843,6 +852,7 @@
             // 
             // lueEyeExam
             // 
+            this.lueEyeExam.EditValue = "";
             this.lueEyeExam.EnterMoveNextControl = true;
             this.lueEyeExam.Location = new System.Drawing.Point(830, 304);
             this.lueEyeExam.Name = "lueEyeExam";
@@ -951,6 +961,7 @@
             // 
             // lueGlucometre
             // 
+            this.lueGlucometre.EditValue = "";
             this.lueGlucometre.EnterMoveNextControl = true;
             this.lueGlucometre.Location = new System.Drawing.Point(568, 160);
             this.lueGlucometre.Name = "lueGlucometre";
@@ -967,6 +978,7 @@
             // 
             // lueApplicationReason
             // 
+            this.lueApplicationReason.EditValue = "";
             this.lueApplicationReason.EnterMoveNextControl = true;
             this.lueApplicationReason.Location = new System.Drawing.Point(568, 136);
             this.lueApplicationReason.Name = "lueApplicationReason";
@@ -983,6 +995,7 @@
             // 
             // lueExercise
             // 
+            this.lueExercise.EditValue = "";
             this.lueExercise.EnterMoveNextControl = true;
             this.lueExercise.Location = new System.Drawing.Point(568, 112);
             this.lueExercise.Name = "lueExercise";
@@ -999,6 +1012,7 @@
             // 
             // lueTBT
             // 
+            this.lueTBT.EditValue = "";
             this.lueTBT.EnterMoveNextControl = true;
             this.lueTBT.Location = new System.Drawing.Point(568, 88);
             this.lueTBT.Name = "lueTBT";
@@ -1073,16 +1087,17 @@
             this.lueDoctorBranch.StyleController = this.lcDiabet;
             this.lueDoctorBranch.TabIndex = 8;
             // 
-            // lueDoctorRegistration
+            // lueDoctorRegistrationNo
             // 
-            this.lueDoctorRegistration.EnterMoveNextControl = true;
-            this.lueDoctorRegistration.Location = new System.Drawing.Point(173, 349);
-            this.lueDoctorRegistration.Name = "lueDoctorRegistration";
-            this.lueDoctorRegistration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueDoctorRegistrationNo.EditValue = "";
+            this.lueDoctorRegistrationNo.EnterMoveNextControl = true;
+            this.lueDoctorRegistrationNo.Location = new System.Drawing.Point(173, 349);
+            this.lueDoctorRegistrationNo.Name = "lueDoctorRegistrationNo";
+            this.lueDoctorRegistrationNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDoctorRegistration.Size = new System.Drawing.Size(139, 20);
-            this.lueDoctorRegistration.StyleController = this.lcDiabet;
-            this.lueDoctorRegistration.TabIndex = 7;
+            this.lueDoctorRegistrationNo.Size = new System.Drawing.Size(139, 20);
+            this.lueDoctorRegistrationNo.StyleController = this.lcDiabet;
+            this.lueDoctorRegistrationNo.TabIndex = 7;
             // 
             // teLastName
             // 
@@ -1294,7 +1309,7 @@
             // 
             this.lcgDoctorInfo.CustomizationFormText = "Doktor Bilgileri";
             this.lcgDoctorInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciDoctorRegistration,
+            this.lciDoctorRegistrationNo,
             this.lciDoctorBranch,
             this.lciAddDoctor,
             this.lciDMTraining,
@@ -1304,15 +1319,15 @@
             this.lcgDoctorInfo.Size = new System.Drawing.Size(383, 231);
             this.lcgDoctorInfo.Text = "Doktor Bilgileri";
             // 
-            // lciDoctorRegistration
+            // lciDoctorRegistrationNo
             // 
-            this.lciDoctorRegistration.Control = this.lueDoctorRegistration;
-            this.lciDoctorRegistration.CustomizationFormText = "Doktor Tescil";
-            this.lciDoctorRegistration.Location = new System.Drawing.Point(0, 0);
-            this.lciDoctorRegistration.Name = "lciDoctorRegistration";
-            this.lciDoctorRegistration.Size = new System.Drawing.Size(280, 24);
-            this.lciDoctorRegistration.Text = "Doktor Tescil";
-            this.lciDoctorRegistration.TextSize = new System.Drawing.Size(133, 13);
+            this.lciDoctorRegistrationNo.Control = this.lueDoctorRegistrationNo;
+            this.lciDoctorRegistrationNo.CustomizationFormText = "Doktor Tescil";
+            this.lciDoctorRegistrationNo.Location = new System.Drawing.Point(0, 0);
+            this.lciDoctorRegistrationNo.Name = "lciDoctorRegistrationNo";
+            this.lciDoctorRegistrationNo.Size = new System.Drawing.Size(280, 24);
+            this.lciDoctorRegistrationNo.Text = "Doktor Tescil";
+            this.lciDoctorRegistrationNo.TextSize = new System.Drawing.Size(133, 13);
             // 
             // lciDoctorBranch
             // 
@@ -2066,7 +2081,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deDiagnosisDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teDiagnosisCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueDoctorBranch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistration.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistrationNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).EndInit();
@@ -2086,7 +2101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciResidentialType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDoctorInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistrationNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDoctorBranch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddDoctor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDMTraining)).EndInit();
@@ -2172,7 +2187,7 @@
         private DevExpress.XtraEditors.DateEdit deDiagnosisDate;
         private DevExpress.XtraEditors.TextEdit teDiagnosisCode;
         private DevExpress.XtraEditors.LookUpEdit lueDoctorBranch;
-        private DevExpress.XtraEditors.LookUpEdit lueDoctorRegistration;
+        private DevExpress.XtraEditors.LookUpEdit lueDoctorRegistrationNo;
         private DevExpress.XtraEditors.TextEdit teLastName;
         private DevExpress.XtraEditors.TextEdit teFirstName;
         private DevExpress.XtraEditors.TextEdit teTCID;
@@ -2184,7 +2199,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciFirstName;
         private DevExpress.XtraLayout.LayoutControlItem lciTCID;
         private DevExpress.XtraLayout.LayoutControlGroup lcgDoctorInfo;
-        private DevExpress.XtraLayout.LayoutControlItem lciDoctorRegistration;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorRegistrationNo;
         private DevExpress.XtraLayout.LayoutControlItem lciDoctorBranch;
         private DevExpress.XtraLayout.LayoutControlGroup lcgDiagnosis;
         private DevExpress.XtraLayout.LayoutControlItem lciDiagnosisCode;

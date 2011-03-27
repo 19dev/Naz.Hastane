@@ -15,17 +15,17 @@ namespace Naz.Hastane.Data.Services
     public static class LookUpServices
     {
 
-        public static List<T> GetAll<T>() where T : class
+        public static IList<T> GetAll<T>() where T : class
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
-                return (List<T>)session.CreateCriteria<T>().List<T>();
+                return session.CreateCriteria<T>().List<T>();
             }
         }
 
         #region LookUpLists
 
-        public static List<T> LookUpTable<T>(ref List<T> theObject) where T : class
+        public static IList<T> LookUpTable<T>(ref IList<T> theObject) where T : class
         {
             if (theObject == null)
                 theObject = GetAll<T>();
@@ -34,196 +34,200 @@ namespace Naz.Hastane.Data.Services
 
         #region General Lookup Tables
 
-        private static List<BloodType> _BloodTypes;
-        public static List<BloodType> BloodTypes
-        { get { return LookUpTable<BloodType>(ref _BloodTypes); } }
+        private static IList<BloodType> _BloodTypes;
+        public static IList<BloodType> BloodTypes
+        { get { return LookUpTable(ref _BloodTypes); } }
 
-        private static List<City> _Cities;
-        public static List<City> Cities
-        { get { return LookUpTable<City>(ref _Cities); } }
+        private static IList<City> _Cities;
+        public static IList<City> Cities
+        { get { return LookUpTable(ref _Cities); } }
 
-        private static List<IDType> _IDTypes;
-        public static List<IDType> IDTypes
-        { get { return LookUpTable<IDType>(ref _IDTypes); } }
+        private static IList<IDType> _IDTypes;
+        public static IList<IDType> IDTypes
+        { get { return LookUpTable(ref _IDTypes); } }
 
-        private static List<Nationality> _Nationalities;
-        public static List<Nationality> Nationalities
-        { get { return LookUpTable<Nationality>(ref _Nationalities); } }
+        private static IList<Nationality> _Nationalities;
+        public static IList<Nationality> Nationalities
+        { get { return LookUpTable(ref _Nationalities); } }
 
-        private static List<PatientRelation> _PatientRelations;
-        public static List<PatientRelation> PatientRelations
-        { get { return LookUpTable<PatientRelation>(ref _PatientRelations); } }
+        private static IList<PatientRelation> _PatientRelations;
+        public static IList<PatientRelation> PatientRelations
+        { get { return LookUpTable(ref _PatientRelations); } }
 
-        private static List<VAT> _VATs;
-        public static List<VAT> VATs
-        { get { return LookUpTable<VAT>(ref _VATs); } }
+        private static IList<VAT> _VATs;
+        public static IList<VAT> VATs
+        { get { return LookUpTable(ref _VATs); } }
 
-        private static List<YesNo> _YesNos;
-        public static List<YesNo> YesNos
-        { get { return LookUpTable<YesNo>(ref _YesNos); } }
+        private static IList<YesNo> _YesNos;
+        public static IList<YesNo> YesNos
+        { get { return LookUpTable(ref _YesNos); } }
 
         #endregion
 
         #region MedulaDiabet
-        private static List<AcuteComplication> _AcuteComplications;
-        public static List<AcuteComplication> AcuteComplications
-        { get { return LookUpTable<AcuteComplication>(ref _AcuteComplications); } }
+        private static IList<AcuteComplication> _AcuteComplications;
+        public static IList<AcuteComplication> AcuteComplications
+        { get { return LookUpTable(ref _AcuteComplications); } }
 
-        private static List<ApplicationReason> _ApplicationReasons;
-        public static List<ApplicationReason> ApplicationReasons
-        { get { return LookUpTable<ApplicationReason>(ref _ApplicationReasons); } }
+        private static IList<ApplicationReason> _ApplicationReasons;
+        public static IList<ApplicationReason> ApplicationReasons
+        { get { return LookUpTable(ref _ApplicationReasons); } }
 
-        private static List<DiseaseCode> _DiseaseCodes;
-        public static List<DiseaseCode> DiseaseCodes
-        { get { return LookUpTable<DiseaseCode>(ref _DiseaseCodes); } }
+        private static IList<DiseaseCode> _DiseaseCodes;
+        public static IList<DiseaseCode> DiseaseCodes
+        { get { return LookUpTable(ref _DiseaseCodes); } }
 
-        private static List<EKG> _EKGs;
-        public static List<EKG> EKGs
-        { get { return LookUpTable<EKG>(ref _EKGs); } }
+        private static IList<EKG> _EKGs;
+        public static IList<EKG> EKGs
+        { get { return LookUpTable(ref _EKGs); } }
 
-        private static List<Exercise> _Exercises;
-        public static List<Exercise> Exercises
-        { get { return LookUpTable<Exercise>(ref _Exercises); } }
+        private static IList<Exercise> _Exercises;
+        public static IList<Exercise> Exercises
+        { get { return LookUpTable(ref _Exercises); } }
 
-        private static List<EyeExam> _EyeExams;
-        public static List<EyeExam> EyeExams
-        { get { return LookUpTable<EyeExam>(ref _EyeExams); } }
+        private static IList<EyeExam> _EyeExams;
+        public static IList<EyeExam> EyeExams
+        { get { return LookUpTable(ref _EyeExams); } }
 
-        private static List<FootExam> _FootExams;
-        public static List<FootExam> FootExams
-        { get { return LookUpTable<FootExam>(ref _FootExams); } }
+        private static IList<FootExam> _FootExams;
+        public static IList<FootExam> FootExams
+        { get { return LookUpTable(ref _FootExams); } }
 
-        private static List<HabitCode> _HabitCodes;
-        public static List<HabitCode> HabitCodes
-        { get { return LookUpTable<HabitCode>(ref _HabitCodes); } }
+        private static IList<HabitCode> _HabitCodes;
+        public static IList<HabitCode> HabitCodes
+        { get { return LookUpTable(ref _HabitCodes); } }
 
-        private static List<PositiveNegative> _PositiveNegatives;
-        public static List<PositiveNegative> PositiveNegatives
-        { get { return LookUpTable<PositiveNegative>(ref _PositiveNegatives); } }
+        private static IList<PositiveNegative> _PositiveNegatives;
+        public static IList<PositiveNegative> PositiveNegatives
+        { get { return LookUpTable(ref _PositiveNegatives); } }
 
-        private static List<ResidentialType> _ResidentialTypes;
-        public static List<ResidentialType> ResidentialTypes
-        { get { return LookUpTable<ResidentialType>(ref _ResidentialTypes); } }
+        private static IList<ResidentialType> _ResidentialTypes;
+        public static IList<ResidentialType> ResidentialTypes
+        { get { return LookUpTable(ref _ResidentialTypes); } }
 
-        private static List<TBT> _TBTs;
-        public static List<TBT> TBTs
-        { get { return LookUpTable<TBT>(ref _TBTs); } }
+        private static IList<TBT> _TBTs;
+        public static IList<TBT> TBTs
+        { get { return LookUpTable(ref _TBTs); } }
 
-        private static List<VarYok> _VarYoks;
-        public static List<VarYok> VarYoks
-        { get { return LookUpTable<VarYok>(ref _VarYoks); } }
+        private static IList<VarYok> _VarYoks;
+        public static IList<VarYok> VarYoks
+        { get { return LookUpTable(ref _VarYoks); } }
         #endregion
 
         #region MedulaProvision
-        private static List<BranchCode> _BranchCodes;
-        public static List<BranchCode> BranchCodes
-        { get { return LookUpTable<BranchCode>(ref _BranchCodes); } }
+        private static IList<BranchCode> _BranchCodes;
+        public static IList<BranchCode> BranchCodes
+        { get { return LookUpTable(ref _BranchCodes); } }
 
-        private static List<FollowUpType> _FollowUpTypes;
-        public static List<FollowUpType> FollowUpTypes
-        { get { return LookUpTable<FollowUpType>(ref _FollowUpTypes); } }
+        private static IList<FollowUpType> _FollowUpTypes;
+        public static IList<FollowUpType> FollowUpTypes
+        { get { return LookUpTable(ref _FollowUpTypes); } }
 
-        private static List<InsuranceType> _InsuranceTypes;
-        public static List<InsuranceType> InsuranceTypes
-        { get { return LookUpTable<InsuranceType>(ref _InsuranceTypes); } }
+        private static IList<InsuranceType> _InsuranceTypes;
+        public static IList<InsuranceType> InsuranceTypes
+        { get { return LookUpTable(ref _InsuranceTypes); } }
 
-        private static List<ProvisionType> _ProvisionTypes;
-        public static List<ProvisionType> ProvisionTypes
-        { get { return LookUpTable<ProvisionType>(ref _ProvisionTypes); } }
+        private static IList<ProvisionType> _ProvisionTypes;
+        public static IList<ProvisionType> ProvisionTypes
+        { get { return LookUpTable(ref _ProvisionTypes); } }
 
-        private static List<RelationType> _RelationTypes;
-        public static List<RelationType> RelationTypes
-        { get { return LookUpTable<RelationType>(ref _RelationTypes); } }
+        private static IList<RelationType> _RelationTypes;
+        public static IList<RelationType> RelationTypes
+        { get { return LookUpTable(ref _RelationTypes); } }
 
-        private static List<TransferorInstitution> _TransferInstitutions;
-        public static List<TransferorInstitution> TransferorInstitutions
-        { get { return LookUpTable<TransferorInstitution>(ref _TransferInstitutions); } }
+        private static IList<TransferorInstitution> _TransferInstitutions;
+        public static IList<TransferorInstitution> TransferorInstitutions
+        { get { return LookUpTable(ref _TransferInstitutions); } }
 
-        private static List<TreatmentStyle> _TreatmentStyles;
-        public static List<TreatmentStyle> TreatmentStyles
-        { get { return LookUpTable<TreatmentStyle>(ref _TreatmentStyles); } }
+        private static IList<TreatmentStyle> _TreatmentStyles;
+        public static IList<TreatmentStyle> TreatmentStyles
+        { get { return LookUpTable(ref _TreatmentStyles); } }
 
-        private static List<TreatmentType> _TreatmentTypes;
-        public static List<TreatmentType> TreatmentTypes
-        { get { return LookUpTable<TreatmentType>(ref _TreatmentTypes); } }
+        private static IList<TreatmentType> _TreatmentTypes;
+        public static IList<TreatmentType> TreatmentTypes
+        { get { return LookUpTable(ref _TreatmentTypes); } }
         #endregion
 
         #region MedulaReport
-        private static List<DoctorType> _DoctorTypes;
-        public static List<DoctorType> DoctorTypes
-        { get { return LookUpTable<DoctorType>(ref _DoctorTypes); } }
+        private static IList<DoctorType> _DoctorTypes;
+        public static IList<DoctorType> DoctorTypes
+        { get { return LookUpTable(ref _DoctorTypes); } }
 
-        private static List<EditingType> _EditingTypes;
-        public static List<EditingType> EditingTypes
-        { get { return LookUpTable<EditingType>(ref _EditingTypes); } }
+        private static IList<EditingType> _EditingTypes;
+        public static IList<EditingType> EditingTypes
+        { get { return LookUpTable(ref _EditingTypes); } }
 
-        private static List<ESWTBodyPart> _ESWTBodyParts;
-        public static List<ESWTBodyPart> ESWTBodyParts
-        { get { return LookUpTable<ESWTBodyPart>(ref _ESWTBodyParts); } }
+        private static IList<EffectiveSubstance> _EffectiveSubstances;
+        public static IList<EffectiveSubstance> EffectiveSubstances
+        { get { return LookUpTable(ref _EffectiveSubstances); } }
 
-        private static List<FTRBodyPart> _FTRBodyParts;
-        public static List<FTRBodyPart> FTRBodyParts
-        { get { return LookUpTable<FTRBodyPart>(ref _FTRBodyParts); } }
+        private static IList<ESWTBodyPart> _ESWTBodyParts;
+        public static IList<ESWTBodyPart> ESWTBodyParts
+        { get { return LookUpTable(ref _ESWTBodyParts); } }
 
-        private static List<KidneyStoneLocalisationCode> _KidneyStoneLocalisationCodes;
-        public static List<KidneyStoneLocalisationCode> KidneyStoneLocalisationCodes
-        { get { return LookUpTable<KidneyStoneLocalisationCode>(ref _KidneyStoneLocalisationCodes); } }
+        private static IList<FTRBodyPart> _FTRBodyParts;
+        public static IList<FTRBodyPart> FTRBodyParts
+        { get { return LookUpTable(ref _FTRBodyParts); } }
 
-        private static List<KidneyType> _KidneyTypes;
-        public static List<KidneyType> KidneyTypes
-        { get { return LookUpTable<KidneyType>(ref _KidneyTypes); } }
+        private static IList<KidneyStoneLocalisationCode> _KidneyStoneLocalisationCodes;
+        public static IList<KidneyStoneLocalisationCode> KidneyStoneLocalisationCodes
+        { get { return LookUpTable(ref _KidneyStoneLocalisationCodes); } }
 
-        private static List<MedulaReportTreatmentType> _MedulaReportTreatmentTypes;
-        public static List<MedulaReportTreatmentType> MedulaReportTreatmentTypes
-        { get { return LookUpTable<MedulaReportTreatmentType>(ref _MedulaReportTreatmentTypes); } }
+        private static IList<KidneyType> _KidneyTypes;
+        public static IList<KidneyType> KidneyTypes
+        { get { return LookUpTable(ref _KidneyTypes); } }
 
-        private static List<MedulaReportType> _MedulaReportTypes;
-        public static List<MedulaReportType> MedulaReportTypes
-        { get { return LookUpTable<MedulaReportType>(ref _MedulaReportTypes); } }
+        private static IList<MedulaReportTreatmentType> _MedulaReportTreatmentTypes;
+        public static IList<MedulaReportTreatmentType> MedulaReportTreatmentTypes
+        { get { return LookUpTable(ref _MedulaReportTreatmentTypes); } }
+
+        private static IList<MedulaReportType> _MedulaReportTypes;
+        public static IList<MedulaReportType> MedulaReportTypes
+        { get { return LookUpTable(ref _MedulaReportTypes); } }
 
         #endregion
 
         #region Special LookUp Tables
-        private static List<Depository> _Depositories;
-        public static List<Depository> Depositories
-        { get { return LookUpTable<Depository>(ref _Depositories); } }
+        private static IList<Depository> _Depositories;
+        public static IList<Depository> Depositories
+        { get { return LookUpTable(ref _Depositories); } }
 
-        private static List<Doctor> _Doctors;
-        public static List<Doctor> Doctors
-        { get { return LookUpTable<Doctor>(ref _Doctors); } }
+        private static IList<Doctor> _Doctors;
+        public static IList<Doctor> Doctors
+        { get { return LookUpTable(ref _Doctors); } }
 
-        private static List<FunctionGroup> _FunctionGroups;
-        public static List<FunctionGroup> FunctionGroups
-        { get { return LookUpTable<FunctionGroup>(ref _FunctionGroups); } }
+        private static IList<FunctionGroup> _FunctionGroups;
+        public static IList<FunctionGroup> FunctionGroups
+        { get { return LookUpTable(ref _FunctionGroups); } }
 
-        private static List<FunctionGroupType> _FunctionGroupTypes;
-        public static List<FunctionGroupType> FunctionGroupTypes
-        { get { return LookUpTable<FunctionGroupType>(ref _FunctionGroupTypes); } }
+        private static IList<FunctionGroupType> _FunctionGroupTypes;
+        public static IList<FunctionGroupType> FunctionGroupTypes
+        { get { return LookUpTable(ref _FunctionGroupTypes); } }
 
-        private static List<Room> _Rooms;
-        public static List<Room> Rooms
-        { get { return LookUpTable<Room>(ref _Rooms); } }
+        private static IList<Room> _Rooms;
+        public static IList<Room> Rooms
+        { get { return LookUpTable(ref _Rooms); } }
 
-        private static List<Service> _Services;
-        public static List<Service> Services
-        { get { return LookUpTable<Service>(ref _Services); } }
+        private static IList<Service> _Services;
+        public static IList<Service> Services
+        { get { return LookUpTable(ref _Services); } }
 
-        private static List<SystemSetting> _SystemSettings;
-        public static List<SystemSetting> SystemSettings
-        { get { return LookUpTable<SystemSetting>(ref _SystemSettings); } }
+        private static IList<SystemSetting> _SystemSettings;
+        public static IList<SystemSetting> SystemSettings
+        { get { return LookUpTable(ref _SystemSettings); } }
 
-        private static List<User> _Users;
-        public static List<User> Users
-        { get { return LookUpTable<User>(ref _Users); } }
+        private static IList<User> _Users;
+        public static IList<User> Users
+        { get { return LookUpTable(ref _Users); } }
 
-        private static List<Warehouse> _Warehouses;
-        public static List<Warehouse> Warehouses
-        { get { return LookUpTable<Warehouse>(ref _Warehouses); } }
+        private static IList<Warehouse> _Warehouses;
+        public static IList<Warehouse> Warehouses
+        { get { return LookUpTable(ref _Warehouses); } }
 
         #endregion
 
-        private static List<Doctor> _SGKDoctors;
-        public static List<Doctor> SGKDoctors
+        private static IList<Doctor> _SGKDoctors;
+        public static IList<Doctor> SGKDoctors
         { 
             get 
             {
@@ -231,39 +235,77 @@ namespace Naz.Hastane.Data.Services
                 {
                     using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
                     {
-                        _SGKDoctors = (List<Doctor>)session.QueryOver<Doctor>()
+                        _SGKDoctors = session.QueryOver<Doctor>()
                             .OrderBy(x => x.Value).Asc
                             .JoinQueryOver(x => x.Service)
                                 .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
                             .JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
                             .JoinQueryOver<Product>(x => x.Product)
                             .TransformUsing(Transformers.DistinctRootEntity)
-
-                            .List<Doctor>();
+                            .List();
                     }
                 }
                 return _SGKDoctors;
             }
         }
 
-        #endregion
-
-        public static List<SGKAutoExamination> SGKAutoExaminations(string servisCode)
+        private static IList<Doctor> _SGKLicensedDoctors;
+        public static IList<Doctor> SGKLicensedDoctors
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            get
             {
-                return (List<SGKAutoExamination>)session.QueryOver<SGKAutoExamination>()
-                    .Where(s => s.Service.ID == servisCode)
-                    .List<SGKAutoExamination>();
+                if (_SGKLicensedDoctors == null)
+                {
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    {
+                        _SGKLicensedDoctors = session.QueryOver<Doctor>()
+                            .OrderBy(x => x.Value).Asc
+                            .Where(x => x.LicenseNo != "0")
+                            .And(x => x.LicenseNo != null)
+                            .List();
+                    }
+                }
+                return _SGKLicensedDoctors;
             }
         }
 
-        public static List<AccountingDailySummary> GetAccountingDailySummary(DateTime date)
+        private static IList<Service> _ServiceBranchCodes;
+        public static IList<Service> ServiceBranchCodes
+        {
+            get
+            {
+                if (_ServiceBranchCodes == null)
+                {
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    {
+                        _ServiceBranchCodes = session.QueryOver<Service>()
+                            .OrderBy(x => x.Value).Asc
+                            .Where(x => x.BranchCode != "0")
+                            .List();
+                    }
+                }
+                return _ServiceBranchCodes;
+            }
+        }
+
+        #endregion
+
+        public static IList<SGKAutoExamination> SGKAutoExaminations(string servisCode)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                return session.QueryOver<SGKAutoExamination>()
+                    .Where(s => s.Service.ID == servisCode)
+                    .List();
+            }
+        }
+
+        public static IList<AccountingDailySummary> GetAccountingDailySummary(DateTime date)
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 string s = date.ToString("MMddyyyy");
-                return (List<AccountingDailySummary>)session.GetNamedQuery("sp_GetGunlukMuhasebeFisi")
+                return session.GetNamedQuery("sp_GetGunlukMuhasebeFisi")
                     .SetDateTime("Date", date.Date)
                     .List<AccountingDailySummary>();
             }

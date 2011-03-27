@@ -19,8 +19,8 @@ namespace Naz.Hastane.Win.Controls
         }
         private void LoadLookUps()
         {
-            //UIUtilities.BindLookUpEdit(this.lueDoctorBranch, LookUpServices.BranchCodes);
-            //UIUtilities.BindLookUpEdit(this.lueDoctorRegistrationNo, LookUpServices.FollowUpTypes);
+            UIUtilities.BindLookUpEdit(this.lueDoctorBranch, LookUpServices.ServiceBranchCodes);
+            UIUtilities.BindLookUpEdit(this.lueDoctorRegistrationNo, LookUpServices.SGKLicensedDoctors);
             UIUtilities.BindLookUpEdit(this.lueDoctorType, LookUpServices.DoctorTypes);
             UIUtilities.BindLookUpEdit(this.lueEditingType, LookUpServices.EditingTypes);
             UIUtilities.BindLookUpEdit(this.lueESWTBodyPartCode, LookUpServices.ESWTBodyParts);

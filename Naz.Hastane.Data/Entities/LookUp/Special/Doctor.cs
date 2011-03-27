@@ -9,10 +9,11 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
         public virtual Service Service { get; set; } // SLXX
         [Description("Sıra No")]
         public virtual float QueueNo { get; set; } // SLX Günlük Doktor SıraNo  => BEHAND.SERNO
+        [Description("Doktor Lisans No")]
+        public virtual string LicenseNo { get; set; } // SLVV Length 100
 
         //Map(x => x.Value).Column("SLY"); // float
         //Map(x => x.Value).Column("SLZ"); // float
-        //Map(x => x.Value).Column("SLVV").Length(100);
         //Map(x => x.Value).Column("SLYY").Length(100);
         //Map(x => x.Value).Column("SLZZ").Length(100);
         //Map(x => x.Value).Column("SLXA").Length(20);

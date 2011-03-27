@@ -12,6 +12,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
 
             References(x => x.Service).Column("SLXX");
             Map(x => x.QueueNo).Column("SLX");
+            Map(x => x.LicenseNo).Column("SLVV").Length(100);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
+using NHibernate;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -19,6 +20,64 @@ namespace Naz.Hastane.Win.MDIChildForms
             // TODO: Add any constructor code after InitializeComponent call
             //
         }
+
+        private ISession session;
+        private IStatelessSession statelessSession;
+        protected ISessionFactory SessionFactory
+        {
+            get { return Naz.Hastane.Data.NHibernateSessionManager.Instance.GetSessionFactory(); }
+        }
+
+        protected ISession Session
+        {
+            get
+            {
+                if (session == null)
+                    session = SessionFactory.OpenSession();
+                return session;
+            }
+        }
+
+        protected IStatelessSession StatelessSession
+        {
+            get
+            {
+                if (statelessSession == null)
+                    statelessSession = SessionFactory.OpenStatelessSession();
+                return statelessSession;
+            }
+        }
+        protected void ReplaceSessionAfterError()
+        {
+            if (session != null)
+            {
+                session.Dispose();
+                session = SessionFactory.OpenSession();
+                ReplaceEntitiesLoadedByFaultedSession();
+            }
+            if (statelessSession != null)
+            {
+                statelessSession.Dispose();
+                statelessSession = SessionFactory.OpenStatelessSession();
+            }
+        }
+        protected virtual void ReplaceEntitiesLoadedByFaultedSession()
+        {
+            throw new InvalidOperationException(
+                @"ReplaceSessionAfterError was called, but the presenter does not override ReplaceEntitiesLoadedByFaultedSession!
+You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAfterError.");
+        }
+
+        public virtual void MyDispose()
+        {
+            if (session != null)
+                session.Dispose();
+            if (statelessSession != null)
+                statelessSession.Dispose();
+            //View.Close();
+            //Disposed();
+        }
+
 
         bool modified = false;
         bool newDocument = true;
@@ -49,7 +108,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
         private void frmPad_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
-            e.Cancel = !SaveQuestion();
+            //e.Cancel = !SaveQuestion();
         }
 
         public event EventHandler ShowPopupMenu;
@@ -57,6 +116,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         void RaiseShowPopupMenu() {
             if(ShowPopupMenu != null)
                 ShowPopupMenu(null, EventArgs.Empty);
+        }
+
+        private void MDIChildForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MyDispose();
         }
     }
 }
