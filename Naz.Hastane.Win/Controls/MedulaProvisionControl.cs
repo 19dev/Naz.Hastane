@@ -41,14 +41,14 @@ namespace Naz.Hastane.Win.Controls
 
         private void LoadLookUps()
         {
-            this.lueBranchCode.Properties.DataSource = LookUpServices.BranchCodes;
-            this.lueFollowUpType.Properties.DataSource = LookUpServices.FollowUpTypes;
-            this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
-            this.lueProvisionType.Properties.DataSource = LookUpServices.ProvisionTypes;
-            this.lueRelationType.Properties.DataSource = LookUpServices.RelationTypes;
-            this.lueTransferorInstitution.Properties.DataSource = LookUpServices.TransferorInstitutions;
-            this.lueTreatmentStyle.Properties.DataSource = LookUpServices.TreatmentStyles;
-            this.lueTreatmentType.Properties.DataSource = LookUpServices.TreatmentTypes;
+            UIUtilities.BindLookUpEdit(this.lueBranchCode, LookUpServices.BranchCodes);
+            UIUtilities.BindLookUpEdit(this.lueFollowUpType, LookUpServices.FollowUpTypes);
+            UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
+            UIUtilities.BindLookUpEdit(this.lueProvisionType, LookUpServices.ProvisionTypes);
+            UIUtilities.BindLookUpEdit(this.lueRelationType, LookUpServices.RelationTypes);
+            UIUtilities.BindLookUpEdit(this.lueTransferorInstitution, LookUpServices.TransferorInstitutions);
+            UIUtilities.BindLookUpEdit(this.lueTreatmentStyle, LookUpServices.TreatmentStyles);
+            UIUtilities.BindLookUpEdit(this.lueTreatmentType, LookUpServices.TreatmentTypes);
         }
 
         public void CallMedula(string TCID)

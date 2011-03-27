@@ -84,6 +84,8 @@
     <Compile Include="Entities\InvoiceTemp.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\KidneyType.cs" />
     <Compile Include="Entities\LookUp\Special\Depository.cs" />
     <Compile Include="Entities\LookUp\Special\Doctor.cs" />
     <Compile Include="Entities\LookUp\General\City.cs" />
@@ -173,6 +175,8 @@
     <Compile Include="Mappings\LookUp\MedulaReport\EditingTypeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\ESWTBodyPartMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\FTRBodyPartMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\KidneyTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\KidneyStoneLocalisationCodeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\MedulaReportTreatmentTypeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\MedulaReportTypeMap.cs" />
     <Compile Include="Mappings\LookUp\Special\DepositoryMap.cs" />

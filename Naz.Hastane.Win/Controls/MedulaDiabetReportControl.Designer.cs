@@ -99,26 +99,6 @@
             this.lueHabitCode = new DevExpress.XtraEditors.LookUpEdit();
             this.lcgDiabet = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.lcgForm2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lcgDiabetTraining = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciHasDMTraining = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciGroupTrainingCount = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciPersonalTrainingCount = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgDisease = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciDiseaseDiagnosisCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciDiseaseCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciGridDisease = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciAddDisease = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgHabits = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciHabitCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciGridHabit = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciAddHabit = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgMedication = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciDailyDose = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciBarcode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciMedication = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciAddMedication = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgForm1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lcgPatientInfo = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciLastName = new DevExpress.XtraLayout.LayoutControlItem();
@@ -174,6 +154,26 @@
             this.lciKoroner = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPeriferik = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciEyeExam = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgForm2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lcgDiabetTraining = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciHasDMTraining = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciGroupTrainingCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPersonalTrainingCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgDisease = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciDiseaseDiagnosisCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDiseaseCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciGridDisease = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddDisease = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgHabits = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciHabitCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciGridHabit = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddHabit = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgMedication = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciDailyDose = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBarcode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMedication = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciAddMedication = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcDiabet)).BeginInit();
             this.lcDiabet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMedication)).BeginInit();
@@ -243,26 +243,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueHabitCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDiabet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgForm2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgDiabetTraining)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHasDMTraining)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGroupTrainingCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPersonalTrainingCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgDisease)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseDiagnosisCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridDisease)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddDisease)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHabits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHabitCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridHabit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddHabit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgMedication)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDailyDose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBarcode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMedication)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddMedication)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgForm1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPatientInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).BeginInit();
@@ -318,6 +298,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciKoroner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPeriferik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciEyeExam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgForm2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDiabetTraining)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHasDMTraining)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGroupTrainingCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonalTrainingCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDisease)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseDiagnosisCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridDisease)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDisease)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHabits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHabitCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridHabit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddHabit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgMedication)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDailyDose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBarcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMedication)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddMedication)).BeginInit();
             this.SuspendLayout();
             // 
             // lcDiabet
@@ -1169,231 +1169,6 @@
             this.lcgForm2});
             this.tabbedControlGroup1.Text = "Diabet Takip Formu 1";
             // 
-            // lcgForm2
-            // 
-            this.lcgForm2.CustomizationFormText = "Diabet Takip Formu 2";
-            this.lcgForm2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lcgDiabetTraining,
-            this.lcgDisease,
-            this.lcgHabits,
-            this.lcgMedication});
-            this.lcgForm2.Location = new System.Drawing.Point(0, 0);
-            this.lcgForm2.Name = "lcgForm2";
-            this.lcgForm2.Size = new System.Drawing.Size(963, 596);
-            this.lcgForm2.Text = "Diabet Takip Formu 2";
-            // 
-            // lcgDiabetTraining
-            // 
-            this.lcgDiabetTraining.CustomizationFormText = "Takip Formu Diabet Eğitimi";
-            this.lcgDiabetTraining.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciHasDMTraining,
-            this.lciGroupTrainingCount,
-            this.lciPersonalTrainingCount});
-            this.lcgDiabetTraining.Location = new System.Drawing.Point(0, 0);
-            this.lcgDiabetTraining.Name = "lcgDiabetTraining";
-            this.lcgDiabetTraining.Size = new System.Drawing.Size(465, 116);
-            this.lcgDiabetTraining.Text = "Takip Formu Diabet Eğitimi";
-            // 
-            // lciHasDMTraining
-            // 
-            this.lciHasDMTraining.Control = this.lueHasDMTraining;
-            this.lciHasDMTraining.CustomizationFormText = "DM Eğitim Elmış mı";
-            this.lciHasDMTraining.Location = new System.Drawing.Point(0, 48);
-            this.lciHasDMTraining.Name = "lciHasDMTraining";
-            this.lciHasDMTraining.Size = new System.Drawing.Size(441, 24);
-            this.lciHasDMTraining.Text = "DM Eğitim Elmış mı";
-            this.lciHasDMTraining.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciGroupTrainingCount
-            // 
-            this.lciGroupTrainingCount.Control = this.teGroupTrainingCount;
-            this.lciGroupTrainingCount.CustomizationFormText = "Grup Eğitim Sayısı";
-            this.lciGroupTrainingCount.Location = new System.Drawing.Point(0, 24);
-            this.lciGroupTrainingCount.Name = "lciGroupTrainingCount";
-            this.lciGroupTrainingCount.Size = new System.Drawing.Size(441, 24);
-            this.lciGroupTrainingCount.Text = "Grup Eğitim Sayısı";
-            this.lciGroupTrainingCount.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciPersonalTrainingCount
-            // 
-            this.lciPersonalTrainingCount.Control = this.tePersonalTrainingCount;
-            this.lciPersonalTrainingCount.CustomizationFormText = "Bireysel Eğitim Sayısı";
-            this.lciPersonalTrainingCount.Location = new System.Drawing.Point(0, 0);
-            this.lciPersonalTrainingCount.Name = "lciPersonalTrainingCount";
-            this.lciPersonalTrainingCount.Size = new System.Drawing.Size(441, 24);
-            this.lciPersonalTrainingCount.Text = "Bireysel Eğitim Sayısı";
-            this.lciPersonalTrainingCount.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lcgDisease
-            // 
-            this.lcgDisease.CustomizationFormText = "Takip Formu Hastalık";
-            this.lcgDisease.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciDiseaseDiagnosisCode,
-            this.lciDiseaseCode,
-            this.lciGridDisease,
-            this.lciAddDisease});
-            this.lcgDisease.Location = new System.Drawing.Point(0, 116);
-            this.lcgDisease.Name = "lcgDisease";
-            this.lcgDisease.Size = new System.Drawing.Size(465, 247);
-            this.lcgDisease.Text = "Takip Formu Hastalık";
-            // 
-            // lciDiseaseDiagnosisCode
-            // 
-            this.lciDiseaseDiagnosisCode.Control = this.teDiseaseDiagnosisCode;
-            this.lciDiseaseDiagnosisCode.CustomizationFormText = "Hastalık Tanı Kodu";
-            this.lciDiseaseDiagnosisCode.Location = new System.Drawing.Point(0, 24);
-            this.lciDiseaseDiagnosisCode.Name = "lciDiseaseDiagnosisCode";
-            this.lciDiseaseDiagnosisCode.Size = new System.Drawing.Size(381, 24);
-            this.lciDiseaseDiagnosisCode.Text = "Hastalık Tanı Kodu";
-            this.lciDiseaseDiagnosisCode.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciDiseaseCode
-            // 
-            this.lciDiseaseCode.Control = this.lueDiseaseCode;
-            this.lciDiseaseCode.CustomizationFormText = "Hastalık Kodu";
-            this.lciDiseaseCode.Location = new System.Drawing.Point(0, 0);
-            this.lciDiseaseCode.Name = "lciDiseaseCode";
-            this.lciDiseaseCode.Size = new System.Drawing.Size(381, 24);
-            this.lciDiseaseCode.Text = "Hastalık Kodu";
-            this.lciDiseaseCode.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciGridDisease
-            // 
-            this.lciGridDisease.Control = this.gcDisease;
-            this.lciGridDisease.CustomizationFormText = "layoutControlItem51";
-            this.lciGridDisease.Location = new System.Drawing.Point(0, 48);
-            this.lciGridDisease.Name = "lciGridDisease";
-            this.lciGridDisease.Size = new System.Drawing.Size(441, 155);
-            this.lciGridDisease.Text = "lciGridDisease";
-            this.lciGridDisease.TextSize = new System.Drawing.Size(0, 0);
-            this.lciGridDisease.TextToControlDistance = 0;
-            this.lciGridDisease.TextVisible = false;
-            // 
-            // lciAddDisease
-            // 
-            this.lciAddDisease.Control = this.sbAddDisease;
-            this.lciAddDisease.CustomizationFormText = "layoutControlItem56";
-            this.lciAddDisease.Location = new System.Drawing.Point(381, 0);
-            this.lciAddDisease.Name = "lciAddDisease";
-            this.lciAddDisease.Size = new System.Drawing.Size(60, 48);
-            this.lciAddDisease.Text = "lciAddDisease";
-            this.lciAddDisease.TextSize = new System.Drawing.Size(0, 0);
-            this.lciAddDisease.TextToControlDistance = 0;
-            this.lciAddDisease.TextVisible = false;
-            // 
-            // lcgHabits
-            // 
-            this.lcgHabits.CustomizationFormText = "Takip Formu Alışkanlık";
-            this.lcgHabits.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciHabitCode,
-            this.lciGridHabit,
-            this.lciAddHabit});
-            this.lcgHabits.Location = new System.Drawing.Point(0, 363);
-            this.lcgHabits.Name = "lcgHabits";
-            this.lcgHabits.Size = new System.Drawing.Size(465, 233);
-            this.lcgHabits.Text = "Takip Formu Alışkanlık";
-            // 
-            // lciHabitCode
-            // 
-            this.lciHabitCode.Control = this.lueHabitCode;
-            this.lciHabitCode.CustomizationFormText = "Alışkanlık Kodu";
-            this.lciHabitCode.Location = new System.Drawing.Point(0, 0);
-            this.lciHabitCode.Name = "lciHabitCode";
-            this.lciHabitCode.Size = new System.Drawing.Size(380, 26);
-            this.lciHabitCode.Text = "Alışkanlık Kodu";
-            this.lciHabitCode.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciGridHabit
-            // 
-            this.lciGridHabit.Control = this.gcHabit;
-            this.lciGridHabit.CustomizationFormText = "layoutControlItem52";
-            this.lciGridHabit.Location = new System.Drawing.Point(0, 26);
-            this.lciGridHabit.Name = "lciGridHabit";
-            this.lciGridHabit.Size = new System.Drawing.Size(441, 163);
-            this.lciGridHabit.Text = "lciGridHabit";
-            this.lciGridHabit.TextSize = new System.Drawing.Size(0, 0);
-            this.lciGridHabit.TextToControlDistance = 0;
-            this.lciGridHabit.TextVisible = false;
-            // 
-            // lciAddHabit
-            // 
-            this.lciAddHabit.Control = this.sbAddHabit;
-            this.lciAddHabit.CustomizationFormText = "layoutControlItem57";
-            this.lciAddHabit.Location = new System.Drawing.Point(380, 0);
-            this.lciAddHabit.Name = "lciAddHabit";
-            this.lciAddHabit.Size = new System.Drawing.Size(61, 26);
-            this.lciAddHabit.Text = "lciAddHabit";
-            this.lciAddHabit.TextSize = new System.Drawing.Size(0, 0);
-            this.lciAddHabit.TextToControlDistance = 0;
-            this.lciAddHabit.TextVisible = false;
-            // 
-            // lcgMedication
-            // 
-            this.lcgMedication.CustomizationFormText = "Takip Formu Kullanılan İlaçlar";
-            this.lcgMedication.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciDailyDose,
-            this.lciBarcode,
-            this.lciMedication,
-            this.emptySpaceItem1,
-            this.lciAddMedication});
-            this.lcgMedication.Location = new System.Drawing.Point(465, 0);
-            this.lcgMedication.Name = "lcgMedication";
-            this.lcgMedication.Size = new System.Drawing.Size(498, 596);
-            this.lcgMedication.Text = "Takip Formu Kullanılan İlaçlar";
-            // 
-            // lciDailyDose
-            // 
-            this.lciDailyDose.Control = this.teDailyDose;
-            this.lciDailyDose.CustomizationFormText = "Günlük Doz";
-            this.lciDailyDose.Location = new System.Drawing.Point(0, 24);
-            this.lciDailyDose.Name = "lciDailyDose";
-            this.lciDailyDose.Size = new System.Drawing.Size(408, 24);
-            this.lciDailyDose.Text = "Günlük Doz";
-            this.lciDailyDose.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciBarcode
-            // 
-            this.lciBarcode.Control = this.teBarcode;
-            this.lciBarcode.CustomizationFormText = "Barkod";
-            this.lciBarcode.Location = new System.Drawing.Point(0, 0);
-            this.lciBarcode.Name = "lciBarcode";
-            this.lciBarcode.Size = new System.Drawing.Size(408, 24);
-            this.lciBarcode.Text = "Barkod";
-            this.lciBarcode.TextSize = new System.Drawing.Size(133, 13);
-            // 
-            // lciMedication
-            // 
-            this.lciMedication.Control = this.gcMedication;
-            this.lciMedication.CustomizationFormText = "layoutControlItem55";
-            this.lciMedication.Location = new System.Drawing.Point(0, 48);
-            this.lciMedication.Name = "lciMedication";
-            this.lciMedication.Size = new System.Drawing.Size(474, 146);
-            this.lciMedication.Text = "lciMedication";
-            this.lciMedication.TextSize = new System.Drawing.Size(0, 0);
-            this.lciMedication.TextToControlDistance = 0;
-            this.lciMedication.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 194);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 358);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lciAddMedication
-            // 
-            this.lciAddMedication.Control = this.sbAddMedication;
-            this.lciAddMedication.CustomizationFormText = "layoutControlItem58";
-            this.lciAddMedication.Location = new System.Drawing.Point(408, 0);
-            this.lciAddMedication.Name = "lciAddMedication";
-            this.lciAddMedication.Size = new System.Drawing.Size(66, 48);
-            this.lciAddMedication.Text = "lciAddMedication";
-            this.lciAddMedication.TextSize = new System.Drawing.Size(0, 0);
-            this.lciAddMedication.TextToControlDistance = 0;
-            this.lciAddMedication.TextVisible = false;
-            // 
             // lcgForm1
             // 
             this.lcgForm1.CustomizationFormText = "Diabet Takip Formu 1";
@@ -1997,6 +1772,231 @@
             this.lciEyeExam.Text = "Göz Muayenesi";
             this.lciEyeExam.TextSize = new System.Drawing.Size(133, 13);
             // 
+            // lcgForm2
+            // 
+            this.lcgForm2.CustomizationFormText = "Diabet Takip Formu 2";
+            this.lcgForm2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lcgDiabetTraining,
+            this.lcgDisease,
+            this.lcgHabits,
+            this.lcgMedication});
+            this.lcgForm2.Location = new System.Drawing.Point(0, 0);
+            this.lcgForm2.Name = "lcgForm2";
+            this.lcgForm2.Size = new System.Drawing.Size(963, 596);
+            this.lcgForm2.Text = "Diabet Takip Formu 2";
+            // 
+            // lcgDiabetTraining
+            // 
+            this.lcgDiabetTraining.CustomizationFormText = "Takip Formu Diabet Eğitimi";
+            this.lcgDiabetTraining.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciHasDMTraining,
+            this.lciGroupTrainingCount,
+            this.lciPersonalTrainingCount});
+            this.lcgDiabetTraining.Location = new System.Drawing.Point(0, 0);
+            this.lcgDiabetTraining.Name = "lcgDiabetTraining";
+            this.lcgDiabetTraining.Size = new System.Drawing.Size(465, 116);
+            this.lcgDiabetTraining.Text = "Takip Formu Diabet Eğitimi";
+            // 
+            // lciHasDMTraining
+            // 
+            this.lciHasDMTraining.Control = this.lueHasDMTraining;
+            this.lciHasDMTraining.CustomizationFormText = "DM Eğitim Almış mı";
+            this.lciHasDMTraining.Location = new System.Drawing.Point(0, 48);
+            this.lciHasDMTraining.Name = "lciHasDMTraining";
+            this.lciHasDMTraining.Size = new System.Drawing.Size(441, 24);
+            this.lciHasDMTraining.Text = "DM Eğitim Almış mı";
+            this.lciHasDMTraining.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciGroupTrainingCount
+            // 
+            this.lciGroupTrainingCount.Control = this.teGroupTrainingCount;
+            this.lciGroupTrainingCount.CustomizationFormText = "Grup Eğitim Sayısı";
+            this.lciGroupTrainingCount.Location = new System.Drawing.Point(0, 24);
+            this.lciGroupTrainingCount.Name = "lciGroupTrainingCount";
+            this.lciGroupTrainingCount.Size = new System.Drawing.Size(441, 24);
+            this.lciGroupTrainingCount.Text = "Grup Eğitim Sayısı";
+            this.lciGroupTrainingCount.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciPersonalTrainingCount
+            // 
+            this.lciPersonalTrainingCount.Control = this.tePersonalTrainingCount;
+            this.lciPersonalTrainingCount.CustomizationFormText = "Bireysel Eğitim Sayısı";
+            this.lciPersonalTrainingCount.Location = new System.Drawing.Point(0, 0);
+            this.lciPersonalTrainingCount.Name = "lciPersonalTrainingCount";
+            this.lciPersonalTrainingCount.Size = new System.Drawing.Size(441, 24);
+            this.lciPersonalTrainingCount.Text = "Bireysel Eğitim Sayısı";
+            this.lciPersonalTrainingCount.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lcgDisease
+            // 
+            this.lcgDisease.CustomizationFormText = "Takip Formu Hastalık";
+            this.lcgDisease.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciDiseaseDiagnosisCode,
+            this.lciDiseaseCode,
+            this.lciGridDisease,
+            this.lciAddDisease});
+            this.lcgDisease.Location = new System.Drawing.Point(0, 116);
+            this.lcgDisease.Name = "lcgDisease";
+            this.lcgDisease.Size = new System.Drawing.Size(465, 247);
+            this.lcgDisease.Text = "Takip Formu Hastalık";
+            // 
+            // lciDiseaseDiagnosisCode
+            // 
+            this.lciDiseaseDiagnosisCode.Control = this.teDiseaseDiagnosisCode;
+            this.lciDiseaseDiagnosisCode.CustomizationFormText = "Hastalık Tanı Kodu";
+            this.lciDiseaseDiagnosisCode.Location = new System.Drawing.Point(0, 24);
+            this.lciDiseaseDiagnosisCode.Name = "lciDiseaseDiagnosisCode";
+            this.lciDiseaseDiagnosisCode.Size = new System.Drawing.Size(381, 24);
+            this.lciDiseaseDiagnosisCode.Text = "Hastalık Tanı Kodu";
+            this.lciDiseaseDiagnosisCode.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciDiseaseCode
+            // 
+            this.lciDiseaseCode.Control = this.lueDiseaseCode;
+            this.lciDiseaseCode.CustomizationFormText = "Hastalık Kodu";
+            this.lciDiseaseCode.Location = new System.Drawing.Point(0, 0);
+            this.lciDiseaseCode.Name = "lciDiseaseCode";
+            this.lciDiseaseCode.Size = new System.Drawing.Size(381, 24);
+            this.lciDiseaseCode.Text = "Hastalık Kodu";
+            this.lciDiseaseCode.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciGridDisease
+            // 
+            this.lciGridDisease.Control = this.gcDisease;
+            this.lciGridDisease.CustomizationFormText = "layoutControlItem51";
+            this.lciGridDisease.Location = new System.Drawing.Point(0, 48);
+            this.lciGridDisease.Name = "lciGridDisease";
+            this.lciGridDisease.Size = new System.Drawing.Size(441, 155);
+            this.lciGridDisease.Text = "lciGridDisease";
+            this.lciGridDisease.TextSize = new System.Drawing.Size(0, 0);
+            this.lciGridDisease.TextToControlDistance = 0;
+            this.lciGridDisease.TextVisible = false;
+            // 
+            // lciAddDisease
+            // 
+            this.lciAddDisease.Control = this.sbAddDisease;
+            this.lciAddDisease.CustomizationFormText = "layoutControlItem56";
+            this.lciAddDisease.Location = new System.Drawing.Point(381, 0);
+            this.lciAddDisease.Name = "lciAddDisease";
+            this.lciAddDisease.Size = new System.Drawing.Size(60, 48);
+            this.lciAddDisease.Text = "lciAddDisease";
+            this.lciAddDisease.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddDisease.TextToControlDistance = 0;
+            this.lciAddDisease.TextVisible = false;
+            // 
+            // lcgHabits
+            // 
+            this.lcgHabits.CustomizationFormText = "Takip Formu Alışkanlık";
+            this.lcgHabits.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciHabitCode,
+            this.lciGridHabit,
+            this.lciAddHabit});
+            this.lcgHabits.Location = new System.Drawing.Point(0, 363);
+            this.lcgHabits.Name = "lcgHabits";
+            this.lcgHabits.Size = new System.Drawing.Size(465, 233);
+            this.lcgHabits.Text = "Takip Formu Alışkanlık";
+            // 
+            // lciHabitCode
+            // 
+            this.lciHabitCode.Control = this.lueHabitCode;
+            this.lciHabitCode.CustomizationFormText = "Alışkanlık Kodu";
+            this.lciHabitCode.Location = new System.Drawing.Point(0, 0);
+            this.lciHabitCode.Name = "lciHabitCode";
+            this.lciHabitCode.Size = new System.Drawing.Size(380, 26);
+            this.lciHabitCode.Text = "Alışkanlık Kodu";
+            this.lciHabitCode.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciGridHabit
+            // 
+            this.lciGridHabit.Control = this.gcHabit;
+            this.lciGridHabit.CustomizationFormText = "layoutControlItem52";
+            this.lciGridHabit.Location = new System.Drawing.Point(0, 26);
+            this.lciGridHabit.Name = "lciGridHabit";
+            this.lciGridHabit.Size = new System.Drawing.Size(441, 163);
+            this.lciGridHabit.Text = "lciGridHabit";
+            this.lciGridHabit.TextSize = new System.Drawing.Size(0, 0);
+            this.lciGridHabit.TextToControlDistance = 0;
+            this.lciGridHabit.TextVisible = false;
+            // 
+            // lciAddHabit
+            // 
+            this.lciAddHabit.Control = this.sbAddHabit;
+            this.lciAddHabit.CustomizationFormText = "layoutControlItem57";
+            this.lciAddHabit.Location = new System.Drawing.Point(380, 0);
+            this.lciAddHabit.Name = "lciAddHabit";
+            this.lciAddHabit.Size = new System.Drawing.Size(61, 26);
+            this.lciAddHabit.Text = "lciAddHabit";
+            this.lciAddHabit.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddHabit.TextToControlDistance = 0;
+            this.lciAddHabit.TextVisible = false;
+            // 
+            // lcgMedication
+            // 
+            this.lcgMedication.CustomizationFormText = "Takip Formu Kullanılan İlaçlar";
+            this.lcgMedication.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciDailyDose,
+            this.lciBarcode,
+            this.lciMedication,
+            this.emptySpaceItem1,
+            this.lciAddMedication});
+            this.lcgMedication.Location = new System.Drawing.Point(465, 0);
+            this.lcgMedication.Name = "lcgMedication";
+            this.lcgMedication.Size = new System.Drawing.Size(498, 596);
+            this.lcgMedication.Text = "Takip Formu Kullanılan İlaçlar";
+            // 
+            // lciDailyDose
+            // 
+            this.lciDailyDose.Control = this.teDailyDose;
+            this.lciDailyDose.CustomizationFormText = "Günlük Doz";
+            this.lciDailyDose.Location = new System.Drawing.Point(0, 24);
+            this.lciDailyDose.Name = "lciDailyDose";
+            this.lciDailyDose.Size = new System.Drawing.Size(408, 24);
+            this.lciDailyDose.Text = "Günlük Doz";
+            this.lciDailyDose.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciBarcode
+            // 
+            this.lciBarcode.Control = this.teBarcode;
+            this.lciBarcode.CustomizationFormText = "Barkod";
+            this.lciBarcode.Location = new System.Drawing.Point(0, 0);
+            this.lciBarcode.Name = "lciBarcode";
+            this.lciBarcode.Size = new System.Drawing.Size(408, 24);
+            this.lciBarcode.Text = "Barkod";
+            this.lciBarcode.TextSize = new System.Drawing.Size(133, 13);
+            // 
+            // lciMedication
+            // 
+            this.lciMedication.Control = this.gcMedication;
+            this.lciMedication.CustomizationFormText = "layoutControlItem55";
+            this.lciMedication.Location = new System.Drawing.Point(0, 48);
+            this.lciMedication.Name = "lciMedication";
+            this.lciMedication.Size = new System.Drawing.Size(474, 146);
+            this.lciMedication.Text = "lciMedication";
+            this.lciMedication.TextSize = new System.Drawing.Size(0, 0);
+            this.lciMedication.TextToControlDistance = 0;
+            this.lciMedication.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 194);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 358);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciAddMedication
+            // 
+            this.lciAddMedication.Control = this.sbAddMedication;
+            this.lciAddMedication.CustomizationFormText = "layoutControlItem58";
+            this.lciAddMedication.Location = new System.Drawing.Point(408, 0);
+            this.lciAddMedication.Name = "lciAddMedication";
+            this.lciAddMedication.Size = new System.Drawing.Size(66, 48);
+            this.lciAddMedication.Text = "lciAddMedication";
+            this.lciAddMedication.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddMedication.TextToControlDistance = 0;
+            this.lciAddMedication.TextVisible = false;
+            // 
             // MedulaDiabetReportControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2074,26 +2074,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueHabitCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDiabet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgForm2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgDiabetTraining)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHasDMTraining)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGroupTrainingCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPersonalTrainingCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgDisease)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseDiagnosisCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridDisease)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddDisease)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHabits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHabitCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridHabit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddHabit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgMedication)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDailyDose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBarcode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMedication)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddMedication)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgForm1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPatientInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).EndInit();
@@ -2149,6 +2129,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciKoroner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPeriferik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciEyeExam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgForm2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDiabetTraining)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHasDMTraining)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGroupTrainingCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonalTrainingCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDisease)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseDiagnosisCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiseaseCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridDisease)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDisease)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHabits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHabitCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridHabit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddHabit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgMedication)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDailyDose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBarcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMedication)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddMedication)).EndInit();
             this.ResumeLayout(false);
 
         }

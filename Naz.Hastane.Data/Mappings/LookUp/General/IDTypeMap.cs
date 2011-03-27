@@ -11,6 +11,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp.General
 
             Id(x => x.ID);
             Map(x => x.Value).Length(50);
+            Map(x => x.Code).Length(255);
         }
     }
 }

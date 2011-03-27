@@ -28,1133 +28,1164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl5 = new DevExpress.XtraGrid.GridControl();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lookUpEdit18 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit16 = new DevExpress.XtraEditors.LookUpEdit();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.lookUpEdit13 = new DevExpress.XtraEditors.LookUpEdit();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit20 = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lookUpEdit12 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit19 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit11 = new DevExpress.XtraEditors.LookUpEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.lookUpEdit10 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit9 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit8 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit7 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit6 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit5 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit4 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit3 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.lookUpEdit14 = new DevExpress.XtraEditors.DateEdit();
-            this.lookUpEdit15 = new DevExpress.XtraEditors.DateEdit();
-            this.lookUpEdit17 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit22 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit23 = new DevExpress.XtraEditors.MemoEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcMedulaReport = new DevExpress.XtraLayout.LayoutControl();
+            this.sbSyncDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+            this.sbAddDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+            this.sbDeleteDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+            this.sbCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.sbSave = new DevExpress.XtraEditors.SimpleButton();
+            this.sbPrint = new DevExpress.XtraEditors.SimpleButton();
+            this.gcICD = new DevExpress.XtraGrid.GridControl();
+            this.gvICD = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colICD10Code = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colICD10DiagnosisName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDiagnosis = new DevExpress.XtraGrid.GridControl();
+            this.gvDiagnosis = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDiagnosisCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiagnosisName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sbAddEffectiveSubsance = new DevExpress.XtraEditors.SimpleButton();
+            this.gcEffectiveSubsance = new DevExpress.XtraGrid.GridControl();
+            this.gvEffectiveSubsance = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEffectiveSubsanceCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEffectiveSubsanceName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueStatus = new DevExpress.XtraEditors.LookUpEdit();
+            this.teProtocolNo = new DevExpress.XtraEditors.TextEdit();
+            this.lueEditingType = new DevExpress.XtraEditors.LookUpEdit();
+            this.sbDeleteEffectiveSubsance = new DevExpress.XtraEditors.SimpleButton();
+            this.lueReportType = new DevExpress.XtraEditors.LookUpEdit();
+            this.deReportDate = new DevExpress.XtraEditors.DateEdit();
+            this.teReportNo = new DevExpress.XtraEditors.TextEdit();
+            this.deEndDate = new DevExpress.XtraEditors.DateEdit();
+            this.deStartDate = new DevExpress.XtraEditors.DateEdit();
+            this.gcDoctors = new DevExpress.XtraGrid.GridControl();
+            this.gvDoctors = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lueDoctorType = new DevExpress.XtraEditors.LookUpEdit();
+            this.teDoctorLastName = new DevExpress.XtraEditors.TextEdit();
+            this.teDoctorFirstName = new DevExpress.XtraEditors.TextEdit();
+            this.lueDoctorBranch = new DevExpress.XtraEditors.LookUpEdit();
+            this.sbAddDoctor = new DevExpress.XtraEditors.SimpleButton();
+            this.lueDoctorRegistrationNo = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueInsuranceType = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueProvisionType = new DevExpress.XtraEditors.LookUpEdit();
+            this.teRelationCode = new DevExpress.XtraEditors.TextEdit();
+            this.lueTransferorInstitution = new DevExpress.XtraEditors.LookUpEdit();
+            this.teCardNo = new DevExpress.XtraEditors.TextEdit();
+            this.teSocialSecurityNo = new DevExpress.XtraEditors.TextEdit();
+            this.teTCID = new DevExpress.XtraEditors.TextEdit();
+            this.gcESWLStoneInfo = new DevExpress.XtraGrid.GridControl();
+            this.gvESWLStoneInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colStoneDimension = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStoneLocalisationCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sbAddESWLStoneInfo = new DevExpress.XtraEditors.SimpleButton();
+            this.lcStoneDimensionComment = new DevExpress.XtraEditors.LabelControl();
+            this.lueKidneyStoneLocalisationCode = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueKidneyInfo = new DevExpress.XtraEditors.LookUpEdit();
+            this.teESWLReportSessionCount = new DevExpress.XtraEditors.TextEdit();
+            this.teESWLReportStoneCount = new DevExpress.XtraEditors.TextEdit();
+            this.teESWLBUTCode = new DevExpress.XtraEditors.TextEdit();
+            this.teStoneDimension = new DevExpress.XtraEditors.TextEdit();
+            this.teBUTCode = new DevExpress.XtraEditors.TextEdit();
+            this.teFTRSessionCount = new DevExpress.XtraEditors.TextEdit();
+            this.teFTRSessionDays = new DevExpress.XtraEditors.TextEdit();
+            this.lueFTRBodyPartCode = new DevExpress.XtraEditors.LookUpEdit();
+            this.teESWTBUTCode = new DevExpress.XtraEditors.TextEdit();
+            this.teESWTSessionCount = new DevExpress.XtraEditors.TextEdit();
+            this.teESWTSessionDays = new DevExpress.XtraEditors.TextEdit();
+            this.lueESWTBodyPartCode = new DevExpress.XtraEditors.LookUpEdit();
+            this.teInstitutionNo = new DevExpress.XtraEditors.TextEdit();
+            this.tePatientName = new DevExpress.XtraEditors.TextEdit();
+            this.teFollowUpNo = new DevExpress.XtraEditors.TextEdit();
+            this.lueTreatmentReportType = new DevExpress.XtraEditors.LookUpEdit();
+            this.rgReportMainType = new DevExpress.XtraEditors.RadioGroup();
+            this.deReportStartDate = new DevExpress.XtraEditors.DateEdit();
+            this.deReportEndDate = new DevExpress.XtraEditors.DateEdit();
+            this.deProtocolDate = new DevExpress.XtraEditors.DateEdit();
+            this.meClinicalDiagnosis = new DevExpress.XtraEditors.MemoEdit();
+            this.meDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.deProvisionDate = new DevExpress.XtraEditors.DateEdit();
+            this.lcgMedulaReport = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.tcgMedulaReport = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.lcgReportDetailInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lcgReportType = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciReportMainType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTreatmentReportType = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup15 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgPatientInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciPatientName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFollowUpNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciInstitutionNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSocialSecurityNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCardNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTransferorInstitution = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciRelationCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciProvisionType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciProvisionDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciInsuranceType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgDoctorInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciAddDoctor = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorBranch = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorRegistrationNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorFirstName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctorLastName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDoctors = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lcgReportInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciReportDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciReportNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgReport = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciReportType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciReportStartDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciReportEndDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciEditingType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciProtocolNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciProtocolDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgClinicalDiagnosis = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciClinicalDiagnosis = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgDescription = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciDescription = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPrint = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSave = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgEffectiveSubsance = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciEffectiveSubsance = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeleteEffectiveSubsance = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddEffectiveSubsance = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgDiagnosisInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciStartDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciEndDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDiagnosisGrid = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciICDGrid = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem60 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem61 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem62 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlGroup11 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup12 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup13 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup14 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup16 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem53 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup9 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeleteDiagnosis = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddDiagnosis = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSyncDiagnosis = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgESWTFTRESWLReportInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lcgESWTReportInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciESWTBUTCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWTSessionCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWTSessionDays = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWTBodyPartCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgFTRReportInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciBUTCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFTRSessionCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFTRSessionDays = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFTRBodyPartCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgESWLReportInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciESWLBUTCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWLReportStoneCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWLReportSessionCount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciKidneyInfo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgESWLStoneInfo = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciKidneyStoneLocalisationCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciStoneDimension = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciStoneDimensionComment = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddESWLStoneInfo = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciESWLStoneInfo = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit14.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit15.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit17.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcMedulaReport)).BeginInit();
+            this.lcMedulaReport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcICD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvICD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teProtocolNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueEditingType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueReportType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teReportNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctorLastName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctorFirstName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorBranch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistrationNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueInsuranceType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueProvisionType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teRelationCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTransferorInstitution.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCardNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSocialSecurityNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcESWLStoneInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvESWLStoneInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKidneyStoneLocalisationCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKidneyInfo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLReportSessionCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLReportStoneCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLBUTCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teStoneDimension.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBUTCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFTRSessionCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFTRSessionDays.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueFTRBodyPartCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTBUTCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTSessionCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTSessionDays.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueESWTBodyPartCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInstitutionNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFollowUpNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTreatmentReportType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgReportMainType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportStartDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportEndDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportEndDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProtocolDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProtocolDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meClinicalDiagnosis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProvisionDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProvisionDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgMedulaReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tcgMedulaReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportDetailInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportMainType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTreatmentReportType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFollowUpNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInstitutionNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSocialSecurityNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCardNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTransferorInstitution)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRelationCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProvisionType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProvisionDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDoctorInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDoctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorBranch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistrationNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportStartDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportEndDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEditingType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProtocolNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProtocolDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgClinicalDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciClinicalDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddEffectiveSubsance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDiagnosisInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStartDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEndDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiagnosisGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciICDGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem60)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem61)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSyncDiagnosis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWTFTRESWLReportInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWTReportInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTBUTCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTSessionCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTSessionDays)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTBodyPartCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgFTRReportInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBUTCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRSessionCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRSessionDays)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRBodyPartCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWLReportInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLBUTCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLReportStoneCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLReportSessionCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKidneyInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWLStoneInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKidneyStoneLocalisationCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStoneDimension)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStoneDimensionComment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddESWLStoneInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLStoneInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
-            // layoutControl1
+            // lcMedulaReport
             // 
-            this.layoutControl1.Controls.Add(this.simpleButton10);
-            this.layoutControl1.Controls.Add(this.simpleButton9);
-            this.layoutControl1.Controls.Add(this.simpleButton8);
-            this.layoutControl1.Controls.Add(this.simpleButton7);
-            this.layoutControl1.Controls.Add(this.simpleButton6);
-            this.layoutControl1.Controls.Add(this.simpleButton5);
-            this.layoutControl1.Controls.Add(this.gridControl5);
-            this.layoutControl1.Controls.Add(this.gridControl4);
-            this.layoutControl1.Controls.Add(this.simpleButton4);
-            this.layoutControl1.Controls.Add(this.gridControl3);
-            this.layoutControl1.Controls.Add(this.lookUpEdit18);
-            this.layoutControl1.Controls.Add(this.textEdit21);
-            this.layoutControl1.Controls.Add(this.lookUpEdit16);
-            this.layoutControl1.Controls.Add(this.simpleButton3);
-            this.layoutControl1.Controls.Add(this.lookUpEdit13);
-            this.layoutControl1.Controls.Add(this.dateEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit20);
-            this.layoutControl1.Controls.Add(this.dateEdit2);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.gridControl2);
-            this.layoutControl1.Controls.Add(this.lookUpEdit12);
-            this.layoutControl1.Controls.Add(this.textEdit19);
-            this.layoutControl1.Controls.Add(this.textEdit18);
-            this.layoutControl1.Controls.Add(this.lookUpEdit11);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.lookUpEdit10);
-            this.layoutControl1.Controls.Add(this.lookUpEdit9);
-            this.layoutControl1.Controls.Add(this.lookUpEdit8);
-            this.layoutControl1.Controls.Add(this.lookUpEdit7);
-            this.layoutControl1.Controls.Add(this.textEdit17);
-            this.layoutControl1.Controls.Add(this.lookUpEdit6);
-            this.layoutControl1.Controls.Add(this.textEdit16);
-            this.layoutControl1.Controls.Add(this.textEdit15);
-            this.layoutControl1.Controls.Add(this.textEdit14);
-            this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.lookUpEdit5);
-            this.layoutControl1.Controls.Add(this.lookUpEdit4);
-            this.layoutControl1.Controls.Add(this.textEdit12);
-            this.layoutControl1.Controls.Add(this.textEdit11);
-            this.layoutControl1.Controls.Add(this.textEdit10);
-            this.layoutControl1.Controls.Add(this.textEdit13);
-            this.layoutControl1.Controls.Add(this.textEdit9);
-            this.layoutControl1.Controls.Add(this.textEdit8);
-            this.layoutControl1.Controls.Add(this.textEdit7);
-            this.layoutControl1.Controls.Add(this.lookUpEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit6);
-            this.layoutControl1.Controls.Add(this.textEdit5);
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.lookUpEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.lookUpEdit1);
-            this.layoutControl1.Controls.Add(this.radioGroup1);
-            this.layoutControl1.Controls.Add(this.lookUpEdit14);
-            this.layoutControl1.Controls.Add(this.lookUpEdit15);
-            this.layoutControl1.Controls.Add(this.lookUpEdit17);
-            this.layoutControl1.Controls.Add(this.textEdit22);
-            this.layoutControl1.Controls.Add(this.textEdit23);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(921, 746);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
+            this.lcMedulaReport.Controls.Add(this.sbSyncDiagnosis);
+            this.lcMedulaReport.Controls.Add(this.sbAddDiagnosis);
+            this.lcMedulaReport.Controls.Add(this.sbDeleteDiagnosis);
+            this.lcMedulaReport.Controls.Add(this.sbCancel);
+            this.lcMedulaReport.Controls.Add(this.sbSave);
+            this.lcMedulaReport.Controls.Add(this.sbPrint);
+            this.lcMedulaReport.Controls.Add(this.gcICD);
+            this.lcMedulaReport.Controls.Add(this.gcDiagnosis);
+            this.lcMedulaReport.Controls.Add(this.sbAddEffectiveSubsance);
+            this.lcMedulaReport.Controls.Add(this.gcEffectiveSubsance);
+            this.lcMedulaReport.Controls.Add(this.lueStatus);
+            this.lcMedulaReport.Controls.Add(this.teProtocolNo);
+            this.lcMedulaReport.Controls.Add(this.lueEditingType);
+            this.lcMedulaReport.Controls.Add(this.sbDeleteEffectiveSubsance);
+            this.lcMedulaReport.Controls.Add(this.lueReportType);
+            this.lcMedulaReport.Controls.Add(this.deReportDate);
+            this.lcMedulaReport.Controls.Add(this.teReportNo);
+            this.lcMedulaReport.Controls.Add(this.deEndDate);
+            this.lcMedulaReport.Controls.Add(this.deStartDate);
+            this.lcMedulaReport.Controls.Add(this.gcDoctors);
+            this.lcMedulaReport.Controls.Add(this.lueDoctorType);
+            this.lcMedulaReport.Controls.Add(this.teDoctorLastName);
+            this.lcMedulaReport.Controls.Add(this.teDoctorFirstName);
+            this.lcMedulaReport.Controls.Add(this.lueDoctorBranch);
+            this.lcMedulaReport.Controls.Add(this.sbAddDoctor);
+            this.lcMedulaReport.Controls.Add(this.lueDoctorRegistrationNo);
+            this.lcMedulaReport.Controls.Add(this.lueInsuranceType);
+            this.lcMedulaReport.Controls.Add(this.lueProvisionType);
+            this.lcMedulaReport.Controls.Add(this.teRelationCode);
+            this.lcMedulaReport.Controls.Add(this.lueTransferorInstitution);
+            this.lcMedulaReport.Controls.Add(this.teCardNo);
+            this.lcMedulaReport.Controls.Add(this.teSocialSecurityNo);
+            this.lcMedulaReport.Controls.Add(this.teTCID);
+            this.lcMedulaReport.Controls.Add(this.gcESWLStoneInfo);
+            this.lcMedulaReport.Controls.Add(this.sbAddESWLStoneInfo);
+            this.lcMedulaReport.Controls.Add(this.lcStoneDimensionComment);
+            this.lcMedulaReport.Controls.Add(this.lueKidneyStoneLocalisationCode);
+            this.lcMedulaReport.Controls.Add(this.lueKidneyInfo);
+            this.lcMedulaReport.Controls.Add(this.teESWLReportSessionCount);
+            this.lcMedulaReport.Controls.Add(this.teESWLReportStoneCount);
+            this.lcMedulaReport.Controls.Add(this.teESWLBUTCode);
+            this.lcMedulaReport.Controls.Add(this.teStoneDimension);
+            this.lcMedulaReport.Controls.Add(this.teBUTCode);
+            this.lcMedulaReport.Controls.Add(this.teFTRSessionCount);
+            this.lcMedulaReport.Controls.Add(this.teFTRSessionDays);
+            this.lcMedulaReport.Controls.Add(this.lueFTRBodyPartCode);
+            this.lcMedulaReport.Controls.Add(this.teESWTBUTCode);
+            this.lcMedulaReport.Controls.Add(this.teESWTSessionCount);
+            this.lcMedulaReport.Controls.Add(this.teESWTSessionDays);
+            this.lcMedulaReport.Controls.Add(this.lueESWTBodyPartCode);
+            this.lcMedulaReport.Controls.Add(this.teInstitutionNo);
+            this.lcMedulaReport.Controls.Add(this.tePatientName);
+            this.lcMedulaReport.Controls.Add(this.teFollowUpNo);
+            this.lcMedulaReport.Controls.Add(this.lueTreatmentReportType);
+            this.lcMedulaReport.Controls.Add(this.rgReportMainType);
+            this.lcMedulaReport.Controls.Add(this.deReportStartDate);
+            this.lcMedulaReport.Controls.Add(this.deReportEndDate);
+            this.lcMedulaReport.Controls.Add(this.deProtocolDate);
+            this.lcMedulaReport.Controls.Add(this.meClinicalDiagnosis);
+            this.lcMedulaReport.Controls.Add(this.meDescription);
+            this.lcMedulaReport.Controls.Add(this.deProvisionDate);
+            this.lcMedulaReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lcMedulaReport.Location = new System.Drawing.Point(0, 0);
+            this.lcMedulaReport.Name = "lcMedulaReport";
+            this.lcMedulaReport.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(445, 81, 397, 619);
+            this.lcMedulaReport.Root = this.lcgMedulaReport;
+            this.lcMedulaReport.Size = new System.Drawing.Size(921, 746);
+            this.lcMedulaReport.TabIndex = 0;
+            this.lcMedulaReport.Text = "layoutControl1";
             // 
-            // simpleButton10
+            // sbSyncDiagnosis
             // 
-            this.simpleButton10.Location = new System.Drawing.Point(297, 676);
-            this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(132, 22);
-            this.simpleButton10.StyleController = this.layoutControl1;
-            this.simpleButton10.TabIndex = 64;
-            this.simpleButton10.Text = "<- Tanıyı Teşhisle Eşleştir";
+            this.sbSyncDiagnosis.Location = new System.Drawing.Point(301, 688);
+            this.sbSyncDiagnosis.Name = "sbSyncDiagnosis";
+            this.sbSyncDiagnosis.Size = new System.Drawing.Size(140, 22);
+            this.sbSyncDiagnosis.StyleController = this.lcMedulaReport;
+            this.sbSyncDiagnosis.TabIndex = 64;
+            this.sbSyncDiagnosis.Text = "<- Tanıyı Teşhisle Eşleştir";
             // 
-            // simpleButton9
+            // sbAddDiagnosis
             // 
-            this.simpleButton9.Location = new System.Drawing.Point(191, 676);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(102, 22);
-            this.simpleButton9.StyleController = this.layoutControl1;
-            this.simpleButton9.TabIndex = 63;
-            this.simpleButton9.Text = "Rapor Teşhis Ekle";
+            this.sbAddDiagnosis.Location = new System.Drawing.Point(188, 688);
+            this.sbAddDiagnosis.Name = "sbAddDiagnosis";
+            this.sbAddDiagnosis.Size = new System.Drawing.Size(109, 22);
+            this.sbAddDiagnosis.StyleController = this.lcMedulaReport;
+            this.sbAddDiagnosis.TabIndex = 63;
+            this.sbAddDiagnosis.Text = "Rapor Teşhis Ekle";
             // 
-            // simpleButton8
+            // sbDeleteDiagnosis
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(48, 676);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(139, 22);
-            this.simpleButton8.StyleController = this.layoutControl1;
-            this.simpleButton8.TabIndex = 62;
-            this.simpleButton8.Text = "Teşhis Sil";
+            this.sbDeleteDiagnosis.Location = new System.Drawing.Point(36, 688);
+            this.sbDeleteDiagnosis.Name = "sbDeleteDiagnosis";
+            this.sbDeleteDiagnosis.Size = new System.Drawing.Size(148, 22);
+            this.sbDeleteDiagnosis.StyleController = this.lcMedulaReport;
+            this.sbDeleteDiagnosis.TabIndex = 62;
+            this.sbDeleteDiagnosis.Text = "Teşhis Sil";
             // 
-            // simpleButton7
+            // sbCancel
             // 
-            this.simpleButton7.Location = new System.Drawing.Point(721, 688);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(164, 22);
-            this.simpleButton7.StyleController = this.layoutControl1;
-            this.simpleButton7.TabIndex = 61;
-            this.simpleButton7.Text = "Vazgeç";
+            this.sbCancel.Location = new System.Drawing.Point(721, 688);
+            this.sbCancel.Name = "sbCancel";
+            this.sbCancel.Size = new System.Drawing.Size(164, 22);
+            this.sbCancel.StyleController = this.lcMedulaReport;
+            this.sbCancel.TabIndex = 61;
+            this.sbCancel.Text = "Vazgeç";
             // 
-            // simpleButton6
+            // sbSave
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(611, 688);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(106, 22);
-            this.simpleButton6.StyleController = this.layoutControl1;
-            this.simpleButton6.TabIndex = 60;
-            this.simpleButton6.Text = "Kaydet";
+            this.sbSave.Location = new System.Drawing.Point(611, 688);
+            this.sbSave.Name = "sbSave";
+            this.sbSave.Size = new System.Drawing.Size(106, 22);
+            this.sbSave.StyleController = this.lcMedulaReport;
+            this.sbSave.TabIndex = 60;
+            this.sbSave.Text = "Kaydet";
             // 
-            // simpleButton5
+            // sbPrint
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(469, 688);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(138, 22);
-            this.simpleButton5.StyleController = this.layoutControl1;
-            this.simpleButton5.TabIndex = 59;
-            this.simpleButton5.Text = "Yazdır";
+            this.sbPrint.Location = new System.Drawing.Point(469, 688);
+            this.sbPrint.Name = "sbPrint";
+            this.sbPrint.Size = new System.Drawing.Size(138, 22);
+            this.sbPrint.StyleController = this.lcMedulaReport;
+            this.sbPrint.TabIndex = 59;
+            this.sbPrint.Text = "Yazdır";
             // 
-            // gridControl5
+            // gcICD
             // 
-            this.gridControl5.Location = new System.Drawing.Point(241, 588);
-            this.gridControl5.MainView = this.gridView5;
-            this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(188, 84);
-            this.gridControl5.TabIndex = 58;
-            this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView5});
+            this.gcICD.Location = new System.Drawing.Point(241, 610);
+            this.gcICD.MainView = this.gvICD;
+            this.gcICD.Name = "gcICD";
+            this.gcICD.Size = new System.Drawing.Size(200, 74);
+            this.gcICD.TabIndex = 58;
+            this.gcICD.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvICD});
             // 
-            // gridView5
+            // gvICD
             // 
-            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn5,
-            this.gridColumn6});
-            this.gridView5.GridControl = this.gridControl5;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gvICD.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colICD10Code,
+            this.colICD10DiagnosisName});
+            this.gvICD.GridControl = this.gcICD;
+            this.gvICD.Name = "gvICD";
+            this.gvICD.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn5
+            // colICD10Code
             // 
-            this.gridColumn5.Caption = "ICD10 Kodu";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 0;
+            this.colICD10Code.Caption = "ICD10 Kodu";
+            this.colICD10Code.Name = "colICD10Code";
+            this.colICD10Code.Visible = true;
+            this.colICD10Code.VisibleIndex = 0;
             // 
-            // gridColumn6
+            // colICD10DiagnosisName
             // 
-            this.gridColumn6.Caption = "Teşhis Adı";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 1;
+            this.colICD10DiagnosisName.Caption = "Teşhis Adı";
+            this.colICD10DiagnosisName.Name = "colICD10DiagnosisName";
+            this.colICD10DiagnosisName.Visible = true;
+            this.colICD10DiagnosisName.VisibleIndex = 1;
             // 
-            // gridControl4
+            // gcDiagnosis
             // 
-            this.gridControl4.Location = new System.Drawing.Point(48, 588);
-            this.gridControl4.MainView = this.gridView4;
-            this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(189, 84);
-            this.gridControl4.TabIndex = 57;
-            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
+            this.gcDiagnosis.Location = new System.Drawing.Point(36, 610);
+            this.gcDiagnosis.MainView = this.gvDiagnosis;
+            this.gcDiagnosis.Name = "gcDiagnosis";
+            this.gcDiagnosis.Size = new System.Drawing.Size(201, 74);
+            this.gcDiagnosis.TabIndex = 57;
+            this.gcDiagnosis.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDiagnosis});
             // 
-            // gridView4
+            // gvDiagnosis
             // 
-            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn3,
-            this.gridColumn4});
-            this.gridView4.GridControl = this.gridControl4;
-            this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gvDiagnosis.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDiagnosisCode,
+            this.colDiagnosisName});
+            this.gvDiagnosis.GridControl = this.gcDiagnosis;
+            this.gvDiagnosis.Name = "gvDiagnosis";
+            this.gvDiagnosis.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn3
+            // colDiagnosisCode
             // 
-            this.gridColumn3.Caption = "Teşhis Kodu";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
+            this.colDiagnosisCode.Caption = "Teşhis Kodu";
+            this.colDiagnosisCode.Name = "colDiagnosisCode";
+            this.colDiagnosisCode.Visible = true;
+            this.colDiagnosisCode.VisibleIndex = 0;
             // 
-            // gridColumn4
+            // colDiagnosisName
             // 
-            this.gridColumn4.Caption = "Teşhis Adı";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.colDiagnosisName.Caption = "Teşhis Adı";
+            this.colDiagnosisName.Name = "colDiagnosisName";
+            this.colDiagnosisName.Visible = true;
+            this.colDiagnosisName.VisibleIndex = 1;
             // 
-            // simpleButton4
+            // sbAddEffectiveSubsance
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(662, 650);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(211, 22);
-            this.simpleButton4.StyleController = this.layoutControl1;
-            this.simpleButton4.TabIndex = 56;
-            this.simpleButton4.Text = "Rapor Etkin Madde Ekle";
+            this.sbAddEffectiveSubsance.Location = new System.Drawing.Point(662, 650);
+            this.sbAddEffectiveSubsance.Name = "sbAddEffectiveSubsance";
+            this.sbAddEffectiveSubsance.Size = new System.Drawing.Size(211, 22);
+            this.sbAddEffectiveSubsance.StyleController = this.lcMedulaReport;
+            this.sbAddEffectiveSubsance.TabIndex = 56;
+            this.sbAddEffectiveSubsance.Text = "Rapor Etkin Madde Ekle";
             // 
-            // gridControl3
+            // gcEffectiveSubsance
             // 
-            this.gridControl3.Location = new System.Drawing.Point(481, 557);
-            this.gridControl3.MainView = this.gridView3;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(392, 89);
-            this.gridControl3.TabIndex = 54;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
+            this.gcEffectiveSubsance.Location = new System.Drawing.Point(481, 557);
+            this.gcEffectiveSubsance.MainView = this.gvEffectiveSubsance;
+            this.gcEffectiveSubsance.Name = "gcEffectiveSubsance";
+            this.gcEffectiveSubsance.Size = new System.Drawing.Size(392, 89);
+            this.gcEffectiveSubsance.TabIndex = 54;
+            this.gcEffectiveSubsance.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvEffectiveSubsance});
             // 
-            // gridView3
+            // gvEffectiveSubsance
             // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
-            this.gridView3.GridControl = this.gridControl3;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gvEffectiveSubsance.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEffectiveSubsanceCode,
+            this.colEffectiveSubsanceName});
+            this.gvEffectiveSubsance.GridControl = this.gcEffectiveSubsance;
+            this.gvEffectiveSubsance.Name = "gvEffectiveSubsance";
+            this.gvEffectiveSubsance.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // colEffectiveSubsanceCode
             // 
-            this.gridColumn1.Caption = "Etkin Madde Kodu";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colEffectiveSubsanceCode.Caption = "Etkin Madde Kodu";
+            this.colEffectiveSubsanceCode.Name = "colEffectiveSubsanceCode";
+            this.colEffectiveSubsanceCode.Visible = true;
+            this.colEffectiveSubsanceCode.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // colEffectiveSubsanceName
             // 
-            this.gridColumn2.Caption = "Etkin Madde Adı";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colEffectiveSubsanceName.Caption = "Etkin Madde Adı";
+            this.colEffectiveSubsanceName.Name = "colEffectiveSubsanceName";
+            this.colEffectiveSubsanceName.Visible = true;
+            this.colEffectiveSubsanceName.VisibleIndex = 1;
             // 
-            // lookUpEdit18
+            // lueStatus
             // 
-            this.lookUpEdit18.Location = new System.Drawing.Point(601, 312);
-            this.lookUpEdit18.Name = "lookUpEdit18";
-            this.lookUpEdit18.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueStatus.EditValue = "";
+            this.lueStatus.Enabled = false;
+            this.lueStatus.Location = new System.Drawing.Point(603, 312);
+            this.lueStatus.Name = "lueStatus";
+            this.lueStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit18.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit18.StyleController = this.layoutControl1;
-            this.lookUpEdit18.TabIndex = 51;
+            this.lueStatus.Size = new System.Drawing.Size(282, 20);
+            this.lueStatus.StyleController = this.lcMedulaReport;
+            this.lueStatus.TabIndex = 51;
             // 
-            // textEdit21
+            // teProtocolNo
             // 
-            this.textEdit21.Location = new System.Drawing.Point(601, 264);
-            this.textEdit21.Name = "textEdit21";
-            this.textEdit21.Size = new System.Drawing.Size(284, 20);
-            this.textEdit21.StyleController = this.layoutControl1;
-            this.textEdit21.TabIndex = 49;
+            this.teProtocolNo.Location = new System.Drawing.Point(603, 264);
+            this.teProtocolNo.Name = "teProtocolNo";
+            this.teProtocolNo.Size = new System.Drawing.Size(282, 20);
+            this.teProtocolNo.StyleController = this.lcMedulaReport;
+            this.teProtocolNo.TabIndex = 49;
             // 
-            // lookUpEdit16
+            // lueEditingType
             // 
-            this.lookUpEdit16.Location = new System.Drawing.Point(601, 240);
-            this.lookUpEdit16.Name = "lookUpEdit16";
-            this.lookUpEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueEditingType.Location = new System.Drawing.Point(603, 240);
+            this.lueEditingType.Name = "lueEditingType";
+            this.lueEditingType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit16.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit16.StyleController = this.layoutControl1;
-            this.lookUpEdit16.TabIndex = 48;
+            this.lueEditingType.Size = new System.Drawing.Size(282, 20);
+            this.lueEditingType.StyleController = this.lcMedulaReport;
+            this.lueEditingType.TabIndex = 48;
             // 
-            // simpleButton3
+            // sbDeleteEffectiveSubsance
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(481, 650);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(177, 22);
-            this.simpleButton3.StyleController = this.layoutControl1;
-            this.simpleButton3.TabIndex = 55;
-            this.simpleButton3.Text = "Etkin Madde Sil";
+            this.sbDeleteEffectiveSubsance.Location = new System.Drawing.Point(481, 650);
+            this.sbDeleteEffectiveSubsance.Name = "sbDeleteEffectiveSubsance";
+            this.sbDeleteEffectiveSubsance.Size = new System.Drawing.Size(177, 22);
+            this.sbDeleteEffectiveSubsance.StyleController = this.lcMedulaReport;
+            this.sbDeleteEffectiveSubsance.TabIndex = 55;
+            this.sbDeleteEffectiveSubsance.Text = "Etkin Madde Sil";
             // 
-            // lookUpEdit13
+            // lueReportType
             // 
-            this.lookUpEdit13.Location = new System.Drawing.Point(601, 168);
-            this.lookUpEdit13.Name = "lookUpEdit13";
-            this.lookUpEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueReportType.Location = new System.Drawing.Point(603, 168);
+            this.lueReportType.Name = "lueReportType";
+            this.lueReportType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit13.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit13.StyleController = this.layoutControl1;
-            this.lookUpEdit13.TabIndex = 45;
+            this.lueReportType.Size = new System.Drawing.Size(282, 20);
+            this.lueReportType.StyleController = this.lcMedulaReport;
+            this.lueReportType.TabIndex = 45;
             // 
-            // dateEdit3
+            // deReportDate
             // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(601, 100);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportDate.EditValue = null;
+            this.deReportDate.Location = new System.Drawing.Point(603, 100);
+            this.deReportDate.Name = "deReportDate";
+            this.deReportDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit3.Size = new System.Drawing.Size(284, 20);
-            this.dateEdit3.StyleController = this.layoutControl1;
-            this.dateEdit3.TabIndex = 44;
+            this.deReportDate.Size = new System.Drawing.Size(282, 20);
+            this.deReportDate.StyleController = this.lcMedulaReport;
+            this.deReportDate.TabIndex = 44;
             // 
-            // textEdit20
+            // teReportNo
             // 
-            this.textEdit20.Location = new System.Drawing.Point(601, 76);
-            this.textEdit20.Name = "textEdit20";
-            this.textEdit20.Size = new System.Drawing.Size(284, 20);
-            this.textEdit20.StyleController = this.layoutControl1;
-            this.textEdit20.TabIndex = 43;
+            this.teReportNo.Location = new System.Drawing.Point(603, 76);
+            this.teReportNo.Name = "teReportNo";
+            this.teReportNo.Size = new System.Drawing.Size(282, 20);
+            this.teReportNo.StyleController = this.lcMedulaReport;
+            this.teReportNo.TabIndex = 43;
             // 
-            // dateEdit2
+            // deEndDate
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(250, 564);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deEndDate.EditValue = null;
+            this.deEndDate.Location = new System.Drawing.Point(250, 586);
+            this.deEndDate.Name = "deEndDate";
+            this.deEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deEndDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit2.Size = new System.Drawing.Size(128, 20);
-            this.dateEdit2.StyleController = this.layoutControl1;
-            this.dateEdit2.TabIndex = 42;
+            this.deEndDate.Size = new System.Drawing.Size(137, 20);
+            this.deEndDate.StyleController = this.lcMedulaReport;
+            this.deEndDate.TabIndex = 42;
             // 
-            // dateEdit1
+            // deStartDate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(48, 564);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deStartDate.EditValue = null;
+            this.deStartDate.Location = new System.Drawing.Point(36, 586);
+            this.deStartDate.Name = "deStartDate";
+            this.deStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deStartDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(128, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 41;
+            this.deStartDate.Size = new System.Drawing.Size(136, 20);
+            this.deStartDate.StyleController = this.lcMedulaReport;
+            this.deStartDate.TabIndex = 41;
             // 
-            // gridControl2
+            // gcDoctors
             // 
-            this.gridControl2.Location = new System.Drawing.Point(36, 442);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(405, 70);
-            this.gridControl2.TabIndex = 40;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gcDoctors.Location = new System.Drawing.Point(36, 442);
+            this.gcDoctors.MainView = this.gvDoctors;
+            this.gcDoctors.Name = "gcDoctors";
+            this.gcDoctors.Size = new System.Drawing.Size(405, 80);
+            this.gcDoctors.TabIndex = 40;
+            this.gcDoctors.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDoctors});
             // 
-            // gridView2
+            // gvDoctors
             // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gvDoctors.GridControl = this.gcDoctors;
+            this.gvDoctors.Name = "gvDoctors";
+            this.gvDoctors.OptionsView.ShowGroupPanel = false;
             // 
-            // lookUpEdit12
+            // lueDoctorType
             // 
-            this.lookUpEdit12.Location = new System.Drawing.Point(391, 376);
-            this.lookUpEdit12.Name = "lookUpEdit12";
-            this.lookUpEdit12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueDoctorType.Location = new System.Drawing.Point(391, 376);
+            this.lueDoctorType.Name = "lueDoctorType";
+            this.lueDoctorType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit12.Size = new System.Drawing.Size(50, 20);
-            this.lookUpEdit12.StyleController = this.layoutControl1;
-            this.lookUpEdit12.TabIndex = 38;
+            this.lueDoctorType.Size = new System.Drawing.Size(50, 20);
+            this.lueDoctorType.StyleController = this.lcMedulaReport;
+            this.lueDoctorType.TabIndex = 38;
             // 
-            // textEdit19
+            // teDoctorLastName
             // 
-            this.textEdit19.Location = new System.Drawing.Point(168, 400);
-            this.textEdit19.Name = "textEdit19";
-            this.textEdit19.Size = new System.Drawing.Size(91, 20);
-            this.textEdit19.StyleController = this.layoutControl1;
-            this.textEdit19.TabIndex = 37;
+            this.teDoctorLastName.Location = new System.Drawing.Point(170, 400);
+            this.teDoctorLastName.Name = "teDoctorLastName";
+            this.teDoctorLastName.Size = new System.Drawing.Size(89, 20);
+            this.teDoctorLastName.StyleController = this.lcMedulaReport;
+            this.teDoctorLastName.TabIndex = 37;
             // 
-            // textEdit18
+            // teDoctorFirstName
             // 
-            this.textEdit18.Location = new System.Drawing.Point(168, 376);
-            this.textEdit18.Name = "textEdit18";
-            this.textEdit18.Size = new System.Drawing.Size(87, 20);
-            this.textEdit18.StyleController = this.layoutControl1;
-            this.textEdit18.TabIndex = 36;
+            this.teDoctorFirstName.Location = new System.Drawing.Point(170, 376);
+            this.teDoctorFirstName.Name = "teDoctorFirstName";
+            this.teDoctorFirstName.Size = new System.Drawing.Size(83, 20);
+            this.teDoctorFirstName.StyleController = this.lcMedulaReport;
+            this.teDoctorFirstName.TabIndex = 36;
             // 
-            // lookUpEdit11
+            // lueDoctorBranch
             // 
-            this.lookUpEdit11.Location = new System.Drawing.Point(391, 352);
-            this.lookUpEdit11.Name = "lookUpEdit11";
-            this.lookUpEdit11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueDoctorBranch.Location = new System.Drawing.Point(391, 352);
+            this.lueDoctorBranch.Name = "lueDoctorBranch";
+            this.lueDoctorBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit11.Size = new System.Drawing.Size(50, 20);
-            this.lookUpEdit11.StyleController = this.layoutControl1;
-            this.lookUpEdit11.TabIndex = 35;
+            this.lueDoctorBranch.Size = new System.Drawing.Size(50, 20);
+            this.lueDoctorBranch.StyleController = this.lcMedulaReport;
+            this.lueDoctorBranch.TabIndex = 35;
             // 
-            // simpleButton2
+            // sbAddDoctor
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(263, 400);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(81, 22);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 39;
-            this.simpleButton2.Text = "Dr. Ekle";
+            this.sbAddDoctor.Location = new System.Drawing.Point(263, 400);
+            this.sbAddDoctor.Name = "sbAddDoctor";
+            this.sbAddDoctor.Size = new System.Drawing.Size(81, 22);
+            this.sbAddDoctor.StyleController = this.lcMedulaReport;
+            this.sbAddDoctor.TabIndex = 39;
+            this.sbAddDoctor.Text = "Dr. Ekle";
             // 
-            // lookUpEdit10
+            // lueDoctorRegistrationNo
             // 
-            this.lookUpEdit10.Location = new System.Drawing.Point(168, 352);
-            this.lookUpEdit10.Name = "lookUpEdit10";
-            this.lookUpEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueDoctorRegistrationNo.Location = new System.Drawing.Point(170, 352);
+            this.lueDoctorRegistrationNo.Name = "lueDoctorRegistrationNo";
+            this.lueDoctorRegistrationNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit10.Size = new System.Drawing.Size(87, 20);
-            this.lookUpEdit10.StyleController = this.layoutControl1;
-            this.lookUpEdit10.TabIndex = 34;
+            this.lueDoctorRegistrationNo.Size = new System.Drawing.Size(83, 20);
+            this.lueDoctorRegistrationNo.StyleController = this.lcMedulaReport;
+            this.lueDoctorRegistrationNo.TabIndex = 34;
             // 
-            // lookUpEdit9
+            // lueInsuranceType
             // 
-            this.lookUpEdit9.Location = new System.Drawing.Point(391, 284);
-            this.lookUpEdit9.Name = "lookUpEdit9";
-            this.lookUpEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueInsuranceType.Location = new System.Drawing.Point(391, 284);
+            this.lueInsuranceType.Name = "lueInsuranceType";
+            this.lueInsuranceType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit9.Size = new System.Drawing.Size(50, 20);
-            this.lookUpEdit9.StyleController = this.layoutControl1;
-            this.lookUpEdit9.TabIndex = 33;
+            this.lueInsuranceType.Size = new System.Drawing.Size(50, 20);
+            this.lueInsuranceType.StyleController = this.lcMedulaReport;
+            this.lueInsuranceType.TabIndex = 33;
             // 
-            // lookUpEdit8
+            // lueProvisionType
             // 
-            this.lookUpEdit8.Location = new System.Drawing.Point(391, 260);
-            this.lookUpEdit8.Name = "lookUpEdit8";
-            this.lookUpEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueProvisionType.Location = new System.Drawing.Point(391, 236);
+            this.lueProvisionType.Name = "lueProvisionType";
+            this.lueProvisionType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit8.Size = new System.Drawing.Size(50, 20);
-            this.lookUpEdit8.StyleController = this.layoutControl1;
-            this.lookUpEdit8.TabIndex = 32;
+            this.lueProvisionType.Size = new System.Drawing.Size(50, 20);
+            this.lueProvisionType.StyleController = this.lcMedulaReport;
+            this.lueProvisionType.TabIndex = 31;
             // 
-            // lookUpEdit7
+            // teRelationCode
             // 
-            this.lookUpEdit7.Location = new System.Drawing.Point(391, 236);
-            this.lookUpEdit7.Name = "lookUpEdit7";
-            this.lookUpEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.teRelationCode.Location = new System.Drawing.Point(391, 212);
+            this.teRelationCode.Name = "teRelationCode";
+            this.teRelationCode.Size = new System.Drawing.Size(50, 20);
+            this.teRelationCode.StyleController = this.lcMedulaReport;
+            this.teRelationCode.TabIndex = 30;
+            // 
+            // lueTransferorInstitution
+            // 
+            this.lueTransferorInstitution.Location = new System.Drawing.Point(170, 284);
+            this.lueTransferorInstitution.Name = "lueTransferorInstitution";
+            this.lueTransferorInstitution.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit7.Size = new System.Drawing.Size(50, 20);
-            this.lookUpEdit7.StyleController = this.layoutControl1;
-            this.lookUpEdit7.TabIndex = 31;
+            this.lueTransferorInstitution.Size = new System.Drawing.Size(83, 20);
+            this.lueTransferorInstitution.StyleController = this.lcMedulaReport;
+            this.lueTransferorInstitution.TabIndex = 29;
             // 
-            // textEdit17
+            // teCardNo
             // 
-            this.textEdit17.Location = new System.Drawing.Point(391, 212);
-            this.textEdit17.Name = "textEdit17";
-            this.textEdit17.Size = new System.Drawing.Size(50, 20);
-            this.textEdit17.StyleController = this.layoutControl1;
-            this.textEdit17.TabIndex = 30;
+            this.teCardNo.Location = new System.Drawing.Point(170, 260);
+            this.teCardNo.Name = "teCardNo";
+            this.teCardNo.Size = new System.Drawing.Size(83, 20);
+            this.teCardNo.StyleController = this.lcMedulaReport;
+            this.teCardNo.TabIndex = 28;
             // 
-            // lookUpEdit6
+            // teSocialSecurityNo
             // 
-            this.lookUpEdit6.Location = new System.Drawing.Point(168, 284);
-            this.lookUpEdit6.Name = "lookUpEdit6";
-            this.lookUpEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.teSocialSecurityNo.Location = new System.Drawing.Point(170, 236);
+            this.teSocialSecurityNo.Name = "teSocialSecurityNo";
+            this.teSocialSecurityNo.Size = new System.Drawing.Size(83, 20);
+            this.teSocialSecurityNo.StyleController = this.lcMedulaReport;
+            this.teSocialSecurityNo.TabIndex = 27;
+            // 
+            // teTCID
+            // 
+            this.teTCID.Location = new System.Drawing.Point(170, 212);
+            this.teTCID.Name = "teTCID";
+            this.teTCID.Size = new System.Drawing.Size(83, 20);
+            this.teTCID.StyleController = this.lcMedulaReport;
+            this.teTCID.TabIndex = 26;
+            // 
+            // gcESWLStoneInfo
+            // 
+            this.gcESWLStoneInfo.Location = new System.Drawing.Point(48, 534);
+            this.gcESWLStoneInfo.MainView = this.gvESWLStoneInfo;
+            this.gcESWLStoneInfo.Name = "gcESWLStoneInfo";
+            this.gcESWLStoneInfo.Size = new System.Drawing.Size(525, 164);
+            this.gcESWLStoneInfo.TabIndex = 25;
+            this.gcESWLStoneInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvESWLStoneInfo});
+            // 
+            // gvESWLStoneInfo
+            // 
+            this.gvESWLStoneInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colStoneDimension,
+            this.colStoneLocalisationCode});
+            this.gvESWLStoneInfo.GridControl = this.gcESWLStoneInfo;
+            this.gvESWLStoneInfo.Name = "gvESWLStoneInfo";
+            this.gvESWLStoneInfo.OptionsView.ShowGroupPanel = false;
+            // 
+            // colStoneDimension
+            // 
+            this.colStoneDimension.Caption = "Taş Boyutu";
+            this.colStoneDimension.Name = "colStoneDimension";
+            this.colStoneDimension.Visible = true;
+            this.colStoneDimension.VisibleIndex = 1;
+            // 
+            // colStoneLocalisationCode
+            // 
+            this.colStoneLocalisationCode.Caption = "Taş Lokalizasyon Kodu";
+            this.colStoneLocalisationCode.Name = "colStoneLocalisationCode";
+            this.colStoneLocalisationCode.Visible = true;
+            this.colStoneLocalisationCode.VisibleIndex = 0;
+            // 
+            // sbAddESWLStoneInfo
+            // 
+            this.sbAddESWLStoneInfo.Location = new System.Drawing.Point(311, 508);
+            this.sbAddESWLStoneInfo.Name = "sbAddESWLStoneInfo";
+            this.sbAddESWLStoneInfo.Size = new System.Drawing.Size(123, 22);
+            this.sbAddESWLStoneInfo.StyleController = this.lcMedulaReport;
+            this.sbAddESWLStoneInfo.TabIndex = 24;
+            this.sbAddESWLStoneInfo.Text = "Ekle";
+            // 
+            // lcStoneDimensionComment
+            // 
+            this.lcStoneDimensionComment.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lcStoneDimensionComment.Location = new System.Drawing.Point(309, 484);
+            this.lcStoneDimensionComment.Name = "lcStoneDimensionComment";
+            this.lcStoneDimensionComment.Size = new System.Drawing.Size(122, 13);
+            this.lcStoneDimensionComment.StyleController = this.lcMedulaReport;
+            this.lcStoneDimensionComment.TabIndex = 23;
+            this.lcStoneDimensionComment.Text = "mm cinsinden (örnek 2X5)";
+            // 
+            // lueKidneyStoneLocalisationCode
+            // 
+            this.lueKidneyStoneLocalisationCode.Location = new System.Drawing.Point(182, 508);
+            this.lueKidneyStoneLocalisationCode.Name = "lueKidneyStoneLocalisationCode";
+            this.lueKidneyStoneLocalisationCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit6.Size = new System.Drawing.Size(87, 20);
-            this.lookUpEdit6.StyleController = this.layoutControl1;
-            this.lookUpEdit6.TabIndex = 29;
+            this.lueKidneyStoneLocalisationCode.Size = new System.Drawing.Size(125, 20);
+            this.lueKidneyStoneLocalisationCode.StyleController = this.lcMedulaReport;
+            this.lueKidneyStoneLocalisationCode.TabIndex = 22;
             // 
-            // textEdit16
+            // lueKidneyInfo
             // 
-            this.textEdit16.Location = new System.Drawing.Point(168, 260);
-            this.textEdit16.Name = "textEdit16";
-            this.textEdit16.Size = new System.Drawing.Size(87, 20);
-            this.textEdit16.StyleController = this.layoutControl1;
-            this.textEdit16.TabIndex = 28;
-            // 
-            // textEdit15
-            // 
-            this.textEdit15.Location = new System.Drawing.Point(168, 236);
-            this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(87, 20);
-            this.textEdit15.StyleController = this.layoutControl1;
-            this.textEdit15.TabIndex = 27;
-            // 
-            // textEdit14
-            // 
-            this.textEdit14.Location = new System.Drawing.Point(168, 212);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(87, 20);
-            this.textEdit14.StyleController = this.layoutControl1;
-            this.textEdit14.TabIndex = 26;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(48, 534);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(525, 164);
-            this.gridControl1.TabIndex = 25;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(311, 508);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(123, 22);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 24;
-            this.simpleButton1.Text = "Ekle";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl1.Location = new System.Drawing.Point(309, 484);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(122, 13);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 23;
-            this.labelControl1.Text = "mm cinsinden (örnek 2X5)";
-            // 
-            // lookUpEdit5
-            // 
-            this.lookUpEdit5.Location = new System.Drawing.Point(180, 508);
-            this.lookUpEdit5.Name = "lookUpEdit5";
-            this.lookUpEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueKidneyInfo.Location = new System.Drawing.Point(170, 428);
+            this.lueKidneyInfo.Name = "lueKidneyInfo";
+            this.lueKidneyInfo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit5.Size = new System.Drawing.Size(127, 20);
-            this.lookUpEdit5.StyleController = this.layoutControl1;
-            this.lookUpEdit5.TabIndex = 22;
+            this.lueKidneyInfo.Size = new System.Drawing.Size(415, 20);
+            this.lueKidneyInfo.StyleController = this.lcMedulaReport;
+            this.lueKidneyInfo.TabIndex = 20;
             // 
-            // lookUpEdit4
+            // teESWLReportSessionCount
             // 
-            this.lookUpEdit4.Location = new System.Drawing.Point(168, 428);
-            this.lookUpEdit4.Name = "lookUpEdit4";
-            this.lookUpEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.teESWLReportSessionCount.Location = new System.Drawing.Point(170, 404);
+            this.teESWLReportSessionCount.Name = "teESWLReportSessionCount";
+            this.teESWLReportSessionCount.Size = new System.Drawing.Size(415, 20);
+            this.teESWLReportSessionCount.StyleController = this.lcMedulaReport;
+            this.teESWLReportSessionCount.TabIndex = 19;
+            // 
+            // teESWLReportStoneCount
+            // 
+            this.teESWLReportStoneCount.Location = new System.Drawing.Point(170, 380);
+            this.teESWLReportStoneCount.Name = "teESWLReportStoneCount";
+            this.teESWLReportStoneCount.Size = new System.Drawing.Size(415, 20);
+            this.teESWLReportStoneCount.StyleController = this.lcMedulaReport;
+            this.teESWLReportStoneCount.TabIndex = 18;
+            // 
+            // teESWLBUTCode
+            // 
+            this.teESWLBUTCode.Location = new System.Drawing.Point(170, 356);
+            this.teESWLBUTCode.Name = "teESWLBUTCode";
+            this.teESWLBUTCode.Size = new System.Drawing.Size(415, 20);
+            this.teESWLBUTCode.StyleController = this.lcMedulaReport;
+            this.teESWLBUTCode.TabIndex = 17;
+            // 
+            // teStoneDimension
+            // 
+            this.teStoneDimension.Location = new System.Drawing.Point(182, 484);
+            this.teStoneDimension.Name = "teStoneDimension";
+            this.teStoneDimension.Size = new System.Drawing.Size(123, 20);
+            this.teStoneDimension.StyleController = this.lcMedulaReport;
+            this.teStoneDimension.TabIndex = 21;
+            // 
+            // teBUTCode
+            // 
+            this.teBUTCode.Location = new System.Drawing.Point(170, 288);
+            this.teBUTCode.Name = "teBUTCode";
+            this.teBUTCode.Size = new System.Drawing.Size(414, 20);
+            this.teBUTCode.StyleController = this.lcMedulaReport;
+            this.teBUTCode.TabIndex = 16;
+            // 
+            // teFTRSessionCount
+            // 
+            this.teFTRSessionCount.Location = new System.Drawing.Point(170, 264);
+            this.teFTRSessionCount.Name = "teFTRSessionCount";
+            this.teFTRSessionCount.Size = new System.Drawing.Size(414, 20);
+            this.teFTRSessionCount.StyleController = this.lcMedulaReport;
+            this.teFTRSessionCount.TabIndex = 15;
+            // 
+            // teFTRSessionDays
+            // 
+            this.teFTRSessionDays.Location = new System.Drawing.Point(170, 240);
+            this.teFTRSessionDays.Name = "teFTRSessionDays";
+            this.teFTRSessionDays.Size = new System.Drawing.Size(414, 20);
+            this.teFTRSessionDays.StyleController = this.lcMedulaReport;
+            this.teFTRSessionDays.TabIndex = 14;
+            // 
+            // lueFTRBodyPartCode
+            // 
+            this.lueFTRBodyPartCode.Location = new System.Drawing.Point(170, 216);
+            this.lueFTRBodyPartCode.Name = "lueFTRBodyPartCode";
+            this.lueFTRBodyPartCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit4.Size = new System.Drawing.Size(417, 20);
-            this.lookUpEdit4.StyleController = this.layoutControl1;
-            this.lookUpEdit4.TabIndex = 20;
+            this.lueFTRBodyPartCode.Size = new System.Drawing.Size(414, 20);
+            this.lueFTRBodyPartCode.StyleController = this.lcMedulaReport;
+            this.lueFTRBodyPartCode.TabIndex = 13;
             // 
-            // textEdit12
+            // teESWTBUTCode
             // 
-            this.textEdit12.Location = new System.Drawing.Point(168, 404);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(417, 20);
-            this.textEdit12.StyleController = this.layoutControl1;
-            this.textEdit12.TabIndex = 19;
+            this.teESWTBUTCode.Location = new System.Drawing.Point(170, 148);
+            this.teESWTBUTCode.Name = "teESWTBUTCode";
+            this.teESWTBUTCode.Size = new System.Drawing.Size(414, 20);
+            this.teESWTBUTCode.StyleController = this.lcMedulaReport;
+            this.teESWTBUTCode.TabIndex = 12;
             // 
-            // textEdit11
+            // teESWTSessionCount
             // 
-            this.textEdit11.Location = new System.Drawing.Point(168, 380);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(417, 20);
-            this.textEdit11.StyleController = this.layoutControl1;
-            this.textEdit11.TabIndex = 18;
+            this.teESWTSessionCount.Location = new System.Drawing.Point(170, 124);
+            this.teESWTSessionCount.Name = "teESWTSessionCount";
+            this.teESWTSessionCount.Size = new System.Drawing.Size(414, 20);
+            this.teESWTSessionCount.StyleController = this.lcMedulaReport;
+            this.teESWTSessionCount.TabIndex = 11;
             // 
-            // textEdit10
+            // teESWTSessionDays
             // 
-            this.textEdit10.Location = new System.Drawing.Point(168, 356);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(417, 20);
-            this.textEdit10.StyleController = this.layoutControl1;
-            this.textEdit10.TabIndex = 17;
+            this.teESWTSessionDays.Location = new System.Drawing.Point(170, 100);
+            this.teESWTSessionDays.Name = "teESWTSessionDays";
+            this.teESWTSessionDays.Size = new System.Drawing.Size(414, 20);
+            this.teESWTSessionDays.StyleController = this.lcMedulaReport;
+            this.teESWTSessionDays.TabIndex = 10;
             // 
-            // textEdit13
+            // lueESWTBodyPartCode
             // 
-            this.textEdit13.Location = new System.Drawing.Point(180, 484);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(125, 20);
-            this.textEdit13.StyleController = this.layoutControl1;
-            this.textEdit13.TabIndex = 21;
-            // 
-            // textEdit9
-            // 
-            this.textEdit9.Location = new System.Drawing.Point(168, 288);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(416, 20);
-            this.textEdit9.StyleController = this.layoutControl1;
-            this.textEdit9.TabIndex = 16;
-            // 
-            // textEdit8
-            // 
-            this.textEdit8.Location = new System.Drawing.Point(168, 264);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(416, 20);
-            this.textEdit8.StyleController = this.layoutControl1;
-            this.textEdit8.TabIndex = 15;
-            // 
-            // textEdit7
-            // 
-            this.textEdit7.Location = new System.Drawing.Point(168, 240);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(416, 20);
-            this.textEdit7.StyleController = this.layoutControl1;
-            this.textEdit7.TabIndex = 14;
-            // 
-            // lookUpEdit3
-            // 
-            this.lookUpEdit3.Location = new System.Drawing.Point(168, 216);
-            this.lookUpEdit3.Name = "lookUpEdit3";
-            this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueESWTBodyPartCode.Location = new System.Drawing.Point(170, 76);
+            this.lueESWTBodyPartCode.Name = "lueESWTBodyPartCode";
+            this.lueESWTBodyPartCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit3.Size = new System.Drawing.Size(416, 20);
-            this.lookUpEdit3.StyleController = this.layoutControl1;
-            this.lookUpEdit3.TabIndex = 13;
+            this.lueESWTBodyPartCode.Size = new System.Drawing.Size(414, 20);
+            this.lueESWTBodyPartCode.StyleController = this.lcMedulaReport;
+            this.lueESWTBodyPartCode.TabIndex = 9;
             // 
-            // textEdit6
+            // teInstitutionNo
             // 
-            this.textEdit6.Location = new System.Drawing.Point(168, 148);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(416, 20);
-            this.textEdit6.StyleController = this.layoutControl1;
-            this.textEdit6.TabIndex = 12;
+            this.teInstitutionNo.Location = new System.Drawing.Point(391, 164);
+            this.teInstitutionNo.Name = "teInstitutionNo";
+            this.teInstitutionNo.Size = new System.Drawing.Size(50, 20);
+            this.teInstitutionNo.StyleController = this.lcMedulaReport;
+            this.teInstitutionNo.TabIndex = 8;
             // 
-            // textEdit5
+            // tePatientName
             // 
-            this.textEdit5.Location = new System.Drawing.Point(168, 124);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(416, 20);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 11;
+            this.tePatientName.Location = new System.Drawing.Point(170, 188);
+            this.tePatientName.Name = "tePatientName";
+            this.tePatientName.Size = new System.Drawing.Size(271, 20);
+            this.tePatientName.StyleController = this.lcMedulaReport;
+            this.tePatientName.TabIndex = 7;
             // 
-            // textEdit4
+            // teFollowUpNo
             // 
-            this.textEdit4.Location = new System.Drawing.Point(168, 100);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(416, 20);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 10;
+            this.teFollowUpNo.Location = new System.Drawing.Point(170, 164);
+            this.teFollowUpNo.Name = "teFollowUpNo";
+            this.teFollowUpNo.Size = new System.Drawing.Size(83, 20);
+            this.teFollowUpNo.StyleController = this.lcMedulaReport;
+            this.teFollowUpNo.TabIndex = 6;
             // 
-            // lookUpEdit2
+            // lueTreatmentReportType
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(168, 76);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueTreatmentReportType.Location = new System.Drawing.Point(272, 96);
+            this.lueTreatmentReportType.Name = "lueTreatmentReportType";
+            this.lueTreatmentReportType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Size = new System.Drawing.Size(416, 20);
-            this.lookUpEdit2.StyleController = this.layoutControl1;
-            this.lookUpEdit2.TabIndex = 9;
+            this.lueTreatmentReportType.Size = new System.Drawing.Size(112, 20);
+            this.lueTreatmentReportType.StyleController = this.lcMedulaReport;
+            this.lueTreatmentReportType.TabIndex = 5;
             // 
-            // textEdit3
+            // rgReportMainType
             // 
-            this.textEdit3.Location = new System.Drawing.Point(391, 164);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(50, 20);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 8;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(168, 188);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(273, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 7;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(168, 164);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(87, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 6;
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(270, 96);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(114, 20);
-            this.lookUpEdit1.StyleController = this.layoutControl1;
-            this.lookUpEdit1.TabIndex = 5;
-            // 
-            // radioGroup1
-            // 
-            this.radioGroup1.Location = new System.Drawing.Point(36, 76);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.rgReportMainType.Location = new System.Drawing.Point(36, 76);
+            this.rgReportMainType.Name = "rgReportMainType";
+            this.rgReportMainType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "İlaç Raporu"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Tedavi Raporu ->")});
-            this.radioGroup1.Size = new System.Drawing.Size(98, 40);
-            this.radioGroup1.StyleController = this.layoutControl1;
-            this.radioGroup1.TabIndex = 4;
+            this.rgReportMainType.Size = new System.Drawing.Size(98, 40);
+            this.rgReportMainType.StyleController = this.lcMedulaReport;
+            this.rgReportMainType.TabIndex = 4;
             // 
-            // lookUpEdit14
+            // deReportStartDate
             // 
-            this.lookUpEdit14.EditValue = null;
-            this.lookUpEdit14.Location = new System.Drawing.Point(601, 192);
-            this.lookUpEdit14.Name = "lookUpEdit14";
-            this.lookUpEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportStartDate.EditValue = null;
+            this.deReportStartDate.Location = new System.Drawing.Point(603, 192);
+            this.deReportStartDate.Name = "deReportStartDate";
+            this.deReportStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit14.Properties.Mask.EditMask = "";
-            this.lookUpEdit14.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.lookUpEdit14.Properties.NullText = "[EditValue is null]";
-            this.lookUpEdit14.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.lookUpEdit14.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportStartDate.Properties.Mask.EditMask = "";
+            this.deReportStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.deReportStartDate.Properties.NullText = "[EditValue is null]";
+            this.deReportStartDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deReportStartDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.lookUpEdit14.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit14.StyleController = this.layoutControl1;
-            this.lookUpEdit14.TabIndex = 46;
+            this.deReportStartDate.Size = new System.Drawing.Size(282, 20);
+            this.deReportStartDate.StyleController = this.lcMedulaReport;
+            this.deReportStartDate.TabIndex = 46;
             // 
-            // lookUpEdit15
+            // deReportEndDate
             // 
-            this.lookUpEdit15.EditValue = null;
-            this.lookUpEdit15.Location = new System.Drawing.Point(601, 216);
-            this.lookUpEdit15.Name = "lookUpEdit15";
-            this.lookUpEdit15.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportEndDate.EditValue = null;
+            this.deReportEndDate.Location = new System.Drawing.Point(603, 216);
+            this.deReportEndDate.Name = "deReportEndDate";
+            this.deReportEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit15.Properties.Mask.EditMask = "";
-            this.lookUpEdit15.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.lookUpEdit15.Properties.NullText = "[EditValue is null]";
-            this.lookUpEdit15.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.lookUpEdit15.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deReportEndDate.Properties.Mask.EditMask = "";
+            this.deReportEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.deReportEndDate.Properties.NullText = "[EditValue is null]";
+            this.deReportEndDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deReportEndDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.lookUpEdit15.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit15.StyleController = this.layoutControl1;
-            this.lookUpEdit15.TabIndex = 47;
+            this.deReportEndDate.Size = new System.Drawing.Size(282, 20);
+            this.deReportEndDate.StyleController = this.lcMedulaReport;
+            this.deReportEndDate.TabIndex = 47;
             // 
-            // lookUpEdit17
+            // deProtocolDate
             // 
-            this.lookUpEdit17.EditValue = null;
-            this.lookUpEdit17.Location = new System.Drawing.Point(601, 288);
-            this.lookUpEdit17.Name = "lookUpEdit17";
-            this.lookUpEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deProtocolDate.EditValue = null;
+            this.deProtocolDate.Location = new System.Drawing.Point(603, 288);
+            this.deProtocolDate.Name = "deProtocolDate";
+            this.deProtocolDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit17.Properties.Mask.EditMask = "";
-            this.lookUpEdit17.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.lookUpEdit17.Properties.NullText = "[EditValue is null]";
-            this.lookUpEdit17.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.lookUpEdit17.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deProtocolDate.Properties.Mask.EditMask = "";
+            this.deProtocolDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.deProtocolDate.Properties.NullText = "[EditValue is null]";
+            this.deProtocolDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deProtocolDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.lookUpEdit17.Size = new System.Drawing.Size(284, 20);
-            this.lookUpEdit17.StyleController = this.layoutControl1;
-            this.lookUpEdit17.TabIndex = 50;
+            this.deProtocolDate.Size = new System.Drawing.Size(282, 20);
+            this.deProtocolDate.StyleController = this.lcMedulaReport;
+            this.deProtocolDate.TabIndex = 50;
             // 
-            // textEdit22
+            // meClinicalDiagnosis
             // 
-            this.textEdit22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textEdit22.Location = new System.Drawing.Point(481, 368);
-            this.textEdit22.Name = "textEdit22";
-            this.textEdit22.Size = new System.Drawing.Size(392, 49);
-            this.textEdit22.StyleController = this.layoutControl1;
-            this.textEdit22.TabIndex = 52;
+            this.meClinicalDiagnosis.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.meClinicalDiagnosis.Location = new System.Drawing.Point(481, 368);
+            this.meClinicalDiagnosis.Name = "meClinicalDiagnosis";
+            this.meClinicalDiagnosis.Size = new System.Drawing.Size(392, 49);
+            this.meClinicalDiagnosis.StyleController = this.lcMedulaReport;
+            this.meClinicalDiagnosis.TabIndex = 52;
             // 
-            // textEdit23
+            // meDescription
             // 
-            this.textEdit23.Location = new System.Drawing.Point(481, 465);
-            this.textEdit23.Name = "textEdit23";
-            this.textEdit23.Size = new System.Drawing.Size(392, 44);
-            this.textEdit23.StyleController = this.layoutControl1;
-            this.textEdit23.TabIndex = 53;
+            this.meDescription.Location = new System.Drawing.Point(481, 465);
+            this.meDescription.Name = "meDescription";
+            this.meDescription.Size = new System.Drawing.Size(392, 44);
+            this.meDescription.StyleController = this.lcMedulaReport;
+            this.meDescription.TabIndex = 53;
             // 
-            // layoutControlGroup1
+            // deProvisionDate
             // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.tabbedControlGroup1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(921, 746);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
+            this.deProvisionDate.EditValue = null;
+            this.deProvisionDate.Location = new System.Drawing.Point(391, 260);
+            this.deProvisionDate.Name = "deProvisionDate";
+            this.deProvisionDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deProvisionDate.Properties.Mask.EditMask = "";
+            this.deProvisionDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.deProvisionDate.Properties.NullText = "[EditValue is null]";
+            this.deProvisionDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deProvisionDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.deProvisionDate.Size = new System.Drawing.Size(50, 20);
+            this.deProvisionDate.StyleController = this.lcMedulaReport;
+            this.deProvisionDate.TabIndex = 32;
             // 
-            // tabbedControlGroup1
+            // lcgMedulaReport
             // 
-            this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(901, 726);
-            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2,
-            this.layoutControlGroup5});
-            this.tabbedControlGroup1.Text = "tabbedControlGroup1";
+            this.lcgMedulaReport.CustomizationFormText = "layoutControlGroup1";
+            this.lcgMedulaReport.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.lcgMedulaReport.GroupBordersVisible = false;
+            this.lcgMedulaReport.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.tcgMedulaReport});
+            this.lcgMedulaReport.Location = new System.Drawing.Point(0, 0);
+            this.lcgMedulaReport.Name = "lcgMedulaReport";
+            this.lcgMedulaReport.Size = new System.Drawing.Size(921, 746);
+            this.lcgMedulaReport.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.lcgMedulaReport.Text = "lcgMedulaReport";
+            this.lcgMedulaReport.TextVisible = false;
             // 
-            // layoutControlGroup2
+            // tcgMedulaReport
             // 
-            this.layoutControlGroup2.CustomizationFormText = "Rapor Detay Bilgileri";
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup3,
-            this.layoutControlGroup4,
-            this.layoutControlGroup10,
-            this.layoutControlGroup11,
-            this.layoutControlGroup12});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(877, 682);
-            this.layoutControlGroup2.Text = "Rapor Detay Bilgileri";
+            this.tcgMedulaReport.CustomizationFormText = "tabbedControlGroup1";
+            this.tcgMedulaReport.Location = new System.Drawing.Point(0, 0);
+            this.tcgMedulaReport.Name = "tcgMedulaReport";
+            this.tcgMedulaReport.SelectedTabPage = this.lcgReportDetailInfo;
+            this.tcgMedulaReport.SelectedTabPageIndex = 0;
+            this.tcgMedulaReport.Size = new System.Drawing.Size(901, 726);
+            this.tcgMedulaReport.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lcgReportDetailInfo,
+            this.lcgESWTFTRESWLReportInfo});
+            this.tcgMedulaReport.Text = "tcgMedulaReport";
             // 
-            // layoutControlGroup3
+            // lcgReportDetailInfo
             // 
-            this.layoutControlGroup3.CustomizationFormText = "Rapor Türü";
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
+            this.lcgReportDetailInfo.CustomizationFormText = "Rapor Detay Bilgileri";
+            this.lcgReportDetailInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lcgReportType,
+            this.lcgPatientInfo,
+            this.lcgDoctorInfo,
+            this.lcgReportInfo,
+            this.lcgReport,
+            this.lcgDiagnosisInfo});
+            this.lcgReportDetailInfo.Location = new System.Drawing.Point(0, 0);
+            this.lcgReportDetailInfo.Name = "lcgReportDetailInfo";
+            this.lcgReportDetailInfo.Size = new System.Drawing.Size(877, 682);
+            this.lcgReportDetailInfo.Text = "Rapor Detay Bilgileri";
+            // 
+            // lcgReportType
+            // 
+            this.lcgReportType.CustomizationFormText = "Rapor Türü";
+            this.lcgReportType.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciReportMainType,
+            this.lciTreatmentReportType,
             this.emptySpaceItem5,
             this.emptySpaceItem6});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(433, 88);
-            this.layoutControlGroup3.Text = "Rapor Türü";
+            this.lcgReportType.Location = new System.Drawing.Point(0, 0);
+            this.lcgReportType.Name = "lcgReportType";
+            this.lcgReportType.Size = new System.Drawing.Size(433, 88);
+            this.lcgReportType.Text = "Rapor Türü";
             // 
-            // layoutControlItem1
+            // lciReportMainType
             // 
-            this.layoutControlItem1.Control = this.radioGroup1;
-            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(102, 44);
-            this.layoutControlItem1.Text = "layoutControlItem1";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextToControlDistance = 0;
-            this.layoutControlItem1.TextVisible = false;
+            this.lciReportMainType.Control = this.rgReportMainType;
+            this.lciReportMainType.CustomizationFormText = "Rapor Türü";
+            this.lciReportMainType.Location = new System.Drawing.Point(0, 0);
+            this.lciReportMainType.Name = "lciReportMainType";
+            this.lciReportMainType.Size = new System.Drawing.Size(102, 44);
+            this.lciReportMainType.Text = "lciReportMainType";
+            this.lciReportMainType.TextSize = new System.Drawing.Size(0, 0);
+            this.lciReportMainType.TextToControlDistance = 0;
+            this.lciReportMainType.TextVisible = false;
             // 
-            // layoutControlItem2
+            // lciTreatmentReportType
             // 
-            this.layoutControlItem2.Control = this.lookUpEdit1;
-            this.layoutControlItem2.CustomizationFormText = "Tedavi Rapor Türü";
-            this.layoutControlItem2.Location = new System.Drawing.Point(102, 20);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(250, 24);
-            this.layoutControlItem2.Text = "Tedavi Rapor Türü";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(128, 13);
+            this.lciTreatmentReportType.Control = this.lueTreatmentReportType;
+            this.lciTreatmentReportType.CustomizationFormText = "Tedavi Rapor Türü";
+            this.lciTreatmentReportType.Location = new System.Drawing.Point(102, 20);
+            this.lciTreatmentReportType.Name = "lciTreatmentReportType";
+            this.lciTreatmentReportType.Size = new System.Drawing.Size(250, 24);
+            this.lciTreatmentReportType.Text = "Tedavi Rapor Türü";
+            this.lciTreatmentReportType.TextSize = new System.Drawing.Size(130, 13);
             // 
             // emptySpaceItem5
             // 
@@ -1174,344 +1205,225 @@
             this.emptySpaceItem6.Text = "emptySpaceItem6";
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlGroup4
+            // lcgPatientInfo
             // 
-            this.layoutControlGroup4.CustomizationFormText = "Hasta Bilgileri";
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem4,
-            this.layoutControlItem3,
-            this.layoutControlItem5,
-            this.layoutControlItem24,
-            this.layoutControlItem25,
-            this.layoutControlItem26,
-            this.layoutControlItem27,
-            this.layoutControlItem28,
-            this.layoutControlItem29,
-            this.layoutControlItem30,
-            this.layoutControlItem31});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 88);
-            this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(433, 188);
-            this.layoutControlGroup4.Text = "Hasta Bilgileri";
+            this.lcgPatientInfo.CustomizationFormText = "Hasta Bilgileri";
+            this.lcgPatientInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciPatientName,
+            this.lciFollowUpNo,
+            this.lciInstitutionNo,
+            this.lciTCID,
+            this.lciSocialSecurityNo,
+            this.lciCardNo,
+            this.lciTransferorInstitution,
+            this.lciRelationCode,
+            this.lciProvisionType,
+            this.lciProvisionDate,
+            this.lciInsuranceType});
+            this.lcgPatientInfo.Location = new System.Drawing.Point(0, 88);
+            this.lcgPatientInfo.Name = "lcgPatientInfo";
+            this.lcgPatientInfo.Size = new System.Drawing.Size(433, 188);
+            this.lcgPatientInfo.Text = "Hasta Bilgileri";
             // 
-            // layoutControlItem4
+            // lciPatientName
             // 
-            this.layoutControlItem4.Control = this.textEdit2;
-            this.layoutControlItem4.CustomizationFormText = "Hasta Adı Soyadı";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(409, 24);
-            this.layoutControlItem4.Text = "Hasta Adı Soyadı";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(128, 13);
+            this.lciPatientName.Control = this.tePatientName;
+            this.lciPatientName.CustomizationFormText = "Hasta Adı Soyadı";
+            this.lciPatientName.Location = new System.Drawing.Point(0, 24);
+            this.lciPatientName.Name = "lciPatientName";
+            this.lciPatientName.Size = new System.Drawing.Size(409, 24);
+            this.lciPatientName.Text = "Hasta Adı Soyadı";
+            this.lciPatientName.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem3
+            // lciFollowUpNo
             // 
-            this.layoutControlItem3.Control = this.textEdit1;
-            this.layoutControlItem3.CustomizationFormText = "Takip No";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem3.Text = "Takip No";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(128, 13);
+            this.lciFollowUpNo.Control = this.teFollowUpNo;
+            this.lciFollowUpNo.CustomizationFormText = "Takip No";
+            this.lciFollowUpNo.Location = new System.Drawing.Point(0, 0);
+            this.lciFollowUpNo.Name = "lciFollowUpNo";
+            this.lciFollowUpNo.Size = new System.Drawing.Size(221, 24);
+            this.lciFollowUpNo.Text = "Takip No";
+            this.lciFollowUpNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem5
+            // lciInstitutionNo
             // 
-            this.layoutControlItem5.Control = this.textEdit3;
-            this.layoutControlItem5.CustomizationFormText = "Tesis Kodu";
-            this.layoutControlItem5.Location = new System.Drawing.Point(223, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem5.Text = "Tesis Kodu";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(128, 13);
+            this.lciInstitutionNo.Control = this.teInstitutionNo;
+            this.lciInstitutionNo.CustomizationFormText = "Tesis Kodu";
+            this.lciInstitutionNo.Location = new System.Drawing.Point(221, 0);
+            this.lciInstitutionNo.Name = "lciInstitutionNo";
+            this.lciInstitutionNo.Size = new System.Drawing.Size(188, 24);
+            this.lciInstitutionNo.Text = "Tesis Kodu";
+            this.lciInstitutionNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem24
+            // lciTCID
             // 
-            this.layoutControlItem24.Control = this.textEdit14;
-            this.layoutControlItem24.CustomizationFormText = "T.C. Kimlik No";
-            this.layoutControlItem24.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem24.Text = "T.C. Kimlik No";
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(128, 13);
+            this.lciTCID.Control = this.teTCID;
+            this.lciTCID.CustomizationFormText = "T.C. Kimlik No";
+            this.lciTCID.Location = new System.Drawing.Point(0, 48);
+            this.lciTCID.Name = "lciTCID";
+            this.lciTCID.Size = new System.Drawing.Size(221, 24);
+            this.lciTCID.Text = "T.C. Kimlik No";
+            this.lciTCID.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem25
+            // lciSocialSecurityNo
             // 
-            this.layoutControlItem25.Control = this.textEdit15;
-            this.layoutControlItem25.CustomizationFormText = "Sosyal Güvenlik No";
-            this.layoutControlItem25.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem25.Text = "Sosyal Güvenlik No";
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(128, 13);
+            this.lciSocialSecurityNo.Control = this.teSocialSecurityNo;
+            this.lciSocialSecurityNo.CustomizationFormText = "Sosyal Güvenlik No";
+            this.lciSocialSecurityNo.Location = new System.Drawing.Point(0, 72);
+            this.lciSocialSecurityNo.Name = "lciSocialSecurityNo";
+            this.lciSocialSecurityNo.Size = new System.Drawing.Size(221, 24);
+            this.lciSocialSecurityNo.Text = "Sosyal Güvenlik No";
+            this.lciSocialSecurityNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem26
+            // lciCardNo
             // 
-            this.layoutControlItem26.Control = this.textEdit16;
-            this.layoutControlItem26.CustomizationFormText = "Karne No";
-            this.layoutControlItem26.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem26.Text = "Karne No";
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(128, 13);
+            this.lciCardNo.Control = this.teCardNo;
+            this.lciCardNo.CustomizationFormText = "Karne No";
+            this.lciCardNo.Location = new System.Drawing.Point(0, 96);
+            this.lciCardNo.Name = "lciCardNo";
+            this.lciCardNo.Size = new System.Drawing.Size(221, 24);
+            this.lciCardNo.Text = "Karne No";
+            this.lciCardNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem27
+            // lciTransferorInstitution
             // 
-            this.layoutControlItem27.Control = this.lookUpEdit6;
-            this.layoutControlItem27.CustomizationFormText = "Devredilen Kurum";
-            this.layoutControlItem27.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem27.Text = "Devredilen Kurum";
-            this.layoutControlItem27.TextSize = new System.Drawing.Size(128, 13);
+            this.lciTransferorInstitution.Control = this.lueTransferorInstitution;
+            this.lciTransferorInstitution.CustomizationFormText = "Devredilen Kurum";
+            this.lciTransferorInstitution.Location = new System.Drawing.Point(0, 120);
+            this.lciTransferorInstitution.Name = "lciTransferorInstitution";
+            this.lciTransferorInstitution.Size = new System.Drawing.Size(221, 24);
+            this.lciTransferorInstitution.Text = "Devredilen Kurum";
+            this.lciTransferorInstitution.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem28
+            // lciRelationCode
             // 
-            this.layoutControlItem28.Control = this.textEdit17;
-            this.layoutControlItem28.CustomizationFormText = "Yakınlık Kodu";
-            this.layoutControlItem28.Location = new System.Drawing.Point(223, 48);
-            this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem28.Text = "Yakınlık Kodu";
-            this.layoutControlItem28.TextSize = new System.Drawing.Size(128, 13);
+            this.lciRelationCode.Control = this.teRelationCode;
+            this.lciRelationCode.CustomizationFormText = "Yakınlık Kodu";
+            this.lciRelationCode.Location = new System.Drawing.Point(221, 48);
+            this.lciRelationCode.Name = "lciRelationCode";
+            this.lciRelationCode.Size = new System.Drawing.Size(188, 24);
+            this.lciRelationCode.Text = "Yakınlık Kodu";
+            this.lciRelationCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem29
+            // lciProvisionType
             // 
-            this.layoutControlItem29.Control = this.lookUpEdit7;
-            this.layoutControlItem29.CustomizationFormText = "Provizyon Tipi";
-            this.layoutControlItem29.Location = new System.Drawing.Point(223, 72);
-            this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem29.Text = "Provizyon Tipi";
-            this.layoutControlItem29.TextSize = new System.Drawing.Size(128, 13);
+            this.lciProvisionType.Control = this.lueProvisionType;
+            this.lciProvisionType.CustomizationFormText = "Provizyon Tipi";
+            this.lciProvisionType.Location = new System.Drawing.Point(221, 72);
+            this.lciProvisionType.Name = "lciProvisionType";
+            this.lciProvisionType.Size = new System.Drawing.Size(188, 24);
+            this.lciProvisionType.Text = "Provizyon Tipi";
+            this.lciProvisionType.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem30
+            // lciProvisionDate
             // 
-            this.layoutControlItem30.Control = this.lookUpEdit8;
-            this.layoutControlItem30.CustomizationFormText = "Provizyon Tarihi";
-            this.layoutControlItem30.Location = new System.Drawing.Point(223, 96);
-            this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem30.Text = "Provizyon Tarihi";
-            this.layoutControlItem30.TextSize = new System.Drawing.Size(128, 13);
+            this.lciProvisionDate.Control = this.deProvisionDate;
+            this.lciProvisionDate.CustomizationFormText = "Provizyon Tarihi";
+            this.lciProvisionDate.Location = new System.Drawing.Point(221, 96);
+            this.lciProvisionDate.Name = "lciProvisionDate";
+            this.lciProvisionDate.Size = new System.Drawing.Size(188, 24);
+            this.lciProvisionDate.Text = "Provizyon Tarihi";
+            this.lciProvisionDate.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem31
+            // lciInsuranceType
             // 
-            this.layoutControlItem31.Control = this.lookUpEdit9;
-            this.layoutControlItem31.CustomizationFormText = "Sigortalı Türü";
-            this.layoutControlItem31.Location = new System.Drawing.Point(223, 120);
-            this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem31.Text = "Sigortalı Türü";
-            this.layoutControlItem31.TextSize = new System.Drawing.Size(128, 13);
+            this.lciInsuranceType.Control = this.lueInsuranceType;
+            this.lciInsuranceType.CustomizationFormText = "Sigortalı Türü";
+            this.lciInsuranceType.Location = new System.Drawing.Point(221, 120);
+            this.lciInsuranceType.Name = "lciInsuranceType";
+            this.lciInsuranceType.Size = new System.Drawing.Size(188, 24);
+            this.lciInsuranceType.Text = "Sigortalı Türü";
+            this.lciInsuranceType.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup10
+            // lcgDoctorInfo
             // 
-            this.layoutControlGroup10.CustomizationFormText = "Doktor Bilgisi";
-            this.layoutControlGroup10.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem37,
-            this.layoutControlItem36,
-            this.layoutControlItem33,
-            this.layoutControlItem32,
-            this.layoutControlItem34,
-            this.layoutControlItem35,
-            this.layoutControlItem38,
-            this.layoutControlGroup15,
+            this.lcgDoctorInfo.CustomizationFormText = "Doktor Bilgisi";
+            this.lcgDoctorInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciAddDoctor,
+            this.lciDoctorType,
+            this.lciDoctorBranch,
+            this.lciDoctorRegistrationNo,
+            this.lciDoctorFirstName,
+            this.lciDoctorLastName,
+            this.lciDoctors,
             this.emptySpaceItem10});
-            this.layoutControlGroup10.Location = new System.Drawing.Point(0, 276);
-            this.layoutControlGroup10.Name = "layoutControlGroup10";
-            this.layoutControlGroup10.Size = new System.Drawing.Size(433, 406);
-            this.layoutControlGroup10.Text = "Doktor Bilgisi";
+            this.lcgDoctorInfo.Location = new System.Drawing.Point(0, 276);
+            this.lcgDoctorInfo.Name = "lcgDoctorInfo";
+            this.lcgDoctorInfo.Size = new System.Drawing.Size(433, 218);
+            this.lcgDoctorInfo.Text = "Doktor Bilgisi";
             // 
-            // layoutControlItem37
+            // lciAddDoctor
             // 
-            this.layoutControlItem37.Control = this.simpleButton2;
-            this.layoutControlItem37.CustomizationFormText = "layoutControlItem37";
-            this.layoutControlItem37.Location = new System.Drawing.Point(227, 48);
-            this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(85, 26);
-            this.layoutControlItem37.Text = "layoutControlItem37";
-            this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem37.TextToControlDistance = 0;
-            this.layoutControlItem37.TextVisible = false;
+            this.lciAddDoctor.Control = this.sbAddDoctor;
+            this.lciAddDoctor.CustomizationFormText = "Doktor Ekle";
+            this.lciAddDoctor.Location = new System.Drawing.Point(227, 48);
+            this.lciAddDoctor.Name = "lciAddDoctor";
+            this.lciAddDoctor.Size = new System.Drawing.Size(85, 26);
+            this.lciAddDoctor.Text = "lciAddDoctor";
+            this.lciAddDoctor.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddDoctor.TextToControlDistance = 0;
+            this.lciAddDoctor.TextVisible = false;
             // 
-            // layoutControlItem36
+            // lciDoctorType
             // 
-            this.layoutControlItem36.Control = this.lookUpEdit12;
-            this.layoutControlItem36.CustomizationFormText = "Tipi";
-            this.layoutControlItem36.Location = new System.Drawing.Point(223, 24);
-            this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem36.Text = "Tipi";
-            this.layoutControlItem36.TextSize = new System.Drawing.Size(128, 13);
+            this.lciDoctorType.Control = this.lueDoctorType;
+            this.lciDoctorType.CustomizationFormText = "Tipi";
+            this.lciDoctorType.Location = new System.Drawing.Point(221, 24);
+            this.lciDoctorType.Name = "lciDoctorType";
+            this.lciDoctorType.Size = new System.Drawing.Size(188, 24);
+            this.lciDoctorType.Text = "Tipi";
+            this.lciDoctorType.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem33
+            // lciDoctorBranch
             // 
-            this.layoutControlItem33.Control = this.lookUpEdit11;
-            this.layoutControlItem33.CustomizationFormText = "Dr. Branş Kodu";
-            this.layoutControlItem33.Location = new System.Drawing.Point(223, 0);
-            this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(186, 24);
-            this.layoutControlItem33.Text = "Dr. Branş Kodu";
-            this.layoutControlItem33.TextSize = new System.Drawing.Size(128, 13);
+            this.lciDoctorBranch.Control = this.lueDoctorBranch;
+            this.lciDoctorBranch.CustomizationFormText = "Dr. Branş Kodu";
+            this.lciDoctorBranch.Location = new System.Drawing.Point(221, 0);
+            this.lciDoctorBranch.Name = "lciDoctorBranch";
+            this.lciDoctorBranch.Size = new System.Drawing.Size(188, 24);
+            this.lciDoctorBranch.Text = "Dr. Branş Kodu";
+            this.lciDoctorBranch.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem32
+            // lciDoctorRegistrationNo
             // 
-            this.layoutControlItem32.Control = this.lookUpEdit10;
-            this.layoutControlItem32.CustomizationFormText = "Dr. Tescil No";
-            this.layoutControlItem32.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem32.Text = "Dr. Tescil No";
-            this.layoutControlItem32.TextSize = new System.Drawing.Size(128, 13);
+            this.lciDoctorRegistrationNo.Control = this.lueDoctorRegistrationNo;
+            this.lciDoctorRegistrationNo.CustomizationFormText = "Dr. Tescil No";
+            this.lciDoctorRegistrationNo.Location = new System.Drawing.Point(0, 0);
+            this.lciDoctorRegistrationNo.Name = "lciDoctorRegistrationNo";
+            this.lciDoctorRegistrationNo.Size = new System.Drawing.Size(221, 24);
+            this.lciDoctorRegistrationNo.Text = "Dr. Tescil No";
+            this.lciDoctorRegistrationNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem34
+            // lciDoctorFirstName
             // 
-            this.layoutControlItem34.Control = this.textEdit18;
-            this.layoutControlItem34.CustomizationFormText = "Dr. Adı";
-            this.layoutControlItem34.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(223, 24);
-            this.layoutControlItem34.Text = "Dr. Adı";
-            this.layoutControlItem34.TextSize = new System.Drawing.Size(128, 13);
+            this.lciDoctorFirstName.Control = this.teDoctorFirstName;
+            this.lciDoctorFirstName.CustomizationFormText = "Dr. Adı";
+            this.lciDoctorFirstName.Location = new System.Drawing.Point(0, 24);
+            this.lciDoctorFirstName.Name = "lciDoctorFirstName";
+            this.lciDoctorFirstName.Size = new System.Drawing.Size(221, 24);
+            this.lciDoctorFirstName.Text = "Dr. Adı";
+            this.lciDoctorFirstName.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem35
+            // lciDoctorLastName
             // 
-            this.layoutControlItem35.Control = this.textEdit19;
-            this.layoutControlItem35.CustomizationFormText = "Dr. Soyadı";
-            this.layoutControlItem35.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(227, 26);
-            this.layoutControlItem35.Text = "Dr. Soyadı";
-            this.layoutControlItem35.TextSize = new System.Drawing.Size(128, 13);
+            this.lciDoctorLastName.Control = this.teDoctorLastName;
+            this.lciDoctorLastName.CustomizationFormText = "Dr. Soyadı";
+            this.lciDoctorLastName.Location = new System.Drawing.Point(0, 48);
+            this.lciDoctorLastName.Name = "lciDoctorLastName";
+            this.lciDoctorLastName.Size = new System.Drawing.Size(227, 26);
+            this.lciDoctorLastName.Text = "Dr. Soyadı";
+            this.lciDoctorLastName.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem38
+            // lciDoctors
             // 
-            this.layoutControlItem38.Control = this.gridControl2;
-            this.layoutControlItem38.CustomizationFormText = "Doktorlar";
-            this.layoutControlItem38.Location = new System.Drawing.Point(0, 74);
-            this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(409, 90);
-            this.layoutControlItem38.Text = "Doktorlar";
-            this.layoutControlItem38.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem38.TextSize = new System.Drawing.Size(128, 13);
-            // 
-            // layoutControlGroup15
-            // 
-            this.layoutControlGroup15.CustomizationFormText = "Teşhis Bilgisi";
-            this.layoutControlGroup15.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem39,
-            this.layoutControlItem40,
-            this.layoutControlItem55,
-            this.layoutControlItem56,
-            this.emptySpaceItem7,
-            this.emptySpaceItem9,
-            this.layoutControlItem60,
-            this.layoutControlItem61,
-            this.layoutControlItem62});
-            this.layoutControlGroup15.Location = new System.Drawing.Point(0, 164);
-            this.layoutControlGroup15.Name = "layoutControlGroup15";
-            this.layoutControlGroup15.Size = new System.Drawing.Size(409, 198);
-            this.layoutControlGroup15.Text = "Teşhis Bilgisi";
-            // 
-            // layoutControlItem39
-            // 
-            this.layoutControlItem39.Control = this.dateEdit1;
-            this.layoutControlItem39.CustomizationFormText = "Başlangıç Tarihi";
-            this.layoutControlItem39.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(132, 40);
-            this.layoutControlItem39.Text = "Başlangıç Tarihi";
-            this.layoutControlItem39.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem39.TextSize = new System.Drawing.Size(128, 13);
-            // 
-            // layoutControlItem40
-            // 
-            this.layoutControlItem40.Control = this.dateEdit2;
-            this.layoutControlItem40.CustomizationFormText = "Bitiş Tarihi";
-            this.layoutControlItem40.Location = new System.Drawing.Point(202, 0);
-            this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(132, 40);
-            this.layoutControlItem40.Text = "Bitiş Tarihi";
-            this.layoutControlItem40.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem40.TextSize = new System.Drawing.Size(128, 13);
-            // 
-            // layoutControlItem55
-            // 
-            this.layoutControlItem55.Control = this.gridControl4;
-            this.layoutControlItem55.CustomizationFormText = "layoutControlItem55";
-            this.layoutControlItem55.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem55.Name = "layoutControlItem55";
-            this.layoutControlItem55.Size = new System.Drawing.Size(193, 88);
-            this.layoutControlItem55.Text = "layoutControlItem55";
-            this.layoutControlItem55.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem55.TextToControlDistance = 0;
-            this.layoutControlItem55.TextVisible = false;
-            // 
-            // layoutControlItem56
-            // 
-            this.layoutControlItem56.Control = this.gridControl5;
-            this.layoutControlItem56.CustomizationFormText = "layoutControlItem56";
-            this.layoutControlItem56.Location = new System.Drawing.Point(193, 40);
-            this.layoutControlItem56.Name = "layoutControlItem56";
-            this.layoutControlItem56.Size = new System.Drawing.Size(192, 88);
-            this.layoutControlItem56.Text = "layoutControlItem56";
-            this.layoutControlItem56.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem56.TextToControlDistance = 0;
-            this.layoutControlItem56.TextVisible = false;
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(334, 0);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(51, 40);
-            this.emptySpaceItem7.Text = "emptySpaceItem7";
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem9
-            // 
-            this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
-            this.emptySpaceItem9.Location = new System.Drawing.Point(132, 0);
-            this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(70, 40);
-            this.emptySpaceItem9.Text = "emptySpaceItem9";
-            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem60
-            // 
-            this.layoutControlItem60.Control = this.simpleButton8;
-            this.layoutControlItem60.CustomizationFormText = "layoutControlItem60";
-            this.layoutControlItem60.Location = new System.Drawing.Point(0, 128);
-            this.layoutControlItem60.Name = "layoutControlItem60";
-            this.layoutControlItem60.Size = new System.Drawing.Size(143, 26);
-            this.layoutControlItem60.Text = "layoutControlItem60";
-            this.layoutControlItem60.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem60.TextToControlDistance = 0;
-            this.layoutControlItem60.TextVisible = false;
-            // 
-            // layoutControlItem61
-            // 
-            this.layoutControlItem61.Control = this.simpleButton9;
-            this.layoutControlItem61.CustomizationFormText = "layoutControlItem61";
-            this.layoutControlItem61.Location = new System.Drawing.Point(143, 128);
-            this.layoutControlItem61.Name = "layoutControlItem61";
-            this.layoutControlItem61.Size = new System.Drawing.Size(106, 26);
-            this.layoutControlItem61.Text = "layoutControlItem61";
-            this.layoutControlItem61.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem61.TextToControlDistance = 0;
-            this.layoutControlItem61.TextVisible = false;
-            // 
-            // layoutControlItem62
-            // 
-            this.layoutControlItem62.Control = this.simpleButton10;
-            this.layoutControlItem62.CustomizationFormText = "layoutControlItem62";
-            this.layoutControlItem62.Location = new System.Drawing.Point(249, 128);
-            this.layoutControlItem62.Name = "layoutControlItem62";
-            this.layoutControlItem62.Size = new System.Drawing.Size(136, 26);
-            this.layoutControlItem62.Text = "layoutControlItem62";
-            this.layoutControlItem62.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem62.TextToControlDistance = 0;
-            this.layoutControlItem62.TextVisible = false;
+            this.lciDoctors.Control = this.gcDoctors;
+            this.lciDoctors.CustomizationFormText = "Doktorlar";
+            this.lciDoctors.Location = new System.Drawing.Point(0, 74);
+            this.lciDoctors.Name = "lciDoctors";
+            this.lciDoctors.Size = new System.Drawing.Size(409, 100);
+            this.lciDoctors.Text = "Doktorlar";
+            this.lciDoctors.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciDoctors.TextSize = new System.Drawing.Size(130, 13);
             // 
             // emptySpaceItem10
             // 
@@ -1522,479 +1434,597 @@
             this.emptySpaceItem10.Text = "emptySpaceItem10";
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlGroup11
+            // lcgReportInfo
             // 
-            this.layoutControlGroup11.CustomizationFormText = "Rapor Bilgisi";
-            this.layoutControlGroup11.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem42,
-            this.layoutControlItem41});
-            this.layoutControlGroup11.Location = new System.Drawing.Point(433, 0);
-            this.layoutControlGroup11.Name = "layoutControlGroup11";
-            this.layoutControlGroup11.Size = new System.Drawing.Size(444, 92);
-            this.layoutControlGroup11.Text = "Rapor Bilgisi";
+            this.lcgReportInfo.CustomizationFormText = "Rapor Bilgisi";
+            this.lcgReportInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciReportDate,
+            this.lciReportNo});
+            this.lcgReportInfo.Location = new System.Drawing.Point(433, 0);
+            this.lcgReportInfo.Name = "lcgReportInfo";
+            this.lcgReportInfo.Size = new System.Drawing.Size(444, 92);
+            this.lcgReportInfo.Text = "Rapor Bilgisi";
             // 
-            // layoutControlItem42
+            // lciReportDate
             // 
-            this.layoutControlItem42.Control = this.dateEdit3;
-            this.layoutControlItem42.CustomizationFormText = "Rapor Tarihi";
-            this.layoutControlItem42.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem42.Text = "Rapor Tarihi";
-            this.layoutControlItem42.TextSize = new System.Drawing.Size(128, 13);
+            this.lciReportDate.Control = this.deReportDate;
+            this.lciReportDate.CustomizationFormText = "Rapor Tarihi";
+            this.lciReportDate.Location = new System.Drawing.Point(0, 24);
+            this.lciReportDate.Name = "lciReportDate";
+            this.lciReportDate.Size = new System.Drawing.Size(420, 24);
+            this.lciReportDate.Text = "Rapor Tarihi";
+            this.lciReportDate.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem41
+            // lciReportNo
             // 
-            this.layoutControlItem41.Control = this.textEdit20;
-            this.layoutControlItem41.CustomizationFormText = "Rapor No";
-            this.layoutControlItem41.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem41.Text = "Rapor No";
-            this.layoutControlItem41.TextSize = new System.Drawing.Size(128, 13);
+            this.lciReportNo.Control = this.teReportNo;
+            this.lciReportNo.CustomizationFormText = "Rapor No";
+            this.lciReportNo.Location = new System.Drawing.Point(0, 0);
+            this.lciReportNo.Name = "lciReportNo";
+            this.lciReportNo.Size = new System.Drawing.Size(420, 24);
+            this.lciReportNo.Text = "Rapor No";
+            this.lciReportNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup12
+            // lcgReport
             // 
-            this.layoutControlGroup12.CustomizationFormText = "Rapor";
-            this.layoutControlGroup12.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem43,
-            this.layoutControlItem44,
-            this.layoutControlItem45,
-            this.layoutControlItem46,
-            this.layoutControlItem47,
-            this.layoutControlItem48,
-            this.layoutControlItem49,
-            this.layoutControlGroup13,
-            this.layoutControlGroup14,
-            this.layoutControlItem57,
-            this.layoutControlItem58,
-            this.layoutControlItem59,
-            this.layoutControlGroup16});
-            this.layoutControlGroup12.Location = new System.Drawing.Point(433, 92);
-            this.layoutControlGroup12.Name = "layoutControlGroup12";
-            this.layoutControlGroup12.Size = new System.Drawing.Size(444, 590);
-            this.layoutControlGroup12.Text = "Rapor";
+            this.lcgReport.CustomizationFormText = "Rapor";
+            this.lcgReport.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciReportType,
+            this.lciReportStartDate,
+            this.lciReportEndDate,
+            this.lciEditingType,
+            this.lciProtocolNo,
+            this.lciProtocolDate,
+            this.lciStatus,
+            this.lcgClinicalDiagnosis,
+            this.lcgDescription,
+            this.lciPrint,
+            this.lciSave,
+            this.lciCancel,
+            this.lcgEffectiveSubsance});
+            this.lcgReport.Location = new System.Drawing.Point(433, 92);
+            this.lcgReport.Name = "lcgReport";
+            this.lcgReport.Size = new System.Drawing.Size(444, 590);
+            this.lcgReport.Text = "Rapor";
             // 
-            // layoutControlItem43
+            // lciReportType
             // 
-            this.layoutControlItem43.Control = this.lookUpEdit13;
-            this.layoutControlItem43.CustomizationFormText = "Rapor Türü";
-            this.layoutControlItem43.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem43.Text = "Rapor Türü";
-            this.layoutControlItem43.TextSize = new System.Drawing.Size(128, 13);
+            this.lciReportType.Control = this.lueReportType;
+            this.lciReportType.CustomizationFormText = "Rapor Türü";
+            this.lciReportType.Location = new System.Drawing.Point(0, 0);
+            this.lciReportType.Name = "lciReportType";
+            this.lciReportType.Size = new System.Drawing.Size(420, 24);
+            this.lciReportType.Text = "Rapor Türü";
+            this.lciReportType.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem44
+            // lciReportStartDate
             // 
-            this.layoutControlItem44.Control = this.lookUpEdit14;
-            this.layoutControlItem44.CustomizationFormText = "Rapor Başlangıç Tarihi";
-            this.layoutControlItem44.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem44.Name = "layoutControlItem44";
-            this.layoutControlItem44.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem44.Text = "Rapor Başlangıç Tarihi";
-            this.layoutControlItem44.TextSize = new System.Drawing.Size(128, 13);
+            this.lciReportStartDate.Control = this.deReportStartDate;
+            this.lciReportStartDate.CustomizationFormText = "Rapor Başlangıç Tarihi";
+            this.lciReportStartDate.Location = new System.Drawing.Point(0, 24);
+            this.lciReportStartDate.Name = "lciReportStartDate";
+            this.lciReportStartDate.Size = new System.Drawing.Size(420, 24);
+            this.lciReportStartDate.Text = "Rapor Başlangıç Tarihi";
+            this.lciReportStartDate.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem45
+            // lciReportEndDate
             // 
-            this.layoutControlItem45.Control = this.lookUpEdit15;
-            this.layoutControlItem45.CustomizationFormText = "Rapor Bitiş Tarihi";
-            this.layoutControlItem45.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem45.Text = "Rapor Bitiş Tarihi";
-            this.layoutControlItem45.TextSize = new System.Drawing.Size(128, 13);
+            this.lciReportEndDate.Control = this.deReportEndDate;
+            this.lciReportEndDate.CustomizationFormText = "Rapor Bitiş Tarihi";
+            this.lciReportEndDate.Location = new System.Drawing.Point(0, 48);
+            this.lciReportEndDate.Name = "lciReportEndDate";
+            this.lciReportEndDate.Size = new System.Drawing.Size(420, 24);
+            this.lciReportEndDate.Text = "Rapor Bitiş Tarihi";
+            this.lciReportEndDate.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem46
+            // lciEditingType
             // 
-            this.layoutControlItem46.Control = this.lookUpEdit16;
-            this.layoutControlItem46.CustomizationFormText = "Düzenleme Türü";
-            this.layoutControlItem46.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem46.Text = "Düzenleme Türü";
-            this.layoutControlItem46.TextSize = new System.Drawing.Size(128, 13);
+            this.lciEditingType.Control = this.lueEditingType;
+            this.lciEditingType.CustomizationFormText = "Düzenleme Türü";
+            this.lciEditingType.Location = new System.Drawing.Point(0, 72);
+            this.lciEditingType.Name = "lciEditingType";
+            this.lciEditingType.Size = new System.Drawing.Size(420, 24);
+            this.lciEditingType.Text = "Düzenleme Türü";
+            this.lciEditingType.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem47
+            // lciProtocolNo
             // 
-            this.layoutControlItem47.Control = this.textEdit21;
-            this.layoutControlItem47.CustomizationFormText = "Protokol No";
-            this.layoutControlItem47.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem47.Text = "Protokol No";
-            this.layoutControlItem47.TextSize = new System.Drawing.Size(128, 13);
+            this.lciProtocolNo.Control = this.teProtocolNo;
+            this.lciProtocolNo.CustomizationFormText = "Protokol No";
+            this.lciProtocolNo.Location = new System.Drawing.Point(0, 96);
+            this.lciProtocolNo.Name = "lciProtocolNo";
+            this.lciProtocolNo.Size = new System.Drawing.Size(420, 24);
+            this.lciProtocolNo.Text = "Protokol No";
+            this.lciProtocolNo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem48
+            // lciProtocolDate
             // 
-            this.layoutControlItem48.Control = this.lookUpEdit17;
-            this.layoutControlItem48.CustomizationFormText = "Protokol Tarihi";
-            this.layoutControlItem48.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem48.Name = "layoutControlItem48";
-            this.layoutControlItem48.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem48.Text = "Protokol Tarihi";
-            this.layoutControlItem48.TextSize = new System.Drawing.Size(128, 13);
+            this.lciProtocolDate.Control = this.deProtocolDate;
+            this.lciProtocolDate.CustomizationFormText = "Protokol Tarihi";
+            this.lciProtocolDate.Location = new System.Drawing.Point(0, 120);
+            this.lciProtocolDate.Name = "lciProtocolDate";
+            this.lciProtocolDate.Size = new System.Drawing.Size(420, 24);
+            this.lciProtocolDate.Text = "Protokol Tarihi";
+            this.lciProtocolDate.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem49
+            // lciStatus
             // 
-            this.layoutControlItem49.Control = this.lookUpEdit18;
-            this.layoutControlItem49.CustomizationFormText = "Durum";
-            this.layoutControlItem49.Location = new System.Drawing.Point(0, 144);
-            this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.Size = new System.Drawing.Size(420, 24);
-            this.layoutControlItem49.Text = "Durum";
-            this.layoutControlItem49.TextSize = new System.Drawing.Size(128, 13);
+            this.lciStatus.Control = this.lueStatus;
+            this.lciStatus.CustomizationFormText = "Durum";
+            this.lciStatus.Location = new System.Drawing.Point(0, 144);
+            this.lciStatus.Name = "lciStatus";
+            this.lciStatus.Size = new System.Drawing.Size(420, 24);
+            this.lciStatus.Text = "Durum";
+            this.lciStatus.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup13
+            // lcgClinicalDiagnosis
             // 
-            this.layoutControlGroup13.CustomizationFormText = "Klinik Tanı";
-            this.layoutControlGroup13.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem50});
-            this.layoutControlGroup13.Location = new System.Drawing.Point(0, 168);
-            this.layoutControlGroup13.Name = "layoutControlGroup13";
-            this.layoutControlGroup13.Size = new System.Drawing.Size(420, 97);
-            this.layoutControlGroup13.Text = "Klinik Tanı";
+            this.lcgClinicalDiagnosis.CustomizationFormText = "Klinik Tanı";
+            this.lcgClinicalDiagnosis.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciClinicalDiagnosis});
+            this.lcgClinicalDiagnosis.Location = new System.Drawing.Point(0, 168);
+            this.lcgClinicalDiagnosis.Name = "lcgClinicalDiagnosis";
+            this.lcgClinicalDiagnosis.Size = new System.Drawing.Size(420, 97);
+            this.lcgClinicalDiagnosis.Text = "Klinik Tanı";
             // 
-            // layoutControlItem50
+            // lciClinicalDiagnosis
             // 
-            this.layoutControlItem50.Control = this.textEdit22;
-            this.layoutControlItem50.CustomizationFormText = "Klinik Tanı";
-            this.layoutControlItem50.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem50.Name = "layoutControlItem50";
-            this.layoutControlItem50.Size = new System.Drawing.Size(396, 53);
-            this.layoutControlItem50.Text = "Klinik Tanı";
-            this.layoutControlItem50.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem50.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem50.TextToControlDistance = 0;
-            this.layoutControlItem50.TextVisible = false;
+            this.lciClinicalDiagnosis.Control = this.meClinicalDiagnosis;
+            this.lciClinicalDiagnosis.CustomizationFormText = "Klinik Tanı";
+            this.lciClinicalDiagnosis.Location = new System.Drawing.Point(0, 0);
+            this.lciClinicalDiagnosis.Name = "lciClinicalDiagnosis";
+            this.lciClinicalDiagnosis.Size = new System.Drawing.Size(396, 53);
+            this.lciClinicalDiagnosis.Text = "Klinik Tanı";
+            this.lciClinicalDiagnosis.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciClinicalDiagnosis.TextSize = new System.Drawing.Size(0, 0);
+            this.lciClinicalDiagnosis.TextToControlDistance = 0;
+            this.lciClinicalDiagnosis.TextVisible = false;
             // 
-            // layoutControlGroup14
+            // lcgDescription
             // 
-            this.layoutControlGroup14.CustomizationFormText = "Açıklama";
-            this.layoutControlGroup14.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem51});
-            this.layoutControlGroup14.Location = new System.Drawing.Point(0, 265);
-            this.layoutControlGroup14.Name = "layoutControlGroup14";
-            this.layoutControlGroup14.Size = new System.Drawing.Size(420, 92);
-            this.layoutControlGroup14.Text = "Açıklama";
+            this.lcgDescription.CustomizationFormText = "Açıklama";
+            this.lcgDescription.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciDescription});
+            this.lcgDescription.Location = new System.Drawing.Point(0, 265);
+            this.lcgDescription.Name = "lcgDescription";
+            this.lcgDescription.Size = new System.Drawing.Size(420, 92);
+            this.lcgDescription.Text = "Açıklama";
             // 
-            // layoutControlItem51
+            // lciDescription
             // 
-            this.layoutControlItem51.Control = this.textEdit23;
-            this.layoutControlItem51.CustomizationFormText = "layoutControlItem51";
-            this.layoutControlItem51.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem51.Name = "layoutControlItem51";
-            this.layoutControlItem51.Size = new System.Drawing.Size(396, 48);
-            this.layoutControlItem51.Text = "layoutControlItem51";
-            this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem51.TextToControlDistance = 0;
-            this.layoutControlItem51.TextVisible = false;
+            this.lciDescription.Control = this.meDescription;
+            this.lciDescription.CustomizationFormText = "Açıklama";
+            this.lciDescription.Location = new System.Drawing.Point(0, 0);
+            this.lciDescription.Name = "lciDescription";
+            this.lciDescription.Size = new System.Drawing.Size(396, 48);
+            this.lciDescription.Text = "lciDescription";
+            this.lciDescription.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDescription.TextToControlDistance = 0;
+            this.lciDescription.TextVisible = false;
             // 
-            // layoutControlItem57
+            // lciPrint
             // 
-            this.layoutControlItem57.Control = this.simpleButton5;
-            this.layoutControlItem57.CustomizationFormText = "layoutControlItem57";
-            this.layoutControlItem57.Location = new System.Drawing.Point(0, 520);
-            this.layoutControlItem57.Name = "layoutControlItem57";
-            this.layoutControlItem57.Size = new System.Drawing.Size(142, 26);
-            this.layoutControlItem57.Text = "layoutControlItem57";
-            this.layoutControlItem57.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem57.TextToControlDistance = 0;
-            this.layoutControlItem57.TextVisible = false;
+            this.lciPrint.Control = this.sbPrint;
+            this.lciPrint.CustomizationFormText = "Yazdır";
+            this.lciPrint.Location = new System.Drawing.Point(0, 520);
+            this.lciPrint.Name = "lciPrint";
+            this.lciPrint.Size = new System.Drawing.Size(142, 26);
+            this.lciPrint.Text = "lciPrint";
+            this.lciPrint.TextSize = new System.Drawing.Size(0, 0);
+            this.lciPrint.TextToControlDistance = 0;
+            this.lciPrint.TextVisible = false;
             // 
-            // layoutControlItem58
+            // lciSave
             // 
-            this.layoutControlItem58.Control = this.simpleButton6;
-            this.layoutControlItem58.CustomizationFormText = "layoutControlItem58";
-            this.layoutControlItem58.Location = new System.Drawing.Point(142, 520);
-            this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(110, 26);
-            this.layoutControlItem58.Text = "layoutControlItem58";
-            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem58.TextToControlDistance = 0;
-            this.layoutControlItem58.TextVisible = false;
+            this.lciSave.Control = this.sbSave;
+            this.lciSave.CustomizationFormText = "Kaydet";
+            this.lciSave.Location = new System.Drawing.Point(142, 520);
+            this.lciSave.Name = "lciSave";
+            this.lciSave.Size = new System.Drawing.Size(110, 26);
+            this.lciSave.Text = "lciSave";
+            this.lciSave.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSave.TextToControlDistance = 0;
+            this.lciSave.TextVisible = false;
             // 
-            // layoutControlItem59
+            // lciCancel
             // 
-            this.layoutControlItem59.Control = this.simpleButton7;
-            this.layoutControlItem59.CustomizationFormText = "layoutControlItem59";
-            this.layoutControlItem59.Location = new System.Drawing.Point(252, 520);
-            this.layoutControlItem59.Name = "layoutControlItem59";
-            this.layoutControlItem59.Size = new System.Drawing.Size(168, 26);
-            this.layoutControlItem59.Text = "layoutControlItem59";
-            this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem59.TextToControlDistance = 0;
-            this.layoutControlItem59.TextVisible = false;
+            this.lciCancel.Control = this.sbCancel;
+            this.lciCancel.CustomizationFormText = "Vazgeç";
+            this.lciCancel.Location = new System.Drawing.Point(252, 520);
+            this.lciCancel.Name = "lciCancel";
+            this.lciCancel.Size = new System.Drawing.Size(168, 26);
+            this.lciCancel.Text = "lciCancel";
+            this.lciCancel.TextSize = new System.Drawing.Size(0, 0);
+            this.lciCancel.TextToControlDistance = 0;
+            this.lciCancel.TextVisible = false;
             // 
-            // layoutControlGroup16
+            // lcgEffectiveSubsance
             // 
-            this.layoutControlGroup16.CustomizationFormText = "Etkin Madde";
-            this.layoutControlGroup16.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem52,
-            this.layoutControlItem53,
-            this.layoutControlItem54});
-            this.layoutControlGroup16.Location = new System.Drawing.Point(0, 357);
-            this.layoutControlGroup16.Name = "layoutControlGroup16";
-            this.layoutControlGroup16.Size = new System.Drawing.Size(420, 163);
-            this.layoutControlGroup16.Text = "Etkin Madde";
+            this.lcgEffectiveSubsance.CustomizationFormText = "Etkin Madde";
+            this.lcgEffectiveSubsance.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciEffectiveSubsance,
+            this.lciDeleteEffectiveSubsance,
+            this.lciAddEffectiveSubsance});
+            this.lcgEffectiveSubsance.Location = new System.Drawing.Point(0, 357);
+            this.lcgEffectiveSubsance.Name = "lcgEffectiveSubsance";
+            this.lcgEffectiveSubsance.Size = new System.Drawing.Size(420, 163);
+            this.lcgEffectiveSubsance.Text = "Etkin Madde";
             // 
-            // layoutControlItem52
+            // lciEffectiveSubsance
             // 
-            this.layoutControlItem52.Control = this.gridControl3;
-            this.layoutControlItem52.CustomizationFormText = "layoutControlItem52";
-            this.layoutControlItem52.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem52.Name = "layoutControlItem52";
-            this.layoutControlItem52.Size = new System.Drawing.Size(396, 93);
-            this.layoutControlItem52.Text = "layoutControlItem52";
-            this.layoutControlItem52.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem52.TextToControlDistance = 0;
-            this.layoutControlItem52.TextVisible = false;
+            this.lciEffectiveSubsance.Control = this.gcEffectiveSubsance;
+            this.lciEffectiveSubsance.CustomizationFormText = "Etkin Madde Grid";
+            this.lciEffectiveSubsance.Location = new System.Drawing.Point(0, 0);
+            this.lciEffectiveSubsance.Name = "lciEffectiveSubsance";
+            this.lciEffectiveSubsance.Size = new System.Drawing.Size(396, 93);
+            this.lciEffectiveSubsance.Text = "lciEffectiveSubsance";
+            this.lciEffectiveSubsance.TextSize = new System.Drawing.Size(0, 0);
+            this.lciEffectiveSubsance.TextToControlDistance = 0;
+            this.lciEffectiveSubsance.TextVisible = false;
             // 
-            // layoutControlItem53
+            // lciDeleteEffectiveSubsance
             // 
-            this.layoutControlItem53.Control = this.simpleButton3;
-            this.layoutControlItem53.CustomizationFormText = "layoutControlItem53";
-            this.layoutControlItem53.Location = new System.Drawing.Point(0, 93);
-            this.layoutControlItem53.Name = "layoutControlItem53";
-            this.layoutControlItem53.Size = new System.Drawing.Size(181, 26);
-            this.layoutControlItem53.Text = "layoutControlItem53";
-            this.layoutControlItem53.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem53.TextToControlDistance = 0;
-            this.layoutControlItem53.TextVisible = false;
+            this.lciDeleteEffectiveSubsance.Control = this.sbDeleteEffectiveSubsance;
+            this.lciDeleteEffectiveSubsance.CustomizationFormText = "Etkin Madde Ekle";
+            this.lciDeleteEffectiveSubsance.Location = new System.Drawing.Point(0, 93);
+            this.lciDeleteEffectiveSubsance.Name = "lciDeleteEffectiveSubsance";
+            this.lciDeleteEffectiveSubsance.Size = new System.Drawing.Size(181, 26);
+            this.lciDeleteEffectiveSubsance.Text = "lciDeleteEffectiveSubsance";
+            this.lciDeleteEffectiveSubsance.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeleteEffectiveSubsance.TextToControlDistance = 0;
+            this.lciDeleteEffectiveSubsance.TextVisible = false;
             // 
-            // layoutControlItem54
+            // lciAddEffectiveSubsance
             // 
-            this.layoutControlItem54.Control = this.simpleButton4;
-            this.layoutControlItem54.CustomizationFormText = "layoutControlItem54";
-            this.layoutControlItem54.Location = new System.Drawing.Point(181, 93);
-            this.layoutControlItem54.Name = "layoutControlItem54";
-            this.layoutControlItem54.Size = new System.Drawing.Size(215, 26);
-            this.layoutControlItem54.Text = "layoutControlItem54";
-            this.layoutControlItem54.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem54.TextToControlDistance = 0;
-            this.layoutControlItem54.TextVisible = false;
+            this.lciAddEffectiveSubsance.Control = this.sbAddEffectiveSubsance;
+            this.lciAddEffectiveSubsance.CustomizationFormText = "Etkin Madde Sil";
+            this.lciAddEffectiveSubsance.Location = new System.Drawing.Point(181, 93);
+            this.lciAddEffectiveSubsance.Name = "lciAddEffectiveSubsance";
+            this.lciAddEffectiveSubsance.Size = new System.Drawing.Size(215, 26);
+            this.lciAddEffectiveSubsance.Text = "lciAddEffectiveSubsance";
+            this.lciAddEffectiveSubsance.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddEffectiveSubsance.TextToControlDistance = 0;
+            this.lciAddEffectiveSubsance.TextVisible = false;
             // 
-            // layoutControlGroup5
+            // lcgDiagnosisInfo
             // 
-            this.layoutControlGroup5.CustomizationFormText = "layoutControlGroup5";
-            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup6,
-            this.layoutControlGroup7,
-            this.layoutControlGroup8,
+            this.lcgDiagnosisInfo.CustomizationFormText = "Teşhis Bilgisi";
+            this.lcgDiagnosisInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciStartDate,
+            this.lciEndDate,
+            this.lciDiagnosisGrid,
+            this.lciICDGrid,
+            this.emptySpaceItem7,
+            this.emptySpaceItem9,
+            this.lciDeleteDiagnosis,
+            this.lciAddDiagnosis,
+            this.lciSyncDiagnosis});
+            this.lcgDiagnosisInfo.Location = new System.Drawing.Point(0, 494);
+            this.lcgDiagnosisInfo.Name = "lcgDiagnosisInfo";
+            this.lcgDiagnosisInfo.Size = new System.Drawing.Size(433, 188);
+            this.lcgDiagnosisInfo.Text = "Teşhis Bilgisi";
+            // 
+            // lciStartDate
+            // 
+            this.lciStartDate.Control = this.deStartDate;
+            this.lciStartDate.CustomizationFormText = "Başlangıç Tarihi";
+            this.lciStartDate.Location = new System.Drawing.Point(0, 0);
+            this.lciStartDate.Name = "lciStartDate";
+            this.lciStartDate.Size = new System.Drawing.Size(140, 40);
+            this.lciStartDate.Text = "Başlangıç Tarihi";
+            this.lciStartDate.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciStartDate.TextSize = new System.Drawing.Size(130, 13);
+            // 
+            // lciEndDate
+            // 
+            this.lciEndDate.Control = this.deEndDate;
+            this.lciEndDate.CustomizationFormText = "Bitiş Tarihi";
+            this.lciEndDate.Location = new System.Drawing.Point(214, 0);
+            this.lciEndDate.Name = "lciEndDate";
+            this.lciEndDate.Size = new System.Drawing.Size(141, 40);
+            this.lciEndDate.Text = "Bitiş Tarihi";
+            this.lciEndDate.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciEndDate.TextSize = new System.Drawing.Size(130, 13);
+            // 
+            // lciDiagnosisGrid
+            // 
+            this.lciDiagnosisGrid.Control = this.gcDiagnosis;
+            this.lciDiagnosisGrid.CustomizationFormText = "Teşhis Grid";
+            this.lciDiagnosisGrid.Location = new System.Drawing.Point(0, 40);
+            this.lciDiagnosisGrid.Name = "lciDiagnosisGrid";
+            this.lciDiagnosisGrid.Size = new System.Drawing.Size(205, 78);
+            this.lciDiagnosisGrid.Text = "lciDiagnosisGrid";
+            this.lciDiagnosisGrid.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDiagnosisGrid.TextToControlDistance = 0;
+            this.lciDiagnosisGrid.TextVisible = false;
+            // 
+            // lciICDGrid
+            // 
+            this.lciICDGrid.Control = this.gcICD;
+            this.lciICDGrid.CustomizationFormText = "ICD10 Grid";
+            this.lciICDGrid.Location = new System.Drawing.Point(205, 40);
+            this.lciICDGrid.Name = "lciICDGrid";
+            this.lciICDGrid.Size = new System.Drawing.Size(204, 78);
+            this.lciICDGrid.Text = "lciICDGrid";
+            this.lciICDGrid.TextSize = new System.Drawing.Size(0, 0);
+            this.lciICDGrid.TextToControlDistance = 0;
+            this.lciICDGrid.TextVisible = false;
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
+            this.emptySpaceItem7.Location = new System.Drawing.Point(355, 0);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(54, 40);
+            this.emptySpaceItem7.Text = "emptySpaceItem7";
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem9
+            // 
+            this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
+            this.emptySpaceItem9.Location = new System.Drawing.Point(140, 0);
+            this.emptySpaceItem9.Name = "emptySpaceItem9";
+            this.emptySpaceItem9.Size = new System.Drawing.Size(74, 40);
+            this.emptySpaceItem9.Text = "emptySpaceItem9";
+            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciDeleteDiagnosis
+            // 
+            this.lciDeleteDiagnosis.Control = this.sbDeleteDiagnosis;
+            this.lciDeleteDiagnosis.CustomizationFormText = "Teşhis Sil";
+            this.lciDeleteDiagnosis.Location = new System.Drawing.Point(0, 118);
+            this.lciDeleteDiagnosis.Name = "lciDeleteDiagnosis";
+            this.lciDeleteDiagnosis.Size = new System.Drawing.Size(152, 26);
+            this.lciDeleteDiagnosis.Text = "lciDeleteDiagnosis";
+            this.lciDeleteDiagnosis.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeleteDiagnosis.TextToControlDistance = 0;
+            this.lciDeleteDiagnosis.TextVisible = false;
+            // 
+            // lciAddDiagnosis
+            // 
+            this.lciAddDiagnosis.Control = this.sbAddDiagnosis;
+            this.lciAddDiagnosis.CustomizationFormText = "Teşhis Ekle";
+            this.lciAddDiagnosis.Location = new System.Drawing.Point(152, 118);
+            this.lciAddDiagnosis.Name = "lciAddDiagnosis";
+            this.lciAddDiagnosis.Size = new System.Drawing.Size(113, 26);
+            this.lciAddDiagnosis.Text = "lciAddDiagnosis";
+            this.lciAddDiagnosis.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddDiagnosis.TextToControlDistance = 0;
+            this.lciAddDiagnosis.TextVisible = false;
+            // 
+            // lciSyncDiagnosis
+            // 
+            this.lciSyncDiagnosis.Control = this.sbSyncDiagnosis;
+            this.lciSyncDiagnosis.CustomizationFormText = "Tanıyı Teşhisle Eşleştir";
+            this.lciSyncDiagnosis.Location = new System.Drawing.Point(265, 118);
+            this.lciSyncDiagnosis.Name = "lciSyncDiagnosis";
+            this.lciSyncDiagnosis.Size = new System.Drawing.Size(144, 26);
+            this.lciSyncDiagnosis.Text = "lciSyncDiagnosis";
+            this.lciSyncDiagnosis.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSyncDiagnosis.TextToControlDistance = 0;
+            this.lciSyncDiagnosis.TextVisible = false;
+            // 
+            // lcgESWTFTRESWLReportInfo
+            // 
+            this.lcgESWTFTRESWLReportInfo.CustomizationFormText = "layoutControlGroup5";
+            this.lcgESWTFTRESWLReportInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lcgESWTReportInfo,
+            this.lcgFTRReportInfo,
+            this.lcgESWLReportInfo,
             this.emptySpaceItem3,
             this.emptySpaceItem4});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(877, 682);
-            this.layoutControlGroup5.Text = "ESWT-FTR-ESWL Rapor Bilgileri";
+            this.lcgESWTFTRESWLReportInfo.Location = new System.Drawing.Point(0, 0);
+            this.lcgESWTFTRESWLReportInfo.Name = "lcgESWTFTRESWLReportInfo";
+            this.lcgESWTFTRESWLReportInfo.Size = new System.Drawing.Size(877, 682);
+            this.lcgESWTFTRESWLReportInfo.Text = "ESWT-FTR-ESWL Rapor Bilgileri";
             // 
-            // layoutControlGroup6
+            // lcgESWTReportInfo
             // 
-            this.layoutControlGroup6.CustomizationFormText = "ESWT Rapor Bilgileri";
-            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem10,
-            this.layoutControlItem8,
-            this.layoutControlItem7,
-            this.layoutControlItem6});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(576, 140);
-            this.layoutControlGroup6.Text = "ESWT Rapor Bilgileri";
+            this.lcgESWTReportInfo.CustomizationFormText = "ESWT Rapor Bilgileri";
+            this.lcgESWTReportInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciESWTBUTCode,
+            this.lciESWTSessionCount,
+            this.lciESWTSessionDays,
+            this.lciESWTBodyPartCode});
+            this.lcgESWTReportInfo.Location = new System.Drawing.Point(0, 0);
+            this.lcgESWTReportInfo.Name = "lcgESWTReportInfo";
+            this.lcgESWTReportInfo.Size = new System.Drawing.Size(576, 140);
+            this.lcgESWTReportInfo.Text = "ESWT Rapor Bilgileri";
             // 
-            // layoutControlItem10
+            // lciESWTBUTCode
             // 
-            this.layoutControlItem10.Control = this.textEdit6;
-            this.layoutControlItem10.CustomizationFormText = "But Kodu *";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem10.Text = "But Kodu *";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWTBUTCode.Control = this.teESWTBUTCode;
+            this.lciESWTBUTCode.CustomizationFormText = "But Kodu *";
+            this.lciESWTBUTCode.Location = new System.Drawing.Point(0, 72);
+            this.lciESWTBUTCode.Name = "lciESWTBUTCode";
+            this.lciESWTBUTCode.Size = new System.Drawing.Size(552, 24);
+            this.lciESWTBUTCode.Text = "But Kodu *";
+            this.lciESWTBUTCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem8
+            // lciESWTSessionCount
             // 
-            this.layoutControlItem8.Control = this.textEdit5;
-            this.layoutControlItem8.CustomizationFormText = "Seans Sayısı *";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem8.Text = "Seans Sayısı *";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWTSessionCount.Control = this.teESWTSessionCount;
+            this.lciESWTSessionCount.CustomizationFormText = "Seans Sayısı *";
+            this.lciESWTSessionCount.Location = new System.Drawing.Point(0, 48);
+            this.lciESWTSessionCount.Name = "lciESWTSessionCount";
+            this.lciESWTSessionCount.Size = new System.Drawing.Size(552, 24);
+            this.lciESWTSessionCount.Text = "Seans Sayısı *";
+            this.lciESWTSessionCount.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem7
+            // lciESWTSessionDays
             // 
-            this.layoutControlItem7.Control = this.textEdit4;
-            this.layoutControlItem7.CustomizationFormText = "Seans Gün *";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem7.Text = "Seans Gün *";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWTSessionDays.Control = this.teESWTSessionDays;
+            this.lciESWTSessionDays.CustomizationFormText = "Seans Gün *";
+            this.lciESWTSessionDays.Location = new System.Drawing.Point(0, 24);
+            this.lciESWTSessionDays.Name = "lciESWTSessionDays";
+            this.lciESWTSessionDays.Size = new System.Drawing.Size(552, 24);
+            this.lciESWTSessionDays.Text = "Seans Gün *";
+            this.lciESWTSessionDays.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem6
+            // lciESWTBodyPartCode
             // 
-            this.layoutControlItem6.Control = this.lookUpEdit2;
-            this.layoutControlItem6.CustomizationFormText = "ESQT Vücut Bölgesi Kodu";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem6.Text = "ESQT Vücut Bölgesi Kodu *";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWTBodyPartCode.Control = this.lueESWTBodyPartCode;
+            this.lciESWTBodyPartCode.CustomizationFormText = "ESWT Vücut Bölgesi Kodu";
+            this.lciESWTBodyPartCode.Location = new System.Drawing.Point(0, 0);
+            this.lciESWTBodyPartCode.Name = "lciESWTBodyPartCode";
+            this.lciESWTBodyPartCode.Size = new System.Drawing.Size(552, 24);
+            this.lciESWTBodyPartCode.Text = "ESWT Vücut Bölgesi Kodu *";
+            this.lciESWTBodyPartCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup7
+            // lcgFTRReportInfo
             // 
-            this.layoutControlGroup7.CustomizationFormText = "FTR Rapor Bilgileri";
-            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem14,
-            this.layoutControlItem13,
-            this.layoutControlItem12,
-            this.layoutControlItem11});
-            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 140);
-            this.layoutControlGroup7.Name = "layoutControlGroup7";
-            this.layoutControlGroup7.Size = new System.Drawing.Size(576, 140);
-            this.layoutControlGroup7.Text = "FTR Rapor Bilgileri";
+            this.lcgFTRReportInfo.CustomizationFormText = "FTR Rapor Bilgileri";
+            this.lcgFTRReportInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciBUTCode,
+            this.lciFTRSessionCount,
+            this.lciFTRSessionDays,
+            this.lciFTRBodyPartCode});
+            this.lcgFTRReportInfo.Location = new System.Drawing.Point(0, 140);
+            this.lcgFTRReportInfo.Name = "lcgFTRReportInfo";
+            this.lcgFTRReportInfo.Size = new System.Drawing.Size(576, 140);
+            this.lcgFTRReportInfo.Text = "FTR Rapor Bilgileri";
             // 
-            // layoutControlItem14
+            // lciBUTCode
             // 
-            this.layoutControlItem14.Control = this.textEdit9;
-            this.layoutControlItem14.CustomizationFormText = "But Kodu *";
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem14.Text = "But Kodu *";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(128, 13);
+            this.lciBUTCode.Control = this.teBUTCode;
+            this.lciBUTCode.CustomizationFormText = "But Kodu *";
+            this.lciBUTCode.Location = new System.Drawing.Point(0, 72);
+            this.lciBUTCode.Name = "lciBUTCode";
+            this.lciBUTCode.Size = new System.Drawing.Size(552, 24);
+            this.lciBUTCode.Text = "But Kodu *";
+            this.lciBUTCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem13
+            // lciFTRSessionCount
             // 
-            this.layoutControlItem13.Control = this.textEdit8;
-            this.layoutControlItem13.CustomizationFormText = "Seans Sayısı *";
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem13.Text = "Seans Sayısı *";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(128, 13);
+            this.lciFTRSessionCount.Control = this.teFTRSessionCount;
+            this.lciFTRSessionCount.CustomizationFormText = "Seans Sayısı *";
+            this.lciFTRSessionCount.Location = new System.Drawing.Point(0, 48);
+            this.lciFTRSessionCount.Name = "lciFTRSessionCount";
+            this.lciFTRSessionCount.Size = new System.Drawing.Size(552, 24);
+            this.lciFTRSessionCount.Text = "Seans Sayısı *";
+            this.lciFTRSessionCount.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem12
+            // lciFTRSessionDays
             // 
-            this.layoutControlItem12.Control = this.textEdit7;
-            this.layoutControlItem12.CustomizationFormText = "Seans Gün *";
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem12.Text = "Seans Gün *";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(128, 13);
+            this.lciFTRSessionDays.Control = this.teFTRSessionDays;
+            this.lciFTRSessionDays.CustomizationFormText = "Seans Gün *";
+            this.lciFTRSessionDays.Location = new System.Drawing.Point(0, 24);
+            this.lciFTRSessionDays.Name = "lciFTRSessionDays";
+            this.lciFTRSessionDays.Size = new System.Drawing.Size(552, 24);
+            this.lciFTRSessionDays.Text = "Seans Gün *";
+            this.lciFTRSessionDays.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem11
+            // lciFTRBodyPartCode
             // 
-            this.layoutControlItem11.Control = this.lookUpEdit3;
-            this.layoutControlItem11.CustomizationFormText = "FTR Vücut Bilgisi Kodu *";
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(552, 24);
-            this.layoutControlItem11.Text = "FTR Vücut Bilgisi Kodu *";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(128, 13);
+            this.lciFTRBodyPartCode.Control = this.lueFTRBodyPartCode;
+            this.lciFTRBodyPartCode.CustomizationFormText = "FTR Vücut Bilgisi Kodu *";
+            this.lciFTRBodyPartCode.Location = new System.Drawing.Point(0, 0);
+            this.lciFTRBodyPartCode.Name = "lciFTRBodyPartCode";
+            this.lciFTRBodyPartCode.Size = new System.Drawing.Size(552, 24);
+            this.lciFTRBodyPartCode.Text = "FTR Vücut Bilgisi Kodu *";
+            this.lciFTRBodyPartCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup8
+            // lcgESWLReportInfo
             // 
-            this.layoutControlGroup8.CustomizationFormText = "ESWL Rapor Bilgileri";
-            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem15,
-            this.layoutControlItem16,
-            this.layoutControlItem17,
-            this.layoutControlItem18,
-            this.layoutControlGroup9});
-            this.layoutControlGroup8.Location = new System.Drawing.Point(0, 280);
-            this.layoutControlGroup8.Name = "layoutControlGroup8";
-            this.layoutControlGroup8.Size = new System.Drawing.Size(577, 402);
-            this.layoutControlGroup8.Text = "ESWL Rapor Bilgileri";
+            this.lcgESWLReportInfo.CustomizationFormText = "ESWL Rapor Bilgileri";
+            this.lcgESWLReportInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciESWLBUTCode,
+            this.lciESWLReportStoneCount,
+            this.lciESWLReportSessionCount,
+            this.lciKidneyInfo,
+            this.lcgESWLStoneInfo});
+            this.lcgESWLReportInfo.Location = new System.Drawing.Point(0, 280);
+            this.lcgESWLReportInfo.Name = "lcgESWLReportInfo";
+            this.lcgESWLReportInfo.Size = new System.Drawing.Size(577, 402);
+            this.lcgESWLReportInfo.Text = "ESWL Rapor Bilgileri";
             // 
-            // layoutControlItem15
+            // lciESWLBUTCode
             // 
-            this.layoutControlItem15.Control = this.textEdit10;
-            this.layoutControlItem15.CustomizationFormText = "But Kodu";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(553, 24);
-            this.layoutControlItem15.Text = "But Kodu";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWLBUTCode.Control = this.teESWLBUTCode;
+            this.lciESWLBUTCode.CustomizationFormText = "But Kodu";
+            this.lciESWLBUTCode.Location = new System.Drawing.Point(0, 0);
+            this.lciESWLBUTCode.Name = "lciESWLBUTCode";
+            this.lciESWLBUTCode.Size = new System.Drawing.Size(553, 24);
+            this.lciESWLBUTCode.Text = "But Kodu";
+            this.lciESWLBUTCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem16
+            // lciESWLReportStoneCount
             // 
-            this.layoutControlItem16.Control = this.textEdit11;
-            this.layoutControlItem16.CustomizationFormText = "ESWL Raporu Taş Sayısı";
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(553, 24);
-            this.layoutControlItem16.Text = "ESWL Raporu Taş Sayısı";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWLReportStoneCount.Control = this.teESWLReportStoneCount;
+            this.lciESWLReportStoneCount.CustomizationFormText = "ESWL Raporu Taş Sayısı";
+            this.lciESWLReportStoneCount.Location = new System.Drawing.Point(0, 24);
+            this.lciESWLReportStoneCount.Name = "lciESWLReportStoneCount";
+            this.lciESWLReportStoneCount.Size = new System.Drawing.Size(553, 24);
+            this.lciESWLReportStoneCount.Text = "ESWL Raporu Taş Sayısı";
+            this.lciESWLReportStoneCount.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem17
+            // lciESWLReportSessionCount
             // 
-            this.layoutControlItem17.Control = this.textEdit12;
-            this.layoutControlItem17.CustomizationFormText = "ESWL Raporu Seans Sayısı";
-            this.layoutControlItem17.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(553, 24);
-            this.layoutControlItem17.Text = "ESWL Raporu Seans Sayısı";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(128, 13);
+            this.lciESWLReportSessionCount.Control = this.teESWLReportSessionCount;
+            this.lciESWLReportSessionCount.CustomizationFormText = "ESWL Raporu Seans Sayısı";
+            this.lciESWLReportSessionCount.Location = new System.Drawing.Point(0, 48);
+            this.lciESWLReportSessionCount.Name = "lciESWLReportSessionCount";
+            this.lciESWLReportSessionCount.Size = new System.Drawing.Size(553, 24);
+            this.lciESWLReportSessionCount.Text = "ESWL Raporu Seans Sayısı";
+            this.lciESWLReportSessionCount.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem18
+            // lciKidneyInfo
             // 
-            this.layoutControlItem18.Control = this.lookUpEdit4;
-            this.layoutControlItem18.CustomizationFormText = "Böbrek Bilgisi";
-            this.layoutControlItem18.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(553, 24);
-            this.layoutControlItem18.Text = "Böbrek Bilgisi";
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(128, 13);
+            this.lciKidneyInfo.Control = this.lueKidneyInfo;
+            this.lciKidneyInfo.CustomizationFormText = "Böbrek Bilgisi";
+            this.lciKidneyInfo.Location = new System.Drawing.Point(0, 72);
+            this.lciKidneyInfo.Name = "lciKidneyInfo";
+            this.lciKidneyInfo.Size = new System.Drawing.Size(553, 24);
+            this.lciKidneyInfo.Text = "Böbrek Bilgisi";
+            this.lciKidneyInfo.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlGroup9
+            // lcgESWLStoneInfo
             // 
-            this.layoutControlGroup9.CustomizationFormText = "ESWL Taş Bilgisi";
-            this.layoutControlGroup9.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem20,
-            this.layoutControlItem19,
-            this.layoutControlItem21,
+            this.lcgESWLStoneInfo.CustomizationFormText = "ESWL Taş Bilgisi";
+            this.lcgESWLStoneInfo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciKidneyStoneLocalisationCode,
+            this.lciStoneDimension,
+            this.lciStoneDimensionComment,
             this.emptySpaceItem1,
-            this.layoutControlItem22,
+            this.lciAddESWLStoneInfo,
             this.emptySpaceItem2,
-            this.layoutControlItem23});
-            this.layoutControlGroup9.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlGroup9.Name = "layoutControlGroup9";
-            this.layoutControlGroup9.Size = new System.Drawing.Size(553, 262);
-            this.layoutControlGroup9.Text = "ESWL Taş Bilgisi";
+            this.lciESWLStoneInfo});
+            this.lcgESWLStoneInfo.Location = new System.Drawing.Point(0, 96);
+            this.lcgESWLStoneInfo.Name = "lcgESWLStoneInfo";
+            this.lcgESWLStoneInfo.Size = new System.Drawing.Size(553, 262);
+            this.lcgESWLStoneInfo.Text = "ESWL Taş Bilgisi";
             // 
-            // layoutControlItem20
+            // lciKidneyStoneLocalisationCode
             // 
-            this.layoutControlItem20.Control = this.lookUpEdit5;
-            this.layoutControlItem20.CustomizationFormText = "layoutControlItem20";
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(263, 26);
-            this.layoutControlItem20.Text = "layoutControlItem20";
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(128, 13);
+            this.lciKidneyStoneLocalisationCode.Control = this.lueKidneyStoneLocalisationCode;
+            this.lciKidneyStoneLocalisationCode.CustomizationFormText = "Taş Lokalizasyon Kodu";
+            this.lciKidneyStoneLocalisationCode.Location = new System.Drawing.Point(0, 24);
+            this.lciKidneyStoneLocalisationCode.Name = "lciKidneyStoneLocalisationCode";
+            this.lciKidneyStoneLocalisationCode.Size = new System.Drawing.Size(263, 26);
+            this.lciKidneyStoneLocalisationCode.Text = "Taş Lokalizasyon Kodu";
+            this.lciKidneyStoneLocalisationCode.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem19
+            // lciStoneDimension
             // 
-            this.layoutControlItem19.Control = this.textEdit13;
-            this.layoutControlItem19.CustomizationFormText = "Taş Boyutu";
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(261, 24);
-            this.layoutControlItem19.Text = "Taş Boyutu";
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(128, 13);
+            this.lciStoneDimension.Control = this.teStoneDimension;
+            this.lciStoneDimension.CustomizationFormText = "Taş Boyutu";
+            this.lciStoneDimension.Location = new System.Drawing.Point(0, 0);
+            this.lciStoneDimension.Name = "lciStoneDimension";
+            this.lciStoneDimension.Size = new System.Drawing.Size(261, 24);
+            this.lciStoneDimension.Text = "Taş Boyutu";
+            this.lciStoneDimension.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // layoutControlItem21
+            // lciStoneDimensionComment
             // 
-            this.layoutControlItem21.Control = this.labelControl1;
-            this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
-            this.layoutControlItem21.Location = new System.Drawing.Point(261, 0);
-            this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(126, 24);
-            this.layoutControlItem21.Text = "layoutControlItem21";
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem21.TextToControlDistance = 0;
-            this.layoutControlItem21.TextVisible = false;
+            this.lciStoneDimensionComment.Control = this.lcStoneDimensionComment;
+            this.lciStoneDimensionComment.CustomizationFormText = "Taş Boyutu Açıklaması";
+            this.lciStoneDimensionComment.Location = new System.Drawing.Point(261, 0);
+            this.lciStoneDimensionComment.Name = "lciStoneDimensionComment";
+            this.lciStoneDimensionComment.Size = new System.Drawing.Size(126, 24);
+            this.lciStoneDimensionComment.Text = "lciStoneDimensionComment";
+            this.lciStoneDimensionComment.TextSize = new System.Drawing.Size(0, 0);
+            this.lciStoneDimensionComment.TextToControlDistance = 0;
+            this.lciStoneDimensionComment.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
@@ -2005,17 +2035,17 @@
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem22
+            // lciAddESWLStoneInfo
             // 
-            this.layoutControlItem22.Control = this.simpleButton1;
-            this.layoutControlItem22.CustomizationFormText = "layoutControlItem22";
-            this.layoutControlItem22.Location = new System.Drawing.Point(263, 24);
-            this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(127, 26);
-            this.layoutControlItem22.Text = "layoutControlItem22";
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem22.TextToControlDistance = 0;
-            this.layoutControlItem22.TextVisible = false;
+            this.lciAddESWLStoneInfo.Control = this.sbAddESWLStoneInfo;
+            this.lciAddESWLStoneInfo.CustomizationFormText = "ESWL Taş Bilgisi Ekle";
+            this.lciAddESWLStoneInfo.Location = new System.Drawing.Point(263, 24);
+            this.lciAddESWLStoneInfo.Name = "lciAddESWLStoneInfo";
+            this.lciAddESWLStoneInfo.Size = new System.Drawing.Size(127, 26);
+            this.lciAddESWLStoneInfo.Text = "ESWL Taş Bilgisi Ekle";
+            this.lciAddESWLStoneInfo.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddESWLStoneInfo.TextToControlDistance = 0;
+            this.lciAddESWLStoneInfo.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
@@ -2026,17 +2056,17 @@
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem23
+            // lciESWLStoneInfo
             // 
-            this.layoutControlItem23.Control = this.gridControl1;
-            this.layoutControlItem23.CustomizationFormText = "layoutControlItem23";
-            this.layoutControlItem23.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(529, 168);
-            this.layoutControlItem23.Text = "layoutControlItem23";
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem23.TextToControlDistance = 0;
-            this.layoutControlItem23.TextVisible = false;
+            this.lciESWLStoneInfo.Control = this.gcESWLStoneInfo;
+            this.lciESWLStoneInfo.CustomizationFormText = "ESWL Taş Bilgisi Grid";
+            this.lciESWLStoneInfo.Location = new System.Drawing.Point(0, 50);
+            this.lciESWLStoneInfo.Name = "lciESWLStoneInfo";
+            this.lciESWLStoneInfo.Size = new System.Drawing.Size(529, 168);
+            this.lciESWLStoneInfo.Text = "ESWL Taş Bilgisi Grid";
+            this.lciESWLStoneInfo.TextSize = new System.Drawing.Size(0, 0);
+            this.lciESWLStoneInfo.TextToControlDistance = 0;
+            this.lciESWLStoneInfo.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
@@ -2058,7 +2088,7 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.textEdit6;
+            this.layoutControlItem9.Control = this.teESWTBUTCode;
             this.layoutControlItem9.CustomizationFormText = "But Kodu *";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem9.Name = "layoutControlItem9";
@@ -2071,157 +2101,158 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.lcMedulaReport);
             this.Name = "MedulaReportControl";
             this.Size = new System.Drawing.Size(921, 746);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit14.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit15.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit17.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcMedulaReport)).EndInit();
+            this.lcMedulaReport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcICD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvICD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teProtocolNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueEditingType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueReportType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teReportNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctorLastName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctorFirstName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorBranch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoctorRegistrationNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueInsuranceType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueProvisionType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teRelationCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTransferorInstitution.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCardNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSocialSecurityNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcESWLStoneInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvESWLStoneInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKidneyStoneLocalisationCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKidneyInfo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLReportSessionCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLReportStoneCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWLBUTCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teStoneDimension.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBUTCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFTRSessionCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFTRSessionDays.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueFTRBodyPartCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTBUTCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTSessionCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teESWTSessionDays.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueESWTBodyPartCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInstitutionNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFollowUpNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTreatmentReportType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgReportMainType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportStartDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportEndDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deReportEndDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProtocolDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProtocolDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meClinicalDiagnosis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProvisionDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deProvisionDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgMedulaReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tcgMedulaReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportDetailInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportMainType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTreatmentReportType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFollowUpNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInstitutionNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSocialSecurityNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCardNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTransferorInstitution)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRelationCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProvisionType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProvisionDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDoctorInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDoctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorBranch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorRegistrationNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctorLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReportInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportStartDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciReportEndDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEditingType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProtocolNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciProtocolDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgClinicalDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciClinicalDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddEffectiveSubsance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgDiagnosisInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStartDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEndDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDiagnosisGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciICDGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem60)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem61)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSyncDiagnosis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWTFTRESWLReportInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWTReportInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTBUTCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTSessionCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTSessionDays)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWTBodyPartCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgFTRReportInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBUTCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRSessionCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRSessionDays)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFTRBodyPartCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWLReportInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLBUTCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLReportStoneCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLReportSessionCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKidneyInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgESWLStoneInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKidneyStoneLocalisationCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStoneDimension)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStoneDimensionComment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddESWLStoneInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciESWLStoneInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -2231,166 +2262,168 @@
 
         #endregion
 
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup9;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.LayoutControl lcMedulaReport;
+        private DevExpress.XtraGrid.GridControl gcESWLStoneInfo;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvESWLStoneInfo;
+        private DevExpress.XtraEditors.SimpleButton sbAddESWLStoneInfo;
+        private DevExpress.XtraEditors.LabelControl lcStoneDimensionComment;
+        private DevExpress.XtraEditors.LookUpEdit lueKidneyStoneLocalisationCode;
+        private DevExpress.XtraEditors.LookUpEdit lueKidneyInfo;
+        private DevExpress.XtraEditors.TextEdit teESWLReportSessionCount;
+        private DevExpress.XtraEditors.TextEdit teESWLReportStoneCount;
+        private DevExpress.XtraEditors.TextEdit teESWLBUTCode;
+        private DevExpress.XtraEditors.TextEdit teStoneDimension;
+        private DevExpress.XtraEditors.TextEdit teBUTCode;
+        private DevExpress.XtraEditors.TextEdit teFTRSessionCount;
+        private DevExpress.XtraEditors.TextEdit teFTRSessionDays;
+        private DevExpress.XtraEditors.LookUpEdit lueFTRBodyPartCode;
+        private DevExpress.XtraEditors.TextEdit teESWTBUTCode;
+        private DevExpress.XtraEditors.TextEdit teESWTSessionCount;
+        private DevExpress.XtraEditors.TextEdit teESWTSessionDays;
+        private DevExpress.XtraEditors.LookUpEdit lueESWTBodyPartCode;
+        private DevExpress.XtraEditors.TextEdit teInstitutionNo;
+        private DevExpress.XtraEditors.TextEdit tePatientName;
+        private DevExpress.XtraEditors.TextEdit teFollowUpNo;
+        private DevExpress.XtraEditors.LookUpEdit lueTreatmentReportType;
+        private DevExpress.XtraEditors.RadioGroup rgReportMainType;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgMedulaReport;
+        private DevExpress.XtraLayout.TabbedControlGroup tcgMedulaReport;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgReportDetailInfo;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgReportType;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportMainType;
+        private DevExpress.XtraLayout.LayoutControlItem lciTreatmentReportType;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgPatientInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatientName;
+        private DevExpress.XtraLayout.LayoutControlItem lciFollowUpNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciInstitutionNo;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgESWTFTRESWLReportInfo;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgESWTReportInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWTBUTCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWTSessionCount;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWTSessionDays;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWTBodyPartCode;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgFTRReportInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciBUTCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciFTRSessionCount;
+        private DevExpress.XtraLayout.LayoutControlItem lciFTRSessionDays;
+        private DevExpress.XtraLayout.LayoutControlItem lciFTRBodyPartCode;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgESWLReportInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWLBUTCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWLReportStoneCount;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWLReportSessionCount;
+        private DevExpress.XtraLayout.LayoutControlItem lciKidneyInfo;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgESWLStoneInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciKidneyStoneLocalisationCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciStoneDimension;
+        private DevExpress.XtraLayout.LayoutControlItem lciStoneDimensionComment;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddESWLStoneInfo;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraLayout.LayoutControlItem lciESWLStoneInfo;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit18;
-        private DevExpress.XtraEditors.TextEdit textEdit21;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit16;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit13;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit20;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit12;
-        private DevExpress.XtraEditors.TextEdit textEdit19;
-        private DevExpress.XtraEditors.TextEdit textEdit18;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit11;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit10;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit9;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit8;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit17;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit16;
-        private DevExpress.XtraEditors.TextEdit textEdit15;
-        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.LookUpEdit lueStatus;
+        private DevExpress.XtraEditors.TextEdit teProtocolNo;
+        private DevExpress.XtraEditors.LookUpEdit lueEditingType;
+        private DevExpress.XtraEditors.LookUpEdit lueReportType;
+        private DevExpress.XtraEditors.DateEdit deReportDate;
+        private DevExpress.XtraEditors.TextEdit teReportNo;
+        private DevExpress.XtraEditors.DateEdit deEndDate;
+        private DevExpress.XtraEditors.DateEdit deStartDate;
+        private DevExpress.XtraGrid.GridControl gcDoctors;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDoctors;
+        private DevExpress.XtraEditors.LookUpEdit lueDoctorType;
+        private DevExpress.XtraEditors.TextEdit teDoctorLastName;
+        private DevExpress.XtraEditors.TextEdit teDoctorFirstName;
+        private DevExpress.XtraEditors.LookUpEdit lueDoctorBranch;
+        private DevExpress.XtraEditors.SimpleButton sbAddDoctor;
+        private DevExpress.XtraEditors.LookUpEdit lueDoctorRegistrationNo;
+        private DevExpress.XtraEditors.LookUpEdit lueInsuranceType;
+        private DevExpress.XtraEditors.LookUpEdit lueProvisionType;
+        private DevExpress.XtraEditors.TextEdit teRelationCode;
+        private DevExpress.XtraEditors.LookUpEdit lueTransferorInstitution;
+        private DevExpress.XtraEditors.TextEdit teCardNo;
+        private DevExpress.XtraEditors.TextEdit teSocialSecurityNo;
+        private DevExpress.XtraEditors.TextEdit teTCID;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem33;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem34;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem40;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup11;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem41;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup12;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
-        private DevExpress.XtraGrid.GridControl gridControl5;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.GridControl gridControl4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraGrid.GridControl gridControl3;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.DateEdit lookUpEdit14;
-        private DevExpress.XtraEditors.DateEdit lookUpEdit15;
-        private DevExpress.XtraEditors.DateEdit lookUpEdit17;
-        private DevExpress.XtraEditors.MemoEdit textEdit22;
-        private DevExpress.XtraEditors.MemoEdit textEdit23;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup15;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem55;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
+        private DevExpress.XtraLayout.LayoutControlItem lciTCID;
+        private DevExpress.XtraLayout.LayoutControlItem lciSocialSecurityNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciCardNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciTransferorInstitution;
+        private DevExpress.XtraLayout.LayoutControlItem lciRelationCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciProvisionType;
+        private DevExpress.XtraLayout.LayoutControlItem lciProvisionDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceType;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgDoctorInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddDoctor;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorType;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorBranch;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorRegistrationNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorFirstName;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctorLastName;
+        private DevExpress.XtraLayout.LayoutControlItem lciDoctors;
+        private DevExpress.XtraLayout.LayoutControlItem lciStartDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciEndDate;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgReportInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportNo;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgReport;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportType;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportStartDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciReportEndDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciEditingType;
+        private DevExpress.XtraLayout.LayoutControlItem lciProtocolNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciProtocolDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciStatus;
+        private DevExpress.XtraGrid.GridControl gcICD;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvICD;
+        private DevExpress.XtraGrid.Columns.GridColumn colICD10Code;
+        private DevExpress.XtraGrid.Columns.GridColumn colICD10DiagnosisName;
+        private DevExpress.XtraGrid.GridControl gcDiagnosis;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDiagnosis;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiagnosisCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiagnosisName;
+        private DevExpress.XtraEditors.SimpleButton sbAddEffectiveSubsance;
+        private DevExpress.XtraEditors.SimpleButton sbDeleteEffectiveSubsance;
+        private DevExpress.XtraGrid.GridControl gcEffectiveSubsance;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvEffectiveSubsance;
+        private DevExpress.XtraGrid.Columns.GridColumn colEffectiveSubsanceCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colEffectiveSubsanceName;
+        private DevExpress.XtraEditors.DateEdit deReportStartDate;
+        private DevExpress.XtraEditors.DateEdit deReportEndDate;
+        private DevExpress.XtraEditors.DateEdit deProtocolDate;
+        private DevExpress.XtraEditors.MemoEdit meClinicalDiagnosis;
+        private DevExpress.XtraEditors.MemoEdit meDescription;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgDiagnosisInfo;
+        private DevExpress.XtraLayout.LayoutControlItem lciDiagnosisGrid;
+        private DevExpress.XtraLayout.LayoutControlItem lciICDGrid;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup13;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem50;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup14;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem51;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem53;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
-        private DevExpress.XtraEditors.SimpleButton simpleButton10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem60;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem61;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem62;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgClinicalDiagnosis;
+        private DevExpress.XtraLayout.LayoutControlItem lciClinicalDiagnosis;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgDescription;
+        private DevExpress.XtraLayout.LayoutControlItem lciDescription;
+        private DevExpress.XtraLayout.LayoutControlItem lciEffectiveSubsance;
+        private DevExpress.XtraLayout.LayoutControlItem lciDeleteEffectiveSubsance;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddEffectiveSubsance;
+        private DevExpress.XtraEditors.SimpleButton sbSyncDiagnosis;
+        private DevExpress.XtraEditors.SimpleButton sbAddDiagnosis;
+        private DevExpress.XtraEditors.SimpleButton sbDeleteDiagnosis;
+        private DevExpress.XtraEditors.SimpleButton sbCancel;
+        private DevExpress.XtraEditors.SimpleButton sbSave;
+        private DevExpress.XtraEditors.SimpleButton sbPrint;
+        private DevExpress.XtraLayout.LayoutControlItem lciDeleteDiagnosis;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddDiagnosis;
+        private DevExpress.XtraLayout.LayoutControlItem lciSyncDiagnosis;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem57;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem58;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem59;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup16;
+        private DevExpress.XtraLayout.LayoutControlItem lciPrint;
+        private DevExpress.XtraLayout.LayoutControlItem lciSave;
+        private DevExpress.XtraLayout.LayoutControlItem lciCancel;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgEffectiveSubsance;
+        private DevExpress.XtraEditors.DateEdit deProvisionDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colStoneDimension;
+        private DevExpress.XtraGrid.Columns.GridColumn colStoneLocalisationCode;
     }
 }

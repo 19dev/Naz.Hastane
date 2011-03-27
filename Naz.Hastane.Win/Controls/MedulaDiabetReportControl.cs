@@ -40,7 +40,7 @@ namespace Naz.Hastane.Win.Controls
             UIUtilities.BindLookUpEdit(this.lueFootExam,        LookUpServices.FootExams);
             UIUtilities.BindLookUpEdit(this.lueAcute,           LookUpServices.AcuteComplications);
             UIUtilities.BindLookUpEdit(this.lueHasInsulinePump, LookUpServices.VarYoks);
-            UIUtilities.BindLookUpEdit(this.lueHasDMTraining,   LookUpServices.VarYoks);
+            UIUtilities.BindLookUpEdit(this.lueHasDMTraining,   LookUpServices.YesNos);
             UIUtilities.BindLookUpEdit(this.lueDiseaseCode,     LookUpServices.DiseaseCodes);
             UIUtilities.BindLookUpEdit(this.lueHabitCode,       LookUpServices.HabitCodes);
         }

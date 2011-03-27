@@ -24,8 +24,10 @@ using Naz.Utilities.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 
 namespace Naz.Hastane.Win {
-    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm {
-        
+    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
+    {
+
+        #region Splash Screen
         const int kSplashUpdateInterval_ms = 200;
         const int kMinAmountOfSplashTime_ms = 8000;
 
@@ -59,18 +61,7 @@ namespace Naz.Hastane.Win {
             splash.Dispose();
             splash = null;
         }
-
-        public frmMain()
-        {
-            InitializeComponent();
-            CreateColorPopup(popupControlContainer1);
-            InitSkinGallery();
-            InitFontGallery();
-            InitColorGallery();
-            InitEditors();
-            UserLookAndFeel.Default.SetSkinStyle("Office 2010 Blue");
-            this.Text = "SurpMed v. " + Application.ProductVersion;
-        }
+        #endregion
 
         private void TestUsers()
         {
@@ -89,6 +80,20 @@ namespace Naz.Hastane.Win {
                     }
                 }
             }
+        }
+
+        public frmMain()
+        {
+            InitializeComponent();
+            CreateColorPopup(popupControlContainer1);
+            InitSkinGallery();
+            InitFontGallery();
+            InitColorGallery();
+            InitEditors();
+            UserLookAndFeel.Default.SetSkinStyle("Office 2010 Blue");
+            this.Text = "SurpMed v. " + Application.ProductVersion;
+            AttachMDIChildButtons();
+            AttachLookUpButtons();
         }
 
         /// <summary>
@@ -112,7 +117,6 @@ namespace Naz.Hastane.Win {
             skins.Ribbon = rcMain;
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
-            CreateHastaAraSGKForm();
             this.rcMain.SelectedPage = rbPatient;
 
             // Force the loading of the database
@@ -148,15 +152,6 @@ namespace Naz.Hastane.Win {
             ShowNewDocument<MDIChildForm>();
         }
 
-        public void CreateHastaAraForm()
-        {
-            ShowNewDocument<HastaAraForm>();
-        }
-        public void CreateHastaAraSGKForm()
-        {
-            ShowNewDocument<HastaAraSGKForm>();
-        }
-
         public void ShowNewDocument(MDIChildForm newForm)
         {
             documentIndex++;
@@ -168,12 +163,7 @@ namespace Naz.Hastane.Win {
 
         public void ShowNewDocument<T>() where T:MDIChildForm, new()
         {
-            T newForm = new T();
-            documentIndex++;
-            newForm.MdiParent = this;
-            newForm.Closed += new EventHandler(Pad_Closed);
-            newForm.ShowPopupMenu += new EventHandler(Pad_ShowPopupMenu);
-            newForm.Show();
+            ShowNewDocument(new T());
         }
 
         void Pad_Closed(object sender, EventArgs e)
@@ -247,50 +237,6 @@ namespace Naz.Hastane.Win {
         void iKapat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if(CurrentForm != null) CurrentForm.Close();
-        }
-
-        public void OpenHasta(string hastaID)
-        {
-            Patient patient = PatientServices.GetByNo(hastaID);
-            if (patient != null)
-            {
-                HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
-                string name = patient.FirstName + " " + patient.LastName;
-                newForm.Text = name;
-                ShowNewDocument(newForm);
-                AddToMostRecentFiles(name, arMRUList);
-            }
-        }
-
-        public void OpenHastaSGK(string hastaID)
-        {
-            Patient patient = PatientServices.GetByNo(hastaID);
-            if (patient != null)
-            {
-                HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
-                string name = patient.FirstName + " " + patient.LastName;
-                newForm.Text = name;
-                ShowNewDocument(newForm);
-                AddToMostRecentFiles(name, arMRUList);
-            }
-        }
-
-        public void OpenNewHasta()
-        {
-            Patient patient = PatientServices.GetNewPatient();
-            string name = "Yeni Hasta";
-            HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
-            newForm.Text = name;
-            ShowNewDocument(newForm);
-        }
-
-        public void OpenNewHastaSGK()
-        {
-            Patient patient = PatientServices.GetNewSGKPatient();
-            string name = "Yeni SGK Hastasý";
-            HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
-            newForm.Text = name;
-            ShowNewDocument(newForm);
         }
 
         private void iPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -593,18 +539,6 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
-        private void iAra_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
-            //foreach (frmPad frm in this.OwnedForms)
-            //{
-            //    if frm is frmHastaAra
-            //    {
-            //        frm.Focus();
-            //        return;
-            //    }
-            //}
-            CreateHastaAraForm();
-        }
-
         private void iHakkinda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             DevExpress.Utils.About.frmAbout dlg = new DevExpress.Utils.About.frmAbout("SurpMed v." + Application.ProductVersion);
             dlg.ShowDialog();
@@ -809,16 +743,7 @@ namespace Naz.Hastane.Win {
             this.Close();
         }
 
-        private void iHastaAra_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CreateHastaAraForm();
-        }
-
-        private void iSGKHastaAra_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CreateHastaAraSGKForm();
-        }
-
+        #region Patient Forms
         private void iYeniSGKHastasi_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenNewHastaSGK();
@@ -828,232 +753,128 @@ namespace Naz.Hastane.Win {
         {
             OpenNewHasta();
         }
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        public void OpenNewHasta()
         {
-
+            Patient patient = PatientServices.GetNewPatient();
+            string name = "Yeni Hasta";
+            HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
+            newForm.Text = name;
+            ShowNewDocument(newForm);
         }
+        public void OpenHasta(string hastaID)
+        {
+            Patient patient = PatientServices.GetByNo(hastaID);
+            if (patient != null)
+            {
+                HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
+                string name = patient.FirstName + " " + patient.LastName;
+                newForm.Text = name;
+                ShowNewDocument(newForm);
+                AddToMostRecentFiles(name, arMRUList);
+            }
+        }
+        public void OpenNewHastaSGK()
+        {
+            Patient patient = PatientServices.GetNewSGKPatient();
+            string name = "Yeni SGK Hastasý";
+            HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
+            newForm.Text = name;
+            ShowNewDocument(newForm);
+        }
+        public void OpenHastaSGK(string hastaID)
+        {
+            Patient patient = PatientServices.GetByNo(hastaID);
+            if (patient != null)
+            {
+                HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
+                string name = patient.FirstName + " " + patient.LastName;
+                newForm.Text = name;
+                ShowNewDocument(newForm);
+                AddToMostRecentFiles(name, arMRUList);
+            }
+        }
+        #endregion
+
+        #region MDIChildForms
+        private void AttachMDIChildButtons()
+        {
+            iHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraForm>();
+            iSGKHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraSGKForm>();
+            iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
+            iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
+            iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiveVoucherForm>();
+            iDiabetReports.ItemClick += (o, args) => ShowNewDocument<DiabetForm>();
+            iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
+            iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
+            iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
+        }
+        #endregion
+
+        #region LookUp Buttons
 
         private void ShowNewLookUpForm<T>(IList<T> lookUpTable, string caption) where T : new()
         {
             LookUpForm<T> newForm = new LookUpForm<T>(lookUpTable);
             newForm.Text = caption;
             ShowNewDocument(newForm);
+        }
+        private void AttachLookUpButtons()
+        {
+            // General LookUps
+            iBloodType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.BloodTypes, args.Item.Caption);
+            iCity.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Cities, args.Item.Caption);
+            iIDType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.IDTypes, args.Item.Caption);
+            iNationality.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Nationalities, args.Item.Caption);
+            iPatientRelations.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.PatientRelations, args.Item.Caption);
+            iVAT.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.VATs, args.Item.Caption);
+            iYesNo.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.YesNos, args.Item.Caption);
 
+            // Medula Diabet Report
+            iAcuteComplication.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.AcuteComplications, args.Item.Caption);
+            iApplicationReason.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.ApplicationReasons, args.Item.Caption);
+            iDiseaseCode.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.DiseaseCodes, args.Item.Caption);
+            iEKG.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.EKGs, args.Item.Caption);
+            iExercise.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Exercises, args.Item.Caption);
+            iEyeExam.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.EyeExams, args.Item.Caption);
+            iFootExam.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FootExams, args.Item.Caption);
+            iHabitCode.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.HabitCodes, args.Item.Caption);
+            iPositiveNegative.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.PositiveNegatives, args.Item.Caption);
+            iResidentialType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.ResidentialTypes, args.Item.Caption);
+            iTBT.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.TBTs, args.Item.Caption);
+            iVarYok.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.VarYoks, args.Item.Caption);
+
+            // Medula Provision
+            iProvisionType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.ProvisionTypes, args.Item.Caption);
+            iBranchCodes.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.BranchCodes, args.Item.Caption);
+            iFollowUpType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FollowUpTypes, args.Item.Caption);
+            iInsuranceType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.InsuranceTypes, args.Item.Caption);
+            iTreatmentType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.TreatmentTypes, args.Item.Caption);
+            iTreatmentStyle.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.TreatmentStyles, args.Item.Caption);
+            iTransferorIns.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.TransferorInstitutions, args.Item.Caption);
+            iRelationType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.RelationTypes, args.Item.Caption);
+
+            // Medula Treatment Report
+            iDoctorType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.DoctorTypes, args.Item.Caption);
+            iMedulaReportType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.MedulaReportTypes, args.Item.Caption);
+            iEditingType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.EditingTypes, args.Item.Caption);
+            iMedulaReportTreatmentType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.MedulaReportTreatmentTypes, args.Item.Caption);
+            iESWTBodyPart.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.ESWTBodyParts, args.Item.Caption);
+            iFTRBodyPart.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FTRBodyParts, args.Item.Caption);
+            iKidneyType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.KidneyTypes, args.Item.Caption);           
+            iKidneyStoneLocalisationCode.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.KidneyStoneLocalisationCodes, args.Item.Caption);
+
+            //Special LookUps
+            iDepository.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Depositories, args.Item.Caption);
+            iDoctor.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Doctors, args.Item.Caption);
+            iFunctionGroup.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FunctionGroups, args.Item.Caption);
+            iFunctionType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FunctionGroupTypes, args.Item.Caption);
+            iRooms.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Rooms, args.Item.Caption);
+            iService.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Services, args.Item.Caption);
+            iSystemSettings.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.SystemSettings, args.Item.Caption);
+            iUser.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Users, args.Item.Caption);
+            iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
         }
 
-        #region MDIChildForms
-        private void iPrinterSettings_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<PrinterSettingsForm>();
-        }
-        private void iAccDailyReport_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<AccountingDailySummaryForm>();
-        }
-        private void iSGKInvoiceVoucher_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<SGKInvoiveVoucherForm>();
-        }
-        private void iDiabetReports_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<DiabetForm>();
-        }
-        private void iMedulaMedicationReports_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<MedulaMedicationReportForm>();
-        }
-        private void iTreatmentReports_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<MedulaMedicationReportForm>();
-        }
-        private void iDatabaseTest_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewDocument<DBTestForm>();
-        }
-        private void iProvisionType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<ProvisionType>(LookUpServices.ProvisionTypes, e.Item.Caption);
-        }
-        #endregion
-
-        #region General Definitions
-        private void iBloodType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<BloodType>(LookUpServices.BloodTypes, e.Item.Caption);
-        }
-        private void iCity_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<City>(LookUpServices.Cities, e.Item.Caption);
-        }
-        private void iIDType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<IDType>(LookUpServices.IDTypes, e.Item.Caption);
-        }
-        private void iNationality_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Nationality>(LookUpServices.Nationalities, e.Item.Caption);
-        }
-        private void iPatientRelations_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<PatientRelation>(LookUpServices.PatientRelations, e.Item.Caption);
-        }
-        private void iVAT_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<VAT>(LookUpServices.VATs, e.Item.Caption);
-        }
-        private void iYesNo_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<YesNo>(LookUpServices.YesNos, e.Item.Caption);
-        }
-        #endregion
-
-        #region Medula Diabet
-        private void iAcuteComplication_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<AcuteComplication>(LookUpServices.AcuteComplications, e.Item.Caption);
-        }
-        private void iApplicationReason_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<ApplicationReason>(LookUpServices.ApplicationReasons, e.Item.Caption);
-        }
-        private void iDiseaseCode_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<DiseaseCode>(LookUpServices.DiseaseCodes, e.Item.Caption);
-        }
-        private void iEKG_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<EKG>(LookUpServices.EKGs, e.Item.Caption);
-        }
-        private void iExercise_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Exercise>(LookUpServices.Exercises, e.Item.Caption);
-        }
-        private void iEyeExam_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<EyeExam>(LookUpServices.EyeExams, e.Item.Caption);
-        }
-        private void iFootExam_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FootExam>(LookUpServices.FootExams, e.Item.Caption);
-        }
-        private void iHabitCode_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<HabitCode>(LookUpServices.HabitCodes, e.Item.Caption);
-        }
-        private void iPositiveNegative_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<PositiveNegative>(LookUpServices.PositiveNegatives, e.Item.Caption);
-        }
-        private void iResidentialType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<ResidentialType>(LookUpServices.ResidentialTypes, e.Item.Caption);
-        }
-        private void iTBT_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TBT>(LookUpServices.TBTs, e.Item.Caption);
-        }
-        private void iVarYok_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<VarYok>(LookUpServices.VarYoks, e.Item.Caption);
-        }
-        #endregion
-
-        #region Medula Provizyon
-        private void iBranchCodes_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<BranchCode>(LookUpServices.BranchCodes, e.Item.Caption);
-        }
-        private void iFollowUpType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FollowUpType>(LookUpServices.FollowUpTypes, e.Item.Caption);
-        }
-        private void iInsuranceType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<InsuranceType>(LookUpServices.InsuranceTypes, e.Item.Caption);
-        }
-        private void iTreatmentType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TreatmentType>(LookUpServices.TreatmentTypes, e.Item.Caption);
-        }
-        private void iTreatmentStyle_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TreatmentStyle>(LookUpServices.TreatmentStyles, e.Item.Caption);
-        }
-        private void iTransferorIns_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<TransferorInstitution>(LookUpServices.TransferorInstitutions, e.Item.Caption);
-        }
-        private void iRelationType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<RelationType>(LookUpServices.RelationTypes, e.Item.Caption);
-        }
-        #endregion
-
-        #region Medula Report
-        private void iDoctorType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<DoctorType>(LookUpServices.DoctorTypes, e.Item.Caption);
-        }
-        private void iMedulaReportType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<MedulaReportType>(LookUpServices.MedulaReportTypes, e.Item.Caption);
-        }
-        private void iEditingType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<EditingType>(LookUpServices.EditingTypes, e.Item.Caption);
-        }
-        private void iMedulaReportTreatmentType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<MedulaReportTreatmentType>(LookUpServices.MedulaReportTreatmentTypes, e.Item.Caption);
-        }
-        private void iESWTBodyPart_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<ESWTBodyPart>(LookUpServices.ESWTBodyParts, e.Item.Caption);
-        }
-        private void iFTRBodyPart_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FTRBodyPart>(LookUpServices.FTRBodyParts, e.Item.Caption);
-        }
-        #endregion
-
-        #region Special Definitions
-        private void iDepository_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Depository>(LookUpServices.Depositories, e.Item.Caption);
-        }
-        private void iDoctor_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Doctor>(LookUpServices.Doctors, e.Item.Caption);
-        }
-        private void iFunctionGroup_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FunctionGroup>(LookUpServices.FunctionGroups, e.Item.Caption);
-        }
-        private void iFunctionType_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<FunctionGroupType>(LookUpServices.FunctionGroupTypes, e.Item.Caption);
-        }
-        private void iRooms_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Room>(LookUpServices.Rooms, e.Item.Caption);
-        }
-        private void iService_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Service>(LookUpServices.Services, e.Item.Caption);
-        }
-        private void iSystemSettings_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<SystemSetting>(LookUpServices.SystemSettings, e.Item.Caption);
-        }
-        private void iUser_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<User>(LookUpServices.Users, e.Item.Caption);
-        }
-        private void iWareHouse_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ShowNewLookUpForm<Warehouse>(LookUpServices.Warehouses, e.Item.Caption);
-        }
         #endregion
 
     }

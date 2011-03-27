@@ -16,7 +16,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
 
-            var doctors = LookUpServices.GetSGKDoctors();
+            var doctors = LookUpServices.SGKDoctors;
             gcView.DataSource = doctors;
         }
 
