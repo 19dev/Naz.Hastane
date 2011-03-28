@@ -39,7 +39,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            this.gridControl1.DataSource = LookUpServices.GetAll<MEDDIABETTAKIPFORMU>();
+            this.gridControl1.DataSource = LookUpServices.GetAll<MedulaDiabetReport>();
         }
 
         private void simpleButton6_Click(object sender, EventArgs e)

@@ -6,10 +6,10 @@ using System;
 namespace Naz.Hastane.Data.Entities
 {
 
-    public class MEDDIABETTAKIPFORMU : PatientVisitExtraBase
+    public class MedulaDiabetReport : PatientVisitExtraBase
     {
 
-        public MEDDIABETTAKIPFORMU() { }
+        public MedulaDiabetReport() { }
 
         //public virtual PatientVisit PatientVisit { get; set; } //KNR; SNR
         //public virtual string KNR { get; set; }
@@ -59,7 +59,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual System.Nullable<int> BIREYSELEGITIMSAYISI { get; set; }
         public virtual System.Nullable<int> GRUPEGITIMSAYISI { get; set; }
         public virtual string EGITIMDM { get; set; }
-        public virtual string GONDERILDI { get; set; }
+        public virtual string IsSent { get; set; } // 0: Not Sent, 1: Sent
         public virtual string TAKIPFORMUNO { get; set; }
     }
 }

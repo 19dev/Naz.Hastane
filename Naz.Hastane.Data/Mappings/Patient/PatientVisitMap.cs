@@ -92,11 +92,11 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.DATE_CREATE).Column("DATE_CREATE");
             Map(x => x.USER_ID_UPDATE).Column("USER_ID_UPDATE");
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE");
-            
+
             HasMany(x => x.PatientVisitDetails)
                 .KeyColumns.Add("KNR", "SNR")
-                .Inverse()
-                .Not.LazyLoad();
+                .Inverse();
+            //HasOne(x => x.MedulaDiabetReport);
         }
     }
 }

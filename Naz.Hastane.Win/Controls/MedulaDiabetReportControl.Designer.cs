@@ -394,37 +394,37 @@
             // 
             // sbAddMedication
             // 
-            this.sbAddMedication.Location = new System.Drawing.Point(909, 76);
+            this.sbAddMedication.Location = new System.Drawing.Point(918, 66);
             this.sbAddMedication.Name = "sbAddMedication";
-            this.sbAddMedication.Size = new System.Drawing.Size(62, 22);
+            this.sbAddMedication.Size = new System.Drawing.Size(63, 22);
             this.sbAddMedication.StyleController = this.lcDiabet;
             this.sbAddMedication.TabIndex = 65;
             this.sbAddMedication.Text = "Ekle";
             // 
             // sbAddHabit
             // 
-            this.sbAddHabit.Location = new System.Drawing.Point(416, 439);
+            this.sbAddHabit.Location = new System.Drawing.Point(415, 439);
             this.sbAddHabit.Name = "sbAddHabit";
-            this.sbAddHabit.Size = new System.Drawing.Size(57, 22);
+            this.sbAddHabit.Size = new System.Drawing.Size(58, 22);
             this.sbAddHabit.StyleController = this.lcDiabet;
             this.sbAddHabit.TabIndex = 64;
             this.sbAddHabit.Text = "Ekle";
             // 
             // sbAddDisease
             // 
-            this.sbAddDisease.Location = new System.Drawing.Point(417, 192);
+            this.sbAddDisease.Location = new System.Drawing.Point(416, 182);
             this.sbAddDisease.Name = "sbAddDisease";
-            this.sbAddDisease.Size = new System.Drawing.Size(56, 22);
+            this.sbAddDisease.Size = new System.Drawing.Size(57, 22);
             this.sbAddDisease.StyleController = this.lcDiabet;
             this.sbAddDisease.TabIndex = 63;
             this.sbAddDisease.Text = "Ekle";
             // 
             // gcMedication
             // 
-            this.gcMedication.Location = new System.Drawing.Point(501, 124);
+            this.gcMedication.Location = new System.Drawing.Point(501, 114);
             this.gcMedication.MainView = this.gvMedication;
             this.gcMedication.Name = "gcMedication";
-            this.gcMedication.Size = new System.Drawing.Size(470, 142);
+            this.gcMedication.Size = new System.Drawing.Size(480, 149);
             this.gcMedication.TabIndex = 62;
             this.gcMedication.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMedication});
@@ -437,26 +437,26 @@
             // 
             // teDailyDose
             // 
-            this.teDailyDose.Location = new System.Drawing.Point(638, 100);
+            this.teDailyDose.Location = new System.Drawing.Point(638, 90);
             this.teDailyDose.Name = "teDailyDose";
-            this.teDailyDose.Size = new System.Drawing.Size(267, 20);
+            this.teDailyDose.Size = new System.Drawing.Size(276, 20);
             this.teDailyDose.StyleController = this.lcDiabet;
             this.teDailyDose.TabIndex = 61;
             // 
             // teBarcode
             // 
-            this.teBarcode.Location = new System.Drawing.Point(638, 76);
+            this.teBarcode.Location = new System.Drawing.Point(638, 66);
             this.teBarcode.Name = "teBarcode";
-            this.teBarcode.Size = new System.Drawing.Size(267, 20);
+            this.teBarcode.Size = new System.Drawing.Size(276, 20);
             this.teBarcode.StyleController = this.lcDiabet;
             this.teBarcode.TabIndex = 60;
             // 
             // gcHabit
             // 
-            this.gcHabit.Location = new System.Drawing.Point(36, 465);
+            this.gcHabit.Location = new System.Drawing.Point(26, 465);
             this.gcHabit.MainView = this.gvHabit;
             this.gcHabit.Name = "gcHabit";
-            this.gcHabit.Size = new System.Drawing.Size(437, 159);
+            this.gcHabit.Size = new System.Drawing.Size(447, 169);
             this.gcHabit.TabIndex = 59;
             this.gcHabit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvHabit});
@@ -469,10 +469,10 @@
             // 
             // gcDisease
             // 
-            this.gcDisease.Location = new System.Drawing.Point(36, 240);
+            this.gcDisease.Location = new System.Drawing.Point(26, 230);
             this.gcDisease.MainView = this.gvDisease;
             this.gcDisease.Name = "gcDisease";
-            this.gcDisease.Size = new System.Drawing.Size(437, 151);
+            this.gcDisease.Size = new System.Drawing.Size(447, 161);
             this.gcDisease.TabIndex = 58;
             this.gcDisease.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDisease});
@@ -485,15 +485,15 @@
             // 
             // teDiseaseDiagnosisCode
             // 
-            this.teDiseaseDiagnosisCode.Location = new System.Drawing.Point(173, 216);
+            this.teDiseaseDiagnosisCode.Location = new System.Drawing.Point(163, 206);
             this.teDiseaseDiagnosisCode.Name = "teDiseaseDiagnosisCode";
-            this.teDiseaseDiagnosisCode.Size = new System.Drawing.Size(240, 20);
+            this.teDiseaseDiagnosisCode.Size = new System.Drawing.Size(249, 20);
             this.teDiseaseDiagnosisCode.StyleController = this.lcDiabet;
             this.teDiseaseDiagnosisCode.TabIndex = 56;
             // 
             // lueDiseaseCode
             // 
-            this.lueDiseaseCode.Location = new System.Drawing.Point(173, 192);
+            this.lueDiseaseCode.Location = new System.Drawing.Point(163, 182);
             this.lueDiseaseCode.Name = "lueDiseaseCode";
             this.lueDiseaseCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -502,16 +502,16 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Hastalık Kodu")});
             this.lueDiseaseCode.Properties.DisplayMember = "Value";
             this.lueDiseaseCode.Properties.ValueMember = "Code";
-            this.lueDiseaseCode.Size = new System.Drawing.Size(240, 20);
+            this.lueDiseaseCode.Size = new System.Drawing.Size(249, 20);
             this.lueDiseaseCode.StyleController = this.lcDiabet;
             this.lueDiseaseCode.TabIndex = 55;
             // 
             // gcDoctors
             // 
-            this.gcDoctors.Location = new System.Drawing.Point(36, 421);
+            this.gcDoctors.Location = new System.Drawing.Point(26, 420);
             this.gcDoctors.MainView = this.gvDoctors;
             this.gcDoctors.Name = "gcDoctors";
-            this.gcDoctors.Size = new System.Drawing.Size(355, 111);
+            this.gcDoctors.Size = new System.Drawing.Size(363, 122);
             this.gcDoctors.TabIndex = 54;
             this.gcDoctors.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDoctors});
@@ -550,7 +550,7 @@
             // lueResidentialType
             // 
             this.lueResidentialType.EnterMoveNextControl = true;
-            this.lueResidentialType.Location = new System.Drawing.Point(173, 209);
+            this.lueResidentialType.Location = new System.Drawing.Point(163, 208);
             this.lueResidentialType.Name = "lueResidentialType";
             this.lueResidentialType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -559,18 +559,18 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "İkamet Türü")});
             this.lueResidentialType.Properties.DisplayMember = "Value";
             this.lueResidentialType.Properties.ValueMember = "ID";
-            this.lueResidentialType.Size = new System.Drawing.Size(218, 20);
+            this.lueResidentialType.Size = new System.Drawing.Size(226, 20);
             this.lueResidentialType.StyleController = this.lcDiabet;
             this.lueResidentialType.TabIndex = 53;
             // 
             // rgSex
             // 
-            this.rgSex.Location = new System.Drawing.Point(173, 148);
+            this.rgSex.Location = new System.Drawing.Point(163, 138);
             this.rgSex.Name = "rgSex";
             this.rgSex.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Erkek"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Kadın")});
-            this.rgSex.Size = new System.Drawing.Size(218, 33);
+            this.rgSex.Size = new System.Drawing.Size(226, 42);
             this.rgSex.StyleController = this.lcDiabet;
             this.rgSex.TabIndex = 52;
             // 
@@ -578,31 +578,31 @@
             // 
             this.deVisitDate.EditValue = null;
             this.deVisitDate.EnterMoveNextControl = true;
-            this.deVisitDate.Location = new System.Drawing.Point(173, 281);
+            this.deVisitDate.Location = new System.Drawing.Point(163, 280);
             this.deVisitDate.Name = "deVisitDate";
             this.deVisitDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deVisitDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deVisitDate.Size = new System.Drawing.Size(218, 20);
+            this.deVisitDate.Size = new System.Drawing.Size(226, 20);
             this.deVisitDate.StyleController = this.lcDiabet;
             this.deVisitDate.TabIndex = 51;
             // 
             // teHealthInstituteCode
             // 
             this.teHealthInstituteCode.EnterMoveNextControl = true;
-            this.teHealthInstituteCode.Location = new System.Drawing.Point(173, 257);
+            this.teHealthInstituteCode.Location = new System.Drawing.Point(163, 256);
             this.teHealthInstituteCode.Name = "teHealthInstituteCode";
-            this.teHealthInstituteCode.Size = new System.Drawing.Size(218, 20);
+            this.teHealthInstituteCode.Size = new System.Drawing.Size(226, 20);
             this.teHealthInstituteCode.StyleController = this.lcDiabet;
             this.teHealthInstituteCode.TabIndex = 50;
             // 
             // teProtocolNo
             // 
             this.teProtocolNo.EnterMoveNextControl = true;
-            this.teProtocolNo.Location = new System.Drawing.Point(173, 233);
+            this.teProtocolNo.Location = new System.Drawing.Point(163, 232);
             this.teProtocolNo.Name = "teProtocolNo";
-            this.teProtocolNo.Size = new System.Drawing.Size(218, 20);
+            this.teProtocolNo.Size = new System.Drawing.Size(226, 20);
             this.teProtocolNo.StyleController = this.lcDiabet;
             this.teProtocolNo.TabIndex = 49;
             // 
@@ -610,13 +610,13 @@
             // 
             this.deInsulinePompChangeDate.EditValue = null;
             this.deInsulinePompChangeDate.EnterMoveNextControl = true;
-            this.deInsulinePompChangeDate.Location = new System.Drawing.Point(830, 544);
+            this.deInsulinePompChangeDate.Location = new System.Drawing.Point(834, 534);
             this.deInsulinePompChangeDate.Name = "deInsulinePompChangeDate";
             this.deInsulinePompChangeDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deInsulinePompChangeDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deInsulinePompChangeDate.Size = new System.Drawing.Size(129, 20);
+            this.deInsulinePompChangeDate.Size = new System.Drawing.Size(135, 20);
             this.deInsulinePompChangeDate.StyleController = this.lcDiabet;
             this.deInsulinePompChangeDate.TabIndex = 48;
             // 
@@ -624,13 +624,13 @@
             // 
             this.deInsulinePumpDate.EditValue = null;
             this.deInsulinePumpDate.EnterMoveNextControl = true;
-            this.deInsulinePumpDate.Location = new System.Drawing.Point(830, 520);
+            this.deInsulinePumpDate.Location = new System.Drawing.Point(834, 510);
             this.deInsulinePumpDate.Name = "deInsulinePumpDate";
             this.deInsulinePumpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deInsulinePumpDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deInsulinePumpDate.Size = new System.Drawing.Size(129, 20);
+            this.deInsulinePumpDate.Size = new System.Drawing.Size(135, 20);
             this.deInsulinePumpDate.StyleController = this.lcDiabet;
             this.deInsulinePumpDate.TabIndex = 47;
             // 
@@ -638,7 +638,7 @@
             // 
             this.lueHasInsulinePump.EditValue = "";
             this.lueHasInsulinePump.EnterMoveNextControl = true;
-            this.lueHasInsulinePump.Location = new System.Drawing.Point(830, 472);
+            this.lueHasInsulinePump.Location = new System.Drawing.Point(834, 462);
             this.lueHasInsulinePump.Name = "lueHasInsulinePump";
             this.lueHasInsulinePump.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -647,16 +647,16 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "İnsülin Pompası Var Mı?")});
             this.lueHasInsulinePump.Properties.DisplayMember = "Value";
             this.lueHasInsulinePump.Properties.ValueMember = "Code";
-            this.lueHasInsulinePump.Size = new System.Drawing.Size(129, 20);
+            this.lueHasInsulinePump.Size = new System.Drawing.Size(135, 20);
             this.lueHasInsulinePump.StyleController = this.lcDiabet;
             this.lueHasInsulinePump.TabIndex = 45;
             // 
             // tePatientHospitalizedDay
             // 
             this.tePatientHospitalizedDay.EnterMoveNextControl = true;
-            this.tePatientHospitalizedDay.Location = new System.Drawing.Point(830, 448);
+            this.tePatientHospitalizedDay.Location = new System.Drawing.Point(834, 438);
             this.tePatientHospitalizedDay.Name = "tePatientHospitalizedDay";
-            this.tePatientHospitalizedDay.Size = new System.Drawing.Size(129, 20);
+            this.tePatientHospitalizedDay.Size = new System.Drawing.Size(135, 20);
             this.tePatientHospitalizedDay.StyleController = this.lcDiabet;
             this.tePatientHospitalizedDay.TabIndex = 44;
             // 
@@ -664,7 +664,7 @@
             // 
             this.lueAcute.EditValue = "";
             this.lueAcute.EnterMoveNextControl = true;
-            this.lueAcute.Location = new System.Drawing.Point(830, 424);
+            this.lueAcute.Location = new System.Drawing.Point(834, 414);
             this.lueAcute.Name = "lueAcute";
             this.lueAcute.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -673,7 +673,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Akut Komplikasyonu")});
             this.lueAcute.Properties.DisplayMember = "Value";
             this.lueAcute.Properties.ValueMember = "ID";
-            this.lueAcute.Size = new System.Drawing.Size(129, 20);
+            this.lueAcute.Size = new System.Drawing.Size(135, 20);
             this.lueAcute.StyleController = this.lcDiabet;
             this.lueAcute.TabIndex = 43;
             // 
@@ -681,7 +681,7 @@
             // 
             this.lueFootExam.EditValue = "";
             this.lueFootExam.EnterMoveNextControl = true;
-            this.lueFootExam.Location = new System.Drawing.Point(830, 400);
+            this.lueFootExam.Location = new System.Drawing.Point(834, 390);
             this.lueFootExam.Name = "lueFootExam";
             this.lueFootExam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -690,7 +690,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Ayak Muayenesi")});
             this.lueFootExam.Properties.DisplayMember = "Value";
             this.lueFootExam.Properties.ValueMember = "Code";
-            this.lueFootExam.Size = new System.Drawing.Size(129, 20);
+            this.lueFootExam.Size = new System.Drawing.Size(135, 20);
             this.lueFootExam.StyleController = this.lcDiabet;
             this.lueFootExam.TabIndex = 42;
             // 
@@ -698,7 +698,7 @@
             // 
             this.lueSerebrovaskuler.EditValue = "";
             this.lueSerebrovaskuler.EnterMoveNextControl = true;
-            this.lueSerebrovaskuler.Location = new System.Drawing.Point(830, 376);
+            this.lueSerebrovaskuler.Location = new System.Drawing.Point(834, 366);
             this.lueSerebrovaskuler.Name = "lueSerebrovaskuler";
             this.lueSerebrovaskuler.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -707,7 +707,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Serebrovasküler H")});
             this.lueSerebrovaskuler.Properties.DisplayMember = "Value";
             this.lueSerebrovaskuler.Properties.ValueMember = "Code";
-            this.lueSerebrovaskuler.Size = new System.Drawing.Size(129, 20);
+            this.lueSerebrovaskuler.Size = new System.Drawing.Size(135, 20);
             this.lueSerebrovaskuler.StyleController = this.lcDiabet;
             this.lueSerebrovaskuler.TabIndex = 41;
             // 
@@ -715,7 +715,7 @@
             // 
             this.lueKoroner.EditValue = "";
             this.lueKoroner.EnterMoveNextControl = true;
-            this.lueKoroner.Location = new System.Drawing.Point(830, 352);
+            this.lueKoroner.Location = new System.Drawing.Point(834, 342);
             this.lueKoroner.Name = "lueKoroner";
             this.lueKoroner.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -724,7 +724,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Koroner Arter H")});
             this.lueKoroner.Properties.DisplayMember = "Value";
             this.lueKoroner.Properties.ValueMember = "Code";
-            this.lueKoroner.Size = new System.Drawing.Size(129, 20);
+            this.lueKoroner.Size = new System.Drawing.Size(135, 20);
             this.lueKoroner.StyleController = this.lcDiabet;
             this.lueKoroner.TabIndex = 40;
             // 
@@ -732,7 +732,7 @@
             // 
             this.lueMikroAlbumin.EditValue = "";
             this.lueMikroAlbumin.EnterMoveNextControl = true;
-            this.lueMikroAlbumin.Location = new System.Drawing.Point(568, 544);
+            this.lueMikroAlbumin.Location = new System.Drawing.Point(566, 534);
             this.lueMikroAlbumin.Name = "lueMikroAlbumin";
             this.lueMikroAlbumin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -741,7 +741,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Mikroalbuminüri")});
             this.lueMikroAlbumin.Properties.DisplayMember = "Value";
             this.lueMikroAlbumin.Properties.ValueMember = "Code";
-            this.lueMikroAlbumin.Size = new System.Drawing.Size(121, 20);
+            this.lueMikroAlbumin.Size = new System.Drawing.Size(127, 20);
             this.lueMikroAlbumin.StyleController = this.lcDiabet;
             this.lueMikroAlbumin.TabIndex = 39;
             // 
@@ -749,7 +749,7 @@
             // 
             this.lueEKG.EditValue = "";
             this.lueEKG.EnterMoveNextControl = true;
-            this.lueEKG.Location = new System.Drawing.Point(568, 520);
+            this.lueEKG.Location = new System.Drawing.Point(566, 510);
             this.lueEKG.Name = "lueEKG";
             this.lueEKG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -758,7 +758,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "EKG")});
             this.lueEKG.Properties.DisplayMember = "Value";
             this.lueEKG.Properties.ValueMember = "ID";
-            this.lueEKG.Size = new System.Drawing.Size(121, 20);
+            this.lueEKG.Size = new System.Drawing.Size(127, 20);
             this.lueEKG.StyleController = this.lcDiabet;
             this.lueEKG.TabIndex = 38;
             // 
@@ -766,7 +766,7 @@
             // 
             this.lueAntiGAD.EditValue = "";
             this.lueAntiGAD.EnterMoveNextControl = true;
-            this.lueAntiGAD.Location = new System.Drawing.Point(568, 496);
+            this.lueAntiGAD.Location = new System.Drawing.Point(566, 486);
             this.lueAntiGAD.Name = "lueAntiGAD";
             this.lueAntiGAD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -775,61 +775,61 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "AntiGAD")});
             this.lueAntiGAD.Properties.DisplayMember = "Value";
             this.lueAntiGAD.Properties.ValueMember = "Code";
-            this.lueAntiGAD.Size = new System.Drawing.Size(121, 20);
+            this.lueAntiGAD.Size = new System.Drawing.Size(127, 20);
             this.lueAntiGAD.StyleController = this.lcDiabet;
             this.lueAntiGAD.TabIndex = 37;
             // 
             // teALT
             // 
             this.teALT.EnterMoveNextControl = true;
-            this.teALT.Location = new System.Drawing.Point(568, 472);
+            this.teALT.Location = new System.Drawing.Point(566, 462);
             this.teALT.Name = "teALT";
-            this.teALT.Size = new System.Drawing.Size(121, 20);
+            this.teALT.Size = new System.Drawing.Size(127, 20);
             this.teALT.StyleController = this.lcDiabet;
             this.teALT.TabIndex = 36;
             // 
             // teHDL
             // 
             this.teHDL.EnterMoveNextControl = true;
-            this.teHDL.Location = new System.Drawing.Point(568, 448);
+            this.teHDL.Location = new System.Drawing.Point(566, 438);
             this.teHDL.Name = "teHDL";
-            this.teHDL.Size = new System.Drawing.Size(121, 20);
+            this.teHDL.Size = new System.Drawing.Size(127, 20);
             this.teHDL.StyleController = this.lcDiabet;
             this.teHDL.TabIndex = 35;
             // 
             // teLDL
             // 
             this.teLDL.EnterMoveNextControl = true;
-            this.teLDL.Location = new System.Drawing.Point(568, 424);
+            this.teLDL.Location = new System.Drawing.Point(566, 414);
             this.teLDL.Name = "teLDL";
-            this.teLDL.Size = new System.Drawing.Size(121, 20);
+            this.teLDL.Size = new System.Drawing.Size(127, 20);
             this.teLDL.StyleController = this.lcDiabet;
             this.teLDL.TabIndex = 34;
             // 
             // teTrigliserid
             // 
             this.teTrigliserid.EnterMoveNextControl = true;
-            this.teTrigliserid.Location = new System.Drawing.Point(568, 400);
+            this.teTrigliserid.Location = new System.Drawing.Point(566, 390);
             this.teTrigliserid.Name = "teTrigliserid";
-            this.teTrigliserid.Size = new System.Drawing.Size(121, 20);
+            this.teTrigliserid.Size = new System.Drawing.Size(127, 20);
             this.teTrigliserid.StyleController = this.lcDiabet;
             this.teTrigliserid.TabIndex = 33;
             // 
             // teKreatinin
             // 
             this.teKreatinin.EnterMoveNextControl = true;
-            this.teKreatinin.Location = new System.Drawing.Point(568, 376);
+            this.teKreatinin.Location = new System.Drawing.Point(566, 366);
             this.teKreatinin.Name = "teKreatinin";
-            this.teKreatinin.Size = new System.Drawing.Size(121, 20);
+            this.teKreatinin.Size = new System.Drawing.Size(127, 20);
             this.teKreatinin.StyleController = this.lcDiabet;
             this.teKreatinin.TabIndex = 32;
             // 
             // teHbA1C
             // 
             this.teHbA1C.EnterMoveNextControl = true;
-            this.teHbA1C.Location = new System.Drawing.Point(568, 352);
+            this.teHbA1C.Location = new System.Drawing.Point(566, 342);
             this.teHbA1C.Name = "teHbA1C";
-            this.teHbA1C.Size = new System.Drawing.Size(121, 20);
+            this.teHbA1C.Size = new System.Drawing.Size(127, 20);
             this.teHbA1C.StyleController = this.lcDiabet;
             this.teHbA1C.TabIndex = 31;
             // 
@@ -837,7 +837,7 @@
             // 
             this.luePeriferik.EditValue = "";
             this.luePeriferik.EnterMoveNextControl = true;
-            this.luePeriferik.Location = new System.Drawing.Point(830, 328);
+            this.luePeriferik.Location = new System.Drawing.Point(834, 318);
             this.luePeriferik.Name = "luePeriferik";
             this.luePeriferik.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -846,7 +846,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Periferik Sensoryal Nöropati")});
             this.luePeriferik.Properties.DisplayMember = "Value";
             this.luePeriferik.Properties.ValueMember = "Code";
-            this.luePeriferik.Size = new System.Drawing.Size(129, 20);
+            this.luePeriferik.Size = new System.Drawing.Size(135, 20);
             this.luePeriferik.StyleController = this.lcDiabet;
             this.luePeriferik.TabIndex = 30;
             // 
@@ -854,7 +854,7 @@
             // 
             this.lueEyeExam.EditValue = "";
             this.lueEyeExam.EnterMoveNextControl = true;
-            this.lueEyeExam.Location = new System.Drawing.Point(830, 304);
+            this.lueEyeExam.Location = new System.Drawing.Point(834, 294);
             this.lueEyeExam.Name = "lueEyeExam";
             this.lueEyeExam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -863,33 +863,33 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Göz Muayenesi")});
             this.lueEyeExam.Properties.DisplayMember = "Value";
             this.lueEyeExam.Properties.ValueMember = "ID";
-            this.lueEyeExam.Size = new System.Drawing.Size(129, 20);
+            this.lueEyeExam.Size = new System.Drawing.Size(135, 20);
             this.lueEyeExam.StyleController = this.lcDiabet;
             this.lueEyeExam.TabIndex = 29;
             // 
             // teTPG
             // 
             this.teTPG.EnterMoveNextControl = true;
-            this.teTPG.Location = new System.Drawing.Point(568, 328);
+            this.teTPG.Location = new System.Drawing.Point(566, 318);
             this.teTPG.Name = "teTPG";
-            this.teTPG.Size = new System.Drawing.Size(121, 20);
+            this.teTPG.Size = new System.Drawing.Size(127, 20);
             this.teTPG.StyleController = this.lcDiabet;
             this.teTPG.TabIndex = 28;
             // 
             // teAPG
             // 
             this.teAPG.EnterMoveNextControl = true;
-            this.teAPG.Location = new System.Drawing.Point(568, 304);
+            this.teAPG.Location = new System.Drawing.Point(566, 294);
             this.teAPG.Name = "teAPG";
-            this.teAPG.Size = new System.Drawing.Size(121, 20);
+            this.teAPG.Size = new System.Drawing.Size(127, 20);
             this.teAPG.StyleController = this.lcDiabet;
             this.teAPG.TabIndex = 27;
             // 
             // sbAddDoctor
             // 
-            this.sbAddDoctor.Location = new System.Drawing.Point(316, 349);
+            this.sbAddDoctor.Location = new System.Drawing.Point(312, 348);
             this.sbAddDoctor.Name = "sbAddDoctor";
-            this.sbAddDoctor.Size = new System.Drawing.Size(75, 22);
+            this.sbAddDoctor.Size = new System.Drawing.Size(77, 22);
             this.sbAddDoctor.StyleController = this.lcDiabet;
             this.sbAddDoctor.TabIndex = 26;
             this.sbAddDoctor.Text = "Ekle";
@@ -897,65 +897,65 @@
             // lueDMTraining
             // 
             this.lueDMTraining.EnterMoveNextControl = true;
-            this.lueDMTraining.Location = new System.Drawing.Point(173, 397);
+            this.lueDMTraining.Location = new System.Drawing.Point(163, 396);
             this.lueDMTraining.Name = "lueDMTraining";
             this.lueDMTraining.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDMTraining.Size = new System.Drawing.Size(139, 20);
+            this.lueDMTraining.Size = new System.Drawing.Size(145, 20);
             this.lueDMTraining.StyleController = this.lcDiabet;
             this.lueDMTraining.TabIndex = 25;
             // 
             // teVKI
             // 
             this.teVKI.EnterMoveNextControl = true;
-            this.teVKI.Location = new System.Drawing.Point(829, 256);
+            this.teVKI.Location = new System.Drawing.Point(833, 246);
             this.teVKI.Name = "teVKI";
-            this.teVKI.Size = new System.Drawing.Size(130, 20);
+            this.teVKI.Size = new System.Drawing.Size(136, 20);
             this.teVKI.StyleController = this.lcDiabet;
             this.teVKI.TabIndex = 23;
             // 
             // teWeight
             // 
             this.teWeight.EnterMoveNextControl = true;
-            this.teWeight.Location = new System.Drawing.Point(829, 232);
+            this.teWeight.Location = new System.Drawing.Point(833, 222);
             this.teWeight.Name = "teWeight";
-            this.teWeight.Size = new System.Drawing.Size(130, 20);
+            this.teWeight.Size = new System.Drawing.Size(136, 20);
             this.teWeight.StyleController = this.lcDiabet;
             this.teWeight.TabIndex = 22;
             // 
             // teHeight
             // 
             this.teHeight.EnterMoveNextControl = true;
-            this.teHeight.Location = new System.Drawing.Point(829, 208);
+            this.teHeight.Location = new System.Drawing.Point(833, 198);
             this.teHeight.Name = "teHeight";
-            this.teHeight.Size = new System.Drawing.Size(130, 20);
+            this.teHeight.Size = new System.Drawing.Size(136, 20);
             this.teHeight.StyleController = this.lcDiabet;
             this.teHeight.TabIndex = 21;
             // 
             // teDiyastolik
             // 
             this.teDiyastolik.EnterMoveNextControl = true;
-            this.teDiyastolik.Location = new System.Drawing.Point(568, 256);
+            this.teDiyastolik.Location = new System.Drawing.Point(566, 246);
             this.teDiyastolik.Name = "teDiyastolik";
-            this.teDiyastolik.Size = new System.Drawing.Size(120, 20);
+            this.teDiyastolik.Size = new System.Drawing.Size(126, 20);
             this.teDiyastolik.StyleController = this.lcDiabet;
             this.teDiyastolik.TabIndex = 20;
             // 
             // teSistolik
             // 
             this.teSistolik.EnterMoveNextControl = true;
-            this.teSistolik.Location = new System.Drawing.Point(568, 232);
+            this.teSistolik.Location = new System.Drawing.Point(566, 222);
             this.teSistolik.Name = "teSistolik";
-            this.teSistolik.Size = new System.Drawing.Size(120, 20);
+            this.teSistolik.Size = new System.Drawing.Size(126, 20);
             this.teSistolik.StyleController = this.lcDiabet;
             this.teSistolik.TabIndex = 19;
             // 
             // teBloodSugar
             // 
             this.teBloodSugar.EnterMoveNextControl = true;
-            this.teBloodSugar.Location = new System.Drawing.Point(568, 208);
+            this.teBloodSugar.Location = new System.Drawing.Point(566, 198);
             this.teBloodSugar.Name = "teBloodSugar";
-            this.teBloodSugar.Size = new System.Drawing.Size(120, 20);
+            this.teBloodSugar.Size = new System.Drawing.Size(126, 20);
             this.teBloodSugar.StyleController = this.lcDiabet;
             this.teBloodSugar.TabIndex = 18;
             // 
@@ -963,7 +963,7 @@
             // 
             this.lueGlucometre.EditValue = "";
             this.lueGlucometre.EnterMoveNextControl = true;
-            this.lueGlucometre.Location = new System.Drawing.Point(568, 160);
+            this.lueGlucometre.Location = new System.Drawing.Point(566, 150);
             this.lueGlucometre.Name = "lueGlucometre";
             this.lueGlucometre.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -972,7 +972,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Glucometre")});
             this.lueGlucometre.Properties.DisplayMember = "Value";
             this.lueGlucometre.Properties.ValueMember = "Code";
-            this.lueGlucometre.Size = new System.Drawing.Size(391, 20);
+            this.lueGlucometre.Size = new System.Drawing.Size(403, 20);
             this.lueGlucometre.StyleController = this.lcDiabet;
             this.lueGlucometre.TabIndex = 17;
             // 
@@ -980,7 +980,7 @@
             // 
             this.lueApplicationReason.EditValue = "";
             this.lueApplicationReason.EnterMoveNextControl = true;
-            this.lueApplicationReason.Location = new System.Drawing.Point(568, 136);
+            this.lueApplicationReason.Location = new System.Drawing.Point(566, 126);
             this.lueApplicationReason.Name = "lueApplicationReason";
             this.lueApplicationReason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -989,7 +989,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Başvuru Nedeni")});
             this.lueApplicationReason.Properties.DisplayMember = "Value";
             this.lueApplicationReason.Properties.ValueMember = "ID";
-            this.lueApplicationReason.Size = new System.Drawing.Size(391, 20);
+            this.lueApplicationReason.Size = new System.Drawing.Size(403, 20);
             this.lueApplicationReason.StyleController = this.lcDiabet;
             this.lueApplicationReason.TabIndex = 16;
             // 
@@ -997,7 +997,7 @@
             // 
             this.lueExercise.EditValue = "";
             this.lueExercise.EnterMoveNextControl = true;
-            this.lueExercise.Location = new System.Drawing.Point(568, 112);
+            this.lueExercise.Location = new System.Drawing.Point(566, 102);
             this.lueExercise.Name = "lueExercise";
             this.lueExercise.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1006,7 +1006,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Egzersiz")});
             this.lueExercise.Properties.DisplayMember = "Value";
             this.lueExercise.Properties.ValueMember = "ID";
-            this.lueExercise.Size = new System.Drawing.Size(391, 20);
+            this.lueExercise.Size = new System.Drawing.Size(403, 20);
             this.lueExercise.StyleController = this.lcDiabet;
             this.lueExercise.TabIndex = 15;
             // 
@@ -1014,7 +1014,7 @@
             // 
             this.lueTBT.EditValue = "";
             this.lueTBT.EnterMoveNextControl = true;
-            this.lueTBT.Location = new System.Drawing.Point(568, 88);
+            this.lueTBT.Location = new System.Drawing.Point(566, 78);
             this.lueTBT.Name = "lueTBT";
             this.lueTBT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1023,33 +1023,33 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", 30, "Tıbbi Beslenme Tedavisi")});
             this.lueTBT.Properties.DisplayMember = "Value";
             this.lueTBT.Properties.ValueMember = "ID";
-            this.lueTBT.Size = new System.Drawing.Size(391, 20);
+            this.lueTBT.Size = new System.Drawing.Size(403, 20);
             this.lueTBT.StyleController = this.lcDiabet;
             this.lueTBT.TabIndex = 14;
             // 
             // lueHasDMTraining
             // 
-            this.lueHasDMTraining.Location = new System.Drawing.Point(173, 124);
+            this.lueHasDMTraining.Location = new System.Drawing.Point(163, 114);
             this.lueHasDMTraining.Name = "lueHasDMTraining";
             this.lueHasDMTraining.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueHasDMTraining.Size = new System.Drawing.Size(300, 20);
+            this.lueHasDMTraining.Size = new System.Drawing.Size(310, 20);
             this.lueHasDMTraining.StyleController = this.lcDiabet;
             this.lueHasDMTraining.TabIndex = 13;
             // 
             // teGroupTrainingCount
             // 
-            this.teGroupTrainingCount.Location = new System.Drawing.Point(173, 100);
+            this.teGroupTrainingCount.Location = new System.Drawing.Point(163, 90);
             this.teGroupTrainingCount.Name = "teGroupTrainingCount";
-            this.teGroupTrainingCount.Size = new System.Drawing.Size(300, 20);
+            this.teGroupTrainingCount.Size = new System.Drawing.Size(310, 20);
             this.teGroupTrainingCount.StyleController = this.lcDiabet;
             this.teGroupTrainingCount.TabIndex = 12;
             // 
             // tePersonalTrainingCount
             // 
-            this.tePersonalTrainingCount.Location = new System.Drawing.Point(173, 76);
+            this.tePersonalTrainingCount.Location = new System.Drawing.Point(163, 66);
             this.tePersonalTrainingCount.Name = "tePersonalTrainingCount";
-            this.tePersonalTrainingCount.Size = new System.Drawing.Size(300, 20);
+            this.tePersonalTrainingCount.Size = new System.Drawing.Size(310, 20);
             this.tePersonalTrainingCount.StyleController = this.lcDiabet;
             this.tePersonalTrainingCount.TabIndex = 11;
             // 
@@ -1057,33 +1057,33 @@
             // 
             this.deDiagnosisDate.EditValue = null;
             this.deDiagnosisDate.EnterMoveNextControl = true;
-            this.deDiagnosisDate.Location = new System.Drawing.Point(173, 604);
+            this.deDiagnosisDate.Location = new System.Drawing.Point(163, 614);
             this.deDiagnosisDate.Name = "deDiagnosisDate";
             this.deDiagnosisDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deDiagnosisDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deDiagnosisDate.Size = new System.Drawing.Size(218, 20);
+            this.deDiagnosisDate.Size = new System.Drawing.Size(226, 20);
             this.deDiagnosisDate.StyleController = this.lcDiabet;
             this.deDiagnosisDate.TabIndex = 10;
             // 
             // teDiagnosisCode
             // 
             this.teDiagnosisCode.EnterMoveNextControl = true;
-            this.teDiagnosisCode.Location = new System.Drawing.Point(173, 580);
+            this.teDiagnosisCode.Location = new System.Drawing.Point(163, 590);
             this.teDiagnosisCode.Name = "teDiagnosisCode";
-            this.teDiagnosisCode.Size = new System.Drawing.Size(218, 20);
+            this.teDiagnosisCode.Size = new System.Drawing.Size(226, 20);
             this.teDiagnosisCode.StyleController = this.lcDiabet;
             this.teDiagnosisCode.TabIndex = 9;
             // 
             // lueDoctorBranch
             // 
             this.lueDoctorBranch.EnterMoveNextControl = true;
-            this.lueDoctorBranch.Location = new System.Drawing.Point(173, 373);
+            this.lueDoctorBranch.Location = new System.Drawing.Point(163, 372);
             this.lueDoctorBranch.Name = "lueDoctorBranch";
             this.lueDoctorBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDoctorBranch.Size = new System.Drawing.Size(139, 20);
+            this.lueDoctorBranch.Size = new System.Drawing.Size(145, 20);
             this.lueDoctorBranch.StyleController = this.lcDiabet;
             this.lueDoctorBranch.TabIndex = 8;
             // 
@@ -1091,45 +1091,45 @@
             // 
             this.lueDoctorRegistrationNo.EditValue = "";
             this.lueDoctorRegistrationNo.EnterMoveNextControl = true;
-            this.lueDoctorRegistrationNo.Location = new System.Drawing.Point(173, 349);
+            this.lueDoctorRegistrationNo.Location = new System.Drawing.Point(163, 348);
             this.lueDoctorRegistrationNo.Name = "lueDoctorRegistrationNo";
             this.lueDoctorRegistrationNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDoctorRegistrationNo.Size = new System.Drawing.Size(139, 20);
+            this.lueDoctorRegistrationNo.Size = new System.Drawing.Size(145, 20);
             this.lueDoctorRegistrationNo.StyleController = this.lcDiabet;
             this.lueDoctorRegistrationNo.TabIndex = 7;
             // 
             // teLastName
             // 
             this.teLastName.EnterMoveNextControl = true;
-            this.teLastName.Location = new System.Drawing.Point(173, 124);
+            this.teLastName.Location = new System.Drawing.Point(163, 114);
             this.teLastName.Name = "teLastName";
-            this.teLastName.Size = new System.Drawing.Size(218, 20);
+            this.teLastName.Size = new System.Drawing.Size(226, 20);
             this.teLastName.StyleController = this.lcDiabet;
             this.teLastName.TabIndex = 6;
             // 
             // teFirstName
             // 
             this.teFirstName.EnterMoveNextControl = true;
-            this.teFirstName.Location = new System.Drawing.Point(173, 100);
+            this.teFirstName.Location = new System.Drawing.Point(163, 90);
             this.teFirstName.Name = "teFirstName";
-            this.teFirstName.Size = new System.Drawing.Size(218, 20);
+            this.teFirstName.Size = new System.Drawing.Size(226, 20);
             this.teFirstName.StyleController = this.lcDiabet;
             this.teFirstName.TabIndex = 5;
             // 
             // teTCID
             // 
             this.teTCID.EnterMoveNextControl = true;
-            this.teTCID.Location = new System.Drawing.Point(173, 76);
+            this.teTCID.Location = new System.Drawing.Point(163, 66);
             this.teTCID.Name = "teTCID";
-            this.teTCID.Size = new System.Drawing.Size(218, 20);
+            this.teTCID.Size = new System.Drawing.Size(226, 20);
             this.teTCID.StyleController = this.lcDiabet;
             this.teTCID.TabIndex = 4;
             // 
             // teHomePhone2
             // 
             this.teHomePhone2.EnterMoveNextControl = true;
-            this.teHomePhone2.Location = new System.Drawing.Point(173, 185);
+            this.teHomePhone2.Location = new System.Drawing.Point(163, 184);
             this.teHomePhone2.Name = "teHomePhone2";
             this.teHomePhone2.Properties.DisplayFormat.FormatString = "d";
             this.teHomePhone2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1137,13 +1137,13 @@
             this.teHomePhone2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.teHomePhone2.Properties.Mask.EditMask = "d";
             this.teHomePhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.teHomePhone2.Size = new System.Drawing.Size(218, 20);
+            this.teHomePhone2.Size = new System.Drawing.Size(226, 20);
             this.teHomePhone2.StyleController = this.lcDiabet;
             this.teHomePhone2.TabIndex = 46;
             // 
             // lueHabitCode
             // 
-            this.lueHabitCode.Location = new System.Drawing.Point(173, 439);
+            this.lueHabitCode.Location = new System.Drawing.Point(163, 439);
             this.lueHabitCode.Name = "lueHabitCode";
             this.lueHabitCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1153,7 +1153,7 @@
             this.lueHabitCode.Properties.DisplayMember = "Value";
             this.lueHabitCode.Properties.NullText = "";
             this.lueHabitCode.Properties.ValueMember = "ID";
-            this.lueHabitCode.Size = new System.Drawing.Size(239, 20);
+            this.lueHabitCode.Size = new System.Drawing.Size(248, 20);
             this.lueHabitCode.StyleController = this.lcDiabet;
             this.lueHabitCode.TabIndex = 57;
             // 
@@ -1166,6 +1166,7 @@
             this.tabbedControlGroup1});
             this.lcgDiabet.Location = new System.Drawing.Point(0, 0);
             this.lcgDiabet.Name = "lcgDiabet";
+            this.lcgDiabet.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.lcgDiabet.Size = new System.Drawing.Size(1007, 660);
             this.lcgDiabet.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.lcgDiabet.Text = "lcgDiabet";
@@ -1178,7 +1179,7 @@
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.lcgForm1;
             this.tabbedControlGroup1.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(987, 640);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1007, 660);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgForm1,
             this.lcgForm2});
@@ -1194,7 +1195,7 @@
             this.lcgDiabetFormDetail});
             this.lcgForm1.Location = new System.Drawing.Point(0, 0);
             this.lcgForm1.Name = "lcgForm1";
-            this.lcgForm1.Size = new System.Drawing.Size(963, 596);
+            this.lcgForm1.Size = new System.Drawing.Size(983, 616);
             this.lcgForm1.Text = "Diabet Takip Formu 1";
             // 
             // lcgPatientInfo
@@ -1212,7 +1213,7 @@
             this.lciResidentialType});
             this.lcgPatientInfo.Location = new System.Drawing.Point(0, 0);
             this.lcgPatientInfo.Name = "lcgPatientInfo";
-            this.lcgPatientInfo.Size = new System.Drawing.Size(383, 273);
+            this.lcgPatientInfo.Size = new System.Drawing.Size(391, 282);
             this.lcgPatientInfo.Text = "Hasta Bilgileri";
             // 
             // lciLastName
@@ -1221,7 +1222,7 @@
             this.lciLastName.CustomizationFormText = "Soyad";
             this.lciLastName.Location = new System.Drawing.Point(0, 48);
             this.lciLastName.Name = "lciLastName";
-            this.lciLastName.Size = new System.Drawing.Size(359, 24);
+            this.lciLastName.Size = new System.Drawing.Size(367, 24);
             this.lciLastName.Text = "Soyad";
             this.lciLastName.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1231,7 +1232,7 @@
             this.lciFirstName.CustomizationFormText = "Ad";
             this.lciFirstName.Location = new System.Drawing.Point(0, 24);
             this.lciFirstName.Name = "lciFirstName";
-            this.lciFirstName.Size = new System.Drawing.Size(359, 24);
+            this.lciFirstName.Size = new System.Drawing.Size(367, 24);
             this.lciFirstName.Text = "Ad";
             this.lciFirstName.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1241,7 +1242,7 @@
             this.lciTCID.CustomizationFormText = "T.C. Kimlik Numarası";
             this.lciTCID.Location = new System.Drawing.Point(0, 0);
             this.lciTCID.Name = "lciTCID";
-            this.lciTCID.Size = new System.Drawing.Size(359, 24);
+            this.lciTCID.Size = new System.Drawing.Size(367, 24);
             this.lciTCID.Text = "T.C. Kimlik Numarası";
             this.lciTCID.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1249,9 +1250,9 @@
             // 
             this.lciHomePhone2.Control = this.teHomePhone2;
             this.lciHomePhone2.CustomizationFormText = "Cep Telefonu";
-            this.lciHomePhone2.Location = new System.Drawing.Point(0, 109);
+            this.lciHomePhone2.Location = new System.Drawing.Point(0, 118);
             this.lciHomePhone2.Name = "lciHomePhone2";
-            this.lciHomePhone2.Size = new System.Drawing.Size(359, 24);
+            this.lciHomePhone2.Size = new System.Drawing.Size(367, 24);
             this.lciHomePhone2.Text = "Cep Telefonu";
             this.lciHomePhone2.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1259,9 +1260,9 @@
             // 
             this.lciProtocolNo.Control = this.teProtocolNo;
             this.lciProtocolNo.CustomizationFormText = "Protokol No";
-            this.lciProtocolNo.Location = new System.Drawing.Point(0, 157);
+            this.lciProtocolNo.Location = new System.Drawing.Point(0, 166);
             this.lciProtocolNo.Name = "lciProtocolNo";
-            this.lciProtocolNo.Size = new System.Drawing.Size(359, 24);
+            this.lciProtocolNo.Size = new System.Drawing.Size(367, 24);
             this.lciProtocolNo.Text = "Protokol No";
             this.lciProtocolNo.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1269,9 +1270,9 @@
             // 
             this.lciHealthInstituteCode.Control = this.teHealthInstituteCode;
             this.lciHealthInstituteCode.CustomizationFormText = "Sağlık Tesis Kodu";
-            this.lciHealthInstituteCode.Location = new System.Drawing.Point(0, 181);
+            this.lciHealthInstituteCode.Location = new System.Drawing.Point(0, 190);
             this.lciHealthInstituteCode.Name = "lciHealthInstituteCode";
-            this.lciHealthInstituteCode.Size = new System.Drawing.Size(359, 24);
+            this.lciHealthInstituteCode.Size = new System.Drawing.Size(367, 24);
             this.lciHealthInstituteCode.Text = "Sağlık Tesis Kodu";
             this.lciHealthInstituteCode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1279,9 +1280,9 @@
             // 
             this.lciVisitDate.Control = this.deVisitDate;
             this.lciVisitDate.CustomizationFormText = "Vizit Tarihi";
-            this.lciVisitDate.Location = new System.Drawing.Point(0, 205);
+            this.lciVisitDate.Location = new System.Drawing.Point(0, 214);
             this.lciVisitDate.Name = "lciVisitDate";
-            this.lciVisitDate.Size = new System.Drawing.Size(359, 24);
+            this.lciVisitDate.Size = new System.Drawing.Size(367, 24);
             this.lciVisitDate.Text = "Vizit Tarihi";
             this.lciVisitDate.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1291,7 +1292,7 @@
             this.lciSex.CustomizationFormText = "Hastanın Cinsiyeti";
             this.lciSex.Location = new System.Drawing.Point(0, 72);
             this.lciSex.Name = "lciSex";
-            this.lciSex.Size = new System.Drawing.Size(359, 37);
+            this.lciSex.Size = new System.Drawing.Size(367, 46);
             this.lciSex.Text = "Hastanın Cinsiyeti";
             this.lciSex.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1299,9 +1300,9 @@
             // 
             this.lciResidentialType.Control = this.lueResidentialType;
             this.lciResidentialType.CustomizationFormText = "İkamet Türü";
-            this.lciResidentialType.Location = new System.Drawing.Point(0, 133);
+            this.lciResidentialType.Location = new System.Drawing.Point(0, 142);
             this.lciResidentialType.Name = "lciResidentialType";
-            this.lciResidentialType.Size = new System.Drawing.Size(359, 24);
+            this.lciResidentialType.Size = new System.Drawing.Size(367, 24);
             this.lciResidentialType.Text = "İkamet Türü";
             this.lciResidentialType.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1314,9 +1315,9 @@
             this.lciAddDoctor,
             this.lciDMTraining,
             this.lciGridDoctors});
-            this.lcgDoctorInfo.Location = new System.Drawing.Point(0, 273);
+            this.lcgDoctorInfo.Location = new System.Drawing.Point(0, 282);
             this.lcgDoctorInfo.Name = "lcgDoctorInfo";
-            this.lcgDoctorInfo.Size = new System.Drawing.Size(383, 231);
+            this.lcgDoctorInfo.Size = new System.Drawing.Size(391, 242);
             this.lcgDoctorInfo.Text = "Doktor Bilgileri";
             // 
             // lciDoctorRegistrationNo
@@ -1325,7 +1326,7 @@
             this.lciDoctorRegistrationNo.CustomizationFormText = "Doktor Tescil";
             this.lciDoctorRegistrationNo.Location = new System.Drawing.Point(0, 0);
             this.lciDoctorRegistrationNo.Name = "lciDoctorRegistrationNo";
-            this.lciDoctorRegistrationNo.Size = new System.Drawing.Size(280, 24);
+            this.lciDoctorRegistrationNo.Size = new System.Drawing.Size(286, 24);
             this.lciDoctorRegistrationNo.Text = "Doktor Tescil";
             this.lciDoctorRegistrationNo.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1335,7 +1336,7 @@
             this.lciDoctorBranch.CustomizationFormText = "Doktor Branş";
             this.lciDoctorBranch.Location = new System.Drawing.Point(0, 24);
             this.lciDoctorBranch.Name = "lciDoctorBranch";
-            this.lciDoctorBranch.Size = new System.Drawing.Size(280, 24);
+            this.lciDoctorBranch.Size = new System.Drawing.Size(286, 24);
             this.lciDoctorBranch.Text = "Doktor Branş";
             this.lciDoctorBranch.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1343,9 +1344,9 @@
             // 
             this.lciAddDoctor.Control = this.sbAddDoctor;
             this.lciAddDoctor.CustomizationFormText = "layoutControlItem20";
-            this.lciAddDoctor.Location = new System.Drawing.Point(280, 0);
+            this.lciAddDoctor.Location = new System.Drawing.Point(286, 0);
             this.lciAddDoctor.Name = "lciAddDoctor";
-            this.lciAddDoctor.Size = new System.Drawing.Size(79, 72);
+            this.lciAddDoctor.Size = new System.Drawing.Size(81, 72);
             this.lciAddDoctor.Text = "lciAddDoctor";
             this.lciAddDoctor.TextSize = new System.Drawing.Size(0, 0);
             this.lciAddDoctor.TextToControlDistance = 0;
@@ -1357,7 +1358,7 @@
             this.lciDMTraining.CustomizationFormText = "DM Eğitimi Almış mı";
             this.lciDMTraining.Location = new System.Drawing.Point(0, 48);
             this.lciDMTraining.Name = "lciDMTraining";
-            this.lciDMTraining.Size = new System.Drawing.Size(280, 24);
+            this.lciDMTraining.Size = new System.Drawing.Size(286, 24);
             this.lciDMTraining.Text = "DM Eğitimi Almış mı";
             this.lciDMTraining.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1367,7 +1368,7 @@
             this.lciGridDoctors.CustomizationFormText = "layoutControlItem47";
             this.lciGridDoctors.Location = new System.Drawing.Point(0, 72);
             this.lciGridDoctors.Name = "lciGridDoctors";
-            this.lciGridDoctors.Size = new System.Drawing.Size(359, 115);
+            this.lciGridDoctors.Size = new System.Drawing.Size(367, 126);
             this.lciGridDoctors.Text = "lciGridDoctors";
             this.lciGridDoctors.TextSize = new System.Drawing.Size(0, 0);
             this.lciGridDoctors.TextToControlDistance = 0;
@@ -1379,9 +1380,9 @@
             this.lcgDiagnosis.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciDiagnosisCode,
             this.lciDiagnosisDate});
-            this.lcgDiagnosis.Location = new System.Drawing.Point(0, 504);
+            this.lcgDiagnosis.Location = new System.Drawing.Point(0, 524);
             this.lcgDiagnosis.Name = "lcgDiagnosis";
-            this.lcgDiagnosis.Size = new System.Drawing.Size(383, 92);
+            this.lcgDiagnosis.Size = new System.Drawing.Size(391, 92);
             this.lcgDiagnosis.Text = "Tanı";
             // 
             // lciDiagnosisCode
@@ -1390,7 +1391,7 @@
             this.lciDiagnosisCode.CustomizationFormText = "Tanı Kodu";
             this.lciDiagnosisCode.Location = new System.Drawing.Point(0, 0);
             this.lciDiagnosisCode.Name = "lciDiagnosisCode";
-            this.lciDiagnosisCode.Size = new System.Drawing.Size(359, 24);
+            this.lciDiagnosisCode.Size = new System.Drawing.Size(367, 24);
             this.lciDiagnosisCode.Text = "Tanı Kodu";
             this.lciDiagnosisCode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1400,7 +1401,7 @@
             this.lciDiagnosisDate.CustomizationFormText = "Tanı Tarihi";
             this.lciDiagnosisDate.Location = new System.Drawing.Point(0, 24);
             this.lciDiagnosisDate.Name = "lciDiagnosisDate";
-            this.lciDiagnosisDate.Size = new System.Drawing.Size(359, 24);
+            this.lciDiagnosisDate.Size = new System.Drawing.Size(367, 24);
             this.lciDiagnosisDate.Text = "Tanı Tarihi";
             this.lciDiagnosisDate.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1411,9 +1412,9 @@
             this.lcgDetail2,
             this.lcgDetail1,
             this.lcgDetail3});
-            this.lcgDiabetFormDetail.Location = new System.Drawing.Point(383, 0);
+            this.lcgDiabetFormDetail.Location = new System.Drawing.Point(391, 0);
             this.lcgDiabetFormDetail.Name = "lcgDiabetFormDetail";
-            this.lcgDiabetFormDetail.Size = new System.Drawing.Size(580, 596);
+            this.lcgDiabetFormDetail.Size = new System.Drawing.Size(592, 616);
             this.lcgDiabetFormDetail.Text = "Diabet Formu Detay";
             // 
             // lcgDetail2
@@ -1428,7 +1429,7 @@
             this.lciHeight});
             this.lcgDetail2.Location = new System.Drawing.Point(0, 120);
             this.lcgDetail2.Name = "lcgDetail2";
-            this.lcgDetail2.Size = new System.Drawing.Size(556, 96);
+            this.lcgDetail2.Size = new System.Drawing.Size(568, 96);
             this.lcgDetail2.Text = "lcgDetail2";
             this.lcgDetail2.TextVisible = false;
             // 
@@ -1438,7 +1439,7 @@
             this.lciBloodSugar.CustomizationFormText = "Kanşekeri Takip Sayısı";
             this.lciBloodSugar.Location = new System.Drawing.Point(0, 0);
             this.lciBloodSugar.Name = "lciBloodSugar";
-            this.lciBloodSugar.Size = new System.Drawing.Size(261, 24);
+            this.lciBloodSugar.Size = new System.Drawing.Size(267, 24);
             this.lciBloodSugar.Text = "Kan Şekeri Takip Sayısı";
             this.lciBloodSugar.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1448,7 +1449,7 @@
             this.lciSistolik.CustomizationFormText = "Sistolik Kan Basıncı";
             this.lciSistolik.Location = new System.Drawing.Point(0, 24);
             this.lciSistolik.Name = "lciSistolik";
-            this.lciSistolik.Size = new System.Drawing.Size(261, 24);
+            this.lciSistolik.Size = new System.Drawing.Size(267, 24);
             this.lciSistolik.Text = "Sistolik Kan Basıncı";
             this.lciSistolik.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1458,7 +1459,7 @@
             this.lciDiyastolik.CustomizationFormText = "Diyastolik Kan Basıncı";
             this.lciDiyastolik.Location = new System.Drawing.Point(0, 48);
             this.lciDiyastolik.Name = "lciDiyastolik";
-            this.lciDiyastolik.Size = new System.Drawing.Size(261, 24);
+            this.lciDiyastolik.Size = new System.Drawing.Size(267, 24);
             this.lciDiyastolik.Text = "Diyastolik Kan Basıncı";
             this.lciDiyastolik.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1466,9 +1467,9 @@
             // 
             this.lciVKI.Control = this.teVKI;
             this.lciVKI.CustomizationFormText = "VKİ";
-            this.lciVKI.Location = new System.Drawing.Point(261, 48);
+            this.lciVKI.Location = new System.Drawing.Point(267, 48);
             this.lciVKI.Name = "lciVKI";
-            this.lciVKI.Size = new System.Drawing.Size(271, 24);
+            this.lciVKI.Size = new System.Drawing.Size(277, 24);
             this.lciVKI.Text = "VKİ";
             this.lciVKI.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1476,9 +1477,9 @@
             // 
             this.lciWeight.Control = this.teWeight;
             this.lciWeight.CustomizationFormText = "Kilo";
-            this.lciWeight.Location = new System.Drawing.Point(261, 24);
+            this.lciWeight.Location = new System.Drawing.Point(267, 24);
             this.lciWeight.Name = "lciWeight";
-            this.lciWeight.Size = new System.Drawing.Size(271, 24);
+            this.lciWeight.Size = new System.Drawing.Size(277, 24);
             this.lciWeight.Text = "Kilo";
             this.lciWeight.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1486,9 +1487,9 @@
             // 
             this.lciHeight.Control = this.teHeight;
             this.lciHeight.CustomizationFormText = "Boy";
-            this.lciHeight.Location = new System.Drawing.Point(261, 0);
+            this.lciHeight.Location = new System.Drawing.Point(267, 0);
             this.lciHeight.Name = "lciHeight";
-            this.lciHeight.Size = new System.Drawing.Size(271, 24);
+            this.lciHeight.Size = new System.Drawing.Size(277, 24);
             this.lciHeight.Text = "Boy";
             this.lciHeight.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1502,7 +1503,7 @@
             this.lciGlucometre});
             this.lcgDetail1.Location = new System.Drawing.Point(0, 0);
             this.lcgDetail1.Name = "lcgDetail1";
-            this.lcgDetail1.Size = new System.Drawing.Size(556, 120);
+            this.lcgDetail1.Size = new System.Drawing.Size(568, 120);
             this.lcgDetail1.Text = "lcgDetail1";
             this.lcgDetail1.TextVisible = false;
             // 
@@ -1512,7 +1513,7 @@
             this.lciTBT.CustomizationFormText = "Tıbbi Beslenme Tedavisi";
             this.lciTBT.Location = new System.Drawing.Point(0, 0);
             this.lciTBT.Name = "lciTBT";
-            this.lciTBT.Size = new System.Drawing.Size(532, 24);
+            this.lciTBT.Size = new System.Drawing.Size(544, 24);
             this.lciTBT.Text = "Tıbbi Beslenme Tedavisi";
             this.lciTBT.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1522,7 +1523,7 @@
             this.lciExercise.CustomizationFormText = "Egzersiz";
             this.lciExercise.Location = new System.Drawing.Point(0, 24);
             this.lciExercise.Name = "lciExercise";
-            this.lciExercise.Size = new System.Drawing.Size(532, 24);
+            this.lciExercise.Size = new System.Drawing.Size(544, 24);
             this.lciExercise.Text = "Egzersiz";
             this.lciExercise.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1532,7 +1533,7 @@
             this.lciApplicationReason.CustomizationFormText = "Başvuru Nedeni";
             this.lciApplicationReason.Location = new System.Drawing.Point(0, 48);
             this.lciApplicationReason.Name = "lciApplicationReason";
-            this.lciApplicationReason.Size = new System.Drawing.Size(532, 24);
+            this.lciApplicationReason.Size = new System.Drawing.Size(544, 24);
             this.lciApplicationReason.Text = "Başvuru Nedeni";
             this.lciApplicationReason.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1542,7 +1543,7 @@
             this.lciGlucometre.CustomizationFormText = "Glukometre";
             this.lciGlucometre.Location = new System.Drawing.Point(0, 72);
             this.lciGlucometre.Name = "lciGlucometre";
-            this.lciGlucometre.Size = new System.Drawing.Size(532, 24);
+            this.lciGlucometre.Size = new System.Drawing.Size(544, 24);
             this.lciGlucometre.Text = "Glukometre";
             this.lciGlucometre.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1573,7 +1574,7 @@
             this.lciEyeExam});
             this.lcgDetail3.Location = new System.Drawing.Point(0, 216);
             this.lcgDetail3.Name = "lcgDetail3";
-            this.lcgDetail3.Size = new System.Drawing.Size(556, 336);
+            this.lcgDetail3.Size = new System.Drawing.Size(568, 356);
             this.lcgDetail3.Text = "lcgDetail3";
             this.lcgDetail3.TextVisible = false;
             // 
@@ -1583,7 +1584,7 @@
             this.lciAPG.CustomizationFormText = "APG";
             this.lciAPG.Location = new System.Drawing.Point(0, 0);
             this.lciAPG.Name = "lciAPG";
-            this.lciAPG.Size = new System.Drawing.Size(262, 24);
+            this.lciAPG.Size = new System.Drawing.Size(268, 24);
             this.lciAPG.Text = "APG";
             this.lciAPG.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1593,7 +1594,7 @@
             this.lciTPG.CustomizationFormText = "TPG";
             this.lciTPG.Location = new System.Drawing.Point(0, 24);
             this.lciTPG.Name = "lciTPG";
-            this.lciTPG.Size = new System.Drawing.Size(262, 24);
+            this.lciTPG.Size = new System.Drawing.Size(268, 24);
             this.lciTPG.Text = "TPG";
             this.lciTPG.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1603,7 +1604,7 @@
             this.lciHbA1C.CustomizationFormText = "HbA1C";
             this.lciHbA1C.Location = new System.Drawing.Point(0, 48);
             this.lciHbA1C.Name = "lciHbA1C";
-            this.lciHbA1C.Size = new System.Drawing.Size(262, 24);
+            this.lciHbA1C.Size = new System.Drawing.Size(268, 24);
             this.lciHbA1C.Text = "HbA1C";
             this.lciHbA1C.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1613,7 +1614,7 @@
             this.lciKreatinin.CustomizationFormText = "Kreatinin";
             this.lciKreatinin.Location = new System.Drawing.Point(0, 72);
             this.lciKreatinin.Name = "lciKreatinin";
-            this.lciKreatinin.Size = new System.Drawing.Size(262, 24);
+            this.lciKreatinin.Size = new System.Drawing.Size(268, 24);
             this.lciKreatinin.Text = "Kreatinin";
             this.lciKreatinin.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1623,7 +1624,7 @@
             this.lciTrigliserid.CustomizationFormText = "Trigliserid";
             this.lciTrigliserid.Location = new System.Drawing.Point(0, 96);
             this.lciTrigliserid.Name = "lciTrigliserid";
-            this.lciTrigliserid.Size = new System.Drawing.Size(262, 24);
+            this.lciTrigliserid.Size = new System.Drawing.Size(268, 24);
             this.lciTrigliserid.Text = "Trigliserid";
             this.lciTrigliserid.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1633,7 +1634,7 @@
             this.lciLDL.CustomizationFormText = "LDL-Kol";
             this.lciLDL.Location = new System.Drawing.Point(0, 120);
             this.lciLDL.Name = "lciLDL";
-            this.lciLDL.Size = new System.Drawing.Size(262, 24);
+            this.lciLDL.Size = new System.Drawing.Size(268, 24);
             this.lciLDL.Text = "LDL-Kol";
             this.lciLDL.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1643,7 +1644,7 @@
             this.lciHDL.CustomizationFormText = "HDL-Kol";
             this.lciHDL.Location = new System.Drawing.Point(0, 144);
             this.lciHDL.Name = "lciHDL";
-            this.lciHDL.Size = new System.Drawing.Size(262, 24);
+            this.lciHDL.Size = new System.Drawing.Size(268, 24);
             this.lciHDL.Text = "HDL-Kol";
             this.lciHDL.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1653,7 +1654,7 @@
             this.lciALT.CustomizationFormText = "ALT";
             this.lciALT.Location = new System.Drawing.Point(0, 168);
             this.lciALT.Name = "lciALT";
-            this.lciALT.Size = new System.Drawing.Size(262, 24);
+            this.lciALT.Size = new System.Drawing.Size(268, 24);
             this.lciALT.Text = "ALT";
             this.lciALT.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1663,7 +1664,7 @@
             this.lciAntiGAD.CustomizationFormText = "AntiGAD";
             this.lciAntiGAD.Location = new System.Drawing.Point(0, 192);
             this.lciAntiGAD.Name = "lciAntiGAD";
-            this.lciAntiGAD.Size = new System.Drawing.Size(262, 24);
+            this.lciAntiGAD.Size = new System.Drawing.Size(268, 24);
             this.lciAntiGAD.Text = "AntiGAD";
             this.lciAntiGAD.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1673,7 +1674,7 @@
             this.lciEKG.CustomizationFormText = "EKG";
             this.lciEKG.Location = new System.Drawing.Point(0, 216);
             this.lciEKG.Name = "lciEKG";
-            this.lciEKG.Size = new System.Drawing.Size(262, 24);
+            this.lciEKG.Size = new System.Drawing.Size(268, 24);
             this.lciEKG.Text = "EKG";
             this.lciEKG.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1683,7 +1684,7 @@
             this.lciMikroAlbumin.CustomizationFormText = "Mikroalbuminüri";
             this.lciMikroAlbumin.Location = new System.Drawing.Point(0, 240);
             this.lciMikroAlbumin.Name = "lciMikroAlbumin";
-            this.lciMikroAlbumin.Size = new System.Drawing.Size(262, 72);
+            this.lciMikroAlbumin.Size = new System.Drawing.Size(268, 92);
             this.lciMikroAlbumin.Text = "Mikroalbuminüri";
             this.lciMikroAlbumin.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1691,9 +1692,9 @@
             // 
             this.lciInsulinePompChangeDate.Control = this.deInsulinePompChangeDate;
             this.lciInsulinePompChangeDate.CustomizationFormText = "İnsülin Pompası Değiştirme Tarihi";
-            this.lciInsulinePompChangeDate.Location = new System.Drawing.Point(262, 240);
+            this.lciInsulinePompChangeDate.Location = new System.Drawing.Point(268, 240);
             this.lciInsulinePompChangeDate.Name = "lciInsulinePompChangeDate";
-            this.lciInsulinePompChangeDate.Size = new System.Drawing.Size(270, 72);
+            this.lciInsulinePompChangeDate.Size = new System.Drawing.Size(276, 92);
             this.lciInsulinePompChangeDate.Text = "İnsülin Pompası Değ. Tarihi";
             this.lciInsulinePompChangeDate.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1701,9 +1702,9 @@
             // 
             this.lciInsulinePumpDate.Control = this.deInsulinePumpDate;
             this.lciInsulinePumpDate.CustomizationFormText = "İnsülin Pompası Veriliş Tarihi";
-            this.lciInsulinePumpDate.Location = new System.Drawing.Point(262, 216);
+            this.lciInsulinePumpDate.Location = new System.Drawing.Point(268, 216);
             this.lciInsulinePumpDate.Name = "lciInsulinePumpDate";
-            this.lciInsulinePumpDate.Size = new System.Drawing.Size(270, 24);
+            this.lciInsulinePumpDate.Size = new System.Drawing.Size(276, 24);
             this.lciInsulinePumpDate.Text = "İnsülin Pompası Veriliş Tarihi";
             this.lciInsulinePumpDate.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1711,9 +1712,9 @@
             // 
             this.lciHasInsulinePump.Control = this.lueHasInsulinePump;
             this.lciHasInsulinePump.CustomizationFormText = "İnsülin Pompasının Var mı?";
-            this.lciHasInsulinePump.Location = new System.Drawing.Point(262, 168);
+            this.lciHasInsulinePump.Location = new System.Drawing.Point(268, 168);
             this.lciHasInsulinePump.Name = "lciHasInsulinePump";
-            this.lciHasInsulinePump.Size = new System.Drawing.Size(270, 48);
+            this.lciHasInsulinePump.Size = new System.Drawing.Size(276, 48);
             this.lciHasInsulinePump.Text = "İnsülin Pompasının Var mı?";
             this.lciHasInsulinePump.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1721,9 +1722,9 @@
             // 
             this.lciPatientHospitalizedDay.Control = this.tePatientHospitalizedDay;
             this.lciPatientHospitalizedDay.CustomizationFormText = "Hasta Yatış Gün";
-            this.lciPatientHospitalizedDay.Location = new System.Drawing.Point(262, 144);
+            this.lciPatientHospitalizedDay.Location = new System.Drawing.Point(268, 144);
             this.lciPatientHospitalizedDay.Name = "lciPatientHospitalizedDay";
-            this.lciPatientHospitalizedDay.Size = new System.Drawing.Size(270, 24);
+            this.lciPatientHospitalizedDay.Size = new System.Drawing.Size(276, 24);
             this.lciPatientHospitalizedDay.Text = "Hasta Yatış Gün";
             this.lciPatientHospitalizedDay.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1731,9 +1732,9 @@
             // 
             this.lciAcute.Control = this.lueAcute;
             this.lciAcute.CustomizationFormText = "Akut Komplikasyonu";
-            this.lciAcute.Location = new System.Drawing.Point(262, 120);
+            this.lciAcute.Location = new System.Drawing.Point(268, 120);
             this.lciAcute.Name = "lciAcute";
-            this.lciAcute.Size = new System.Drawing.Size(270, 24);
+            this.lciAcute.Size = new System.Drawing.Size(276, 24);
             this.lciAcute.Text = "Akut Komplikasyonu";
             this.lciAcute.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1741,9 +1742,9 @@
             // 
             this.lciFootExam.Control = this.lueFootExam;
             this.lciFootExam.CustomizationFormText = "Ayak Muayenesi";
-            this.lciFootExam.Location = new System.Drawing.Point(262, 96);
+            this.lciFootExam.Location = new System.Drawing.Point(268, 96);
             this.lciFootExam.Name = "lciFootExam";
-            this.lciFootExam.Size = new System.Drawing.Size(270, 24);
+            this.lciFootExam.Size = new System.Drawing.Size(276, 24);
             this.lciFootExam.Text = "Ayak Muayenesi";
             this.lciFootExam.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1751,9 +1752,9 @@
             // 
             this.lciSerebrovaskuler.Control = this.lueSerebrovaskuler;
             this.lciSerebrovaskuler.CustomizationFormText = "Serebrovasküler H";
-            this.lciSerebrovaskuler.Location = new System.Drawing.Point(262, 72);
+            this.lciSerebrovaskuler.Location = new System.Drawing.Point(268, 72);
             this.lciSerebrovaskuler.Name = "lciSerebrovaskuler";
-            this.lciSerebrovaskuler.Size = new System.Drawing.Size(270, 24);
+            this.lciSerebrovaskuler.Size = new System.Drawing.Size(276, 24);
             this.lciSerebrovaskuler.Text = "Serebrovasküler H";
             this.lciSerebrovaskuler.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1761,9 +1762,9 @@
             // 
             this.lciKoroner.Control = this.lueKoroner;
             this.lciKoroner.CustomizationFormText = "Koroner Arter H";
-            this.lciKoroner.Location = new System.Drawing.Point(262, 48);
+            this.lciKoroner.Location = new System.Drawing.Point(268, 48);
             this.lciKoroner.Name = "lciKoroner";
-            this.lciKoroner.Size = new System.Drawing.Size(270, 24);
+            this.lciKoroner.Size = new System.Drawing.Size(276, 24);
             this.lciKoroner.Text = "Koroner Arter H";
             this.lciKoroner.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1771,9 +1772,9 @@
             // 
             this.lciPeriferik.Control = this.luePeriferik;
             this.lciPeriferik.CustomizationFormText = "Periferik Sensoryal Nöropati";
-            this.lciPeriferik.Location = new System.Drawing.Point(262, 24);
+            this.lciPeriferik.Location = new System.Drawing.Point(268, 24);
             this.lciPeriferik.Name = "lciPeriferik";
-            this.lciPeriferik.Size = new System.Drawing.Size(270, 24);
+            this.lciPeriferik.Size = new System.Drawing.Size(276, 24);
             this.lciPeriferik.Text = "Periferik Sensoryal Nöropati";
             this.lciPeriferik.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1781,9 +1782,9 @@
             // 
             this.lciEyeExam.Control = this.lueEyeExam;
             this.lciEyeExam.CustomizationFormText = "Göz Muayenesi";
-            this.lciEyeExam.Location = new System.Drawing.Point(262, 0);
+            this.lciEyeExam.Location = new System.Drawing.Point(268, 0);
             this.lciEyeExam.Name = "lciEyeExam";
-            this.lciEyeExam.Size = new System.Drawing.Size(270, 24);
+            this.lciEyeExam.Size = new System.Drawing.Size(276, 24);
             this.lciEyeExam.Text = "Göz Muayenesi";
             this.lciEyeExam.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1797,7 +1798,7 @@
             this.lcgMedication});
             this.lcgForm2.Location = new System.Drawing.Point(0, 0);
             this.lcgForm2.Name = "lcgForm2";
-            this.lcgForm2.Size = new System.Drawing.Size(963, 596);
+            this.lcgForm2.Size = new System.Drawing.Size(983, 616);
             this.lcgForm2.Text = "Diabet Takip Formu 2";
             // 
             // lcgDiabetTraining
@@ -1809,7 +1810,7 @@
             this.lciPersonalTrainingCount});
             this.lcgDiabetTraining.Location = new System.Drawing.Point(0, 0);
             this.lcgDiabetTraining.Name = "lcgDiabetTraining";
-            this.lcgDiabetTraining.Size = new System.Drawing.Size(465, 116);
+            this.lcgDiabetTraining.Size = new System.Drawing.Size(475, 116);
             this.lcgDiabetTraining.Text = "Takip Formu Diabet Eğitimi";
             // 
             // lciHasDMTraining
@@ -1818,7 +1819,7 @@
             this.lciHasDMTraining.CustomizationFormText = "DM Eğitim Almış mı";
             this.lciHasDMTraining.Location = new System.Drawing.Point(0, 48);
             this.lciHasDMTraining.Name = "lciHasDMTraining";
-            this.lciHasDMTraining.Size = new System.Drawing.Size(441, 24);
+            this.lciHasDMTraining.Size = new System.Drawing.Size(451, 24);
             this.lciHasDMTraining.Text = "DM Eğitim Almış mı";
             this.lciHasDMTraining.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1828,7 +1829,7 @@
             this.lciGroupTrainingCount.CustomizationFormText = "Grup Eğitim Sayısı";
             this.lciGroupTrainingCount.Location = new System.Drawing.Point(0, 24);
             this.lciGroupTrainingCount.Name = "lciGroupTrainingCount";
-            this.lciGroupTrainingCount.Size = new System.Drawing.Size(441, 24);
+            this.lciGroupTrainingCount.Size = new System.Drawing.Size(451, 24);
             this.lciGroupTrainingCount.Text = "Grup Eğitim Sayısı";
             this.lciGroupTrainingCount.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1838,7 +1839,7 @@
             this.lciPersonalTrainingCount.CustomizationFormText = "Bireysel Eğitim Sayısı";
             this.lciPersonalTrainingCount.Location = new System.Drawing.Point(0, 0);
             this.lciPersonalTrainingCount.Name = "lciPersonalTrainingCount";
-            this.lciPersonalTrainingCount.Size = new System.Drawing.Size(441, 24);
+            this.lciPersonalTrainingCount.Size = new System.Drawing.Size(451, 24);
             this.lciPersonalTrainingCount.Text = "Bireysel Eğitim Sayısı";
             this.lciPersonalTrainingCount.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1852,7 +1853,7 @@
             this.lciAddDisease});
             this.lcgDisease.Location = new System.Drawing.Point(0, 116);
             this.lcgDisease.Name = "lcgDisease";
-            this.lcgDisease.Size = new System.Drawing.Size(465, 247);
+            this.lcgDisease.Size = new System.Drawing.Size(475, 257);
             this.lcgDisease.Text = "Takip Formu Hastalık";
             // 
             // lciDiseaseDiagnosisCode
@@ -1861,7 +1862,7 @@
             this.lciDiseaseDiagnosisCode.CustomizationFormText = "Hastalık Tanı Kodu";
             this.lciDiseaseDiagnosisCode.Location = new System.Drawing.Point(0, 24);
             this.lciDiseaseDiagnosisCode.Name = "lciDiseaseDiagnosisCode";
-            this.lciDiseaseDiagnosisCode.Size = new System.Drawing.Size(381, 24);
+            this.lciDiseaseDiagnosisCode.Size = new System.Drawing.Size(390, 24);
             this.lciDiseaseDiagnosisCode.Text = "Hastalık Tanı Kodu";
             this.lciDiseaseDiagnosisCode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1871,7 +1872,7 @@
             this.lciDiseaseCode.CustomizationFormText = "Hastalık Kodu";
             this.lciDiseaseCode.Location = new System.Drawing.Point(0, 0);
             this.lciDiseaseCode.Name = "lciDiseaseCode";
-            this.lciDiseaseCode.Size = new System.Drawing.Size(381, 24);
+            this.lciDiseaseCode.Size = new System.Drawing.Size(390, 24);
             this.lciDiseaseCode.Text = "Hastalık Kodu";
             this.lciDiseaseCode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1881,7 +1882,7 @@
             this.lciGridDisease.CustomizationFormText = "layoutControlItem51";
             this.lciGridDisease.Location = new System.Drawing.Point(0, 48);
             this.lciGridDisease.Name = "lciGridDisease";
-            this.lciGridDisease.Size = new System.Drawing.Size(441, 155);
+            this.lciGridDisease.Size = new System.Drawing.Size(451, 165);
             this.lciGridDisease.Text = "lciGridDisease";
             this.lciGridDisease.TextSize = new System.Drawing.Size(0, 0);
             this.lciGridDisease.TextToControlDistance = 0;
@@ -1891,9 +1892,9 @@
             // 
             this.lciAddDisease.Control = this.sbAddDisease;
             this.lciAddDisease.CustomizationFormText = "layoutControlItem56";
-            this.lciAddDisease.Location = new System.Drawing.Point(381, 0);
+            this.lciAddDisease.Location = new System.Drawing.Point(390, 0);
             this.lciAddDisease.Name = "lciAddDisease";
-            this.lciAddDisease.Size = new System.Drawing.Size(60, 48);
+            this.lciAddDisease.Size = new System.Drawing.Size(61, 48);
             this.lciAddDisease.Text = "lciAddDisease";
             this.lciAddDisease.TextSize = new System.Drawing.Size(0, 0);
             this.lciAddDisease.TextToControlDistance = 0;
@@ -1906,9 +1907,9 @@
             this.lciHabitCode,
             this.lciGridHabit,
             this.lciAddHabit});
-            this.lcgHabits.Location = new System.Drawing.Point(0, 363);
+            this.lcgHabits.Location = new System.Drawing.Point(0, 373);
             this.lcgHabits.Name = "lcgHabits";
-            this.lcgHabits.Size = new System.Drawing.Size(465, 233);
+            this.lcgHabits.Size = new System.Drawing.Size(475, 243);
             this.lcgHabits.Text = "Takip Formu Alışkanlık";
             // 
             // lciHabitCode
@@ -1917,7 +1918,7 @@
             this.lciHabitCode.CustomizationFormText = "Alışkanlık Kodu";
             this.lciHabitCode.Location = new System.Drawing.Point(0, 0);
             this.lciHabitCode.Name = "lciHabitCode";
-            this.lciHabitCode.Size = new System.Drawing.Size(380, 26);
+            this.lciHabitCode.Size = new System.Drawing.Size(389, 26);
             this.lciHabitCode.Text = "Alışkanlık Kodu";
             this.lciHabitCode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1927,7 +1928,7 @@
             this.lciGridHabit.CustomizationFormText = "layoutControlItem52";
             this.lciGridHabit.Location = new System.Drawing.Point(0, 26);
             this.lciGridHabit.Name = "lciGridHabit";
-            this.lciGridHabit.Size = new System.Drawing.Size(441, 163);
+            this.lciGridHabit.Size = new System.Drawing.Size(451, 173);
             this.lciGridHabit.Text = "lciGridHabit";
             this.lciGridHabit.TextSize = new System.Drawing.Size(0, 0);
             this.lciGridHabit.TextToControlDistance = 0;
@@ -1937,9 +1938,9 @@
             // 
             this.lciAddHabit.Control = this.sbAddHabit;
             this.lciAddHabit.CustomizationFormText = "layoutControlItem57";
-            this.lciAddHabit.Location = new System.Drawing.Point(380, 0);
+            this.lciAddHabit.Location = new System.Drawing.Point(389, 0);
             this.lciAddHabit.Name = "lciAddHabit";
-            this.lciAddHabit.Size = new System.Drawing.Size(61, 26);
+            this.lciAddHabit.Size = new System.Drawing.Size(62, 26);
             this.lciAddHabit.Text = "lciAddHabit";
             this.lciAddHabit.TextSize = new System.Drawing.Size(0, 0);
             this.lciAddHabit.TextToControlDistance = 0;
@@ -1954,9 +1955,9 @@
             this.lciMedication,
             this.emptySpaceItem1,
             this.lciAddMedication});
-            this.lcgMedication.Location = new System.Drawing.Point(465, 0);
+            this.lcgMedication.Location = new System.Drawing.Point(475, 0);
             this.lcgMedication.Name = "lcgMedication";
-            this.lcgMedication.Size = new System.Drawing.Size(498, 596);
+            this.lcgMedication.Size = new System.Drawing.Size(508, 616);
             this.lcgMedication.Text = "Takip Formu Kullanılan İlaçlar";
             // 
             // lciDailyDose
@@ -1965,7 +1966,7 @@
             this.lciDailyDose.CustomizationFormText = "Günlük Doz";
             this.lciDailyDose.Location = new System.Drawing.Point(0, 24);
             this.lciDailyDose.Name = "lciDailyDose";
-            this.lciDailyDose.Size = new System.Drawing.Size(408, 24);
+            this.lciDailyDose.Size = new System.Drawing.Size(417, 24);
             this.lciDailyDose.Text = "Günlük Doz";
             this.lciDailyDose.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1975,7 +1976,7 @@
             this.lciBarcode.CustomizationFormText = "Barkod";
             this.lciBarcode.Location = new System.Drawing.Point(0, 0);
             this.lciBarcode.Name = "lciBarcode";
-            this.lciBarcode.Size = new System.Drawing.Size(408, 24);
+            this.lciBarcode.Size = new System.Drawing.Size(417, 24);
             this.lciBarcode.Text = "Barkod";
             this.lciBarcode.TextSize = new System.Drawing.Size(133, 13);
             // 
@@ -1985,7 +1986,7 @@
             this.lciMedication.CustomizationFormText = "layoutControlItem55";
             this.lciMedication.Location = new System.Drawing.Point(0, 48);
             this.lciMedication.Name = "lciMedication";
-            this.lciMedication.Size = new System.Drawing.Size(474, 146);
+            this.lciMedication.Size = new System.Drawing.Size(484, 153);
             this.lciMedication.Text = "lciMedication";
             this.lciMedication.TextSize = new System.Drawing.Size(0, 0);
             this.lciMedication.TextToControlDistance = 0;
@@ -1994,9 +1995,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 194);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 201);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 358);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(484, 371);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2004,9 +2005,9 @@
             // 
             this.lciAddMedication.Control = this.sbAddMedication;
             this.lciAddMedication.CustomizationFormText = "layoutControlItem58";
-            this.lciAddMedication.Location = new System.Drawing.Point(408, 0);
+            this.lciAddMedication.Location = new System.Drawing.Point(417, 0);
             this.lciAddMedication.Name = "lciAddMedication";
-            this.lciAddMedication.Size = new System.Drawing.Size(66, 48);
+            this.lciAddMedication.Size = new System.Drawing.Size(67, 48);
             this.lciAddMedication.Text = "lciAddMedication";
             this.lciAddMedication.TextSize = new System.Drawing.Size(0, 0);
             this.lciAddMedication.TextToControlDistance = 0;

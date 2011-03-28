@@ -63,7 +63,7 @@ namespace Naz.Hastane.Win
                 foreach (Attribute a in attributes)
                 {
                     DescriptionAttribute da = a as DescriptionAttribute;
-                    if (da != null)
+                    if (da != null && da.Description.Length > 0)
                     {
                         yield return new KeyValuePair<string,string>(member.Name, da.Description);
                     }

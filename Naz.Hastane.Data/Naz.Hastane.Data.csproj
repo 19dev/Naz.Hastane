@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\CashDesk.cs" />
+    <Compile Include="Entities\Accounting\CashDesk.cs" />
     <Compile Include="Entities\Doctor\DoctorAccount.cs" />
     <Compile Include="Entities\Doctor\DoctorAccountDetail.cs" />
     <Compile Include="Entities\Doctor\DoctorInvoiceDetail.cs" />
@@ -80,8 +80,8 @@
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyContribution.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDetail.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
-    <Compile Include="Entities\Invoice.cs" />
-    <Compile Include="Entities\InvoiceTemp.cs" />
+    <Compile Include="Entities\Accounting\Invoice.cs" />
+    <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
@@ -129,7 +129,7 @@
     <Compile Include="Entities\Medula\MEDDIABETDOKTORLAR.cs" />
     <Compile Include="Entities\Medula\MEDDIABETHASTALIKLAR.cs" />
     <Compile Include="Entities\Medula\MEDDIABETILACLAR.cs" />
-    <Compile Include="Entities\Medula\MEDDIABETTAKIPFORMU.cs" />
+    <Compile Include="Entities\Medula\MedulaDiabetReport.cs" />
     <Compile Include="Entities\Medula\MEDESWLTASBILGISI.cs" />
     <Compile Include="Entities\Medula\MEDILACRAPOR.cs" />
     <Compile Include="Entities\Medula\MEDRAPORDOKTOR.cs" />
@@ -157,7 +157,7 @@
     <Compile Include="Entities\SGKAutoExamination.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
-    <Compile Include="Mappings\CashDeskMap.cs" />
+    <Compile Include="Mappings\Accounting\CashDeskMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountDetailMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorInvoiceDetailMap.cs" />
@@ -168,8 +168,8 @@
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDetailMap.cs" />
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDiscountMap.cs" />
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyMap.cs" />
-    <Compile Include="Mappings\InvoiceMap.cs" />
-    <Compile Include="Mappings\InvoiceTempMap.cs" />
+    <Compile Include="Mappings\Accounting\InvoiceMap.cs" />
+    <Compile Include="Mappings\Accounting\InvoiceTempMap.cs" />
     <Compile Include="Mappings\LookUp\General\BloodTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\YesNoMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\DoctorTypeMap.cs" />
@@ -215,7 +215,7 @@
     <Compile Include="Mappings\Medula\MEDDIABETDOKTORLARMap.cs" />
     <Compile Include="Mappings\Medula\MEDDIABETHASTALIKLARMap.cs" />
     <Compile Include="Mappings\Medula\MEDDIABETILACLARMap.cs" />
-    <Compile Include="Mappings\Medula\MEDDIABETTAKIPFORMUMap.cs" />
+    <Compile Include="Mappings\Medula\MedulaDiabetReportMap.cs" />
     <Compile Include="Mappings\Medula\MEDESWLTASBILGISIMap.cs" />
     <Compile Include="Mappings\Medula\MEDILACRAPORMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORDOKTORMap.cs" />

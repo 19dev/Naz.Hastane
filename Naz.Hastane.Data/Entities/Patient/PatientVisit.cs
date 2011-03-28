@@ -106,6 +106,8 @@ namespace Naz.Hastane.Data.Entities
             this.PatientVisitDetails.Add(pvd);
         }
 
+        //public virtual MedulaDiabetReport MedulaDiabetReport { get; set; }
+
         //protected override void OnSaving()
         //{
         //    base.OnSaving() { get; set; }

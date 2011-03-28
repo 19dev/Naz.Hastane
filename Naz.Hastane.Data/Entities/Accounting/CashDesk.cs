@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Naz.Hastane.Data.Entities
+namespace Naz.Hastane.Data.Entities.Accounting
 {
     public class CashDesk
     {

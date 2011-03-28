@@ -17,7 +17,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<T> GetAll<T>() where T : class
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 return session.CreateCriteria<T>().List<T>();
             }
@@ -233,7 +233,7 @@ namespace Naz.Hastane.Data.Services
             {
                 if (_SGKDoctors == null)
                 {
-                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
                     {
                         _SGKDoctors = session.QueryOver<Doctor>()
                             .OrderBy(x => x.Value).Asc
@@ -293,7 +293,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<SGKAutoExamination> SGKAutoExaminations(string servisCode)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 return session.QueryOver<SGKAutoExamination>()
                     .Where(s => s.Service.ID == servisCode)
@@ -303,7 +303,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<AccountingDailySummary> GetAccountingDailySummary(DateTime date)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 string s = date.ToString("MMddyyyy");
                 return session.GetNamedQuery("sp_GetGunlukMuhasebeFisi")

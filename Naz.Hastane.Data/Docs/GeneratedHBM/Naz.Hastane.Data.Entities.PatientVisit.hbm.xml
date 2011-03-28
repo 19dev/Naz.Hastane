@@ -209,7 +209,7 @@
     <property name="DATE_UPDATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="DATE_UPDATE" />
     </property>
-    <bag inverse="true" lazy="false" name="PatientVisitDetails" mutable="true">
+    <bag inverse="true" name="PatientVisitDetails" mutable="true">
       <key>
         <column name="KNR" />
         <column name="SNR" />

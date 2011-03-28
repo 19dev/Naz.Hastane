@@ -5,6 +5,7 @@ using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using NHibernate;
 using NHibernate.Criterion;
+using NHibernate.Linq;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -12,13 +13,13 @@ namespace Naz.Hastane.Data.Services
     {
         public static Patient GetByNo(string aPatientNo)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
                 return session.Get<Patient>(aPatientNo);
         }
 
         public static Patient GetByTCId(string aTCID)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 Patient patient = session
                     .CreateCriteria(typeof(Patient))
@@ -30,7 +31,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<Patient> GetByWhere(string aWhere)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 return session.CreateQuery("From Patient as patient where " + aWhere)
                     .SetMaxResults(100)
@@ -169,7 +170,7 @@ namespace Naz.Hastane.Data.Services
             if (patient == null || doctor == null)
                 return;
 
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 InsuranceCompany ic = session.Get<InsuranceCompany>("SGK");
@@ -240,7 +241,7 @@ namespace Naz.Hastane.Data.Services
         #region New Key Generators
         public static string GetNewPatientNo()
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 SystemSetting ss = session
@@ -284,10 +285,10 @@ namespace Naz.Hastane.Data.Services
 
         public static double GetNewPatientVisitDetailNo(PatientVisit pv)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
                 return GetNewPatientVisitDetailNo(pv, session);
         }
-        public static double GetNewPatientVisitDetailNo(PatientVisit pv, ISession session)
+        public static double GetNewPatientVisitDetailNo(PatientVisit pv, IStatelessSession session)
         {
             double? a = session.QueryOver<PatientVisitDetail>()
                 .Where(x => x.PatientVisit == pv)
@@ -303,7 +304,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<Patient> GetPatientsForInvoice()
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 IList<Patient> result = session.QueryOver<Patient>()
                     .JoinQueryOver<PatientVisit>(x => x.PatientVisits)
@@ -323,7 +324,7 @@ namespace Naz.Hastane.Data.Services
             PatientVisit pv = null;
             PatientVisitDetail pvd = null;
 
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 var result = session.QueryOver<Patient>(() => patient)
                     .JoinQueryOver<PatientVisit>(x => x.PatientVisits, () => pv)
@@ -365,7 +366,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<PatientVisit> GetPatientVisitsForInvoice(Patient patient)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 IList<PatientVisit> result = session.QueryOver<PatientVisit>()
                     .Where(x => x.Patient == patient)
@@ -380,7 +381,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(PatientVisit pv)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 IList<PatientVisitDetail> result = session.QueryOver<PatientVisitDetail>()
                     .Where(d => d.PatientVisit == pv && d.MAKNO == null && d.AMAKNO == null)
@@ -390,5 +391,61 @@ namespace Naz.Hastane.Data.Services
                 return result;
             }
         }
+
+        public static IList<MedulaDiabetReport> GetUnSentMedulaDiabetReports(DateTime startDate, DateTime endDate)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetUnSentMedulaDiabetReports(session, startDate, endDate);
+        }
+        public static IList<MedulaDiabetReport> GetUnSentMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate)
+        {
+            return GetMedulaDiabetReports(session, startDate, endDate, "0");
+        }
+        public static IList<MedulaDiabetReport> GetSentMedulaDiabetReports(DateTime startDate, DateTime endDate)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetSentMedulaDiabetReports(session, startDate, endDate);
+        }
+        public static IList<MedulaDiabetReport> GetSentMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate)
+        {
+            return GetMedulaDiabetReports(session, startDate, endDate, "1");
+        }
+        public static IList<MedulaDiabetReport> GetMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate, string sentUnSent)
+        {
+            //MedulaDiabetReport mdr = null;
+            //PatientVisit pv = null;
+            //Patient patient = null;
+
+            //IList<object> result = session.QueryOver<MedulaDiabetReport>(() => mdr)
+            //    .Where(x => x.IsSent == sentUnSent)
+            //    .JoinQueryOver<PatientVisit>(x => x.PatientVisit, () => pv)
+            //    .JoinQueryOver<Patient>(() => pv.Patient, () => patient)
+            //    .Where(() => pv.VisitDate >= startDate && pv.VisitDate < endDate.AddDays(1))
+            //    .SelectList(list => list
+            //        .Select(() => patient.FirstName)
+            //        .Select(() => patient.LastName)
+            //        .Select(() => pv.VisitNo)
+            //        .Select(() => pv.VisitDate))
+            //    .List<object[]>()
+            //    .Select(properties => new
+            //    {
+            //        FirstName = (string)properties[0],
+            //        LastName = (string)properties[1],
+            //        VisitNo = (string)properties[2],
+            //        VisitDate = (DateTime?)properties[3]
+            //    })
+            //    .Distinct()
+            //    .ToList<object>();
+            //return result;
+
+            return (from report in session.Query<MedulaDiabetReport>()
+                        where report.IsSent == sentUnSent
+                        join patientVisit in session.Query<PatientVisit>()
+                            on report.PatientVisit  equals patientVisit
+                            where patientVisit.VisitDate >= startDate
+                        select report).ToList();
+        }
+
     }
+
 }

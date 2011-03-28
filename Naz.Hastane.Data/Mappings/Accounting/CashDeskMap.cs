@@ -1,8 +1,8 @@
 ﻿using System;
-using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Entities.Accounting;
 using FluentNHibernate.Mapping;
 
-namespace Naz.Hastane.Data.Mappings
+namespace Naz.Hastane.Data.Mappings.Accounting
 {
     public class CashDeskMap : ClassMap<CashDesk>
     {

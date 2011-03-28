@@ -803,7 +803,7 @@ namespace Naz.Hastane.Win {
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
             iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiveVoucherForm>();
-            iDiabetReports.ItemClick += (o, args) => ShowNewDocument<DiabetForm>();
+            iDiabetReports.ItemClick += (o, args) => ShowNewDocument<MedulaDiabetReportForm>();
             iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();

@@ -87,8 +87,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE");
 
             HasMany(x => x.PatientVisits).KeyColumn("KNR")
-                .Inverse()
-                .Not.LazyLoad();
+                .Inverse();
         }
     }
 }

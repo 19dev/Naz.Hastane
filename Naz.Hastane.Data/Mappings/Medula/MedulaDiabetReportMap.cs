@@ -7,10 +7,10 @@ using Naz.Hastane.Data.Entities;
 namespace Naz.Hastane.Data.Mappings
 {
 
-    public class MEDDIABETTAKIPFORMUMap : ClassMap<MEDDIABETTAKIPFORMU>
+    public class MedulaDiabetReportMap : ClassMap<MedulaDiabetReport>
     {
 
-        public MEDDIABETTAKIPFORMUMap()
+        public MedulaDiabetReportMap()
         {
 
             Table("MEDDIABETTAKIPFORMU");
@@ -63,7 +63,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.BIREYSELEGITIMSAYISI).Column("BIREYSELEGITIMSAYISI");
             Map(x => x.GRUPEGITIMSAYISI).Column("GRUPEGITIMSAYISI");
             Map(x => x.EGITIMDM).Column("EGITIMDM").Length(1);
-            Map(x => x.GONDERILDI).Column("GONDERILDI").Not.Nullable().Length(1);
+            Map(x => x.IsSent).Column("GONDERILDI").Not.Nullable().Length(1);
             Map(x => x.TAKIPFORMUNO).Column("TAKIPFORMUNO").Length(10);
         }
     }
