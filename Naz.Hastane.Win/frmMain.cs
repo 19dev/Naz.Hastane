@@ -756,18 +756,18 @@ namespace Naz.Hastane.Win {
         }
         public void OpenNewHasta()
         {
-            Patient patient = PatientServices.GetNewPatient();
+            //Patient patient = PatientServices.GetNewPatient();
             string name = "Yeni Hasta";
-            HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
+            HastaIslemleriForm newForm = new HastaIslemleriForm("");
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenHasta(string hastaID)
+        public void OpenHasta(string patientID)
         {
-            Patient patient = PatientServices.GetByNo(hastaID);
+            Patient patient = PatientServices.GetPatientByID(patientID);
             if (patient != null)
             {
-                HastaIslemleriForm newForm = new HastaIslemleriForm(patient);
+                HastaIslemleriForm newForm = new HastaIslemleriForm(patientID);
                 string name = patient.FirstName + " " + patient.LastName;
                 newForm.Text = name;
                 ShowNewDocument(newForm);
@@ -778,16 +778,16 @@ namespace Naz.Hastane.Win {
         {
             Patient patient = PatientServices.GetNewSGKPatient();
             string name = "Yeni SGK Hastasý";
-            SGKPatientForm newForm = new SGKPatientForm(patient);
+            SGKPatientForm newForm = new SGKPatientForm("");
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenHastaSGK(string hastaID)
+        public void OpenHastaSGK(string patientID)
         {
-            Patient patient = PatientServices.GetByNo(hastaID);
+            Patient patient = PatientServices.GetPatientByID(patientID);
             if (patient != null)
             {
-                SGKPatientForm newForm = new SGKPatientForm(patient);
+                SGKPatientForm newForm = new SGKPatientForm(patientID);
                 string name = patient.FirstName + " " + patient.LastName;
                 newForm.Text = name;
                 ShowNewDocument(newForm);

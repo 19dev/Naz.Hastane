@@ -17,9 +17,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
         }
-        public SGKPatientForm(Patient aPatient)
+        public SGKPatientForm(string aPatientID)
         {
-            _Patient = aPatient;
+            _Patient = PatientServices.GetPatientByID(aPatientID, Session);
             InitializeComponent();
 
             //insuranceTypes = LookUpServices.GetAll<InsuranceType>();

@@ -15,6 +15,7 @@ using DevExpress.Tutorials.Controls;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.LookAndFeel;
 using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -26,9 +27,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
         }
-        public HastaIslemleriForm(Patient aPatient)
+        public HastaIslemleriForm(string aPatientID)
         {
-            _patient = aPatient;
+            _patient = PatientServices.GetPatientByID(aPatientID);
             InitializeComponent();
             InitBindings();
 //            this.xpHastaZiyaret.CriteriaString = "ID.KNR = '" + _hasta.KNR + "'";

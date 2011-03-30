@@ -11,10 +11,14 @@ namespace Naz.Hastane.Data.Services
 {
     public static class PatientServices
     {
-        public static Patient GetByNo(string aPatientNo)
+        public static Patient GetPatientByID(string aPatientNo)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-                return session.Get<Patient>(aPatientNo);
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetPatientByID(aPatientNo, session);
+        }
+        public static Patient GetPatientByID(string aPatientNo, ISession session)
+        {
+            return session.Get<Patient>(aPatientNo);
         }
 
         public static Patient GetByTCId(string aTCID)
