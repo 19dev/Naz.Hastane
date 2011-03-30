@@ -31,13 +31,13 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual string ISIPTAL { get; set; } // ISIPTAL; length(1); 1 1: İptal, Null
         public virtual string ISODENDI { get; set; } // ISODENDI; length(1); 1 1: Ödendi, 0, Null: Ödenmedi (Açık Fatura)
         public virtual string MAKNO { get; set; } // MAKNO; length(7); 1 KEYDAT "00","MAKNO" alanında son kesilen FaturaNo
-        public virtual char mk { get; set; } // mk; length(1); 0
-
-        public virtual string AMAKNO { get; set; } // AMAKNO; length(50); 1
-        public virtual string IPTAL_NEDENI { get; set; } // IPTAL_NEDENI; length(50); 1
-        public virtual double KALAN { get; set; } // KALAN; length(8); 1
-        public virtual string MAKBUZNO { get; set; } // MAKBUZNO; length(10); 1
-        public virtual string teslimNo { get; set; } // teslimNo; length(10); 1
+        public virtual char mk { get; set; } // mk; length(1); 0 H
+        public virtual string teslimNo { get; set; } // teslimNo; length(10); 1 Boş
+        public virtual string MAKBUZNO { get; set; } // MAKBUZNO; length(10); 1 Boş
+        //public virtual double SEC { get; set; } // SEC; length(8); 1 ??
+        public virtual double KALAN { get; set; } // KALAN; length(8); 1 ??
+        public virtual string AMAKNO { get; set; } // AMAKNO; length(50); 1 Açık Fatura Makbuz No
+        public virtual string IPTAL_NEDENI { get; set; } // IPTAL_NEDENI; length(50); 1 Boş
 
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 0
         public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1

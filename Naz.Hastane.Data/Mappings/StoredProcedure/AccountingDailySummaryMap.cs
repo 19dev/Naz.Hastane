@@ -13,13 +13,15 @@ namespace Naz.Hastane.Data.Mappings.StoredProcedure
 
             Id(x => x.RowNumber).Column("RowNumber");
 
-            Map(x => x.FTARIH).Column("FTARIH");
-            Map(x => x.Aciklama).Column("Aciklama");
+            Map(x => x.OdemeSekli).Column("OdemeSekli");
+            Map(x => x.Tarih).Column("Tarih");
             Map(x => x.TCKIMLIKNO).Column("TCKIMLIKNO");
             Map(x => x.HesapKodu).Column("HesapKodu");
+            Map(x => x.Aciklama).Column("Aciklama");
             Map(x => x.MakbuzNo).Column("MakbuzNo");
             Map(x => x.Tutar).Column("Tutar");
-            Map(x => x.FaturaTutari).Column("FaturaTutari");
+            Map(x => x.HizmetTutari).Column("FaturaTutari");
+            Map(x => x.KDVOrani).Column("KDVOrani");
         }
     }
 }

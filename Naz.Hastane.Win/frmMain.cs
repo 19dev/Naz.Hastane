@@ -22,6 +22,7 @@ using Naz.Hastane.Reports;
 using Naz.Hastane.Win.MDIChildForms;
 using Naz.Utilities.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -117,7 +118,7 @@ namespace Naz.Hastane.Win {
             skins.Ribbon = rcMain;
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
-            this.rcMain.SelectedPage = rbPatient;
+            EnableRibbonButtons(false);
 
             // Force the loading of the database
             var doctors = LookUpServices.Doctors;
@@ -777,7 +778,7 @@ namespace Naz.Hastane.Win {
         {
             Patient patient = PatientServices.GetNewSGKPatient();
             string name = "Yeni SGK Hastasý";
-            HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
+            SGKPatientForm newForm = new SGKPatientForm(patient);
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
@@ -786,7 +787,7 @@ namespace Naz.Hastane.Win {
             Patient patient = PatientServices.GetByNo(hastaID);
             if (patient != null)
             {
-                HastaIslemleriSGKForm newForm = new HastaIslemleriSGKForm(patient);
+                SGKPatientForm newForm = new SGKPatientForm(patient);
                 string name = patient.FirstName + " " + patient.LastName;
                 newForm.Text = name;
                 ShowNewDocument(newForm);
@@ -799,7 +800,7 @@ namespace Naz.Hastane.Win {
         private void AttachMDIChildButtons()
         {
             iHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraForm>();
-            iSGKHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraSGKForm>();
+            iSGKHastaAra.ItemClick += (o, args) => ShowNewDocument<SGKFindPatientForm>();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
             iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiveVoucherForm>();
@@ -878,5 +879,34 @@ namespace Naz.Hastane.Win {
 
         #endregion
 
+        private void iLogin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
+            if (form.IsOK)
+                UIUtilities.CurrentUser = form.User;
+            EnableRibbonButtons(form.IsOK);
+        }
+
+        private void iPasswordChange_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            PasswordChangeForm form = new PasswordChangeForm();
+            form.ShowDialog();
+            if (form.IsOK)
+                UIUtilities.CurrentUser = form.User;
+        }
+
+        private void EnableRibbonButtons(bool enable)
+        {
+            foreach (RibbonPage rp in this.rcMain.Pages)
+            {
+                rp.Visible = enable;
+                foreach (RibbonPageGroup rpg in rp.Groups)
+                    rpg.Visible = enable;
+            }
+            this.rpPatient.Visible = true;
+            this.rpgUserFunctions.Visible = true;
+            this.rcMain.SelectedPage = rpPatient;
+        }
     }
 }

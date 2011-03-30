@@ -25,7 +25,12 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void deDate_EditValueChanged(object sender, EventArgs e)
         {
             var records = LookUpServices.GetAccountingDailySummary(this.deDate.DateTime.Date);
-            this.gridControl1.DataSource = records;
+            UIUtilities.BindGrid(this.gridView1, records);
+        }
+
+        private void sbPrint_Click(object sender, EventArgs e)
+        {
+            this.gridControl1.ShowPrintPreview();
         }
     }
 }

@@ -15,6 +15,12 @@ namespace Naz.Hastane.Data.Services
     public static class LookUpServices
     {
 
+        public static T GetByID<T>(string aID)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+                return session.Get<T>(aID);
+        }
+
         public static IList<T> GetAll<T>() where T : class
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())

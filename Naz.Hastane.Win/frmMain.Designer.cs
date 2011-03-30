@@ -129,13 +129,16 @@ namespace Naz.Hastane.Win {
             this.iKidneyType = new DevExpress.XtraBars.BarButtonItem();
             this.iKidneyStoneLocalisationCode = new DevExpress.XtraBars.BarButtonItem();
             this.iProvisionType = new DevExpress.XtraBars.BarButtonItem();
+            this.iEffectiveSubstances = new DevExpress.XtraBars.BarButtonItem();
+            this.iLogin = new DevExpress.XtraBars.BarButtonItem();
+            this.iPasswordChange = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbPatient = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgAra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpPatient = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgUserFunctions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgSGK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgDosya = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -149,7 +152,8 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaProvision = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaDiabet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpGallery = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgAra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFont = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFontColor = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -161,7 +165,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iEffectiveSubstances = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -433,10 +436,12 @@ namespace Naz.Hastane.Win {
             this.iKidneyType,
             this.iKidneyStoneLocalisationCode,
             this.iProvisionType,
-            this.iEffectiveSubstances});
+            this.iEffectiveSubstances,
+            this.iLogin,
+            this.iPasswordChange});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 243;
+            this.rcMain.MaxItemId = 248;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -444,16 +449,16 @@ namespace Naz.Hastane.Win {
             this.rcMain.PageHeaderItemLinks.Add(this.biStyle);
             this.rcMain.PageHeaderItemLinks.Add(this.iHakkinda);
             this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rbPatient,
+            this.rpPatient,
             this.rbDefinitions,
             this.rbMedulaDefinitions,
-            this.ribbonPage3});
+            this.rpGallery});
             this.rcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rbMedulaDefinitions;
+            this.rcMain.SelectedPage = this.rpPatient;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1351,6 +1356,26 @@ namespace Naz.Hastane.Win {
             this.iProvisionType.Id = 240;
             this.iProvisionType.Name = "iProvisionType";
             // 
+            // iEffectiveSubstances
+            // 
+            this.iEffectiveSubstances.Caption = "barButtonItem1";
+            this.iEffectiveSubstances.Id = 242;
+            this.iEffectiveSubstances.Name = "iEffectiveSubstances";
+            // 
+            // iLogin
+            // 
+            this.iLogin.Caption = "Kullanýcý Deðiþtir";
+            this.iLogin.Id = 244;
+            this.iLogin.Name = "iLogin";
+            this.iLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iLogin_ItemClick);
+            // 
+            // iPasswordChange
+            // 
+            this.iPasswordChange.Caption = "Þifre Deðiþikliði";
+            this.iPasswordChange.Id = 246;
+            this.iPasswordChange.Name = "iPasswordChange";
+            this.iPasswordChange.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPasswordChange_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1386,27 +1411,25 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Format";
             // 
-            // rbPatient
+            // rpPatient
             // 
-            this.rbPatient.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgAra,
+            this.rpPatient.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgUserFunctions,
             this.rpgSGK,
             this.rpgMedulaReports,
             this.rpgDosya,
             this.ribbonPageGroup9,
             this.rpgAccounting,
             this.rpgTest});
-            this.rbPatient.Name = "rbPatient";
-            this.rbPatient.Text = "Hasta Ýþlemleri";
+            this.rpPatient.Name = "rpPatient";
+            this.rpPatient.Text = "Hasta Ýþlemleri";
             // 
-            // rpgAra
+            // rpgUserFunctions
             // 
-            this.rpgAra.ImageIndex = 3;
-            this.rpgAra.ItemLinks.Add(this.iHastaAra);
-            this.rpgAra.ItemLinks.Add(this.iYeniHasta);
-            this.rpgAra.Name = "rpgAra";
-            this.rpgAra.ShowCaptionButton = false;
-            this.rpgAra.Text = "Hasta Ýþlemleri";
+            this.rpgUserFunctions.ItemLinks.Add(this.iLogin);
+            this.rpgUserFunctions.ItemLinks.Add(this.iPasswordChange);
+            this.rpgUserFunctions.Name = "rpgUserFunctions";
+            this.rpgUserFunctions.Text = "Kullanýcý Ýþlemleri";
             // 
             // rpgSGK
             // 
@@ -1557,15 +1580,25 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaReport.Name = "rpgMedulaReport";
             this.rpgMedulaReport.Text = "Medula Raporlarý";
             // 
-            // ribbonPage3
+            // rpGallery
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpGallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgAra,
             this.ribbonPageGroup11,
             this.rpgFont,
             this.rpgFontColor,
             this.ribbonPageGroup8});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Gallery Page";
+            this.rpGallery.Name = "rpGallery";
+            this.rpGallery.Text = "Gallery Page";
+            // 
+            // rpgAra
+            // 
+            this.rpgAra.ImageIndex = 3;
+            this.rpgAra.ItemLinks.Add(this.iHastaAra);
+            this.rpgAra.ItemLinks.Add(this.iYeniHasta);
+            this.rpgAra.Name = "rpgAra";
+            this.rpgAra.ShowCaptionButton = false;
+            this.rpgAra.Text = "Hasta Ýþlemleri";
             // 
             // ribbonPageGroup11
             // 
@@ -1663,12 +1696,6 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
-            // iEffectiveSubstances
-            // 
-            this.iEffectiveSubstances.Caption = "barButtonItem1";
-            this.iEffectiveSubstances.Id = 242;
-            this.iEffectiveSubstances.Name = "iEffectiveSubstances";
-            // 
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
@@ -1737,7 +1764,7 @@ namespace Naz.Hastane.Win {
         private System.ComponentModel.IContainer components;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.Ribbon.RibbonControl rcMain;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rbPatient;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpPatient;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedulaReports;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbDefinitions;
@@ -1764,7 +1791,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.GalleryDropDown gddFont;
         private DevExpress.XtraBars.BarEditItem beiFontSize;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpGallery;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgFont;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiFont;
@@ -1853,6 +1880,9 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iKidneyStoneLocalisationCode;
         private DevExpress.XtraBars.BarButtonItem iProvisionType;
         private DevExpress.XtraBars.BarButtonItem iEffectiveSubstances;
+        private DevExpress.XtraBars.BarButtonItem iLogin;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUserFunctions;
+        private DevExpress.XtraBars.BarButtonItem iPasswordChange;
 
     }
 }

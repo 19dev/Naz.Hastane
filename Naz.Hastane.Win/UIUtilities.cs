@@ -7,11 +7,14 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Data.Services;
 using System.Collections;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 
 namespace Naz.Hastane.Win
 {
     public static class UIUtilities
     {
+        public static User CurrentUser = null;
+
         public static void BindLookUpEdit(LookUpEdit lue, Object dataSourceList,
             string displayMember = "Value", string valueMember = "ID")
         {

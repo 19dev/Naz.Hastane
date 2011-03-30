@@ -4,11 +4,11 @@
       <column name="RowNumber" />
       <generator class="identity" />
     </id>
-    <property name="FTARIH" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="FTARIH" />
+    <property name="OdemeSekli" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="OdemeSekli" />
     </property>
-    <property name="Aciklama" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="Aciklama" />
+    <property name="Tarih" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Tarih" />
     </property>
     <property name="TCKIMLIKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="TCKIMLIKNO" />
@@ -16,14 +16,20 @@
     <property name="HesapKodu" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="HesapKodu" />
     </property>
+    <property name="Aciklama" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Aciklama" />
+    </property>
     <property name="MakbuzNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="MakbuzNo" />
     </property>
     <property name="Tutar" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="Tutar" />
     </property>
-    <property name="FaturaTutari" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <property name="HizmetTutari" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="FaturaTutari" />
+    </property>
+    <property name="KDVOrani" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KDVOrani" />
     </property>
   </class>
 </hibernate-mapping>

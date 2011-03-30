@@ -182,3 +182,28 @@ var moviesOnCDs =
 moc.Movie))) 
         .List<int>(); 
 
+public int CalcNewId(string tableName)
+{
+using (ISession session = DBSessionManager.GetDBSessionController(Database).GetDBSession())
+{
+IDbCommand command = new SqlCommand();
+command.Connection = session.Connection;
+command.CommandType = CommandType.StoredProcedure;
+command.CommandText = “dbo.ups_GetNewId”; //this stored Procedure calculates the ID
+// Set input parameters
+var parm = new SqlParameter(”@tableName”, SqlDbType.VarChar);
+parm.Value = tableName;
+command.Parameters.Add(parm);
+// Set output parameter
+var outputParameter = new SqlParameter(”@id”, SqlDbType.Int);
+outputParameter.Direction = ParameterDirection.Output;
+command.Parameters.Add(outputParameter);
+// Set a return value
+var returnParameter = new SqlParameter(”@RETURN_VALUE”, SqlDbType.Int);
+returnParameter.Direction = ParameterDirection.ReturnValue;
+command.Parameters.Add(returnParameter);
+// Execute the stored procedure
+command.ExecuteNonQuery();
+return (int)((SqlParameter)command.Parameters["@id"]).Value;
+}
+} 

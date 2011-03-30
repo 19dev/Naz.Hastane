@@ -7,17 +7,17 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class HastaIslemleriSGKForm : MDIChildForm
+    public partial class SGKPatientForm : MDIChildForm
     {
         private Patient _Patient;
         private Doctor _Doctor;
         private bool _IsWaitingForPolyclinic = false;
 
-        public HastaIslemleriSGKForm()
+        public SGKPatientForm()
         {
             InitializeComponent();
         }
-        public HastaIslemleriSGKForm(Patient aPatient)
+        public SGKPatientForm(Patient aPatient)
         {
             _Patient = aPatient;
             InitializeComponent();

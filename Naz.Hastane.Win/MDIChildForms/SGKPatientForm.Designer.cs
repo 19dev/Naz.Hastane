@@ -1,6 +1,6 @@
 ﻿namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class HastaIslemleriSGKForm
+    partial class SGKPatientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -2351,13 +2351,13 @@
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 108;
             // 
-            // HastaIslemleriSGKForm
+            // SGKPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 690);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "HastaIslemleriSGKForm";
+            this.Name = "SGKPatientForm";
             this.Text = "HastaIslemleri";
             ((System.ComponentModel.ISupportInitialize)(this.gvIslemler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcIslemler)).EndInit();

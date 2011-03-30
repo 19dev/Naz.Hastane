@@ -19,9 +19,9 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class HastaAraSGKForm : MDIChildForm
+    public partial class SGKFindPatientForm : MDIChildForm
     {
-        public HastaAraSGKForm
+        public SGKFindPatientForm
             ()
         {
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class HastaAraSGKForm
+    partial class SGKFindPatientForm
     {
         /// <summary>
         /// Required designer variable.

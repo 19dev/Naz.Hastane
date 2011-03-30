@@ -17,7 +17,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
             QueryPatients();
-            this.gridControl1.DataSource = PatientServices.GetPatientVisitsForInvoice();
         }
 
         private void QueryPatients()
