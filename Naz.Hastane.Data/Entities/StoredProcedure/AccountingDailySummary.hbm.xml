@@ -12,6 +12,7 @@
       <return-property name="Tutar" column="Tutar"></return-property>
       <return-property name="HizmetTutari" column="HizmetTutari"></return-property>
       <return-property name="KDVOrani" column="KDVOrani"></return-property>
+      <return-property name="RecordType" column="RecordType"></return-property>
     </return>
     exec sp_GetGunlukMuhasebeFisi :Date
   </sql-query>

@@ -441,7 +441,7 @@ namespace Naz.Hastane.Win {
             this.iPasswordChange});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 248;
+            this.rcMain.MaxItemId = 249;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1417,10 +1417,8 @@ namespace Naz.Hastane.Win {
             this.rpgUserFunctions,
             this.rpgSGK,
             this.rpgMedulaReports,
-            this.rpgDosya,
-            this.ribbonPageGroup9,
             this.rpgAccounting,
-            this.rpgTest});
+            this.ribbonPageGroup9});
             this.rpPatient.Name = "rpPatient";
             this.rpPatient.Text = "Hasta Ýþlemleri";
             // 
@@ -1433,8 +1431,8 @@ namespace Naz.Hastane.Win {
             // 
             // rpgSGK
             // 
-            this.rpgSGK.ItemLinks.Add(this.iYeniSGKHastasi);
             this.rpgSGK.ItemLinks.Add(this.iSGKHastaAra);
+            this.rpgSGK.ItemLinks.Add(this.iYeniSGKHastasi);
             this.rpgSGK.ItemLinks.Add(this.iSGKInvoiceVoucher);
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
             this.rpgSGK.Name = "rpgSGK";
@@ -1587,7 +1585,9 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup11,
             this.rpgFont,
             this.rpgFontColor,
-            this.ribbonPageGroup8});
+            this.ribbonPageGroup8,
+            this.rpgDosya,
+            this.rpgTest});
             this.rpGallery.Name = "rpGallery";
             this.rpGallery.Text = "Gallery Page";
             // 

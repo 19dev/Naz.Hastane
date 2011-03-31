@@ -22,6 +22,7 @@ namespace Naz.Hastane.Data.Mappings.StoredProcedure
             Map(x => x.Tutar).Column("Tutar");
             Map(x => x.HizmetTutari).Column("FaturaTutari");
             Map(x => x.KDVOrani).Column("KDVOrani");
+            Map(x => x.RecordType).Column("RecordType");
         }
     }
 }

@@ -28,5 +28,7 @@ namespace Naz.Hastane.Data.Entities.StoredProcedure
         public virtual double HizmetTutari { get; set; }
         [Description("KDV Oranı")]
         public virtual int KDVOrani { get; set; }
+        [Description("Fiş Tipi")]
+        public virtual string RecordType { get; set; }
     }
 }
