@@ -875,6 +875,13 @@ namespace Naz.Hastane.Win {
             iSystemSettings.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.SystemSettings, args.Item.Caption);
             iUser.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Users, args.Item.Caption);
             iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
+
+            iOzetAYPAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPAnaIslems, args.Item.Caption);
+            iOzetAYPKurum.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPKurums, args.Item.Caption);
+            iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetDoktorAnaIslems, args.Item.Caption);
+            iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetHastaneServisAnaIslems, args.Item.Caption);
+            iOzetKurumAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetKurumAnaIslems, args.Item.Caption);
+            iOzetServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetServisAnaIslems, args.Item.Caption);
         }
 
         #endregion

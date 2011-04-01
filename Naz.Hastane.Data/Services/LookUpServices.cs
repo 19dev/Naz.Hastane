@@ -9,6 +9,7 @@ using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Entities.StoredProcedure;
 using NHibernate;
 using NHibernate.Transform;
+using Naz.Hastane.Data.Entities.Reports;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -229,6 +230,34 @@ namespace Naz.Hastane.Data.Services
         private static IList<Warehouse> _Warehouses;
         public static IList<Warehouse> Warehouses
         { get { return LookUpTable(ref _Warehouses); } }
+
+        #endregion
+
+        #region AdminReports
+
+        private static IList<OzetAYPAnaIslem> _OzetAYPAnaIslems;
+        public static IList<OzetAYPAnaIslem> OzetAYPAnaIslems
+        { get { return LookUpTable(ref _OzetAYPAnaIslems); } }
+
+        private static IList<OzetAYPKurum> _OzetAYPKurums;
+        public static IList<OzetAYPKurum> OzetAYPKurums
+        { get { return LookUpTable(ref _OzetAYPKurums); } }
+
+        private static IList<OzetDoktorAnaIslem> _OzetDoktorAnaIslems;
+        public static IList<OzetDoktorAnaIslem> OzetDoktorAnaIslems
+        { get { return LookUpTable(ref _OzetDoktorAnaIslems); } }
+
+        private static IList<OzetHastaneServisAnaIslem> _OzetHastaneServisAnaIslems;
+        public static IList<OzetHastaneServisAnaIslem> OzetHastaneServisAnaIslems
+        { get { return LookUpTable(ref _OzetHastaneServisAnaIslems); } }
+
+        private static IList<OzetKurumAnaIslem> _OzetKurumAnaIslems;
+        public static IList<OzetKurumAnaIslem> OzetKurumAnaIslems
+        { get { return LookUpTable(ref _OzetKurumAnaIslems); } }
+
+        private static IList<OzetServisAnaIslem> _OzetServisAnaIslems;
+        public static IList<OzetServisAnaIslem> OzetServisAnaIslems
+        { get { return LookUpTable(ref _OzetServisAnaIslems); } }
 
         #endregion
 

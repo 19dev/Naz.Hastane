@@ -154,6 +154,13 @@
     </Compile>
     <Compile Include="Entities\LookUp\Special\SystemSetting.cs" />
     <Compile Include="Entities\Patient\PatientVisitRecord.cs" />
+    <Compile Include="Entities\Reports\OzetAYPAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetAYPKurum.cs" />
+    <Compile Include="Entities\Reports\OzetDoktorAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetHastaneServisAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetKurumAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetServisAnaIslem.cs" />
+    <Compile Include="Entities\Reports\SummaryReportItem.cs" />
     <Compile Include="Entities\SGKAutoExamination.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
@@ -243,6 +250,12 @@
     </Compile>
     <Compile Include="Mappings\LookUp\Special\SystemSettingMap.cs" />
     <Compile Include="Mappings\Patient\PatientVisitRecordMap.cs" />
+    <Compile Include="Mappings\Reports\OzetAYPAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetAYPKurumMap.cs" />
+    <Compile Include="Mappings\Reports\OzetDoktorAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetHastaneServisAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetKurumAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetServisAnaIslemMap.cs" />
     <Compile Include="Mappings\SGKAutoExaminationMap.cs" />
     <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
     <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
