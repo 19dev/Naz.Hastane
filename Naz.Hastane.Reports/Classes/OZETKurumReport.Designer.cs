@@ -1,6 +1,6 @@
 namespace Naz.Hastane.Reports.Classes
 {
-    partial class OZETAYPReport
+    partial class OZETKurumReport
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@ namespace Naz.Hastane.Reports.Classes
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.tipdataDataSet = new Naz.Hastane.Reports.DataSets.TIPDATADataSet();
-            this.rtblOzetAYPTableAdapter = new Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetAYPTableAdapter();
+            this.rtblOzetKurumTableAdapter = new Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetKurumTableAdapter();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -172,7 +172,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell4.CanGrow = false;
             this.xrTableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.Key1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.Key1")});
             this.xrTableCell4.Dpi = 254F;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
@@ -184,7 +184,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell5.CanGrow = false;
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaC", "{0:#,#}")});
             this.xrTableCell5.Dpi = 254F;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Text = "xrTableCell5";
@@ -194,7 +194,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell6.CanGrow = false;
             this.xrTableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaP", "{0:#,#}")});
             this.xrTableCell6.Dpi = 254F;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Text = "xrTableCell6";
@@ -204,7 +204,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell10.CanGrow = false;
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaY", "{0:0.00%}")});
             this.xrTableCell10.Dpi = 254F;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Text = "xrTableCell10";
@@ -214,7 +214,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell13.CanGrow = false;
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaP1", "{0:#,#}")});
             this.xrTableCell13.Dpi = 254F;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Text = "xrTableCell13";
@@ -224,7 +224,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell20.CanGrow = false;
             this.xrTableCell20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaY1", "{0:0.00%}")});
             this.xrTableCell20.Dpi = 254F;
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.Text = "xrTableCell20";
@@ -234,7 +234,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell21.CanGrow = false;
             this.xrTableCell21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamC", "{0:#,#}")});
             this.xrTableCell21.Dpi = 254F;
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.Text = "xrTableCell21";
@@ -244,7 +244,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell33.CanGrow = false;
             this.xrTableCell33.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamP", "{0:#,#}")});
             this.xrTableCell33.Dpi = 254F;
             this.xrTableCell33.Name = "xrTableCell33";
             this.xrTableCell33.Text = "xrTableCell33";
@@ -254,7 +254,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell32.CanGrow = false;
             this.xrTableCell32.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamY", "{0:0.00%}")});
             this.xrTableCell32.Dpi = 254F;
             this.xrTableCell32.Name = "xrTableCell32";
             this.xrTableCell32.Text = "xrTableCell32";
@@ -264,7 +264,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell31.CanGrow = false;
             this.xrTableCell31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamP1", "{0:#,#}")});
             this.xrTableCell31.Dpi = 254F;
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.Text = "xrTableCell31";
@@ -274,7 +274,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell34.CanGrow = false;
             this.xrTableCell34.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamY1", "{0:0.00%}")});
             this.xrTableCell34.Dpi = 254F;
             this.xrTableCell34.Name = "xrTableCell34";
             this.xrTableCell34.Text = "xrTableCell34";
@@ -284,7 +284,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell35.CanGrow = false;
             this.xrTableCell35.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiC", "{0:#,#}")});
             this.xrTableCell35.Dpi = 254F;
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.Text = "xrTableCell35";
@@ -294,7 +294,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell47.CanGrow = false;
             this.xrTableCell47.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiP", "{0:#,#}")});
             this.xrTableCell47.Dpi = 254F;
             this.xrTableCell47.Name = "xrTableCell47";
             this.xrTableCell47.Text = "xrTableCell47";
@@ -304,7 +304,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell46.CanGrow = false;
             this.xrTableCell46.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiY", "{0:0.00%}")});
             this.xrTableCell46.Dpi = 254F;
             this.xrTableCell46.Name = "xrTableCell46";
             this.xrTableCell46.Text = "xrTableCell46";
@@ -314,7 +314,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell48.CanGrow = false;
             this.xrTableCell48.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiP1", "{0:#,#}")});
             this.xrTableCell48.Dpi = 254F;
             this.xrTableCell48.Name = "xrTableCell48";
             this.xrTableCell48.Text = "xrTableCell48";
@@ -324,7 +324,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell36.CanGrow = false;
             this.xrTableCell36.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiY1", "{0:0.00%}")});
             this.xrTableCell36.Dpi = 254F;
             this.xrTableCell36.Name = "xrTableCell36";
             this.xrTableCell36.Text = "xrTableCell36";
@@ -351,9 +351,9 @@ namespace Naz.Hastane.Reports.Classes
             this.tipdataDataSet.DataSetName = "TIPDATADataSet";
             this.tipdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rtblOzetAYPTableAdapter
+            // rtblOzetKurumTableAdapter
             // 
-            this.rtblOzetAYPTableAdapter.ClearBeforeFill = true;
+            this.rtblOzetKurumTableAdapter.ClearBeforeFill = true;
             // 
             // ReportFooter
             // 
@@ -415,7 +415,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell8
             // 
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaC")});
             this.xrTableCell8.Dpi = 254F;
             this.xrTableCell8.Name = "xrTableCell8";
             xrSummary1.FormatString = "{0:#,#}";
@@ -427,7 +427,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell9
             // 
             this.xrTableCell9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaP", "{0:#,#}")});
             this.xrTableCell9.Dpi = 254F;
             this.xrTableCell9.Name = "xrTableCell9";
             xrSummary2.FormatString = "{0:#,#}";
@@ -439,7 +439,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumHastaY
             // 
             this.celSumHastaY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaY")});
             this.celSumHastaY.Dpi = 254F;
             this.celSumHastaY.Name = "celSumHastaY";
             xrSummary3.FormatString = "{0:0.00%}";
@@ -454,7 +454,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell22
             // 
             this.xrTableCell22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaP1")});
             this.xrTableCell22.Dpi = 254F;
             this.xrTableCell22.Name = "xrTableCell22";
             xrSummary4.FormatString = "{0:#,#}";
@@ -466,7 +466,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumHastaY1
             // 
             this.celSumHastaY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.HastaY1")});
             this.celSumHastaY1.Dpi = 254F;
             this.celSumHastaY1.Name = "celSumHastaY1";
             xrSummary5.FormatString = "{0:0.00%}";
@@ -481,7 +481,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell24
             // 
             this.xrTableCell24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamC")});
             this.xrTableCell24.Dpi = 254F;
             this.xrTableCell24.Name = "xrTableCell24";
             xrSummary6.FormatString = "{0:#,#}";
@@ -493,7 +493,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell39
             // 
             this.xrTableCell39.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamP")});
             this.xrTableCell39.Dpi = 254F;
             this.xrTableCell39.Name = "xrTableCell39";
             xrSummary7.FormatString = "{0:#,#}";
@@ -505,7 +505,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumToplamY
             // 
             this.celSumToplamY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamY")});
             this.celSumToplamY.Dpi = 254F;
             this.celSumToplamY.Name = "celSumToplamY";
             xrSummary8.FormatString = "{0:0.00%}";
@@ -520,7 +520,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTableCell37
             // 
             this.xrTableCell37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamP1")});
             this.xrTableCell37.Dpi = 254F;
             this.xrTableCell37.Name = "xrTableCell37";
             xrSummary9.FormatString = "{0:#,#}";
@@ -532,7 +532,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumToplamY1
             // 
             this.celSumToplamY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.ToplamY1")});
             this.celSumToplamY1.Dpi = 254F;
             this.celSumToplamY1.Name = "celSumToplamY1";
             xrSummary10.FormatString = "{0:0.00%}";
@@ -547,7 +547,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumKisiBasiC
             // 
             this.celSumKisiBasiC.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiC")});
             this.celSumKisiBasiC.Dpi = 254F;
             this.celSumKisiBasiC.Name = "celSumKisiBasiC";
             xrSummary11.FormatString = "{0:#,#}";
@@ -561,7 +561,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumKisiBasiP
             // 
             this.celSumKisiBasiP.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiP")});
             this.celSumKisiBasiP.Dpi = 254F;
             this.celSumKisiBasiP.Name = "celSumKisiBasiP";
             xrSummary12.FormatString = "{0:#,#}";
@@ -575,7 +575,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumKisiBasiY
             // 
             this.celSumKisiBasiY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiY")});
             this.celSumKisiBasiY.Dpi = 254F;
             this.celSumKisiBasiY.Name = "celSumKisiBasiY";
             xrSummary13.FormatString = "{0:0.00%}";
@@ -589,7 +589,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumKisiBasiP1
             // 
             this.celSumKisiBasiP1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiP1")});
             this.celSumKisiBasiP1.Dpi = 254F;
             this.celSumKisiBasiP1.Name = "celSumKisiBasiP1";
             xrSummary14.FormatString = "{0:#,#}";
@@ -603,7 +603,7 @@ namespace Naz.Hastane.Reports.Classes
             // celSumKisiBasiY1
             // 
             this.celSumKisiBasiY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetKurum.KisiBasiY1")});
             this.celSumKisiBasiY1.Dpi = 254F;
             this.celSumKisiBasiY1.Name = "celSumKisiBasiY1";
             xrSummary15.FormatString = "{0:0.00%}";
@@ -664,7 +664,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel1.SizeF = new System.Drawing.SizeF(2076.979F, 103.1875F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "GENEL FAALÝYET RAPORU (ÝÞLEM TÜRÜNE GÖRE)";
+            this.xrLabel1.Text = "GENEL FAALÝYET RAPORU (KURUMLARA GÖRE)";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrTable4
@@ -766,7 +766,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell1.Dpi = 254F;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "Ýþlem Türü";
+            this.xrTableCell1.Text = "Kurum";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell1.Weight = 0.28929835394092751D;
             // 
@@ -920,7 +920,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrTableCell28.Weight = 0.15043520177127057D;
             // 
-            // OZETAYPReport
+            // OZETKurumReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -928,8 +928,8 @@ namespace Naz.Hastane.Reports.Classes
             this.BottomMargin,
             this.ReportFooter,
             this.ReportHeader});
-            this.DataAdapter = this.rtblOzetAYPTableAdapter;
-            this.DataMember = "rtblOzetAYP";
+            this.DataAdapter = this.rtblOzetKurumTableAdapter;
+            this.DataMember = "rtblOzetKurum";
             this.DataSource = this.tipdataDataSet;
             this.Dpi = 254F;
             this.Landscape = true;
@@ -937,6 +937,7 @@ namespace Naz.Hastane.Reports.Classes
             this.PageHeight = 2159;
             this.PageWidth = 2794;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
+            this.RequestParameters = false;
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -954,7 +955,7 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private Naz.Hastane.Reports.DataSets.TIPDATADataSet tipdataDataSet;
-        private Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetAYPTableAdapter rtblOzetAYPTableAdapter;
+        private Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetKurumTableAdapter rtblOzetKurumTableAdapter;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.XRTable xrTable2;

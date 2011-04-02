@@ -3,7 +3,6 @@ namespace Naz.Hastane.Win {
 
         #region Designer generated code
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
@@ -26,23 +25,23 @@ namespace Naz.Hastane.Win {
             this.iCenter = new DevExpress.XtraBars.BarButtonItem();
             this.iPaste = new DevExpress.XtraBars.BarButtonItem();
             this.iFont = new DevExpress.XtraBars.BarButtonItem();
-            this.gddFont = new DevExpress.XtraBars.Ribbon.GalleryDropDown(this.components);
+            this.gddFont = new DevExpress.XtraBars.Ribbon.GalleryDropDown();
             this.beiFontSize = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.bbiFontColorPopup = new DevExpress.XtraBars.BarButtonItem();
-            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer();
             this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.pccBottom = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.pccBottom = new DevExpress.XtraBars.PopupControlContainer();
             this.sbExit = new DevExpress.XtraEditors.SimpleButton();
-            this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection2 = new DevExpress.Utils.ImageCollection();
             this.iYeni = new DevExpress.XtraBars.BarButtonItem();
             this.sbiSave = new DevExpress.XtraBars.BarSubItem();
             this.iSakla = new DevExpress.XtraBars.BarButtonItem();
             this.iSaveAs = new DevExpress.XtraBars.BarButtonItem();
             this.iPrint = new DevExpress.XtraBars.BarButtonItem();
             this.iKapat = new DevExpress.XtraBars.BarButtonItem();
-            this.pccAppMenu = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.pccAppMenu = new DevExpress.XtraBars.PopupControlContainer();
             this.pcAppMenuFileLabels = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -56,7 +55,7 @@ namespace Naz.Hastane.Win {
             this.iAlignLeft = new DevExpress.XtraBars.BarButtonItem();
             this.iAlignRight = new DevExpress.XtraBars.BarButtonItem();
             this.iFontColor = new DevExpress.XtraBars.BarButtonItem();
-            this.gddFontColor = new DevExpress.XtraBars.Ribbon.GalleryDropDown(this.components);
+            this.gddFontColor = new DevExpress.XtraBars.Ribbon.GalleryDropDown();
             this.siPosition = new DevExpress.XtraBars.BarButtonItem();
             this.siModified = new DevExpress.XtraBars.BarButtonItem();
             this.siDocName = new DevExpress.XtraBars.BarStaticItem();
@@ -138,7 +137,9 @@ namespace Naz.Hastane.Win {
             this.iOzetHastaneServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetKurumAnaIslem = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.iOzetAYP = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetKurum = new DevExpress.XtraBars.BarButtonItem();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -168,11 +169,11 @@ namespace Naz.Hastane.Win {
             this.rpgSummaryReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.pmNew = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.pmNew = new DevExpress.XtraBars.PopupMenu();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.pmMain = new DevExpress.XtraBars.PopupMenu();
+            this.imageCollection3 = new DevExpress.Utils.ImageCollection();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -452,10 +453,12 @@ namespace Naz.Hastane.Win {
             this.iOzetDoktorAnaIslem,
             this.iOzetHastaneServisAnaIslem,
             this.iOzetKurumAnaIslem,
-            this.iOzetServisAnaIslem});
+            this.iOzetServisAnaIslem,
+            this.iOzetAYP,
+            this.iOzetKurum});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 259;
+            this.rcMain.MaxItemId = 263;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1396,6 +1399,7 @@ namespace Naz.Hastane.Win {
             this.iOzetAYPKurum.Caption = "AYP / Kurum";
             this.iOzetAYPKurum.Id = 250;
             this.iOzetAYPKurum.Name = "iOzetAYPKurum";
+            this.iOzetAYPKurum.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzetAYPKurum_ItemClick);
             // 
             // iOzetAYPAnaIslem
             // 
@@ -1427,6 +1431,20 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem.Caption = "Servis / Ana Ýþlem";
             this.iOzetServisAnaIslem.Id = 256;
             this.iOzetServisAnaIslem.Name = "iOzetServisAnaIslem";
+            // 
+            // iOzetAYP
+            // 
+            this.iOzetAYP.Caption = "AYP";
+            this.iOzetAYP.Id = 260;
+            this.iOzetAYP.Name = "iOzetAYP";
+            this.iOzetAYP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzetAYP_ItemClick);
+            // 
+            // iOzetKurum
+            // 
+            this.iOzetKurum.Caption = "Kurum";
+            this.iOzetKurum.Id = 261;
+            this.iOzetKurum.Name = "iOzetKurum";
+            this.iOzetKurum.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzetKurum_ItemClick);
             // 
             // imageCollection1
             // 
@@ -1706,11 +1724,13 @@ namespace Naz.Hastane.Win {
             // 
             // rpgSummaryReports
             // 
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYPAnaIslem);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYP);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetKurum);
             this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYPKurum);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYPAnaIslem);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetKurumAnaIslem);
             this.rpgSummaryReports.ItemLinks.Add(this.iOzetDoktorAnaIslem);
             this.rpgSummaryReports.ItemLinks.Add(this.iOzetHastaneServisAnaIslem);
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetKurumAnaIslem);
             this.rpgSummaryReports.ItemLinks.Add(this.iOzetServisAnaIslem);
             this.rpgSummaryReports.Name = "rpgSummaryReports";
             this.rpgSummaryReports.Text = "Özet Raporlarý";
@@ -1961,6 +1981,8 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iOzetHastaneServisAnaIslem;
         private DevExpress.XtraBars.BarButtonItem iOzetKurumAnaIslem;
         private DevExpress.XtraBars.BarButtonItem iOzetServisAnaIslem;
+        private DevExpress.XtraBars.BarButtonItem iOzetAYP;
+        private DevExpress.XtraBars.BarButtonItem iOzetKurum;
 
     }
 }

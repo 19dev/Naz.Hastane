@@ -126,6 +126,7 @@ namespace Naz.Hastane.Win {
 
             // Close the splash screen
             CloseSplash();
+            ShowLoginForm();
         }
 
         int documentIndex = 0;
@@ -878,7 +879,7 @@ namespace Naz.Hastane.Win {
             iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
 
             //iOzetAYPAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPAnaIslems, args.Item.Caption);
-            iOzetAYPKurum.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPKurums, args.Item.Caption);
+            //iOzetAYPKurum.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPKurums, args.Item.Caption);
             iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetDoktorAnaIslems, args.Item.Caption);
             iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetHastaneServisAnaIslems, args.Item.Caption);
             iOzetKurumAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetKurumAnaIslems, args.Item.Caption);
@@ -888,6 +889,11 @@ namespace Naz.Hastane.Win {
         #endregion
 
         private void iLogin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowLoginForm();
+        }
+
+        private void ShowLoginForm()
         {
             LoginForm form = new LoginForm();
             form.ShowDialog();
@@ -920,6 +926,27 @@ namespace Naz.Hastane.Win {
         private void iOzetAYPAnaIslem_ItemClick(object sender, ItemClickEventArgs e)
         {
             OZETAYPReport report = new OZETAYPReport();
+            report.ShowPreview();
+        }
+
+        private void iOzetAYP_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OZETAYPReport report = new OZETAYPReport();
+ //           report.prmReportCaption.Value = "Mart 2011";
+            report.ShowPreview();
+        }
+
+        private void iOzetKurum_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OZETKurumReport report = new OZETKurumReport();
+//            report.prmReportCaption.Value = "Mart 2011";
+            report.ShowPreview();
+        }
+
+        private void iOzetAYPKurum_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OZETAYPKurumReport report = new OZETAYPKurumReport();
+            //            report.prmReportCaption.Value = "Mart 2011";
             report.ShowPreview();
         }
     }
