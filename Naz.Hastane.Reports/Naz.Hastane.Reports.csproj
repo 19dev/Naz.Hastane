@@ -40,9 +40,7 @@
     <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v10.2.Extensions, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -56,49 +54,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InvoiceSGK.cs">
+    <Compile Include="Classes\OZETAYPReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="InvoiceSGK.Designer.cs">
+    <Compile Include="Classes\OZETAYPReport.Designer.cs">
+      <DependentUpon>OZETAYPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\InvoiceSGK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\InvoiceSGK.Designer.cs">
       <DependentUpon>InvoiceSGK.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\rptIL.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Classes\rptIL.Designer.cs">
-      <DependentUpon>rptIL.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SGKVoucher.cs">
+    <Compile Include="DataSets\SGKVoucher.cs">
       <DependentUpon>SGKVoucher.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SGKVoucher.Designer.cs">
+    <Compile Include="DataSets\SGKVoucher.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SGKVoucher.xsd</DependentUpon>
     </Compile>
-    <Compile Include="VoucherSGK.cs">
+    <Compile Include="DataSets\TIPDATADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TIPDATADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\VoucherSGK.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="VoucherSGK.Designer.cs">
+    <Compile Include="Classes\VoucherSGK.Designer.cs">
       <DependentUpon>VoucherSGK.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InvoiceSGK.resx">
+    <EmbeddedResource Include="Classes\OZETAYPReport.resx">
+      <DependentUpon>OZETAYPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\InvoiceSGK.resx">
       <DependentUpon>InvoiceSGK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Classes\rptIL.resx">
-      <DependentUpon>rptIL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VoucherSGK.resx">
+    <EmbeddedResource Include="Classes\VoucherSGK.resx">
       <DependentUpon>VoucherSGK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -114,15 +117,26 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="SGKVoucher.xsc">
+    <None Include="DataSets\SGKVoucher.xsc">
       <DependentUpon>SGKVoucher.xsd</DependentUpon>
     </None>
-    <None Include="SGKVoucher.xsd">
+    <None Include="DataSets\SGKVoucher.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SGKVoucher.Designer.cs</LastGenOutput>
     </None>
-    <None Include="SGKVoucher.xss">
+    <None Include="DataSets\SGKVoucher.xss">
       <DependentUpon>SGKVoucher.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TIPDATADataSet.xsc">
+      <DependentUpon>TIPDATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TIPDATADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TIPDATADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\TIPDATADataSet.xss">
+      <DependentUpon>TIPDATADataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

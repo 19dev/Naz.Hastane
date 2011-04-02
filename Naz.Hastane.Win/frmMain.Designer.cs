@@ -133,6 +133,11 @@ namespace Naz.Hastane.Win {
             this.iLogin = new DevExpress.XtraBars.BarButtonItem();
             this.iPasswordChange = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetAYPKurum = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetAYPAnaIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetDoktorAnaIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetHastaneServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetKurumAnaIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -168,11 +173,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iOzetAYPAnaIslem = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzetDoktorAnaIslem = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzetHastaneServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzetKurumAnaIslem = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzetServisAnaIslem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -455,7 +455,7 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 257;
+            this.rcMain.MaxItemId = 259;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1397,6 +1397,37 @@ namespace Naz.Hastane.Win {
             this.iOzetAYPKurum.Id = 250;
             this.iOzetAYPKurum.Name = "iOzetAYPKurum";
             // 
+            // iOzetAYPAnaIslem
+            // 
+            this.iOzetAYPAnaIslem.Caption = "AYP / Ana Ýþlem";
+            this.iOzetAYPAnaIslem.Id = 252;
+            this.iOzetAYPAnaIslem.Name = "iOzetAYPAnaIslem";
+            this.iOzetAYPAnaIslem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzetAYPAnaIslem_ItemClick);
+            // 
+            // iOzetDoktorAnaIslem
+            // 
+            this.iOzetDoktorAnaIslem.Caption = "Doktor / Ana Ýþlem";
+            this.iOzetDoktorAnaIslem.Id = 253;
+            this.iOzetDoktorAnaIslem.Name = "iOzetDoktorAnaIslem";
+            // 
+            // iOzetHastaneServisAnaIslem
+            // 
+            this.iOzetHastaneServisAnaIslem.Caption = "Hastane Servis / Ana Ýþlem";
+            this.iOzetHastaneServisAnaIslem.Id = 254;
+            this.iOzetHastaneServisAnaIslem.Name = "iOzetHastaneServisAnaIslem";
+            // 
+            // iOzetKurumAnaIslem
+            // 
+            this.iOzetKurumAnaIslem.Caption = "Kurum / Ana Ýþlem";
+            this.iOzetKurumAnaIslem.Id = 255;
+            this.iOzetKurumAnaIslem.Name = "iOzetKurumAnaIslem";
+            // 
+            // iOzetServisAnaIslem
+            // 
+            this.iOzetServisAnaIslem.Caption = "Servis / Ana Ýþlem";
+            this.iOzetServisAnaIslem.Id = 256;
+            this.iOzetServisAnaIslem.Name = "iOzetServisAnaIslem";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1734,36 +1765,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // iOzetAYPAnaIslem
-            // 
-            this.iOzetAYPAnaIslem.Caption = "AYP / Ana Ýþlem";
-            this.iOzetAYPAnaIslem.Id = 252;
-            this.iOzetAYPAnaIslem.Name = "iOzetAYPAnaIslem";
-            // 
-            // iOzetDoktorAnaIslem
-            // 
-            this.iOzetDoktorAnaIslem.Caption = "Doktor / Ana Ýþlem";
-            this.iOzetDoktorAnaIslem.Id = 253;
-            this.iOzetDoktorAnaIslem.Name = "iOzetDoktorAnaIslem";
-            // 
-            // iOzetHastaneServisAnaIslem
-            // 
-            this.iOzetHastaneServisAnaIslem.Caption = "Hastane Servis / Ana Ýþlem";
-            this.iOzetHastaneServisAnaIslem.Id = 254;
-            this.iOzetHastaneServisAnaIslem.Name = "iOzetHastaneServisAnaIslem";
-            // 
-            // iOzetKurumAnaIslem
-            // 
-            this.iOzetKurumAnaIslem.Caption = "Kurum / Ana Ýþlem";
-            this.iOzetKurumAnaIslem.Id = 255;
-            this.iOzetKurumAnaIslem.Name = "iOzetKurumAnaIslem";
-            // 
-            // iOzetServisAnaIslem
-            // 
-            this.iOzetServisAnaIslem.Caption = "Servis / Ana Ýþlem";
-            this.iOzetServisAnaIslem.Id = 256;
-            this.iOzetServisAnaIslem.Name = "iOzetServisAnaIslem";
             // 
             // frmMain
             // 

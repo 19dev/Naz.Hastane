@@ -19,6 +19,7 @@ using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Reports;
+using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Win.MDIChildForms;
 using Naz.Utilities.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
@@ -876,7 +877,7 @@ namespace Naz.Hastane.Win {
             iUser.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Users, args.Item.Caption);
             iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
 
-            iOzetAYPAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPAnaIslems, args.Item.Caption);
+            //iOzetAYPAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPAnaIslems, args.Item.Caption);
             iOzetAYPKurum.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPKurums, args.Item.Caption);
             iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetDoktorAnaIslems, args.Item.Caption);
             iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetHastaneServisAnaIslems, args.Item.Caption);
@@ -914,6 +915,12 @@ namespace Naz.Hastane.Win {
             this.rpPatient.Visible = true;
             this.rpgUserFunctions.Visible = true;
             this.rcMain.SelectedPage = rpPatient;
+        }
+
+        private void iOzetAYPAnaIslem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OZETAYPReport report = new OZETAYPReport();
+            report.ShowPreview();
         }
     }
 }

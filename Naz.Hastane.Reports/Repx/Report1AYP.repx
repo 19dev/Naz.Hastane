@@ -1,0 +1,1626 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>C:\Windows\assembly\GAC_MSIL\DevExpress.XtraReports.v10.2\10.2.6.0__b88d1754d700e49a\DevExpress.XtraReports.v10.2.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>tr-TR</Localization>
+///   <References>
+///     <Reference Path="C:\Windows\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Data.SqlXml\2.0.0.0__b77a5c561934e089\System.Data.SqlXml.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11d50a3a\System.Security.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.VisualC\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualC.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_32\System.Transactions\2.0.0.0__b77a5c561934e089\System.Transactions.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d50a3a\Accessibility.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soap\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Drawing.Design\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.Design.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Web.RegularExpressions\2.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.DirectoryServices.Protocols\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.Protocols.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.ServiceProcess\2.0.0.0__b03f5f7f11d50a3a\System.ServiceProcess.dll" />
+///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" />
+///   </References>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class Report2 : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.PageFooterBand pageFooterBand1;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
+        private DevExpress.XtraReports.UI.ReportHeaderBand reportHeaderBand1;
+        private DevExpress.XtraReports.UI.XRLabel label23;
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRTable table1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell colKey1;
+        private DevExpress.XtraReports.UI.XRTableCell colSumHastaC;
+        private DevExpress.XtraReports.UI.XRTableCell colSumHastaP;
+        private DevExpress.XtraReports.UI.XRTableCell colHastaY;
+        private System.Data.SqlClient.SqlDataAdapter rtblOzetAYPAnaIslemTableAdapter;
+        private System.Data.SqlClient.SqlCommand sqlCommand1;
+        private System.Data.SqlClient.SqlConnection sqlConnection1;
+        private System.Data.DataSet dsMonthlySummaryReports;
+        private DevExpress.XtraReports.UI.XRControlStyle Title;
+        private DevExpress.XtraReports.UI.XRControlStyle FieldCaption;
+        private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
+        private DevExpress.XtraReports.UI.XRControlStyle DataField;
+        private System.Resources.ResourceManager _resources;
+        public Report2() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
+                        "W9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
+                        "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAACAAAAAAAAAFBBRFBBRFBIXnLB6" +
+                        "TFAxgAAAAArAAAAIgEAACYkAHQAaABpAHMALgBTAGMAcgBpAHAAdABzAFMAbwB1AHIAYwBlAAAAAAAuc" +
+                        "wBxAGwAQwBvAG0AbQBhAG4AZAAxAC4AQwBvAG0AbQBhAG4AZABUAGUAeAB0AOsBAAAB6AMNCg0KcHVib" +
+                        "GljIGRvdWJsZSBDb21wdXRlRGlmZihkb3VibGUgYUZpcnN0LCBkb3VibGUgYVNlY29uZCkNCnsNCglpZ" +
+                        "iAoYUZpcnN0ID09IDAgfHwgYVNlY29uZCA9PSAwKQ0KCQlyZXR1cm4gMDsNCgllbHNlDQoJCXJldHVyb" +
+                        "iAoYVNlY29uZCAtIGFGaXJzdCkgLyBhRmlyc3Q7DQoNCn0NCnByaXZhdGUgdm9pZCBjb2xIYXN0YVlfU" +
+                        "3VtbWFyeUdldFJlc3VsdChvYmplY3Qgc2VuZGVyLCBEZXZFeHByZXNzLlh0cmFSZXBvcnRzLlVJLlN1b" +
+                        "W1hcnlHZXRSZXN1bHRFdmVudEFyZ3MgZSkgew0KDQoJZG91YmxlIGFGaXJzdCA9IEdldEN1cnJlbnRDb" +
+                        "2x1bW5WYWx1ZSgiY29sU3VtSGFzdGFDIik7DQoJZG91YmxlIGFGaXJzdCA9IEdldEN1cnJlbnRDb2x1b" +
+                        "W5WYWx1ZSgiY29sU3VtSGFzdGFQIik7DQoJaWYgKGFGaXJzdCA9PSAwIHx8IGFTZWNvbmQgPT0gMCkNC" +
+                        "gkJZTA7DQoJZWxzZQ0KCQlyZXR1cm4gKGFTZWNvbmQgLSBhRmlyc3QpIC8gYUZpcnN0Ow0KDQoNCn0NC" +
+                        "gHqAlNlbGVjdCAiQWRldEMiLCAiQWRldFAiLCAiQWRldFAxIiwgIkhhc3RhQyIsICJIYXN0YVAiLCAiS" +
+                        "GFzdGFQMSIsICJUb3BsYW1DIiwgIlRvcGxhbVAiLCAiVG9wbGFtUDEiLCAiVG9wbGFtWSIsICJUb3BsY" +
+                        "W1ZMSIsICJLaXNpQmFzaUMiLCAiS2lzaUJhc2lQIiwgIktpc2lCYXNpUDEiLCAiS2lzaUJhc2lZIiwgI" +
+                        "ktpc2lCYXNpWTEiLCAiSXNsZW1CYXNpQyIsICJJc2xlbUJhc2lQIiwgIklzbGVtQmFzaVAxIiwgIklzb" +
+                        "GVtQmFzaVkiLCAiSXNsZW1CYXNpWTEiLCAiSGFzdGFZIiwgIkhhc3RhWTEiLCAiQWRldFkiLCAiQWRld" +
+                        "FkxIiwgIlJvd051bWJlciIsICJLZXkxIiwgIktleTIiIGZyb20gImRibyIuInJ0YmxPemV0QVlQQW5hS" +
+                        "XNsZW0i";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            DevExpress.XtraReports.UI.XRSummary summary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary summary2 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary summary3 = new DevExpress.XtraReports.UI.XRSummary();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.label23 = new DevExpress.XtraReports.UI.XRLabel();
+            this.table1 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.colKey1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colSumHastaC = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colSumHastaP = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colHastaY = new DevExpress.XtraReports.UI.XRTableCell();
+            this.rtblOzetAYPAnaIslemTableAdapter = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.dsMonthlySummaryReports = new XtraReportSerialization.dsMonthlySummaryReportsDataSet();
+            this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMonthlySummaryReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.HeightF = 0F;
+            this.Detail.Name = "Detail";
+            // 
+            // pageFooterBand1
+            // 
+            this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.pageInfo1,
+                        this.pageInfo2});
+            this.pageFooterBand1.HeightF = 29F;
+            this.pageFooterBand1.Name = "pageFooterBand1";
+            // 
+            // reportHeaderBand1
+            // 
+            this.reportHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label23});
+            this.reportHeaderBand1.HeightF = 176F;
+            this.reportHeaderBand1.Name = "reportHeaderBand1";
+            // 
+            // topMarginBand1
+            // 
+            this.topMarginBand1.HeightF = 25F;
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // GroupHeader1
+            // 
+            this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.table1});
+            this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+                        new DevExpress.XtraReports.UI.GroupField("Key1", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader1.Name = "GroupHeader1";
+            // 
+            // pageInfo1
+            // 
+            this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
+            this.pageInfo1.Name = "pageInfo1";
+            this.pageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.pageInfo1.SizeF = new System.Drawing.SizeF(313F, 23F);
+            this.pageInfo1.StyleName = "PageInfo";
+            // 
+            // pageInfo2
+            // 
+            this.pageInfo2.Format = "Page {0} of {1}";
+            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(331F, 6F);
+            this.pageInfo2.Name = "pageInfo2";
+            this.pageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
+            this.pageInfo2.StyleName = "PageInfo";
+            this.pageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // label23
+            // 
+            this.label23.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
+            this.label23.Name = "label23";
+            this.label23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label23.SizeF = new System.Drawing.SizeF(638F, 33F);
+            this.label23.StyleName = "Title";
+            this.label23.Text = "Report2";
+            // 
+            // table1
+            // 
+            this.table1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 39.16667F);
+            this.table1.Name = "table1";
+            this.table1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+                        this.tableRow1});
+            this.table1.SizeF = new System.Drawing.SizeF(588.5417F, 25F);
+            // 
+            // tableRow1
+            // 
+            this.tableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.colKey1,
+                        this.colSumHastaC,
+                        this.colSumHastaP,
+                        this.colHastaY});
+            this.tableRow1.Name = "tableRow1";
+            this.tableRow1.Weight = 1;
+            // 
+            // colKey1
+            // 
+            this.colKey1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYPAnaIslem.Key1")});
+            this.colKey1.Name = "colKey1";
+            this.colKey1.Text = "colKey1";
+            this.colKey1.Weight = 0.42300874851324849;
+            // 
+            // colSumHastaC
+            // 
+            this.colSumHastaC.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYPAnaIslem.HastaC")});
+            this.colSumHastaC.Name = "colSumHastaC";
+            summary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.colSumHastaC.Summary = summary1;
+            this.colSumHastaC.Text = "colSumHastaC";
+            this.colSumHastaC.Weight = 0.46548651944529462;
+            // 
+            // colSumHastaP
+            // 
+            this.colSumHastaP.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYPAnaIslem.HastaP")});
+            this.colSumHastaP.Name = "colSumHastaP";
+            summary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.colSumHastaP.Summary = summary2;
+            this.colSumHastaP.Text = "colSumHastaP";
+            this.colSumHastaP.Weight = 1.1115047320414571;
+            // 
+            // colHastaY
+            // 
+            this.colHastaY.Name = "colHastaY";
+            this.colHastaY.Scripts.OnSummaryGetResult = "colHastaY_SummaryGetResult";
+            summary3.Func = DevExpress.XtraReports.UI.SummaryFunc.Custom;
+            this.colHastaY.Summary = summary3;
+            this.colHastaY.Weight = 1;
+            // 
+            // rtblOzetAYPAnaIslemTableAdapter
+            // 
+            this.rtblOzetAYPAnaIslemTableAdapter.SelectCommand = this.sqlCommand1;
+            this.rtblOzetAYPAnaIslemTableAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+                        new System.Data.Common.DataTableMapping("Table", "rtblOzetAYPAnaIslem", new System.Data.Common.DataColumnMapping[0])});
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandText = resources.GetString("sqlCommand1.CommandText");
+            this.sqlCommand1.Connection = this.sqlConnection1;
+            // 
+            // sqlConnection1
+            // 
+            this.sqlConnection1.ConnectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TIPDATA;Data" +
+                " Source=AYDINLAPTOP";
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            // 
+            // dsMonthlySummaryReports
+            // 
+            this.dsMonthlySummaryReports.DataSetName = "dsMonthlySummaryReports";
+            // 
+            // Title
+            // 
+            this.Title.BackColor = System.Drawing.Color.White;
+            this.Title.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.Title.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Title.BorderWidth = 1;
+            this.Title.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
+            this.Title.ForeColor = System.Drawing.Color.Maroon;
+            this.Title.Name = "Title";
+            // 
+            // FieldCaption
+            // 
+            this.FieldCaption.BackColor = System.Drawing.Color.White;
+            this.FieldCaption.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.FieldCaption.BorderWidth = 1;
+            this.FieldCaption.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.FieldCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.FieldCaption.Name = "FieldCaption";
+            // 
+            // PageInfo
+            // 
+            this.PageInfo.BackColor = System.Drawing.Color.White;
+            this.PageInfo.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.PageInfo.BorderWidth = 1;
+            this.PageInfo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.PageInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Name = "PageInfo";
+            // 
+            // DataField
+            // 
+            this.DataField.BackColor = System.Drawing.Color.White;
+            this.DataField.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.DataField.BorderWidth = 1;
+            this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.DataField.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Name = "DataField";
+            this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            // 
+            // Report2
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail,
+                        this.pageFooterBand1,
+                        this.reportHeaderBand1,
+                        this.topMarginBand1,
+                        this.bottomMarginBand1,
+                        this.GroupHeader1});
+            this.DataAdapter = this.rtblOzetAYPAnaIslemTableAdapter;
+            this.DataMember = "rtblOzetAYPAnaIslem";
+            this.DataSource = this.dsMonthlySummaryReports;
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 25, 100);
+            this.Name = "Report2";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.ScriptsSource = resources.GetString("$this.ScriptsSource");
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+                        this.Title,
+                        this.FieldCaption,
+                        this.PageInfo,
+                        this.DataField});
+            this.Version = "10.2";
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMonthlySummaryReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
+namespace XtraReportSerialization {
+    
+    /// <summary>
+    ///Represents a strongly typed in-memory cache of data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.Serializable()]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsMonthlySummaryReportsDataSet")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
+    public partial class dsMonthlySummaryReportsDataSet : global::System.Data.DataSet {
+        private rtblOzetAYPAnaIslemDataTable tablertblOzetAYPAnaIslem;
+        private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public dsMonthlySummaryReportsDataSet() {
+            this.BeginInit();
+            this.InitClass();
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            base.Relations.CollectionChanged += schemaChangedHandler;
+            this.EndInit();
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected dsMonthlySummaryReportsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                base(info, context, false) {
+            if ((this.IsBinarySerialized(info, context) == true)) {
+                this.InitVars(false);
+                global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+                this.Tables.CollectionChanged += schemaChangedHandler1;
+                this.Relations.CollectionChanged += schemaChangedHandler1;
+                return;
+            }
+            string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
+            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["rtblOzetAYPAnaIslem"] != null)) {
+                    base.Tables.Add(new rtblOzetAYPAnaIslemDataTable(ds.Tables["rtblOzetAYPAnaIslem"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else {
+                this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+            }
+            this.GetSerializationData(info, context);
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            this.Relations.CollectionChanged += schemaChangedHandler;
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public rtblOzetAYPAnaIslemDataTable rtblOzetAYPAnaIslem {
+            get {
+                return this.tablertblOzetAYPAnaIslem;
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.BrowsableAttribute(true)]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
+            get {
+                return this._schemaSerializationMode;
+            }
+            set {
+                this._schemaSerializationMode = value;
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public new global::System.Data.DataTableCollection Tables {
+            get {
+                return base.Tables;
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public new global::System.Data.DataRelationCollection Relations {
+            get {
+                return base.Relations;
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void InitializeDerivedDataSet() {
+            this.BeginInit();
+            this.InitClass();
+            this.EndInit();
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public override global::System.Data.DataSet Clone() {
+            dsMonthlySummaryReportsDataSet cln = ((dsMonthlySummaryReportsDataSet)(base.Clone()));
+            cln.InitVars();
+            cln.SchemaSerializationMode = this.SchemaSerializationMode;
+            return cln;
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeTables() {
+            return false;
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeRelations() {
+            return false;
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                this.Reset();
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXml(reader);
+                if ((ds.Tables["rtblOzetAYPAnaIslem"] != null)) {
+                    base.Tables.Add(new rtblOzetAYPAnaIslemDataTable(ds.Tables["rtblOzetAYPAnaIslem"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else {
+                this.ReadXml(reader);
+                this.InitVars();
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
+            global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
+            this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
+            stream.Position = 0;
+            return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars() {
+            this.InitVars(true);
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars(bool initTable) {
+            this.tablertblOzetAYPAnaIslem = ((rtblOzetAYPAnaIslemDataTable)(base.Tables["rtblOzetAYPAnaIslem"]));
+            if ((initTable == true)) {
+                if ((this.tablertblOzetAYPAnaIslem != null)) {
+                    this.tablertblOzetAYPAnaIslem.InitVars();
+                }
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitClass() {
+            this.DataSetName = "dsMonthlySummaryReportsDataSet";
+            this.Prefix = "";
+            this.EnforceConstraints = true;
+            this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tablertblOzetAYPAnaIslem = new rtblOzetAYPAnaIslemDataTable();
+            base.Tables.Add(this.tablertblOzetAYPAnaIslem);
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializertblOzetAYPAnaIslem() {
+            return false;
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
+                this.InitVars();
+            }
+        }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            dsMonthlySummaryReportsDataSet ds = new dsMonthlySummaryReportsDataSet();
+            global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+            global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+            global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
+            any.Namespace = ds.Namespace;
+            sequence.Items.Add(any);
+            type.Particle = sequence;
+            global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+            if (xs.Contains(dsSchema.TargetNamespace)) {
+                global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                try {
+                    global::System.Xml.Schema.XmlSchema schema = null;
+                    dsSchema.Write(s1);
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        s2.SetLength(0);
+                        schema.Write(s2);
+                        if ((s1.Length == s2.Length)) {
+                            s1.Position = 0;
+                            s2.Position = 0;
+                            for (; ((s1.Position != s1.Length) 
+                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                                ;
+                            }
+                            if ((s1.Position == s1.Length)) {
+                                return type;
+                            }
+                        }
+                    }
+                }
+                finally {
+                    if ((s1 != null)) {
+                        s1.Close();
+                    }
+                    if ((s2 != null)) {
+                        s2.Close();
+                    }
+                }
+            }
+            xs.Add(dsSchema);
+            return type;
+        }
+        public delegate void rtblOzetAYPAnaIslemRowChangeEventHandler(object sender, rtblOzetAYPAnaIslemRowChangeEvent e);
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class rtblOzetAYPAnaIslemDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+            private global::System.Data.DataColumn columnAdetC;
+            private global::System.Data.DataColumn columnAdetP;
+            private global::System.Data.DataColumn columnAdetP1;
+            private global::System.Data.DataColumn columnHastaC;
+            private global::System.Data.DataColumn columnHastaP;
+            private global::System.Data.DataColumn columnHastaP1;
+            private global::System.Data.DataColumn columnToplamC;
+            private global::System.Data.DataColumn columnToplamP;
+            private global::System.Data.DataColumn columnToplamP1;
+            private global::System.Data.DataColumn columnToplamY;
+            private global::System.Data.DataColumn columnToplamY1;
+            private global::System.Data.DataColumn columnKisiBasiC;
+            private global::System.Data.DataColumn columnKisiBasiP;
+            private global::System.Data.DataColumn columnKisiBasiP1;
+            private global::System.Data.DataColumn columnKisiBasiY;
+            private global::System.Data.DataColumn columnKisiBasiY1;
+            private global::System.Data.DataColumn columnIslemBasiC;
+            private global::System.Data.DataColumn columnIslemBasiP;
+            private global::System.Data.DataColumn columnIslemBasiP1;
+            private global::System.Data.DataColumn columnIslemBasiY;
+            private global::System.Data.DataColumn columnIslemBasiY1;
+            private global::System.Data.DataColumn columnHastaY;
+            private global::System.Data.DataColumn columnHastaY1;
+            private global::System.Data.DataColumn columnAdetY;
+            private global::System.Data.DataColumn columnAdetY1;
+            private global::System.Data.DataColumn columnRowNumber;
+            private global::System.Data.DataColumn columnKey1;
+            private global::System.Data.DataColumn columnKey2;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemDataTable() {
+                this.TableName = "rtblOzetAYPAnaIslem";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal rtblOzetAYPAnaIslemDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected rtblOzetAYPAnaIslemDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AdetCColumn {
+                get {
+                    return this.columnAdetC;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AdetPColumn {
+                get {
+                    return this.columnAdetP;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AdetP1Column {
+                get {
+                    return this.columnAdetP1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HastaCColumn {
+                get {
+                    return this.columnHastaC;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HastaPColumn {
+                get {
+                    return this.columnHastaP;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HastaP1Column {
+                get {
+                    return this.columnHastaP1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ToplamCColumn {
+                get {
+                    return this.columnToplamC;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ToplamPColumn {
+                get {
+                    return this.columnToplamP;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ToplamP1Column {
+                get {
+                    return this.columnToplamP1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ToplamYColumn {
+                get {
+                    return this.columnToplamY;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ToplamY1Column {
+                get {
+                    return this.columnToplamY1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn KisiBasiCColumn {
+                get {
+                    return this.columnKisiBasiC;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn KisiBasiPColumn {
+                get {
+                    return this.columnKisiBasiP;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn KisiBasiP1Column {
+                get {
+                    return this.columnKisiBasiP1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn KisiBasiYColumn {
+                get {
+                    return this.columnKisiBasiY;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn KisiBasiY1Column {
+                get {
+                    return this.columnKisiBasiY1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IslemBasiCColumn {
+                get {
+                    return this.columnIslemBasiC;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IslemBasiPColumn {
+                get {
+                    return this.columnIslemBasiP;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IslemBasiP1Column {
+                get {
+                    return this.columnIslemBasiP1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IslemBasiYColumn {
+                get {
+                    return this.columnIslemBasiY;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IslemBasiY1Column {
+                get {
+                    return this.columnIslemBasiY1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HastaYColumn {
+                get {
+                    return this.columnHastaY;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HastaY1Column {
+                get {
+                    return this.columnHastaY1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AdetYColumn {
+                get {
+                    return this.columnAdetY;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AdetY1Column {
+                get {
+                    return this.columnAdetY1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn RowNumberColumn {
+                get {
+                    return this.columnRowNumber;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn Key1Column {
+                get {
+                    return this.columnKey1;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn Key2Column {
+                get {
+                    return this.columnKey2;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemRow this[int index] {
+                get {
+                    return ((rtblOzetAYPAnaIslemRow)(this.Rows[index]));
+                }
+            }
+            public event rtblOzetAYPAnaIslemRowChangeEventHandler rtblOzetAYPAnaIslemRowChanging;
+            public event rtblOzetAYPAnaIslemRowChangeEventHandler rtblOzetAYPAnaIslemRowChanged;
+            public event rtblOzetAYPAnaIslemRowChangeEventHandler rtblOzetAYPAnaIslemRowDeleting;
+            public event rtblOzetAYPAnaIslemRowChangeEventHandler rtblOzetAYPAnaIslemRowDeleted;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddrtblOzetAYPAnaIslemRow(rtblOzetAYPAnaIslemRow row) {
+                this.Rows.Add(row);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemRow AddrtblOzetAYPAnaIslemRow(
+                        double AdetC, 
+                        double AdetP, 
+                        double AdetP1, 
+                        int HastaC, 
+                        int HastaP, 
+                        int HastaP1, 
+                        double ToplamC, 
+                        double ToplamP, 
+                        double ToplamP1, 
+                        double ToplamY, 
+                        double ToplamY1, 
+                        double KisiBasiC, 
+                        double KisiBasiP, 
+                        double KisiBasiP1, 
+                        double KisiBasiY, 
+                        double KisiBasiY1, 
+                        double IslemBasiC, 
+                        double IslemBasiP, 
+                        double IslemBasiP1, 
+                        double IslemBasiY, 
+                        double IslemBasiY1, 
+                        double HastaY, 
+                        double HastaY1, 
+                        double AdetY, 
+                        double AdetY1, 
+                        long RowNumber, 
+                        string Key1, 
+                        string Key2) {
+                rtblOzetAYPAnaIslemRow rowrtblOzetAYPAnaIslemRow = ((rtblOzetAYPAnaIslemRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        AdetC,
+                        AdetP,
+                        AdetP1,
+                        HastaC,
+                        HastaP,
+                        HastaP1,
+                        ToplamC,
+                        ToplamP,
+                        ToplamP1,
+                        ToplamY,
+                        ToplamY1,
+                        KisiBasiC,
+                        KisiBasiP,
+                        KisiBasiP1,
+                        KisiBasiY,
+                        KisiBasiY1,
+                        IslemBasiC,
+                        IslemBasiP,
+                        IslemBasiP1,
+                        IslemBasiY,
+                        IslemBasiY1,
+                        HastaY,
+                        HastaY1,
+                        AdetY,
+                        AdetY1,
+                        RowNumber,
+                        Key1,
+                        Key2};
+                rowrtblOzetAYPAnaIslemRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrtblOzetAYPAnaIslemRow);
+                return rowrtblOzetAYPAnaIslemRow;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public virtual global::System.Collections.IEnumerator GetEnumerator() {
+                return this.Rows.GetEnumerator();
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                rtblOzetAYPAnaIslemDataTable cln = ((rtblOzetAYPAnaIslemDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new rtblOzetAYPAnaIslemDataTable();
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnAdetC = base.Columns["AdetC"];
+                this.columnAdetP = base.Columns["AdetP"];
+                this.columnAdetP1 = base.Columns["AdetP1"];
+                this.columnHastaC = base.Columns["HastaC"];
+                this.columnHastaP = base.Columns["HastaP"];
+                this.columnHastaP1 = base.Columns["HastaP1"];
+                this.columnToplamC = base.Columns["ToplamC"];
+                this.columnToplamP = base.Columns["ToplamP"];
+                this.columnToplamP1 = base.Columns["ToplamP1"];
+                this.columnToplamY = base.Columns["ToplamY"];
+                this.columnToplamY1 = base.Columns["ToplamY1"];
+                this.columnKisiBasiC = base.Columns["KisiBasiC"];
+                this.columnKisiBasiP = base.Columns["KisiBasiP"];
+                this.columnKisiBasiP1 = base.Columns["KisiBasiP1"];
+                this.columnKisiBasiY = base.Columns["KisiBasiY"];
+                this.columnKisiBasiY1 = base.Columns["KisiBasiY1"];
+                this.columnIslemBasiC = base.Columns["IslemBasiC"];
+                this.columnIslemBasiP = base.Columns["IslemBasiP"];
+                this.columnIslemBasiP1 = base.Columns["IslemBasiP1"];
+                this.columnIslemBasiY = base.Columns["IslemBasiY"];
+                this.columnIslemBasiY1 = base.Columns["IslemBasiY1"];
+                this.columnHastaY = base.Columns["HastaY"];
+                this.columnHastaY1 = base.Columns["HastaY1"];
+                this.columnAdetY = base.Columns["AdetY"];
+                this.columnAdetY1 = base.Columns["AdetY1"];
+                this.columnRowNumber = base.Columns["RowNumber"];
+                this.columnKey1 = base.Columns["Key1"];
+                this.columnKey2 = base.Columns["Key2"];
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnAdetC = new global::System.Data.DataColumn("AdetC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetC);
+                this.columnAdetP = new global::System.Data.DataColumn("AdetP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetP);
+                this.columnAdetP1 = new global::System.Data.DataColumn("AdetP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetP1);
+                this.columnHastaC = new global::System.Data.DataColumn("HastaC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaC);
+                this.columnHastaP = new global::System.Data.DataColumn("HastaP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaP);
+                this.columnHastaP1 = new global::System.Data.DataColumn("HastaP1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaP1);
+                this.columnToplamC = new global::System.Data.DataColumn("ToplamC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamC);
+                this.columnToplamP = new global::System.Data.DataColumn("ToplamP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamP);
+                this.columnToplamP1 = new global::System.Data.DataColumn("ToplamP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamP1);
+                this.columnToplamY = new global::System.Data.DataColumn("ToplamY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamY);
+                this.columnToplamY1 = new global::System.Data.DataColumn("ToplamY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamY1);
+                this.columnKisiBasiC = new global::System.Data.DataColumn("KisiBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiC);
+                this.columnKisiBasiP = new global::System.Data.DataColumn("KisiBasiP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiP);
+                this.columnKisiBasiP1 = new global::System.Data.DataColumn("KisiBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiP1);
+                this.columnKisiBasiY = new global::System.Data.DataColumn("KisiBasiY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiY);
+                this.columnKisiBasiY1 = new global::System.Data.DataColumn("KisiBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiY1);
+                this.columnIslemBasiC = new global::System.Data.DataColumn("IslemBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiC);
+                this.columnIslemBasiP = new global::System.Data.DataColumn("IslemBasiP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiP);
+                this.columnIslemBasiP1 = new global::System.Data.DataColumn("IslemBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiP1);
+                this.columnIslemBasiY = new global::System.Data.DataColumn("IslemBasiY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiY);
+                this.columnIslemBasiY1 = new global::System.Data.DataColumn("IslemBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiY1);
+                this.columnHastaY = new global::System.Data.DataColumn("HastaY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaY);
+                this.columnHastaY1 = new global::System.Data.DataColumn("HastaY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaY1);
+                this.columnAdetY = new global::System.Data.DataColumn("AdetY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetY);
+                this.columnAdetY1 = new global::System.Data.DataColumn("AdetY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetY1);
+                this.columnRowNumber = new global::System.Data.DataColumn("RowNumber", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRowNumber);
+                this.columnKey1 = new global::System.Data.DataColumn("Key1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKey1);
+                this.columnKey2 = new global::System.Data.DataColumn("Key2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKey2);
+                this.columnAdetC.AllowDBNull = false;
+                this.columnAdetP.AllowDBNull = false;
+                this.columnAdetP1.AllowDBNull = false;
+                this.columnHastaC.AllowDBNull = false;
+                this.columnHastaP.AllowDBNull = false;
+                this.columnHastaP1.AllowDBNull = false;
+                this.columnToplamC.AllowDBNull = false;
+                this.columnToplamP.AllowDBNull = false;
+                this.columnToplamP1.AllowDBNull = false;
+                this.columnKey1.MaxLength = 255;
+                this.columnKey2.MaxLength = 255;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemRow NewrtblOzetAYPAnaIslemRow() {
+                return ((rtblOzetAYPAnaIslemRow)(this.NewRow()));
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new rtblOzetAYPAnaIslemRow(builder);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(rtblOzetAYPAnaIslemRow);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.rtblOzetAYPAnaIslemRowChanged != null)) {
+                    this.rtblOzetAYPAnaIslemRowChanged(this, new rtblOzetAYPAnaIslemRowChangeEvent(((rtblOzetAYPAnaIslemRow)(e.Row)), e.Action));
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.rtblOzetAYPAnaIslemRowChanging != null)) {
+                    this.rtblOzetAYPAnaIslemRowChanging(this, new rtblOzetAYPAnaIslemRowChangeEvent(((rtblOzetAYPAnaIslemRow)(e.Row)), e.Action));
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.rtblOzetAYPAnaIslemRowDeleted != null)) {
+                    this.rtblOzetAYPAnaIslemRowDeleted(this, new rtblOzetAYPAnaIslemRowChangeEvent(((rtblOzetAYPAnaIslemRow)(e.Row)), e.Action));
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.rtblOzetAYPAnaIslemRowDeleting != null)) {
+                    this.rtblOzetAYPAnaIslemRowDeleting(this, new rtblOzetAYPAnaIslemRowChangeEvent(((rtblOzetAYPAnaIslemRow)(e.Row)), e.Action));
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemovertblOzetAYPAnaIslemRow(rtblOzetAYPAnaIslemRow row) {
+                this.Rows.Remove(row);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsMonthlySummaryReportsDataSet ds = new dsMonthlySummaryReportsDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "rtblOzetAYPAnaIslemDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class rtblOzetAYPAnaIslemRow : global::System.Data.DataRow {
+            private rtblOzetAYPAnaIslemDataTable tablertblOzetAYPAnaIslem;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal rtblOzetAYPAnaIslemRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablertblOzetAYPAnaIslem = ((rtblOzetAYPAnaIslemDataTable)(this.Table));
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double AdetC {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.AdetCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.AdetCColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double AdetP {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.AdetPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.AdetPColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double AdetP1 {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.AdetP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.AdetP1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int HastaC {
+                get {
+                    return ((int)(this[this.tablertblOzetAYPAnaIslem.HastaCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.HastaCColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int HastaP {
+                get {
+                    return ((int)(this[this.tablertblOzetAYPAnaIslem.HastaPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.HastaPColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int HastaP1 {
+                get {
+                    return ((int)(this[this.tablertblOzetAYPAnaIslem.HastaP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.HastaP1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double ToplamC {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.ToplamCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.ToplamCColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double ToplamP {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.ToplamPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.ToplamPColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double ToplamP1 {
+                get {
+                    return ((double)(this[this.tablertblOzetAYPAnaIslem.ToplamP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.ToplamP1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double ToplamY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.ToplamYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'ToplamY\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.ToplamYColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double ToplamY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.ToplamY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'ToplamY1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.ToplamY1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double KisiBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.KisiBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'KisiBasiC\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.KisiBasiCColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double KisiBasiP {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.KisiBasiPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'KisiBasiP\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.KisiBasiPColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double KisiBasiP1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.KisiBasiP1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'KisiBasiP1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.KisiBasiP1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double KisiBasiY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.KisiBasiYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'KisiBasiY\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.KisiBasiYColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double KisiBasiY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.KisiBasiY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'KisiBasiY1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.KisiBasiY1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double IslemBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.IslemBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'IslemBasiC\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.IslemBasiCColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double IslemBasiP {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.IslemBasiPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'IslemBasiP\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.IslemBasiPColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double IslemBasiP1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.IslemBasiP1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'IslemBasiP1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.IslemBasiP1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double IslemBasiY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.IslemBasiYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'IslemBasiY\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.IslemBasiYColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double IslemBasiY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.IslemBasiY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'IslemBasiY1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.IslemBasiY1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double HastaY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.HastaYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'HastaY\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.HastaYColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double HastaY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.HastaY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'HastaY1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.HastaY1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double AdetY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.AdetYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'AdetY\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.AdetYColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double AdetY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetAYPAnaIslem.AdetY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'AdetY1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.AdetY1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public long RowNumber {
+                get {
+                    try {
+                        return ((long)(this[this.tablertblOzetAYPAnaIslem.RowNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'RowNumber\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.RowNumberColumn] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Key1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablertblOzetAYPAnaIslem.Key1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'Key1\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.Key1Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Key2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablertblOzetAYPAnaIslem.Key2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'rtblOzetAYPAnaIslem\' tablosundaki \'Key2\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetAYPAnaIslem.Key2Column] = value;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsToplamYNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.ToplamYColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetToplamYNull() {
+                this[this.tablertblOzetAYPAnaIslem.ToplamYColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsToplamY1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.ToplamY1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetToplamY1Null() {
+                this[this.tablertblOzetAYPAnaIslem.ToplamY1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKisiBasiCNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.KisiBasiCColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKisiBasiCNull() {
+                this[this.tablertblOzetAYPAnaIslem.KisiBasiCColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKisiBasiPNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.KisiBasiPColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKisiBasiPNull() {
+                this[this.tablertblOzetAYPAnaIslem.KisiBasiPColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKisiBasiP1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.KisiBasiP1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKisiBasiP1Null() {
+                this[this.tablertblOzetAYPAnaIslem.KisiBasiP1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKisiBasiYNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.KisiBasiYColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKisiBasiYNull() {
+                this[this.tablertblOzetAYPAnaIslem.KisiBasiYColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKisiBasiY1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.KisiBasiY1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKisiBasiY1Null() {
+                this[this.tablertblOzetAYPAnaIslem.KisiBasiY1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIslemBasiCNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.IslemBasiCColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIslemBasiCNull() {
+                this[this.tablertblOzetAYPAnaIslem.IslemBasiCColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIslemBasiPNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.IslemBasiPColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIslemBasiPNull() {
+                this[this.tablertblOzetAYPAnaIslem.IslemBasiPColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIslemBasiP1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.IslemBasiP1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIslemBasiP1Null() {
+                this[this.tablertblOzetAYPAnaIslem.IslemBasiP1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIslemBasiYNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.IslemBasiYColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIslemBasiYNull() {
+                this[this.tablertblOzetAYPAnaIslem.IslemBasiYColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIslemBasiY1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.IslemBasiY1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIslemBasiY1Null() {
+                this[this.tablertblOzetAYPAnaIslem.IslemBasiY1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsHastaYNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.HastaYColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetHastaYNull() {
+                this[this.tablertblOzetAYPAnaIslem.HastaYColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsHastaY1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.HastaY1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetHastaY1Null() {
+                this[this.tablertblOzetAYPAnaIslem.HastaY1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsAdetYNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.AdetYColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetAdetYNull() {
+                this[this.tablertblOzetAYPAnaIslem.AdetYColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsAdetY1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.AdetY1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetAdetY1Null() {
+                this[this.tablertblOzetAYPAnaIslem.AdetY1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsRowNumberNull() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.RowNumberColumn);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetRowNumberNull() {
+                this[this.tablertblOzetAYPAnaIslem.RowNumberColumn] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKey1Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.Key1Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKey1Null() {
+                this[this.tablertblOzetAYPAnaIslem.Key1Column] = global::System.Convert.DBNull;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsKey2Null() {
+                return this.IsNull(this.tablertblOzetAYPAnaIslem.Key2Column);
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetKey2Null() {
+                this[this.tablertblOzetAYPAnaIslem.Key2Column] = global::System.Convert.DBNull;
+            }
+        }
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class rtblOzetAYPAnaIslemRowChangeEvent : global::System.EventArgs {
+            private rtblOzetAYPAnaIslemRow eventRow;
+            private global::System.Data.DataRowAction eventAction;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemRowChangeEvent(rtblOzetAYPAnaIslemRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public rtblOzetAYPAnaIslemRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+    }
+}
