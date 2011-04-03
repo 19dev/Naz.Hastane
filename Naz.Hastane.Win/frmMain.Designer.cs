@@ -142,6 +142,12 @@ namespace Naz.Hastane.Win {
             this.iOzetDoktor = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetServis = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetServisAnaIslemPivot = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetAnaIslemAyXTab = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetAnaIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetDoktorServis = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetYatakServisAy = new DevExpress.XtraBars.BarButtonItem();
+            this.iExportToPDF = new DevExpress.XtraBars.BarButtonItem();
+            this.iExportToXSLX = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -172,6 +178,7 @@ namespace Naz.Hastane.Win {
             this.rpgSummaryReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.iDetailReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgPivotTables = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgExportReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmNew = new DevExpress.XtraBars.PopupMenu();
@@ -179,8 +186,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             this.pmMain = new DevExpress.XtraBars.PopupMenu();
             this.imageCollection3 = new DevExpress.Utils.ImageCollection();
-            this.iOzetAnaIslemAyXTab = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzetAnaIslem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -467,10 +472,14 @@ namespace Naz.Hastane.Win {
             this.iOzetServis,
             this.iOzetServisAnaIslemPivot,
             this.iOzetAnaIslemAyXTab,
-            this.iOzetAnaIslem});
+            this.iOzetAnaIslem,
+            this.iOzetDoktorServis,
+            this.iOzetYatakServisAy,
+            this.iExportToPDF,
+            this.iExportToXSLX});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 274;
+            this.rcMain.MaxItemId = 283;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1472,6 +1481,44 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslemPivot.Id = 270;
             this.iOzetServisAnaIslemPivot.Name = "iOzetServisAnaIslemPivot";
             // 
+            // iOzetAnaIslemAyXTab
+            // 
+            this.iOzetAnaIslemAyXTab.Caption = "Aylara Göre Hizmet";
+            this.iOzetAnaIslemAyXTab.Id = 272;
+            this.iOzetAnaIslemAyXTab.Name = "iOzetAnaIslemAyXTab";
+            // 
+            // iOzetAnaIslem
+            // 
+            this.iOzetAnaIslem.Caption = "Ýþlemler";
+            this.iOzetAnaIslem.Id = 273;
+            this.iOzetAnaIslem.Name = "iOzetAnaIslem";
+            // 
+            // iOzetDoktorServis
+            // 
+            this.iOzetDoktorServis.Caption = "Doktor / Servis";
+            this.iOzetDoktorServis.Id = 275;
+            this.iOzetDoktorServis.Name = "iOzetDoktorServis";
+            // 
+            // iOzetYatakServisAy
+            // 
+            this.iOzetYatakServisAy.Caption = "Yatak Kullaným";
+            this.iOzetYatakServisAy.Id = 278;
+            this.iOzetYatakServisAy.Name = "iOzetYatakServisAy";
+            // 
+            // iExportToPDF
+            // 
+            this.iExportToPDF.Caption = "PDF Export";
+            this.iExportToPDF.Id = 280;
+            this.iExportToPDF.Name = "iExportToPDF";
+            this.iExportToPDF.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExportToPDF_ItemClick);
+            // 
+            // iExportToXSLX
+            // 
+            this.iExportToXSLX.Caption = "XLSX Export";
+            this.iExportToXSLX.Id = 281;
+            this.iExportToXSLX.Name = "iExportToXSLX";
+            this.iExportToXSLX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExportToXLSX_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1746,7 +1793,8 @@ namespace Naz.Hastane.Win {
             this.rbAdminReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgSummaryReports,
             this.iDetailReports,
-            this.rpgPivotTables});
+            this.rpgPivotTables,
+            this.rpgExportReports});
             this.rbAdminReports.Name = "rbAdminReports";
             this.rbAdminReports.Text = "Yönetim Raporlarý";
             // 
@@ -1763,9 +1811,10 @@ namespace Naz.Hastane.Win {
             // iDetailReports
             // 
             this.iDetailReports.ItemLinks.Add(this.iOzetAYPAnaIslem);
-            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAYP);
             this.iDetailReports.ItemLinks.Add(this.iOzetDoktorAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetDoktorServis);
             this.iDetailReports.ItemLinks.Add(this.iOzetKurumAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAYP);
             this.iDetailReports.ItemLinks.Add(this.iOzetServisAnaIslem);
             this.iDetailReports.ItemLinks.Add(this.iOzetHastaneServisAnaIslem);
             this.iDetailReports.Name = "iDetailReports";
@@ -1775,8 +1824,16 @@ namespace Naz.Hastane.Win {
             // 
             this.rpgPivotTables.ItemLinks.Add(this.iOzetServisAnaIslemPivot);
             this.rpgPivotTables.ItemLinks.Add(this.iOzetAnaIslemAyXTab);
+            this.rpgPivotTables.ItemLinks.Add(this.iOzetYatakServisAy);
             this.rpgPivotTables.Name = "rpgPivotTables";
             this.rpgPivotTables.Text = "Pivot Tables";
+            // 
+            // rpgExportReports
+            // 
+            this.rpgExportReports.ItemLinks.Add(this.iExportToPDF);
+            this.rpgExportReports.ItemLinks.Add(this.iExportToXSLX);
+            this.rpgExportReports.Name = "rpgExportReports";
+            this.rpgExportReports.Text = "Export";
             // 
             // repositoryItemPictureEdit1
             // 
@@ -1828,18 +1885,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // iOzetAnaIslemAyXTab
-            // 
-            this.iOzetAnaIslemAyXTab.Caption = "Aylara Göre Hizmet";
-            this.iOzetAnaIslemAyXTab.Id = 272;
-            this.iOzetAnaIslemAyXTab.Name = "iOzetAnaIslemAyXTab";
-            // 
-            // iOzetAnaIslem
-            // 
-            this.iOzetAnaIslem.Caption = "Ýþlemler";
-            this.iOzetAnaIslem.Id = 273;
-            this.iOzetAnaIslem.Name = "iOzetAnaIslem";
             // 
             // frmMain
             // 
@@ -2045,6 +2090,11 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPivotTables;
         private DevExpress.XtraBars.BarButtonItem iOzetAnaIslemAyXTab;
         private DevExpress.XtraBars.BarButtonItem iOzetAnaIslem;
+        private DevExpress.XtraBars.BarButtonItem iOzetDoktorServis;
+        private DevExpress.XtraBars.BarButtonItem iOzetYatakServisAy;
+        private DevExpress.XtraBars.BarButtonItem iExportToPDF;
+        private DevExpress.XtraBars.BarButtonItem iExportToXSLX;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExportReports;
 
     }
 }

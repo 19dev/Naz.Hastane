@@ -32,8 +32,6 @@ namespace Naz.Hastane.Reports.DataSets {
         
         private rtblOzetAnaIslemDataTable tablertblOzetAnaIslem;
         
-        private rtblOzetDoktorDataTable tablertblOzetDoktor;
-        
         private rtblOzetDoktorAnaIslemDataTable tablertblOzetDoktorAnaIslem;
         
         private rtblOzetHastaneServisAnaIslemDataTable tablertblOzetHastaneServisAnaIslem;
@@ -47,6 +45,10 @@ namespace Naz.Hastane.Reports.DataSets {
         private rtblOzetServisAnaIslemDataTable tablertblOzetServisAnaIslem;
         
         private rtblOzetAnaIslemAyDataTable tablertblOzetAnaIslemAy;
+        
+        private rtblOzetDoktorDataTable tablertblOzetDoktor;
+        
+        private rtblOzetYatakServisAyDataTable tablertblOzetYatakServisAy;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -88,9 +90,6 @@ namespace Naz.Hastane.Reports.DataSets {
                 if ((ds.Tables["rtblOzetAnaIslem"] != null)) {
                     base.Tables.Add(new rtblOzetAnaIslemDataTable(ds.Tables["rtblOzetAnaIslem"]));
                 }
-                if ((ds.Tables["rtblOzetDoktor"] != null)) {
-                    base.Tables.Add(new rtblOzetDoktorDataTable(ds.Tables["rtblOzetDoktor"]));
-                }
                 if ((ds.Tables["rtblOzetDoktorAnaIslem"] != null)) {
                     base.Tables.Add(new rtblOzetDoktorAnaIslemDataTable(ds.Tables["rtblOzetDoktorAnaIslem"]));
                 }
@@ -111,6 +110,12 @@ namespace Naz.Hastane.Reports.DataSets {
                 }
                 if ((ds.Tables["rtblOzetAnaIslemAy"] != null)) {
                     base.Tables.Add(new rtblOzetAnaIslemAyDataTable(ds.Tables["rtblOzetAnaIslemAy"]));
+                }
+                if ((ds.Tables["rtblOzetDoktor"] != null)) {
+                    base.Tables.Add(new rtblOzetDoktorDataTable(ds.Tables["rtblOzetDoktor"]));
+                }
+                if ((ds.Tables["rtblOzetYatakServisAy"] != null)) {
+                    base.Tables.Add(new rtblOzetYatakServisAyDataTable(ds.Tables["rtblOzetYatakServisAy"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -167,16 +172,6 @@ namespace Naz.Hastane.Reports.DataSets {
         public rtblOzetAnaIslemDataTable rtblOzetAnaIslem {
             get {
                 return this.tablertblOzetAnaIslem;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public rtblOzetDoktorDataTable rtblOzetDoktor {
-            get {
-                return this.tablertblOzetDoktor;
             }
         }
         
@@ -247,6 +242,26 @@ namespace Naz.Hastane.Reports.DataSets {
         public rtblOzetAnaIslemAyDataTable rtblOzetAnaIslemAy {
             get {
                 return this.tablertblOzetAnaIslemAy;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public rtblOzetDoktorDataTable rtblOzetDoktor {
+            get {
+                return this.tablertblOzetDoktor;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public rtblOzetYatakServisAyDataTable rtblOzetYatakServisAy {
+            get {
+                return this.tablertblOzetYatakServisAy;
             }
         }
         
@@ -329,9 +344,6 @@ namespace Naz.Hastane.Reports.DataSets {
                 if ((ds.Tables["rtblOzetAnaIslem"] != null)) {
                     base.Tables.Add(new rtblOzetAnaIslemDataTable(ds.Tables["rtblOzetAnaIslem"]));
                 }
-                if ((ds.Tables["rtblOzetDoktor"] != null)) {
-                    base.Tables.Add(new rtblOzetDoktorDataTable(ds.Tables["rtblOzetDoktor"]));
-                }
                 if ((ds.Tables["rtblOzetDoktorAnaIslem"] != null)) {
                     base.Tables.Add(new rtblOzetDoktorAnaIslemDataTable(ds.Tables["rtblOzetDoktorAnaIslem"]));
                 }
@@ -352,6 +364,12 @@ namespace Naz.Hastane.Reports.DataSets {
                 }
                 if ((ds.Tables["rtblOzetAnaIslemAy"] != null)) {
                     base.Tables.Add(new rtblOzetAnaIslemAyDataTable(ds.Tables["rtblOzetAnaIslemAy"]));
+                }
+                if ((ds.Tables["rtblOzetDoktor"] != null)) {
+                    base.Tables.Add(new rtblOzetDoktorDataTable(ds.Tables["rtblOzetDoktor"]));
+                }
+                if ((ds.Tables["rtblOzetYatakServisAy"] != null)) {
+                    base.Tables.Add(new rtblOzetYatakServisAyDataTable(ds.Tables["rtblOzetYatakServisAy"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -410,12 +428,6 @@ namespace Naz.Hastane.Reports.DataSets {
                     this.tablertblOzetAnaIslem.InitVars();
                 }
             }
-            this.tablertblOzetDoktor = ((rtblOzetDoktorDataTable)(base.Tables["rtblOzetDoktor"]));
-            if ((initTable == true)) {
-                if ((this.tablertblOzetDoktor != null)) {
-                    this.tablertblOzetDoktor.InitVars();
-                }
-            }
             this.tablertblOzetDoktorAnaIslem = ((rtblOzetDoktorAnaIslemDataTable)(base.Tables["rtblOzetDoktorAnaIslem"]));
             if ((initTable == true)) {
                 if ((this.tablertblOzetDoktorAnaIslem != null)) {
@@ -458,6 +470,18 @@ namespace Naz.Hastane.Reports.DataSets {
                     this.tablertblOzetAnaIslemAy.InitVars();
                 }
             }
+            this.tablertblOzetDoktor = ((rtblOzetDoktorDataTable)(base.Tables["rtblOzetDoktor"]));
+            if ((initTable == true)) {
+                if ((this.tablertblOzetDoktor != null)) {
+                    this.tablertblOzetDoktor.InitVars();
+                }
+            }
+            this.tablertblOzetYatakServisAy = ((rtblOzetYatakServisAyDataTable)(base.Tables["rtblOzetYatakServisAy"]));
+            if ((initTable == true)) {
+                if ((this.tablertblOzetYatakServisAy != null)) {
+                    this.tablertblOzetYatakServisAy.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -476,8 +500,6 @@ namespace Naz.Hastane.Reports.DataSets {
             base.Tables.Add(this.tablertblOzetAYPKurum);
             this.tablertblOzetAnaIslem = new rtblOzetAnaIslemDataTable();
             base.Tables.Add(this.tablertblOzetAnaIslem);
-            this.tablertblOzetDoktor = new rtblOzetDoktorDataTable();
-            base.Tables.Add(this.tablertblOzetDoktor);
             this.tablertblOzetDoktorAnaIslem = new rtblOzetDoktorAnaIslemDataTable();
             base.Tables.Add(this.tablertblOzetDoktorAnaIslem);
             this.tablertblOzetHastaneServisAnaIslem = new rtblOzetHastaneServisAnaIslemDataTable();
@@ -492,6 +514,10 @@ namespace Naz.Hastane.Reports.DataSets {
             base.Tables.Add(this.tablertblOzetServisAnaIslem);
             this.tablertblOzetAnaIslemAy = new rtblOzetAnaIslemAyDataTable();
             base.Tables.Add(this.tablertblOzetAnaIslemAy);
+            this.tablertblOzetDoktor = new rtblOzetDoktorDataTable();
+            base.Tables.Add(this.tablertblOzetDoktor);
+            this.tablertblOzetYatakServisAy = new rtblOzetYatakServisAyDataTable();
+            base.Tables.Add(this.tablertblOzetYatakServisAy);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -515,12 +541,6 @@ namespace Naz.Hastane.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializertblOzetAnaIslem() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializertblOzetDoktor() {
             return false;
         }
         
@@ -563,6 +583,18 @@ namespace Naz.Hastane.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializertblOzetAnaIslemAy() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializertblOzetDoktor() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializertblOzetYatakServisAy() {
             return false;
         }
         
@@ -634,9 +666,6 @@ namespace Naz.Hastane.Reports.DataSets {
         public delegate void rtblOzetAnaIslemRowChangeEventHandler(object sender, rtblOzetAnaIslemRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void rtblOzetDoktorRowChangeEventHandler(object sender, rtblOzetDoktorRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void rtblOzetDoktorAnaIslemRowChangeEventHandler(object sender, rtblOzetDoktorAnaIslemRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -656,6 +685,12 @@ namespace Naz.Hastane.Reports.DataSets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void rtblOzetAnaIslemAyRowChangeEventHandler(object sender, rtblOzetAnaIslemAyRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void rtblOzetDoktorRowChangeEventHandler(object sender, rtblOzetDoktorRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void rtblOzetYatakServisAyRowChangeEventHandler(object sender, rtblOzetYatakServisAyRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3241,655 +3276,6 @@ namespace Naz.Hastane.Reports.DataSets {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "rtblOzetAnaIslemDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class rtblOzetDoktorDataTable : global::System.Data.TypedTableBase<rtblOzetDoktorRow> {
-            
-            private global::System.Data.DataColumn columnRowNumber;
-            
-            private global::System.Data.DataColumn columnKey1;
-            
-            private global::System.Data.DataColumn columnAdetC;
-            
-            private global::System.Data.DataColumn columnAdetP;
-            
-            private global::System.Data.DataColumn columnAdetP1;
-            
-            private global::System.Data.DataColumn columnAdetY;
-            
-            private global::System.Data.DataColumn columnAdetY1;
-            
-            private global::System.Data.DataColumn columnHastaC;
-            
-            private global::System.Data.DataColumn columnHastaP;
-            
-            private global::System.Data.DataColumn columnHastaP1;
-            
-            private global::System.Data.DataColumn columnHastaY;
-            
-            private global::System.Data.DataColumn columnHastaY1;
-            
-            private global::System.Data.DataColumn columnToplamC;
-            
-            private global::System.Data.DataColumn columnToplamP;
-            
-            private global::System.Data.DataColumn columnToplamP1;
-            
-            private global::System.Data.DataColumn columnToplamY;
-            
-            private global::System.Data.DataColumn columnToplamY1;
-            
-            private global::System.Data.DataColumn columnKisiBasiC;
-            
-            private global::System.Data.DataColumn columnKisiBasiP;
-            
-            private global::System.Data.DataColumn columnKisiBasiP1;
-            
-            private global::System.Data.DataColumn columnKisiBasiY;
-            
-            private global::System.Data.DataColumn columnKisiBasiY1;
-            
-            private global::System.Data.DataColumn columnIslemBasiC;
-            
-            private global::System.Data.DataColumn columnIslemBasiP;
-            
-            private global::System.Data.DataColumn columnIslemBasiP1;
-            
-            private global::System.Data.DataColumn columnIslemBasiY;
-            
-            private global::System.Data.DataColumn columnIslemBasiY1;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorDataTable() {
-                this.TableName = "rtblOzetDoktor";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal rtblOzetDoktorDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected rtblOzetDoktorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RowNumberColumn {
-                get {
-                    return this.columnRowNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Key1Column {
-                get {
-                    return this.columnKey1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdetCColumn {
-                get {
-                    return this.columnAdetC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdetPColumn {
-                get {
-                    return this.columnAdetP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdetP1Column {
-                get {
-                    return this.columnAdetP1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdetYColumn {
-                get {
-                    return this.columnAdetY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdetY1Column {
-                get {
-                    return this.columnAdetY1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HastaCColumn {
-                get {
-                    return this.columnHastaC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HastaPColumn {
-                get {
-                    return this.columnHastaP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HastaP1Column {
-                get {
-                    return this.columnHastaP1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HastaYColumn {
-                get {
-                    return this.columnHastaY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HastaY1Column {
-                get {
-                    return this.columnHastaY1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ToplamCColumn {
-                get {
-                    return this.columnToplamC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ToplamPColumn {
-                get {
-                    return this.columnToplamP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ToplamP1Column {
-                get {
-                    return this.columnToplamP1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ToplamYColumn {
-                get {
-                    return this.columnToplamY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ToplamY1Column {
-                get {
-                    return this.columnToplamY1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn KisiBasiCColumn {
-                get {
-                    return this.columnKisiBasiC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn KisiBasiPColumn {
-                get {
-                    return this.columnKisiBasiP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn KisiBasiP1Column {
-                get {
-                    return this.columnKisiBasiP1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn KisiBasiYColumn {
-                get {
-                    return this.columnKisiBasiY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn KisiBasiY1Column {
-                get {
-                    return this.columnKisiBasiY1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IslemBasiCColumn {
-                get {
-                    return this.columnIslemBasiC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IslemBasiPColumn {
-                get {
-                    return this.columnIslemBasiP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IslemBasiP1Column {
-                get {
-                    return this.columnIslemBasiP1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IslemBasiYColumn {
-                get {
-                    return this.columnIslemBasiY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IslemBasiY1Column {
-                get {
-                    return this.columnIslemBasiY1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorRow this[int index] {
-                get {
-                    return ((rtblOzetDoktorRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddrtblOzetDoktorRow(rtblOzetDoktorRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorRow AddrtblOzetDoktorRow(
-                        long RowNumber, 
-                        string Key1, 
-                        double AdetC, 
-                        double AdetP, 
-                        double AdetP1, 
-                        double AdetY, 
-                        double AdetY1, 
-                        int HastaC, 
-                        int HastaP, 
-                        int HastaP1, 
-                        double HastaY, 
-                        double HastaY1, 
-                        double ToplamC, 
-                        double ToplamP, 
-                        double ToplamP1, 
-                        double ToplamY, 
-                        double ToplamY1, 
-                        double KisiBasiC, 
-                        double KisiBasiP, 
-                        double KisiBasiP1, 
-                        double KisiBasiY, 
-                        double KisiBasiY1, 
-                        double IslemBasiC, 
-                        double IslemBasiP, 
-                        double IslemBasiP1, 
-                        double IslemBasiY, 
-                        double IslemBasiY1) {
-                rtblOzetDoktorRow rowrtblOzetDoktorRow = ((rtblOzetDoktorRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        RowNumber,
-                        Key1,
-                        AdetC,
-                        AdetP,
-                        AdetP1,
-                        AdetY,
-                        AdetY1,
-                        HastaC,
-                        HastaP,
-                        HastaP1,
-                        HastaY,
-                        HastaY1,
-                        ToplamC,
-                        ToplamP,
-                        ToplamP1,
-                        ToplamY,
-                        ToplamY1,
-                        KisiBasiC,
-                        KisiBasiP,
-                        KisiBasiP1,
-                        KisiBasiY,
-                        KisiBasiY1,
-                        IslemBasiC,
-                        IslemBasiP,
-                        IslemBasiP1,
-                        IslemBasiY,
-                        IslemBasiY1};
-                rowrtblOzetDoktorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowrtblOzetDoktorRow);
-                return rowrtblOzetDoktorRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                rtblOzetDoktorDataTable cln = ((rtblOzetDoktorDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new rtblOzetDoktorDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnRowNumber = base.Columns["RowNumber"];
-                this.columnKey1 = base.Columns["Key1"];
-                this.columnAdetC = base.Columns["AdetC"];
-                this.columnAdetP = base.Columns["AdetP"];
-                this.columnAdetP1 = base.Columns["AdetP1"];
-                this.columnAdetY = base.Columns["AdetY"];
-                this.columnAdetY1 = base.Columns["AdetY1"];
-                this.columnHastaC = base.Columns["HastaC"];
-                this.columnHastaP = base.Columns["HastaP"];
-                this.columnHastaP1 = base.Columns["HastaP1"];
-                this.columnHastaY = base.Columns["HastaY"];
-                this.columnHastaY1 = base.Columns["HastaY1"];
-                this.columnToplamC = base.Columns["ToplamC"];
-                this.columnToplamP = base.Columns["ToplamP"];
-                this.columnToplamP1 = base.Columns["ToplamP1"];
-                this.columnToplamY = base.Columns["ToplamY"];
-                this.columnToplamY1 = base.Columns["ToplamY1"];
-                this.columnKisiBasiC = base.Columns["KisiBasiC"];
-                this.columnKisiBasiP = base.Columns["KisiBasiP"];
-                this.columnKisiBasiP1 = base.Columns["KisiBasiP1"];
-                this.columnKisiBasiY = base.Columns["KisiBasiY"];
-                this.columnKisiBasiY1 = base.Columns["KisiBasiY1"];
-                this.columnIslemBasiC = base.Columns["IslemBasiC"];
-                this.columnIslemBasiP = base.Columns["IslemBasiP"];
-                this.columnIslemBasiP1 = base.Columns["IslemBasiP1"];
-                this.columnIslemBasiY = base.Columns["IslemBasiY"];
-                this.columnIslemBasiY1 = base.Columns["IslemBasiY1"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnRowNumber = new global::System.Data.DataColumn("RowNumber", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRowNumber);
-                this.columnKey1 = new global::System.Data.DataColumn("Key1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKey1);
-                this.columnAdetC = new global::System.Data.DataColumn("AdetC", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdetC);
-                this.columnAdetP = new global::System.Data.DataColumn("AdetP", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdetP);
-                this.columnAdetP1 = new global::System.Data.DataColumn("AdetP1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdetP1);
-                this.columnAdetY = new global::System.Data.DataColumn("AdetY", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdetY);
-                this.columnAdetY1 = new global::System.Data.DataColumn("AdetY1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdetY1);
-                this.columnHastaC = new global::System.Data.DataColumn("HastaC", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHastaC);
-                this.columnHastaP = new global::System.Data.DataColumn("HastaP", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHastaP);
-                this.columnHastaP1 = new global::System.Data.DataColumn("HastaP1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHastaP1);
-                this.columnHastaY = new global::System.Data.DataColumn("HastaY", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHastaY);
-                this.columnHastaY1 = new global::System.Data.DataColumn("HastaY1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHastaY1);
-                this.columnToplamC = new global::System.Data.DataColumn("ToplamC", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToplamC);
-                this.columnToplamP = new global::System.Data.DataColumn("ToplamP", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToplamP);
-                this.columnToplamP1 = new global::System.Data.DataColumn("ToplamP1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToplamP1);
-                this.columnToplamY = new global::System.Data.DataColumn("ToplamY", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToplamY);
-                this.columnToplamY1 = new global::System.Data.DataColumn("ToplamY1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnToplamY1);
-                this.columnKisiBasiC = new global::System.Data.DataColumn("KisiBasiC", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKisiBasiC);
-                this.columnKisiBasiP = new global::System.Data.DataColumn("KisiBasiP", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKisiBasiP);
-                this.columnKisiBasiP1 = new global::System.Data.DataColumn("KisiBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKisiBasiP1);
-                this.columnKisiBasiY = new global::System.Data.DataColumn("KisiBasiY", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKisiBasiY);
-                this.columnKisiBasiY1 = new global::System.Data.DataColumn("KisiBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKisiBasiY1);
-                this.columnIslemBasiC = new global::System.Data.DataColumn("IslemBasiC", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIslemBasiC);
-                this.columnIslemBasiP = new global::System.Data.DataColumn("IslemBasiP", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIslemBasiP);
-                this.columnIslemBasiP1 = new global::System.Data.DataColumn("IslemBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIslemBasiP1);
-                this.columnIslemBasiY = new global::System.Data.DataColumn("IslemBasiY", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIslemBasiY);
-                this.columnIslemBasiY1 = new global::System.Data.DataColumn("IslemBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIslemBasiY1);
-                this.columnKey1.AllowDBNull = false;
-                this.columnKey1.MaxLength = 150;
-                this.columnAdetC.AllowDBNull = false;
-                this.columnAdetP.AllowDBNull = false;
-                this.columnAdetP1.AllowDBNull = false;
-                this.columnHastaC.AllowDBNull = false;
-                this.columnHastaP.AllowDBNull = false;
-                this.columnHastaP1.AllowDBNull = false;
-                this.columnToplamC.AllowDBNull = false;
-                this.columnToplamP.AllowDBNull = false;
-                this.columnToplamP1.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorRow NewrtblOzetDoktorRow() {
-                return ((rtblOzetDoktorRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new rtblOzetDoktorRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(rtblOzetDoktorRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.rtblOzetDoktorRowChanged != null)) {
-                    this.rtblOzetDoktorRowChanged(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.rtblOzetDoktorRowChanging != null)) {
-                    this.rtblOzetDoktorRowChanging(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.rtblOzetDoktorRowDeleted != null)) {
-                    this.rtblOzetDoktorRowDeleted(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.rtblOzetDoktorRowDeleting != null)) {
-                    this.rtblOzetDoktorRowDeleting(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovertblOzetDoktorRow(rtblOzetDoktorRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TIPDATADataSet ds = new TIPDATADataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "rtblOzetDoktorDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8233,6 +7619,1021 @@ namespace Naz.Hastane.Reports.DataSets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class rtblOzetDoktorDataTable : global::System.Data.TypedTableBase<rtblOzetDoktorRow> {
+            
+            private global::System.Data.DataColumn columnRowNumber;
+            
+            private global::System.Data.DataColumn columnKey1;
+            
+            private global::System.Data.DataColumn columnServis;
+            
+            private global::System.Data.DataColumn columnAdetC;
+            
+            private global::System.Data.DataColumn columnAdetP;
+            
+            private global::System.Data.DataColumn columnAdetP1;
+            
+            private global::System.Data.DataColumn columnAdetY;
+            
+            private global::System.Data.DataColumn columnAdetY1;
+            
+            private global::System.Data.DataColumn columnHastaC;
+            
+            private global::System.Data.DataColumn columnHastaP;
+            
+            private global::System.Data.DataColumn columnHastaP1;
+            
+            private global::System.Data.DataColumn columnHastaY;
+            
+            private global::System.Data.DataColumn columnHastaY1;
+            
+            private global::System.Data.DataColumn columnToplamC;
+            
+            private global::System.Data.DataColumn columnToplamP;
+            
+            private global::System.Data.DataColumn columnToplamP1;
+            
+            private global::System.Data.DataColumn columnToplamY;
+            
+            private global::System.Data.DataColumn columnToplamY1;
+            
+            private global::System.Data.DataColumn columnKisiBasiC;
+            
+            private global::System.Data.DataColumn columnKisiBasiP;
+            
+            private global::System.Data.DataColumn columnKisiBasiP1;
+            
+            private global::System.Data.DataColumn columnKisiBasiY;
+            
+            private global::System.Data.DataColumn columnKisiBasiY1;
+            
+            private global::System.Data.DataColumn columnIslemBasiC;
+            
+            private global::System.Data.DataColumn columnIslemBasiP;
+            
+            private global::System.Data.DataColumn columnIslemBasiP1;
+            
+            private global::System.Data.DataColumn columnIslemBasiY;
+            
+            private global::System.Data.DataColumn columnIslemBasiY1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorDataTable() {
+                this.TableName = "rtblOzetDoktor";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rtblOzetDoktorDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected rtblOzetDoktorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RowNumberColumn {
+                get {
+                    return this.columnRowNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Key1Column {
+                get {
+                    return this.columnKey1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ServisColumn {
+                get {
+                    return this.columnServis;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetCColumn {
+                get {
+                    return this.columnAdetC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetPColumn {
+                get {
+                    return this.columnAdetP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetP1Column {
+                get {
+                    return this.columnAdetP1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetYColumn {
+                get {
+                    return this.columnAdetY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetY1Column {
+                get {
+                    return this.columnAdetY1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaCColumn {
+                get {
+                    return this.columnHastaC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaPColumn {
+                get {
+                    return this.columnHastaP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaP1Column {
+                get {
+                    return this.columnHastaP1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaYColumn {
+                get {
+                    return this.columnHastaY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaY1Column {
+                get {
+                    return this.columnHastaY1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamCColumn {
+                get {
+                    return this.columnToplamC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamPColumn {
+                get {
+                    return this.columnToplamP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamP1Column {
+                get {
+                    return this.columnToplamP1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamYColumn {
+                get {
+                    return this.columnToplamY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamY1Column {
+                get {
+                    return this.columnToplamY1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiCColumn {
+                get {
+                    return this.columnKisiBasiC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiPColumn {
+                get {
+                    return this.columnKisiBasiP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiP1Column {
+                get {
+                    return this.columnKisiBasiP1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiYColumn {
+                get {
+                    return this.columnKisiBasiY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiY1Column {
+                get {
+                    return this.columnKisiBasiY1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiCColumn {
+                get {
+                    return this.columnIslemBasiC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiPColumn {
+                get {
+                    return this.columnIslemBasiP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiP1Column {
+                get {
+                    return this.columnIslemBasiP1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiYColumn {
+                get {
+                    return this.columnIslemBasiY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiY1Column {
+                get {
+                    return this.columnIslemBasiY1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorRow this[int index] {
+                get {
+                    return ((rtblOzetDoktorRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetDoktorRowChangeEventHandler rtblOzetDoktorRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddrtblOzetDoktorRow(rtblOzetDoktorRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorRow AddrtblOzetDoktorRow(
+                        long RowNumber, 
+                        string Key1, 
+                        string Servis, 
+                        double AdetC, 
+                        double AdetP, 
+                        double AdetP1, 
+                        double AdetY, 
+                        double AdetY1, 
+                        int HastaC, 
+                        int HastaP, 
+                        int HastaP1, 
+                        double HastaY, 
+                        double HastaY1, 
+                        double ToplamC, 
+                        double ToplamP, 
+                        double ToplamP1, 
+                        double ToplamY, 
+                        double ToplamY1, 
+                        double KisiBasiC, 
+                        double KisiBasiP, 
+                        double KisiBasiP1, 
+                        double KisiBasiY, 
+                        double KisiBasiY1, 
+                        double IslemBasiC, 
+                        double IslemBasiP, 
+                        double IslemBasiP1, 
+                        double IslemBasiY, 
+                        double IslemBasiY1) {
+                rtblOzetDoktorRow rowrtblOzetDoktorRow = ((rtblOzetDoktorRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        RowNumber,
+                        Key1,
+                        Servis,
+                        AdetC,
+                        AdetP,
+                        AdetP1,
+                        AdetY,
+                        AdetY1,
+                        HastaC,
+                        HastaP,
+                        HastaP1,
+                        HastaY,
+                        HastaY1,
+                        ToplamC,
+                        ToplamP,
+                        ToplamP1,
+                        ToplamY,
+                        ToplamY1,
+                        KisiBasiC,
+                        KisiBasiP,
+                        KisiBasiP1,
+                        KisiBasiY,
+                        KisiBasiY1,
+                        IslemBasiC,
+                        IslemBasiP,
+                        IslemBasiP1,
+                        IslemBasiY,
+                        IslemBasiY1};
+                rowrtblOzetDoktorRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrtblOzetDoktorRow);
+                return rowrtblOzetDoktorRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                rtblOzetDoktorDataTable cln = ((rtblOzetDoktorDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new rtblOzetDoktorDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnRowNumber = base.Columns["RowNumber"];
+                this.columnKey1 = base.Columns["Key1"];
+                this.columnServis = base.Columns["Servis"];
+                this.columnAdetC = base.Columns["AdetC"];
+                this.columnAdetP = base.Columns["AdetP"];
+                this.columnAdetP1 = base.Columns["AdetP1"];
+                this.columnAdetY = base.Columns["AdetY"];
+                this.columnAdetY1 = base.Columns["AdetY1"];
+                this.columnHastaC = base.Columns["HastaC"];
+                this.columnHastaP = base.Columns["HastaP"];
+                this.columnHastaP1 = base.Columns["HastaP1"];
+                this.columnHastaY = base.Columns["HastaY"];
+                this.columnHastaY1 = base.Columns["HastaY1"];
+                this.columnToplamC = base.Columns["ToplamC"];
+                this.columnToplamP = base.Columns["ToplamP"];
+                this.columnToplamP1 = base.Columns["ToplamP1"];
+                this.columnToplamY = base.Columns["ToplamY"];
+                this.columnToplamY1 = base.Columns["ToplamY1"];
+                this.columnKisiBasiC = base.Columns["KisiBasiC"];
+                this.columnKisiBasiP = base.Columns["KisiBasiP"];
+                this.columnKisiBasiP1 = base.Columns["KisiBasiP1"];
+                this.columnKisiBasiY = base.Columns["KisiBasiY"];
+                this.columnKisiBasiY1 = base.Columns["KisiBasiY1"];
+                this.columnIslemBasiC = base.Columns["IslemBasiC"];
+                this.columnIslemBasiP = base.Columns["IslemBasiP"];
+                this.columnIslemBasiP1 = base.Columns["IslemBasiP1"];
+                this.columnIslemBasiY = base.Columns["IslemBasiY"];
+                this.columnIslemBasiY1 = base.Columns["IslemBasiY1"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnRowNumber = new global::System.Data.DataColumn("RowNumber", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRowNumber);
+                this.columnKey1 = new global::System.Data.DataColumn("Key1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKey1);
+                this.columnServis = new global::System.Data.DataColumn("Servis", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServis);
+                this.columnAdetC = new global::System.Data.DataColumn("AdetC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetC);
+                this.columnAdetP = new global::System.Data.DataColumn("AdetP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetP);
+                this.columnAdetP1 = new global::System.Data.DataColumn("AdetP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetP1);
+                this.columnAdetY = new global::System.Data.DataColumn("AdetY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetY);
+                this.columnAdetY1 = new global::System.Data.DataColumn("AdetY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetY1);
+                this.columnHastaC = new global::System.Data.DataColumn("HastaC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaC);
+                this.columnHastaP = new global::System.Data.DataColumn("HastaP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaP);
+                this.columnHastaP1 = new global::System.Data.DataColumn("HastaP1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaP1);
+                this.columnHastaY = new global::System.Data.DataColumn("HastaY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaY);
+                this.columnHastaY1 = new global::System.Data.DataColumn("HastaY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaY1);
+                this.columnToplamC = new global::System.Data.DataColumn("ToplamC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamC);
+                this.columnToplamP = new global::System.Data.DataColumn("ToplamP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamP);
+                this.columnToplamP1 = new global::System.Data.DataColumn("ToplamP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamP1);
+                this.columnToplamY = new global::System.Data.DataColumn("ToplamY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamY);
+                this.columnToplamY1 = new global::System.Data.DataColumn("ToplamY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamY1);
+                this.columnKisiBasiC = new global::System.Data.DataColumn("KisiBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiC);
+                this.columnKisiBasiP = new global::System.Data.DataColumn("KisiBasiP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiP);
+                this.columnKisiBasiP1 = new global::System.Data.DataColumn("KisiBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiP1);
+                this.columnKisiBasiY = new global::System.Data.DataColumn("KisiBasiY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiY);
+                this.columnKisiBasiY1 = new global::System.Data.DataColumn("KisiBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiY1);
+                this.columnIslemBasiC = new global::System.Data.DataColumn("IslemBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiC);
+                this.columnIslemBasiP = new global::System.Data.DataColumn("IslemBasiP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiP);
+                this.columnIslemBasiP1 = new global::System.Data.DataColumn("IslemBasiP1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiP1);
+                this.columnIslemBasiY = new global::System.Data.DataColumn("IslemBasiY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiY);
+                this.columnIslemBasiY1 = new global::System.Data.DataColumn("IslemBasiY1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiY1);
+                this.columnKey1.AllowDBNull = false;
+                this.columnKey1.MaxLength = 150;
+                this.columnServis.MaxLength = 255;
+                this.columnAdetC.AllowDBNull = false;
+                this.columnAdetP.AllowDBNull = false;
+                this.columnAdetP1.AllowDBNull = false;
+                this.columnHastaC.AllowDBNull = false;
+                this.columnHastaP.AllowDBNull = false;
+                this.columnHastaP1.AllowDBNull = false;
+                this.columnToplamC.AllowDBNull = false;
+                this.columnToplamP.AllowDBNull = false;
+                this.columnToplamP1.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorRow NewrtblOzetDoktorRow() {
+                return ((rtblOzetDoktorRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new rtblOzetDoktorRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(rtblOzetDoktorRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.rtblOzetDoktorRowChanged != null)) {
+                    this.rtblOzetDoktorRowChanged(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.rtblOzetDoktorRowChanging != null)) {
+                    this.rtblOzetDoktorRowChanging(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.rtblOzetDoktorRowDeleted != null)) {
+                    this.rtblOzetDoktorRowDeleted(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.rtblOzetDoktorRowDeleting != null)) {
+                    this.rtblOzetDoktorRowDeleting(this, new rtblOzetDoktorRowChangeEvent(((rtblOzetDoktorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovertblOzetDoktorRow(rtblOzetDoktorRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TIPDATADataSet ds = new TIPDATADataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "rtblOzetDoktorDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class rtblOzetYatakServisAyDataTable : global::System.Data.TypedTableBase<rtblOzetYatakServisAyRow> {
+            
+            private global::System.Data.DataColumn columnRowNumber;
+            
+            private global::System.Data.DataColumn columnKey1;
+            
+            private global::System.Data.DataColumn columnKey2;
+            
+            private global::System.Data.DataColumn columnAdetC;
+            
+            private global::System.Data.DataColumn columnHastaC;
+            
+            private global::System.Data.DataColumn columnToplamC;
+            
+            private global::System.Data.DataColumn columnKisiBasiC;
+            
+            private global::System.Data.DataColumn columnIslemBasiC;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyDataTable() {
+                this.TableName = "rtblOzetYatakServisAy";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rtblOzetYatakServisAyDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected rtblOzetYatakServisAyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RowNumberColumn {
+                get {
+                    return this.columnRowNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Key1Column {
+                get {
+                    return this.columnKey1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Key2Column {
+                get {
+                    return this.columnKey2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdetCColumn {
+                get {
+                    return this.columnAdetC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HastaCColumn {
+                get {
+                    return this.columnHastaC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToplamCColumn {
+                get {
+                    return this.columnToplamC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KisiBasiCColumn {
+                get {
+                    return this.columnKisiBasiC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IslemBasiCColumn {
+                get {
+                    return this.columnIslemBasiC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyRow this[int index] {
+                get {
+                    return ((rtblOzetYatakServisAyRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetYatakServisAyRowChangeEventHandler rtblOzetYatakServisAyRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetYatakServisAyRowChangeEventHandler rtblOzetYatakServisAyRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetYatakServisAyRowChangeEventHandler rtblOzetYatakServisAyRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rtblOzetYatakServisAyRowChangeEventHandler rtblOzetYatakServisAyRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddrtblOzetYatakServisAyRow(rtblOzetYatakServisAyRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyRow AddrtblOzetYatakServisAyRow(long RowNumber, string Key1, int Key2, double AdetC, int HastaC, double ToplamC, double KisiBasiC, double IslemBasiC) {
+                rtblOzetYatakServisAyRow rowrtblOzetYatakServisAyRow = ((rtblOzetYatakServisAyRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        RowNumber,
+                        Key1,
+                        Key2,
+                        AdetC,
+                        HastaC,
+                        ToplamC,
+                        KisiBasiC,
+                        IslemBasiC};
+                rowrtblOzetYatakServisAyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrtblOzetYatakServisAyRow);
+                return rowrtblOzetYatakServisAyRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                rtblOzetYatakServisAyDataTable cln = ((rtblOzetYatakServisAyDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new rtblOzetYatakServisAyDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnRowNumber = base.Columns["RowNumber"];
+                this.columnKey1 = base.Columns["Key1"];
+                this.columnKey2 = base.Columns["Key2"];
+                this.columnAdetC = base.Columns["AdetC"];
+                this.columnHastaC = base.Columns["HastaC"];
+                this.columnToplamC = base.Columns["ToplamC"];
+                this.columnKisiBasiC = base.Columns["KisiBasiC"];
+                this.columnIslemBasiC = base.Columns["IslemBasiC"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnRowNumber = new global::System.Data.DataColumn("RowNumber", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRowNumber);
+                this.columnKey1 = new global::System.Data.DataColumn("Key1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKey1);
+                this.columnKey2 = new global::System.Data.DataColumn("Key2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKey2);
+                this.columnAdetC = new global::System.Data.DataColumn("AdetC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdetC);
+                this.columnHastaC = new global::System.Data.DataColumn("HastaC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHastaC);
+                this.columnToplamC = new global::System.Data.DataColumn("ToplamC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamC);
+                this.columnKisiBasiC = new global::System.Data.DataColumn("KisiBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKisiBasiC);
+                this.columnIslemBasiC = new global::System.Data.DataColumn("IslemBasiC", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIslemBasiC);
+                this.columnKey1.AllowDBNull = false;
+                this.columnKey1.MaxLength = 150;
+                this.columnAdetC.AllowDBNull = false;
+                this.columnHastaC.AllowDBNull = false;
+                this.columnToplamC.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyRow NewrtblOzetYatakServisAyRow() {
+                return ((rtblOzetYatakServisAyRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new rtblOzetYatakServisAyRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(rtblOzetYatakServisAyRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.rtblOzetYatakServisAyRowChanged != null)) {
+                    this.rtblOzetYatakServisAyRowChanged(this, new rtblOzetYatakServisAyRowChangeEvent(((rtblOzetYatakServisAyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.rtblOzetYatakServisAyRowChanging != null)) {
+                    this.rtblOzetYatakServisAyRowChanging(this, new rtblOzetYatakServisAyRowChangeEvent(((rtblOzetYatakServisAyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.rtblOzetYatakServisAyRowDeleted != null)) {
+                    this.rtblOzetYatakServisAyRowDeleted(this, new rtblOzetYatakServisAyRowChangeEvent(((rtblOzetYatakServisAyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.rtblOzetYatakServisAyRowDeleting != null)) {
+                    this.rtblOzetYatakServisAyRowDeleting(this, new rtblOzetYatakServisAyRowChangeEvent(((rtblOzetYatakServisAyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovertblOzetYatakServisAyRow(rtblOzetYatakServisAyRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TIPDATADataSet ds = new TIPDATADataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "rtblOzetYatakServisAyDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class rtblOzetAYPRow : global::System.Data.DataRow {
@@ -10757,607 +11158,6 @@ namespace Naz.Hastane.Reports.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIslemBasiY1Null() {
                 this[this.tablertblOzetAnaIslem.IslemBasiY1Column] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class rtblOzetDoktorRow : global::System.Data.DataRow {
-            
-            private rtblOzetDoktorDataTable tablertblOzetDoktor;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal rtblOzetDoktorRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablertblOzetDoktor = ((rtblOzetDoktorDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long RowNumber {
-                get {
-                    try {
-                        return ((long)(this[this.tablertblOzetDoktor.RowNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNumber\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.RowNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Key1 {
-                get {
-                    return ((string)(this[this.tablertblOzetDoktor.Key1Column]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.Key1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double AdetC {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.AdetCColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.AdetCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double AdetP {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.AdetPColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.AdetPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double AdetP1 {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.AdetP1Column]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.AdetP1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double AdetY {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.AdetYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AdetY\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.AdetYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double AdetY1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.AdetY1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AdetY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.AdetY1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int HastaC {
-                get {
-                    return ((int)(this[this.tablertblOzetDoktor.HastaCColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.HastaCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int HastaP {
-                get {
-                    return ((int)(this[this.tablertblOzetDoktor.HastaPColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.HastaPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int HastaP1 {
-                get {
-                    return ((int)(this[this.tablertblOzetDoktor.HastaP1Column]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.HastaP1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double HastaY {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.HastaYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HastaY\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.HastaYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double HastaY1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.HastaY1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HastaY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.HastaY1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double ToplamC {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.ToplamCColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.ToplamCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double ToplamP {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.ToplamPColumn]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.ToplamPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double ToplamP1 {
-                get {
-                    return ((double)(this[this.tablertblOzetDoktor.ToplamP1Column]));
-                }
-                set {
-                    this[this.tablertblOzetDoktor.ToplamP1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double ToplamY {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.ToplamYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamY\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.ToplamYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double ToplamY1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.ToplamY1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.ToplamY1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double KisiBasiC {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiCColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiC\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.KisiBasiCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double KisiBasiP {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiPColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiP\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.KisiBasiPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double KisiBasiP1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiP1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiP1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.KisiBasiP1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double KisiBasiY {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiY\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.KisiBasiYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double KisiBasiY1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiY1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.KisiBasiY1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double IslemBasiC {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiCColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiC\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.IslemBasiCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double IslemBasiP {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiPColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiP\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.IslemBasiPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double IslemBasiP1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiP1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiP1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.IslemBasiP1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double IslemBasiY {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiY\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.IslemBasiYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double IslemBasiY1 {
-                get {
-                    try {
-                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiY1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablertblOzetDoktor.IslemBasiY1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRowNumberNull() {
-                return this.IsNull(this.tablertblOzetDoktor.RowNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRowNumberNull() {
-                this[this.tablertblOzetDoktor.RowNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAdetYNull() {
-                return this.IsNull(this.tablertblOzetDoktor.AdetYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAdetYNull() {
-                this[this.tablertblOzetDoktor.AdetYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAdetY1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.AdetY1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAdetY1Null() {
-                this[this.tablertblOzetDoktor.AdetY1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHastaYNull() {
-                return this.IsNull(this.tablertblOzetDoktor.HastaYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHastaYNull() {
-                this[this.tablertblOzetDoktor.HastaYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHastaY1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.HastaY1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHastaY1Null() {
-                this[this.tablertblOzetDoktor.HastaY1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsToplamYNull() {
-                return this.IsNull(this.tablertblOzetDoktor.ToplamYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetToplamYNull() {
-                this[this.tablertblOzetDoktor.ToplamYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsToplamY1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.ToplamY1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetToplamY1Null() {
-                this[this.tablertblOzetDoktor.ToplamY1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKisiBasiCNull() {
-                return this.IsNull(this.tablertblOzetDoktor.KisiBasiCColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKisiBasiCNull() {
-                this[this.tablertblOzetDoktor.KisiBasiCColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKisiBasiPNull() {
-                return this.IsNull(this.tablertblOzetDoktor.KisiBasiPColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKisiBasiPNull() {
-                this[this.tablertblOzetDoktor.KisiBasiPColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKisiBasiP1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.KisiBasiP1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKisiBasiP1Null() {
-                this[this.tablertblOzetDoktor.KisiBasiP1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKisiBasiYNull() {
-                return this.IsNull(this.tablertblOzetDoktor.KisiBasiYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKisiBasiYNull() {
-                this[this.tablertblOzetDoktor.KisiBasiYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKisiBasiY1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.KisiBasiY1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKisiBasiY1Null() {
-                this[this.tablertblOzetDoktor.KisiBasiY1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIslemBasiCNull() {
-                return this.IsNull(this.tablertblOzetDoktor.IslemBasiCColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIslemBasiCNull() {
-                this[this.tablertblOzetDoktor.IslemBasiCColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIslemBasiPNull() {
-                return this.IsNull(this.tablertblOzetDoktor.IslemBasiPColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIslemBasiPNull() {
-                this[this.tablertblOzetDoktor.IslemBasiPColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIslemBasiP1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.IslemBasiP1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIslemBasiP1Null() {
-                this[this.tablertblOzetDoktor.IslemBasiP1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIslemBasiYNull() {
-                return this.IsNull(this.tablertblOzetDoktor.IslemBasiYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIslemBasiYNull() {
-                this[this.tablertblOzetDoktor.IslemBasiYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIslemBasiY1Null() {
-                return this.IsNull(this.tablertblOzetDoktor.IslemBasiY1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIslemBasiY1Null() {
-                this[this.tablertblOzetDoktor.IslemBasiY1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -15369,6 +15169,806 @@ namespace Naz.Hastane.Reports.DataSets {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class rtblOzetDoktorRow : global::System.Data.DataRow {
+            
+            private rtblOzetDoktorDataTable tablertblOzetDoktor;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rtblOzetDoktorRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablertblOzetDoktor = ((rtblOzetDoktorDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long RowNumber {
+                get {
+                    try {
+                        return ((long)(this[this.tablertblOzetDoktor.RowNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNumber\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.RowNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Key1 {
+                get {
+                    return ((string)(this[this.tablertblOzetDoktor.Key1Column]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.Key1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Servis {
+                get {
+                    try {
+                        return ((string)(this[this.tablertblOzetDoktor.ServisColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Servis\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ServisColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetC {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.AdetCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.AdetCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetP {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.AdetPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.AdetPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetP1 {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.AdetP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.AdetP1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.AdetYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AdetY\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.AdetYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.AdetY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AdetY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.AdetY1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int HastaC {
+                get {
+                    return ((int)(this[this.tablertblOzetDoktor.HastaCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.HastaCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int HastaP {
+                get {
+                    return ((int)(this[this.tablertblOzetDoktor.HastaPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.HastaPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int HastaP1 {
+                get {
+                    return ((int)(this[this.tablertblOzetDoktor.HastaP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.HastaP1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double HastaY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.HastaYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HastaY\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.HastaYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double HastaY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.HastaY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HastaY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.HastaY1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamC {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.ToplamCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ToplamCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamP {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.ToplamPColumn]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ToplamPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamP1 {
+                get {
+                    return ((double)(this[this.tablertblOzetDoktor.ToplamP1Column]));
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ToplamP1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.ToplamYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamY\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ToplamYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.ToplamY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.ToplamY1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiC\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.KisiBasiCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiP {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiP\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.KisiBasiPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiP1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiP1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiP1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.KisiBasiP1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiY\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.KisiBasiYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.KisiBasiY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.KisiBasiY1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiC\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.IslemBasiCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiP {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiP\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.IslemBasiPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiP1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiP1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiP1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.IslemBasiP1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiY {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiY\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.IslemBasiYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiY1 {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetDoktor.IslemBasiY1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiY1\' in table \'rtblOzetDoktor\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetDoktor.IslemBasiY1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRowNumberNull() {
+                return this.IsNull(this.tablertblOzetDoktor.RowNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRowNumberNull() {
+                this[this.tablertblOzetDoktor.RowNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsServisNull() {
+                return this.IsNull(this.tablertblOzetDoktor.ServisColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetServisNull() {
+                this[this.tablertblOzetDoktor.ServisColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAdetYNull() {
+                return this.IsNull(this.tablertblOzetDoktor.AdetYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAdetYNull() {
+                this[this.tablertblOzetDoktor.AdetYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAdetY1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.AdetY1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAdetY1Null() {
+                this[this.tablertblOzetDoktor.AdetY1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHastaYNull() {
+                return this.IsNull(this.tablertblOzetDoktor.HastaYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHastaYNull() {
+                this[this.tablertblOzetDoktor.HastaYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHastaY1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.HastaY1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHastaY1Null() {
+                this[this.tablertblOzetDoktor.HastaY1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsToplamYNull() {
+                return this.IsNull(this.tablertblOzetDoktor.ToplamYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetToplamYNull() {
+                this[this.tablertblOzetDoktor.ToplamYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsToplamY1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.ToplamY1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetToplamY1Null() {
+                this[this.tablertblOzetDoktor.ToplamY1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiCNull() {
+                return this.IsNull(this.tablertblOzetDoktor.KisiBasiCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiCNull() {
+                this[this.tablertblOzetDoktor.KisiBasiCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiPNull() {
+                return this.IsNull(this.tablertblOzetDoktor.KisiBasiPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiPNull() {
+                this[this.tablertblOzetDoktor.KisiBasiPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiP1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.KisiBasiP1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiP1Null() {
+                this[this.tablertblOzetDoktor.KisiBasiP1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiYNull() {
+                return this.IsNull(this.tablertblOzetDoktor.KisiBasiYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiYNull() {
+                this[this.tablertblOzetDoktor.KisiBasiYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiY1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.KisiBasiY1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiY1Null() {
+                this[this.tablertblOzetDoktor.KisiBasiY1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiCNull() {
+                return this.IsNull(this.tablertblOzetDoktor.IslemBasiCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiCNull() {
+                this[this.tablertblOzetDoktor.IslemBasiCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiPNull() {
+                return this.IsNull(this.tablertblOzetDoktor.IslemBasiPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiPNull() {
+                this[this.tablertblOzetDoktor.IslemBasiPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiP1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.IslemBasiP1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiP1Null() {
+                this[this.tablertblOzetDoktor.IslemBasiP1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiYNull() {
+                return this.IsNull(this.tablertblOzetDoktor.IslemBasiYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiYNull() {
+                this[this.tablertblOzetDoktor.IslemBasiYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiY1Null() {
+                return this.IsNull(this.tablertblOzetDoktor.IslemBasiY1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiY1Null() {
+                this[this.tablertblOzetDoktor.IslemBasiY1Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class rtblOzetYatakServisAyRow : global::System.Data.DataRow {
+            
+            private rtblOzetYatakServisAyDataTable tablertblOzetYatakServisAy;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rtblOzetYatakServisAyRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablertblOzetYatakServisAy = ((rtblOzetYatakServisAyDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long RowNumber {
+                get {
+                    try {
+                        return ((long)(this[this.tablertblOzetYatakServisAy.RowNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNumber\' in table \'rtblOzetYatakServisAy\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.RowNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Key1 {
+                get {
+                    return ((string)(this[this.tablertblOzetYatakServisAy.Key1Column]));
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.Key1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Key2 {
+                get {
+                    try {
+                        return ((int)(this[this.tablertblOzetYatakServisAy.Key2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Key2\' in table \'rtblOzetYatakServisAy\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.Key2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AdetC {
+                get {
+                    return ((double)(this[this.tablertblOzetYatakServisAy.AdetCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.AdetCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int HastaC {
+                get {
+                    return ((int)(this[this.tablertblOzetYatakServisAy.HastaCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.HastaCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ToplamC {
+                get {
+                    return ((double)(this[this.tablertblOzetYatakServisAy.ToplamCColumn]));
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.ToplamCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KisiBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetYatakServisAy.KisiBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KisiBasiC\' in table \'rtblOzetYatakServisAy\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.KisiBasiCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double IslemBasiC {
+                get {
+                    try {
+                        return ((double)(this[this.tablertblOzetYatakServisAy.IslemBasiCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IslemBasiC\' in table \'rtblOzetYatakServisAy\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablertblOzetYatakServisAy.IslemBasiCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRowNumberNull() {
+                return this.IsNull(this.tablertblOzetYatakServisAy.RowNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRowNumberNull() {
+                this[this.tablertblOzetYatakServisAy.RowNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKey2Null() {
+                return this.IsNull(this.tablertblOzetYatakServisAy.Key2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKey2Null() {
+                this[this.tablertblOzetYatakServisAy.Key2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKisiBasiCNull() {
+                return this.IsNull(this.tablertblOzetYatakServisAy.KisiBasiCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKisiBasiCNull() {
+                this[this.tablertblOzetYatakServisAy.KisiBasiCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIslemBasiCNull() {
+                return this.IsNull(this.tablertblOzetYatakServisAy.IslemBasiCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIslemBasiCNull() {
+                this[this.tablertblOzetYatakServisAy.IslemBasiCColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -15490,40 +16090,6 @@ namespace Naz.Hastane.Reports.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public rtblOzetAnaIslemRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class rtblOzetDoktorRowChangeEvent : global::System.EventArgs {
-            
-            private rtblOzetDoktorRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorRowChangeEvent(rtblOzetDoktorRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rtblOzetDoktorRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15762,6 +16328,74 @@ namespace Naz.Hastane.Reports.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public rtblOzetAnaIslemAyRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class rtblOzetDoktorRowChangeEvent : global::System.EventArgs {
+            
+            private rtblOzetDoktorRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorRowChangeEvent(rtblOzetDoktorRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetDoktorRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class rtblOzetYatakServisAyRowChangeEvent : global::System.EventArgs {
+            
+            private rtblOzetYatakServisAyRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyRowChangeEvent(rtblOzetYatakServisAyRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rtblOzetYatakServisAyRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -17344,424 +17978,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
             }
             if ((Key1 == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Key1));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(AdetC));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(AdetP));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(AdetP1));
-            if ((AdetY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((double)(AdetY.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((AdetY1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(AdetY1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(HastaC));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(HastaP));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(HastaP1));
-            if ((HastaY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((double)(HastaY.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((HastaY1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(HastaY1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((double)(ToplamC));
-            this.Adapter.InsertCommand.Parameters[13].Value = ((double)(ToplamP));
-            this.Adapter.InsertCommand.Parameters[14].Value = ((double)(ToplamP1));
-            if ((ToplamY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((double)(ToplamY.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((ToplamY1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((double)(ToplamY1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((KisiBasiC.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((double)(KisiBasiC.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((KisiBasiP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((double)(KisiBasiP.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((KisiBasiP1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((double)(KisiBasiP1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((KisiBasiY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((double)(KisiBasiY.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((KisiBasiY1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((double)(KisiBasiY1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((IslemBasiC.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((double)(IslemBasiC.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((IslemBasiP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((double)(IslemBasiP.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((IslemBasiP1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((double)(IslemBasiP1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((IslemBasiY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((double)(IslemBasiY.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((IslemBasiY1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((double)(IslemBasiY1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class rtblOzetDoktorTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public rtblOzetDoktorTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "rtblOzetDoktor";
-            tableMapping.ColumnMappings.Add("RowNumber", "RowNumber");
-            tableMapping.ColumnMappings.Add("Key1", "Key1");
-            tableMapping.ColumnMappings.Add("AdetC", "AdetC");
-            tableMapping.ColumnMappings.Add("AdetP", "AdetP");
-            tableMapping.ColumnMappings.Add("AdetP1", "AdetP1");
-            tableMapping.ColumnMappings.Add("AdetY", "AdetY");
-            tableMapping.ColumnMappings.Add("AdetY1", "AdetY1");
-            tableMapping.ColumnMappings.Add("HastaC", "HastaC");
-            tableMapping.ColumnMappings.Add("HastaP", "HastaP");
-            tableMapping.ColumnMappings.Add("HastaP1", "HastaP1");
-            tableMapping.ColumnMappings.Add("HastaY", "HastaY");
-            tableMapping.ColumnMappings.Add("HastaY1", "HastaY1");
-            tableMapping.ColumnMappings.Add("ToplamC", "ToplamC");
-            tableMapping.ColumnMappings.Add("ToplamP", "ToplamP");
-            tableMapping.ColumnMappings.Add("ToplamP1", "ToplamP1");
-            tableMapping.ColumnMappings.Add("ToplamY", "ToplamY");
-            tableMapping.ColumnMappings.Add("ToplamY1", "ToplamY1");
-            tableMapping.ColumnMappings.Add("KisiBasiC", "KisiBasiC");
-            tableMapping.ColumnMappings.Add("KisiBasiP", "KisiBasiP");
-            tableMapping.ColumnMappings.Add("KisiBasiP1", "KisiBasiP1");
-            tableMapping.ColumnMappings.Add("KisiBasiY", "KisiBasiY");
-            tableMapping.ColumnMappings.Add("KisiBasiY1", "KisiBasiY1");
-            tableMapping.ColumnMappings.Add("IslemBasiC", "IslemBasiC");
-            tableMapping.ColumnMappings.Add("IslemBasiP", "IslemBasiP");
-            tableMapping.ColumnMappings.Add("IslemBasiP1", "IslemBasiP1");
-            tableMapping.ColumnMappings.Add("IslemBasiY", "IslemBasiY");
-            tableMapping.ColumnMappings.Add("IslemBasiY1", "IslemBasiY1");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[rtblOzetDoktor] ([RowNumber], [Key1], [AdetC], [AdetP], [AdetP1], [AdetY], [AdetY1], [HastaC], [HastaP], [HastaP1], [HastaY], [HastaY1], [ToplamC], [ToplamP], [ToplamP1], [ToplamY], [ToplamY1], [KisiBasiC], [KisiBasiP], [KisiBasiP1], [KisiBasiY], [KisiBasiY1], [IslemBasiC], [IslemBasiP], [IslemBasiP1], [IslemBasiY], [IslemBasiY1]) VALUES (@RowNumber, @Key1, @AdetC, @AdetP, @AdetP1, @AdetY, @AdetY1, @HastaC, @HastaP, @HastaP1, @HastaY, @HastaY1, @ToplamC, @ToplamP, @ToplamP1, @ToplamY, @ToplamY1, @KisiBasiC, @KisiBasiP, @KisiBasiP1, @KisiBasiY, @KisiBasiY1, @IslemBasiC, @IslemBasiP, @IslemBasiP1, @IslemBasiY, @IslemBasiY1)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RowNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RowNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Key1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Key1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaP1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Naz.Hastane.Reports.Properties.Settings.Default.TIPDATAConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT RowNumber, Key1, AdetC, AdetP, AdetP1, AdetY, AdetY1, HastaC, HastaP, HastaP1, HastaY, HastaY1, ToplamC, ToplamP, ToplamP1, ToplamY, ToplamY1, KisiBasiC, KisiBasiP, KisiBasiP1, KisiBasiY, KisiBasiY1, IslemBasiC, IslemBasiP, IslemBasiP1, IslemBasiY, IslemBasiY1 FROM dbo.rtblOzetDoktor";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TIPDATADataSet.rtblOzetDoktorDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TIPDATADataSet.rtblOzetDoktorDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            TIPDATADataSet.rtblOzetDoktorDataTable dataTable = new TIPDATADataSet.rtblOzetDoktorDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TIPDATADataSet.rtblOzetDoktorDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TIPDATADataSet dataSet) {
-            return this.Adapter.Update(dataSet, "rtblOzetDoktor");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    global::System.Nullable<long> RowNumber, 
-                    string Key1, 
-                    double AdetC, 
-                    double AdetP, 
-                    double AdetP1, 
-                    global::System.Nullable<double> AdetY, 
-                    global::System.Nullable<double> AdetY1, 
-                    int HastaC, 
-                    int HastaP, 
-                    int HastaP1, 
-                    global::System.Nullable<double> HastaY, 
-                    global::System.Nullable<double> HastaY1, 
-                    double ToplamC, 
-                    double ToplamP, 
-                    double ToplamP1, 
-                    global::System.Nullable<double> ToplamY, 
-                    global::System.Nullable<double> ToplamY1, 
-                    global::System.Nullable<double> KisiBasiC, 
-                    global::System.Nullable<double> KisiBasiP, 
-                    global::System.Nullable<double> KisiBasiP1, 
-                    global::System.Nullable<double> KisiBasiY, 
-                    global::System.Nullable<double> KisiBasiY1, 
-                    global::System.Nullable<double> IslemBasiC, 
-                    global::System.Nullable<double> IslemBasiP, 
-                    global::System.Nullable<double> IslemBasiP1, 
-                    global::System.Nullable<double> IslemBasiY, 
-                    global::System.Nullable<double> IslemBasiY1) {
-            if ((RowNumber.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((long)(RowNumber.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Key1 == null)) {
-                throw new global::System.ArgumentNullException("Key1");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Key1));
@@ -20705,6 +20921,705 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class rtblOzetDoktorTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public rtblOzetDoktorTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "rtblOzetDoktor";
+            tableMapping.ColumnMappings.Add("RowNumber", "RowNumber");
+            tableMapping.ColumnMappings.Add("Key1", "Key1");
+            tableMapping.ColumnMappings.Add("Servis", "Servis");
+            tableMapping.ColumnMappings.Add("AdetC", "AdetC");
+            tableMapping.ColumnMappings.Add("AdetP", "AdetP");
+            tableMapping.ColumnMappings.Add("AdetP1", "AdetP1");
+            tableMapping.ColumnMappings.Add("AdetY", "AdetY");
+            tableMapping.ColumnMappings.Add("AdetY1", "AdetY1");
+            tableMapping.ColumnMappings.Add("HastaC", "HastaC");
+            tableMapping.ColumnMappings.Add("HastaP", "HastaP");
+            tableMapping.ColumnMappings.Add("HastaP1", "HastaP1");
+            tableMapping.ColumnMappings.Add("HastaY", "HastaY");
+            tableMapping.ColumnMappings.Add("HastaY1", "HastaY1");
+            tableMapping.ColumnMappings.Add("ToplamC", "ToplamC");
+            tableMapping.ColumnMappings.Add("ToplamP", "ToplamP");
+            tableMapping.ColumnMappings.Add("ToplamP1", "ToplamP1");
+            tableMapping.ColumnMappings.Add("ToplamY", "ToplamY");
+            tableMapping.ColumnMappings.Add("ToplamY1", "ToplamY1");
+            tableMapping.ColumnMappings.Add("KisiBasiC", "KisiBasiC");
+            tableMapping.ColumnMappings.Add("KisiBasiP", "KisiBasiP");
+            tableMapping.ColumnMappings.Add("KisiBasiP1", "KisiBasiP1");
+            tableMapping.ColumnMappings.Add("KisiBasiY", "KisiBasiY");
+            tableMapping.ColumnMappings.Add("KisiBasiY1", "KisiBasiY1");
+            tableMapping.ColumnMappings.Add("IslemBasiC", "IslemBasiC");
+            tableMapping.ColumnMappings.Add("IslemBasiP", "IslemBasiP");
+            tableMapping.ColumnMappings.Add("IslemBasiP1", "IslemBasiP1");
+            tableMapping.ColumnMappings.Add("IslemBasiY", "IslemBasiY");
+            tableMapping.ColumnMappings.Add("IslemBasiY1", "IslemBasiY1");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[rtblOzetDoktor] ([RowNumber], [Key1], [Servis], [AdetC], [AdetP], [AdetP1], [AdetY], [AdetY1], [HastaC], [HastaP], [HastaP1], [HastaY], [HastaY1], [ToplamC], [ToplamP], [ToplamP1], [ToplamY], [ToplamY1], [KisiBasiC], [KisiBasiP], [KisiBasiP1], [KisiBasiY], [KisiBasiY1], [IslemBasiC], [IslemBasiP], [IslemBasiP1], [IslemBasiY], [IslemBasiY1]) VALUES (@RowNumber, @Key1, @Servis, @AdetC, @AdetP, @AdetP1, @AdetY, @AdetY1, @HastaC, @HastaP, @HastaP1, @HastaY, @HastaY1, @ToplamC, @ToplamP, @ToplamP1, @ToplamY, @ToplamY1, @KisiBasiC, @KisiBasiP, @KisiBasiP1, @KisiBasiY, @KisiBasiY1, @IslemBasiC, @IslemBasiP, @IslemBasiP1, @IslemBasiY, @IslemBasiY1)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RowNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RowNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Key1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Key1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Servis", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Servis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaP1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiP1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiP1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiY1", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiY1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Naz.Hastane.Reports.Properties.Settings.Default.TIPDATAConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT RowNumber, Key1, Servis, AdetC, AdetP, AdetP1, AdetY, AdetY1, HastaC, HastaP, HastaP1, HastaY, HastaY1, ToplamC, ToplamP, ToplamP1, ToplamY, ToplamY1, KisiBasiC, KisiBasiP, KisiBasiP1, KisiBasiY, KisiBasiY1, IslemBasiC, IslemBasiP, IslemBasiP1, IslemBasiY, IslemBasiY1 FROM dbo.rtblOzetDoktor";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TIPDATADataSet.rtblOzetDoktorDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TIPDATADataSet.rtblOzetDoktorDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TIPDATADataSet.rtblOzetDoktorDataTable dataTable = new TIPDATADataSet.rtblOzetDoktorDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TIPDATADataSet.rtblOzetDoktorDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TIPDATADataSet dataSet) {
+            return this.Adapter.Update(dataSet, "rtblOzetDoktor");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    global::System.Nullable<long> RowNumber, 
+                    string Key1, 
+                    string Servis, 
+                    double AdetC, 
+                    double AdetP, 
+                    double AdetP1, 
+                    global::System.Nullable<double> AdetY, 
+                    global::System.Nullable<double> AdetY1, 
+                    int HastaC, 
+                    int HastaP, 
+                    int HastaP1, 
+                    global::System.Nullable<double> HastaY, 
+                    global::System.Nullable<double> HastaY1, 
+                    double ToplamC, 
+                    double ToplamP, 
+                    double ToplamP1, 
+                    global::System.Nullable<double> ToplamY, 
+                    global::System.Nullable<double> ToplamY1, 
+                    global::System.Nullable<double> KisiBasiC, 
+                    global::System.Nullable<double> KisiBasiP, 
+                    global::System.Nullable<double> KisiBasiP1, 
+                    global::System.Nullable<double> KisiBasiY, 
+                    global::System.Nullable<double> KisiBasiY1, 
+                    global::System.Nullable<double> IslemBasiC, 
+                    global::System.Nullable<double> IslemBasiP, 
+                    global::System.Nullable<double> IslemBasiP1, 
+                    global::System.Nullable<double> IslemBasiY, 
+                    global::System.Nullable<double> IslemBasiY1) {
+            if ((RowNumber.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((long)(RowNumber.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Key1 == null)) {
+                throw new global::System.ArgumentNullException("Key1");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Key1));
+            }
+            if ((Servis == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Servis));
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(AdetC));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(AdetP));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((double)(AdetP1));
+            if ((AdetY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(AdetY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((AdetY1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(AdetY1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(HastaC));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(HastaP));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(HastaP1));
+            if ((HastaY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(HastaY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((HastaY1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(HastaY1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[13].Value = ((double)(ToplamC));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((double)(ToplamP));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((double)(ToplamP1));
+            if ((ToplamY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((double)(ToplamY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((ToplamY1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((double)(ToplamY1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((KisiBasiC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((double)(KisiBasiC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((KisiBasiP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((double)(KisiBasiP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((KisiBasiP1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((double)(KisiBasiP1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((KisiBasiY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((double)(KisiBasiY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((KisiBasiY1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((double)(KisiBasiY1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((double)(IslemBasiC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((double)(IslemBasiP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiP1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((double)(IslemBasiP1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((double)(IslemBasiY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiY1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((double)(IslemBasiY1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class rtblOzetYatakServisAyTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public rtblOzetYatakServisAyTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "rtblOzetYatakServisAy";
+            tableMapping.ColumnMappings.Add("RowNumber", "RowNumber");
+            tableMapping.ColumnMappings.Add("Key1", "Key1");
+            tableMapping.ColumnMappings.Add("Key2", "Key2");
+            tableMapping.ColumnMappings.Add("AdetC", "AdetC");
+            tableMapping.ColumnMappings.Add("HastaC", "HastaC");
+            tableMapping.ColumnMappings.Add("ToplamC", "ToplamC");
+            tableMapping.ColumnMappings.Add("KisiBasiC", "KisiBasiC");
+            tableMapping.ColumnMappings.Add("IslemBasiC", "IslemBasiC");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[rtblOzetYatakServisAy] ([RowNumber], [Key1], [Key2], [AdetC], " +
+                "[HastaC], [ToplamC], [KisiBasiC], [IslemBasiC]) VALUES (@RowNumber, @Key1, @Key2" +
+                ", @AdetC, @HastaC, @ToplamC, @KisiBasiC, @IslemBasiC)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RowNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RowNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Key1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Key1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Key2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Key2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdetC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdetC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HastaC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HastaC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToplamC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ToplamC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KisiBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KisiBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IslemBasiC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IslemBasiC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Naz.Hastane.Reports.Properties.Settings.Default.TIPDATAConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT RowNumber, Key1, Key2, AdetC, HastaC, ToplamC, KisiBasiC, IslemBasiC FROM " +
+                "dbo.rtblOzetYatakServisAy";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TIPDATADataSet.rtblOzetYatakServisAyDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TIPDATADataSet.rtblOzetYatakServisAyDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TIPDATADataSet.rtblOzetYatakServisAyDataTable dataTable = new TIPDATADataSet.rtblOzetYatakServisAyDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TIPDATADataSet.rtblOzetYatakServisAyDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TIPDATADataSet dataSet) {
+            return this.Adapter.Update(dataSet, "rtblOzetYatakServisAy");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<long> RowNumber, string Key1, global::System.Nullable<int> Key2, double AdetC, int HastaC, double ToplamC, global::System.Nullable<double> KisiBasiC, global::System.Nullable<double> IslemBasiC) {
+            if ((RowNumber.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((long)(RowNumber.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Key1 == null)) {
+                throw new global::System.ArgumentNullException("Key1");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Key1));
+            }
+            if ((Key2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Key2.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(AdetC));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(HastaC));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((double)(ToplamC));
+            if ((KisiBasiC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(KisiBasiC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((IslemBasiC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(IslemBasiC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20724,8 +21639,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
         
         private rtblOzetAnaIslemTableAdapter _rtblOzetAnaIslemTableAdapter;
         
-        private rtblOzetDoktorTableAdapter _rtblOzetDoktorTableAdapter;
-        
         private rtblOzetDoktorAnaIslemTableAdapter _rtblOzetDoktorAnaIslemTableAdapter;
         
         private rtblOzetHastaneServisAnaIslemTableAdapter _rtblOzetHastaneServisAnaIslemTableAdapter;
@@ -20739,6 +21652,10 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
         private rtblOzetServisAnaIslemTableAdapter _rtblOzetServisAnaIslemTableAdapter;
         
         private rtblOzetAnaIslemAyTableAdapter _rtblOzetAnaIslemAyTableAdapter;
+        
+        private rtblOzetDoktorTableAdapter _rtblOzetDoktorTableAdapter;
+        
+        private rtblOzetYatakServisAyTableAdapter _rtblOzetYatakServisAyTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -20808,20 +21725,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
             }
             set {
                 this._rtblOzetAnaIslemTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public rtblOzetDoktorTableAdapter rtblOzetDoktorTableAdapter {
-            get {
-                return this._rtblOzetDoktorTableAdapter;
-            }
-            set {
-                this._rtblOzetDoktorTableAdapter = value;
             }
         }
         
@@ -20925,6 +21828,34 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public rtblOzetDoktorTableAdapter rtblOzetDoktorTableAdapter {
+            get {
+                return this._rtblOzetDoktorTableAdapter;
+            }
+            set {
+                this._rtblOzetDoktorTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public rtblOzetYatakServisAyTableAdapter rtblOzetYatakServisAyTableAdapter {
+            get {
+                return this._rtblOzetYatakServisAyTableAdapter;
+            }
+            set {
+                this._rtblOzetYatakServisAyTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -20958,10 +21889,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                             && (this._rtblOzetAnaIslemTableAdapter.Connection != null))) {
                     return this._rtblOzetAnaIslemTableAdapter.Connection;
                 }
-                if (((this._rtblOzetDoktorTableAdapter != null) 
-                            && (this._rtblOzetDoktorTableAdapter.Connection != null))) {
-                    return this._rtblOzetDoktorTableAdapter.Connection;
-                }
                 if (((this._rtblOzetDoktorAnaIslemTableAdapter != null) 
                             && (this._rtblOzetDoktorAnaIslemTableAdapter.Connection != null))) {
                     return this._rtblOzetDoktorAnaIslemTableAdapter.Connection;
@@ -20990,6 +21917,14 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                             && (this._rtblOzetAnaIslemAyTableAdapter.Connection != null))) {
                     return this._rtblOzetAnaIslemAyTableAdapter.Connection;
                 }
+                if (((this._rtblOzetDoktorTableAdapter != null) 
+                            && (this._rtblOzetDoktorTableAdapter.Connection != null))) {
+                    return this._rtblOzetDoktorTableAdapter.Connection;
+                }
+                if (((this._rtblOzetYatakServisAyTableAdapter != null) 
+                            && (this._rtblOzetYatakServisAyTableAdapter.Connection != null))) {
+                    return this._rtblOzetYatakServisAyTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -21015,9 +21950,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if ((this._rtblOzetAnaIslemTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._rtblOzetDoktorTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -21039,6 +21971,12 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._rtblOzetDoktorTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -21050,42 +21988,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(TIPDATADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rtblOzetKurumTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rtblOzetKurumTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._rtblOzetServisAnaIslemTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -21101,6 +22003,51 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._rtblOzetServisTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetYatakServisAy.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetYatakServisAyTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rtblOzetDoktorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetDoktorTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rtblOzetKurumTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetKurumTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21131,21 +22078,21 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetDoktorAnaIslem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._rtblOzetDoktorAnaIslemTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rtblOzetDoktorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rtblOzetDoktorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21168,38 +22115,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(TIPDATADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rtblOzetKurumTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rtblOzetKurumTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._rtblOzetServisAnaIslemTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.rtblOzetServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -21213,6 +22128,46 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._rtblOzetServisTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetYatakServisAy.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetYatakServisAyTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rtblOzetDoktorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetDoktorTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rtblOzetKurumTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetKurumTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21240,19 +22195,19 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.rtblOzetDoktorAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._rtblOzetDoktorAnaIslemTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rtblOzetDoktorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rtblOzetDoktorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21282,19 +22237,19 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._rtblOzetDoktorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rtblOzetDoktorTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetDoktorAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._rtblOzetDoktorAnaIslemTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21322,6 +22277,46 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._rtblOzetKurumTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetKurumTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rtblOzetDoktorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetDoktor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetDoktorTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetYatakServisAy.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetYatakServisAyTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._rtblOzetServisTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetServis.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -21335,38 +22330,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._rtblOzetServisAnaIslemTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetAnaIslemAy.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rtblOzetAnaIslemAyTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._rtblOzetHastaneServisAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetHastaneServisAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rtblOzetHastaneServisAnaIslemTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._rtblOzetKurumTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetKurum.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rtblOzetKurumTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._rtblOzetKurumAnaIslemTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.rtblOzetKurumAnaIslem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rtblOzetKurumAnaIslemTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21429,11 +22392,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._rtblOzetDoktorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._rtblOzetDoktorTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._rtblOzetDoktorAnaIslemTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._rtblOzetDoktorAnaIslemTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -21466,6 +22424,16 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
             }
             if (((this._rtblOzetAnaIslemAyTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._rtblOzetAnaIslemAyTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._rtblOzetDoktorTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rtblOzetDoktorTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._rtblOzetYatakServisAyTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rtblOzetYatakServisAyTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -21537,15 +22505,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._rtblOzetAnaIslemTableAdapter.Adapter);
                     }
                 }
-                if ((this._rtblOzetDoktorTableAdapter != null)) {
-                    revertConnections.Add(this._rtblOzetDoktorTableAdapter, this._rtblOzetDoktorTableAdapter.Connection);
-                    this._rtblOzetDoktorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._rtblOzetDoktorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._rtblOzetDoktorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._rtblOzetDoktorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._rtblOzetDoktorTableAdapter.Adapter);
-                    }
-                }
                 if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                     revertConnections.Add(this._rtblOzetDoktorAnaIslemTableAdapter, this._rtblOzetDoktorAnaIslemTableAdapter.Connection);
                     this._rtblOzetDoktorAnaIslemTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -21607,6 +22566,24 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     if (this._rtblOzetAnaIslemAyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._rtblOzetAnaIslemAyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._rtblOzetAnaIslemAyTableAdapter.Adapter);
+                    }
+                }
+                if ((this._rtblOzetDoktorTableAdapter != null)) {
+                    revertConnections.Add(this._rtblOzetDoktorTableAdapter, this._rtblOzetDoktorTableAdapter.Connection);
+                    this._rtblOzetDoktorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._rtblOzetDoktorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._rtblOzetDoktorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rtblOzetDoktorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rtblOzetDoktorTableAdapter.Adapter);
+                    }
+                }
+                if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                    revertConnections.Add(this._rtblOzetYatakServisAyTableAdapter, this._rtblOzetYatakServisAyTableAdapter.Connection);
+                    this._rtblOzetYatakServisAyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._rtblOzetYatakServisAyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._rtblOzetYatakServisAyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rtblOzetYatakServisAyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rtblOzetYatakServisAyTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -21683,10 +22660,6 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                     this._rtblOzetAnaIslemTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetAnaIslemTableAdapter]));
                     this._rtblOzetAnaIslemTableAdapter.Transaction = null;
                 }
-                if ((this._rtblOzetDoktorTableAdapter != null)) {
-                    this._rtblOzetDoktorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetDoktorTableAdapter]));
-                    this._rtblOzetDoktorTableAdapter.Transaction = null;
-                }
                 if ((this._rtblOzetDoktorAnaIslemTableAdapter != null)) {
                     this._rtblOzetDoktorAnaIslemTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetDoktorAnaIslemTableAdapter]));
                     this._rtblOzetDoktorAnaIslemTableAdapter.Transaction = null;
@@ -21714,6 +22687,14 @@ namespace Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters {
                 if ((this._rtblOzetAnaIslemAyTableAdapter != null)) {
                     this._rtblOzetAnaIslemAyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetAnaIslemAyTableAdapter]));
                     this._rtblOzetAnaIslemAyTableAdapter.Transaction = null;
+                }
+                if ((this._rtblOzetDoktorTableAdapter != null)) {
+                    this._rtblOzetDoktorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetDoktorTableAdapter]));
+                    this._rtblOzetDoktorTableAdapter.Transaction = null;
+                }
+                if ((this._rtblOzetYatakServisAyTableAdapter != null)) {
+                    this._rtblOzetYatakServisAyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rtblOzetYatakServisAyTableAdapter]));
+                    this._rtblOzetYatakServisAyTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

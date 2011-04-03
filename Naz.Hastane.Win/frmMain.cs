@@ -893,13 +893,51 @@ namespace Naz.Hastane.Win {
             iOzetAYP.ItemClick += (o, args) => ShowReport<OZETAYPReport>();
             iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowReport<OZETDoktorAnaIslemReport>();
             iOzetDoktor.ItemClick += (o, args) => ShowReport<OZETDoktorReport>();
+            iOzetDoktorServis.ItemClick += (o, args) => ShowReport<OZETDoktorServisReport>();
             iOzetKurumAnaIslem.ItemClick += (o, args) => ShowReport<OZETKurumAnaIslemReport>();
             iOzetKurumAYP.ItemClick += (o, args) => ShowReport<OZETKurumAYPReport>();
             iOzetKurum.ItemClick += (o, args) => ShowReport<OZETKurumReport>();
             iOzetServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
             iOzetServis.ItemClick += (o, args) => ShowReport<OZETServisReport>();
+            iOzetYatakServisAy.ItemClick += (o, args) => ShowReport<OZETYatakServisAyXTab>();
 
             //iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
+        }
+
+        private void iExportToPDF_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ReportExportToPdf<OZETAnaIslemAyXTab>("OZETAnaIslemAyXTab");
+            ReportExportToPdf<OZETAnaIslemReport>("OZETAnaIslemReport");
+            ReportExportToPdf<OZETAnaIslemServisXTab>("OZETAnaIslemServisXTab");
+            ReportExportToPdf<OZETAYPAnaIslemReport>("OZETAYPAnaIslemReport");
+            ReportExportToPdf<OZETAYPReport>("OZETAYPReport");
+            ReportExportToPdf<OZETDoktorAnaIslemReport>("OZETDoktorAnaIslemReport");
+            ReportExportToPdf<OZETDoktorReport>("OZETDoktorReport");
+            ReportExportToPdf<OZETDoktorServisReport>("OZETDoktorServisReport");
+            ReportExportToPdf<OZETKurumAnaIslemReport>("OZETKurumAnaIslemReport");
+            ReportExportToPdf<OZETKurumAYPReport>("OZETKurumAYPReport");
+            ReportExportToPdf<OZETKurumReport>("OZETKurumReport");
+            ReportExportToPdf<OZETServisAnaIslemReport>("OZETServisAnaIslemReport");
+            ReportExportToPdf<OZETServisReport>("OZETServisReport");
+            ReportExportToPdf<OZETYatakServisAyXTab>("OZETYatakServisAyXTab");
+        }
+
+        private void iExportToXLSX_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ReportExportToXlsx<OZETAnaIslemAyXTab>("OZETAnaIslemAyXTab");
+            ReportExportToXlsx<OZETAnaIslemReport>("OZETAnaIslemReport");
+            ReportExportToXlsx<OZETAnaIslemServisXTab>("OZETAnaIslemServisXTab");
+            ReportExportToXlsx<OZETAYPAnaIslemReport>("OZETAYPAnaIslemReport");
+            ReportExportToXlsx<OZETAYPReport>("OZETAYPReport");
+            ReportExportToXlsx<OZETDoktorAnaIslemReport>("OZETDoktorAnaIslemReport");
+            ReportExportToXlsx<OZETDoktorReport>("OZETDoktorReport");
+            ReportExportToXlsx<OZETDoktorServisReport>("OZETDoktorServisReport");
+            ReportExportToXlsx<OZETKurumAnaIslemReport>("OZETKurumAnaIslemReport");
+            ReportExportToXlsx<OZETKurumAYPReport>("OZETKurumAYPReport");
+            ReportExportToXlsx<OZETKurumReport>("OZETKurumReport");
+            ReportExportToXlsx<OZETServisAnaIslemReport>("OZETServisAnaIslemReport");
+            ReportExportToXlsx<OZETServisReport>("OZETServisReport");
+            ReportExportToXlsx<OZETYatakServisAyXTab>("OZETYatakServisAyXTab");
         }
 
         private void iLogin_ItemClick(object sender, ItemClickEventArgs e)
@@ -942,5 +980,20 @@ namespace Naz.Hastane.Win {
             T report = new T();
             report.ShowPreview();
         }
+
+        private void ReportExportToPdf<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
+        {
+            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
+            T report = new T();
+            report.ExportToPdf(path + aPath + ".pdf");
+        }
+
+        private void ReportExportToXlsx<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
+        {
+            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
+            T report = new T();
+            report.ExportToXlsx(path + aPath + ".xlsx");
+        }
+
     }
 }

@@ -108,6 +108,12 @@
     <Compile Include="Classes\OZETDoktorReport.designer.cs">
       <DependentUpon>OZETDoktorReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\OZETDoktorServisReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OZETDoktorServisReport.designer.cs">
+      <DependentUpon>OZETDoktorServisReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\OZETKurumAnaIslemReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     </Compile>
     <Compile Include="Classes\OZETServisReport.designer.cs">
       <DependentUpon>OZETServisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\OZETYatakServisAyXTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OZETYatakServisAyXTab.designer.cs">
+      <DependentUpon>OZETYatakServisAyXTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -193,6 +205,9 @@
     <EmbeddedResource Include="Classes\OZETDoktorReport.resx">
       <DependentUpon>OZETDoktorReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\OZETDoktorServisReport.resx">
+      <DependentUpon>OZETDoktorServisReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\OZETKurumAnaIslemReport.resx">
       <DependentUpon>OZETKurumAnaIslemReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\OZETServisReport.resx">
       <DependentUpon>OZETServisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\OZETYatakServisAyXTab.resx">
+      <DependentUpon>OZETYatakServisAyXTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Classes\VoucherSGK.resx">
