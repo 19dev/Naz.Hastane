@@ -1,6 +1,6 @@
 namespace Naz.Hastane.Reports.Classes
 {
-    partial class OZETAYPReport
+    partial class OZETServisReport
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@ namespace Naz.Hastane.Reports.Classes
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.tipdataDataSet = new Naz.Hastane.Reports.DataSets.TIPDATADataSet();
-            this.rtblOzetAYPTableAdapter = new Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetAYPTableAdapter();
+            this.rtblOzetServisTableAdapter = new Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetServisTableAdapter();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -87,7 +87,6 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiY1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -111,6 +110,8 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell43 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell44 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell28 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -136,7 +137,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(2500F, 74.08334F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(2657.479F, 74.08334F);
             this.xrTable2.StylePriority.UseTextAlignment = false;
             this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -171,168 +172,168 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrTableCell4.CanGrow = false;
             this.xrTableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.Key1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.Key1")});
             this.xrTableCell4.Dpi = 254F;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "xrTableCell4";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell4.Weight = 0.28929836968998834D;
+            this.xrTableCell4.Weight = 0.44358987927761151D;
             // 
             // xrTableCell5
             // 
             this.xrTableCell5.CanGrow = false;
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaC", "{0:#,#}")});
             this.xrTableCell5.Dpi = 254F;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Text = "xrTableCell5";
-            this.xrTableCell5.Weight = 0.15043514091398463D;
+            this.xrTableCell5.Weight = 0.14152057410589392D;
             // 
             // xrTableCell6
             // 
             this.xrTableCell6.CanGrow = false;
             this.xrTableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaP", "{0:#,#}")});
             this.xrTableCell6.Dpi = 254F;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Text = "xrTableCell6";
-            this.xrTableCell6.Weight = 0.15043515240333261D;
+            this.xrTableCell6.Weight = 0.14152051915118316D;
             // 
             // xrTableCell10
             // 
             this.xrTableCell10.CanGrow = false;
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaY", "{0:0.00%}")});
             this.xrTableCell10.Dpi = 254F;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Text = "xrTableCell10";
-            this.xrTableCell10.Weight = 0.15043514432657151D;
+            this.xrTableCell10.Weight = 0.1415205941294955D;
             // 
             // xrTableCell13
             // 
             this.xrTableCell13.CanGrow = false;
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaP1", "{0:#,#}")});
             this.xrTableCell13.Dpi = 254F;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Text = "xrTableCell13";
-            this.xrTableCell13.Weight = 0.15043515677636021D;
+            this.xrTableCell13.Weight = 0.1415205899682695D;
             // 
             // xrTableCell20
             // 
             this.xrTableCell20.CanGrow = false;
             this.xrTableCell20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaY1", "{0:0.00%}")});
             this.xrTableCell20.Dpi = 254F;
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.Text = "xrTableCell20";
-            this.xrTableCell20.Weight = 0.15043514368160596D;
+            this.xrTableCell20.Weight = 0.1415206599285887D;
             // 
             // xrTableCell21
             // 
             this.xrTableCell21.CanGrow = false;
             this.xrTableCell21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamC", "{0:#,#}")});
             this.xrTableCell21.Dpi = 254F;
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.Text = "xrTableCell21";
-            this.xrTableCell21.Weight = 0.20829482007551836D;
+            this.xrTableCell21.Weight = 0.19595137439367807D;
             // 
             // xrTableCell33
             // 
             this.xrTableCell33.CanGrow = false;
             this.xrTableCell33.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamP", "{0:#,#}")});
             this.xrTableCell33.Dpi = 254F;
             this.xrTableCell33.Name = "xrTableCell33";
             this.xrTableCell33.Text = "xrTableCell33";
-            this.xrTableCell33.Weight = 0.20829482007551836D;
+            this.xrTableCell33.Weight = 0.19595149067078083D;
             // 
             // xrTableCell32
             // 
             this.xrTableCell32.CanGrow = false;
             this.xrTableCell32.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamY", "{0:0.00%}")});
             this.xrTableCell32.Dpi = 254F;
             this.xrTableCell32.Name = "xrTableCell32";
             this.xrTableCell32.Text = "xrTableCell32";
-            this.xrTableCell32.Weight = 0.15043514710356759D;
+            this.xrTableCell32.Weight = 0.14152066335055033D;
             // 
             // xrTableCell31
             // 
             this.xrTableCell31.CanGrow = false;
             this.xrTableCell31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamP1", "{0:#,#}")});
             this.xrTableCell31.Dpi = 254F;
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.Text = "xrTableCell31";
-            this.xrTableCell31.Weight = 0.20829481950519135D;
+            this.xrTableCell31.Weight = 0.19595110804711607D;
             // 
             // xrTableCell34
             // 
             this.xrTableCell34.CanGrow = false;
             this.xrTableCell34.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamY1", "{0:0.00%}")});
             this.xrTableCell34.Dpi = 254F;
             this.xrTableCell34.Name = "xrTableCell34";
             this.xrTableCell34.Text = "xrTableCell34";
-            this.xrTableCell34.Weight = 0.15043518298863612D;
+            this.xrTableCell34.Weight = 0.14152040023735449D;
             // 
             // xrTableCell35
             // 
             this.xrTableCell35.CanGrow = false;
             this.xrTableCell35.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiC", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiC", "{0:#,#}")});
             this.xrTableCell35.Dpi = 254F;
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.Text = "xrTableCell35";
-            this.xrTableCell35.Weight = 0.20829481616021184D;
+            this.xrTableCell35.Weight = 0.19595176914272405D;
             // 
             // xrTableCell47
             // 
             this.xrTableCell47.CanGrow = false;
             this.xrTableCell47.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiP", "{0:#,#}")});
             this.xrTableCell47.Dpi = 254F;
             this.xrTableCell47.Name = "xrTableCell47";
             this.xrTableCell47.Text = "xrTableCell47";
-            this.xrTableCell47.Weight = 0.20829481616021184D;
+            this.xrTableCell47.Weight = 0.19595176914272403D;
             // 
             // xrTableCell46
             // 
             this.xrTableCell46.CanGrow = false;
             this.xrTableCell46.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiY", "{0:0.00%}")});
             this.xrTableCell46.Dpi = 254F;
             this.xrTableCell46.Name = "xrTableCell46";
             this.xrTableCell46.Text = "xrTableCell46";
-            this.xrTableCell46.Weight = 0.1504351437585881D;
+            this.xrTableCell46.Weight = 0.14152079289368832D;
             // 
             // xrTableCell48
             // 
             this.xrTableCell48.CanGrow = false;
             this.xrTableCell48.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP1", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiP1", "{0:#,#}")});
             this.xrTableCell48.Dpi = 254F;
             this.xrTableCell48.Name = "xrTableCell48";
             this.xrTableCell48.Text = "xrTableCell48";
-            this.xrTableCell48.Weight = 0.20829481616021184D;
+            this.xrTableCell48.Weight = 0.19595097181401905D;
             // 
             // xrTableCell36
             // 
             this.xrTableCell36.CanGrow = false;
             this.xrTableCell36.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY1", "{0:0.00%}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiY1", "{0:0.00%}")});
             this.xrTableCell36.Dpi = 254F;
             this.xrTableCell36.Name = "xrTableCell36";
             this.xrTableCell36.Text = "xrTableCell36";
-            this.xrTableCell36.Weight = 0.15043513030168743D;
+            this.xrTableCell36.Weight = 0.1415204638275086D;
             // 
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 86F;
+            this.TopMargin.HeightF = 51F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -340,7 +341,7 @@ namespace Naz.Hastane.Reports.Classes
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 127F;
+            this.BottomMargin.HeightF = 0F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -350,16 +351,16 @@ namespace Naz.Hastane.Reports.Classes
             this.tipdataDataSet.DataSetName = "TIPDATADataSet";
             this.tipdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rtblOzetAYPTableAdapter
+            // rtblOzetServisTableAdapter
             // 
-            this.rtblOzetAYPTableAdapter.ClearBeforeFill = true;
+            this.rtblOzetServisTableAdapter.ClearBeforeFill = true;
             // 
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable3});
             this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.HeightF = 195.7917F;
+            this.ReportFooter.HeightF = 75F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrTable3
@@ -369,7 +370,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(2500F, 75F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(2657.479F, 75F);
             this.xrTable3.StylePriority.UseTextAlignment = false;
             this.xrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -409,36 +410,36 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell7.StylePriority.UseTextAlignment = false;
             this.xrTableCell7.Text = "TOPLAM";
             this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell7.Weight = 0.28929836968998812D;
+            this.xrTableCell7.Weight = 0.44358984605558194D;
             // 
             // xrTableCell8
             // 
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaC")});
             this.xrTableCell8.Dpi = 254F;
             this.xrTableCell8.Name = "xrTableCell8";
             xrSummary1.FormatString = "{0:#,#}";
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell8.Summary = xrSummary1;
             this.xrTableCell8.Text = "xrTableCell8";
-            this.xrTableCell8.Weight = 0.15043514233594157D;
+            this.xrTableCell8.Weight = 0.14152057552785083D;
             // 
             // xrTableCell9
             // 
             this.xrTableCell9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaP", "{0:#,#}")});
             this.xrTableCell9.Dpi = 254F;
             this.xrTableCell9.Name = "xrTableCell9";
             xrSummary2.FormatString = "{0:#,#}";
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell9.Summary = xrSummary2;
             this.xrTableCell9.Text = "xrTableCell9";
-            this.xrTableCell9.Weight = 0.15043515235642244D;
+            this.xrTableCell9.Weight = 0.14152053571528769D;
             // 
             // celSumHastaY
             // 
             this.celSumHastaY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaY")});
             this.celSumHastaY.Dpi = 254F;
             this.celSumHastaY.Name = "celSumHastaY";
             xrSummary3.FormatString = "{0:0.00%}";
@@ -446,26 +447,26 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumHastaY.Summary = xrSummary3;
             this.celSumHastaY.Text = "celSumHastaY";
-            this.celSumHastaY.Weight = 0.15043514530132662D;
+            this.celSumHastaY.Weight = 0.14152052866019185D;
             this.celSumHastaY.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumHastaY_SummaryGetResult);
             this.celSumHastaY.SummaryRowChanged += new System.EventHandler(this.celSumHastaY_SummaryRowChanged);
             // 
             // xrTableCell22
             // 
             this.xrTableCell22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaP1")});
             this.xrTableCell22.Dpi = 254F;
             this.xrTableCell22.Name = "xrTableCell22";
             xrSummary4.FormatString = "{0:#,#}";
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell22.Summary = xrSummary4;
             this.xrTableCell22.Text = "xrTableCell22";
-            this.xrTableCell22.Weight = 0.15043514235843136D;
+            this.xrTableCell22.Weight = 0.14152059216135532D;
             // 
             // celSumHastaY1
             // 
             this.celSumHastaY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.HastaY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.HastaY1")});
             this.celSumHastaY1.Dpi = 254F;
             this.celSumHastaY1.Name = "celSumHastaY1";
             xrSummary5.FormatString = "{0:0.00%}";
@@ -473,38 +474,38 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumHastaY1.Summary = xrSummary5;
             this.celSumHastaY1.Text = "celSumHastaY1";
-            this.celSumHastaY1.Weight = 0.15043514530132662D;
+            this.celSumHastaY1.Weight = 0.14152066154830939D;
             this.celSumHastaY1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumHastaY1_SummaryGetResult);
             this.celSumHastaY1.SummaryRowChanged += new System.EventHandler(this.celSumHastaY1_SummaryRowChanged);
             // 
             // xrTableCell24
             // 
             this.xrTableCell24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamC")});
             this.xrTableCell24.Dpi = 254F;
             this.xrTableCell24.Name = "xrTableCell24";
             xrSummary6.FormatString = "{0:#,#}";
             xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell24.Summary = xrSummary6;
             this.xrTableCell24.Text = "xrTableCell24";
-            this.xrTableCell24.Weight = 0.20829482138156916D;
+            this.xrTableCell24.Weight = 0.19595137569972887D;
             // 
             // xrTableCell39
             // 
             this.xrTableCell39.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamP")});
             this.xrTableCell39.Dpi = 254F;
             this.xrTableCell39.Name = "xrTableCell39";
             xrSummary7.FormatString = "{0:#,#}";
             xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell39.Summary = xrSummary7;
             this.xrTableCell39.Text = "xrTableCell39";
-            this.xrTableCell39.Weight = 0.20829482138156918D;
+            this.xrTableCell39.Weight = 0.1959514919768317D;
             // 
             // celSumToplamY
             // 
             this.celSumToplamY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamY")});
             this.celSumToplamY.Dpi = 254F;
             this.celSumToplamY.Name = "celSumToplamY";
             xrSummary8.FormatString = "{0:0.00%}";
@@ -512,26 +513,26 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary8.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumToplamY.Summary = xrSummary8;
             this.celSumToplamY.Text = "celSumToplamY";
-            this.celSumToplamY.Weight = 0.15043514971566924D;
+            this.celSumToplamY.Weight = 0.14152066596265195D;
             this.celSumToplamY.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumToplamY_SummaryGetResult);
             this.celSumToplamY.SummaryRowChanged += new System.EventHandler(this.celSumToplamY_SummaryRowChanged);
             // 
             // xrTableCell37
             // 
             this.xrTableCell37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamP1")});
             this.xrTableCell37.Dpi = 254F;
             this.xrTableCell37.Name = "xrTableCell37";
             xrSummary9.FormatString = "{0:#,#}";
             xrSummary9.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell37.Summary = xrSummary9;
             this.xrTableCell37.Text = "xrTableCell37";
-            this.xrTableCell37.Weight = 0.20829482211729289D;
+            this.xrTableCell37.Weight = 0.19595111065921761D;
             // 
             // celSumToplamY1
             // 
             this.celSumToplamY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.ToplamY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.ToplamY1")});
             this.celSumToplamY1.Dpi = 254F;
             this.celSumToplamY1.Name = "celSumToplamY1";
             xrSummary10.FormatString = "{0:0.00%}";
@@ -539,14 +540,14 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary10.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumToplamY1.Summary = xrSummary10;
             this.celSumToplamY1.Text = "celSumToplamY1";
-            this.celSumToplamY1.Weight = 0.15043511366520412D;
+            this.celSumToplamY1.Weight = 0.14152053024609873D;
             this.celSumToplamY1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumToplamY1_SummaryGetResult);
             this.celSumToplamY1.SummaryRowChanged += new System.EventHandler(this.celSumToplamY1_SummaryRowChanged);
             // 
             // celSumKisiBasiC
             // 
             this.celSumKisiBasiC.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiC")});
             this.celSumKisiBasiC.Dpi = 254F;
             this.celSumKisiBasiC.Name = "celSumKisiBasiC";
             xrSummary11.FormatString = "{0:#,#}";
@@ -554,13 +555,13 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary11.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumKisiBasiC.Summary = xrSummary11;
             this.celSumKisiBasiC.Text = "celSumKisiBasiC";
-            this.celSumKisiBasiC.Weight = 0.20829481632346814D;
+            this.celSumKisiBasiC.Weight = 0.19595163641786284D;
             this.celSumKisiBasiC.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiC_SummaryGetResult);
             // 
             // celSumKisiBasiP
             // 
             this.celSumKisiBasiP.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiP")});
             this.celSumKisiBasiP.Dpi = 254F;
             this.celSumKisiBasiP.Name = "celSumKisiBasiP";
             xrSummary12.FormatString = "{0:#,#}";
@@ -568,13 +569,13 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary12.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumKisiBasiP.Summary = xrSummary12;
             this.celSumKisiBasiP.Text = "celSumKisiBasiP";
-            this.celSumKisiBasiP.Weight = 0.20829481632346816D;
+            this.celSumKisiBasiP.Weight = 0.19595203508221534D;
             this.celSumKisiBasiP.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiP_SummaryGetResult);
             // 
             // celSumKisiBasiY
             // 
             this.celSumKisiBasiY.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiY")});
             this.celSumKisiBasiY.Dpi = 254F;
             this.celSumKisiBasiY.Name = "celSumKisiBasiY";
             xrSummary13.FormatString = "{0:0.00%}";
@@ -582,13 +583,13 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary13.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumKisiBasiY.Summary = xrSummary13;
             this.celSumKisiBasiY.Text = "celSumKisiBasiY";
-            this.celSumKisiBasiY.Weight = 0.15043514392184443D;
+            this.celSumKisiBasiY.Weight = 0.14152026150447467D;
             this.celSumKisiBasiY.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiY_SummaryGetResult);
             // 
             // celSumKisiBasiP1
             // 
             this.celSumKisiBasiP1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiP1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiP1")});
             this.celSumKisiBasiP1.Dpi = 254F;
             this.celSumKisiBasiP1.Name = "celSumKisiBasiP1";
             xrSummary14.FormatString = "{0:#,#}";
@@ -596,13 +597,13 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary14.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumKisiBasiP1.Summary = xrSummary14;
             this.celSumKisiBasiP1.Text = "celSumKisiBasiP1";
-            this.celSumKisiBasiP1.Weight = 0.20829481632346816D;
+            this.celSumKisiBasiP1.Weight = 0.19595176930598035D;
             this.celSumKisiBasiP1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiP1_SummaryGetResult);
             // 
             // celSumKisiBasiY1
             // 
             this.celSumKisiBasiY1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetAYP.KisiBasiY1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "rtblOzetServis.KisiBasiY1")});
             this.celSumKisiBasiY1.Dpi = 254F;
             this.celSumKisiBasiY1.Name = "celSumKisiBasiY1";
             xrSummary15.FormatString = "{0:0.00%}";
@@ -610,19 +611,13 @@ namespace Naz.Hastane.Reports.Classes
             xrSummary15.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.celSumKisiBasiY1.Summary = xrSummary15;
             this.celSumKisiBasiY1.Text = "celSumKisiBasiY1";
-            this.celSumKisiBasiY1.Weight = 0.15043520158419577D;
+            this.celSumKisiBasiY1.Weight = 0.14152000355754696D;
             this.celSumKisiBasiY1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiY1_SummaryGetResult);
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel3,
-            this.xrLabel2,
-            this.xrLabel1,
-            this.xrTable4,
-            this.xrTable1});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 452.4375F;
+            this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.StylePriority.UseTextAlignment = false;
             this.ReportHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -631,45 +626,32 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrLabel3.Dpi = 254F;
             this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25.00001F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(18.52083F, 5.12501F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(254F, 58.42F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "RAPOR-1";
+            this.xrLabel3.Text = "RAPOR-12";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(346.6042F, 127F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(2076.979F, 103.1875F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Mart 2011";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel1
             // 
             this.xrLabel1.Dpi = 254F;
             this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(346.6042F, 23.8125F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(613.8333F, 5.12501F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(2076.979F, 103.1875F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(1860.021F, 76.72917F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "GENEL FAALÝYET RAPORU (ÝÞLEM TÜRÜNE GÖRE)";
+            this.xrLabel1.Text = "POLÝKLÝNÝKLER ÖZET RAPORU (Mart 2011)";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrTable4
             // 
             this.xrTable4.Dpi = 254F;
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(268.5208F, 313.9375F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(426.0002F, 81.85418F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
@@ -720,13 +702,12 @@ namespace Naz.Hastane.Reports.Classes
             // 
             // xrTable1
             // 
-            this.xrTable1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(268.5208F, 377.4375F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(426.0002F, 145.3542F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(2250F, 75F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(2250F, 74.99997F);
             // 
             // xrTableRow1
             // 
@@ -766,7 +747,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "2011";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell2.Weight = 0.15043517819726177D;
+            this.xrTableCell2.Weight = 0.14152061760196621D;
             // 
             // xrTableCell11
             // 
@@ -776,7 +757,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
             this.xrTableCell11.Text = "2010";
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell11.Weight = 0.15043514437481881D;
+            this.xrTableCell11.Weight = 0.14152052773368404D;
             // 
             // xrTableCell3
             // 
@@ -786,7 +767,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
             this.xrTableCell3.Text = "Art-Az%";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell3.Weight = 0.15043514844543141D;
+            this.xrTableCell3.Weight = 0.14152053180429663D;
             // 
             // xrTableCell17
             // 
@@ -796,7 +777,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell17.StylePriority.UseTextAlignment = false;
             this.xrTableCell17.Text = "2009";
             this.xrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell17.Weight = 0.15043514834482627D;
+            this.xrTableCell17.Weight = 0.14152052339818413D;
             // 
             // xrTableCell18
             // 
@@ -806,7 +787,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell18.StylePriority.UseTextAlignment = false;
             this.xrTableCell18.Text = "Art-Az%";
             this.xrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell18.Weight = 0.15043514829452404D;
+            this.xrTableCell18.Weight = 0.1415206313194774D;
             // 
             // xrTableCell19
             // 
@@ -816,7 +797,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell19.StylePriority.UseTextAlignment = false;
             this.xrTableCell19.Text = "2011";
             this.xrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell19.Weight = 0.20829482175571887D;
+            this.xrTableCell19.Weight = 0.19595150065648873D;
             // 
             // xrTableCell30
             // 
@@ -826,7 +807,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell30.StylePriority.UseTextAlignment = false;
             this.xrTableCell30.Text = "2010";
             this.xrTableCell30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell30.Weight = 0.2082948217557189D;
+            this.xrTableCell30.Weight = 0.19595150065648875D;
             // 
             // xrTableCell29
             // 
@@ -836,7 +817,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell29.StylePriority.UseTextAlignment = false;
             this.xrTableCell29.Text = "Art-Az%";
             this.xrTableCell29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell29.Weight = 0.15043515046396866D;
+            this.xrTableCell29.Weight = 0.14152053382283386D;
             // 
             // xrTableCell25
             // 
@@ -846,7 +827,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell25.StylePriority.UseTextAlignment = false;
             this.xrTableCell25.Text = "2009";
             this.xrTableCell25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell25.Weight = 0.20829482286559231D;
+            this.xrTableCell25.Weight = 0.19595150176636217D;
             // 
             // xrTableCell26
             // 
@@ -856,7 +837,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell26.StylePriority.UseTextAlignment = false;
             this.xrTableCell26.Text = "Art-Az%";
             this.xrTableCell26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell26.Weight = 0.15043511403935372D;
+            this.xrTableCell26.Weight = 0.14152053062024836D;
             // 
             // xrTableCell27
             // 
@@ -866,7 +847,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell27.StylePriority.UseTextAlignment = false;
             this.xrTableCell27.Text = "2011";
             this.xrTableCell27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell27.Weight = 0.20829481637023689D;
+            this.xrTableCell27.Weight = 0.19595149527100675D;
             // 
             // xrTableCell45
             // 
@@ -876,7 +857,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell45.StylePriority.UseTextAlignment = false;
             this.xrTableCell45.Text = "2010";
             this.xrTableCell45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell45.Weight = 0.20829481637023692D;
+            this.xrTableCell45.Weight = 0.19595150357651411D;
             // 
             // xrTableCell43
             // 
@@ -886,7 +867,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell43.StylePriority.UseTextAlignment = false;
             this.xrTableCell43.Text = "Art-Az%";
             this.xrTableCell43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell43.Weight = 0.15043514396861318D;
+            this.xrTableCell43.Weight = 0.14152052732747841D;
             // 
             // xrTableCell44
             // 
@@ -896,7 +877,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell44.StylePriority.UseTextAlignment = false;
             this.xrTableCell44.Text = "2009";
             this.xrTableCell44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell44.Weight = 0.20829481637023689D;
+            this.xrTableCell44.Weight = 0.19595150357651409D;
             // 
             // xrTableCell28
             // 
@@ -906,22 +887,45 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell28.StylePriority.UseTextAlignment = false;
             this.xrTableCell28.Text = "Art-Az%";
             this.xrTableCell28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell28.Weight = 0.15043520177127057D;
+            this.xrTableCell28.Weight = 0.14152038579795956D;
             // 
-            // OZETAYPReport
+            // xrPageInfo1
+            // 
+            this.xrPageInfo1.Dpi = 254F;
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(2496.083F, 5.12501F);
+            this.xrPageInfo1.Name = "xrPageInfo1";
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(179.9167F, 58.42F);
+            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
+            this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // PageHeader
+            // 
+            this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable1,
+            this.xrTable4,
+            this.xrLabel1,
+            this.xrPageInfo1,
+            this.xrLabel3});
+            this.PageHeader.Dpi = 254F;
+            this.PageHeader.HeightF = 220.3542F;
+            this.PageHeader.Name = "PageHeader";
+            // 
+            // OZETServisReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
             this.TopMargin,
             this.BottomMargin,
             this.ReportFooter,
-            this.ReportHeader});
-            this.DataAdapter = this.rtblOzetAYPTableAdapter;
-            this.DataMember = "rtblOzetAYP";
+            this.ReportHeader,
+            this.PageHeader});
+            this.DataAdapter = this.rtblOzetServisTableAdapter;
+            this.DataMember = "rtblOzetServis";
             this.DataSource = this.tipdataDataSet;
             this.Dpi = 254F;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(64, 94, 86, 127);
+            this.Margins = new System.Drawing.Printing.Margins(41, 53, 51, 0);
             this.PageHeight = 2159;
             this.PageWidth = 2794;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
@@ -942,7 +946,7 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private Naz.Hastane.Reports.DataSets.TIPDATADataSet tipdataDataSet;
-        private Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetAYPTableAdapter rtblOzetAYPTableAdapter;
+        private Naz.Hastane.Reports.DataSets.TIPDATADataSetTableAdapters.rtblOzetServisTableAdapter rtblOzetServisTableAdapter;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
@@ -1004,7 +1008,8 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell43;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
     }
 }

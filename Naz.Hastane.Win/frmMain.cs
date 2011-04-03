@@ -96,6 +96,7 @@ namespace Naz.Hastane.Win {
             this.Text = "SurpMed v. " + Application.ProductVersion;
             AttachMDIChildButtons();
             AttachLookUpButtons();
+            AttachReportCommands();
         }
 
         /// <summary>
@@ -879,15 +880,27 @@ namespace Naz.Hastane.Win {
             iUser.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Users, args.Item.Caption);
             iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
 
-            //iOzetAYPAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPAnaIslems, args.Item.Caption);
-            //iOzetAYPKurum.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetAYPKurums, args.Item.Caption);
-            iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetDoktorAnaIslems, args.Item.Caption);
-            iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetHastaneServisAnaIslems, args.Item.Caption);
-            iOzetKurumAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetKurumAnaIslems, args.Item.Caption);
-            iOzetServisAnaIslem.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.OzetServisAnaIslems, args.Item.Caption);
         }
 
         #endregion
+
+        private void AttachReportCommands()
+        {
+            iOzetAnaIslemAyXTab.ItemClick += (o, args) => ShowReport<OZETAnaIslemAyXTab>();
+            iOzetAnaIslem.ItemClick += (o, args) => ShowReport<OZETAnaIslemReport>();
+            iOzetServisAnaIslemPivot.ItemClick += (o, args) => ShowReport<OZETAnaIslemServisXTab>();
+            iOzetAYPAnaIslem.ItemClick += (o, args) => ShowReport<OZETAYPAnaIslemReport>();
+            iOzetAYP.ItemClick += (o, args) => ShowReport<OZETAYPReport>();
+            iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowReport<OZETDoktorAnaIslemReport>();
+            iOzetDoktor.ItemClick += (o, args) => ShowReport<OZETDoktorReport>();
+            iOzetKurumAnaIslem.ItemClick += (o, args) => ShowReport<OZETKurumAnaIslemReport>();
+            iOzetKurumAYP.ItemClick += (o, args) => ShowReport<OZETKurumAYPReport>();
+            iOzetKurum.ItemClick += (o, args) => ShowReport<OZETKurumReport>();
+            iOzetServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
+            iOzetServis.ItemClick += (o, args) => ShowReport<OZETServisReport>();
+
+            //iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
+        }
 
         private void iLogin_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -924,30 +937,9 @@ namespace Naz.Hastane.Win {
             this.rcMain.SelectedPage = rpPatient;
         }
 
-        private void iOzetAYPAnaIslem_ItemClick(object sender, ItemClickEventArgs e)
+        private void ShowReport<T>() where T : DevExpress.XtraReports.UI.XtraReport, new()
         {
-            OZETAYPReport report = new OZETAYPReport();
-            report.ShowPreview();
-        }
-
-        private void iOzetAYP_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            OZETAYPReport report = new OZETAYPReport();
- //           report.prmReportCaption.Value = "Mart 2011";
-            report.ShowPreview();
-        }
-
-        private void iOzetKurum_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            OZETKurumReport report = new OZETKurumReport();
-//            report.prmReportCaption.Value = "Mart 2011";
-            report.ShowPreview();
-        }
-
-        private void iOzetAYPKurum_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            OZETAYPKurumReport report = new OZETAYPKurumReport();
-            //            report.prmReportCaption.Value = "Mart 2011";
+            T report = new T();
             report.ShowPreview();
         }
     }

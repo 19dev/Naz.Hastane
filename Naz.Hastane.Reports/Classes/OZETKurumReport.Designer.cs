@@ -376,7 +376,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             // xrTableRow3
             // 
-            this.xrTableRow3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrTableRow3.BackColor = System.Drawing.Color.Gold;
             this.xrTableRow3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
