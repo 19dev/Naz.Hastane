@@ -967,7 +967,6 @@ namespace Naz.Hastane.Reports.Classes
             this.GroupHeader1.Name = "GroupHeader1";
             xrGroupSortingSummary1.FieldName = "HastaC";
             this.GroupHeader1.SortingSummary = xrGroupSortingSummary1;
-            this.GroupHeader1.AfterPrint += new System.EventHandler(this.GroupHeader1_AfterPrint);
             // 
             // xrTable5
             // 
@@ -1169,6 +1168,8 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiGC.Text = "celSumKisiBasiGC";
             this.celSumKisiBasiGC.Weight = 0.20829481632346814D;
             this.celSumKisiBasiGC.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiGC_SummaryGetResult);
+            this.celSumKisiBasiGC.SummaryReset += new System.EventHandler(this.celSumKisiBasiGC_SummaryReset);
+            this.celSumKisiBasiGC.SummaryRowChanged += new System.EventHandler(this.celSumKisiBasiGC_SummaryRowChanged);
             // 
             // celSumKisiBasiGP
             // 
@@ -1183,6 +1184,8 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiGP.Text = "celSumKisiBasiGP";
             this.celSumKisiBasiGP.Weight = 0.20829481632346816D;
             this.celSumKisiBasiGP.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiGP_SummaryGetResult);
+            this.celSumKisiBasiGP.SummaryReset += new System.EventHandler(this.celSumKisiBasiGP_SummaryReset);
+            this.celSumKisiBasiGP.SummaryRowChanged += new System.EventHandler(this.celSumKisiBasiGP_SummaryRowChanged);
             // 
             // celSumKisiBasiGY
             // 
@@ -1197,6 +1200,8 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiGY.Text = "celSumKisiBasiGY";
             this.celSumKisiBasiGY.Weight = 0.15043514392184443D;
             this.celSumKisiBasiGY.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiGY_SummaryGetResult);
+            this.celSumKisiBasiGY.SummaryReset += new System.EventHandler(this.celSumKisiBasiGY_SummaryReset);
+            this.celSumKisiBasiGY.SummaryRowChanged += new System.EventHandler(this.celSumKisiBasiGY_SummaryRowChanged);
             // 
             // celSumKisiBasiGP1
             // 
@@ -1211,6 +1216,8 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiGP1.Text = "celSumKisiBasiGP1";
             this.celSumKisiBasiGP1.Weight = 0.20829481632346816D;
             this.celSumKisiBasiGP1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiGP1_SummaryGetResult);
+            this.celSumKisiBasiGP1.SummaryReset += new System.EventHandler(this.celSumKisiBasiGP1_SummaryReset);
+            this.celSumKisiBasiGP1.SummaryRowChanged += new System.EventHandler(this.celSumKisiBasiGP1_SummaryRowChanged);
             // 
             // celSumKisiBasiGY1
             // 
@@ -1225,6 +1232,8 @@ namespace Naz.Hastane.Reports.Classes
             this.celSumKisiBasiGY1.Text = "celSumKisiBasiGY1";
             this.celSumKisiBasiGY1.Weight = 0.15043520158419577D;
             this.celSumKisiBasiGY1.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.celSumKisiBasiGY1_SummaryGetResult);
+            this.celSumKisiBasiGY1.SummaryReset += new System.EventHandler(this.celSumKisiBasiGY1_SummaryReset);
+            this.celSumKisiBasiGY1.SummaryRowChanged += new System.EventHandler(this.celSumKisiBasiGY1_SummaryRowChanged);
             // 
             // OZETAYPKurumReport
             // 

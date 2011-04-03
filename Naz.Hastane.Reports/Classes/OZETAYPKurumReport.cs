@@ -15,12 +15,27 @@ namespace Naz.Hastane.Reports.Classes
         private double SumToplamP = 0;
         private double SumToplamP1 = 0;
 
-        private double SumHastaGC = 0;
-        private double SumHastaGP = 0;
-        private double SumHastaGP1 = 0;
-        private double SumToplamGC = 0;
-        private double SumToplamGP = 0;
-        private double SumToplamGP1 = 0;
+
+        class Sums
+        {
+            public double SumHastaGC = 0;
+            public double SumHastaGP = 0;
+            public double SumHastaGP1 = 0;
+            public double SumToplamGC = 0;
+            public double SumToplamGP = 0;
+            public double SumToplamGP1 = 0;
+        }
+
+        Sums SumsHastaGY;
+        Sums SumsHastaGY1;
+        Sums SumsToplamGY;
+        Sums SumsToplamGY1;
+        Sums SumsKisiBasiGC;
+        Sums SumsKisiBasiGP;
+        Sums SumsKisiBasiGY;
+        Sums SumsKisiBasiGP1;
+        Sums SumsKisiBasiGY1;
+
 
         public OZETAYPKurumReport()
         {
@@ -121,110 +136,159 @@ namespace Naz.Hastane.Reports.Classes
 
         private void celSumHastaGY_SummaryReset(object sender, EventArgs e)
         {
-            //SumHastaGC = 0;
-            //SumHastaGP = 0;
+            SumsHastaGY = new Sums();
         }
 
         private void celSumHastaGY_SummaryRowChanged(object sender, EventArgs e)
         {
-            SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
-            SumHastaGP += Convert.ToDouble(GetCurrentColumnValue("HastaP"));
+            SumsHastaGY.SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
+            SumsHastaGY.SumHastaGP += Convert.ToDouble(GetCurrentColumnValue("HastaP"));
         }
 
         private void celSumHastaGY_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(SumHastaGC, SumHastaGP);
+            e.Result = CalculateDiff(SumsHastaGY.SumHastaGC, SumsHastaGY.SumHastaGP);
             e.Handled = true;
         }
 
         private void celSumHastaGY1_SummaryReset(object sender, EventArgs e)
         {
-            //SumHastaGP1 = 0;
+            SumsHastaGY1 = new Sums();
         }
 
         private void celSumHastaGY1_SummaryRowChanged(object sender, EventArgs e)
         {
-            SumHastaGP1 += Convert.ToDouble(GetCurrentColumnValue("HastaP1"));
+            SumsHastaGY1.SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
+            SumsHastaGY1.SumHastaGP1 += Convert.ToDouble(GetCurrentColumnValue("HastaP1"));
         }
 
         private void celSumHastaGY1_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(SumHastaGC, SumHastaGP1);
+            e.Result = CalculateDiff(SumsHastaGY1.SumHastaGC, SumsHastaGY1.SumHastaGP1);
             e.Handled = true;
         }
 
         private void celSumToplamGY_SummaryReset(object sender, EventArgs e)
         {
-            SumToplamGC = 0;
-            SumToplamGP = 0;
+            SumsToplamGY = new Sums();
         }
 
         private void celSumToplamGY_SummaryRowChanged(object sender, EventArgs e)
         {
-            //SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
-            //SumToplamGP += Convert.ToDouble(GetCurrentColumnValue("ToplamP"));
+            SumsToplamGY.SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
+            SumsToplamGY.SumToplamGP += Convert.ToDouble(GetCurrentColumnValue("ToplamP"));
         }
 
         private void celSumToplamGY_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(SumToplamGC, SumToplamGP);
+            e.Result = CalculateDiff(SumsToplamGY.SumToplamGC, SumsToplamGY.SumToplamGP);
             e.Handled = true;
         }
 
         private void celSumToplamGY1_SummaryReset(object sender, EventArgs e)
         {
-            //SumToplamGP1 = 0;
+            SumsToplamGY1 = new Sums();
         }
 
         private void celSumToplamGY1_SummaryRowChanged(object sender, EventArgs e)
         {
-            SumToplamGP1 += Convert.ToDouble(GetCurrentColumnValue("ToplamP1"));
+            SumsToplamGY1.SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
+            SumsToplamGY1.SumToplamGP1 += Convert.ToDouble(GetCurrentColumnValue("ToplamP1"));
         }
 
         private void celSumToplamGY1_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(SumToplamGC, SumToplamGP1);
+            e.Result = CalculateDiff(SumsToplamGY1.SumToplamGC, SumsToplamGY1.SumToplamGP1);
             e.Handled = true;
+        }
+
+        private void celSumKisiBasiGC_SummaryReset(object sender, EventArgs e)
+        {
+            SumsKisiBasiGC = new Sums();
+        }
+
+        private void celSumKisiBasiGC_SummaryRowChanged(object sender, EventArgs e)
+        {
+            SumsKisiBasiGC.SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
+            SumsKisiBasiGC.SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
         }
 
         private void celSumKisiBasiGC_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiv(SumToplamGC, SumHastaGC);
+            e.Result = CalculateDiv(SumsKisiBasiGC.SumToplamGC, SumsKisiBasiGC.SumHastaGC);
             e.Handled = true;
+        }
+
+        private void celSumKisiBasiGP_SummaryReset(object sender, EventArgs e)
+        {
+            SumsKisiBasiGP = new Sums();
+        }
+
+        private void celSumKisiBasiGP_SummaryRowChanged(object sender, EventArgs e)
+        {
+            SumsKisiBasiGP.SumHastaGP += Convert.ToDouble(GetCurrentColumnValue("HastaP"));
+            SumsKisiBasiGP.SumToplamGP += Convert.ToDouble(GetCurrentColumnValue("ToplamP"));
         }
 
         private void celSumKisiBasiGP_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiv(SumToplamGP, SumHastaGP);
+            e.Result = CalculateDiv(SumsKisiBasiGP.SumToplamGP, SumsKisiBasiGP.SumHastaGP);
             e.Handled = true;
+        }
+
+        private void celSumKisiBasiGY_SummaryReset(object sender, EventArgs e)
+        {
+            SumsKisiBasiGY = new Sums();
+        }
+
+        private void celSumKisiBasiGY_SummaryRowChanged(object sender, EventArgs e)
+        {
+            SumsKisiBasiGY.SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
+            SumsKisiBasiGY.SumHastaGP += Convert.ToDouble(GetCurrentColumnValue("HastaP"));
+            SumsKisiBasiGY.SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
+            SumsKisiBasiGY.SumToplamGP += Convert.ToDouble(GetCurrentColumnValue("ToplamP"));
         }
 
         private void celSumKisiBasiGY_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(CalculateDiv(SumToplamGC, SumHastaGC), CalculateDiv(SumToplamGP, SumHastaGP));
+            e.Result = CalculateDiff(CalculateDiv(SumsKisiBasiGY.SumToplamGC, SumsKisiBasiGY.SumHastaGC), CalculateDiv(SumsKisiBasiGY.SumToplamGP, SumsKisiBasiGY.SumHastaGP));
             e.Handled = true;
+        }
+
+        private void celSumKisiBasiGP1_SummaryReset(object sender, EventArgs e)
+        {
+            SumsKisiBasiGP1 = new Sums();
+        }
+
+        private void celSumKisiBasiGP1_SummaryRowChanged(object sender, EventArgs e)
+        {
+            SumsKisiBasiGP1.SumHastaGP1 += Convert.ToDouble(GetCurrentColumnValue("HastaP1"));
+            SumsKisiBasiGP1.SumToplamGP1 += Convert.ToDouble(GetCurrentColumnValue("ToplamP1"));
         }
 
         private void celSumKisiBasiGP1_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiv(SumToplamGP1, SumHastaGP1);
+            e.Result = CalculateDiv(SumsKisiBasiGP1.SumToplamGP1, SumsKisiBasiGP1.SumHastaGP1);
             e.Handled = true;
+        }
+
+        private void celSumKisiBasiGY1_SummaryReset(object sender, EventArgs e)
+        {
+            SumsKisiBasiGY1 = new Sums();
+        }
+
+        private void celSumKisiBasiGY1_SummaryRowChanged(object sender, EventArgs e)
+        {
+            SumsKisiBasiGY1.SumHastaGC += Convert.ToDouble(GetCurrentColumnValue("HastaC"));
+            SumsKisiBasiGY1.SumHastaGP1 += Convert.ToDouble(GetCurrentColumnValue("HastaP1"));
+            SumsKisiBasiGY1.SumToplamGC += Convert.ToDouble(GetCurrentColumnValue("ToplamC"));
+            SumsKisiBasiGY1.SumToplamGP1 += Convert.ToDouble(GetCurrentColumnValue("ToplamP1"));
         }
 
         private void celSumKisiBasiGY1_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
         {
-            e.Result = CalculateDiff(CalculateDiv(SumToplamGC, SumHastaGC), CalculateDiv(SumToplamGP1, SumHastaGP1));
+            e.Result = CalculateDiff(CalculateDiv(SumsKisiBasiGY1.SumToplamGC, SumsKisiBasiGY1.SumHastaGC), CalculateDiv(SumsKisiBasiGY1.SumToplamGP1, SumsKisiBasiGY1.SumHastaGP1));
             e.Handled = true;
-        }
-
-        private void GroupHeader1_AfterPrint(object sender, EventArgs e)
-        {
-            SumHastaGC = 0;
-            SumHastaGP = 0;
-            SumHastaGP1 = 0;
-            SumToplamGC = 0;
-            SumToplamGP = 0;
-            SumToplamGP1 = 0;
         }
 
     }

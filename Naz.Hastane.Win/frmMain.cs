@@ -119,14 +119,15 @@ namespace Naz.Hastane.Win {
             skins.Ribbon = rcMain;
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
-            EnableRibbonButtons(false);
 
             // Force the loading of the database
             var doctors = LookUpServices.Doctors;
 
             // Close the splash screen
             CloseSplash();
-            ShowLoginForm();
+
+            //EnableRibbonButtons(false);
+            //ShowLoginForm();
         }
 
         int documentIndex = 0;
