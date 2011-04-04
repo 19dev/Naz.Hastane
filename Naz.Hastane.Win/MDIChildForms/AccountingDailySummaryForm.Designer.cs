@@ -142,7 +142,10 @@
             this.colPaymentType});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupCount = 1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", null, "")});
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colRecordType, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
@@ -151,8 +154,6 @@
             this.colRecordType.Caption = "Fiş Tipi";
             this.colRecordType.FieldName = "RecordType";
             this.colRecordType.Name = "colRecordType";
-            this.colRecordType.Visible = true;
-            this.colRecordType.VisibleIndex = 10;
             // 
             // colRowNumber
             // 
@@ -165,7 +166,7 @@
             // colDate
             // 
             this.colDate.Caption = "Tarih";
-            this.colDate.FieldName = "FTARIH";
+            this.colDate.FieldName = "Tarih";
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 1;
@@ -176,7 +177,7 @@
             this.colTCID.FieldName = "TCKIMLIKNO";
             this.colTCID.Name = "colTCID";
             this.colTCID.Visible = true;
-            this.colTCID.VisibleIndex = 2;
+            this.colTCID.VisibleIndex = 4;
             // 
             // colAccountNo
             // 
@@ -184,7 +185,7 @@
             this.colAccountNo.FieldName = "HesapKodu";
             this.colAccountNo.Name = "colAccountNo";
             this.colAccountNo.Visible = true;
-            this.colAccountNo.VisibleIndex = 3;
+            this.colAccountNo.VisibleIndex = 2;
             // 
             // colExplanation
             // 
@@ -192,7 +193,7 @@
             this.colExplanation.FieldName = "Aciklama";
             this.colExplanation.Name = "colExplanation";
             this.colExplanation.Visible = true;
-            this.colExplanation.VisibleIndex = 4;
+            this.colExplanation.VisibleIndex = 3;
             // 
             // colVoucherNo
             // 
@@ -209,6 +210,8 @@
             this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAmount.FieldName = "Tutar";
             this.colAmount.Name = "colAmount";
+            this.colAmount.SummaryItem.DisplayFormat = "{0:#,###.00}";
+            this.colAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colAmount.Visible = true;
             this.colAmount.VisibleIndex = 6;
             // 
@@ -217,7 +220,7 @@
             this.colInvoiceAmount.Caption = "Fatura Tutarı";
             this.colInvoiceAmount.DisplayFormat.FormatString = "#,###.00";
             this.colInvoiceAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colInvoiceAmount.FieldName = "FaturaTutari";
+            this.colInvoiceAmount.FieldName = "HizmetTutari";
             this.colInvoiceAmount.Name = "colInvoiceAmount";
             this.colInvoiceAmount.Visible = true;
             this.colInvoiceAmount.VisibleIndex = 7;

@@ -884,24 +884,41 @@ namespace Naz.Hastane.Win {
 
         #endregion
 
+        private void ShowReport<T>(string caption) where T : DevExpress.XtraReports.UI.XtraReport, new()
+        {
+            //T report = new T();
+            //report.ShowPreview();
+            PrintPreviewForm newForm = new PrintPreviewForm();
+            newForm.Text = caption;
+            ShowNewDocument(newForm);
+            newForm.ShowReport<T>();
+        }
+
         private void AttachReportCommands()
         {
-            iOzetAnaIslemAyXTab.ItemClick += (o, args) => ShowReport<OZETAnaIslemAyXTab>();
-            iOzetAnaIslem.ItemClick += (o, args) => ShowReport<OZETAnaIslemReport>();
-            iOzetServisAnaIslemPivot.ItemClick += (o, args) => ShowReport<OZETAnaIslemServisXTab>();
-            iOzetAYPAnaIslem.ItemClick += (o, args) => ShowReport<OZETAYPAnaIslemReport>();
-            iOzetAYP.ItemClick += (o, args) => ShowReport<OZETAYPReport>();
-            iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowReport<OZETDoktorAnaIslemReport>();
-            iOzetDoktor.ItemClick += (o, args) => ShowReport<OZETDoktorReport>();
-            iOzetDoktorServis.ItemClick += (o, args) => ShowReport<OZETDoktorServisReport>();
-            iOzetKurumAnaIslem.ItemClick += (o, args) => ShowReport<OZETKurumAnaIslemReport>();
-            iOzetKurumAYP.ItemClick += (o, args) => ShowReport<OZETKurumAYPReport>();
-            iOzetKurum.ItemClick += (o, args) => ShowReport<OZETKurumReport>();
-            iOzetServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
-            iOzetServis.ItemClick += (o, args) => ShowReport<OZETServisReport>();
-            iOzetYatakServisAy.ItemClick += (o, args) => ShowReport<OZETYatakServisAyXTab>();
+            iOzetAnaIslemAyXTab.ItemClick += (o, args) => ShowReport<OZETAnaIslemAyXTab>(args.Item.Caption);
+            iOzetAnaIslem.ItemClick += (o, args) => ShowReport<OZETAnaIslemReport>(args.Item.Caption);
+            iOzetServisAnaIslemPivot.ItemClick += (o, args) => ShowReport<OZETAnaIslemServisXTab>(args.Item.Caption);
+            iOzetAYPAnaIslem.ItemClick += (o, args) => ShowReport<OZETAYPAnaIslemReport>(args.Item.Caption);
+            iOzetAYP.ItemClick += (o, args) => ShowReport<OZETAYPReport>(args.Item.Caption);
+            iOzetDoktorAnaIslem.ItemClick += (o, args) => ShowReport<OZETDoktorAnaIslemReport>(args.Item.Caption);
+            iOzetDoktor.ItemClick += (o, args) => ShowReport<OZETDoktorReport>(args.Item.Caption);
+            iOzetDoktorServis.ItemClick += (o, args) => ShowReport<OZETDoktorServisReport>(args.Item.Caption);
+            iOzetKurumAnaIslem.ItemClick += (o, args) => ShowReport<OZETKurumAnaIslemReport>(args.Item.Caption);
+            iOzetKurumAYP.ItemClick += (o, args) => ShowReport<OZETKurumAYPReport>(args.Item.Caption);
+            iOzetKurum.ItemClick += (o, args) => ShowReport<OZETKurumReport>(args.Item.Caption);
+            iOzetServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>(args.Item.Caption);
+            iOzetServis.ItemClick += (o, args) => ShowReport<OZETServisReport>(args.Item.Caption);
+            iOzetYatakServisAy.ItemClick += (o, args) => ShowReport<OZETYatakServisAyXTab>(args.Item.Caption);
 
             //iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
+        }
+
+        private void ReportExportToPdf<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
+        {
+            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
+            T report = new T();
+            report.ExportToPdf(path + aPath + ".pdf");
         }
 
         private void iExportToPDF_ItemClick(object sender, ItemClickEventArgs e)
@@ -920,6 +937,13 @@ namespace Naz.Hastane.Win {
             ReportExportToPdf<OZETServisAnaIslemReport>("OZETServisAnaIslemReport");
             ReportExportToPdf<OZETServisReport>("OZETServisReport");
             ReportExportToPdf<OZETYatakServisAyXTab>("OZETYatakServisAyXTab");
+        }
+
+        private void ReportExportToXlsx<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
+        {
+            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
+            T report = new T();
+            report.ExportToXlsx(path + aPath + ".xlsx");
         }
 
         private void iExportToXLSX_ItemClick(object sender, ItemClickEventArgs e)
@@ -973,26 +997,6 @@ namespace Naz.Hastane.Win {
             this.rpPatient.Visible = true;
             this.rpgUserFunctions.Visible = true;
             this.rcMain.SelectedPage = rpPatient;
-        }
-
-        private void ShowReport<T>() where T : DevExpress.XtraReports.UI.XtraReport, new()
-        {
-            T report = new T();
-            report.ShowPreview();
-        }
-
-        private void ReportExportToPdf<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
-        {
-            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
-            T report = new T();
-            report.ExportToPdf(path + aPath + ".pdf");
-        }
-
-        private void ReportExportToXlsx<T>(string aPath) where T : DevExpress.XtraReports.UI.XtraReport, new()
-        {
-            const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
-            T report = new T();
-            report.ExportToXlsx(path + aPath + ".xlsx");
         }
 
     }

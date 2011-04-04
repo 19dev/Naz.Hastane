@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Naz.Hastane.Data.Services;
+using Naz.Hastane.Reports.Classes;
+using Naz.Hastane.Data.Entities.StoredProcedure;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -24,13 +26,26 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void deDate_EditValueChanged(object sender, EventArgs e)
         {
-            var records = LookUpServices.GetAccountingDailySummary(this.deDate.DateTime.Date);
-            UIUtilities.BindGrid(this.gridView1, records);
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                var records = LookUpServices.GetAccountingDailySummary(this.deDate.DateTime.Date);
+                this.gridControl1.DataSource = records;
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
         }
 
         private void sbPrint_Click(object sender, EventArgs e)
         {
-            this.gridControl1.ShowPrintPreview();
+            //this.gridControl1.ShowPrintPreview();
+            PrintPreviewForm newForm = new PrintPreviewForm();
+            newForm.Text = "Muhasebe Günlük Fiş:" + this.deDate.DateTime.Date.ToString();
+            ((frmMain)this.MdiParent).ShowNewDocument(newForm);
+            newForm.ShowReport<AccountingDailySummaryReport>(this.gridControl1.DataSource);
+
         }
     }
 }
