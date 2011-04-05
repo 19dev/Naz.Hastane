@@ -65,25 +65,6 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
-        private void TestUsers()
-        {
-            Encrypter en = new Encrypter();
-            var users = LookUpServices.Users;
-
-            foreach (User user in users)
-            {
-                if (user.USER_PASS.Length == 1)
-                {
-                    en.CodeWord = user.USER_ID;
-                    string s = en.Encrypt("1");
-                    if (s != user.USER_PASS)
-                    {
-                        MessageBox.Show(user.USER_ID + " Hatalý Password!");
-                    }
-                }
-            }
-        }
-
         public frmMain()
         {
             InitializeComponent();
@@ -127,8 +108,10 @@ namespace Naz.Hastane.Win {
             // Close the splash screen
             CloseSplash();
 
-            //EnableRibbonButtons(false);
-            //ShowLoginForm();
+            EnableRibbonButtons(false);
+            ShowLoginForm();
+
+            //Tests.TestNewIDGenerators();
         }
 
         int documentIndex = 0;
@@ -884,6 +867,7 @@ namespace Naz.Hastane.Win {
 
         #endregion
 
+        #region Reports
         private void ShowReport<T>(string caption) where T : DevExpress.XtraReports.UI.XtraReport, new()
         {
             //T report = new T();
@@ -964,6 +948,9 @@ namespace Naz.Hastane.Win {
             ReportExportToXlsx<OZETYatakServisAyXTab>("OZETYatakServisAyXTab");
         }
 
+        #endregion
+
+        #region Login
         private void iLogin_ItemClick(object sender, ItemClickEventArgs e)
         {
             ShowLoginForm();
@@ -994,10 +981,11 @@ namespace Naz.Hastane.Win {
                 foreach (RibbonPageGroup rpg in rp.Groups)
                     rpg.Visible = enable;
             }
-            this.rpPatient.Visible = true;
+            this.rpUser.Visible = true;
             this.rpgUserFunctions.Visible = true;
-            this.rcMain.SelectedPage = rpPatient;
+            this.rcMain.SelectedPage = rpUser;
         }
+        #endregion
 
     }
 }

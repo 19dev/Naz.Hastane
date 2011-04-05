@@ -6,23 +6,56 @@ namespace Naz.Hastane.Data.Entities
     public class PatientVisit
     {
         public virtual Patient Patient { get; set; } //KNR
+        /// <summary>
+        /// SNR
+        /// </summary>
         public virtual string VisitNo { get; set; } //SNR
-
+        /// <summary>
+        /// BHDAT
+        /// </summary>
         public virtual DateTime VisitDate { get; set; } //BHDAT
+        /// <summary>
+        /// AMBU
+        /// </summary>
         public virtual string VisitType { get; set; } //AMBU A, Y, P Kart Tipi
+        /// <summary>
+        /// CIKTAR
+        /// </summary>
         public virtual DateTime ExitDate { get; set; } //CIKTAR
+        /// <summary>
+        /// CIKSAAT
+        /// </summary>
         public virtual string ExitTime { get; set; } //CIKSAAT
-
+        /// <summary>
+        /// FATURANO
+        /// </summary>
         public virtual string InvoiceNo { get; set; } //FATURANO
+        /// <summary>
+        /// FATURATARIHI
+        /// </summary>
         public virtual DateTime InvoiceDate { get; set; } //FATURATARIHI
+        /// <summary>
+        /// MTOPT
+        /// </summary>
         public virtual double PatientTotal { get; set; } //MTOPT Hasta Toplamı
+        /// <summary>
+        /// KTOPT
+        /// </summary>
         public virtual double InsuranceTotal { get; set; } //KTOPT Kurum Toplamı
         public virtual double DTOPT { get; set; } //DTOPT Destek Kurum Toplamı
         public virtual string paket { get; set; } //paket P:var, Null: Yok
+        /// <summary>
+        /// DESTEKPSG
+        /// </summary>
         public virtual string SupportInsCompany { get; set; } //DESTEKPSG
         public virtual DateTime DESFATURATARIHI { get; set; } //DESFATURATARIHI
-
+        /// <summary>
+        /// SERVIS
+        /// </summary>
         public virtual string Servis { get; set; } //SERVIS Service
+        /// <summary>
+        /// ARZT
+        /// </summary>
         public virtual string Doctor { get; set; } //ARZT Doctor
 
         public virtual string ODANO { get; set; } //ODANO ODALAR.ODANO Tablosu
@@ -48,7 +81,9 @@ namespace Naz.Hastane.Data.Entities
         public virtual DateTime MCIKISTARIHI { get; set; } //MCIKISTARIHI 
         public virtual double FARKTUTAR { get; set; } //FARKTUTAR
         public virtual string TESLIMNO { get; set; } //TESLIMNO Medula'nın kesilen faturaya dönderdiği numara
-
+        /// <summary>
+        /// SEVKGECSURE
+        /// </summary>
         public virtual short TransferValidityPeriod { get; set; } //SEVKGECSURE
         public virtual string IMPF2 { get; set; } //IMPF2 Kurum Cariye İşlendi "C", Fatura Kesildi "A"
         public virtual string KAR_NO { get; set; } //KAR_NO Yatış Hastalarına Otomatik No Veriyor, kullanılmıyor
@@ -62,8 +97,10 @@ namespace Naz.Hastane.Data.Entities
         public virtual string UCRETDURUMU { get; set; } //UCRETDURUMU Çıkış İşlemi (1..2)
         public virtual string REFGUNSAY { get; set; } //REFGUNSAY Refekatçi Gün Sayısı
         public virtual string TABKODU { get; set; } //TABKODU Taburcu Kodu (01..11) KEYDAT.SLK = 56 
-
-        public virtual string QueueNo { get; set; } //SERNO ??
+        /// <summary>
+        /// SERNO
+        /// </summary>
+        public virtual string QueueNo { get; set; } //SERNO
         public virtual string GEL { get; set; } //GEL ?? (1,2,3,5,6,7)
         public virtual string FIYATARTISMUAF { get; set; } //FIYATARTISMUAF
 

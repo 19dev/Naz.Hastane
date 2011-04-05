@@ -169,77 +169,94 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
-        public static void AddSGKPolyclinic(Patient patient, Doctor doctor)
+        public static void AddSGKPolyclinic(ISession session, Patient patient, Doctor doctor)
         {
             if (patient == null || doctor == null)
                 return;
 
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 InsuranceCompany ic = session.Get<InsuranceCompany>("SGK");
-                ic.SIRAID += 1;
-                session.Save(ic);
 
-                // Get No QueueNo for the Doctor, If new date reset the number
-                SystemSetting ss = session.Get<SystemSetting>("TARİH");
-                string today = DateTime.Now.ToString("dd/MM/yyyy");
-                if (today != ss.Value)
-                {
-                    ss.Value = today;
-                    doctor.QueueNo = 0;
-                    session.Save(ss);
-                }
-                doctor.QueueNo += 1;
-                session.Save(doctor);
+                float doctorQueueNo = GetDoctorQueueNo(session, doctor);
 
-                PatientVisit pv = new PatientVisit();
-                pv.VisitNo = GetNewPatientVisitNo(patient, session);
-                pv.Doctor = doctor.ID;
-                pv.SIRAID = doctor.QueueNo;
-                pv.Servis = doctor.Service.ID;
-                pv.VisitDate = DateTime.Now;
-                pv.TransferValidityPeriod = (short)ic.SEVKGECSURE;
-                pv.VisitType = "P";
-                pv.HZLNO = 1;
-                pv.PSG = "SGK";
-                pv.USER_ID = "Aydin";
-                pv.DATE_CREATE = DateTime.Now;
-
-                patient.AddPatientVisit(pv);
-                session.Save(pv);
+                PatientVisit pv = AddNewPatientVisit(session, patient, doctor, ic);
 
                 foreach (SGKAutoExamination sa in doctor.Service.SGKAutoExaminations)
                 {
                     PatientVisitDetail pvd = new PatientVisitDetail();
 
-                    pvd.DetailNo = GetNewPatientVisitDetailNo(pv);
+                    pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
 
-                    //pvd.TARIH = DateTime.Now;
+                    pvd.TARIH = DateTime.Now;
 
-                    //pvd.TANIM = sa.Product.TANIM;
-                    //pvd.GRUP = sa.Product.GRUP;
-                    //pvd.CODE = sa.Product.CODE;
-                    //pvd.NAME1 = sa.Product.NAME1;
+                    pvd.TANIM = sa.Product.TANIM;
+                    pvd.GRUP = sa.Product.GRUP;
+                    pvd.CODE = sa.Product.CODE;
+                    pvd.NAME1 = sa.Product.NAME1;
 
-                    //pvd.KDV = 0;
-                    //pvd.ADET = 1;
-                    //pvd.SATISF = 0;
-                    //pvd.KSATISF = 0;
-                    //pvd.PSG = pv.PSG;
-                    //pvd.Doctor = doctor.ID;
-                    //pvd.Doctor2 = doctor.ID;
-                    //pvd.HZLNO = 0;
+                    pvd.KDV = 0;
+                    pvd.ADET = 1;
+                    pvd.SATISF = 0;
+                    pvd.KSATISF = 0;
+                    pvd.PSG = pv.PSG;
+                    pvd.Doctor = doctor.ID;
+                    pvd.Doctor2 = doctor.ID;
+                    pvd.HZLNO = 0;
 
                     pv.USER_ID = "Aydin";
                     pv.DATE_CREATE = DateTime.Now;
 
-                    //pv.AddPatientVisitDetail(pvd);
-                    //session.Save(pvd);
+                    pv.AddPatientVisitDetail(pvd);
+                    session.Save(pvd);
                 }
+                transaction.Commit();
             }
 
+        }
 
+        public static float GetDoctorQueueNo(ISession session, Doctor doctor)
+        {
+            // Get No QueueNo for the Doctor, If new date reset the number
+            SystemSetting ss = session.Get<SystemSetting>("TARİH");
+            string today = DateTime.Now.ToString("dd/MM/yyyy");
+            if (today != ss.Value)
+            {
+                ss.Value = today;
+                doctor.QueueNo = 0;
+                session.Save(ss);
+            }
+            doctor.QueueNo += 1;
+            session.Save(doctor);
+
+            return doctor.QueueNo;
+        }
+
+        public static PatientVisit AddNewPatientVisit(ISession session, Patient patient, Doctor doctor, InsuranceCompany ic)
+        {
+            ic.SIRAID += 1;
+            session.Save(ic);            double companyVisitNo = ic.SIRAID;
+
+            PatientVisit pv = new PatientVisit();
+            pv.VisitNo = GetNewPatientVisitNo(session, patient);
+            pv.VisitDate = DateTime.Now;
+            pv.TransferValidityPeriod = (short)ic.SEVKGECSURE;
+            pv.Doctor = doctor.ID;
+            pv.Servis = doctor.Service.ID;
+            pv.QueueNo = doctor.QueueNo.ToString("d");
+            pv.VisitType = "P";
+            pv.SIRAID = ic.SIRAID;
+            pv.HZLNO = 0;
+            pv.ProvisionNo = "";
+            pv.USER_ID = "Aydin";
+            pv.SupportInsCompany = "";
+            pv.PSG = ic.PSG;
+            pv.DATE_CREATE = DateTime.Now;
+
+            patient.AddPatientVisit(pv);
+            session.Save(pv);
+
+            return pv;
         }
 
         #region New Key Generators
@@ -265,9 +282,9 @@ namespace Naz.Hastane.Data.Services
         public static string GetNewPatientVisitNo(Patient patient)
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                return GetNewPatientVisitNo(patient, session);
+                return GetNewPatientVisitNo(session, patient);
         }
-        public static string GetNewPatientVisitNo(Patient patient, ISession session)
+        public static string GetNewPatientVisitNo(ISession session, Patient patient)
         {
             string a = session.QueryOver<PatientVisit>()
                 .Where(x => x.Patient == patient)
@@ -289,10 +306,10 @@ namespace Naz.Hastane.Data.Services
 
         public static double GetNewPatientVisitDetailNo(PatientVisit pv)
         {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-                return GetNewPatientVisitDetailNo(pv, session);
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                return GetNewPatientVisitDetailNo(session, pv);
         }
-        public static double GetNewPatientVisitDetailNo(PatientVisit pv, IStatelessSession session)
+        public static double GetNewPatientVisitDetailNo(ISession session, PatientVisit pv)
         {
             double? a = session.QueryOver<PatientVisitDetail>()
                 .Where(x => x.PatientVisit == pv)
@@ -367,7 +384,6 @@ namespace Naz.Hastane.Data.Services
                 return result;
             }
         }
-
         public static IList<PatientVisit> GetPatientVisitsForInvoice(Patient patient)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
@@ -394,60 +410,6 @@ namespace Naz.Hastane.Data.Services
                     .List().Distinct().ToList();
                 return result;
             }
-        }
-
-        public static IList<MedulaDiabetReport> GetUnSentMedulaDiabetReports(DateTime startDate, DateTime endDate)
-        {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                return GetUnSentMedulaDiabetReports(session, startDate, endDate);
-        }
-        public static IList<MedulaDiabetReport> GetUnSentMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate)
-        {
-            return GetMedulaDiabetReports(session, startDate, endDate, "0");
-        }
-        public static IList<MedulaDiabetReport> GetSentMedulaDiabetReports(DateTime startDate, DateTime endDate)
-        {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                return GetSentMedulaDiabetReports(session, startDate, endDate);
-        }
-        public static IList<MedulaDiabetReport> GetSentMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate)
-        {
-            return GetMedulaDiabetReports(session, startDate, endDate, "1");
-        }
-        public static IList<MedulaDiabetReport> GetMedulaDiabetReports(ISession session, DateTime startDate, DateTime endDate, string sentUnSent)
-        {
-            //MedulaDiabetReport mdr = null;
-            //PatientVisit pv = null;
-            //Patient patient = null;
-
-            //IList<object> result = session.QueryOver<MedulaDiabetReport>(() => mdr)
-            //    .Where(x => x.IsSent == sentUnSent)
-            //    .JoinQueryOver<PatientVisit>(x => x.PatientVisit, () => pv)
-            //    .JoinQueryOver<Patient>(() => pv.Patient, () => patient)
-            //    .Where(() => pv.VisitDate >= startDate && pv.VisitDate < endDate.AddDays(1))
-            //    .SelectList(list => list
-            //        .Select(() => patient.FirstName)
-            //        .Select(() => patient.LastName)
-            //        .Select(() => pv.VisitNo)
-            //        .Select(() => pv.VisitDate))
-            //    .List<object[]>()
-            //    .Select(properties => new
-            //    {
-            //        FirstName = (string)properties[0],
-            //        LastName = (string)properties[1],
-            //        VisitNo = (string)properties[2],
-            //        VisitDate = (DateTime?)properties[3]
-            //    })
-            //    .Distinct()
-            //    .ToList<object>();
-            //return result;
-
-            return (from report in session.Query<MedulaDiabetReport>()
-                        where report.IsSent == sentUnSent
-                        join patientVisit in session.Query<PatientVisit>()
-                            on report.PatientVisit  equals patientVisit
-                            where patientVisit.VisitDate >= startDate
-                        select report).ToList();
         }
 
     }

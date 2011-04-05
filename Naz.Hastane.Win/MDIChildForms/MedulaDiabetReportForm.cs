@@ -48,11 +48,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void RefreshSentDiabetReports()
         {
-            this.gcSentReports.DataSource = PatientServices.GetSentMedulaDiabetReports(Session, this.deSentReportsStartDate.DateTime.Date, this.deSentReportsEndDate.DateTime.Date);
+            this.gcSentReports.DataSource = MedulaReportServices.GetSentMedulaDiabetReports(Session, this.deSentReportsStartDate.DateTime.Date, this.deSentReportsEndDate.DateTime.Date);
         }
         private void RefreshUnSentDiabetReports()
         {
-            this.gcUnSentReports.DataSource = PatientServices.GetUnSentMedulaDiabetReports(Session, this.deUnSentReportsStartDate.DateTime.Date, this.deUnSentReportsEndDate.DateTime.Date);
+            this.gcUnSentReports.DataSource = MedulaReportServices.GetUnSentMedulaDiabetReports(Session, this.deUnSentReportsStartDate.DateTime.Date, this.deUnSentReportsEndDate.DateTime.Date);
         }
 
         private void sbSentReportsRefresh_Click(object sender, EventArgs e)

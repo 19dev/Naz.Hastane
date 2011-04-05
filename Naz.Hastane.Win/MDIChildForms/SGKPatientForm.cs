@@ -171,7 +171,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 _IsWaitingForPolyclinic = true;
                 _Doctor = doctor;
                 CallMedulaProvision();
-                PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
+                PatientServices.AddSGKPolyclinic(Session, this._Patient, this._Doctor);
             }
 
         }
@@ -201,7 +201,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _IsWaitingForPolyclinic = false;
                 if (e.Result.sonucKodu == "0000")
-                    PatientServices.AddSGKPolyclinic(this._Patient, this._Doctor);
+                    PatientServices.AddSGKPolyclinic(Session, this._Patient, this._Doctor);
             }
         }
 

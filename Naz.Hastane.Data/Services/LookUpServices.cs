@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.General;
 using Naz.Hastane.Data.Entities.LookUp.MedulaDiabet;
@@ -8,6 +9,7 @@ using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Entities.StoredProcedure;
 using NHibernate;
+using NHibernate.Linq;
 using NHibernate.Transform;
 using Naz.Hastane.Data.Entities.Reports;
 
@@ -347,5 +349,76 @@ namespace Naz.Hastane.Data.Services
             }
         
         }
+
+        #region ID Generators
+        public static string GetNewSystemSettingNo(string key)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                string serialID = "";
+                int serialNo = 0;
+
+                /// TODO Add control for no element
+                SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
+                                    where systemSetting.ID0 == "00" && systemSetting.ID == key
+                                    select systemSetting
+                                    ).Single<SystemSetting>();
+
+                for (int i = ss.Value.Length - 1; i >= 0; i--)
+                {
+                    if (!Char.IsNumber(ss.Value[i]))
+                    {
+                        serialID = ss.Value.Substring(0, i+1);
+                        string s = ss.Value.Substring(i + 1);
+                        serialNo = Convert.ToInt32(s);
+                        break;
+                    }
+                    if (i == 0)
+                        serialNo = Convert.ToInt32(ss.Value);
+                }
+                serialNo += 1;
+                ss.Value = serialID + serialNo.ToString();
+                try
+                {
+                    session.Update(ss);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                }
+
+                return ss.Value;
+            }
+        }
+
+        public static string GetNewInvoiceNo()
+        {
+            return GetNewSystemSettingNo("FATNO");
+        }
+
+        public static string GetNewVoucherNo()
+        {
+            return GetNewSystemSettingNo("MAKNO");
+        }
+
+        public static string GetNewAdvancePaymentNo()
+        {
+            return GetNewSystemSettingNo("AVANS_ID");
+        }
+
+        public static string GetNewTellerInvoiceNo(User user)
+        {
+            return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE);
+        }
+
+        public static string GetNewTellerVoucherNo(User user)
+        {
+            return GetNewSystemSettingNo("MAKNUM" + user.VEZNE);
+        }
+
+        #endregion
+
     }
 }

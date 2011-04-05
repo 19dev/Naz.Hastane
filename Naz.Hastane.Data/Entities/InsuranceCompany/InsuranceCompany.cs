@@ -7,6 +7,8 @@ namespace Naz.Hastane.Data.Entities
 {
     public class InsuranceCompany
     {
+        public virtual string PSG { get; set; } // PSG; length(6); 0
+
         public virtual string ACILKATILIM { get; set; } // ACILKATILIM; length(1); 0
         public virtual string ADI1 { get; set; } // ADI1; length(200); 0
         public virtual string ADRZUS { get; set; } // ADRZUS; length(200); 1
@@ -49,7 +51,6 @@ namespace Naz.Hastane.Data.Entities
         public virtual string PFIYLIST { get; set; } // PFIYLIST; length(2); 0
         public virtual string PLZ { get; set; } // PLZ; length(5); 1
         public virtual string POLSURE { get; set; } // POLSURE; length(50); 1
-        public virtual string PSG { get; set; } // PSG; length(6); 0
         public virtual string SARFODE { get; set; } // SARFODE; length(1); 0
         public virtual string SEVKBASAMAK { get; set; } // SEVKBASAMAK; length(1); 1
         public virtual int SEVKGECSURE { get; set; } // SEVKGECSURE; length(2); 0

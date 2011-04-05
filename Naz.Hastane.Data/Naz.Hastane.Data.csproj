@@ -37,6 +37,9 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -59,10 +62,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -269,6 +274,7 @@
     <Compile Include="Services\DataBindingFactory.cs" />
     <Compile Include="Services\DataBindingIntercepter .cs" />
     <Compile Include="Services\LookUpServices.cs" />
+    <Compile Include="Services\MedulaReportServices.cs" />
     <Compile Include="Services\PatientServices.cs" />
     <Compile Include="Services\Utilities.cs" />
   </ItemGroup>

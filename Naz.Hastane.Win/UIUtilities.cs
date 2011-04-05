@@ -8,6 +8,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Data.Services;
 using System.Collections;
 using Naz.Hastane.Data.Entities.LookUp.Special;
+using System.Reflection;
 
 namespace Naz.Hastane.Win
 {
@@ -72,7 +73,15 @@ namespace Naz.Hastane.Win
                     }
                 }
             }
-
         }
+
+        public static string GetMemberValueByName(Object myObject, string memberName)
+        {
+            Type t = myObject.GetType();
+            PropertyInfo p = t.GetProperty(memberName);
+            string s = p.GetValue(myObject, null).ToString();
+            return s;
+        }
+
     }
 }
