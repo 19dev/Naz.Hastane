@@ -4,11 +4,16 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.Special
 {
-    public class DepositoryMap : SubclassMap<Depository>
+    public class DepositoryMap : ClassMap<Depository>
     {
         public DepositoryMap()
         {
-            DiscriminatorValue(LookUpDiscriminators.Depository.GetDescription());
+            Table("tlkpvDepository");
+
+            Id(x => x.ID).Column("SLB").Length(10);
+
+            Map(x => x.ID0).Column("SLK").Length(2);
+            Map(x => x.Value).Column("SLT").Length(150);
         }
     }
 }

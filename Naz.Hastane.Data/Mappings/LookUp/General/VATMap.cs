@@ -4,11 +4,16 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.General
 {
-    public class VATMap : SubclassMap<VAT>
+    public class VATMap : ClassMap<VAT>
     {
         public VATMap()
         {
-            DiscriminatorValue(LookUpDiscriminators.VAT.GetDescription());
+            Table("tlkpvVAT");
+
+            Id(x => x.ID).Column("SLB").Length(10);
+
+            Map(x => x.ID0).Column("SLK").Length(2);
+            Map(x => x.Value).Column("SLT").Length(150);
         }
     }
 }

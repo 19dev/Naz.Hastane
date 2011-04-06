@@ -4,11 +4,16 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.General
 {
-    public class NationalityMap : SubclassMap<Nationality>
+    public class NationalityMap : ClassMap<Nationality>
     {
         public NationalityMap()
         {
-            DiscriminatorValue(LookUpDiscriminators.Nationality.GetDescription());
+            Table("tlkpvNationality");
+
+            Id(x => x.ID).Column("SLB").Length(10);
+
+            Map(x => x.ID0).Column("SLK").Length(2);
+            Map(x => x.Value).Column("SLT").Length(150);
         }
     }
 }

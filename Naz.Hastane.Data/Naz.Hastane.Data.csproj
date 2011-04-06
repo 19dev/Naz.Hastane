@@ -113,6 +113,7 @@
     <Compile Include="Entities\LookUp\MedulaProvision\FollowUpType.cs" />
     <Compile Include="Entities\LookUp\Special\FunctionGroup.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompany.cs" />
+    <Compile Include="Entities\LookUp\Special\SubFunctionGroup.cs" />
     <Compile Include="Entities\LookUp\Special\FunctionGroupType.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\InsuranceType.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EditingType.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Entities\LookUp\MedulaProvision\TransferorInstitution.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\TreatmentStyle.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\TreatmentType.cs" />
+    <Compile Include="Entities\LookUp\Special\PriceList.cs" />
     <Compile Include="Entities\Medula\MEDDIABETALISKANLIKLAR.cs" />
     <Compile Include="Entities\Medula\MEDDIABETDOKTORLAR.cs" />
     <Compile Include="Entities\Medula\MEDDIABETHASTALIKLAR.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="Mappings\LookUp\MedulaProvision\BranchCodeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\FollowUpTypeMap.cs" />
     <Compile Include="Mappings\LookUp\Special\FunctionGroupMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\SubFunctionGroupMap.cs" />
     <Compile Include="Mappings\LookUp\Special\FunctionGroupTypeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\InsuranceTypeMap.cs" />
     <Compile Include="Mappings\LookUp\OldLookUpBaseMap.cs" />
@@ -223,6 +226,7 @@
     <Compile Include="Mappings\LookUp\MedulaProvision\TransferorInstitutionMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\TreatmentStyleMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaProvision\TreatmentTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\PriceListMap.cs" />
     <Compile Include="Mappings\Medula\MEDDIABETALISKANLIKLARMap.cs" />
     <Compile Include="Mappings\Medula\MEDDIABETDOKTORLARMap.cs" />
     <Compile Include="Mappings\Medula\MEDDIABETHASTALIKLARMap.cs" />

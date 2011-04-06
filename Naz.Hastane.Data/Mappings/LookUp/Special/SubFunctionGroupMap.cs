@@ -4,11 +4,11 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.Special
 {
-    public class WarehouseMap : ClassMap<Warehouse>
+    public class SubFunctionGroupMap : ClassMap<SubFunctionGroup>
     {
-        public WarehouseMap()
+        public SubFunctionGroupMap()
         {
-            Table("tlkpvWarehouse");
+            Table("tlkpvSubFunctionGroup");
 
             Id(x => x.ID).Column("SLB").Length(10);
 

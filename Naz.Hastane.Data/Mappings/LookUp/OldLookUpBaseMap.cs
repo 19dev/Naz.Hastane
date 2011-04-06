@@ -22,10 +22,14 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         Doctor,
         [Description("10")]
         PatientRelation,
+        [Description("15")]
+        PriceList,
         [Description("17")]
         Service,
         [Description("21")]
         DiagnoseGroup,
+        [Description("30")]
+        SubFunctionGroup,
         [Description("37")]
         City,
         [Description("51")]

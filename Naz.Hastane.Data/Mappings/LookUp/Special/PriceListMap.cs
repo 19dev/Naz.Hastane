@@ -4,11 +4,11 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.Special
 {
-    public class WarehouseMap : ClassMap<Warehouse>
+    public class PriceListMap : ClassMap<PriceList>
     {
-        public WarehouseMap()
+        public PriceListMap()
         {
-            Table("tlkpvWarehouse");
+            Table("tlkpvPriceList");
 
             Id(x => x.ID).Column("SLB").Length(10);
 

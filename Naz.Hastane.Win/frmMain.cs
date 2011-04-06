@@ -111,7 +111,7 @@ namespace Naz.Hastane.Win {
             EnableRibbonButtons(false);
             ShowLoginForm();
 
-            //Tests.TestNewIDGenerators();
+            Tests.TestNewIDGenerators();
         }
 
         int documentIndex = 0;
@@ -856,7 +856,9 @@ namespace Naz.Hastane.Win {
             iDepository.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Depositories, args.Item.Caption);
             iDoctor.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Doctors, args.Item.Caption);
             iFunctionGroup.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FunctionGroups, args.Item.Caption);
+            iSubFunctionGroup.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.SubFunctionGroups, args.Item.Caption);
             iFunctionType.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.FunctionGroupTypes, args.Item.Caption);
+            iPriceList.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.PriceLists, args.Item.Caption);
             iRooms.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Rooms, args.Item.Caption);
             iService.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Services, args.Item.Caption);
             iSystemSettings.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.SystemSettings, args.Item.Caption);

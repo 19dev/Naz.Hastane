@@ -4,11 +4,16 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Data.Mappings.LookUp.General
 {
-    public class CityMap : SubclassMap<City>
+    public class CityMap : ClassMap<City>
     {
         public CityMap()
         {
-            DiscriminatorValue(LookUpDiscriminators.City.GetDescription());
+            Table("tlkpvCity");
+
+            Id(x => x.ID).Column("SLB").Length(10);
+
+            Map(x => x.ID0).Column("SLK").Length(2);
+            Map(x => x.Value).Column("SLT").Length(150);
         }
     }
 }

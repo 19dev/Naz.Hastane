@@ -26,7 +26,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<T> GetAll<T>() where T : class
         {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 return session.CreateCriteria<T>().List<T>();
             }
@@ -209,9 +209,17 @@ namespace Naz.Hastane.Data.Services
         public static IList<FunctionGroup> FunctionGroups
         { get { return LookUpTable(ref _FunctionGroups); } }
 
+        private static IList<SubFunctionGroup> _SubFunctionGroups;
+        public static IList<SubFunctionGroup> SubFunctionGroups
+        { get { return LookUpTable(ref _SubFunctionGroups); } }
+
         private static IList<FunctionGroupType> _FunctionGroupTypes;
         public static IList<FunctionGroupType> FunctionGroupTypes
         { get { return LookUpTable(ref _FunctionGroupTypes); } }
+
+        private static IList<PriceList> _PriceLists;
+        public static IList<PriceList> PriceLists
+        { get { return LookUpTable(ref _PriceLists); } }
 
         private static IList<Room> _Rooms;
         public static IList<Room> Rooms
@@ -384,9 +392,10 @@ namespace Naz.Hastane.Data.Services
                     session.Update(ss);
                     transaction.Commit();
                 }
-                catch (Exception ex)
+                catch 
                 {
                     transaction.Rollback();
+                    throw;
                 }
 
                 return ss.Value;

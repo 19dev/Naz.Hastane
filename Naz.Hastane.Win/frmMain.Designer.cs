@@ -10,12 +10,12 @@ namespace Naz.Hastane.Win {
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
@@ -149,6 +149,8 @@ namespace Naz.Hastane.Win {
             this.iOzetYatakServisAy = new DevExpress.XtraBars.BarButtonItem();
             this.iExportToPDF = new DevExpress.XtraBars.BarButtonItem();
             this.iExportToXSLX = new DevExpress.XtraBars.BarButtonItem();
+            this.iSubFunctionGroup = new DevExpress.XtraBars.BarButtonItem();
+            this.iPriceList = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -156,17 +158,25 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpUser = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgUserFunctions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgSGK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgAccounting = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgGeneralDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpSGKPatients = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgSGK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbMedulaDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgMedulaProvision = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaDiabet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgMedulaReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpAccounting = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgAccounting = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbAdminReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgSummaryReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.iDetailReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgPivotTables = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgExportReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgGeneralDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpGallery = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgAra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -175,11 +185,6 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgDosya = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgTest = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbAdminReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgSummaryReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.iDetailReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgPivotTables = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgExportReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmNew = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -187,9 +192,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.rpSGKPatients = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpAccounting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -480,10 +482,12 @@ namespace Naz.Hastane.Win {
             this.iOzetDoktorServis,
             this.iOzetYatakServisAy,
             this.iExportToPDF,
-            this.iExportToXSLX});
+            this.iExportToXSLX,
+            this.iSubFunctionGroup,
+            this.iPriceList});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 284;
+            this.rcMain.MaxItemId = 289;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -504,7 +508,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpUser;
+            this.rcMain.SelectedPage = this.rbMedulaDefinitions;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1404,7 +1408,7 @@ namespace Naz.Hastane.Win {
             // 
             // iEffectiveSubstances
             // 
-            this.iEffectiveSubstances.Caption = "barButtonItem1";
+            this.iEffectiveSubstances.Caption = "Etkili Maddeler";
             this.iEffectiveSubstances.Id = 242;
             this.iEffectiveSubstances.Name = "iEffectiveSubstances";
             // 
@@ -1526,6 +1530,18 @@ namespace Naz.Hastane.Win {
             this.iExportToXSLX.Name = "iExportToXSLX";
             this.iExportToXSLX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExportToXLSX_ItemClick);
             // 
+            // iSubFunctionGroup
+            // 
+            this.iSubFunctionGroup.Caption = "Alt Ýþlem Tipi";
+            this.iSubFunctionGroup.Id = 285;
+            this.iSubFunctionGroup.Name = "iSubFunctionGroup";
+            // 
+            // iPriceList
+            // 
+            this.iPriceList.Caption = "Fiyat Listesi";
+            this.iPriceList.Id = 287;
+            this.iPriceList.Name = "iPriceList";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1576,6 +1592,28 @@ namespace Naz.Hastane.Win {
             this.rpgUserFunctions.Name = "rpgUserFunctions";
             this.rpgUserFunctions.Text = "Kullanýcý Ýþlemleri";
             // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ImageIndex = 22;
+            this.ribbonPageGroup9.ItemLinks.Add(this.iCik);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            toolTipTitleItem1.Text = "Save File Dialog";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.Text = "Show the Save file dialog box";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.ribbonPageGroup9.SuperTip = superToolTip1;
+            this.ribbonPageGroup9.Text = "Exit";
+            // 
+            // rpSGKPatients
+            // 
+            this.rpSGKPatients.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgSGK});
+            this.rpSGKPatients.Name = "rpSGKPatients";
+            this.rpSGKPatients.Text = "SGK Hastalarý";
+            // 
             // rpgSGK
             // 
             this.rpgSGK.ItemLinks.Add(this.iSGKHastaAra);
@@ -1584,6 +1622,13 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
+            // 
+            // rpMedulaReports
+            // 
+            this.rpMedulaReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgMedulaReports});
+            this.rpMedulaReports.Name = "rpMedulaReports";
+            this.rpMedulaReports.Text = "Medula Rapor Gönderimi";
             // 
             // rpgMedulaReports
             // 
@@ -1602,61 +1647,6 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaReports.SuperTip = superToolTip2;
             this.rpgMedulaReports.Text = "Medula Raporlarý";
             this.rpgMedulaReports.CaptionButtonClick += new DevExpress.XtraBars.Ribbon.RibbonPageGroupEventHandler(this.ribbonPageGroup2_CaptionButtonClick);
-            // 
-            // rpgAccounting
-            // 
-            this.rpgAccounting.ItemLinks.Add(this.iAccDailyReport);
-            this.rpgAccounting.Name = "rpgAccounting";
-            this.rpgAccounting.Text = "Muhasebe";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ImageIndex = 22;
-            this.ribbonPageGroup9.ItemLinks.Add(this.iCik);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            toolTipTitleItem1.Text = "Save File Dialog";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.Text = "Show the Save file dialog box";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.ribbonPageGroup9.SuperTip = superToolTip1;
-            this.ribbonPageGroup9.Text = "Exit";
-            // 
-            // rbDefinitions
-            // 
-            this.rbDefinitions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgDefinitions,
-            this.rpgGeneralDefinitions});
-            this.rbDefinitions.Name = "rbDefinitions";
-            this.rbDefinitions.Text = "Tanýmlar";
-            // 
-            // rpgDefinitions
-            // 
-            this.rpgDefinitions.ItemLinks.Add(this.iDepository);
-            this.rpgDefinitions.ItemLinks.Add(this.iDoctor);
-            this.rpgDefinitions.ItemLinks.Add(this.iFunctionGroup);
-            this.rpgDefinitions.ItemLinks.Add(this.iFunctionType);
-            this.rpgDefinitions.ItemLinks.Add(this.iRooms);
-            this.rpgDefinitions.ItemLinks.Add(this.iService);
-            this.rpgDefinitions.ItemLinks.Add(this.iSystemSettings);
-            this.rpgDefinitions.ItemLinks.Add(this.iUser);
-            this.rpgDefinitions.ItemLinks.Add(this.iWareHouse);
-            this.rpgDefinitions.Name = "rpgDefinitions";
-            this.rpgDefinitions.Text = "Tanýmlar";
-            // 
-            // rpgGeneralDefinitions
-            // 
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iBloodType);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iCity);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iNationality);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iIDType);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iPatientRelations);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iVAT);
-            this.rpgGeneralDefinitions.ItemLinks.Add(this.iYesNo);
-            this.rpgGeneralDefinitions.Name = "rpgGeneralDefinitions";
-            this.rpgGeneralDefinitions.Text = "Genel Tanýmlar";
             // 
             // rbMedulaDefinitions
             // 
@@ -1710,6 +1700,102 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaReport.ItemLinks.Add(this.iEffectiveSubstances);
             this.rpgMedulaReport.Name = "rpgMedulaReport";
             this.rpgMedulaReport.Text = "Medula Raporlarý";
+            // 
+            // rpAccounting
+            // 
+            this.rpAccounting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgAccounting});
+            this.rpAccounting.Name = "rpAccounting";
+            this.rpAccounting.Text = "Muhasebe";
+            // 
+            // rpgAccounting
+            // 
+            this.rpgAccounting.ItemLinks.Add(this.iAccDailyReport);
+            this.rpgAccounting.Name = "rpgAccounting";
+            this.rpgAccounting.Text = "Muhasebe";
+            // 
+            // rbAdminReports
+            // 
+            this.rbAdminReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgSummaryReports,
+            this.iDetailReports,
+            this.rpgPivotTables,
+            this.rpgExportReports});
+            this.rbAdminReports.Name = "rbAdminReports";
+            this.rbAdminReports.Text = "Yönetim Raporlarý";
+            // 
+            // rpgSummaryReports
+            // 
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYP);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetKurum);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetDoktor);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetServis);
+            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAnaIslem);
+            this.rpgSummaryReports.Name = "rpgSummaryReports";
+            this.rpgSummaryReports.Text = "Özet Raporlarý";
+            // 
+            // iDetailReports
+            // 
+            this.iDetailReports.ItemLinks.Add(this.iOzetAYPAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetDoktorAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetDoktorServis);
+            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAYP);
+            this.iDetailReports.ItemLinks.Add(this.iOzetServisAnaIslem);
+            this.iDetailReports.ItemLinks.Add(this.iOzetHastaneServisAnaIslem);
+            this.iDetailReports.Name = "iDetailReports";
+            this.iDetailReports.Text = "Ayrýntý Raporlar";
+            // 
+            // rpgPivotTables
+            // 
+            this.rpgPivotTables.ItemLinks.Add(this.iOzetServisAnaIslemPivot);
+            this.rpgPivotTables.ItemLinks.Add(this.iOzetAnaIslemAyXTab);
+            this.rpgPivotTables.ItemLinks.Add(this.iOzetYatakServisAy);
+            this.rpgPivotTables.Name = "rpgPivotTables";
+            this.rpgPivotTables.Text = "Pivot Tables";
+            // 
+            // rpgExportReports
+            // 
+            this.rpgExportReports.ItemLinks.Add(this.iExportToPDF);
+            this.rpgExportReports.ItemLinks.Add(this.iExportToXSLX);
+            this.rpgExportReports.Name = "rpgExportReports";
+            this.rpgExportReports.Text = "Export";
+            // 
+            // rbDefinitions
+            // 
+            this.rbDefinitions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgDefinitions,
+            this.rpgGeneralDefinitions});
+            this.rbDefinitions.Name = "rbDefinitions";
+            this.rbDefinitions.Text = "Tanýmlar";
+            // 
+            // rpgDefinitions
+            // 
+            this.rpgDefinitions.ItemLinks.Add(this.iDepository);
+            this.rpgDefinitions.ItemLinks.Add(this.iDoctor);
+            this.rpgDefinitions.ItemLinks.Add(this.iService);
+            this.rpgDefinitions.ItemLinks.Add(this.iFunctionType);
+            this.rpgDefinitions.ItemLinks.Add(this.iFunctionGroup);
+            this.rpgDefinitions.ItemLinks.Add(this.iSubFunctionGroup);
+            this.rpgDefinitions.ItemLinks.Add(this.iRooms);
+            this.rpgDefinitions.ItemLinks.Add(this.iSystemSettings);
+            this.rpgDefinitions.ItemLinks.Add(this.iUser);
+            this.rpgDefinitions.ItemLinks.Add(this.iWareHouse);
+            this.rpgDefinitions.ItemLinks.Add(this.iPriceList);
+            this.rpgDefinitions.Name = "rpgDefinitions";
+            this.rpgDefinitions.Text = "Tanýmlar";
+            // 
+            // rpgGeneralDefinitions
+            // 
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iBloodType);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iCity);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iNationality);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iIDType);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iPatientRelations);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iVAT);
+            this.rpgGeneralDefinitions.ItemLinks.Add(this.iYesNo);
+            this.rpgGeneralDefinitions.Name = "rpgGeneralDefinitions";
+            this.rpgGeneralDefinitions.Text = "Genel Tanýmlar";
             // 
             // rpGallery
             // 
@@ -1792,53 +1878,6 @@ namespace Naz.Hastane.Win {
             this.rpgTest.Name = "rpgTest";
             this.rpgTest.Text = "Test";
             // 
-            // rbAdminReports
-            // 
-            this.rbAdminReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgSummaryReports,
-            this.iDetailReports,
-            this.rpgPivotTables,
-            this.rpgExportReports});
-            this.rbAdminReports.Name = "rbAdminReports";
-            this.rbAdminReports.Text = "Yönetim Raporlarý";
-            // 
-            // rpgSummaryReports
-            // 
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAYP);
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetKurum);
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetDoktor);
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetServis);
-            this.rpgSummaryReports.ItemLinks.Add(this.iOzetAnaIslem);
-            this.rpgSummaryReports.Name = "rpgSummaryReports";
-            this.rpgSummaryReports.Text = "Özet Raporlarý";
-            // 
-            // iDetailReports
-            // 
-            this.iDetailReports.ItemLinks.Add(this.iOzetAYPAnaIslem);
-            this.iDetailReports.ItemLinks.Add(this.iOzetDoktorAnaIslem);
-            this.iDetailReports.ItemLinks.Add(this.iOzetDoktorServis);
-            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAnaIslem);
-            this.iDetailReports.ItemLinks.Add(this.iOzetKurumAYP);
-            this.iDetailReports.ItemLinks.Add(this.iOzetServisAnaIslem);
-            this.iDetailReports.ItemLinks.Add(this.iOzetHastaneServisAnaIslem);
-            this.iDetailReports.Name = "iDetailReports";
-            this.iDetailReports.Text = "Ayrýntý Raporlar";
-            // 
-            // rpgPivotTables
-            // 
-            this.rpgPivotTables.ItemLinks.Add(this.iOzetServisAnaIslemPivot);
-            this.rpgPivotTables.ItemLinks.Add(this.iOzetAnaIslemAyXTab);
-            this.rpgPivotTables.ItemLinks.Add(this.iOzetYatakServisAy);
-            this.rpgPivotTables.Name = "rpgPivotTables";
-            this.rpgPivotTables.Text = "Pivot Tables";
-            // 
-            // rpgExportReports
-            // 
-            this.rpgExportReports.ItemLinks.Add(this.iExportToPDF);
-            this.rpgExportReports.ItemLinks.Add(this.iExportToXSLX);
-            this.rpgExportReports.Name = "rpgExportReports";
-            this.rpgExportReports.Text = "Export";
-            // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.AllowFocused = false;
@@ -1889,27 +1928,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // rpSGKPatients
-            // 
-            this.rpSGKPatients.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgSGK});
-            this.rpSGKPatients.Name = "rpSGKPatients";
-            this.rpSGKPatients.Text = "SGK Hastalarý";
-            // 
-            // rpMedulaReports
-            // 
-            this.rpMedulaReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgMedulaReports});
-            this.rpMedulaReports.Name = "rpMedulaReports";
-            this.rpMedulaReports.Text = "Medula Rapor Gönderimi";
-            // 
-            // rpAccounting
-            // 
-            this.rpAccounting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgAccounting});
-            this.rpAccounting.Name = "rpAccounting";
-            this.rpAccounting.Text = "Muhasebe";
             // 
             // frmMain
             // 
@@ -2123,6 +2141,8 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rpSGKPatients;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpMedulaReports;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpAccounting;
+        private DevExpress.XtraBars.BarButtonItem iSubFunctionGroup;
+        private DevExpress.XtraBars.BarButtonItem iPriceList;
 
     }
 }

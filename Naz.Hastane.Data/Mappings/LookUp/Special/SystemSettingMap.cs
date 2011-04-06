@@ -5,11 +5,16 @@ using Naz.Hastane.Data.Mappings.LookUp;
 
 namespace Naz.Hastane.Data.Entities.Special
 {
-    public class SystemSettingMap : SubclassMap<SystemSetting>
+    public class SystemSettingMap : ClassMap<SystemSetting>
     {
         public SystemSettingMap()
         {
-            DiscriminatorValue(LookUpDiscriminators.SystemSettings.GetDescription());
+            Table("tlkpvSystemSetting");
+
+            Id(x => x.ID).Column("SLB").Length(10);
+
+            Map(x => x.ID0).Column("SLK").Length(2);
+            Map(x => x.Value).Column("SLT").Length(150);
         }
     }
 }
