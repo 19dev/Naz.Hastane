@@ -103,9 +103,6 @@
     <property name="Profession" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="MESLEK" length="20" />
     </property>
-    <property name="InsuranceCompany" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="PSG" length="6" not-null="true" />
-    </property>
     <property name="ProtocolNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="PROTNO" length="20" />
     </property>
@@ -196,5 +193,8 @@
       </key>
       <one-to-many class="Naz.Hastane.Data.Entities.PatientVisit, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </bag>
+    <many-to-one class="Naz.Hastane.Data.Entities.InsuranceCompany, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" lazy="proxy" name="InsuranceCompany">
+      <column name="PSG" />
+    </many-to-one>
   </class>
 </hibernate-mapping>

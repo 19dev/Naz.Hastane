@@ -12,11 +12,13 @@ using NHibernate;
 using NHibernate.Linq;
 using NHibernate.Transform;
 using Naz.Hastane.Data.Entities.Reports;
+using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Services
 {
     public static class LookUpServices
     {
+        public const string SGKCode = "SGK";
 
         public static T GetByID<T>(string aID)
         {
@@ -37,6 +39,23 @@ namespace Naz.Hastane.Data.Services
         public static IList<T> LookUpTable<T>(ref IList<T> theObject) where T : class
         {
             if (theObject == null)
+                theObject = GetAll<T>();
+            return theObject;
+        }
+
+        public static IList<T> LookUpTable<T>(ref IList<T> theObject, string discriminatorValue) where T : OldLookUpBase
+        {
+            if (theObject == null)
+            {
+                using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                {
+                    return (from t in session.Query<T>()
+                            where t.ID0 == discriminatorValue
+                            select t
+                            ).ToList<T>();
+                }
+
+            }
                 theObject = GetAll<T>();
             return theObject;
         }
@@ -271,6 +290,11 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        public static InsuranceCompany GetSGK(ISession session)
+        {
+            return session.Get<InsuranceCompany>(SGKCode);
+        }
+
         private static IList<Doctor> _SGKDoctors;
         public static IList<Doctor> SGKDoctors
         { 
@@ -278,16 +302,25 @@ namespace Naz.Hastane.Data.Services
             {
                 if (_SGKDoctors == null)
                 {
-                    using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
                     {
-                        _SGKDoctors = session.QueryOver<Doctor>()
-                            .OrderBy(x => x.Value).Asc
-                            .JoinQueryOver(x => x.Service)
-                                .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
-                            .JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
-                            .JoinQueryOver<Product>(x => x.Product)
-                            .TransformUsing(Transformers.DistinctRootEntity)
-                            .List();
+                        _SGKDoctors = (from doctor in session.Query<Doctor>()
+                                       where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic && doctor.Service.SGKAutoExaminations.Count > 0
+                                       join service in session.Query<Service>() on doctor.Service.ID equals service.ID
+                                       join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
+                                       join product in session.Query<Product>() on sae.Product equals product
+                                       orderby doctor.Value
+                                       select doctor
+                                      )
+                                      .Distinct<Doctor>()
+                                      .ToList<Doctor>();
+                            //.OrderBy(x => x.Value).Asc
+                            //.JoinQueryOver(x => x.Service)
+                            //    .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
+                            //.JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
+                            //.JoinQueryOver<Product>(x => x.Product)
+                            //.TransformUsing(Transformers.DistinctRootEntity)
+                            //.List();
                     }
                 }
                 return _SGKDoctors;
@@ -340,9 +373,10 @@ namespace Naz.Hastane.Data.Services
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
-                return session.QueryOver<SGKAutoExamination>()
-                    .Where(s => s.Service.ID == servisCode)
-                    .List();
+                return (from sae in session.Query<SGKAutoExamination>()
+                        where sae.Service.ID == servisCode
+                        select sae
+                        ).ToList<SGKAutoExamination>();
             }
         }
 
@@ -371,7 +405,7 @@ namespace Naz.Hastane.Data.Services
                 SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
                                     where systemSetting.ID0 == "00" && systemSetting.ID == key
                                     select systemSetting
-                                    ).Single<SystemSetting>();
+                                    ).SingleOrDefault<SystemSetting>();
 
                 for (int i = ss.Value.Length - 1; i >= 0; i--)
                 {
@@ -402,26 +436,48 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static float GetNewDoctorQueueNo(ISession asession, Doctor doctor)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                // Get No QueueNo for the Doctor, If new date reset the number
+                SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
+                                    where systemSetting.ID0 == "00" && systemSetting.ID == "TARİH"
+                                    select systemSetting
+                                    ).SingleOrDefault<SystemSetting>();
+
+                string today = DateTime.Now.ToString("dd/MM/yyyy");
+                if (today != ss.Value)
+                {
+                    ss.Value = today;
+                    doctor.QueueNo = 0;
+                    session.Update(ss);
+                }
+                doctor.QueueNo += 1;
+                session.Update(doctor);
+
+                transaction.Commit();
+            }
+            return doctor.QueueNo;
+        }
+
         public static string GetNewInvoiceNo()
         {
             return GetNewSystemSettingNo("FATNO");
         }
-
         public static string GetNewVoucherNo()
         {
             return GetNewSystemSettingNo("MAKNO");
         }
-
         public static string GetNewAdvancePaymentNo()
         {
             return GetNewSystemSettingNo("AVANS_ID");
         }
-
         public static string GetNewTellerInvoiceNo(User user)
         {
             return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE);
         }
-
         public static string GetNewTellerVoucherNo(User user)
         {
             return GetNewSystemSettingNo("MAKNUM" + user.VEZNE);

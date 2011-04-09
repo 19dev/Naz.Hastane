@@ -1,0 +1,20 @@
+  SELECT DISTINCT L.KNR, L.SNR, A.HASTAADI, A.HASTASOYADI, A.SIGORTANO, B.ODANO, B.SERVIS, B.ARZT " & _
+                "from LBISTE L, ADRES A, BEHAND B, HIZIL H " & _
+                "where A.KNR=L.KNR and " & _
+                "B.KNR=L.KNR and " & _
+                "B.SNR=L.SNR and " & _
+                "H.KNR=B.KNR and " & _
+                "H.SNR=B.SNR and " & _
+                "H.TANIM=L.TANIM and " & _
+                "H.GRUP=L.GRUP and " & _
+                "H.CODE=L.CODE and " & _
+                "H.TARIH=L.TARIH and " & _
+                "( ((B.AMBU='P' and (H.SATISF>0 and (H.LRGOR IS NOT NULL OR H.MAKNO is not null)) or H.SATISF=0)) or (B.AMBU='Y') or (B.AMBU='A') ) and " & _
+                strKartTipi & _
+                "L.TANIM='" & cTANIM & "' and " & _
+                IIf(LTrim(cGRUP) = "", "", "L.GRUP='" & cGRUP & "' and ") & _
+                "L.KABUL='0' and " & _
+                "L.ONAY = '0' AND " & _
+                "L.TARIH >= " & (TxtBaþlangýçTarihi.Value) & " and " & _
+                "L.TARIH <  " & (TxtBitiþTarihi.Value + 1) & " " & _
+                "ORDER BY A.HASTAADI, A.HASTASOYADI"

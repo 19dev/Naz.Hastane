@@ -45,7 +45,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string Email { get; set; } //EMAIL
         public virtual string Profession { get; set; } //MESLEK
 
-        public virtual string InsuranceCompany { get; set; } //PSG
+        public virtual InsuranceCompany InsuranceCompany { get; set; } //PSG
         public virtual string ProtocolNo { get; set; } //PROTNO
         public virtual char PatientContribution { get; set; } //HASTAKATILIM
         public virtual double PatientLimit { get; set; } //HASTALIMIT

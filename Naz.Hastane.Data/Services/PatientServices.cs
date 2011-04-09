@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.Special;
+using Naz.Hastane.Data.Services;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using Naz.Hastane.Data.Entities.LookUp;
+using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -121,7 +124,7 @@ namespace Naz.Hastane.Data.Services
             patient.Email = ""; //EMAIL
             patient.Profession = ""; //MESLEK
 
-            patient.InsuranceCompany = ""; //PSG SGK: SGK
+            //patient.InsuranceCompany = ""; //PSG SGK: SGK
             patient.ProtocolNo = ""; //PROTNO
             patient.PatientContribution = 'F'; //HASTAKATILIM SGK 'T'
             patient.PatientLimit = 0.0; //HASTALIMIT
@@ -158,10 +161,10 @@ namespace Naz.Hastane.Data.Services
 
             return patient;
         }
-        public static Patient GetNewSGKPatient()
+        public static Patient GetNewSGKPatient(ISession session)
         {
             Patient patient = GetNewPatient();
-            patient.InsuranceCompany = "SGK";
+            patient.InsuranceCompany = LookUpServices.GetSGK(session);
             patient.PatientContribution = 'T';
             patient.InsuranceType = "1";
             patient.TransferorInstitution = "1";
@@ -169,94 +172,135 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
-        public static void AddSGKPolyclinic(ISession session, Patient patient, Doctor doctor)
+        public static void AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor, string provisionNo)
         {
             if (patient == null || doctor == null)
                 return;
 
+            //using (ITransaction transaction = session.BeginTransaction())
+            //{
+                float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
+
+                PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, provisionNo);
+
+                PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
+
+                foreach (SGKAutoExamination sae in doctor.Service.SGKAutoExaminations)
+                {
+                    if (IsAutoExamItemValid(patient, sae))
+                    {
+                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                    }
+                }
+                //transaction.Commit();
+            //}
+
+        }
+
+        public static bool IsAutoExamItemValid(Patient patient, SGKAutoExamination sae)
+        {
+            if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
+                return true;
+            else
+                return (patient.InsuranceType == InsuranceTypeValues.Worker.GetDescription());
+        }
+
+        public static PatientVisit AddNewPatientVisit(ISession asession, User user, Patient patient, Doctor doctor, string provisionNo)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                InsuranceCompany ic = session.Get<InsuranceCompany>("SGK");
+                patient.InsuranceCompany.SIRAID += 1;
+                asession.Save(patient.InsuranceCompany);
 
-                float doctorQueueNo = GetDoctorQueueNo(session, doctor);
+                PatientVisit pv = new PatientVisit();
+                pv.VisitNo = GetNewPatientVisitNo(session, patient);
+                pv.VisitDate = DateTime.Now.Date;
+                pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
+                pv.Doctor = doctor.ID;
+                pv.Servis = doctor.Service.ID;
+                pv.QueueNo = doctor.QueueNo.ToString("f0");
+                pv.VisitType = PatientCardType.Polyclinic.GetDescription();
+                pv.SIRAID = patient.InsuranceCompany.SIRAID;
+                pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
+                pv.ProvisionNo = provisionNo;
+                pv.USER_ID = user.USER_ID;
+                pv.SupportInsCompany = "";
+                pv.PSG = patient.InsuranceCompany.Name;
+                pv.DATE_CREATE = DateTime.Now;
+                pv.ExitTime = "";
+                pv.SEVKTAKIPNO = "";
 
-                PatientVisit pv = AddNewPatientVisit(session, patient, doctor, ic);
-
-                foreach (SGKAutoExamination sa in doctor.Service.SGKAutoExaminations)
-                {
-                    PatientVisitDetail pvd = new PatientVisitDetail();
-
-                    pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
-
-                    pvd.TARIH = DateTime.Now;
-
-                    pvd.TANIM = sa.Product.TANIM;
-                    pvd.GRUP = sa.Product.GRUP;
-                    pvd.CODE = sa.Product.CODE;
-                    pvd.NAME1 = sa.Product.NAME1;
-
-                    pvd.KDV = 0;
-                    pvd.ADET = 1;
-                    pvd.SATISF = 0;
-                    pvd.KSATISF = 0;
-                    pvd.PSG = pv.PSG;
-                    pvd.Doctor = doctor.ID;
-                    pvd.Doctor2 = doctor.ID;
-                    pvd.HZLNO = 0;
-
-                    pv.USER_ID = "Aydin";
-                    pv.DATE_CREATE = DateTime.Now;
-
-                    pv.AddPatientVisitDetail(pvd);
-                    session.Save(pvd);
-                }
+                patient.AddPatientVisit(pv);
+                session.Save(pv);
                 transaction.Commit();
+                return pv;
             }
-
         }
-
-        public static float GetDoctorQueueNo(ISession session, Doctor doctor)
+        public static PatientVisitRecord AddNewPatientVisitRecord(ISession asession, User user, PatientVisit pv)
         {
-            // Get No QueueNo for the Doctor, If new date reset the number
-            SystemSetting ss = session.Get<SystemSetting>("TARİH");
-            string today = DateTime.Now.ToString("dd/MM/yyyy");
-            if (today != ss.Value)
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
             {
-                ss.Value = today;
-                doctor.QueueNo = 0;
-                session.Save(ss);
+                PatientVisitRecord pvr = new PatientVisitRecord();
+
+                pvr.PatientVisit = pv;
+                pvr.VisitDate = DateTime.Now;
+                pvr.Doctor = pv.Doctor;
+                pvr.Servis = pv.Servis;
+                pvr.QueueNo = pv.QueueNo;
+                pvr.VisitType = pv.VisitType;
+                pvr.USER_ID = user.USER_ID;
+                pvr.DATE_CREATE = DateTime.Now;
+
+                pvr.MUAYENEOLDU = "";
+
+                pv.AddPatientVisitRecord(pvr);
+                session.Save(pvr);
+                transaction.Commit();
+                return pvr;
             }
-            doctor.QueueNo += 1;
-            session.Save(doctor);
 
-            return doctor.QueueNo;
         }
-
-        public static PatientVisit AddNewPatientVisit(ISession session, Patient patient, Doctor doctor, InsuranceCompany ic)
+        public static PatientVisitDetail AddNewPatientVisitDetail(ISession asession, User user, Patient patient, PatientVisit pv, Product product)
         {
-            ic.SIRAID += 1;
-            session.Save(ic);            double companyVisitNo = ic.SIRAID;
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                PatientVisitDetail pvd = new PatientVisitDetail();
 
-            PatientVisit pv = new PatientVisit();
-            pv.VisitNo = GetNewPatientVisitNo(session, patient);
-            pv.VisitDate = DateTime.Now;
-            pv.TransferValidityPeriod = (short)ic.SEVKGECSURE;
-            pv.Doctor = doctor.ID;
-            pv.Servis = doctor.Service.ID;
-            pv.QueueNo = doctor.QueueNo.ToString("d");
-            pv.VisitType = "P";
-            pv.SIRAID = ic.SIRAID;
-            pv.HZLNO = 0;
-            pv.ProvisionNo = "";
-            pv.USER_ID = "Aydin";
-            pv.SupportInsCompany = "";
-            pv.PSG = ic.PSG;
-            pv.DATE_CREATE = DateTime.Now;
+                pvd.PatientVisit = pv;
+                pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
 
-            patient.AddPatientVisit(pv);
-            session.Save(pv);
+                pvd.TARIH = DateTime.Now;
 
-            return pv;
+                pvd.TANIM = product.TANIM;
+                pvd.GRUP = product.GRUP;
+                pvd.CODE = product.CODE;
+                pvd.NAME1 = product.NAME1;
+
+                pvd.KDV = 0;
+                pvd.ADET = 1;
+                string price = Utilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
+                pvd.SATISF = Convert.ToDouble(price);
+                string kprice = Utilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
+                pvd.KSATISF = Convert.ToDouble(kprice);
+                pvd.PSG = pv.PSG;
+                pvd.Doctor = pv.Doctor;
+                pvd.Doctor2 = pv.Doctor;
+                pvd.HZLNO = 0;
+
+                pvd.USER_ID = user.USER_ID;
+                pvd.DATE_CREATE = DateTime.Now;
+
+                pvd.MEDANOMALI = "0";
+
+                pv.AddPatientVisitDetail(pvd);
+                session.Save(pvd);
+                transaction.Commit();
+                return pvd;
+            }
+
         }
 
         #region New Key Generators
@@ -286,13 +330,9 @@ namespace Naz.Hastane.Data.Services
         }
         public static string GetNewPatientVisitNo(ISession session, Patient patient)
         {
-            string a = session.QueryOver<PatientVisit>()
-                .Where(x => x.Patient == patient)
-                .Select(
-                    Projections
-                        .ProjectionList()
-                        .Add(Projections.Min<PatientVisit>(x => x.VisitNo)))
-                .List<string>().First();
+            string a = (from patientVisit in session.Query<PatientVisit>()
+                        where patientVisit.Patient == patient
+                        select patientVisit.VisitNo).Min();
 
             int newNo = 1000;
 

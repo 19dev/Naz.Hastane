@@ -7,7 +7,7 @@ namespace Naz.Hastane.Data.Entities
 {
     public class InsuranceCompany
     {
-        public virtual string PSG { get; set; } // PSG; length(6); 0
+        public virtual string Name { get; set; } // PSG; length(6); 0
 
         public virtual string ACILKATILIM { get; set; } // ACILKATILIM; length(1); 0
         public virtual string ADI1 { get; set; } // ADI1; length(200); 0

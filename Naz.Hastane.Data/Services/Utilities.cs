@@ -45,5 +45,29 @@ namespace Naz.Hastane.Data.Services
             return t.ToString();
         }
 
+        public static IEnumerable<KeyValuePair<string, string>> MemberDescriptions<T>() where T : new()
+        {
+            foreach (var member in typeof(T).GetMembers())
+            {
+                var attributes = member.GetCustomAttributes(true);
+                foreach (Attribute a in attributes)
+                {
+                    DescriptionAttribute da = a as DescriptionAttribute;
+                    if (da != null && da.Description.Length > 0)
+                    {
+                        yield return new KeyValuePair<string, string>(member.Name, da.Description);
+                    }
+                }
+            }
+        }
+
+        public static string GetMemberValueByName(Object myObject, string memberName)
+        {
+            Type t = myObject.GetType();
+            PropertyInfo p = t.GetProperty(memberName);
+            string s = p.GetValue(myObject, null).ToString();
+            return s;
+        }
+
     }
 }

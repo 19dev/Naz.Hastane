@@ -305,6 +305,10 @@
       <Project>{2F79C8A5-6235-4D45-8C9C-28BEC3C33C51}</Project>
       <Name>Naz.Hastane.Medula</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naz.Utilities\Naz.Utilities.csproj">
+      <Project>{65745D12-84D5-4224-8820-F83E5BE8A2B1}</Project>
+      <Name>Naz.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1578,7 +1578,7 @@
             this.lciInsuranceCompany.Location = new System.Drawing.Point(0, 24);
             this.lciInsuranceCompany.Name = "lciInsuranceCompany";
             this.lciInsuranceCompany.Size = new System.Drawing.Size(247, 24);
-            this.lciInsuranceCompany.Text = "Kurum Kodu";
+            this.lciInsuranceCompany.Text = "Kurum";
             this.lciInsuranceCompany.TextSize = new System.Drawing.Size(87, 13);
             // 
             // lciPatientNo

@@ -103,7 +103,7 @@ namespace Naz.Hastane.Win {
             iPaintStyle.DropDownControl = skins;
 
             // Force the loading of the database
-            var doctors = LookUpServices.Doctors;
+            //var doctors = LookUpServices.Doctors;
 
             // Close the splash screen
             CloseSplash();
@@ -763,7 +763,6 @@ namespace Naz.Hastane.Win {
         }
         public void OpenNewHastaSGK()
         {
-            Patient patient = PatientServices.GetNewSGKPatient();
             string name = "Yeni SGK Hastasý";
             SGKPatientForm newForm = new SGKPatientForm("");
             newForm.Text = name;

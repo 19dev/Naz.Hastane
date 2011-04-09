@@ -39,7 +39,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string KABUL { get; set; } //KABUL
         public virtual string ISODENDI { get; set; } //ISODENDI
         public virtual double CARIFIYAT { get; set; } //CARIFIYAT
-        public virtual DateTime ODEMETARIHI { get; set; } //ODEMETARIHI
+        public virtual DateTime? ODEMETARIHI { get; set; } //ODEMETARIHI
         public virtual string ISDURUM { get; set; } //ISDURUM
         public virtual string PSEANS { get; set; } //PSEANS
         public virtual string SAGSOL { get; set; } //SAGSOL
@@ -48,8 +48,8 @@ namespace Naz.Hastane.Data.Entities
         public virtual string HODENDI { get; set; } //HODENDI
         public virtual string AMAKNO { get; set; } //AMAKNO
 
-        public virtual DateTime HYATISTARIHI { get; set; } //HYATISTARIHI
-        public virtual DateTime HCIKISTARIHI { get; set; } //HCIKISTARIHI
+        public virtual DateTime? HYATISTARIHI { get; set; } //HYATISTARIHI
+        public virtual DateTime? HCIKISTARIHI { get; set; } //HCIKISTARIHI
         public virtual string REFGUNSAY { get; set; } //REFGUNSAY
         public virtual string ISLEMSIRANO { get; set; } //ISLEMSIRANO
 
@@ -66,7 +66,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string USER_ID { get; set; } //USER_ID
         public virtual DateTime DATE_CREATE { get; set; } //DATE_CREATE
         public virtual string USER_ID_UPDATE { get; set; } //USER_ID_UPDATE
-        public virtual DateTime DATE_UPDATE { get; set; } //DATE_UPDATE
+        public virtual DateTime? DATE_UPDATE { get; set; } //DATE_UPDATE
 
         public override bool Equals(object obj)
         {

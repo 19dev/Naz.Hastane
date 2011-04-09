@@ -19,7 +19,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
         public SGKPatientForm(string aPatientID)
         {
-            _Patient = PatientServices.GetPatientByID(aPatientID, Session);
+            if (String.IsNullOrEmpty(aPatientID))
+                _Patient = PatientServices.GetNewSGKPatient(Session);
+            else
+                _Patient = PatientServices.GetPatientByID(aPatientID, Session);
+
             InitializeComponent();
 
             //insuranceTypes = LookUpServices.GetAll<InsuranceType>();
@@ -52,7 +56,10 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             LoadLookUps();
             this.tePatientNo.DataBindings.Add("EditValue", _Patient, "PatientNo");
-            this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany");
+            //this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany.Name");
+            if (this._Patient.InsuranceCompany != null)
+                this.teInsuranceCompany.Text = this._Patient.InsuranceCompany.Name;
+
             this.teTCID.DataBindings.Add("EditValue", _Patient, "TCId");
             this.teFirstName.DataBindings.Add("EditValue", _Patient, "FirstName");
             this.teLastName.DataBindings.Add("EditValue", _Patient, "LastName");
@@ -170,8 +177,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _IsWaitingForPolyclinic = true;
                 _Doctor = doctor;
-                CallMedulaProvision();
-                PatientServices.AddSGKPolyclinic(Session, this._Patient, this._Doctor);
+                //CallMedulaProvision();
+                string provisionNo = "ABC1234";
+                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor, provisionNo);
             }
 
         }
@@ -201,7 +209,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _IsWaitingForPolyclinic = false;
                 if (e.Result.sonucKodu == "0000")
-                    PatientServices.AddSGKPolyclinic(Session, this._Patient, this._Doctor);
+                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor, "");
             }
         }
 

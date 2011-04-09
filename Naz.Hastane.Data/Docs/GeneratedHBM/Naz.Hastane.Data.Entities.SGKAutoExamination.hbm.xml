@@ -10,7 +10,7 @@
         <column name="CODE" />
       </key-many-to-one>
     </composite-id>
-    <property name="KATILIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <property name="Contribution" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="KATILIM" length="50" />
     </property>
     <property name="AYKATILIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

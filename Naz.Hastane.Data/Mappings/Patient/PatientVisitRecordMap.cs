@@ -11,13 +11,14 @@ namespace Naz.Hastane.Data.Mappings
             Table("BEHAND_DETAY");
 
             CompositeId()
-                .KeyProperty(x => x.KNR, "KNR")
-                .KeyProperty(x => x.SNR, "SNR")
-                .KeyProperty(x => x.GELISTARIHI, "GELISTARIHI");
+                .KeyReference(x => x.PatientVisit, "KNR", "SNR")
+                //.KeyProperty(x => x.KNR, "KNR")
+                //.KeyProperty(x => x.SNR, "SNR")
+                .KeyProperty(x => x.VisitDate, "GELISTARIHI");
 
             Map(x => x.ACIL_KONS).Column("ACIL_KONS").Length(1); //1
-            Map(x => x.AMBU).Column("AMBU").Length(1); //0
-            Map(x => x.ARZT).Column("ARZT").Length(4); //0
+            Map(x => x.VisitType).Column("AMBU").Length(1); //0
+            Map(x => x.Doctor).Column("ARZT").Length(4); //0
             Map(x => x.BRANSKODU).Column("BRANSKODU").Length(10); //1
             Map(x => x.DATE_CREATE).Column("DATE_CREATE").Length(8); //0
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE").Length(8); //1
@@ -38,8 +39,8 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.NOTLAR).Column("NOTLAR").Length(100); //1
             Map(x => x.ONERILER).Column("ONERILER").Length(100); //1
             Map(x => x.PSG).Column("PSG").Length(10); //1
-            Map(x => x.SERNO).Column("SERNO").Length(5); //1
-            Map(x => x.SERVIS).Column("SERVIS").Length(2); //0
+            Map(x => x.QueueNo).Column("SERNO").Length(5); //1
+            Map(x => x.Servis).Column("SERVIS").Length(2); //0
             Map(x => x.SEVKTAKIPNO).Column("SEVKTAKIPNO").Length(10); //1
             Map(x => x.SIGORTALIKARTNO).Column("SIGORTALIKARTNO").Length(20); //1
             Map(x => x.TABKODU).Column("TABKODU").Length(2); //1

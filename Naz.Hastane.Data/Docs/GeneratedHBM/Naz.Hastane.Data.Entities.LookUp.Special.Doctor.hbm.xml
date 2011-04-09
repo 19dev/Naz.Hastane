@@ -16,7 +16,7 @@
     <property name="LicenseNo" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="SLVV" length="100" />
     </property>
-    <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Special.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Service">
+    <many-to-one class="Naz.Hastane.Data.Entities.LookUp.Special.Service, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" lazy="false" name="Service">
       <column name="SLXX" />
     </many-to-one>
   </class>

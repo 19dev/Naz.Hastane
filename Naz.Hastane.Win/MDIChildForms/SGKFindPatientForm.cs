@@ -36,9 +36,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (gridView1.GetFocusedRow() != null)
             {
-                string cellValue;
-                cellValue = gridView1.GetFocusedRowCellDisplayText("PatientNo");
-                (this.MdiParent as frmMain).OpenHastaSGK(cellValue);
+                Cursor.Current = Cursors.WaitCursor;
+
+                try
+                {
+                    string cellValue;
+                    cellValue = gridView1.GetFocusedRowCellDisplayText("PatientNo");
+                    (this.MdiParent as frmMain).OpenHastaSGK(cellValue);
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
             }
         }
 
@@ -49,21 +58,30 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void HastaAra()
         {
-            string criteriaString = "";
+            Cursor.Current = Cursors.WaitCursor;
 
-            GetCriteria(this.teTCKimlikNo, ref criteriaString, "TCId");
-            GetCriteria(this.teHastaNo, ref criteriaString, "PatientNo");
-            GetCriteria(this.teAdi, ref criteriaString, "FirstName");
-            GetCriteria(this.teSoyadi, ref criteriaString, "LastName");
-            GetCriteria(this.teBabaAdi, ref criteriaString, "FatherName");
-
-            if (criteriaString.Length > 0)
+            try
             {
-                IList<Patient> patients = PatientServices.GetByWhere(criteriaString);
-                this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                this.gridHastaArama.DataSource = patients;
+                string criteriaString = "";
+
+                GetCriteria(this.teTCKimlikNo, ref criteriaString, "TCId");
+                GetCriteria(this.teHastaNo, ref criteriaString, "PatientNo");
+                GetCriteria(this.teAdi, ref criteriaString, "FirstName");
+                GetCriteria(this.teSoyadi, ref criteriaString, "LastName");
+                GetCriteria(this.teBabaAdi, ref criteriaString, "FatherName");
+
+                if (criteriaString.Length > 0)
+                {
+                    IList<Patient> patients = PatientServices.GetByWhere(criteriaString);
+                    this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
+                    this.gridHastaArama.DataSource = patients;
+                }
+                this.AcceptButton = this.sbSec;
             }
-            this.AcceptButton = this.sbSec;
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
 
         }
 

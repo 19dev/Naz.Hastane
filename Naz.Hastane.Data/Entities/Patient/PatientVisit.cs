@@ -21,7 +21,7 @@ namespace Naz.Hastane.Data.Entities
         /// <summary>
         /// CIKTAR
         /// </summary>
-        public virtual DateTime ExitDate { get; set; } //CIKTAR
+        public virtual DateTime? ExitDate { get; set; } //CIKTAR
         /// <summary>
         /// CIKSAAT
         /// </summary>
@@ -33,7 +33,7 @@ namespace Naz.Hastane.Data.Entities
         /// <summary>
         /// FATURATARIHI
         /// </summary>
-        public virtual DateTime InvoiceDate { get; set; } //FATURATARIHI
+        public virtual DateTime? InvoiceDate { get; set; } //FATURATARIHI
         /// <summary>
         /// MTOPT
         /// </summary>
@@ -48,7 +48,7 @@ namespace Naz.Hastane.Data.Entities
         /// DESTEKPSG
         /// </summary>
         public virtual string SupportInsCompany { get; set; } //DESTEKPSG
-        public virtual DateTime DESFATURATARIHI { get; set; } //DESFATURATARIHI
+        public virtual DateTime? DESFATURATARIHI { get; set; } //DESFATURATARIHI
         /// <summary>
         /// SERVIS
         /// </summary>
@@ -76,9 +76,9 @@ namespace Naz.Hastane.Data.Entities
         public virtual string TEDAVITURU { get; set; } //TEDAVITURU A:Ayakta, Y:Yatan, G:Günübirlik
 
         public virtual string MEDFATURANO { get; set; } //MEDFATURANO
-        public virtual DateTime MEDFATURATARIHI { get; set; } //MEDFATURATARIHI
+        public virtual DateTime? MEDFATURATARIHI { get; set; } //MEDFATURATARIHI
         public virtual double MEDFATTUTAR { get; set; } //MEDFATTUTAR
-        public virtual DateTime MCIKISTARIHI { get; set; } //MCIKISTARIHI 
+        public virtual DateTime? MCIKISTARIHI { get; set; } //MCIKISTARIHI 
         public virtual double FARKTUTAR { get; set; } //FARKTUTAR
         public virtual string TESLIMNO { get; set; } //TESLIMNO Medula'nın kesilen faturaya dönderdiği numara
         /// <summary>
@@ -105,7 +105,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string FIYATARTISMUAF { get; set; } //FIYATARTISMUAF
 
         public virtual string ICMALNO { get; set; } //ICMALNO x
-        public virtual DateTime ICMALTARIHI { get; set; } //ICMALTARIHI x
+        public virtual DateTime? ICMALTARIHI { get; set; } //ICMALTARIHI x
 
         public virtual short HZLNO { get; set; } //HZLNO ??
         public virtual double SIRAID { get; set; } //SIRAID ??
@@ -118,14 +118,14 @@ namespace Naz.Hastane.Data.Entities
         public virtual string ARHATA { get; set; } //ARHATA
 
         public virtual char Status { get; set; } //DURUM Cumhur Kapıönü
-        public virtual DateTime KONTROLTAR { get; set; } //KONTROLTAR
-        public virtual DateTime KONTROLT { get; set; } //KONTROLT
+        public virtual DateTime? KONTROLTAR { get; set; } //KONTROLTAR
+        public virtual DateTime? KONTROLT { get; set; } //KONTROLT
         public virtual char KONTROL { get; set; } //KONTROL
 
         public virtual string USER_ID { get; set; } //USER_ID
         public virtual DateTime DATE_CREATE { get; set; } //DATE_CREATE
         public virtual string USER_ID_UPDATE { get; set; } //USER_ID_UPDATE
-        public virtual DateTime DATE_UPDATE { get; set; } //DATE_UPDATE
+        public virtual DateTime? DATE_UPDATE { get; set; } //DATE_UPDATE
 
         private IList<PatientVisitDetail> _PatientVisitDetails = new List<PatientVisitDetail>();
 
@@ -138,9 +138,21 @@ namespace Naz.Hastane.Data.Entities
         public virtual void AddPatientVisitDetail(PatientVisitDetail pvd)
         {
             pvd.PatientVisit = this;
-            //pvd.KNR = this.Patient.PatientNo;
-            //pvd.SNR = this.VisitNo;
             this.PatientVisitDetails.Add(pvd);
+        }
+
+        private IList<PatientVisitRecord> _PatientVisitRecords = new List<PatientVisitRecord>();
+
+        public virtual IList<PatientVisitRecord> PatientVisitRecords
+        {
+            get { return _PatientVisitRecords; }
+            set { _PatientVisitRecords = value; }
+        }
+
+        public virtual void AddPatientVisitRecord(PatientVisitRecord pvr)
+        {
+            pvr.PatientVisit = this;
+            this.PatientVisitRecords.Add(pvr);
         }
 
         //public virtual MedulaDiabetReport MedulaDiabetReport { get; set; }

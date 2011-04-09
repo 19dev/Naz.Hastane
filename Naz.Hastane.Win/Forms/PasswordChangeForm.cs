@@ -39,8 +39,17 @@ namespace Naz.Hastane.Win.Forms
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                User = session.Get<User>(this.teUserName.Text);
-                if (User.USER_PASS != encrypter.Encrypt(this.teUserPassword.Text))
+                Cursor.Current = Cursors.WaitCursor;
+
+                try
+                {
+                    User = session.Get<User>(this.teUserName.Text);
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+                if (User == null || User.USER_PASS != encrypter.Encrypt(this.teUserPassword.Text))
                 {
                     XtraMessageBox.Show("Eski Şifreniz Doğru Değil, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
                     return;
@@ -51,9 +60,15 @@ namespace Naz.Hastane.Win.Forms
                     return;
                 }
                 User.USER_PASS = encrypter.Encrypt(this.teNewPassword.Text);
-                session.Save(User);
-                transaction.Commit();
-                _IsOK = true;
+                try
+                {
+                    session.Save(User);
+                    transaction.Commit();
+                    _IsOK = true;
+                }
+                finally
+                { 
+                }
                 this.Close();
             }
         }

@@ -16,7 +16,7 @@ namespace Naz.Hastane.Data.Mappings {
                 .KeyReference(x => x.Service, "SERVISKODU")
                 .KeyReference(x => x.Product, "TANIM", "GRUP", "CODE");
 
-			Map(x => x.KATILIM).Column("KATILIM").Length(50);
+			Map(x => x.Contribution).Column("KATILIM").Length(50);
 			Map(x => x.AYKATILIM).Column("AYKATILIM").Length(50);
         }
     }
