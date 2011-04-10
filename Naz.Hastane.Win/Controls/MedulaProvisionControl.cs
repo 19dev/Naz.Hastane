@@ -1,24 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using Naz.Mernis.Utilities.WCF;
-using Naz.Mernis.Service;
-using Naz.Hastane.Medula.HastaKabulIslemleri;
-using Naz.Utilities.Classes;
-using Naz.Mernis.Utilities;
+using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Services;
+using Naz.Hastane.Medula.HastaKabulIslemleri;
 
 namespace Naz.Hastane.Win.Controls
 {
+    public class MedulaProvisionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        public MedulaProvisionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        public MedulaProvisionResult Result
+        {
+            get
+            {
+                base.RaiseExceptionIfNecessary();
+                return ((MedulaProvisionResult)(this.results[0]));
+            }
+        }
+    }
+
     public partial class MedulaProvisionControl : DevExpress.XtraEditors.XtraUserControl
     {
-        public delegate void MedulaHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e);
-        public event MedulaHastaKabulCompleted OnMedulaHastaKabulCompleted;
+        public delegate void MedulaProvisionControlCompleted(Object sender, MedulaProvisionCompletedEventArgs e);
+
+        public event MedulaProvisionControlCompleted OnMedulaHastaKabulCompleted;
+//        public event System.EventHandler<MedulaProvisionCompletedEventArgs> OnMedulaHastaKabulCompleted;
 
         private HastaKabulIslemleriClient hki;
 
@@ -90,9 +103,51 @@ namespace Naz.Hastane.Win.Controls
         void OnHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e)
         {
             IsWorking = false;
-            this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
-            if (OnMedulaHastaKabulCompleted != null)
-                OnMedulaHastaKabulCompleted(this, e);
+            MedulaProvisionResult mpr = new MedulaProvisionResult();
+            MedulaProvisionResult[] mprs = new MedulaProvisionResult[1];
+            mprs[0] = mpr;
+            try
+            {
+                this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
+                MedulaProvisionCompletedEventArgs mpcea = new MedulaProvisionCompletedEventArgs(mprs, e.Error, e.Cancelled, e.UserState);
+                if (e.Result.sonucKodu == "0000")
+                {
+                    mpr.Ad = e.Result.hastaBilgileri.ad;
+                    mpr.Soyad = e.Result.hastaBilgileri.soyad;
+                    mpr.Cinsiyet = e.Result.hastaBilgileri.cinsiyet;
+                    mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
+                    mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
+                    mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
+
+                    mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
+                    mpr.SonucKodu = e.Result.sonucKodu;
+                    mpr.SonucMesaji = e.Result.sonucMesaji;
+                    mpr.TakipNo = e.Result.takipNo;
+
+                    mpr.BranchCode = this.lueBranchCode.EditValue.ToString();
+                    mpr.RelatedFollowUpNo = this.teRelatedFollowUpNo.EditValue.ToString();
+                    mpr.FollowUpType = this.lueFollowUpType.EditValue.ToString();
+                    mpr.ProvisionType = this.lueProvisionType.EditValue.ToString();
+                    mpr.TreatmentType = this.lueTreatmentType.EditValue.ToString();
+                    mpr.TreatmentStyle = this.lueTreatmentStyle.EditValue.ToString();
+
+                    mpr.TransferorInstitution = lueTransferorInstitution.EditValue.ToString();
+                }
+                if (OnMedulaHastaKabulCompleted != null)
+                    OnMedulaHastaKabulCompleted(this, mpcea);
+            }
+            catch
+            {
+                MedulaProvisionCompletedEventArgs mpcea = new MedulaProvisionCompletedEventArgs(mprs, e.Error, e.Cancelled, e.UserState);
+                mpr.SonucKodu = "0000";
+                mpr.SonucMesaji = "Medula'dan Sonuç Alınamadı!";
+
+                if (OnMedulaHastaKabulCompleted != null)
+                    OnMedulaHastaKabulCompleted(this, mpcea);
+            }
+            finally
+            {
+            }
         }
 
 

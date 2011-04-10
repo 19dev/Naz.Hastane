@@ -138,7 +138,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual void AddPatientVisitDetail(PatientVisitDetail pvd)
         {
             pvd.PatientVisit = this;
-            this.PatientVisitDetails.Add(pvd);
+            this.PatientVisitDetails.Insert(PatientVisitDetails.Count, pvd);
         }
 
         private IList<PatientVisitRecord> _PatientVisitRecords = new List<PatientVisitRecord>();
@@ -152,7 +152,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual void AddPatientVisitRecord(PatientVisitRecord pvr)
         {
             pvr.PatientVisit = this;
-            this.PatientVisitRecords.Add(pvr);
+            this.PatientVisitRecords.Insert(0, pvr);
         }
 
         //public virtual MedulaDiabetReport MedulaDiabetReport { get; set; }

@@ -9,6 +9,7 @@ using NHibernate.Criterion;
 using NHibernate.Linq;
 using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
+using Naz.Hastane.Data.Entities.Medula;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -172,7 +173,7 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
-        public static void AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor, string provisionNo)
+        public static void AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor)
         {
             if (patient == null || doctor == null)
                 return;
@@ -181,7 +182,7 @@ namespace Naz.Hastane.Data.Services
             //{
                 float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
 
-                PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, provisionNo);
+                PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor);
 
                 PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
@@ -205,7 +206,7 @@ namespace Naz.Hastane.Data.Services
                 return (patient.InsuranceType == InsuranceTypeValues.Worker.GetDescription());
         }
 
-        public static PatientVisit AddNewPatientVisit(ISession asession, User user, Patient patient, Doctor doctor, string provisionNo)
+        public static PatientVisit AddNewPatientVisit(ISession asession, User user, Patient patient, Doctor doctor)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
@@ -223,7 +224,7 @@ namespace Naz.Hastane.Data.Services
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
                 pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
-                pv.ProvisionNo = provisionNo;
+                pv.ProvisionNo = "";
                 pv.USER_ID = user.USER_ID;
                 pv.SupportInsCompany = "";
                 pv.PSG = patient.InsuranceCompany.Name;
@@ -301,6 +302,51 @@ namespace Naz.Hastane.Data.Services
                 return pvd;
             }
 
+        }
+
+        public static void UpdatePatientRecordsFromMedula(ISession session, User user, Patient patient, MedulaProvisionResult mpr)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                patient.InsuranceType = mpr.SigortaliTuru;
+                patient.TransferorInstitution = mpr.TransferorInstitution;
+                session.Update(patient);
+                transaction.Commit();
+            }
+            UpdatePatientVisitWithMedulaProvision(session, user, patient.PatientVisits[0], mpr);
+            UpdatePatientVisitRecordWithMedulaProvision(session, user, patient.PatientVisits[0].PatientVisitRecords[0], mpr);
+        }
+
+        public static void UpdatePatientVisitWithMedulaProvision(ISession session, User user, PatientVisit pv, MedulaProvisionResult mpr)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                pv.TAKIPNO = mpr.TakipNo;
+                pv.HASTABASNO = mpr.HastaBasvuruNo;
+                pv.ILISKILITAKIPNO = mpr.RelatedFollowUpNo;
+                pv.TEDAVITURU = mpr.TreatmentStyle;
+                pv.TAKIPTURU = mpr.ProvisionType;
+
+                session.Update(pv);
+                transaction.Commit();
+            }
+        }
+        public static void UpdatePatientVisitRecordWithMedulaProvision(ISession session, User user, PatientVisitRecord pvr, MedulaProvisionResult mpr)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                pvr.BRANSKODU = mpr.BranchCode;
+                pvr.HASTABASNO = mpr.HastaBasvuruNo;
+                pvr.ILISKILITAKIPNO = mpr.RelatedFollowUpNo;
+                pvr.TEDAVITIPI = mpr.TreatmentType;
+                pvr.TAKIPTIPI = mpr.FollowUpType;
+                pvr.TEDAVITURU = mpr.TreatmentStyle;
+                pvr.SEVKTAKIPNO = mpr.TakipNo;
+                pvr.TAKIPTURU = mpr.ProvisionType;
+
+                session.Update(pvr);
+                transaction.Commit();
+            }
         }
 
         #region New Key Generators

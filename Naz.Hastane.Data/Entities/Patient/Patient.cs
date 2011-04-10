@@ -91,7 +91,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual void AddPatientVisit(PatientVisit pv)
         {
             pv.Patient = this;
-            this.PatientVisits.Add(pv);
+            this.PatientVisits.Insert(0, pv);
         }
     }
 }

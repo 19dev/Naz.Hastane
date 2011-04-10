@@ -868,7 +868,7 @@
             this.medulaSorgu.Name = "medulaSorgu";
             this.medulaSorgu.Size = new System.Drawing.Size(259, 317);
             this.medulaSorgu.TabIndex = 110;
-            this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaProvisionControl.MedulaHastaKabulCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
+            this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaProvisionControl.MedulaProvisionControlCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
             // 
             // sbDetayDok
             // 

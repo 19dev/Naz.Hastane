@@ -142,6 +142,7 @@
     <Compile Include="Entities\Medula\MEDRAPORDOKTOR.cs" />
     <Compile Include="Entities\Medula\MEDRAPORETKENMADDE.cs" />
     <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
+    <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
     <Compile Include="Entities\Product\Product.cs" />
     <Compile Include="Entities\Product\ProductCoefficient.cs" />

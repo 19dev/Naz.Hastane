@@ -4,6 +4,8 @@ using DevExpress.XtraEditors;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
+using Naz.Hastane.Data.Entities.Medula;
+using Naz.Hastane.Win.Controls;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -178,8 +180,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 _IsWaitingForPolyclinic = true;
                 _Doctor = doctor;
                 //CallMedulaProvision();
-                string provisionNo = "ABC1234";
-                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor, provisionNo);
+                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
             }
 
         }
@@ -202,17 +203,24 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.CallMedula(this.teTCID.Text);
         }
 
-        private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulCompletedEventArgs e)
+        private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
-            //MessageBox.Show(e.Result.sonucKodu + ": " + e.Result.sonucMesaji, "Medula Sorgu Sonucu");
-            if (_IsWaitingForPolyclinic)
-            {
-                _IsWaitingForPolyclinic = false;
-                if (e.Result.sonucKodu == "0000")
-                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor, "");
-            }
-        }
+            XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
+            
+            _IsWaitingForPolyclinic = false;
 
+            if (e.Result.SonucKodu == "0000")
+            {
+                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
+                PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, e.Result);
+            }
+            else
+            {
+                if (XtraMessageBox.Show("Medula'dan Cevap Alınamadı, Poliklinik Kaydı Oluşturmak İstiyor Musunuz?", "Medula Sorgu Sonucu",MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
+            }
+
+        }
 
     }
 }
