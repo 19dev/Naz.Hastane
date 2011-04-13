@@ -21,35 +21,24 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void QueryPatients()
         {
-            this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice();
-        }
-
-        private void QueryPatientVisits()
-        {
-            Patient p = (Patient)this.gvPatients.GetFocusedRow();
-            if (p != null)
-                this.gcPatientVisits.DataSource = PatientServices.GetPatientVisitsForInvoice(p);
-        }
-
-        private void QueryPatientVisitDetails()
-        {
-            PatientVisit pv = (PatientVisit)this.gvPatientVisits.GetFocusedRow();
-            if (pv != null)
-            {
-                this.gcPatientVisitDetails.DataSource = PatientServices.GetPatientVisitDetailsForInvoice(pv);
-            }
+            this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session);
         }
 
         private void gvPatients_Click(object sender, EventArgs e)
         {
-            QueryPatientVisits();
-            QueryPatientVisitDetails();
+            RefreshDetails();
         }
 
-        private void gvPatientVisits_Click(object sender, EventArgs e)
+        private void RefreshDetails()
         {
-            QueryPatientVisitDetails();
+            this.invoiceControl.QueryPatientVisits(Session, (Patient)this.gvPatients.GetFocusedRow());
+            this.invoiceControl.QueryPatientVisitDetails();
+            this.invoiceControl.QueryPatientAdvancePayments(Session, (Patient)this.gvPatients.GetFocusedRow());
         }
 
+        private void sbRefresh_Click(object sender, EventArgs e)
+        {
+            QueryPatients();
+        }
     }
 }

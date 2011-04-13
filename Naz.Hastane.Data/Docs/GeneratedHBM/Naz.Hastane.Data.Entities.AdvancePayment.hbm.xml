@@ -1,0 +1,63 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" lazy="true" mutable="true" name="Naz.Hastane.Data.Entities.AdvancePayment, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="AVANSLAR">
+    <id name="AV_ID" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AV_ID" />
+      <generator class="assigned" />
+    </id>
+    <property name="TARIH" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TARIH" not-null="true" />
+    </property>
+    <property name="TUTAR" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TUTAR" not-null="true" />
+    </property>
+    <property name="KULLANILAN" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KULLANILAN" not-null="true" />
+    </property>
+    <property name="IADEEDILEN" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IADEEDILEN" not-null="true" />
+    </property>
+    <property name="ODEMESEKLI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ODEMESEKLI" length="1" not-null="true" />
+    </property>
+    <property name="POSNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="POSNO" length="2" />
+    </property>
+    <property name="MAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MAKNO" length="7" not-null="true" />
+    </property>
+    <property name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID" length="20" not-null="true" />
+    </property>
+    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATE" not-null="true" />
+    </property>
+    <property name="USER_ID_UPDATE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="USER_ID_UPDATE" length="20" />
+    </property>
+    <property name="DATE_UPDATE" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_UPDATE" />
+    </property>
+    <property name="HESAPKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HESAPKODU" length="50" />
+    </property>
+    <property name="ALTHESAPKODU" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ALTHESAPKODU" length="50" />
+    </property>
+    <property name="TIPI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TIPI" length="50" />
+    </property>
+    <property name="AFATNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AFATNO" length="50" />
+    </property>
+    <property name="KALAN" type="System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KALAN" />
+    </property>
+    <property name="AMAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AMAKNO" length="50" />
+    </property>
+    <many-to-one class="Naz.Hastane.Data.Entities.PatientVisit, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PatientVisit">
+      <column name="KNR" />
+      <column name="SNR" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

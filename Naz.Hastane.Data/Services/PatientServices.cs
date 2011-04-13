@@ -218,8 +218,8 @@ namespace Naz.Hastane.Data.Services
                 pv.VisitNo = GetNewPatientVisitNo(session, patient);
                 pv.VisitDate = DateTime.Now.Date;
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
-                pv.Doctor = doctor.ID;
-                pv.Servis = doctor.Service.ID;
+                pv.Doctor = doctor.Code;
+                pv.Servis = doctor.Service.Code;
                 pv.QueueNo = doctor.QueueNo.ToString("f0");
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
@@ -409,95 +409,118 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
 
-        public static IList<Patient> GetPatientsForInvoice()
+        #region Invoice
+        public static IList<Patient> GetPatientsForInvoice(ISession session)
         {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                IList<Patient> result = session.QueryOver<Patient>()
-                    .JoinQueryOver<PatientVisit>(x => x.PatientVisits)
-                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
-                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
-                        .And(d => d.ADET != 0)
-                        .And(d => d.SATISF != 0)
-                        .And(d => d.TARIH >= new DateTime(2011, 3, 1))
-                    .List<Patient>().Distinct<Patient>().ToList<Patient>();
-                return result;
-            }
+            IList<Patient> result = session.QueryOver<Patient>()
+                .OrderBy(x => x.FirstName).Asc
+                .OrderBy(x => x.LastName).Desc
+                .JoinQueryOver<PatientVisit>(x => x.PatientVisits)
+                .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
+                    .Where(d => d.MAKNO == null && d.AMAKNO == null)
+                    .And(d => d.ADET != 0)
+                    .And(d => d.SATISF != 0)
+                    .And(d => d.TARIH >= new DateTime(2011, 3, 1))
+                .List<Patient>().Distinct<Patient>().ToList<Patient>();
+            return result;
         }
 
-        public static IList<object> GetPatientVisitsForInvoice()
+        public static IList<object> GetPatientVisitsForInvoice(ISession session)
         {
             Patient patient = null;
             PatientVisit pv = null;
             PatientVisitDetail pvd = null;
 
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                var result = session.QueryOver<Patient>(() => patient)
-                    .JoinQueryOver<PatientVisit>(x => x.PatientVisits, () => pv)
-                    .JoinQueryOver<PatientVisitDetail>(() => pv.PatientVisitDetails, () => pvd)
-                        .Where(d => d.MAKNO == null)
-                        .And(d => d.AMAKNO == null)
-                        .And(d => d.ADET != 0)
-                        .And(d => d.SATISF != 0)
-                        .And(d => d.TARIH >= new DateTime(2011, 3, 1))
-                    //.Select(Projections.ProjectionList()
-                    //.Add(Projections.Property(() => patient.FirstName), "First Name")
-                    //.Add(Projections.Property(() => patient.LastName), "LastName")
-                    //.Add(Projections.Property(() => pv.VisitNo), "VisitNo")
-                    //.Add(Projections.Property(() => pv.VisitDate), "VisitDate")
-                    //.Add(Projections.Property(() => pv.ExitDate), "ExitDate")
-                    //.Add(Projections.Property(() => pv.PatientTotal), "PatientTotal"))
-                    .SelectList(list => list
-                        .Select(() => patient.FirstName)
-                        .Select(() => patient.LastName)
-                        .Select(() => pv.VisitNo)
-                        .Select(() => pv.VisitDate)
-                        .Select(() => pv.ExitDate)
-                        .Select(() => pv.PatientTotal))
-                    .List<object[]>()
-                    .Select(properties => new
-                    {
-                        FirstName = (string)properties[0],
-                        LastName = (string)properties[1],
-                        VisitNo = (string)properties[2],
-                        VisitDate = (DateTime?)properties[3],
-                        ExitDate = (DateTime?)properties[4],
-                        PatientTotal = (double)properties[5]
-                    })
-                    .Distinct()
-                    .ToList<object>();
-                return result;
-            }
-        }
-        public static IList<PatientVisit> GetPatientVisitsForInvoice(Patient patient)
-        {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                IList<PatientVisit> result = session.QueryOver<PatientVisit>()
-                    .Where(x => x.Patient == patient)
-                    .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
-                        .Where(d => d.MAKNO == null && d.AMAKNO == null)
-                        .And(d => d.ADET != 0)
-                        .And(d => d.SATISF != 0)
-                    .List().Distinct().ToList();
-                return result;
-            }
-        }
-
-        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(PatientVisit pv)
-        {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                IList<PatientVisitDetail> result = session.QueryOver<PatientVisitDetail>()
-                    .Where(d => d.PatientVisit == pv && d.MAKNO == null && d.AMAKNO == null)
+            var result = session.QueryOver<Patient>(() => patient)
+                .JoinQueryOver<PatientVisit>(x => x.PatientVisits, () => pv)
+                .JoinQueryOver<PatientVisitDetail>(() => pv.PatientVisitDetails, () => pvd)
+                    .Where(d => d.MAKNO == null)
+                    .And(d => d.AMAKNO == null)
                     .And(d => d.ADET != 0)
                     .And(d => d.SATISF != 0)
-                    .List().Distinct().ToList();
-                return result;
-            }
+                    .And(d => d.TARIH >= new DateTime(2011, 3, 1))
+                //.Select(Projections.ProjectionList()
+                //.Add(Projections.Property(() => patient.FirstName), "First Name")
+                //.Add(Projections.Property(() => patient.LastName), "LastName")
+                //.Add(Projections.Property(() => pv.VisitNo), "VisitNo")
+                //.Add(Projections.Property(() => pv.VisitDate), "VisitDate")
+                //.Add(Projections.Property(() => pv.ExitDate), "ExitDate")
+                //.Add(Projections.Property(() => pv.PatientTotal), "PatientTotal"))
+                .SelectList(list => list
+                    .Select(() => patient.FirstName)
+                    .Select(() => patient.LastName)
+                    .Select(() => pv.VisitNo)
+                    .Select(() => pv.VisitDate)
+                    .Select(() => pv.ExitDate)
+                    .Select(() => pv.PatientTotal))
+                .List<object[]>()
+                .Select(properties => new
+                {
+                    FirstName = (string)properties[0],
+                    LastName = (string)properties[1],
+                    VisitNo = (string)properties[2],
+                    VisitDate = (DateTime?)properties[3],
+                    ExitDate = (DateTime?)properties[4],
+                    PatientTotal = (double)properties[5]
+                })
+                .Distinct()
+                .ToList<object>();
+            return result;
+        }
+        public static IList<PatientVisit> GetPatientVisitsForInvoice(ISession session, Patient patient)
+        {
+            IList<PatientVisit> result = (from pv in session.Query<PatientVisit>()
+                                    join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                                    where pv.Patient == patient 
+                                    && pvd.MAKNO == null && pvd.AMAKNO == null
+                                    && pvd.ADET != 0 && pvd.SATISF != 0
+                                    orderby pv.VisitNo descending
+                                    select pv
+                                    )
+                                    .Distinct<PatientVisit>()
+                                    .ToList<PatientVisit>();
+            return result;
         }
 
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(ISession session, IList<PatientVisit> pvs)
+        {
+            if (pvs.Count == 0)
+                return new List<PatientVisitDetail>();
+
+            IList<string> pvIDs = (from pv in pvs
+                                   select pv.VisitNo)
+                                   .ToList<string>();
+
+
+            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                                where 
+                                                    pvd.PatientVisit.Patient == pvs[0].Patient
+                                                    && pvIDs.Contains(pvd.PatientVisit.VisitNo) 
+                                                    && pvd.MAKNO == null && pvd.AMAKNO == null
+                                                    && pvd.ADET != 0 && pvd.SATISF != 0
+                                                //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
+                                                select pvd
+                                                )
+                                                .Distinct<PatientVisitDetail>()
+                                                .ToList<PatientVisitDetail>();
+            return result;
+        }
+
+        public static IList<object> GetPatientAdvancePaymentsForInvoice(ISession session, Patient patient)
+        {
+            var result = (from ap in session.Query<AdvancePayment>()
+                          where ap.PatientVisit.Patient == patient
+                              && ap.TUTAR - (ap.KULLANILAN + ap.IADEEDILEN) > 0
+                          orderby ap.TARIH ascending
+                          select ap
+                )
+                .ToList<object>();
+
+            return result;
+        }
+
+
+        #endregion
     }
 
 }

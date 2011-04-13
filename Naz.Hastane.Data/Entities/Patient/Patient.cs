@@ -93,5 +93,6 @@ namespace Naz.Hastane.Data.Entities
             pv.Patient = this;
             this.PatientVisits.Insert(0, pv);
         }
+
     }
 }

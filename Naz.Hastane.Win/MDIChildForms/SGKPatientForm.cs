@@ -47,11 +47,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void LoadLookUps()
         {
-            this.lueStatus.Properties.DataSource = LookUpServices.PatientRelations;
-            this.lueInsuranceType.Properties.DataSource = LookUpServices.InsuranceTypes;
-            this.lueNationality.Properties.DataSource = LookUpServices.Nationalities;
-            this.lueHomeCity.Properties.DataSource = LookUpServices.Cities;
-            this.lueJobCity.Properties.DataSource = LookUpServices.Cities;
+            UIUtilities.BindLookUpEdit(this.lueStatus, LookUpServices.PatientRelations);
+            UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
+            UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
+            UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities);
+            UIUtilities.BindLookUpEdit(this.lueJobCity, LookUpServices.Cities);
         }
 
         private void InitBindings()

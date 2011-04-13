@@ -4,17 +4,26 @@
       <column name="DETAY_ID" />
       <generator class="identity" />
     </id>
-    <property name="AMBU" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="AMBU" length="1" />
-    </property>
     <property name="CARI_ID" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="CARI_ID" length="4" />
     </property>
-    <property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="CODE" length="15" />
+    <property name="KNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="KNR" length="5" />
     </property>
-    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="DATE_CREATE" length="8" />
+    <property name="SIRA" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="SIRA" length="4" />
+    </property>
+    <property name="HKNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HKNR" length="6" />
+    </property>
+    <property name="HSNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSNR" length="3" />
+    </property>
+    <property name="HSIRANO" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HSIRANO" length="8" />
+    </property>
+    <property name="HAREKETTIPI" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="HAREKETTIPI" length="1" />
     </property>
     <property name="FATNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="FATNO" length="15" />
@@ -28,26 +37,23 @@
     <property name="FATURATIPI" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="FATURATIPI" length="1" />
     </property>
+    <property name="AMBU" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AMBU" length="1" />
+    </property>
+    <property name="TANIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TANIM" length="2" />
+    </property>
     <property name="GRUP" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="GRUP" length="3" />
     </property>
-    <property name="HAREKETTIPI" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="HAREKETTIPI" length="1" />
+    <property name="CODE" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="CODE" length="15" />
     </property>
-    <property name="HKNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="HKNR" length="6" />
-    </property>
-    <property name="HSIRANO" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="HSIRANO" length="8" />
-    </property>
-    <property name="HSNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="HSNR" length="3" />
+    <property name="PAY" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="PAY" length="8" />
     </property>
     <property name="ISODENDI" type="System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="ISODENDI" length="1" />
-    </property>
-    <property name="KNR" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="KNR" length="5" />
     </property>
     <property name="MAKBUZNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="MAKBUZNO" length="10" />
@@ -55,23 +61,17 @@
     <property name="MAKNO" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="MAKNO" length="10" />
     </property>
-    <property name="PAY" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="PAY" length="8" />
-    </property>
     <property name="PAY_YEDEK" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="PAY_YEDEK" length="8" />
-    </property>
-    <property name="SIRA" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="SIRA" length="4" />
-    </property>
-    <property name="TANIM" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="TANIM" length="2" />
     </property>
     <property name="TOPLAM" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="TOPLAM" length="8" />
     </property>
     <property name="USER_ID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="USER_ID" length="20" />
+    </property>
+    <property name="DATE_CREATE" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DATE_CREATE" length="8" />
     </property>
   </class>
 </hibernate-mapping>

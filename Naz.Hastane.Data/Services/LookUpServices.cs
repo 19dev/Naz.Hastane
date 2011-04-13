@@ -82,6 +82,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<PatientRelation> PatientRelations
         { get { return LookUpTable(ref _PatientRelations); } }
 
+        private static IList<PaymentType> _PaymentTypes;
+        public static IList<PaymentType> PaymentTypes
+        { get { return LookUpTable(ref _PaymentTypes); } }
+
         private static IList<VAT> _VATs;
         public static IList<VAT> VATs
         { get { return LookUpTable(ref _VATs); } }
@@ -306,7 +310,7 @@ namespace Naz.Hastane.Data.Services
                     {
                         _SGKDoctors = (from doctor in session.Query<Doctor>()
                                        where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic && doctor.Service.SGKAutoExaminations.Count > 0
-                                       join service in session.Query<Service>() on doctor.Service.ID equals service.ID
+                                       join service in session.Query<Service>() on doctor.Service.Code equals service.Code
                                        join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
                                        join product in session.Query<Product>() on sae.Product equals product
                                        orderby doctor.Value
@@ -374,7 +378,7 @@ namespace Naz.Hastane.Data.Services
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 return (from sae in session.Query<SGKAutoExamination>()
-                        where sae.Service.ID == servisCode
+                        where sae.Service.Code == servisCode
                         select sae
                         ).ToList<SGKAutoExamination>();
             }
@@ -403,7 +407,7 @@ namespace Naz.Hastane.Data.Services
 
                 /// TODO Add control for no element
                 SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
-                                    where systemSetting.ID0 == "00" && systemSetting.ID == key
+                                    where systemSetting.ID0 == "00" && systemSetting.Code == key
                                     select systemSetting
                                     ).SingleOrDefault<SystemSetting>();
 
@@ -443,7 +447,7 @@ namespace Naz.Hastane.Data.Services
             {
                 // Get No QueueNo for the Doctor, If new date reset the number
                 SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
-                                    where systemSetting.ID0 == "00" && systemSetting.ID == "TARİH"
+                                    where systemSetting.ID0 == "00" && systemSetting.Code == "TARİH"
                                     select systemSetting
                                     ).SingleOrDefault<SystemSetting>();
 

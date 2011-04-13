@@ -75,6 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Accounting\AdvancePayment.cs" />
+    <Compile Include="Entities\Accounting\AdvancePaymentRebate.cs" />
+    <Compile Include="Entities\Accounting\AdvancePaymentUsed.cs" />
     <Compile Include="Entities\Accounting\CashDesk.cs" />
     <Compile Include="Entities\Doctor\DoctorAccount.cs" />
     <Compile Include="Entities\Doctor\DoctorAccountDetail.cs" />
@@ -82,12 +85,14 @@
     <Compile Include="Entities\Doctor\DoctorPool.cs" />
     <Compile Include="Entities\Doctor\DoctorProcess.cs" />
     <Compile Include="Entities\Doctor\DoctorVoucherDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorProductPercent.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyContribution.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDetail.cs" />
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
     <Compile Include="Entities\Accounting\Invoice.cs" />
     <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
+    <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
@@ -172,6 +177,9 @@
     <Compile Include="Entities\SGKAutoExamination.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentUsedMap.cs" />
     <Compile Include="Mappings\Accounting\CashDeskMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountDetailMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountMap.cs" />
@@ -179,6 +187,7 @@
     <Compile Include="Mappings\Doctor\DoctorPoolMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorProcessMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorVoucherDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorProductPercentMap.cs" />
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyContributionMap.cs" />
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDetailMap.cs" />
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDiscountMap.cs" />
@@ -186,6 +195,7 @@
     <Compile Include="Mappings\Accounting\InvoiceMap.cs" />
     <Compile Include="Mappings\Accounting\InvoiceTempMap.cs" />
     <Compile Include="Mappings\LookUp\General\BloodTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\General\PaymentTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\YesNoMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\DoctorTypeMap.cs" />
     <Compile Include="Mappings\LookUp\MedulaReport\EditingTypeMap.cs" />

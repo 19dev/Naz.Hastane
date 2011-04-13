@@ -155,6 +155,19 @@ namespace Naz.Hastane.Data.Entities
             this.PatientVisitRecords.Insert(0, pvr);
         }
 
+        private IList<AdvancePayment> _AdvancePayments = new List<AdvancePayment>();
+
+        public virtual IList<AdvancePayment> AdvancePayments
+        {
+            get { return _AdvancePayments; }
+            set { _AdvancePayments = value; }
+        }
+
+        public virtual void AddAdvancePayment(AdvancePayment pv)
+        {
+            pv.PatientVisit = this;
+            this.AdvancePayments.Insert(0, pv);
+        }
         //public virtual MedulaDiabetReport MedulaDiabetReport { get; set; }
 
         //protected override void OnSaving()

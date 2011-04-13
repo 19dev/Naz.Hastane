@@ -105,7 +105,6 @@
             // 
             // teUserPassword
             // 
-            this.teUserPassword.EnterMoveNextControl = true;
             this.teUserPassword.Location = new System.Drawing.Point(85, 36);
             this.teUserPassword.Name = "teUserPassword";
             this.teUserPassword.Properties.PasswordChar = '*';
@@ -229,6 +228,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.sbOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 172);
