@@ -78,7 +78,7 @@
     <Compile Include="Entities\Accounting\AdvancePayment.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentRebate.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentUsed.cs" />
-    <Compile Include="Entities\Accounting\CashDesk.cs" />
+    <Compile Include="Entities\Accounting\CashDeskRecord.cs" />
     <Compile Include="Entities\Doctor\DoctorAccount.cs" />
     <Compile Include="Entities\Doctor\DoctorAccountDetail.cs" />
     <Compile Include="Entities\Doctor\DoctorInvoiceDetail.cs" />
@@ -181,7 +181,7 @@
     <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentUsedMap.cs" />
-    <Compile Include="Mappings\Accounting\CashDeskMap.cs" />
+    <Compile Include="Mappings\Accounting\CashDeskRecordMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountDetailMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorAccountMap.cs" />
     <Compile Include="Mappings\Doctor\DoctorInvoiceDetailMap.cs" />

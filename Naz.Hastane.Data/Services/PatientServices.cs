@@ -10,6 +10,7 @@ using NHibernate.Linq;
 using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.Medula;
+using Naz.Hastane.Data.Entities.Accounting;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -540,6 +541,10 @@ namespace Naz.Hastane.Data.Services
             {
                 UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
 
+                InsertNewAdvancePaymentForInvoice(session, transaction, user, patient,
+                    pvds[0].PatientVisit, paymentType, POSType, cashPayment,
+                    "", "", "");
+
                 transaction.Commit();
             }
         }
@@ -567,8 +572,9 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void InsertNewAdvancePaymentForInvoice(ISession session, ITransaction transaction, User user, PatientVisit pv,
-            string paymentType, string POSType, double cashPayment, string makNo)
+        public static void InsertNewAdvancePaymentForInvoice(ISession session, ITransaction transaction, User user, 
+            Patient patient, PatientVisit pv,
+            string paymentType, string POSType, double cashPayment, string makNo, string tellerInvoiceNo, string invoiceNo)
         {
             AdvancePayment ap = new AdvancePayment();
             ap.AV_ID = Convert.ToDouble(LookUpServices.GetNewAdvancePaymentNo());
@@ -596,6 +602,25 @@ namespace Naz.Hastane.Data.Services
 
             session.Save(apu);
 
+            CashDeskRecord cdr = new CashDeskRecord();
+            cdr.MAKNO = makNo;
+            cdr.KNR = patient.PatientNo;
+            cdr.SNR = pv.VisitNo;
+            cdr.TARIH = DateTime.Today;
+            cdr.MAKBUZNO = "F-" + invoiceNo;
+            cdr.MAKBUZTIPI = "A";
+            cdr.ODEMESEKLI = paymentType[0];
+            cdr.POSNO = POSType;
+            cdr.TUTAR = cashPayment;
+            cdr.BORCALACAK = 'B';
+            cdr.FATURANO = invoiceNo;
+            cdr.VEZNE = user.VEZNE;
+            cdr.HESAPKODU = null;
+            cdr.ALTHESAPKODU = null;
+            cdr.USER_ID = user.USER_ID;
+            cdr.DATE_CREATE = DateTime.Today;
+
+            session.Save(cdr);
 
         }
 

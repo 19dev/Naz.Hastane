@@ -4,13 +4,17 @@ using FluentNHibernate.Mapping;
 
 namespace Naz.Hastane.Data.Mappings.Accounting
 {
-    public class CashDeskMap : ClassMap<CashDesk>
+    public class CashDeskRecordMap : ClassMap<CashDeskRecord>
     {
-        public CashDeskMap()
+        public CashDeskRecordMap()
         {
             Table("KASA");
 
             Id(x => x.MAKNO).Column("MAKNO").Length(7);
+
+            //References(x => x.PatientVisit).Columns("KNR", "SNR");
+            Map(x => x.KNR).Column("KNR").Length(6); //1
+            Map(x => x.SNR).Column("SNR").Length(3); //1
 
             Map(x => x.ACIKLAMA).Column("ACIKLAMA").Length(150); //1
             Map(x => x.ALTHESAPKODU).Column("ALTHESAPKODU").Length(50); //1
@@ -29,7 +33,6 @@ namespace Naz.Hastane.Data.Mappings.Accounting
             Map(x => x.HNEREYEODENDI).Column("HNEREYEODENDI").Length(150); //1
             Map(x => x.ISIPTAL).Column("ISIPTAL").Length(1); //1
             Map(x => x.KATILIM).Column("KATILIM").Length(1); //1
-            Map(x => x.KNR).Column("KNR").Length(6); //1
             Map(x => x.MAKBUZGRUBU).Column("MAKBUZGRUBU").Length(2); //1
             Map(x => x.MAKBUZNO).Column("MAKBUZNO").Length(20); //0
             Map(x => x.MAKBUZTIPI).Column("MAKBUZTIPI").Length(1); //0
@@ -37,7 +40,6 @@ namespace Naz.Hastane.Data.Mappings.Accounting
             Map(x => x.PCARIKOD).Column("PCARIKOD").Length(10); //1
             Map(x => x.POSNO).Column("POSNO").Length(2); //1
             Map(x => x.SERVIS).Column("SERVIS").Length(2); //1
-            Map(x => x.SNR).Column("SNR").Length(3); //1
             Map(x => x.TARIH).Column("TARIH").Length(8); //0
             Map(x => x.TIPTAL).Column("TIPTAL").Length(1); //1
             Map(x => x.TUTAR).Column("TUTAR").Length(8); //0
