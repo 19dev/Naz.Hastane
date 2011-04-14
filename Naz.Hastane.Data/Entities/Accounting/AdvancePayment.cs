@@ -30,6 +30,14 @@ namespace Naz.Hastane.Data.Entities {
         public virtual System.Nullable<double> KALAN { get; set; }
         public virtual string AMAKNO { get; set; }
 
+        public virtual double RemainingAmount
+        {
+            get
+            {
+                return TUTAR - (KULLANILAN + IADEEDILEN);
+            }
+        }
+
         private IList<AdvancePaymentRebate> _AdvancePaymentRebates = new List<AdvancePaymentRebate>();
 
         public virtual IList<AdvancePaymentRebate> AdvancePaymentRebates

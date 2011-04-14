@@ -412,16 +412,17 @@ namespace Naz.Hastane.Data.Services
         #region Invoice
         public static IList<Patient> GetPatientsForInvoice(ISession session)
         {
-            IList<Patient> result = session.QueryOver<Patient>()
-                .OrderBy(x => x.FirstName).Asc
-                .OrderBy(x => x.LastName).Desc
-                .JoinQueryOver<PatientVisit>(x => x.PatientVisits)
-                .JoinQueryOver<PatientVisitDetail>(x => x.PatientVisitDetails)
-                    .Where(d => d.MAKNO == null && d.AMAKNO == null)
-                    .And(d => d.ADET != 0)
-                    .And(d => d.SATISF != 0)
-                    .And(d => d.TARIH >= new DateTime(2011, 3, 1))
-                .List<Patient>().Distinct<Patient>().ToList<Patient>();
+            IList<Patient> result = (from p in session.Query<Patient>()
+                            join pv in session.Query<PatientVisit>() on p equals pv.Patient
+                            join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                            where  pvd.MAKNO == null && pvd.AMAKNO == null
+                            && pvd.ADET != 0
+                            && pvd.SATISF != 0
+                            && pvd.TARIH >= new DateTime(2011, 3, 1)
+                            orderby p.FirstName ascending, p.LastName ascending
+                            select p
+                            )
+                .Distinct<Patient>().ToList<Patient>();
             return result;
         }
 
@@ -469,56 +470,134 @@ namespace Naz.Hastane.Data.Services
         }
         public static IList<PatientVisit> GetPatientVisitsForInvoice(ISession session, Patient patient)
         {
-            IList<PatientVisit> result = (from pv in session.Query<PatientVisit>()
-                                    join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
-                                    where pv.Patient == patient 
-                                    && pvd.MAKNO == null && pvd.AMAKNO == null
-                                    && pvd.ADET != 0 && pvd.SATISF != 0
-                                    orderby pv.VisitNo descending
-                                    select pv
-                                    )
-                                    .Distinct<PatientVisit>()
-                                    .ToList<PatientVisit>();
+            IList<PatientVisit> result;
+            if (patient == null)
+                result = new List<PatientVisit>();
+            else
+                result = (from pv in session.Query<PatientVisit>()
+                    join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                    where pv.Patient == patient 
+                    && pvd.MAKNO == null && pvd.AMAKNO == null
+                    && pvd.ADET != 0 && pvd.SATISF != 0
+                    orderby pv.VisitNo descending
+                    select pv
+                    )
+                    .Distinct<PatientVisit>()
+                    .ToList<PatientVisit>();
             return result;
         }
 
-        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(ISession session, IList<PatientVisit> pvs)
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(ISession Session, IList<PatientVisit> pvs)
         {
-            if (pvs.Count == 0)
-                return new List<PatientVisitDetail>();
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                if (pvs.Count == 0)
+                    return new List<PatientVisitDetail>();
 
-            IList<string> pvIDs = (from pv in pvs
-                                   select pv.VisitNo)
-                                   .ToList<string>();
+                IList<string> pvIDs = (from pv in pvs
+                                       select pv.VisitNo)
+                                       .ToList<string>();
 
 
-            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
-                                                where 
-                                                    pvd.PatientVisit.Patient == pvs[0].Patient
-                                                    && pvIDs.Contains(pvd.PatientVisit.VisitNo) 
-                                                    && pvd.MAKNO == null && pvd.AMAKNO == null
-                                                    && pvd.ADET != 0 && pvd.SATISF != 0
-                                                //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
-                                                select pvd
-                                                )
-                                                .Distinct<PatientVisitDetail>()
-                                                .ToList<PatientVisitDetail>();
-            return result;
+                IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                                    where
+                                                        pvd.PatientVisit.Patient == pvs[0].Patient
+                                                        && pvIDs.Contains(pvd.PatientVisit.VisitNo)
+                                                        && pvd.MAKNO == null && pvd.AMAKNO == null
+                                                        && pvd.ADET != 0 && pvd.SATISF != 0
+                                                    join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
+                                                    //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
+                                                    select pvd
+                                                    )
+                                                    .Distinct<PatientVisitDetail>()
+                                                    .ToList<PatientVisitDetail>();
+                return result;
+            }
         }
 
-        public static IList<object> GetPatientAdvancePaymentsForInvoice(ISession session, Patient patient)
+        public static IList<AdvancePayment> GetPatientAdvancePaymentsForInvoice(ISession session, Patient patient)
         {
-            var result = (from ap in session.Query<AdvancePayment>()
+            IList<AdvancePayment> result;
+            if (patient == null)
+                result = new List<AdvancePayment>();
+            else
+                result = (from ap in session.Query<AdvancePayment>()
                           where ap.PatientVisit.Patient == patient
                               && ap.TUTAR - (ap.KULLANILAN + ap.IADEEDILEN) > 0
                           orderby ap.TARIH ascending
                           select ap
                 )
-                .ToList<object>();
+                .ToList<AdvancePayment>();
 
             return result;
         }
 
+        public static void AddNewInvoice(ISession Session, User user, Patient patient, IList<PatientVisitDetail> pvds, 
+            string paymentType, string POSType, double cashPayment, double advancePaymentUsed)
+        {
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
+
+                transaction.Commit();
+            }
+        }
+
+        public static void UpdateAdvancePaymentRecords(ISession session, ITransaction transaction, User user, Patient patient, double advancePaymentUsed)
+        {
+            double remainingAdvancePayment = advancePaymentUsed;
+
+            IList<AdvancePayment> aps = GetPatientAdvancePaymentsForInvoice(session, patient);
+            for (int i = 0; i < aps.Count && remainingAdvancePayment > 0; i++)
+            {
+                AdvancePayment ap = aps[i];
+                double usedPayment = Math.Min(remainingAdvancePayment, ap.RemainingAmount);
+                ap.KULLANILAN += usedPayment;
+                remainingAdvancePayment -= usedPayment;
+                session.Update(ap);
+
+                AdvancePaymentUsed apu = new AdvancePaymentUsed();
+                apu.AdvancePayment = ap;
+                apu.TARIH = DateTime.Today;
+                apu.TUTAR = usedPayment;
+                apu.USER_ID = user.USER_ID;
+                apu.DATE_CREATE = DateTime.Today;
+                session.Save(apu);
+            }
+        }
+
+        public static void InsertNewAdvancePaymentForInvoice(ISession session, ITransaction transaction, User user, PatientVisit pv,
+            string paymentType, string POSType, double cashPayment, string makNo)
+        {
+            AdvancePayment ap = new AdvancePayment();
+            ap.AV_ID = Convert.ToDouble(LookUpServices.GetNewAdvancePaymentNo());
+            ap.PatientVisit = pv;
+            ap.TARIH = DateTime.Today;
+            ap.TUTAR = cashPayment;
+            ap.KULLANILAN = cashPayment;
+            ap.ODEMESEKLI = paymentType;
+            ap.POSNO = POSType;
+            ap.MAKNO = makNo;
+            ap.HESAPKODU = null;
+            ap.ALTHESAPKODU = null;
+            ap.USER_ID = user.USER_ID;
+            ap.DATE_CREATE = DateTime.Today;
+
+            session.Save(ap);
+
+            AdvancePaymentUsed apu = new AdvancePaymentUsed();
+            apu.AdvancePayment = ap;
+            apu.TARIH = DateTime.Today;
+            apu.FATURANO = "";
+            apu.TUTAR = cashPayment;
+            apu.USER_ID = user.USER_ID;
+            apu.DATE_CREATE = DateTime.Today;
+
+            session.Save(apu);
+
+
+        }
 
         #endregion
     }

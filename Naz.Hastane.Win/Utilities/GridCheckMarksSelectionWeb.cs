@@ -16,6 +16,9 @@ namespace Naz.Hastane.Win.Utilities
 
     public class GridCheckMarksSelectionWeb 
     {
+        public event System.EventHandler<EventArgs> OnSelectionChanged;
+        public bool WillRaiseSelectionEvent { get; set; }
+
         protected GridView _view;
         protected ArrayList selection;
         GridColumn column;
@@ -24,9 +27,16 @@ namespace Naz.Hastane.Win.Utilities
 
         public ArrayList Selection { get { return selection; } }
 
+        private void RaiseSelectionChanged()
+        {
+            if (WillRaiseSelectionEvent && OnSelectionChanged != null)
+                OnSelectionChanged(this, new EventArgs());
+        }
+
         public GridCheckMarksSelectionWeb()           
         {
             selection = new ArrayList();
+            WillRaiseSelectionEvent = true;
         }
 
         public GridCheckMarksSelectionWeb(GridView view) : this() 
@@ -54,6 +64,7 @@ namespace Naz.Hastane.Win.Utilities
         public void ClearSelection() {
             selection.Clear();
             Invalidate();
+            RaiseSelectionChanged();
         }
         public void SelectAll() {
             selection.Clear();
@@ -65,6 +76,7 @@ namespace Naz.Hastane.Win.Utilities
             for (int i = 0; i < _view.DataRowCount; i++)
                 selection.Add(_view.GetRow(i));
             Invalidate();
+            RaiseSelectionChanged();
         }
         public void SelectGroup(int rowHandle, bool select) {
             if (IsGroupRowSelected(rowHandle) && select) return;
@@ -76,6 +88,7 @@ namespace Naz.Hastane.Win.Utilities
                     SelectRow(childRowHandle, select, false);
             }
             Invalidate();
+            RaiseSelectionChanged();
         }
         public void SelectRow(int rowHandle, bool select) {
             SelectRow(rowHandle, select, true);
@@ -193,6 +206,7 @@ namespace Naz.Hastane.Win.Utilities
             if (invalidate) {
                Invalidate();
             }
+            RaiseSelectionChanged();
         }
         void view_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e) {
             if (e.Column == CheckMarkColumn) {

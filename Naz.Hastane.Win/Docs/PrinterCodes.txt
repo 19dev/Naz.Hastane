@@ -22,3 +22,15 @@
 //                    break;
 //                }
 //        }
+
+
+        //private void gvAdvancePayments_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        //{
+        //    if (e.Column.FieldName == "Total" && e.IsGetData)
+        //    {
+        //        AdvancePayment ap = (AdvancePayment)(sender as ColumnView).GetRow(e.ListSourceRowIndex);
+        //        if (ap != null)
+        //            e.Value = ap.TUTAR - (ap.KULLANILAN + ap.IADEEDILEN);
+        //    }
+        //}
+

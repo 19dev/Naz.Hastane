@@ -19,6 +19,8 @@ namespace Naz.Hastane.Data.Services
     public static class LookUpServices
     {
         public const string SGKCode = "SGK";
+        public const string VATDefaultValue = "N";
+        public const string PaymentTypeDefaultValue = "0";
 
         public static T GetByID<T>(string aID)
         {
@@ -240,6 +242,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<FunctionGroupType> FunctionGroupTypes
         { get { return LookUpTable(ref _FunctionGroupTypes); } }
 
+        private static IList<POS> _POSs;
+        public static IList<POS> POSs
+        { get { return LookUpTable(ref _POSs); } }
+
         private static IList<PriceList> _PriceLists;
         public static IList<PriceList> PriceLists
         { get { return LookUpTable(ref _PriceLists); } }
@@ -397,7 +403,7 @@ namespace Naz.Hastane.Data.Services
         }
 
         #region ID Generators
-        public static string GetNewSystemSettingNo(string key)
+        public static string GetNewSystemSettingNo(string key, bool updateDB = true)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
@@ -425,15 +431,18 @@ namespace Naz.Hastane.Data.Services
                 }
                 serialNo += 1;
                 ss.Value = serialID + serialNo.ToString();
-                try
+                if (updateDB)
                 {
-                    session.Update(ss);
-                    transaction.Commit();
-                }
-                catch 
-                {
-                    transaction.Rollback();
-                    throw;
+                    try
+                    {
+                        session.Update(ss);
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
                 }
 
                 return ss.Value;
@@ -466,25 +475,25 @@ namespace Naz.Hastane.Data.Services
             return doctor.QueueNo;
         }
 
-        public static string GetNewInvoiceNo()
+        public static string GetNewInvoiceNo(bool updateDB = true)
         {
-            return GetNewSystemSettingNo("FATNO");
+            return GetNewSystemSettingNo("FATNO", updateDB);
         }
-        public static string GetNewVoucherNo()
+        public static string GetNewVoucherNo(bool updateDB = true)
         {
-            return GetNewSystemSettingNo("MAKNO");
+            return GetNewSystemSettingNo("MAKNO", updateDB);
         }
-        public static string GetNewAdvancePaymentNo()
+        public static string GetNewAdvancePaymentNo(bool updateDB = true)
         {
-            return GetNewSystemSettingNo("AVANS_ID");
+            return GetNewSystemSettingNo("AVANS_ID", updateDB);
         }
-        public static string GetNewTellerInvoiceNo(User user)
+        public static string GetNewTellerInvoiceNo(User user, bool updateDB = true)
         {
-            return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE);
+            return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE, updateDB);
         }
-        public static string GetNewTellerVoucherNo(User user)
+        public static string GetNewTellerVoucherNo(User user, bool updateDB = true)
         {
-            return GetNewSystemSettingNo("MAKNUM" + user.VEZNE);
+            return GetNewSystemSettingNo("MAKNUM" + user.VEZNE, updateDB);
         }
 
         #endregion

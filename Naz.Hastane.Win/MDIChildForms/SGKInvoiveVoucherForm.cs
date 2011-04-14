@@ -24,11 +24,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session);
         }
 
-        private void gvPatients_Click(object sender, EventArgs e)
-        {
-            RefreshDetails();
-        }
-
         private void RefreshDetails()
         {
             this.invoiceControl.QueryPatientVisits(Session, (Patient)this.gvPatients.GetFocusedRow());
@@ -39,6 +34,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbRefresh_Click(object sender, EventArgs e)
         {
             QueryPatients();
+        }
+
+        private void gvPatients_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            RefreshDetails();
         }
     }
 }

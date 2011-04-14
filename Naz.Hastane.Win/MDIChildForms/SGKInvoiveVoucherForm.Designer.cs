@@ -71,16 +71,16 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1672, -141, 387, 543);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1047, 710);
+            this.layoutControl1.Size = new System.Drawing.Size(1071, 721);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // invoiceControl
             // 
-            this.invoiceControl.Location = new System.Drawing.Point(323, 10);
+            this.invoiceControl.Location = new System.Drawing.Point(330, 10);
             this.invoiceControl.Margin = new System.Windows.Forms.Padding(0);
             this.invoiceControl.Name = "invoiceControl";
-            this.invoiceControl.Size = new System.Drawing.Size(714, 664);
+            this.invoiceControl.Size = new System.Drawing.Size(731, 675);
             this.invoiceControl.TabIndex = 11;
             // 
             // gcPatients
@@ -88,7 +88,7 @@
             this.gcPatients.Location = new System.Drawing.Point(12, 28);
             this.gcPatients.MainView = this.gvPatients;
             this.gcPatients.Name = "gcPatients";
-            this.gcPatients.Size = new System.Drawing.Size(309, 644);
+            this.gcPatients.Size = new System.Drawing.Size(316, 655);
             this.gcPatients.TabIndex = 10;
             this.gcPatients.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatients});
@@ -104,7 +104,7 @@
             this.gvPatients.Name = "gvPatients";
             this.gvPatients.OptionsBehavior.Editable = false;
             this.gvPatients.OptionsView.ShowGroupPanel = false;
-            this.gvPatients.Click += new System.EventHandler(this.gvPatients_Click);
+            this.gvPatients.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvPatients_FocusedRowChanged);
             // 
             // colPatientNo
             // 
@@ -140,18 +140,18 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(858, 676);
+            this.simpleButton3.Location = new System.Drawing.Point(878, 687);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(101, 22);
+            this.simpleButton3.Size = new System.Drawing.Size(103, 22);
             this.simpleButton3.StyleController = this.layoutControl1;
             this.simpleButton3.TabIndex = 7;
             this.simpleButton3.Text = "Kapat";
             // 
             // sbRefresh
             // 
-            this.sbRefresh.Location = new System.Drawing.Point(140, 676);
+            this.sbRefresh.Location = new System.Drawing.Point(143, 687);
             this.sbRefresh.Name = "sbRefresh";
-            this.sbRefresh.Size = new System.Drawing.Size(124, 22);
+            this.sbRefresh.Size = new System.Drawing.Size(127, 22);
             this.sbRefresh.StyleController = this.layoutControl1;
             this.sbRefresh.TabIndex = 8;
             this.sbRefresh.Text = "Yenile";
@@ -172,7 +172,7 @@
             this.emptySpaceItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1047, 710);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1071, 721);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
@@ -183,7 +183,7 @@
             this.layoutControlItem7.CustomizationFormText = "Hastalar";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(313, 664);
+            this.layoutControlItem7.Size = new System.Drawing.Size(320, 675);
             this.layoutControlItem7.Text = "Hastalar";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(40, 13);
@@ -192,10 +192,10 @@
             // 
             this.layoutControlItem1.Control = this.invoiceControl;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(313, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(320, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem1.Size = new System.Drawing.Size(714, 664);
+            this.layoutControlItem1.Size = new System.Drawing.Size(731, 675);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -206,9 +206,9 @@
             // 
             this.layoutControlItem5.Control = this.sbRefresh;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(128, 664);
+            this.layoutControlItem5.Location = new System.Drawing.Point(131, 675);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(128, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(131, 26);
             this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
@@ -218,9 +218,9 @@
             // 
             this.layoutControlItem4.Control = this.simpleButton3;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(846, 664);
+            this.layoutControlItem4.Location = new System.Drawing.Point(866, 675);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(105, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(107, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
@@ -229,27 +229,27 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(256, 664);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(262, 675);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(590, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(604, 26);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(951, 664);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(973, 675);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(76, 26);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(78, 26);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 664);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 675);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(128, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(131, 26);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 710);
+            this.ClientSize = new System.Drawing.Size(1071, 721);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SGKInvoiveVoucherForm";
             this.Text = "SGK Fatura/Makbuz Formu";

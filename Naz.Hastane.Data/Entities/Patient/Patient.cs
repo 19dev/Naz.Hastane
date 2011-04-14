@@ -33,6 +33,15 @@ namespace Naz.Hastane.Data.Entities
         public virtual string HomePhone1 { get; set; } //EV_TEL1
         public virtual string HomePhone2 { get; set; } //EV_TEL2
 
+        public virtual string HomeInvoiceAddress
+        {
+            get
+            {
+                return FirstName + " " + LastName + "\n"
+                    + HomeDistrict + " " + HomeAddress + "\n"
+                    + HomeTown + " " + HomePostCode + " " + HomeCity;
+            }
+        }
         public virtual string JobName { get; set; } //IS_ADI
         public virtual string JobAddress { get; set; } //IS_ADRESI
         public virtual string JobPostCode { get; set; } //IS_PK
