@@ -18,9 +18,10 @@ namespace Naz.Hastane.Win.Controls
     {
         private ISession _Session;
         private Patient _Patient;
+        private frmMain theMainForm;
 
         private double ProductTotal = 0;
-        private double ProductVAT = 0;
+        private double VATPercent = 0;
         private double Discount = 0;
         private double InvoiceTotal = 0;
         private double Payment = 0;
@@ -65,6 +66,11 @@ namespace Naz.Hastane.Win.Controls
             UIUtilities.BindLookUpEdit(this.luePOS, LookUpServices.POSs);
         }
 
+        public void SetMainForm(frmMain frm)
+        {
+            theMainForm = frm;
+        }
+
         public void QueryPatientVisits(ISession session, Patient patient)
         {
             _Session = session;
@@ -90,6 +96,7 @@ namespace Naz.Hastane.Win.Controls
             this.teTaxNo.Text = "";
             this.teTaxOffice.Text = "";
             this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+            this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
 
             this.ceAdvancePayment.Checked = false;
             this.cePayment.Checked = false;
@@ -146,13 +153,13 @@ namespace Naz.Hastane.Win.Controls
         {
             selectionVisitDetail.WillRaiseSelectionEvent = false;
             selectionVisitDetail.ClearSelection();
-            Double.TryParse(this.lueVAT.Text, out VATTotal);
+            Double.TryParse(this.lueVAT.Text, out VATPercent);
 
             for(int i = 0; i < this.gvPatientVisitDetails.RowCount; i++)
             {
                 PatientVisitDetail pvd = (PatientVisitDetail)this.gvPatientVisitDetails.GetRow(i);
                 if (pvd != null)
-                    selectionVisitDetail.SelectRow(i, (pvd.KDV == VATTotal));
+                    selectionVisitDetail.SelectRow(i, (pvd.KDV == VATPercent));
             }
 
             selectionVisitDetail.WillRaiseSelectionEvent = true;
@@ -181,6 +188,17 @@ namespace Naz.Hastane.Win.Controls
             return pvds;
         }
 
+        private IList<PatientVisit> GetSelectedVisits()
+        {
+            List<PatientVisit> pvd = new List<PatientVisit>();
+            for (int i = 0; i < selectionVisit.SelectedCount; i++)
+            {
+                PatientVisit pv = (PatientVisit)selectionVisit.GetSelectedRow(i);
+                pvd.Add(pv);
+            }
+            return pvd;
+        }
+
         private void CalculateTotals()
         {
             this.teAdvancePaymentUsed.Enabled = this.ceAdvancePayment.Checked;
@@ -198,9 +216,9 @@ namespace Naz.Hastane.Win.Controls
 
             this.luePOS.Enabled = (this.luePaymentType.EditValue.ToString() == "K");
 
-            VATTotal = Math.Round(VATTotal, 2);
-            ProductVAT = Math.Round(ProductTotal * VATTotal / 100.0, 2);
-            InvoiceTotal = Math.Round(ProductTotal * (1 + VATTotal / 100.0), 2);
+            VATPercent = Math.Round(VATPercent, 2);
+            VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
+            InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
 
             double.TryParse(this.tePayment.Text, out Payment);
             double.TryParse(this.teAdvancePaymentUsed.Text, out AdvancePaymentUsed);
@@ -217,7 +235,7 @@ namespace Naz.Hastane.Win.Controls
             this.tePatientVisitDetailTotal.EditValue = ProductTotal;
  
             this.teProductTotal.EditValue = ProductTotal;
-            this.teProductVAT.EditValue = ProductVAT;
+            this.teVATTotal.EditValue = VATTotal;
             this.teInvoiceTotal.EditValue = InvoiceTotal;
 
             this.teAdvancePaymentTotal.EditValue = AdvancePaymentTotal;
@@ -253,13 +271,47 @@ namespace Naz.Hastane.Win.Controls
 
         private void sbInvoice_Click(object sender, EventArgs e)
         {
-            PatientServices.AddNewInvoice(_Session, UIUtilities.CurrentUser,
-                _Patient,
-                GetSelectedVisitDetails(),  
-                this.luePaymentType.EditValue.ToString(),
-                this.luePOS.EditValue.ToString(),
-                Payment,
-                AdvancePaymentUsed);
+            string NewTellerInvoiceNo = this.teInvoiceNo.Text;
+            string paymentType = this.luePaymentType.EditValue.ToString();
+            string POSType = this.luePOS.EditValue.ToString();
+
+            IList<PatientVisit> pvs = GetSelectedVisits();
+            PatientVisit pv = null;
+            if (pvs.Count > 0)
+                pv = pvs[0];
+            IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
+            if (pv != null && pvds.Count>0)
+            {
+                theMainForm.PrintInvoice(_Session, _Patient, pv, pvds,
+                    paymentType, POSType,
+                    ProductTotal,
+                    VATTotal,
+                    InvoiceTotal,
+                    Discount,
+                    VATPercent,
+                    Payment,
+                    AdvancePaymentUsed,
+                    NewTellerInvoiceNo
+                    );
+                this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+            }
+        }
+
+        private void sbVoucher_Click(object sender, EventArgs e)
+        {
+            string NewTellerVoucherNo = this.teInvoiceNo.Text;
+            string paymentType = this.luePaymentType.EditValue.ToString();
+            string POSType = this.luePOS.EditValue.ToString();
+            IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
+            if (pvds.Count > 0)
+            {
+                theMainForm.PrintVoucher(_Session, _Patient, pvds,
+                    paymentType, POSType,
+                    Payment,
+                    NewTellerVoucherNo
+                    );
+                this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+            }
         }
 
     }

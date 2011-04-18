@@ -75,6 +75,7 @@
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbVoucher = new DevExpress.XtraEditors.SimpleButton();
             this.sbMedula = new DevExpress.XtraEditors.SimpleButton();
             this.sbMernis = new DevExpress.XtraEditors.SimpleButton();
             this.medulaSorgu = new Naz.Hastane.Win.Controls.MedulaProvisionControl();
@@ -87,7 +88,7 @@
             this.sbKurumCaridenSil = new DevExpress.XtraEditors.SimpleButton();
             this.memoEdit3 = new DevExpress.XtraEditors.MemoEdit();
             this.sbKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.sbHastaFatura = new DevExpress.XtraEditors.SimpleButton();
+            this.sbInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.sbIslemler = new DevExpress.XtraEditors.SimpleButton();
             this.sbKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.sbAra = new DevExpress.XtraEditors.SimpleButton();
@@ -206,6 +207,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgAltTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIslemKartiSil = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciKurumCarisineIsle = new DevExpress.XtraLayout.LayoutControlItem();
@@ -340,6 +343,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAltTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIslemKartiSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).BeginInit();
@@ -770,6 +775,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sbVoucher);
             this.layoutControl1.Controls.Add(this.sbMedula);
             this.layoutControl1.Controls.Add(this.sbMernis);
             this.layoutControl1.Controls.Add(this.medulaSorgu);
@@ -782,7 +788,7 @@
             this.layoutControl1.Controls.Add(this.sbKurumCaridenSil);
             this.layoutControl1.Controls.Add(this.memoEdit3);
             this.layoutControl1.Controls.Add(this.sbKapat);
-            this.layoutControl1.Controls.Add(this.sbHastaFatura);
+            this.layoutControl1.Controls.Add(this.sbInvoice);
             this.layoutControl1.Controls.Add(this.sbIslemler);
             this.layoutControl1.Controls.Add(this.sbKaydet);
             this.layoutControl1.Controls.Add(this.sbAra);
@@ -842,11 +848,21 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // sbVoucher
+            // 
+            this.sbVoucher.Location = new System.Drawing.Point(832, 301);
+            this.sbVoucher.Name = "sbVoucher";
+            this.sbVoucher.Size = new System.Drawing.Size(78, 22);
+            this.sbVoucher.StyleController = this.layoutControl1;
+            this.sbVoucher.TabIndex = 113;
+            this.sbVoucher.Text = "Makbuz";
+            this.sbVoucher.Click += new System.EventHandler(this.sbVoucher_Click);
+            // 
             // sbMedula
             // 
-            this.sbMedula.Location = new System.Drawing.Point(836, 125);
+            this.sbMedula.Location = new System.Drawing.Point(832, 122);
             this.sbMedula.Name = "sbMedula";
-            this.sbMedula.Size = new System.Drawing.Size(74, 22);
+            this.sbMedula.Size = new System.Drawing.Size(78, 22);
             this.sbMedula.StyleController = this.layoutControl1;
             this.sbMedula.TabIndex = 112;
             this.sbMedula.Text = "Medula";
@@ -854,9 +870,9 @@
             // 
             // sbMernis
             // 
-            this.sbMernis.Location = new System.Drawing.Point(836, 99);
+            this.sbMernis.Location = new System.Drawing.Point(832, 96);
             this.sbMernis.Name = "sbMernis";
-            this.sbMernis.Size = new System.Drawing.Size(74, 22);
+            this.sbMernis.Size = new System.Drawing.Size(78, 22);
             this.sbMernis.StyleController = this.layoutControl1;
             this.sbMernis.TabIndex = 111;
             this.sbMernis.Text = "Mernis";
@@ -866,7 +882,7 @@
             // 
             this.medulaSorgu.Location = new System.Drawing.Point(549, 80);
             this.medulaSorgu.Name = "medulaSorgu";
-            this.medulaSorgu.Size = new System.Drawing.Size(259, 317);
+            this.medulaSorgu.Size = new System.Drawing.Size(255, 317);
             this.medulaSorgu.TabIndex = 110;
             this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaProvisionControl.MedulaProvisionControlCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
             // 
@@ -879,6 +895,7 @@
             this.sbDetayDok.StyleController = this.layoutControl1;
             this.sbDetayDok.TabIndex = 107;
             this.sbDetayDok.Text = "Detay Dök";
+            this.sbDetayDok.Visible = false;
             // 
             // sbIslemDetay
             // 
@@ -889,6 +906,7 @@
             this.sbIslemDetay.StyleController = this.layoutControl1;
             this.sbIslemDetay.TabIndex = 106;
             this.sbIslemDetay.Text = "İşlem Detay";
+            this.sbIslemDetay.Visible = false;
             // 
             // sbBelgeBas
             // 
@@ -899,14 +917,16 @@
             this.sbBelgeBas.StyleController = this.layoutControl1;
             this.sbBelgeBas.TabIndex = 104;
             this.sbBelgeBas.Text = "Belge Bas (F4)";
+            this.sbBelgeBas.Visible = false;
             // 
             // mernisSorgu
             // 
             this.mernisSorgu.Location = new System.Drawing.Point(549, 44);
             this.mernisSorgu.Name = "mernisSorgu";
-            this.mernisSorgu.Size = new System.Drawing.Size(259, 32);
+            this.mernisSorgu.Size = new System.Drawing.Size(255, 32);
             this.mernisSorgu.TabIndex = 109;
             this.mernisSorgu.Visible = false;
+            this.mernisSorgu.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.mernisSorgu_RunWorkerCompleted);
             // 
             // sbKurumCarisineIsle
             // 
@@ -917,6 +937,7 @@
             this.sbKurumCarisineIsle.StyleController = this.layoutControl1;
             this.sbKurumCarisineIsle.TabIndex = 95;
             this.sbKurumCarisineIsle.Text = "Kurum Carisine İşle";
+            this.sbKurumCarisineIsle.Visible = false;
             // 
             // sbIslemKartiSil
             // 
@@ -927,6 +948,7 @@
             this.sbIslemKartiSil.StyleController = this.layoutControl1;
             this.sbIslemKartiSil.TabIndex = 103;
             this.sbIslemKartiSil.Text = "İşlem Kartı Sil";
+            this.sbIslemKartiSil.Visible = false;
             // 
             // sbKurumCaridenSil
             // 
@@ -937,47 +959,50 @@
             this.sbKurumCaridenSil.StyleController = this.layoutControl1;
             this.sbKurumCaridenSil.TabIndex = 98;
             this.sbKurumCaridenSil.Text = "Kurum Cariden Sil";
+            this.sbKurumCaridenSil.Visible = false;
             // 
             // memoEdit3
             // 
             this.memoEdit3.Location = new System.Drawing.Point(24, 44);
             this.memoEdit3.Name = "memoEdit3";
-            this.memoEdit3.Size = new System.Drawing.Size(784, 353);
+            this.memoEdit3.Size = new System.Drawing.Size(780, 353);
             this.memoEdit3.StyleController = this.layoutControl1;
             this.memoEdit3.TabIndex = 79;
             // 
             // sbKapat
             // 
-            this.sbKapat.Location = new System.Drawing.Point(836, 375);
+            this.sbKapat.Location = new System.Drawing.Point(832, 375);
             this.sbKapat.Name = "sbKapat";
-            this.sbKapat.Size = new System.Drawing.Size(74, 22);
+            this.sbKapat.Size = new System.Drawing.Size(78, 22);
             this.sbKapat.StyleController = this.layoutControl1;
             this.sbKapat.TabIndex = 71;
             this.sbKapat.Text = "Kapat(F3)";
             // 
-            // sbHastaFatura
+            // sbInvoice
             // 
-            this.sbHastaFatura.Location = new System.Drawing.Point(836, 271);
-            this.sbHastaFatura.Name = "sbHastaFatura";
-            this.sbHastaFatura.Size = new System.Drawing.Size(74, 22);
-            this.sbHastaFatura.StyleController = this.layoutControl1;
-            this.sbHastaFatura.TabIndex = 70;
-            this.sbHastaFatura.Text = "Hasta Fatura";
+            this.sbInvoice.Location = new System.Drawing.Point(832, 275);
+            this.sbInvoice.Name = "sbInvoice";
+            this.sbInvoice.Size = new System.Drawing.Size(78, 22);
+            this.sbInvoice.StyleController = this.layoutControl1;
+            this.sbInvoice.TabIndex = 70;
+            this.sbInvoice.Text = "Fatura";
+            this.sbInvoice.Click += new System.EventHandler(this.sbInvoice_Click);
             // 
             // sbIslemler
             // 
-            this.sbIslemler.Location = new System.Drawing.Point(836, 245);
+            this.sbIslemler.Location = new System.Drawing.Point(832, 239);
             this.sbIslemler.Name = "sbIslemler";
-            this.sbIslemler.Size = new System.Drawing.Size(74, 22);
+            this.sbIslemler.Size = new System.Drawing.Size(78, 22);
             this.sbIslemler.StyleController = this.layoutControl1;
             this.sbIslemler.TabIndex = 68;
             this.sbIslemler.Text = "İşlemler";
+            this.sbIslemler.Visible = false;
             // 
             // sbKaydet
             // 
-            this.sbKaydet.Location = new System.Drawing.Point(836, 179);
+            this.sbKaydet.Location = new System.Drawing.Point(832, 174);
             this.sbKaydet.Name = "sbKaydet";
-            this.sbKaydet.Size = new System.Drawing.Size(74, 22);
+            this.sbKaydet.Size = new System.Drawing.Size(78, 22);
             this.sbKaydet.StyleController = this.layoutControl1;
             this.sbKaydet.TabIndex = 67;
             this.sbKaydet.Text = "Kaydet(F5)";
@@ -985,18 +1010,19 @@
             // 
             // sbAra
             // 
-            this.sbAra.Location = new System.Drawing.Point(836, 43);
+            this.sbAra.Location = new System.Drawing.Point(832, 42);
             this.sbAra.Name = "sbAra";
-            this.sbAra.Size = new System.Drawing.Size(74, 22);
+            this.sbAra.Size = new System.Drawing.Size(78, 22);
             this.sbAra.StyleController = this.layoutControl1;
             this.sbAra.TabIndex = 63;
             this.sbAra.Text = "&Ara";
+            this.sbAra.Visible = false;
             // 
             // teEmail
             // 
             this.teEmail.Location = new System.Drawing.Point(529, 365);
             this.teEmail.Name = "teEmail";
-            this.teEmail.Size = new System.Drawing.Size(267, 20);
+            this.teEmail.Size = new System.Drawing.Size(263, 20);
             this.teEmail.StyleController = this.layoutControl1;
             this.teEmail.TabIndex = 62;
             // 
@@ -1004,7 +1030,7 @@
             // 
             this.teJobFax.Location = new System.Drawing.Point(529, 341);
             this.teJobFax.Name = "teJobFax";
-            this.teJobFax.Size = new System.Drawing.Size(267, 20);
+            this.teJobFax.Size = new System.Drawing.Size(263, 20);
             this.teJobFax.StyleController = this.layoutControl1;
             this.teJobFax.TabIndex = 61;
             // 
@@ -1012,7 +1038,7 @@
             // 
             this.teJobPhone2.Location = new System.Drawing.Point(529, 317);
             this.teJobPhone2.Name = "teJobPhone2";
-            this.teJobPhone2.Size = new System.Drawing.Size(267, 20);
+            this.teJobPhone2.Size = new System.Drawing.Size(263, 20);
             this.teJobPhone2.StyleController = this.layoutControl1;
             this.teJobPhone2.TabIndex = 60;
             // 
@@ -1020,7 +1046,7 @@
             // 
             this.teJobPhone1.Location = new System.Drawing.Point(529, 293);
             this.teJobPhone1.Name = "teJobPhone1";
-            this.teJobPhone1.Size = new System.Drawing.Size(267, 20);
+            this.teJobPhone1.Size = new System.Drawing.Size(263, 20);
             this.teJobPhone1.StyleController = this.layoutControl1;
             this.teJobPhone1.TabIndex = 59;
             // 
@@ -1028,7 +1054,7 @@
             // 
             this.teJobPostCode.Location = new System.Drawing.Point(529, 269);
             this.teJobPostCode.Name = "teJobPostCode";
-            this.teJobPostCode.Size = new System.Drawing.Size(267, 20);
+            this.teJobPostCode.Size = new System.Drawing.Size(263, 20);
             this.teJobPostCode.StyleController = this.layoutControl1;
             this.teJobPostCode.TabIndex = 58;
             // 
@@ -1043,7 +1069,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "İl")});
             this.lueJobCity.Properties.DisplayMember = "Value";
             this.lueJobCity.Properties.ValueMember = "Value";
-            this.lueJobCity.Size = new System.Drawing.Size(267, 20);
+            this.lueJobCity.Size = new System.Drawing.Size(263, 20);
             this.lueJobCity.StyleController = this.layoutControl1;
             this.lueJobCity.TabIndex = 57;
             // 
@@ -1051,15 +1077,15 @@
             // 
             this.meJobAddress.Location = new System.Drawing.Point(529, 124);
             this.meJobAddress.Name = "meJobAddress";
-            this.meJobAddress.Size = new System.Drawing.Size(267, 117);
+            this.meJobAddress.Size = new System.Drawing.Size(263, 117);
             this.meJobAddress.StyleController = this.layoutControl1;
             this.meJobAddress.TabIndex = 54;
             // 
             // sbPoliklinik
             // 
-            this.sbPoliklinik.Location = new System.Drawing.Point(836, 219);
+            this.sbPoliklinik.Location = new System.Drawing.Point(832, 213);
             this.sbPoliklinik.Name = "sbPoliklinik";
-            this.sbPoliklinik.Size = new System.Drawing.Size(74, 22);
+            this.sbPoliklinik.Size = new System.Drawing.Size(78, 22);
             this.sbPoliklinik.StyleController = this.layoutControl1;
             this.sbPoliklinik.TabIndex = 65;
             this.sbPoliklinik.Text = "Poliklinik";
@@ -1069,7 +1095,7 @@
             // 
             this.teJobNo.Location = new System.Drawing.Point(529, 100);
             this.teJobNo.Name = "teJobNo";
-            this.teJobNo.Size = new System.Drawing.Size(267, 20);
+            this.teJobNo.Size = new System.Drawing.Size(263, 20);
             this.teJobNo.StyleController = this.layoutControl1;
             this.teJobNo.TabIndex = 53;
             // 
@@ -1077,7 +1103,7 @@
             // 
             this.teJobName.Location = new System.Drawing.Point(529, 76);
             this.teJobName.Name = "teJobName";
-            this.teJobName.Size = new System.Drawing.Size(267, 20);
+            this.teJobName.Size = new System.Drawing.Size(263, 20);
             this.teJobName.StyleController = this.layoutControl1;
             this.teJobName.TabIndex = 52;
             // 
@@ -1468,7 +1494,7 @@
             this.tbcHastaBilgileri.Name = "tbcHastaBilgileri";
             this.tbcHastaBilgileri.SelectedTabPage = this.lcgHastaBilgileri;
             this.tbcHastaBilgileri.SelectedTabPageIndex = 0;
-            this.tbcHastaBilgileri.Size = new System.Drawing.Size(812, 401);
+            this.tbcHastaBilgileri.Size = new System.Drawing.Size(808, 401);
             this.tbcHastaBilgileri.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgHastaBilgileri,
             this.lcgDigerBilgiler,
@@ -1508,7 +1534,7 @@
             this.lciMaritalStatus});
             this.lcgHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.lcgHastaBilgileri.Name = "lcgHastaBilgileri";
-            this.lcgHastaBilgileri.Size = new System.Drawing.Size(788, 357);
+            this.lcgHastaBilgileri.Size = new System.Drawing.Size(784, 357);
             this.lcgHastaBilgileri.Text = "Hasta Bilgileri";
             // 
             // lciBirthDate
@@ -1660,7 +1686,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(525, 36);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(263, 321);
+            this.layoutControlItem1.Size = new System.Drawing.Size(259, 321);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -1713,7 +1739,7 @@
             this.layoutControlItem2.CustomizationFormText = "Mernis Sorgusu";
             this.layoutControlItem2.Location = new System.Drawing.Point(525, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(263, 36);
+            this.layoutControlItem2.Size = new System.Drawing.Size(259, 36);
             this.layoutControlItem2.Text = "Mernis Sorgusu";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -1801,7 +1827,7 @@
             this.lcgIsYeriBilgileri});
             this.lcgDigerBilgiler.Location = new System.Drawing.Point(0, 0);
             this.lcgDigerBilgiler.Name = "lcgDigerBilgiler";
-            this.lcgDigerBilgiler.Size = new System.Drawing.Size(788, 357);
+            this.lcgDigerBilgiler.Size = new System.Drawing.Size(784, 357);
             this.lcgDigerBilgiler.Text = "Diğer Bilgileri";
             // 
             // lcgEkBilgiler
@@ -1949,7 +1975,7 @@
             this.lciEMail});
             this.lcgIsYeriBilgileri.Location = new System.Drawing.Point(402, 0);
             this.lcgIsYeriBilgileri.Name = "lcgIsYeriBilgileri";
-            this.lcgIsYeriBilgileri.Size = new System.Drawing.Size(386, 357);
+            this.lcgIsYeriBilgileri.Size = new System.Drawing.Size(382, 357);
             this.lcgIsYeriBilgileri.Text = "İş Yeri Bilgileri";
             // 
             // lciJobName
@@ -1958,7 +1984,7 @@
             this.lciJobName.CustomizationFormText = "İş Yeri Adı";
             this.lciJobName.Location = new System.Drawing.Point(0, 0);
             this.lciJobName.Name = "lciJobName";
-            this.lciJobName.Size = new System.Drawing.Size(362, 24);
+            this.lciJobName.Size = new System.Drawing.Size(358, 24);
             this.lciJobName.Text = "İş Yeri Adı";
             this.lciJobName.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -1968,7 +1994,7 @@
             this.lciJobNo.CustomizationFormText = "İş Yeri No";
             this.lciJobNo.Location = new System.Drawing.Point(0, 24);
             this.lciJobNo.Name = "lciJobNo";
-            this.lciJobNo.Size = new System.Drawing.Size(362, 24);
+            this.lciJobNo.Size = new System.Drawing.Size(358, 24);
             this.lciJobNo.Text = "İş Yeri No";
             this.lciJobNo.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -1978,7 +2004,7 @@
             this.lciJobAddress.CustomizationFormText = "İş Adresi";
             this.lciJobAddress.Location = new System.Drawing.Point(0, 48);
             this.lciJobAddress.Name = "lciJobAddress";
-            this.lciJobAddress.Size = new System.Drawing.Size(362, 121);
+            this.lciJobAddress.Size = new System.Drawing.Size(358, 121);
             this.lciJobAddress.Text = "İş Adresi";
             this.lciJobAddress.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -1988,7 +2014,7 @@
             this.lciJobCity.CustomizationFormText = "İl";
             this.lciJobCity.Location = new System.Drawing.Point(0, 169);
             this.lciJobCity.Name = "lciJobCity";
-            this.lciJobCity.Size = new System.Drawing.Size(362, 24);
+            this.lciJobCity.Size = new System.Drawing.Size(358, 24);
             this.lciJobCity.Text = "İl";
             this.lciJobCity.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -1998,7 +2024,7 @@
             this.lciJobPostCode.CustomizationFormText = "Posta Kodu";
             this.lciJobPostCode.Location = new System.Drawing.Point(0, 193);
             this.lciJobPostCode.Name = "lciJobPostCode";
-            this.lciJobPostCode.Size = new System.Drawing.Size(362, 24);
+            this.lciJobPostCode.Size = new System.Drawing.Size(358, 24);
             this.lciJobPostCode.Text = "Posta Kodu";
             this.lciJobPostCode.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2008,7 +2034,7 @@
             this.lciJobPhone1.CustomizationFormText = "Telefon 1";
             this.lciJobPhone1.Location = new System.Drawing.Point(0, 217);
             this.lciJobPhone1.Name = "lciJobPhone1";
-            this.lciJobPhone1.Size = new System.Drawing.Size(362, 24);
+            this.lciJobPhone1.Size = new System.Drawing.Size(358, 24);
             this.lciJobPhone1.Text = "Telefon 1";
             this.lciJobPhone1.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2018,7 +2044,7 @@
             this.lciJobPhone2.CustomizationFormText = "Telefon 2";
             this.lciJobPhone2.Location = new System.Drawing.Point(0, 241);
             this.lciJobPhone2.Name = "lciJobPhone2";
-            this.lciJobPhone2.Size = new System.Drawing.Size(362, 24);
+            this.lciJobPhone2.Size = new System.Drawing.Size(358, 24);
             this.lciJobPhone2.Text = "Telefon 2";
             this.lciJobPhone2.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2028,7 +2054,7 @@
             this.lciJobFax.CustomizationFormText = "Fax No";
             this.lciJobFax.Location = new System.Drawing.Point(0, 265);
             this.lciJobFax.Name = "lciJobFax";
-            this.lciJobFax.Size = new System.Drawing.Size(362, 24);
+            this.lciJobFax.Size = new System.Drawing.Size(358, 24);
             this.lciJobFax.Text = "Fax No";
             this.lciJobFax.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2038,7 +2064,7 @@
             this.lciEMail.CustomizationFormText = "Email";
             this.lciEMail.Location = new System.Drawing.Point(0, 289);
             this.lciEMail.Name = "lciEMail";
-            this.lciEMail.Size = new System.Drawing.Size(362, 24);
+            this.lciEMail.Size = new System.Drawing.Size(358, 24);
             this.lciEMail.Text = "Email";
             this.lciEMail.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2049,7 +2075,7 @@
             this.lciKurumOzelNot});
             this.lcgKurumOzelNot.Location = new System.Drawing.Point(0, 0);
             this.lcgKurumOzelNot.Name = "lcgKurumOzelNot";
-            this.lcgKurumOzelNot.Size = new System.Drawing.Size(788, 357);
+            this.lcgKurumOzelNot.Size = new System.Drawing.Size(784, 357);
             this.lcgKurumOzelNot.Text = "Kurum Özel Not";
             // 
             // lciKurumOzelNot
@@ -2058,7 +2084,7 @@
             this.lciKurumOzelNot.CustomizationFormText = "layoutControlItem75";
             this.lciKurumOzelNot.Location = new System.Drawing.Point(0, 0);
             this.lciKurumOzelNot.Name = "lciKurumOzelNot";
-            this.lciKurumOzelNot.Size = new System.Drawing.Size(788, 357);
+            this.lciKurumOzelNot.Size = new System.Drawing.Size(784, 357);
             this.lciKurumOzelNot.Text = "lciKurumOzelNot";
             this.lciKurumOzelNot.TextSize = new System.Drawing.Size(0, 0);
             this.lciKurumOzelNot.TextToControlDistance = 0;
@@ -2080,10 +2106,12 @@
             this.lciPoliklinik,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.emptySpaceItem2});
-            this.lcgSagTuslar.Location = new System.Drawing.Point(812, 0);
+            this.emptySpaceItem2,
+            this.emptySpaceItem5,
+            this.layoutControlItem5});
+            this.lcgSagTuslar.Location = new System.Drawing.Point(808, 0);
             this.lcgSagTuslar.Name = "lcgSagTuslar";
-            this.lcgSagTuslar.Size = new System.Drawing.Size(102, 401);
+            this.lcgSagTuslar.Size = new System.Drawing.Size(106, 401);
             this.lcgSagTuslar.Text = "lcgSagTuslar";
             this.lcgSagTuslar.TextVisible = false;
             // 
@@ -2091,9 +2119,9 @@
             // 
             this.lciAra.Control = this.sbAra;
             this.lciAra.CustomizationFormText = "Ara";
-            this.lciAra.Location = new System.Drawing.Point(0, 19);
+            this.lciAra.Location = new System.Drawing.Point(0, 18);
             this.lciAra.Name = "lciAra";
-            this.lciAra.Size = new System.Drawing.Size(78, 26);
+            this.lciAra.Size = new System.Drawing.Size(82, 26);
             this.lciAra.Text = "Ara";
             this.lciAra.TextSize = new System.Drawing.Size(0, 0);
             this.lciAra.TextToControlDistance = 0;
@@ -2102,9 +2130,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 45);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 44);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(78, 30);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(82, 28);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2112,9 +2140,9 @@
             // 
             this.lciKaydet.Control = this.sbKaydet;
             this.lciKaydet.CustomizationFormText = "Kaydet";
-            this.lciKaydet.Location = new System.Drawing.Point(0, 155);
+            this.lciKaydet.Location = new System.Drawing.Point(0, 150);
             this.lciKaydet.Name = "lciKaydet";
-            this.lciKaydet.Size = new System.Drawing.Size(78, 26);
+            this.lciKaydet.Size = new System.Drawing.Size(82, 26);
             this.lciKaydet.Text = "Kaydet";
             this.lciKaydet.TextSize = new System.Drawing.Size(0, 0);
             this.lciKaydet.TextToControlDistance = 0;
@@ -2124,9 +2152,9 @@
             // 
             this.lciIslemler.Control = this.sbIslemler;
             this.lciIslemler.CustomizationFormText = "İşlemler";
-            this.lciIslemler.Location = new System.Drawing.Point(0, 221);
+            this.lciIslemler.Location = new System.Drawing.Point(0, 215);
             this.lciIslemler.Name = "lciIslemler";
-            this.lciIslemler.Size = new System.Drawing.Size(78, 26);
+            this.lciIslemler.Size = new System.Drawing.Size(82, 26);
             this.lciIslemler.Text = "İşlemler";
             this.lciIslemler.TextSize = new System.Drawing.Size(0, 0);
             this.lciIslemler.TextToControlDistance = 0;
@@ -2134,11 +2162,11 @@
             // 
             // lciHastaFatura
             // 
-            this.lciHastaFatura.Control = this.sbHastaFatura;
+            this.lciHastaFatura.Control = this.sbInvoice;
             this.lciHastaFatura.CustomizationFormText = "Patient Fatura";
-            this.lciHastaFatura.Location = new System.Drawing.Point(0, 247);
+            this.lciHastaFatura.Location = new System.Drawing.Point(0, 251);
             this.lciHastaFatura.Name = "lciHastaFatura";
-            this.lciHastaFatura.Size = new System.Drawing.Size(78, 26);
+            this.lciHastaFatura.Size = new System.Drawing.Size(82, 26);
             this.lciHastaFatura.Text = "Patient Fatura";
             this.lciHastaFatura.TextSize = new System.Drawing.Size(0, 0);
             this.lciHastaFatura.TextToControlDistance = 0;
@@ -2150,7 +2178,7 @@
             this.lciKapat.CustomizationFormText = "Kapat";
             this.lciKapat.Location = new System.Drawing.Point(0, 351);
             this.lciKapat.Name = "lciKapat";
-            this.lciKapat.Size = new System.Drawing.Size(78, 26);
+            this.lciKapat.Size = new System.Drawing.Size(82, 26);
             this.lciKapat.Text = "Kapat";
             this.lciKapat.TextSize = new System.Drawing.Size(0, 0);
             this.lciKapat.TextToControlDistance = 0;
@@ -2161,25 +2189,25 @@
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(78, 19);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(82, 18);
             this.emptySpaceItem8.Text = "emptySpaceItem8";
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 273);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 303);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(78, 78);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(82, 48);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 181);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 176);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(78, 14);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(82, 13);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2187,9 +2215,9 @@
             // 
             this.lciPoliklinik.Control = this.sbPoliklinik;
             this.lciPoliklinik.CustomizationFormText = "Poliklinik";
-            this.lciPoliklinik.Location = new System.Drawing.Point(0, 195);
+            this.lciPoliklinik.Location = new System.Drawing.Point(0, 189);
             this.lciPoliklinik.Name = "lciPoliklinik";
-            this.lciPoliklinik.Size = new System.Drawing.Size(78, 26);
+            this.lciPoliklinik.Size = new System.Drawing.Size(82, 26);
             this.lciPoliklinik.Text = "Poliklinik";
             this.lciPoliklinik.TextSize = new System.Drawing.Size(0, 0);
             this.lciPoliklinik.TextToControlDistance = 0;
@@ -2199,9 +2227,9 @@
             // 
             this.layoutControlItem3.Control = this.sbMernis;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 75);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(78, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(82, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -2211,9 +2239,9 @@
             // 
             this.layoutControlItem4.Control = this.sbMedula;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(78, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(82, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
@@ -2222,11 +2250,32 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 127);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 124);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(78, 28);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(82, 26);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 241);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(82, 10);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.sbVoucher;
+            this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 277);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(82, 26);
+            this.layoutControlItem5.Text = "layoutControlItem5";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextToControlDistance = 0;
+            this.layoutControlItem5.TextVisible = false;
             // 
             // lcgAltTuslar
             // 
@@ -2483,6 +2532,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAltTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIslemKartiSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).EndInit();
@@ -2539,7 +2590,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciHomePhone1;
         private DevExpress.XtraEditors.MemoEdit memoEdit3;
         private DevExpress.XtraEditors.SimpleButton sbKapat;
-        private DevExpress.XtraEditors.SimpleButton sbHastaFatura;
+        private DevExpress.XtraEditors.SimpleButton sbInvoice;
         private DevExpress.XtraEditors.SimpleButton sbIslemler;
         private DevExpress.XtraEditors.SimpleButton sbKaydet;
         private DevExpress.XtraEditors.SimpleButton sbAra;
@@ -2686,5 +2737,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.SimpleButton sbVoucher;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

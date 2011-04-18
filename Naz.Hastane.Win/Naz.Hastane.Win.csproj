@@ -283,11 +283,11 @@
     <Compile Include="MDIChildForms\SelectFromLookUpForm.Designer.cs">
       <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SGKInvoiveVoucherForm.cs">
+    <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SGKInvoiveVoucherForm.Designer.cs">
-      <DependentUpon>SGKInvoiveVoucherForm.cs</DependentUpon>
+    <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.Designer.cs">
+      <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\SelectPolyclinicForm.cs">
       <SubType>Form</SubType>
@@ -344,8 +344,8 @@
     <EmbeddedResource Include="MDIChildForms\SelectFromLookUpForm.resx">
       <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SGKInvoiveVoucherForm.resx">
-      <DependentUpon>SGKInvoiveVoucherForm.cs</DependentUpon>
+    <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
+      <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectPolyclinicForm.resx">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>

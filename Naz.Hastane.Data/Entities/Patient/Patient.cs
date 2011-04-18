@@ -20,6 +20,13 @@ namespace Naz.Hastane.Data.Entities
         public virtual string RegisteredTown { get; set; } //NUFUSKAYITLIILCE
         public virtual string RegisteredCity { get; set; } //NUFUSKAYITLIIL
 
+        public virtual string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
         public virtual int BloodType { get; set; } //KANGRUBU
         public virtual char CanBeBloodDonour { get; set; } //KANVEREBILIR
         public virtual char MedControl { get; set; } //ILACKONTROL

@@ -449,6 +449,47 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static void UpdateSystemSettingNo(string key, string value)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
+                                    where systemSetting.ID0 == "00" && systemSetting.Code == key
+                                    select systemSetting
+                                    ).SingleOrDefault<SystemSetting>();
+                ss.Value = value;
+                if (String.IsNullOrEmpty(ss.Code))
+                {
+                    try
+                    {
+                        ss.ID0 = "00";
+                        ss.Code = key;
+                        session.Save(ss);
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        session.Update(ss);
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+
         public static float GetNewDoctorQueueNo(ISession asession, Doctor doctor)
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -491,9 +532,17 @@ namespace Naz.Hastane.Data.Services
         {
             return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE, updateDB);
         }
+        public static void UpdateTellerInvoiceNo(User user, string value)
+        {
+            UpdateSystemSettingNo("KELEGNUM" + user.VEZNE, value);
+        }
         public static string GetNewTellerVoucherNo(User user, bool updateDB = true)
         {
             return GetNewSystemSettingNo("MAKNUM" + user.VEZNE, updateDB);
+        }
+        public static void UpdateTellerVoucherNo(User user, string value)
+        {
+            UpdateSystemSettingNo("MAKNUM" + user.VEZNE, value);
         }
 
         #endregion

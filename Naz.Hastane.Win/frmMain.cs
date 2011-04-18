@@ -24,6 +24,7 @@ using Naz.Hastane.Win.MDIChildForms;
 using Naz.Utilities.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 using Naz.Hastane.Win.Forms;
+using NHibernate;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -789,7 +790,7 @@ namespace Naz.Hastane.Win {
             iSGKHastaAra.ItemClick += (o, args) => ShowNewDocument<SGKFindPatientForm>();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
-            iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiveVoucherForm>();
+            iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiceVoucherForm>();
             iDiabetReports.ItemClick += (o, args) => ShowNewDocument<MedulaDiabetReportForm>();
             iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
@@ -988,5 +989,61 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
+        public void PrintInvoice(ISession session, Patient patient, PatientVisit pv, IList<PatientVisitDetail> pvds, 
+            string paymentType, string POSType,
+            double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
+            double cashPayment, double advancePaymentUsed, string tellerInvoiceNo)
+        {
+
+            PatientServices.AddNewInvoice(session, UIUtilities.CurrentUser, patient, pvds,
+                paymentType, POSType,
+                productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent,
+                cashPayment, advancePaymentUsed, tellerInvoiceNo);
+
+            InvoiceSGK rpt = new InvoiceSGK();
+            rpt.prmAddress.Value = patient.HomeInvoiceAddress;
+            rpt.prmDate.Value = DateTime.Now;
+            rpt.prmDoctor.Value = pv.Doctor;
+            rpt.prmInvoiceNo.Value = tellerInvoiceNo;
+            rpt.prmPatientNo.Value = patient.PatientNo;
+            rpt.prmPatientPrice.Value = productTotal;
+            rpt.prmPatientTotal.Value = productTotal;
+            rpt.prmQueueNo.Value = pv.QueueNo;
+            rpt.prmServiceNo.Value = pv.Servis;
+            rpt.prmTaxOffice.Value = "";
+            rpt.prmTCID.Value = patient.TCId;
+            rpt.prmTime.Value = DateTime.Now;
+            rpt.prmTotal.Value = invoiceTotal;
+            rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(invoiceTotal.ToString("{0:#.00}"));
+            rpt.prmVAT.Value = VATPercent;
+            rpt.prmVATValue.Value = VATTotal;
+
+            rpt.ShowPreview();
+
+        }
+        public void PrintVoucher(ISession session, Patient patient, IList<PatientVisitDetail> pvds,
+            string paymentType, string POSType,
+            double paymentTotal, string tellerVoucherNo)
+        {
+            PatientServices.AddNewVoucher(session, UIUtilities.CurrentUser, patient, pvds,
+                paymentType, POSType,
+                paymentTotal,
+                tellerVoucherNo
+                );
+
+            VoucherSGK rpt = new VoucherSGK();
+            rpt.prmDate.Value = DateTime.Now;
+            rpt.prmPatientName.Value = patient.FullName;
+            rpt.prmPatientNo.Value = patient.PatientNo;
+            rpt.prmTCID.Value = patient.TCId;
+            rpt.prmTime.Value = DateTime.Now;
+            rpt.prmTotal.Value = paymentTotal;
+            rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(paymentTotal.ToString("{0:#.00}"));
+            rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
+            rpt.prmVoucherNo.Value = tellerVoucherNo;
+
+            rpt.ShowPreview();
+
+        }
     }
 }

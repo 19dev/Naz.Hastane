@@ -6,6 +6,10 @@ using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Win.Controls;
+using Naz.Hastane.Reports;
+using Naz.Utilities.Classes;
+using System.Collections.Generic;
+using Naz.Mernis.Service;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -14,11 +18,14 @@ namespace Naz.Hastane.Win.MDIChildForms
         private Patient _Patient;
         private Doctor _Doctor;
         private bool _IsWaitingForPolyclinic = false;
+        private frmMain theMainForm;
 
         public SGKPatientForm()
         {
             InitializeComponent();
+            theMainForm = (frmMain)this.MdiParent;
         }
+
         public SGKPatientForm(string aPatientID)
         {
             if (String.IsNullOrEmpty(aPatientID))
@@ -114,21 +121,35 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbKaydet_Click(object sender, EventArgs e)
         {
-            //_patient.FirstName = "aa";
-            //_patient.LastName = "aa";
-            //_patient.Sex = "1";
-            //_patient.MaritalStatus = "1";
-            //_patient.BirthDate = DateTime.Now;
-            //_patient.CanBeBloodDonour = '1';
-            //_patient.MedControl = '1';
-            //_patient.InsuranceCompany = "aa";
-            //_patient.PatientContribution = '1';
-            //_patient.PatientLimit = 1000;
-            //_patient.USER_ID = "aa";
-            //_patient.DATE_CREATE = DateTime.Now;
-            //_patient.DATE_UPDATE = DateTime.Now;
+            if (String.IsNullOrWhiteSpace(_Patient.FirstName))
+            {
+                XtraMessageBox.Show("Lütfen Hastanın Adını Kontrol Ediniz", "Hasta Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(_Patient.LastName))
+            {
+                XtraMessageBox.Show("Lütfen Hastanın Soyadını Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (_Patient.BirthDate == null)
+            {
+                XtraMessageBox.Show("Lütfen Hastanın Doğum Tarihini Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            PatientServices.SavePatient(_Patient);
+            _Patient.PatientLimit = 0;
+            _Patient.USER_ID = "aa";
+            _Patient.DATE_CREATE = DateTime.Now;
+            _Patient.DATE_UPDATE = DateTime.Now;
+
+            try
+            {
+                PatientServices.SavePatient(_Patient);
+            }
+            catch (Exception error)
+            {
+                XtraMessageBox.Show("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #region GridBindings
@@ -220,6 +241,128 @@ namespace Naz.Hastane.Win.MDIChildForms
                     PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
             }
 
+        }
+
+        private void sbInvoice_Click(object sender, EventArgs e)
+        {
+            string NewTellerInvoiceNo = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+            string paymentType = "N";
+            string POSType = null;
+
+            double ProductTotal = 0;
+            double VATTotal = 0;
+            double InvoiceTotal = 0;
+            double VATPercent = 0;
+            double Payment = 0;
+
+            IList<PatientVisit> pvs = _Patient.PatientVisits;
+            PatientVisit pv = null;
+            IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
+            if (pvs.Count > 0)
+            {
+                pv = pvs[0];
+            }
+            foreach(PatientVisitDetail pvd in pv.PatientVisitDetails)
+            {
+                if (pvd.CODE != "SGKKATILIM")
+                {
+                    pvds.Add(pvd);
+                    ProductTotal += pvd.ADET * pvd.SATISF;
+                    VATPercent = pvd.KDV;
+                }
+            }
+            VATPercent = Math.Round(VATPercent, 2);
+            VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
+            InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
+
+            if (pv != null && pvds != null && pvds.Count > 0 && theMainForm != null)
+            {
+                theMainForm.PrintInvoice(Session, _Patient, pv, pvds,
+                    paymentType, POSType,
+                    ProductTotal,
+                    VATTotal,
+                    InvoiceTotal,
+                    0,
+                    VATPercent,
+                    Payment,
+                    0,
+                    NewTellerInvoiceNo
+                    );
+            }
+        }
+
+        private void sbVoucher_Click(object sender, EventArgs e)
+        {
+            string NewTellerVoucherNo = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+            string paymentType = "N";
+            string POSType = null;
+
+            double ProductTotal = 0;
+            double VATTotal = 0;
+            double InvoiceTotal = 0;
+            double VATPercent = 0;
+            double Payment = 0;
+
+            IList<PatientVisit> pvs = _Patient.PatientVisits;
+            PatientVisit pv = null;
+            IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
+            if (pvs.Count > 0)
+            {
+                pv = pvs[0];
+            }
+            foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
+            {
+                if (pvd.CODE == "SGKKATILIM")
+                {
+                    pvds.Add(pvd);
+                    ProductTotal += pvd.ADET * pvd.SATISF;
+                    VATPercent = pvd.KDV;
+                }
+            }
+            VATPercent = Math.Round(VATPercent, 2);
+            VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
+            InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
+
+            if (pv != null && pvds != null && pvds.Count > 0 && theMainForm != null)
+            {
+                theMainForm.PrintVoucher(Session, _Patient, pvds,
+                    paymentType, POSType,
+                    InvoiceTotal,
+                    NewTellerVoucherNo
+                    );
+            }
+        }
+
+        private void mernisSorgu_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (this.mernisSorgu.IsOK)
+            {
+                _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
+                _Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
+                _Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
+                _Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
+                if (this.mernisSorgu.KisiBilgisi.TemelBilgisi.Cinsiyet == CinsiyetTipi.Erkek)
+                    _Patient.Sex = "1";
+                else 
+                    _Patient.Sex = "2";
+                _Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
+                    this.mernisSorgu.NufusCuzdani.DogumTarih.Ay,
+                    this.mernisSorgu.NufusCuzdani.DogumTarih.Gun);
+                _Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
+
+                if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
+                    _Patient.MaritalStatus = "E";
+                else
+                    _Patient.MaritalStatus = "B";
+
+                _Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
+                _Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
+                _Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
+                _Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
+                _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
+            }
         }
 
     }

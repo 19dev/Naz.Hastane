@@ -19,6 +19,10 @@ namespace Naz.Hastane.Win.Controls
         public event RunWorkerCompletedEventHandler RunWorkerCompleted;
 
         public TCKimlikResponse TCKimlikResponse = new TCKimlikResponse();
+        public KisiBilgisiC KisiBilgisi = new KisiBilgisiC();
+        public NufusCuzdanC NufusCuzdani = new NufusCuzdanC();
+
+        public bool IsOK = false;
 
         private long _TCID = 0;
 
@@ -41,7 +45,7 @@ namespace Naz.Hastane.Win.Controls
             if (IsWorking) return;
 
             IsWorking = true;
-
+            IsOK = false;
             _TCID = long.Parse(TCID);
             backgroundWorker = new StandartBackgroundWorker();
             backgroundWorker.WorkerReportsProgress = true;
@@ -68,37 +72,59 @@ namespace Naz.Hastane.Win.Controls
             _TCKimlikNoG.TCKimlikNo = _TCID;
             _TCKimlikNoGA[0] = _TCKimlikNoG;
 
+            NKOTCKimlikNoG[] _NKOTCKimlikNoGA = new NKOTCKimlikNoG[1];
+            NKOTCKimlikNoG _NKOTCKimlikNoG = new NKOTCKimlikNoG();
+            _NKOTCKimlikNoG.TCKimlikNo = _TCID;
+            _NKOTCKimlikNoG.EskiEsListele = 0;
+            _NKOTCKimlikNoG.NKOTipi = NufusKayitOrnegiTipi.KisiKayitOrnegi;
+            _NKOTCKimlikNoG.Vukuatli = 1;
+
+            _NKOTCKimlikNoGA[0] = _NKOTCKimlikNoG;
+
             try
             {
                 //Service Gönderim  -Cevap Alma 
                 _KisiBilgisi = service.TCKimlikNodanKisiBilgisiSorgula(_TCKimlikNoGA);
+                TCKimlikResponse.Adı = _KisiBilgisi[0].TemelBilgisi.Ad;
+                TCKimlikResponse.Soyadı = _KisiBilgisi[0].TemelBilgisi.Soyad;
+                TCKimlikResponse.AnaAdı = _KisiBilgisi[0].TemelBilgisi.AnaAd;
+                TCKimlikResponse.BabaAdı = _KisiBilgisi[0].TemelBilgisi.BabaAd;
+                TCKimlikResponse.Cinsiyeti = _KisiBilgisi[0].TemelBilgisi.Cinsiyet.ToString();
+                TCKimlikResponse.Dogumtarihi = _KisiBilgisi[0].TemelBilgisi.DogumTarih.Gun.ToString() + "." +
+                    _KisiBilgisi[0].TemelBilgisi.DogumTarih.Ay.ToString() + "." +
+                    _KisiBilgisi[0].TemelBilgisi.DogumTarih.Yil.ToString(); ;
+                TCKimlikResponse.DoğumYeri = _KisiBilgisi[0].TemelBilgisi.DogumYer;
+                TCKimlikResponse.OzurDurumu = _KisiBilgisi[0].TemelBilgisi.OzurOran;
+                TCKimlikResponse.IlAd = _KisiBilgisi[0].KayitYeriBilgisi.IlAd;
+                TCKimlikResponse.IlceAd = _KisiBilgisi[0].KayitYeriBilgisi.IlceAd;
+                KisiBilgisi = _KisiBilgisi[0];
+
+                var cevap = service.NufusCuzdaniDogrulama(_TCKimlikNoGA);
+                NufusCuzdani = cevap[0];
+
+                //var cevap1 = service.TcNodanNKOSorgula(_NKOTCKimlikNoGA);
+
+                //var cevap1 = service.IlListesiGetir();
+
+                //var cevap2 = service.IlceListesiGetir();
+
+                IsOK = true;
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.Message.ToString());
+                IsOK = false;
+                XtraMessageBox.Show(ee.Message.ToString(), "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //Servis Cevap Dönüş Bilgileri
-            TCKimlikResponse.Adı = _KisiBilgisi[0].TemelBilgisi.Ad.ToString();
-            TCKimlikResponse.Soyadı = _KisiBilgisi[0].TemelBilgisi.Soyad.ToString();
-            TCKimlikResponse.AnaAdı = _KisiBilgisi[0].TemelBilgisi.AnaAd.ToString();
-            TCKimlikResponse.BabaAdı = _KisiBilgisi[0].TemelBilgisi.BabaAd.ToString();
-            TCKimlikResponse.Cinsiyeti = _KisiBilgisi[0].TemelBilgisi.Cinsiyet.ToString();
-            TCKimlikResponse.Dogumtarihi = _KisiBilgisi[0].TemelBilgisi.DogumTarih.Gun.ToString() + "." + 
-                _KisiBilgisi[0].TemelBilgisi.DogumTarih.Ay.ToString() + "." + 
-                _KisiBilgisi[0].TemelBilgisi.DogumTarih.Yil.ToString(); ;
-            TCKimlikResponse.DoğumYeri = _KisiBilgisi[0].TemelBilgisi.DogumYer.ToString();
-            TCKimlikResponse.OzurDurumu = _KisiBilgisi[0].TemelBilgisi.OzurOran;
-            TCKimlikResponse.IlAd = _KisiBilgisi[0].KayitYeriBilgisi.IlAd.ToString();
-            TCKimlikResponse.IlceAd = _KisiBilgisi[0].KayitYeriBilgisi.IlceAd.ToString();
-
             IsWorking = false;
 
-            if (RunWorkerCompleted != null) RunWorkerCompleted(this, e);
+            if (RunWorkerCompleted != null)
+                RunWorkerCompleted(this, e);
+
         }
 
     }
