@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[ARSIV] (
+    [KNR]             VARCHAR (6)  NOT NULL,
+    [ISTEYEN]         VARCHAR (20) NOT NULL,
+    [GONDEREN]        VARCHAR (20) NULL,
+    [ISTEME_TARIHI]   DATETIME     NOT NULL,
+    [GONDERME_TARIHI] DATETIME     NULL,
+    [STATU]           SMALLINT     NOT NULL
+);
+

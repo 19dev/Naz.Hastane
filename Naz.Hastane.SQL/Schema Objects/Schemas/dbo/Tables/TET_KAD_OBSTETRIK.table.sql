@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[TET_KAD_OBSTETRIK] (
+    [KNR]          VARCHAR (6)  NULL,
+    [SNR]          VARCHAR (3)  NULL,
+    [GELISTARIHI]  DATETIME     NULL,
+    [GEBSAYISI]    VARCHAR (50) NULL,
+    [SAT]          VARCHAR (50) NULL,
+    [BDT]          VARCHAR (50) NULL,
+    [PREZENTASYON] VARCHAR (50) NULL,
+    [SIMFUNKARIN]  VARCHAR (50) NULL,
+    [TA]           VARCHAR (50) NULL,
+    [KILO]         VARCHAR (50) NULL,
+    [TEST]         VARCHAR (50) NULL,
+    [ILAC]         VARCHAR (50) NULL,
+    [ACIKLAMA]     VARCHAR (50) NULL,
+    [GEBHAFTASI]   VARCHAR (50) NULL,
+    [RISKFAKTOR]   VARCHAR (50) NULL,
+    [NST]          VARCHAR (50) NULL,
+    [BIOFIZIK]     VARCHAR (50) NULL
+);
+

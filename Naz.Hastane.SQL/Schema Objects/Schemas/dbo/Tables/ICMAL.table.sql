@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ICMAL] (
+    [KNR]     VARCHAR (50) NULL,
+    [SNR]     VARCHAR (50) NULL,
+    [CODE]    VARCHAR (50) NULL,
+    [NAME]    VARCHAR (50) NULL,
+    [KSATISF] VARCHAR (50) NULL
+);
+

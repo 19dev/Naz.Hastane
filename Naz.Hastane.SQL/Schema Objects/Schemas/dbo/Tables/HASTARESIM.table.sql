@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[HASTARESIM] (
+    [KNR]   VARCHAR (6) NOT NULL,
+    [RESIM] IMAGE       NULL
+);
+

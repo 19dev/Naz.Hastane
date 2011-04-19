@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[MEDDIABETILACLAR] (
+    [SNO]       INT          IDENTITY (1, 1) NOT NULL,
+    [KNR]       VARCHAR (6)  NULL,
+    [SNR]       VARCHAR (3)  NULL,
+    [ILACKODU]  VARCHAR (50) NULL,
+    [GUNLUKDOZ] VARCHAR (50) NULL
+);
+

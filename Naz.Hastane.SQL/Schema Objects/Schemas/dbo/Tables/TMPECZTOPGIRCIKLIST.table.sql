@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[TMPECZTOPGIRCIKLIST] (
+    [CODE]    VARCHAR (15) NULL,
+    [NAME1]   VARCHAR (65) NULL,
+    [BIRIM]   VARCHAR (10) NULL,
+    [ADET]    FLOAT        NULL,
+    [TUTAR]   FLOAT        NULL,
+    [ALISF]   FLOAT        NULL,
+    [SATISF]  FLOAT        NULL,
+    [USER_ID] VARCHAR (20) NULL
+);
+

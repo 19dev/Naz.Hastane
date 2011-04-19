@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[BILGISISTEMLERIPARAMETRELER_112] (
+    [SIRANO]        INT           IDENTITY (1, 1) NOT NULL,
+    [BKULLANICIADI] NVARCHAR (50) NULL,
+    [BSIFRE]        NVARCHAR (50) NULL,
+    [BIP]           NVARCHAR (50) NULL,
+    [BHASTANEKODU]  NVARCHAR (50) NULL,
+    [BURL]          NVARCHAR (50) NULL,
+    [PROXY]         INT           NULL,
+    [PROXYUSER]     NVARCHAR (50) NULL,
+    [PROXYPASS]     NVARCHAR (50) NULL,
+    [GSUREBOLUM]    INT           NULL,
+    [GSUREYATAK]    INT           NULL,
+    [GSSUREPER]     INT           NULL,
+    [GSSUREEKIP]    INT           NULL
+);
+

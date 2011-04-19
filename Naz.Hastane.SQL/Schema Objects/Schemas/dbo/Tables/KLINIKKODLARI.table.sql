@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[KLINIKKODLARI] (
+    [KODU] FLOAT          NULL,
+    [DALI] NVARCHAR (255) NULL
+);
+

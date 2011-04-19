@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[FHAKEDIS] (
+    [ID]       INT          IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [KNR]      VARCHAR (50) NOT NULL,
+    [SNR]      VARCHAR (50) NOT NULL,
+    [DR]       VARCHAR (4)  NOT NULL,
+    [TUTAR]    FLOAT        NULL,
+    [TARIH]    DATETIME     NULL,
+    [HASTAADI] VARCHAR (50) NULL,
+    [FATURANO] VARCHAR (50) NULL,
+    [TANIM]    VARCHAR (10) NULL,
+    [GRUP]     VARCHAR (10) NULL,
+    [CODE]     VARCHAR (10) NULL,
+    [DRKNR]    VARCHAR (50) NULL,
+    [TARIH1]   DATETIME     NULL
+);
+

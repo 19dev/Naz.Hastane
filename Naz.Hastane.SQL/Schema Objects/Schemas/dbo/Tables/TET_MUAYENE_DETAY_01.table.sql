@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[TET_MUAYENE_DETAY_01] (
+    [KNR]           VARCHAR (6)    NOT NULL,
+    [SNR]           VARCHAR (3)    NOT NULL,
+    [GELISTARIHI]   DATETIME       NOT NULL,
+    [SIKAYET]       VARCHAR (500)  NULL,
+    [OYKU]          VARCHAR (1000) NULL,
+    [FIZIK_MUAYENE] VARCHAR (1000) NULL,
+    [ON_TANI]       VARCHAR (50)   NULL,
+    [TEDAVI]        VARCHAR (200)  NULL
+);
+

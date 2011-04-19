@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[TMPRESMIICMAL] (
+    [SIRA_ID]   FLOAT        NOT NULL,
+    [KNR]       VARCHAR (6)  NOT NULL,
+    [ADISOYADI] VARCHAR (40) NOT NULL,
+    [TARIH]     DATETIME     NOT NULL,
+    [SIGORTANO] VARCHAR (15) NOT NULL,
+    [SUTUN01]   FLOAT        NOT NULL,
+    [SUTUN02]   FLOAT        NOT NULL,
+    [SUTUN03]   FLOAT        NOT NULL,
+    [SUTUN04]   FLOAT        NOT NULL,
+    [SUTUN05]   FLOAT        NOT NULL,
+    [SUTUN06]   FLOAT        NOT NULL,
+    [SUTUN07]   FLOAT        NOT NULL,
+    [SUTUN08]   FLOAT        NOT NULL,
+    [SUTUN09]   FLOAT        NOT NULL,
+    [SUTUN10]   FLOAT        NOT NULL,
+    [TOPLAM]    FLOAT        NOT NULL,
+    [USER_ID]   VARCHAR (20) NOT NULL
+);
+

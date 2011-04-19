@@ -1,0 +1,60 @@
+﻿
+
+CREATE function [dbo].[udf_GetGunlukFaturaY](
+	@Tarih datetime)
+	returns table 
+	as return (
+
+	select 
+		OdemeSekli = 'N',
+		F.FTARIH,
+		TCKIMLIKNO,
+		M.HesapKodu,
+		--F.USER_ID,
+		F.ACIKLAMA as Aciklama,
+		F.MAKBUZNO as MakbuzNo,
+		'Tutar'= 
+		  SUM(CASE 
+			 WHEN CHARINDEX('600', M.HesapKodu) >0  THEN F.TUTAR
+			 WHEN CHARINDEX('120', M.HesapKodu) >0  THEN F.TUTAR
+			 WHEN CHARINDEX('391', M.HesapKodu) >0  THEN F.KDVT
+			END),
+		--SUM(F.BORC-F.ALACAK) AS BTUTAR,
+		SUM(F.FATT) AS HizmetTutari,
+		0 as KDVOrani,
+		'Yatan Kasa' as RecordType,
+		F.USER_ID
+
+	from  MuhasebeHesapKodu M
+		left join 
+		(select 
+			ADRES.TCKIMLIKNO,
+			CONVERT(VARCHAR(10), FATURA.FATURATARIHI, 104) AS FTARIH,
+			FATURA.USER_ID,
+			FATURA.KDVORANI,
+			FATURA.MAKBUZNO, 
+			sum(FATURA.HIZMETTUTARI) as TUTAR,
+			sum(FATURA.KDVTUTARI) AS KDVT,
+			sum(FATURA.FATURATUTARI) AS FATT,
+			FATURA.NAME AS ACIKLAMA
+			--K.ODEMESEKLI,
+		from FATURA 
+			--join KASA K on FATURA.FATURA_ID = K.FATURANO
+			join ADRES on ADRES.KNR = FATURA.KNR
+		where 
+			FATURA.ISIPTAL IS NULL and FATURA.FATURATARIHI >= @Tarih and FATURA.FATURATARIHI < dateadd(d,1,@Tarih )
+		GROUP BY 
+			CONVERT(VARCHAR(10),FATURA.FATURATARIHI , 104), FATURA.USER_ID, FATURA.KDVORANI, ADRES.TCKIMLIKNO, FATURA.MAKBUZNO, FATURA.NAME
+			--K.ODEMESEKLI, K.MAKBUZNO, HNEREYEODENDI
+			) F
+	  on F.USER_ID = M.UserID and M.KDV = F.KDVORANI
+	LEFT JOIN KEYDAT ON 
+		KEYDAT.SLB=F.KDVORANI AND
+		KEYDAT.SLK='02' 
+	WHERE M.KasaTipi = 'Y'
+
+	GROUP BY F.USER_ID,HesapKodu ,HesapAdi,F.FTARIH,F.MAKBUZNO,F.ACIKLAMA, TCKIMLIKNO, F.USER_ID
+	having SUM(F.TUTAR) >0
+	
+	)
+	

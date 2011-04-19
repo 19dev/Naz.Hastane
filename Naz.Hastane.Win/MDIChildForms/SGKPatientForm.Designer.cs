@@ -29,20 +29,32 @@
         private void InitializeComponent()
         {
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            this.gvIslemler = new DevExpress.XtraGrid.Views.Grid.GridView();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            this.gvPatientVisitDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTANIM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGRUP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCODE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colARZT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNAME1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitDetailAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSATISF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKSATISF = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colADET = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDoktor2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitDetailDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitDetailDoctor2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIslemler = new DevExpress.XtraGrid.GridControl();
-            this.gvZiyaret = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvPatientVisitRecord = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colVisitRecordDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordService = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordQueueNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordVisitType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordUserID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMedulaExitDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordControl = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordExceptionalStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitRecordAddQuery = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvPatientVisit = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colVisitNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colExitDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,19 +73,6 @@
             this.colPatientAppNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIliskiliTakipNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPatientVisitDetails = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbVoucher = new DevExpress.XtraEditors.SimpleButton();
             this.sbMedula = new DevExpress.XtraEditors.SimpleButton();
@@ -90,7 +89,7 @@
             this.sbKapat = new DevExpress.XtraEditors.SimpleButton();
             this.sbInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.sbIslemler = new DevExpress.XtraEditors.SimpleButton();
-            this.sbKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.sbSavePatient = new DevExpress.XtraEditors.SimpleButton();
             this.sbAra = new DevExpress.XtraEditors.SimpleButton();
             this.teEmail = new DevExpress.XtraEditors.TextEdit();
             this.teJobFax = new DevExpress.XtraEditors.TextEdit();
@@ -160,7 +159,6 @@
             this.lciHomeDistrict = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomeTown = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePostCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciInsuranceType = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePhone2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -168,6 +166,7 @@
             this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDigerBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lcgEkBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciSigortaliKartNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -196,7 +195,7 @@
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAra = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciKaydet = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSavePatient = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIslemler = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHastaFatura = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciKapat = new DevExpress.XtraLayout.LayoutControlItem();
@@ -219,11 +218,10 @@
             this.lciIslemlerGrid = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvIslemler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcIslemler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvZiyaret)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
@@ -296,7 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePostCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
@@ -304,6 +301,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).BeginInit();
@@ -332,7 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKaydet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIslemler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKapat)).BeginInit();
@@ -357,33 +355,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gvIslemler
+            // gvPatientVisitDetail
             // 
-            this.gvIslemler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvPatientVisitDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSiraNo,
             this.colAKOD,
             this.colTANIM,
             this.colGRUP,
             this.colCODE,
-            this.colARZT,
             this.colNAME1,
+            this.colVisitDetailAmount,
             this.colSATISF,
             this.colKSATISF,
-            this.colADET,
-            this.colDoktor2});
-            this.gvIslemler.DefaultRelationIndex = 1;
-            this.gvIslemler.GridControl = this.gcIslemler;
-            this.gvIslemler.Name = "gvIslemler";
-            this.gvIslemler.OptionsBehavior.Editable = false;
-            this.gvIslemler.OptionsBehavior.ReadOnly = true;
-            this.gvIslemler.OptionsView.ShowGroupPanel = false;
-            this.gvIslemler.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            this.colVisitDetailDoctor,
+            this.colVisitDetailDoctor2});
+            this.gvPatientVisitDetail.DefaultRelationIndex = 1;
+            this.gvPatientVisitDetail.GridControl = this.gcIslemler;
+            this.gvPatientVisitDetail.Name = "gvPatientVisitDetail";
+            this.gvPatientVisitDetail.OptionsBehavior.Editable = false;
+            this.gvPatientVisitDetail.OptionsBehavior.ReadOnly = true;
+            this.gvPatientVisitDetail.OptionsView.ShowGroupPanel = false;
+            this.gvPatientVisitDetail.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSiraNo, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colSiraNo
             // 
             this.colSiraNo.Caption = "Sıra No";
-            this.colSiraNo.FieldName = "ID.SIRANO";
+            this.colSiraNo.FieldName = "DetailNo";
             this.colSiraNo.Name = "colSiraNo";
             this.colSiraNo.Visible = true;
             this.colSiraNo.VisibleIndex = 0;
@@ -420,25 +418,25 @@
             this.colCODE.Visible = true;
             this.colCODE.VisibleIndex = 4;
             // 
-            // colARZT
-            // 
-            this.colARZT.Caption = "Doktor";
-            this.colARZT.FieldName = "doktor.Aciklama";
-            this.colARZT.Name = "colARZT";
-            this.colARZT.Visible = true;
-            this.colARZT.VisibleIndex = 5;
-            // 
             // colNAME1
             // 
             this.colNAME1.Caption = "İşlem";
             this.colNAME1.FieldName = "NAME1";
             this.colNAME1.Name = "colNAME1";
             this.colNAME1.Visible = true;
-            this.colNAME1.VisibleIndex = 6;
+            this.colNAME1.VisibleIndex = 5;
+            // 
+            // colVisitDetailAmount
+            // 
+            this.colVisitDetailAmount.Caption = "Adet";
+            this.colVisitDetailAmount.FieldName = "ADET";
+            this.colVisitDetailAmount.Name = "colVisitDetailAmount";
+            this.colVisitDetailAmount.Visible = true;
+            this.colVisitDetailAmount.VisibleIndex = 6;
             // 
             // colSATISF
             // 
-            this.colSATISF.Caption = "Tutar";
+            this.colSATISF.Caption = "Hasta Fiyatı";
             this.colSATISF.FieldName = "SATISF";
             this.colSATISF.Name = "colSATISF";
             this.colSATISF.Visible = true;
@@ -446,49 +444,150 @@
             // 
             // colKSATISF
             // 
-            this.colKSATISF.Caption = "Kurum Tutar";
+            this.colKSATISF.Caption = "Kurum Fiyatı";
             this.colKSATISF.FieldName = "KSATISF";
             this.colKSATISF.Name = "colKSATISF";
             this.colKSATISF.Visible = true;
             this.colKSATISF.VisibleIndex = 8;
             // 
-            // colADET
+            // colVisitDetailDoctor
             // 
-            this.colADET.Caption = "Adet";
-            this.colADET.FieldName = "ADET";
-            this.colADET.Name = "colADET";
-            this.colADET.Visible = true;
-            this.colADET.VisibleIndex = 9;
+            this.colVisitDetailDoctor.Caption = "Doktor";
+            this.colVisitDetailDoctor.FieldName = "Doctor";
+            this.colVisitDetailDoctor.Name = "colVisitDetailDoctor";
+            this.colVisitDetailDoctor.Visible = true;
+            this.colVisitDetailDoctor.VisibleIndex = 9;
             // 
-            // colDoktor2
+            // colVisitDetailDoctor2
             // 
-            this.colDoktor2.Caption = "Doktor2";
-            this.colDoktor2.FieldName = "doktor2.Aciklama";
-            this.colDoktor2.Name = "colDoktor2";
-            this.colDoktor2.Visible = true;
-            this.colDoktor2.VisibleIndex = 10;
+            this.colVisitDetailDoctor2.Caption = "Yap.Dr.";
+            this.colVisitDetailDoctor2.FieldName = "Doctor2";
+            this.colVisitDetailDoctor2.Name = "colVisitDetailDoctor2";
+            this.colVisitDetailDoctor2.Visible = true;
+            this.colVisitDetailDoctor2.VisibleIndex = 10;
             // 
             // gcIslemler
             // 
             this.gcIslemler.DataMember = null;
-            gridLevelNode1.LevelTemplate = this.gvIslemler;
-            gridLevelNode1.RelationName = "VisitDetails";
+            gridLevelNode1.LevelTemplate = this.gvPatientVisitDetail;
+            gridLevelNode1.RelationName = "PatientVisitDetails";
+            gridLevelNode2.LevelTemplate = this.gvPatientVisitRecord;
+            gridLevelNode2.RelationName = "PatientVisitRecords";
             this.gcIslemler.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode1,
+            gridLevelNode2});
             this.gcIslemler.Location = new System.Drawing.Point(12, 429);
-            this.gcIslemler.MainView = this.gvZiyaret;
+            this.gcIslemler.MainView = this.gvPatientVisit;
             this.gcIslemler.Name = "gcIslemler";
             this.gcIslemler.Size = new System.Drawing.Size(910, 199);
             this.gcIslemler.TabIndex = 23;
             this.gcIslemler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvZiyaret,
-            this.gridView4,
-            this.gridView1,
-            this.gvIslemler});
+            this.gvPatientVisitRecord,
+            this.gvPatientVisit,
+            this.gvPatientVisitDetail});
             // 
-            // gvZiyaret
+            // gvPatientVisitRecord
             // 
-            this.gvZiyaret.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvPatientVisitRecord.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colVisitRecordDate,
+            this.colVisitRecordService,
+            this.colVisitRecordDoctor,
+            this.colVisitRecordQueueNo,
+            this.colVisitRecordVisitType,
+            this.colVisitRecordUserID,
+            this.colMedulaExitDate,
+            this.colVisitRecordControl,
+            this.colVisitRecordExceptionalStatus,
+            this.colVisitRecordAddQuery});
+            this.gvPatientVisitRecord.GridControl = this.gcIslemler;
+            this.gvPatientVisitRecord.Name = "gvPatientVisitRecord";
+            this.gvPatientVisitRecord.OptionsBehavior.Editable = false;
+            this.gvPatientVisitRecord.OptionsBehavior.ReadOnly = true;
+            this.gvPatientVisitRecord.OptionsView.ShowGroupPanel = false;
+            // 
+            // colVisitRecordDate
+            // 
+            this.colVisitRecordDate.Caption = "Tarih";
+            this.colVisitRecordDate.FieldName = "VisitDate";
+            this.colVisitRecordDate.Name = "colVisitRecordDate";
+            this.colVisitRecordDate.Visible = true;
+            this.colVisitRecordDate.VisibleIndex = 0;
+            // 
+            // colVisitRecordService
+            // 
+            this.colVisitRecordService.Caption = "Servis";
+            this.colVisitRecordService.FieldName = "Servis";
+            this.colVisitRecordService.Name = "colVisitRecordService";
+            this.colVisitRecordService.Visible = true;
+            this.colVisitRecordService.VisibleIndex = 1;
+            // 
+            // colVisitRecordDoctor
+            // 
+            this.colVisitRecordDoctor.Caption = "Doktor";
+            this.colVisitRecordDoctor.FieldName = "Doctor";
+            this.colVisitRecordDoctor.Name = "colVisitRecordDoctor";
+            this.colVisitRecordDoctor.Visible = true;
+            this.colVisitRecordDoctor.VisibleIndex = 2;
+            // 
+            // colVisitRecordQueueNo
+            // 
+            this.colVisitRecordQueueNo.Caption = "Sıra No";
+            this.colVisitRecordQueueNo.FieldName = "QueueNo";
+            this.colVisitRecordQueueNo.Name = "colVisitRecordQueueNo";
+            this.colVisitRecordQueueNo.Visible = true;
+            this.colVisitRecordQueueNo.VisibleIndex = 3;
+            // 
+            // colVisitRecordVisitType
+            // 
+            this.colVisitRecordVisitType.Caption = "Tip";
+            this.colVisitRecordVisitType.FieldName = "VisitType";
+            this.colVisitRecordVisitType.Name = "colVisitRecordVisitType";
+            this.colVisitRecordVisitType.Visible = true;
+            this.colVisitRecordVisitType.VisibleIndex = 4;
+            // 
+            // colVisitRecordUserID
+            // 
+            this.colVisitRecordUserID.Caption = "Op";
+            this.colVisitRecordUserID.FieldName = "USER_ID";
+            this.colVisitRecordUserID.Name = "colVisitRecordUserID";
+            this.colVisitRecordUserID.Visible = true;
+            this.colVisitRecordUserID.VisibleIndex = 5;
+            // 
+            // colMedulaExitDate
+            // 
+            this.colMedulaExitDate.Caption = "Med.Çık.";
+            this.colMedulaExitDate.FieldName = "MCIKISTARIHI";
+            this.colMedulaExitDate.Name = "colMedulaExitDate";
+            this.colMedulaExitDate.Visible = true;
+            this.colMedulaExitDate.VisibleIndex = 6;
+            // 
+            // colVisitRecordControl
+            // 
+            this.colVisitRecordControl.Caption = "Kont.";
+            this.colVisitRecordControl.FieldName = "KONT";
+            this.colVisitRecordControl.Name = "colVisitRecordControl";
+            this.colVisitRecordControl.Visible = true;
+            this.colVisitRecordControl.VisibleIndex = 7;
+            // 
+            // colVisitRecordExceptionalStatus
+            // 
+            this.colVisitRecordExceptionalStatus.Caption = "İstisnai Durum";
+            this.colVisitRecordExceptionalStatus.FieldName = "ISTISNAIDURUM";
+            this.colVisitRecordExceptionalStatus.Name = "colVisitRecordExceptionalStatus";
+            this.colVisitRecordExceptionalStatus.Visible = true;
+            this.colVisitRecordExceptionalStatus.VisibleIndex = 8;
+            // 
+            // colVisitRecordAddQuery
+            // 
+            this.colVisitRecordAddQuery.Caption = "Ek Sorgu";
+            this.colVisitRecordAddQuery.FieldName = "EKSORGU";
+            this.colVisitRecordAddQuery.Name = "colVisitRecordAddQuery";
+            this.colVisitRecordAddQuery.Visible = true;
+            this.colVisitRecordAddQuery.VisibleIndex = 9;
+            // 
+            // gvPatientVisit
+            // 
+            this.gvPatientVisit.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colVisitNo,
             this.colVisitDate,
             this.colExitDate,
@@ -506,20 +605,20 @@
             this.colTakipDurumu,
             this.colPatientAppNo,
             this.colIliskiliTakipNo,
-            this.colDoctor,
-            this.colPatientVisitDetails});
-            this.gvZiyaret.GridControl = this.gcIslemler;
-            this.gvZiyaret.Name = "gvZiyaret";
-            this.gvZiyaret.OptionsBehavior.Editable = false;
-            this.gvZiyaret.OptionsBehavior.ReadOnly = true;
-            this.gvZiyaret.OptionsView.ShowGroupPanel = false;
-            this.gvZiyaret.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            this.colDoctor});
+            this.gvPatientVisit.GridControl = this.gcIslemler;
+            this.gvPatientVisit.Name = "gvPatientVisit";
+            this.gvPatientVisit.OptionsBehavior.Editable = false;
+            this.gvPatientVisit.OptionsBehavior.ReadOnly = true;
+            this.gvPatientVisit.OptionsView.ShowGroupPanel = false;
+            this.gvPatientVisit.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colVisitNo, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.gvZiyaret.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvZiyaret_MasterRowEmpty);
-            this.gvZiyaret.MasterRowGetLevelDefaultView += new DevExpress.XtraGrid.Views.Grid.MasterRowGetLevelDefaultViewEventHandler(this.gvZiyaret_MasterRowGetLevelDefaultView);
-            this.gvZiyaret.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvZiyaret_MasterRowGetChildList);
-            this.gvZiyaret.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvZiyaret_MasterRowGetRelationName);
-            this.gvZiyaret.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvZiyaret_MasterRowGetRelationCount);
+            this.gvPatientVisit.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvZiyaret_MasterRowEmpty);
+            this.gvPatientVisit.MasterRowGetLevelDefaultView += new DevExpress.XtraGrid.Views.Grid.MasterRowGetLevelDefaultViewEventHandler(this.gvZiyaret_MasterRowGetLevelDefaultView);
+            this.gvPatientVisit.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvZiyaret_MasterRowGetChildList);
+            this.gvPatientVisit.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvZiyaret_MasterRowGetRelationName);
+            this.gvPatientVisit.MasterRowGetRelationDisplayCaption += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvPatientVisit_MasterRowGetRelationDisplayCaption);
+            this.gvPatientVisit.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvZiyaret_MasterRowGetRelationCount);
             // 
             // colVisitNo
             // 
@@ -642,7 +741,7 @@
             // colPatientAppNo
             // 
             this.colPatientAppNo.Caption = "Hasta Başvuru No";
-            this.colPatientAppNo.FieldName = "PatientAppNo";
+            this.colPatientAppNo.FieldName = "HASTABASNO";
             this.colPatientAppNo.Name = "colPatientAppNo";
             this.colPatientAppNo.Visible = true;
             this.colPatientAppNo.VisibleIndex = 15;
@@ -658,120 +757,10 @@
             // colDoctor
             // 
             this.colDoctor.Caption = "Doktor";
+            this.colDoctor.FieldName = "Doctor.Value";
             this.colDoctor.Name = "colDoctor";
             this.colDoctor.Visible = true;
             this.colDoctor.VisibleIndex = 17;
-            // 
-            // colPatientVisitDetails
-            // 
-            this.colPatientVisitDetails.FieldName = "PatientVisitDetails";
-            this.colPatientVisitDetails.Name = "colPatientVisitDetails";
-            this.colPatientVisitDetails.Visible = true;
-            this.colPatientVisitDetails.VisibleIndex = 18;
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.gcIslemler;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn15,
-            this.gridColumn16,
-            this.gridColumn17});
-            this.gridView1.GridControl = this.gcIslemler;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn8, DevExpress.Data.ColumnSortOrder.Ascending)});
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Sıra No";
-            this.gridColumn8.FieldName = "ID.SIRANO";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 0;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "AKod";
-            this.gridColumn9.FieldName = "AKOD";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 1;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Tanım";
-            this.gridColumn10.FieldName = "TANIM";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 2;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Grup";
-            this.gridColumn11.FieldName = "GRUP";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 3;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "Code";
-            this.gridColumn12.FieldName = "CODE";
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 4;
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.Caption = "Doktor";
-            this.gridColumn13.FieldName = "ARZT";
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 5;
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.Caption = "İşlem";
-            this.gridColumn14.FieldName = "NAME1";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 6;
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.Caption = "Tutar";
-            this.gridColumn15.FieldName = "SATISF";
-            this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 7;
-            // 
-            // gridColumn16
-            // 
-            this.gridColumn16.Caption = "Kurum Tutar";
-            this.gridColumn16.FieldName = "KSATISF";
-            this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 8;
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Caption = "Adet";
-            this.gridColumn17.FieldName = "ADET";
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 9;
             // 
             // layoutControl1
             // 
@@ -790,7 +779,7 @@
             this.layoutControl1.Controls.Add(this.sbKapat);
             this.layoutControl1.Controls.Add(this.sbInvoice);
             this.layoutControl1.Controls.Add(this.sbIslemler);
-            this.layoutControl1.Controls.Add(this.sbKaydet);
+            this.layoutControl1.Controls.Add(this.sbSavePatient);
             this.layoutControl1.Controls.Add(this.sbAra);
             this.layoutControl1.Controls.Add(this.teEmail);
             this.layoutControl1.Controls.Add(this.teJobFax);
@@ -880,9 +869,9 @@
             // 
             // medulaSorgu
             // 
-            this.medulaSorgu.Location = new System.Drawing.Point(549, 80);
+            this.medulaSorgu.Location = new System.Drawing.Point(549, 44);
             this.medulaSorgu.Name = "medulaSorgu";
-            this.medulaSorgu.Size = new System.Drawing.Size(255, 317);
+            this.medulaSorgu.Size = new System.Drawing.Size(255, 313);
             this.medulaSorgu.TabIndex = 110;
             this.medulaSorgu.OnMedulaHastaKabulCompleted += new Naz.Hastane.Win.Controls.MedulaProvisionControl.MedulaProvisionControlCompleted(this.medulaSorgu_OnMedulaHastaKabulCompleted);
             // 
@@ -921,11 +910,10 @@
             // 
             // mernisSorgu
             // 
-            this.mernisSorgu.Location = new System.Drawing.Point(549, 44);
+            this.mernisSorgu.Location = new System.Drawing.Point(549, 361);
             this.mernisSorgu.Name = "mernisSorgu";
-            this.mernisSorgu.Size = new System.Drawing.Size(255, 32);
+            this.mernisSorgu.Size = new System.Drawing.Size(255, 36);
             this.mernisSorgu.TabIndex = 109;
-            this.mernisSorgu.Visible = false;
             this.mernisSorgu.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.mernisSorgu_RunWorkerCompleted);
             // 
             // sbKurumCarisineIsle
@@ -998,15 +986,15 @@
             this.sbIslemler.Text = "İşlemler";
             this.sbIslemler.Visible = false;
             // 
-            // sbKaydet
+            // sbSavePatient
             // 
-            this.sbKaydet.Location = new System.Drawing.Point(832, 174);
-            this.sbKaydet.Name = "sbKaydet";
-            this.sbKaydet.Size = new System.Drawing.Size(78, 22);
-            this.sbKaydet.StyleController = this.layoutControl1;
-            this.sbKaydet.TabIndex = 67;
-            this.sbKaydet.Text = "Kaydet(F5)";
-            this.sbKaydet.Click += new System.EventHandler(this.sbKaydet_Click);
+            this.sbSavePatient.Location = new System.Drawing.Point(832, 174);
+            this.sbSavePatient.Name = "sbSavePatient";
+            this.sbSavePatient.Size = new System.Drawing.Size(78, 22);
+            this.sbSavePatient.StyleController = this.layoutControl1;
+            this.sbSavePatient.TabIndex = 67;
+            this.sbSavePatient.Text = "Kaydet(F5)";
+            this.sbSavePatient.Click += new System.EventHandler(this.sbKaydet_Click);
             // 
             // sbAra
             // 
@@ -1524,14 +1512,14 @@
             this.lciHomeDistrict,
             this.lciHomeTown,
             this.lciHomePostCode,
-            this.layoutControlItem2,
             this.lciInsuranceType,
             this.lciHomePhone2,
             this.lciHomePhone1,
             this.lciHomeCity,
             this.lciTCID,
             this.lciSex,
-            this.lciMaritalStatus});
+            this.lciMaritalStatus,
+            this.layoutControlItem2});
             this.lcgHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.lcgHastaBilgileri.Name = "lcgHastaBilgileri";
             this.lcgHastaBilgileri.Size = new System.Drawing.Size(784, 357);
@@ -1684,9 +1672,9 @@
             // 
             this.layoutControlItem1.Control = this.medulaSorgu;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(525, 36);
+            this.layoutControlItem1.Location = new System.Drawing.Point(525, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(259, 321);
+            this.layoutControlItem1.Size = new System.Drawing.Size(259, 317);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -1732,20 +1720,6 @@
             this.lciHomePostCode.Size = new System.Drawing.Size(278, 24);
             this.lciHomePostCode.Text = "Posta Kodu";
             this.lciHomePostCode.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.mernisSorgu;
-            this.layoutControlItem2.CustomizationFormText = "Mernis Sorgusu";
-            this.layoutControlItem2.Location = new System.Drawing.Point(525, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(259, 36);
-            this.layoutControlItem2.Text = "Mernis Sorgusu";
-            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
-            this.layoutControlItem2.TextVisible = false;
-            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // lciInsuranceType
             // 
@@ -1818,6 +1792,19 @@
             this.lciMaritalStatus.Text = "Medeni Hali";
             this.lciMaritalStatus.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciMaritalStatus.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.mernisSorgu;
+            this.layoutControlItem2.CustomizationFormText = "Mernis Sorgusu";
+            this.layoutControlItem2.Location = new System.Drawing.Point(525, 317);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(259, 40);
+            this.layoutControlItem2.Text = "Mernis Sorgusu";
+            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextToControlDistance = 0;
+            this.layoutControlItem2.TextVisible = false;
             // 
             // lcgDigerBilgiler
             // 
@@ -2096,7 +2083,7 @@
             this.lcgSagTuslar.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciAra,
             this.emptySpaceItem1,
-            this.lciKaydet,
+            this.lciSavePatient,
             this.lciIslemler,
             this.lciHastaFatura,
             this.lciKapat,
@@ -2126,6 +2113,7 @@
             this.lciAra.TextSize = new System.Drawing.Size(0, 0);
             this.lciAra.TextToControlDistance = 0;
             this.lciAra.TextVisible = false;
+            this.lciAra.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // emptySpaceItem1
             // 
@@ -2136,17 +2124,17 @@
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lciKaydet
+            // lciSavePatient
             // 
-            this.lciKaydet.Control = this.sbKaydet;
-            this.lciKaydet.CustomizationFormText = "Kaydet";
-            this.lciKaydet.Location = new System.Drawing.Point(0, 150);
-            this.lciKaydet.Name = "lciKaydet";
-            this.lciKaydet.Size = new System.Drawing.Size(82, 26);
-            this.lciKaydet.Text = "Kaydet";
-            this.lciKaydet.TextSize = new System.Drawing.Size(0, 0);
-            this.lciKaydet.TextToControlDistance = 0;
-            this.lciKaydet.TextVisible = false;
+            this.lciSavePatient.Control = this.sbSavePatient;
+            this.lciSavePatient.CustomizationFormText = "Kaydet";
+            this.lciSavePatient.Location = new System.Drawing.Point(0, 150);
+            this.lciSavePatient.Name = "lciSavePatient";
+            this.lciSavePatient.Size = new System.Drawing.Size(82, 26);
+            this.lciSavePatient.Text = "Kaydet";
+            this.lciSavePatient.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSavePatient.TextToControlDistance = 0;
+            this.lciSavePatient.TextVisible = false;
             // 
             // lciIslemler
             // 
@@ -2305,6 +2293,7 @@
             this.lciIslemKartiSil.TextSize = new System.Drawing.Size(0, 0);
             this.lciIslemKartiSil.TextToControlDistance = 0;
             this.lciIslemKartiSil.TextVisible = false;
+            this.lciIslemKartiSil.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciKurumCarisineIsle
             // 
@@ -2318,6 +2307,7 @@
             this.lciKurumCarisineIsle.TextSize = new System.Drawing.Size(0, 0);
             this.lciKurumCarisineIsle.TextToControlDistance = 0;
             this.lciKurumCarisineIsle.TextVisible = false;
+            this.lciKurumCarisineIsle.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciKurumCaridenSil
             // 
@@ -2331,6 +2321,7 @@
             this.lciKurumCaridenSil.TextSize = new System.Drawing.Size(0, 0);
             this.lciKurumCaridenSil.TextToControlDistance = 0;
             this.lciKurumCaridenSil.TextVisible = false;
+            this.lciKurumCaridenSil.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciBelgeBas
             // 
@@ -2344,6 +2335,7 @@
             this.lciBelgeBas.TextSize = new System.Drawing.Size(0, 0);
             this.lciBelgeBas.TextToControlDistance = 0;
             this.lciBelgeBas.TextVisible = false;
+            this.lciBelgeBas.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciIslemDetay
             // 
@@ -2357,6 +2349,7 @@
             this.lciIslemDetay.TextSize = new System.Drawing.Size(0, 0);
             this.lciIslemDetay.TextToControlDistance = 0;
             this.lciIslemDetay.TextVisible = false;
+            this.lciIslemDetay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciDetayDok
             // 
@@ -2370,15 +2363,16 @@
             this.lciDetayDok.TextSize = new System.Drawing.Size(0, 0);
             this.lciDetayDok.TextToControlDistance = 0;
             this.lciDetayDok.TextVisible = false;
+            this.lciDetayDok.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciIslemlerGrid
             // 
             this.lciIslemlerGrid.Control = this.gcIslemler;
-            this.lciIslemlerGrid.CustomizationFormText = "İşlemler";
+            this.lciIslemlerGrid.CustomizationFormText = "Ziyaretler";
             this.lciIslemlerGrid.Location = new System.Drawing.Point(0, 401);
             this.lciIslemlerGrid.Name = "lciIslemlerGrid";
             this.lciIslemlerGrid.Size = new System.Drawing.Size(914, 219);
-            this.lciIslemlerGrid.Text = "İşlemler";
+            this.lciIslemlerGrid.Text = "Ziyaretler";
             this.lciIslemlerGrid.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciIslemlerGrid.TextSize = new System.Drawing.Size(87, 13);
             // 
@@ -2408,11 +2402,10 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "SGKPatientForm";
             this.Text = "HastaIslemleri";
-            ((System.ComponentModel.ISupportInitialize)(this.gvIslemler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcIslemler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvZiyaret)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
@@ -2485,7 +2478,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePostCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
@@ -2493,6 +2485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).EndInit();
@@ -2521,7 +2514,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKaydet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIslemler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKapat)).EndInit();
@@ -2556,7 +2549,7 @@
         private DevExpress.XtraEditors.TextEdit tePatientNo;
         private DevExpress.XtraEditors.TextEdit teHomePhone1;
         private DevExpress.XtraGrid.GridControl gcIslemler;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvZiyaret;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisit;
         private DevExpress.XtraEditors.DateEdit deIDDate;
         private DevExpress.XtraEditors.TextEdit teIDPlace;
         private DevExpress.XtraEditors.TextEdit teIDNO;
@@ -2592,7 +2585,7 @@
         private DevExpress.XtraEditors.SimpleButton sbKapat;
         private DevExpress.XtraEditors.SimpleButton sbInvoice;
         private DevExpress.XtraEditors.SimpleButton sbIslemler;
-        private DevExpress.XtraEditors.SimpleButton sbKaydet;
+        private DevExpress.XtraEditors.SimpleButton sbSavePatient;
         private DevExpress.XtraEditors.SimpleButton sbAra;
         private DevExpress.XtraEditors.TextEdit teEmail;
         private DevExpress.XtraEditors.TextEdit teJobFax;
@@ -2658,7 +2651,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciAra;
         private DevExpress.XtraLayout.LayoutControlItem lciPoliklinik;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem lciKaydet;
+        private DevExpress.XtraLayout.LayoutControlItem lciSavePatient;
         private DevExpress.XtraLayout.LayoutControlItem lciIslemler;
         private DevExpress.XtraLayout.LayoutControlItem lciHastaFatura;
         private DevExpress.XtraLayout.LayoutControlItem lciKapat;
@@ -2700,37 +2693,25 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTakipTuru;
         private DevExpress.XtraGrid.Columns.GridColumn colPatientAppNo;
         private DevExpress.XtraGrid.Columns.GridColumn colIliskiliTakipNo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvIslemler;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisitDetail;
         private DevExpress.XtraGrid.Columns.GridColumn colSiraNo;
         private DevExpress.XtraGrid.Columns.GridColumn colAKOD;
         private DevExpress.XtraGrid.Columns.GridColumn colTANIM;
         private DevExpress.XtraGrid.Columns.GridColumn colGRUP;
         private DevExpress.XtraGrid.Columns.GridColumn colCODE;
-        private DevExpress.XtraGrid.Columns.GridColumn colARZT;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitDetailAmount;
         private DevExpress.XtraGrid.Columns.GridColumn colNAME1;
         private DevExpress.XtraGrid.Columns.GridColumn colSATISF;
         private DevExpress.XtraGrid.Columns.GridColumn colKSATISF;
-        private DevExpress.XtraGrid.Columns.GridColumn colADET;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitDetailDoctor;
         private DevExpress.XtraGrid.Columns.GridColumn colDoctor;
         private DevExpress.XtraEditors.LookUpEdit lueStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoktor2;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitDetailDoctor2;
         private Controls.MernisSorgu mernisSorgu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisitRecord;
         private Controls.MedulaProvisionControl medulaSorgu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPatientVisitDetails;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraEditors.SimpleButton sbMedula;
         private DevExpress.XtraEditors.SimpleButton sbMernis;
@@ -2740,5 +2721,15 @@
         private DevExpress.XtraEditors.SimpleButton sbVoucher;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordService;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordDoctor;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordQueueNo;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordVisitType;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordUserID;
+        private DevExpress.XtraGrid.Columns.GridColumn colMedulaExitDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordControl;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordExceptionalStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitRecordAddQuery;
     }
 }

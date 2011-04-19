@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[DISMERKEZLER_FIYAT] (
+    [KNR]     VARCHAR (5)  NOT NULL,
+    [TANIM]   VARCHAR (2)  NOT NULL,
+    [GRUP]    VARCHAR (3)  NOT NULL,
+    [CODE]    VARCHAR (15) NOT NULL,
+    [MSATISF] FLOAT        NOT NULL
+);
+

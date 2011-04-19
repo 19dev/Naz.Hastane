@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[TET_ANAMNEZ1] (
+    [KNR]              VARCHAR (6)    NULL,
+    [SNR]              VARCHAR (3)    NULL,
+    [OZSOYGECMIS]      VARCHAR (1000) NULL,
+    [SISTEMSORGULARI]  VARCHAR (1000) NULL,
+    [MUAYENEBULGULARI] VARCHAR (1000) NULL,
+    [ONTANI]           VARCHAR (100)  NULL,
+    [TESHISVETEDAVI]   VARCHAR (1000) NULL,
+    [USER_ID]          VARCHAR (20)   NULL,
+    [DATE_CREATE]      DATETIME       NULL,
+    [USER_ID_UPDATE]   VARCHAR (20)   NULL,
+    [DATE_UPDATE]      DATETIME       NULL,
+    [GELIS_TARIHI]     DATETIME       NULL,
+    [AMLNOTU]          VARCHAR (50)   NULL,
+    [AMLRAP]           VARCHAR (50)   NULL,
+    [RAPNOTU]          VARCHAR (50)   NULL,
+    [HEMSIRE]          VARCHAR (50)   NULL,
+    [ANESTEZI]         VARCHAR (50)   NULL,
+    [ASISTAN]          VARCHAR (50)   NULL,
+    [ANESTEZIST]       VARCHAR (50)   NULL,
+    [OPARATOR]         VARCHAR (50)   NULL,
+    [TESKODU]          VARCHAR (50)   NULL,
+    [TESADI]           VARCHAR (1000) NULL,
+    [YATBOLUM]         VARCHAR (50)   NULL,
+    [YATDOKTOR]        VARCHAR (50)   NULL
+);
+

@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Results] (
+    [ARZT]  NVARCHAR (255) NULL,
+    [CODE]  NVARCHAR (255) NULL,
+    [GRUP]  NVARCHAR (255) NULL,
+    [TANIM] NVARCHAR (255) NULL,
+    [YUZDE] FLOAT          NULL
+);
+

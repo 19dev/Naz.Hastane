@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ILAC_ATC_BARKOD] (
+    [ATCNO]      VARCHAR (50) NULL,
+    [SBRSILACNO] VARCHAR (50) NULL,
+    [CODE]       VARCHAR (50) NULL
+);
+

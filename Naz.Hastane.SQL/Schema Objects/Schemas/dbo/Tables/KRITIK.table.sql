@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[KRITIK] (
+    [ANABASLIK] CHAR (30) NULL,
+    [ACIKLAMA]  CHAR (50) NULL
+);
+

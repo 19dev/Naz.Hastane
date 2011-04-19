@@ -1,0 +1,8 @@
+﻿
+CREATE VIEW dbo.Drkodları
+AS
+SELECT     TOP 100 PERCENT SLB, SLT
+FROM         dbo.KEYDAT
+WHERE     (SLK = '07')
+ORDER BY SLB
+

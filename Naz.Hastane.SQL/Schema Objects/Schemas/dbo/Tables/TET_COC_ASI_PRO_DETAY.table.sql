@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TET_COC_ASI_PRO_DETAY] (
+    [PRO_KOD]       VARCHAR (10) NOT NULL,
+    [ASI_KOD]       VARCHAR (10) NOT NULL,
+    [AY]            SMALLINT     NULL,
+    [YAPILIS_SEKLI] VARCHAR (10) NULL,
+    [SIRANO]        SMALLINT     NOT NULL
+);
+

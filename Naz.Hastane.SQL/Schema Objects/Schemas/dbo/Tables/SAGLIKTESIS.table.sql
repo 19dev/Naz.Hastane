@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[SAGLIKTESIS] (
+    [KODU]      VARCHAR (50)   NOT NULL,
+    [ADI]       VARCHAR (1000) NULL,
+    [UNVANI]    VARCHAR (1000) NULL,
+    [ILI]       VARCHAR (50)   NULL,
+    [TESISTURU] VARCHAR (50)   NULL,
+    [KAMUOZEL]  VARCHAR (50)   NULL
+);
+

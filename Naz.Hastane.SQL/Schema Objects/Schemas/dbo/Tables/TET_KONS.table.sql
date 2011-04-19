@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TET_KONS] (
+    [POLKOD] VARCHAR (2) NOT NULL,
+    [TANIM]  VARCHAR (2) NOT NULL,
+    [GRUP]   CHAR (3)    NOT NULL,
+    [CODE]   CHAR (50)   NOT NULL
+);
+

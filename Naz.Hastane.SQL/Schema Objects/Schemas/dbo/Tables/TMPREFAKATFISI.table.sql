@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TMPREFAKATFISI] (
+    [KNR]     VARCHAR (6)  NULL,
+    [TARIH]   DATETIME     NULL,
+    [GUN]     VARCHAR (10) NULL,
+    [UCRET]   FLOAT        NULL,
+    [USER_ID] VARCHAR (20) NULL
+);
+

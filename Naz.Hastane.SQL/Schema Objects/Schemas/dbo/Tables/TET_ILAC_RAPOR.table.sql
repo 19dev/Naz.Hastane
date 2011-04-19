@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TET_ILAC_RAPOR] (
+    [KNR]      VARCHAR (6)   NOT NULL,
+    [SNR]      VARCHAR (3)   NOT NULL,
+    [ILACISIM] VARCHAR (300) NULL,
+    [ILACDOZ]  VARCHAR (200) NULL,
+    [ADET]     FLOAT         NULL,
+    [GELTARIH] DATETIME      NOT NULL,
+    [ARZT]     VARCHAR (50)  NULL
+);
+

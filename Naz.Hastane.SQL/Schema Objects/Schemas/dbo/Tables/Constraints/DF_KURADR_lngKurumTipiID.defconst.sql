@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[KURADR]
+    ADD CONSTRAINT [DF_KURADR_lngKurumTipiID] DEFAULT ((0)) FOR [lngKurumTipiID];
+

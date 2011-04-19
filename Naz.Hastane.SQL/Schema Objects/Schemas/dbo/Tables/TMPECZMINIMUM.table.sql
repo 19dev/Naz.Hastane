@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TMPECZMINIMUM] (
+    [ISTEM]    FLOAT        NULL,
+    [ACIKLAMA] VARCHAR (65) NULL,
+    [MEVCUT]   FLOAT        NULL,
+    [MINIMUM]  FLOAT        NULL,
+    [USER_ID]  VARCHAR (20) NULL
+);
+

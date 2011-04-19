@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TMPLABTESTLISTESI] (
+    [NAME1]   VARCHAR (120) NULL,
+    [CNT]     FLOAT         NULL,
+    [CODE]    VARCHAR (50)  NULL,
+    [USER_ID] VARCHAR (50)  NULL
+);
+

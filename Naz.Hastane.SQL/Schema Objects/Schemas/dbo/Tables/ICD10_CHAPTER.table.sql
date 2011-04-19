@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[ICD10_CHAPTER] (
+    [CH_NO]   CHAR (3)      NOT NULL,
+    [CHAPTER] VARCHAR (200) NOT NULL
+);
+

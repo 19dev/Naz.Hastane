@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[EK9] (
+    [CODE] NVARCHAR (255) NULL,
+    [G]    VARCHAR (255)  NULL
+);
+

@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[CALISMASAATREZERVE] (
+    [SLK]      CHAR (2)    NOT NULL,
+    [SLB]      CHAR (10)   NOT NULL,
+    [YIL]      SMALLINT    NOT NULL,
+    [AY]       SMALLINT    NOT NULL,
+    [GUNBASLA] SMALLINT    NOT NULL,
+    [SAAT]     VARCHAR (5) NOT NULL
+);
+

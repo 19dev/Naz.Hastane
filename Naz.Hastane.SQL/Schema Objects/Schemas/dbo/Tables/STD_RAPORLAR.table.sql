@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[STD_RAPORLAR] (
+    [KATEGORINO] VARCHAR (2)   NOT NULL,
+    [RAPORNO]    INT           NOT NULL,
+    [ACIKLAMA]   VARCHAR (100) NULL,
+    [RAPOR]      TEXT          NULL
+);
+

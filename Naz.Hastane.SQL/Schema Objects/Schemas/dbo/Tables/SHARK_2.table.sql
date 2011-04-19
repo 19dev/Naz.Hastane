@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[SHARK_2] (
+    [AKOD]  VARCHAR (2)  NOT NULL,
+    [TANIM] VARCHAR (2)  NOT NULL,
+    [GRUP]  VARCHAR (3)  NOT NULL,
+    [CODE]  VARCHAR (15) NOT NULL,
+    [TARIH] DATETIME     NULL
+);
+

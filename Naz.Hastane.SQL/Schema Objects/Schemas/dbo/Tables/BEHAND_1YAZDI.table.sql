@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[BEHAND_1YAZDI] (
+    [KNR] VARCHAR (6) NOT NULL,
+    [SNR] VARCHAR (3) NOT NULL
+);
+

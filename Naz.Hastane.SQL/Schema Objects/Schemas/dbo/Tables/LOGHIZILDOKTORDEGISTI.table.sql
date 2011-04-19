@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[LOGHIZILDOKTORDEGISTI] (
+    [KNR]            VARCHAR (6)  NOT NULL,
+    [SNR]            VARCHAR (3)  NOT NULL,
+    [SIRANO]         FLOAT        NOT NULL,
+    [AKOD]           VARCHAR (2)  NULL,
+    [TANIM]          VARCHAR (2)  NOT NULL,
+    [GRUP]           VARCHAR (3)  NOT NULL,
+    [CODE]           VARCHAR (15) NOT NULL,
+    [EARZT]          VARCHAR (4)  NOT NULL,
+    [YARZT]          VARCHAR (4)  NULL,
+    [EARZT2]         VARCHAR (4)  NOT NULL,
+    [YARZT2]         VARCHAR (4)  NULL,
+    [EADET]          FLOAT        NOT NULL,
+    [YADET]          FLOAT        NULL,
+    [ESATISF]        FLOAT        NOT NULL,
+    [YSATISF]        FLOAT        NOT NULL,
+    [EKSATISF]       FLOAT        NOT NULL,
+    [YKSATISF]       FLOAT        NULL,
+    [ETARIH]         DATETIME     NOT NULL,
+    [YTARIH]         DATETIME     NULL,
+    [USER_ID]        VARCHAR (20) NOT NULL,
+    [DATE_CREATE]    DATETIME     NOT NULL,
+    [USER_ID_UPDATE] VARCHAR (20) NULL
+);
+

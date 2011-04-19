@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[SHARK] (
+    [SH_ID]          NUMERIC (18) IDENTITY (1, 1) NOT NULL,
+    [AKOD]           VARCHAR (2)  NOT NULL,
+    [TANIM]          VARCHAR (2)  NOT NULL,
+    [GRUP]           VARCHAR (3)  NOT NULL,
+    [CODE]           VARCHAR (15) NOT NULL,
+    [TARIH]          DATETIME     NOT NULL,
+    [FIRMA]          VARCHAR (1)  NOT NULL,
+    [EVRAKNO]        VARCHAR (10) NULL,
+    [ACIKLAMA]       VARCHAR (50) NULL,
+    [G_C]            VARCHAR (1)  NOT NULL,
+    [ADET]           FLOAT        NOT NULL,
+    [BIRIMF]         FLOAT        NOT NULL,
+    [TUTAR]          FLOAT        NOT NULL,
+    [SERVIS]         VARCHAR (2)  NULL,
+    [ARZT]           VARCHAR (4)  NULL,
+    [DURUM]          VARCHAR (1)  NULL,
+    [USER_ID]        VARCHAR (20) NOT NULL,
+    [DATE_CREATE]    DATETIME     NOT NULL,
+    [USER_ID_UPDATE] VARCHAR (20) NULL,
+    [DATE_UPDATE]    DATETIME     NULL,
+    [KALAN]          FLOAT        NULL,
+    [MIADTARIHI]     DATETIME     NULL
+);
+

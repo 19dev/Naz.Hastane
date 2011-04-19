@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[TET_USER_SABLON] (
+    [USER_ID]     VARCHAR (20)  NOT NULL,
+    [USER_PASS]   VARCHAR (10)  NOT NULL,
+    [SABLON]      VARCHAR (4)   NULL,
+    [TESHISTANIM] VARCHAR (4)   NULL,
+    [TAKIP_KARTI] INT           NULL,
+    [SES]         VARCHAR (200) NULL
+);
+

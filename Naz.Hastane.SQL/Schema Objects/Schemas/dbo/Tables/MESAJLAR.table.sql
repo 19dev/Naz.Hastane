@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[MESAJLAR] (
+    [TARIH]    DATETIME       NOT NULL,
+    [GONDEREN] VARCHAR (20)   NOT NULL,
+    [ALICI]    VARCHAR (20)   NOT NULL,
+    [KONU]     VARCHAR (50)   NOT NULL,
+    [MESAJ]    VARCHAR (1000) NOT NULL,
+    [STATU]    CHAR (1)       NOT NULL
+);
+

@@ -5,27 +5,6 @@ using Naz.Hastane.Medula.HastaKabulIslemleri;
 
 namespace Naz.Hastane.Win.Controls
 {
-    public class MedulaProvisionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-    {
-
-        private object[] results;
-
-        public MedulaProvisionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-            base(exception, cancelled, userState)
-        {
-            this.results = results;
-        }
-
-        public MedulaProvisionResult Result
-        {
-            get
-            {
-                base.RaiseExceptionIfNecessary();
-                return ((MedulaProvisionResult)(this.results[0]));
-            }
-        }
-    }
-
     public partial class MedulaProvisionControl : DevExpress.XtraEditors.XtraUserControl
     {
         public delegate void MedulaProvisionControlCompleted(Object sender, MedulaProvisionCompletedEventArgs e);
@@ -50,6 +29,9 @@ namespace Naz.Hastane.Win.Controls
         private void MedulaProvisionControl_Load(object sender, EventArgs e)
         {
             if (!DesignMode) LoadLookUps();
+            this.teFollowUpNo.Text = "";
+            this.tePatientApplicationNo.Text = "";
+            this.teRelatedFollowUpNo.Text = "";
         }
 
         private void LoadLookUps()
@@ -88,7 +70,7 @@ namespace Naz.Hastane.Win.Controls
             pgd.provizyonTipi = lueProvisionType.EditValue.ToString();
             pgd.saglikTesisKodu = 10343154;
             pgd.sigortaliTuru = lueInsuranceType.EditValue.ToString();
-            pgd.takipNo = "";
+            pgd.takipNo = this.teRelatedFollowUpNo.Text;
             pgd.takipTipi = lueFollowUpType.EditValue.ToString();
             pgd.tedaviTipi = lueTreatmentType.EditValue.ToString();
             pgd.tedaviTuru = lueTreatmentStyle.EditValue.ToString();
@@ -132,6 +114,9 @@ namespace Naz.Hastane.Win.Controls
                     mpr.TreatmentStyle = this.lueTreatmentStyle.EditValue.ToString();
 
                     mpr.TransferorInstitution = lueTransferorInstitution.EditValue.ToString();
+
+                    this.teFollowUpNo.Text = e.Result.takipNo;
+                    this.tePatientApplicationNo.Text = e.Result.hastaBasvuruNo;
                 }
                 if (OnMedulaHastaKabulCompleted != null)
                     OnMedulaHastaKabulCompleted(this, mpcea);
@@ -149,7 +134,26 @@ namespace Naz.Hastane.Win.Controls
             {
             }
         }
-
-
     }
+    public class MedulaProvisionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        public MedulaProvisionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        public MedulaProvisionResult Result
+        {
+            get
+            {
+                base.RaiseExceptionIfNecessary();
+                return ((MedulaProvisionResult)(this.results[0]));
+            }
+        }
+    }
+
 }

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[BARKODSCRIPT] (
+    [BARKOD_ID]     INT            NOT NULL,
+    [BARKOD_ADI]    VARCHAR (50)   NULL,
+    [BARKOD_SCRIPT] VARCHAR (4000) NULL
+);
+

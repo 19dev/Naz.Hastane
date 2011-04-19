@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[TMPRADLIST] (
+    [PROTNO]    VARCHAR (50)  NULL,
+    [ADISOYADI] VARCHAR (50)  NULL,
+    [HASTANO]   VARCHAR (50)  NULL,
+    [SERVIS]    VARCHAR (50)  NULL,
+    [ISLEM]     VARCHAR (100) NULL,
+    [TARIH]     DATETIME      NULL,
+    [TUTAR]     FLOAT         NULL,
+    [KURUMU]    VARCHAR (100) NULL,
+    [USER_ID]   VARCHAR (20)  NULL
+);
+

@@ -1,0 +1,28 @@
+﻿
+
+
+
+
+
+
+/****** Object:  View dbo.vw_HUZUREVI    Script Date: 20.02.2006 00:08:20 
+******/
+CREATE VIEW dbo.vw_HUZUREVI
+AS
+SELECT     dbo.ADRES.KNR, dbo.ADRES.HASTAADI, dbo.ADRES.HASTASOYADI, 
+dbo.HUZUREVI_DETAY.TARIH, dbo.HUZUREVI_DETAY.ACIKLAMA,
+                      dbo.HUZUREVI_DETAY.TUTAR
+FROM         dbo.HUZUREVI INNER JOIN
+                      dbo.ADRES ON dbo.HUZUREVI.KNR = dbo.ADRES.KNR LEFT 
+OUTER JOIN
+                      dbo.HUZUREVI_DETAY ON dbo.HUZUREVI.KNR = 
+dbo.HUZUREVI_DETAY.KNR
+WHERE     (dbo.HUZUREVI_DETAY.B_A = 'B') AND (dbo.HUZUREVI_DETAY.MAKNO IS 
+NULL)
+
+
+
+
+
+
+

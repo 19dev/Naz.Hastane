@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[TET_COC_ASI_TAN] (
+    [ASI_KOD]      VARCHAR (10) NOT NULL,
+    [ASI_ACIKLAMA] VARCHAR (50) NULL
+);
+

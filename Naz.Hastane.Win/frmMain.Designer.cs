@@ -10,12 +10,12 @@ namespace Naz.Hastane.Win {
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
@@ -487,7 +487,7 @@ namespace Naz.Hastane.Win {
             this.iPriceList});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 289;
+            this.rcMain.MaxItemId = 290;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -495,20 +495,20 @@ namespace Naz.Hastane.Win {
             this.rcMain.PageHeaderItemLinks.Add(this.biStyle);
             this.rcMain.PageHeaderItemLinks.Add(this.iHakkinda);
             this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rpUser,
             this.rpSGKPatients,
             this.rpMedulaReports,
             this.rbMedulaDefinitions,
             this.rpAccounting,
             this.rbAdminReports,
             this.rbDefinitions,
+            this.rpUser,
             this.rpGallery});
             this.rcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rbMedulaDefinitions;
+            this.rcMain.SelectedPage = this.rpSGKPatients;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1597,14 +1597,14 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup9.ImageIndex = 22;
             this.ribbonPageGroup9.ItemLinks.Add(this.iCik);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            toolTipTitleItem1.Text = "Save File Dialog";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.Text = "Show the Save file dialog box";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.ribbonPageGroup9.SuperTip = superToolTip1;
+            toolTipTitleItem2.Text = "Save File Dialog";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.Text = "Show the Save file dialog box";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.ribbonPageGroup9.SuperTip = superToolTip2;
             this.ribbonPageGroup9.Text = "Exit";
             // 
             // rpSGKPatients
@@ -1637,14 +1637,14 @@ namespace Naz.Hastane.Win {
             this.rpgMedulaReports.ItemLinks.Add(this.iTreatmentReports);
             this.rpgMedulaReports.ItemLinks.Add(this.iDiabetReports);
             this.rpgMedulaReports.Name = "rpgMedulaReports";
-            toolTipTitleItem2.Text = "Edit Popup Menu";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.Text = "Show the Edit popup menu";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.rpgMedulaReports.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Edit Popup Menu";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.Text = "Show the Edit popup menu";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.rpgMedulaReports.SuperTip = superToolTip1;
             this.rpgMedulaReports.Text = "Medula Raporlarý";
             this.rpgMedulaReports.CaptionButtonClick += new DevExpress.XtraBars.Ribbon.RibbonPageGroupEventHandler(this.ribbonPageGroup2_CaptionButtonClick);
             // 

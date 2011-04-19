@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[MINIMUM71] (
+    [CODE]    NVARCHAR (255) NULL,
+    [MINIMUM] FLOAT          NULL
+);
+

@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CREXPORT] (
+    [PH_1]              VARCHAR (13)  NULL,
+    [PH_TARIHARALIGI]   VARCHAR (40)  NULL,
+    [PH_SAYFA]          VARCHAR (142) NULL,
+    [PH_4]              VARCHAR (6)   NULL,
+    [PH_5]              VARCHAR (16)  NULL,
+    [PH_6]              VARCHAR (3)   NULL,
+    [PH_7]              VARCHAR (7)   NULL,
+    [PH_8]              VARCHAR (8)   NULL,
+    [PH_9]              VARCHAR (4)   NULL,
+    [PH_10]             VARCHAR (5)   NULL,
+    [PH_11]             VARCHAR (5)   NULL,
+    [GH1_GroupName_SLT] VARCHAR (255) NULL,
+    [GH3_KNR]           VARCHAR (7)   NULL,
+    [GH3_AD_SOYAD]      VARCHAR (47)  NULL,
+    [GH3_YAŞ]           VARCHAR (66)  NULL,
+    [GH3_EV_TEL1]       VARCHAR (16)  NULL,
+    [GH3_EV_TEL2]       VARCHAR (16)  NULL,
+    [GH3_EV_ILCE]       VARCHAR (51)  NULL,
+    [GH3_EV_SEHIR]      VARCHAR (21)  NULL,
+    [GH3_EV_ADRES]      VARCHAR (61)  NULL,
+    [PF_TIPDATA]        VARCHAR (117) NULL,
+    [PF_HastaneAdi]     VARCHAR (255) NULL
+);
+

@@ -30,7 +30,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.ECZKATPAYI).Column("ECZKATPAYI").Length(8); //0
             Map(x => x.ECZMUAUCRETI).Column("ECZMUAUCRETI").Length(8); //0
             Map(x => x.EKSIKODENEN).Column("EKSIKODENEN").Length(8); //0
-            Map(x => x.EPOSTA).Column("EPOSTA").Length(50); //1
+            //Map(x => x.EPOSTA).Column("EPOSTA").Length(50); //1
             Map(x => x.FAX).Column("FAX").Length(20); //1
             Map(x => x.FIXKURUM).Column("FIXKURUM").Length(2); //0
             Map(x => x.FIYLIST).Column("FIYLIST").Length(2); //1

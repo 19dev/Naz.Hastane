@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[NX_HAREKET_DURUMLARI] (
+    [ID]       CHAR (1)     NOT NULL,
+    [ACIKLAMA] VARCHAR (32) NULL
+);
+

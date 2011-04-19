@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[RANDEVULAR]
+    ADD CONSTRAINT [CK_RANDEVULAR_TIPI] CHECK ([TIPI] = 'K' or [TIPI] = 'C' or [TIPI] = 'H');
+

@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[FT_TELEFON_DEFTERI] (
+    [SIRA]      INT           IDENTITY (1, 1) NOT NULL,
+    [UNVAN]     VARCHAR (100) NULL,
+    [ADI]       VARCHAR (50)  NULL,
+    [SOYADI]    VARCHAR (50)  NULL,
+    [EVTEL]     VARCHAR (50)  NULL,
+    [ISTEL]     VARCHAR (50)  NULL,
+    [CEPTEL]    VARCHAR (50)  NULL,
+    [EMAIL]     VARCHAR (50)  NULL,
+    [POSTAKODU] VARCHAR (50)  NULL,
+    [ADRES]     VARCHAR (500) NULL,
+    [SEHIR]     VARCHAR (50)  NULL,
+    [ACIKLAMA]  VARCHAR (500) NULL,
+    [DAHILI]    INT           NULL,
+    [DAHILITEL] VARCHAR (50)  NULL
+);
+

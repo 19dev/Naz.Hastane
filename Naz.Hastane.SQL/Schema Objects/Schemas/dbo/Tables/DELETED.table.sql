@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[DELETED] (
+    [KNR]     VARCHAR (50)  NULL,
+    [SNR]     VARCHAR (50)  NULL,
+    [ADI]     VARCHAR (200) NULL,
+    [SOYADI]  VARCHAR (200) NULL,
+    [ADET]    VARCHAR (10)  NULL,
+    [HCODE]   VARCHAR (100) NULL,
+    [HADI]    VARCHAR (500) NULL,
+    [HFIY]    FLOAT         NULL,
+    [KFIY]    FLOAT         NULL,
+    [HKTARIH] DATETIME      NULL,
+    [HKKUL]   VARCHAR (100) NULL,
+    [HSILTAR] DATETIME      NULL,
+    [HSILKUL] VARCHAR (100) NULL
+);
+

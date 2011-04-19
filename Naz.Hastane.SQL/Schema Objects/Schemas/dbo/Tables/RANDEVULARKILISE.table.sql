@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[RANDEVULARKILISE] (
+    [KILISEKODU]  VARCHAR (2)   NOT NULL,
+    [TARIH]       DATETIME      NOT NULL,
+    [SAAT]        CHAR (5)      NOT NULL,
+    [KNR]         VARCHAR (6)   NOT NULL,
+    [ISLEM_ID]    NUMERIC (18)  NOT NULL,
+    [TIPI]        CHAR (1)      NOT NULL,
+    [ACIKLAMA]    VARCHAR (100) NULL,
+    [USER_ID]     VARCHAR (50)  NULL,
+    [DATE_CREATE] DATETIME      NULL
+);
+

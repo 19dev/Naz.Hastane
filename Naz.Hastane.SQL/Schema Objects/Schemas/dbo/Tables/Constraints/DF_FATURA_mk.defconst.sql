@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[FATURA]
+    ADD CONSTRAINT [DF_FATURA_mk] DEFAULT ('H') FOR [mk];
+

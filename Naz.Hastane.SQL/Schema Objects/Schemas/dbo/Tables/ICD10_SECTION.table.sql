@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ICD10_SECTION] (
+    [CH_NO]   CHAR (3)      NOT NULL,
+    [SC_NO]   CHAR (3)      NOT NULL,
+    [SECTION] VARCHAR (200) NULL
+);
+

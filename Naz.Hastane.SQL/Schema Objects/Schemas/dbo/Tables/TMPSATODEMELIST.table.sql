@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[TMPSATODEMELIST] (
+    [KNR]           VARCHAR (50) NULL,
+    [SNR]           VARCHAR (50) NULL,
+    [FATNO]         VARCHAR (50) NULL,
+    [FIRMAADI]      VARCHAR (50) NULL,
+    [ISTARIHI]      DATETIME     NULL,
+    [FATTARIHI]     DATETIME     NULL,
+    [FATTUTAR]      FLOAT        NULL,
+    [ODEMETARIHI]   DATETIME     NULL,
+    [ODEMETUTAR]    FLOAT        NULL,
+    [ODEMEACIKLAMA] VARCHAR (50) NULL,
+    [ODEMEDURUMU]   VARCHAR (50) NULL,
+    [USER_ID]       VARCHAR (50) NULL
+);
+

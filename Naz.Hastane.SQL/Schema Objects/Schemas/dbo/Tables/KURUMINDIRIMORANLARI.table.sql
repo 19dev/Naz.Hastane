@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[KURUMINDIRIMORANLARI] (
+    [KNR]          VARCHAR (50) NOT NULL,
+    [TANIM]        VARCHAR (50) NOT NULL,
+    [GRUP]         VARCHAR (50) NOT NULL,
+    [INDIRIMORANI] FLOAT        NOT NULL
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[MEDULA_KULLANICILAR] (
+    [ID]        INT          IDENTITY (1, 1) NOT NULL,
+    [USER_NAME] VARCHAR (50) NULL,
+    [USER_PASS] VARCHAR (50) NULL
+);
+

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[HA] (
+    [CODE]  VARCHAR (50)  NULL,
+    [NAME1] VARCHAR (200) NULL
+);
+

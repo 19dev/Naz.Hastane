@@ -985,7 +985,7 @@ namespace Naz.Hastane.Win {
             }
             this.rpUser.Visible = true;
             this.rpgUserFunctions.Visible = true;
-            this.rcMain.SelectedPage = rpUser;
+            this.rcMain.SelectedPage = rpSGKPatients;
         }
         #endregion
 

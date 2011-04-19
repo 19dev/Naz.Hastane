@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[CALISMAGUNLERI] (
+    [SLK]       CHAR (2)  NOT NULL,
+    [SLB]       CHAR (10) NOT NULL,
+    [YIL]       SMALLINT  NOT NULL,
+    [AY]        SMALLINT  NOT NULL,
+    [GUNBASLA]  SMALLINT  NOT NULL,
+    [GUNBITIS]  SMALLINT  NOT NULL,
+    [SAATBASLA] CHAR (5)  NOT NULL,
+    [SAATBITIS] CHAR (5)  NOT NULL,
+    [SLX]       FLOAT     NOT NULL,
+    [SLY]       FLOAT     NOT NULL
+);
+

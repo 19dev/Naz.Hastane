@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[MAYISHAKEDIS] (
+    [CARI_ID]      NVARCHAR (255) NULL,
+    [DETAY_ID]     FLOAT          NULL,
+    [KNR]          NVARCHAR (255) NULL,
+    [SIRA]         FLOAT          NULL,
+    [HKNR]         NVARCHAR (255) NULL,
+    [HSNR]         NVARCHAR (255) NULL,
+    [HSIRANO]      FLOAT          NULL,
+    [HAREKETTIPI]  NVARCHAR (255) NULL,
+    [FATNO]        NVARCHAR (255) NULL,
+    [FATURANO]     NVARCHAR (255) NULL,
+    [FATURATARIHI] SMALLDATETIME  NULL,
+    [MAKNO]        NVARCHAR (255) NULL,
+    [MAKBUZNO]     NVARCHAR (255) NULL,
+    [AMBU]         NVARCHAR (255) NULL,
+    [TANIM]        NVARCHAR (255) NULL,
+    [GRUP]         NVARCHAR (255) NULL,
+    [CODE]         NVARCHAR (255) NULL,
+    [TOPLAM]       FLOAT          NULL,
+    [PAY]          FLOAT          NULL,
+    [ISODENDI]     NVARCHAR (255) NULL,
+    [USER_ID]      NVARCHAR (255) NULL,
+    [DATE_CREATE]  SMALLDATETIME  NULL,
+    [FATURATIPI]   NVARCHAR (255) NULL,
+    [ISARET]       CHAR (1)       NULL
+);
+

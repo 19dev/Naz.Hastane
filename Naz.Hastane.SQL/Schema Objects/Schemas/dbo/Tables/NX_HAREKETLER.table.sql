@@ -1,0 +1,18 @@
+﻿CREATE TABLE [dbo].[NX_HAREKETLER] (
+    [HAREKET_ID]     INT          IDENTITY (1, 1) NOT NULL,
+    [DURUM]          CHAR (1)     NULL,
+    [HAREKET_TIPI]   CHAR (2)     NULL,
+    [ISLEM_TARIHI]   DATETIME     NULL,
+    [ILAC_SARF]      CHAR (1)     NULL,
+    [FAT_NO]         VARCHAR (16) NULL,
+    [IRS_NO]         VARCHAR (16) NULL,
+    [BELGE_NO]       VARCHAR (16) NULL,
+    [FAT_TARIHI]     DATETIME     NULL,
+    [IRS_TARIHI]     DATETIME     NULL,
+    [GIRIS_DEPOSU]   VARCHAR (4)  NULL,
+    [CIKIS_DEPOSU]   VARCHAR (4)  NULL,
+    [TEDARIKCI]      VARCHAR (5)  NULL,
+    [KARANTINA_NO]   VARCHAR (7)  NULL,
+    [KULLANICI_KODU] VARCHAR (20) NULL
+);
+

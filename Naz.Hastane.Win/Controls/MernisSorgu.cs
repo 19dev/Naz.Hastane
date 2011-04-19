@@ -44,6 +44,7 @@ namespace Naz.Hastane.Win.Controls
         {
             if (IsWorking) return;
 
+            this.lcStatus.Text = "Mernis Sorgusu Yapılıyor!";
             IsWorking = true;
             IsOK = false;
             _TCID = long.Parse(TCID);
@@ -107,11 +108,12 @@ namespace Naz.Hastane.Win.Controls
                 //var cevap1 = service.IlListesiGetir();
 
                 //var cevap2 = service.IlceListesiGetir();
-
+                this.lcStatus.Text = "Mernis Sorgusu Başarılı!";
                 IsOK = true;
             }
             catch (Exception ee)
             {
+                this.lcStatus.Text = "Mernis Sorgusu Yapılamadı!"; 
                 IsOK = false;
                 XtraMessageBox.Show(ee.Message.ToString(), "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

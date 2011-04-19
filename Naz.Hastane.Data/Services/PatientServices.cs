@@ -48,9 +48,8 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void SavePatient(Patient patient)
+        public static void SavePatient(ISession session, Patient patient)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 if (patient.PatientNo == null || patient.PatientNo == "")
@@ -318,8 +317,9 @@ namespace Naz.Hastane.Data.Services
             UpdatePatientVisitRecordWithMedulaProvision(session, user, patient.PatientVisits[0].PatientVisitRecords[0], mpr);
         }
 
-        public static void UpdatePatientVisitWithMedulaProvision(ISession session, User user, PatientVisit pv, MedulaProvisionResult mpr)
+        public static void UpdatePatientVisitWithMedulaProvision(ISession asession, User user, PatientVisit pv, MedulaProvisionResult mpr)
         {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 pv.TAKIPNO = mpr.TakipNo;
@@ -332,8 +332,9 @@ namespace Naz.Hastane.Data.Services
                 transaction.Commit();
             }
         }
-        public static void UpdatePatientVisitRecordWithMedulaProvision(ISession session, User user, PatientVisitRecord pvr, MedulaProvisionResult mpr)
+        public static void UpdatePatientVisitRecordWithMedulaProvision(ISession asession, User user, PatientVisitRecord pvr, MedulaProvisionResult mpr)
         {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 pvr.BRANSKODU = mpr.BranchCode;

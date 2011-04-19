@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[LABORTEXT] (
+    [KNR]     VARCHAR (6)  NOT NULL,
+    [SNR]     VARCHAR (3)  NOT NULL,
+    [TANIM]   VARCHAR (2)  NOT NULL,
+    [GRUP]    VARCHAR (3)  NOT NULL,
+    [CODE]    VARCHAR (15) NOT NULL,
+    [TARIH]   DATETIME     NOT NULL,
+    [LABTEXT] TEXT         NULL
+);
+

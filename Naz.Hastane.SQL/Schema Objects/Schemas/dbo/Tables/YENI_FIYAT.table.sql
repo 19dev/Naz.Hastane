@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[YENI_FIYAT] (
+    [CODE]   NVARCHAR (255) NULL,
+    [NAME1]  NVARCHAR (255) NULL,
+    [SATISF] FLOAT          NULL
+);
+

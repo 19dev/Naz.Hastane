@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[KIT_DETAY] (
+    [KIT_ID] FLOAT        NOT NULL,
+    [TANIM]  VARCHAR (2)  NOT NULL,
+    [GRUP]   VARCHAR (3)  NOT NULL,
+    [CODE]   VARCHAR (15) NOT NULL
+);
+

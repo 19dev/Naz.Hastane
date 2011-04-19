@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[MEDESWLTASBILGISI] (
+    [SNO]            INT        IDENTITY (1, 1) NOT NULL,
+    [KNR]            NCHAR (10) NULL,
+    [SNR]            NCHAR (10) NULL,
+    [ESWLTASBOYUTU]  NCHAR (10) NULL,
+    [ESWLTASLOKKODU] NCHAR (10) NULL
+);
+

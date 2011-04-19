@@ -216,5 +216,12 @@
       </key>
       <one-to-many class="Naz.Hastane.Data.Entities.PatientVisitDetail, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </bag>
+    <bag inverse="true" name="PatientVisitRecords" mutable="true">
+      <key>
+        <column name="KNR" />
+        <column name="SNR" />
+      </key>
+      <one-to-many class="Naz.Hastane.Data.Entities.PatientVisitRecord, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
   </class>
 </hibernate-mapping>

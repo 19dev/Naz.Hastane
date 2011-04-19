@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[FATURA_ICMAL] (
+    [FATURA_NO] VARCHAR (10) NOT NULL,
+    [İCMAL_NO]  BIGINT       NOT NULL
+);
+

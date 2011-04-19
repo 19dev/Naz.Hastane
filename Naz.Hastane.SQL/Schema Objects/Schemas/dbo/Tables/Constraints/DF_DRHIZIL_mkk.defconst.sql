@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[DRHIZIL]
+    ADD CONSTRAINT [DF_DRHIZIL_mkk] DEFAULT ((0)) FOR [mkk];
+

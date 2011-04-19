@@ -1,0 +1,18 @@
+﻿CREATE TABLE [dbo].[ARMAKOMPERSBILGISIGON_112] (
+    [SIRANO]         INT           IDENTITY (1, 1) NOT NULL,
+    [PERADI]         NVARCHAR (50) NULL,
+    [PERSOYADI]      NVARCHAR (50) NULL,
+    [PERSICILNO]     NVARCHAR (50) NULL,
+    [NBASTARIH]      DATETIME      NULL,
+    [NBITTARIH]      DATETIME      NULL,
+    [BRANS]          NVARCHAR (50) NULL,
+    [BOLUM]          NVARCHAR (50) NULL,
+    [GOREV]          NVARCHAR (50) NULL,
+    [TELEFON]        NVARCHAR (50) NULL,
+    [ICAP]           NVARCHAR (50) NULL,
+    [GONDERMETARIHI] DATETIME      NULL,
+    [GONDERILDI]     NVARCHAR (50) NULL,
+    [BKOD]           NVARCHAR (50) NULL,
+    [USER112]        NVARCHAR (50) NULL
+);
+

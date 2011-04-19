@@ -1,0 +1,21 @@
+﻿
+CREATE VIEW dbo.doktor
+AS
+SELECT     TOP 100 PERCENT SEC,SLB, SLT,SLX,SLVV,SLXX,SLK
+FROM         dbo.KEYDAT
+WHERE     (SLK = '07')
+ORDER BY SLXX
+
+
+
+
+
+
+
+
+
+
+
+
+
+

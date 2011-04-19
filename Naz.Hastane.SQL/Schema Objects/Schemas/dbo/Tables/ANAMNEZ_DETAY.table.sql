@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ANAMNEZ_DETAY] (
+    [KNR]        VARCHAR (6)  NOT NULL,
+    [SNR]        VARCHAR (3)  NOT NULL,
+    [TESHISKODU] VARCHAR (10) NOT NULL
+);
+

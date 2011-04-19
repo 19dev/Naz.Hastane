@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[SEVKLER] (
+    [SEVK_ID]        NUMERIC (18)  IDENTITY (1, 1) NOT NULL,
+    [KNR]            VARCHAR (6)   NOT NULL,
+    [SNR]            VARCHAR (3)   NOT NULL,
+    [TARIH]          DATETIME      NOT NULL,
+    [HASTANE]        VARCHAR (100) NOT NULL,
+    [DONUSTARIH]     DATETIME      NULL,
+    [YAPILANISLEM]   TEXT          NULL,
+    [USER_ID]        VARCHAR (20)  NOT NULL,
+    [DATE_CREATE]    DATETIME      NOT NULL,
+    [USER_ID_UPDATE] VARCHAR (20)  NULL,
+    [DATE_UPDATE]    DATETIME      NULL
+);
+

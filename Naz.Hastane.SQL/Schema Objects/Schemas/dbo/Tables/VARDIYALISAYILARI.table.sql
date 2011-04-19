@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[VARDIYALISAYILARI] (
+    [DAHILIYE]      FLOAT NULL,
+    [HARICIYE]      FLOAT NULL,
+    [KADINDOGUM]    FLOAT NULL,
+    [COCUK]         FLOAT NULL,
+    [KBB]           FLOAT NULL,
+    [GOZ]           FLOAT NULL,
+    [FTR]           FLOAT NULL,
+    [UROLOJI]       FLOAT NULL,
+    [ORTOPEDI]      FLOAT NULL,
+    [CILDIYE]       FLOAT NULL,
+    [DIS]           FLOAT NULL,
+    [ACIL]          FLOAT NULL,
+    [BAKTERIYOLOJI] FLOAT NULL,
+    [MIKROBIYOLOJI] FLOAT NULL,
+    [DIGER]         FLOAT NULL,
+    [RONTGEN]       FLOAT NULL,
+    [MR]            FLOAT NULL,
+    [TOMOGRAFI]     FLOAT NULL,
+    [ULTRASON]      FLOAT NULL,
+    [BUYUK]         FLOAT NULL,
+    [ORTA]          FLOAT NULL,
+    [KUCUK]         FLOAT NULL
+);
+

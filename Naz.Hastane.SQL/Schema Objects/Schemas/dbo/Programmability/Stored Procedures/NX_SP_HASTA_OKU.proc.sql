@@ -1,0 +1,13 @@
+﻿
+
+
+
+
+
+CREATE  PROCEDURE NX_SP_HASTA_OKU ( 
+@HASTA_NO varchar(6) 
+) AS
+	SELECT A.[KNR] AS [ID], A.[KNR] AS [KODU], (A.[HASTAADI]+' '+A.[HASTASOYADI]) AS [ADI]
+    FROM [ADRES] A WHERE A.[KNR]=@HASTA_NO
+
+

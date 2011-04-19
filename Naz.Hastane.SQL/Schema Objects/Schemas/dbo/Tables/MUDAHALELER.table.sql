@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[MUDAHALELER] (
+    [ID]   INT           IDENTITY (1, 1) NOT NULL,
+    [KODU] VARCHAR (10)  NOT NULL,
+    [ADI]  VARCHAR (150) NULL
+);
+

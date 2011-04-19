@@ -40,7 +40,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitBindings();
 
             this.gcIslemler.DataSource = _Patient.PatientVisits;
-
             this.medulaSorgu.lueProvisionType.EditValue = "N";
             this.medulaSorgu.lueInsuranceType.EditValue = "1";
             this.medulaSorgu.lueTransferorInstitution.EditValue = "1";
@@ -144,7 +143,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             try
             {
-                PatientServices.SavePatient(_Patient);
+                PatientServices.SavePatient(Session, _Patient);
             }
             catch (Exception error)
             {
@@ -155,30 +154,52 @@ namespace Naz.Hastane.Win.MDIChildForms
         #region GridBindings
         private void gvZiyaret_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
         {
-            PatientVisit pv = (PatientVisit)gvZiyaret.GetRow(e.RowHandle);
-            //e.IsEmpty = pv.PatientVisitDetails.Count == 0;
+            PatientVisit pv = (PatientVisit)gvPatientVisit.GetRow(e.RowHandle);
+            if (e.RelationIndex == 0)
+                e.IsEmpty = pv.PatientVisitDetails.Count == 0;
+            else
+                e.IsEmpty = pv.PatientVisitRecords.Count == 0;
         }
 
         private void gvZiyaret_MasterRowGetRelationCount(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventArgs e)
         {
-            e.RelationCount = 1;
+            e.RelationCount = 2;
         }
 
         private void gvZiyaret_MasterRowGetRelationName(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventArgs e)
         {
-            e.RelationName = "PatientVisitDetails";
+            if (e.RelationIndex == 0)
+                e.RelationName = "PatientVisitDetails";
+            else
+                e.RelationName = "PatientVisitRecords";
         }
 
         private void gvZiyaret_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)
         {
-            PatientVisit pv = (PatientVisit)gvZiyaret.GetRow(e.RowHandle);
-            e.ChildList = new BindingSource(pv, "PatientVisitDetails");
+            PatientVisit pv = (PatientVisit)gvPatientVisit.GetRow(e.RowHandle);
+            if (e.RelationIndex == 0)
+                e.ChildList = new BindingSource(pv, "PatientVisitDetails");
+            else
+                e.ChildList = new BindingSource(pv, "PatientVisitRecords");
+
         }
 
         private void gvZiyaret_MasterRowGetLevelDefaultView(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetLevelDefaultViewEventArgs e)
         {
-            e.DefaultView = gvIslemler;
+            if (e.RelationIndex == 0)
+                e.DefaultView = gvPatientVisitDetail;
+            else
+                e.DefaultView = gvPatientVisitRecord;
         }
+
+        private void gvPatientVisit_MasterRowGetRelationDisplayCaption(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventArgs e)
+        {
+            if (e.RelationIndex == 0)
+                e.RelationName = "İşlemler";
+            else
+                e.RelationName = "Kayıtlar";
+        }
+
         #endregion
 
         private void sbPoliklinik_Click(object sender, EventArgs e)
@@ -200,14 +221,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _IsWaitingForPolyclinic = true;
                 _Doctor = doctor;
-                //CallMedulaProvision();
-                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
+                CallMedulaProvision();
+                //PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
             }
 
         }
 
         private void sbMernis_Click(object sender, EventArgs e)
         {
+            EnableForMernis(false);
             this.mernisSorgu.CallMernis(this.teTCID.Text);
         }
 
@@ -216,16 +238,35 @@ namespace Naz.Hastane.Win.MDIChildForms
             CallMedulaProvision();
         }
 
+        private void EnableForMernis(bool enable)
+        {
+            this.sbMernis.Enabled = enable;
+            this.sbSavePatient.Enabled = enable;
+            this.sbMedula.Enabled = enable;
+        }
+        
+        private void EnableForMedula(bool enable)
+        {
+            this.sbMernis.Enabled = enable;
+            this.sbSavePatient.Enabled = enable;
+            this.sbMedula.Enabled = enable;
+            this.sbPoliklinik.Enabled = enable;
+            this.sbInvoice.Enabled = enable;
+            this.sbVoucher.Enabled = enable;
+        }
+
         private void CallMedulaProvision()
         {
             if (this._Doctor == null)
                 return;
+            EnableForMedula(false);
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
             this.medulaSorgu.CallMedula(this.teTCID.Text);
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
+            EnableForMedula(true);
             XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
             
             _IsWaitingForPolyclinic = false;
@@ -264,7 +305,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
             foreach(PatientVisitDetail pvd in pv.PatientVisitDetails)
             {
-                if (pvd.CODE != "SGKKATILIM")
+                if (pvd.CODE != "SGKKATILIM" && String.IsNullOrWhiteSpace(pvd.MAKNO))
                 {
                     pvds.Add(pvd);
                     ProductTotal += pvd.ADET * pvd.SATISF;
@@ -312,7 +353,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
             foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
             {
-                if (pvd.CODE == "SGKKATILIM")
+                if (pvd.CODE == "SGKKATILIM" && String.IsNullOrWhiteSpace(pvd.MAKNO))
                 {
                     pvds.Add(pvd);
                     ProductTotal += pvd.ADET * pvd.SATISF;
@@ -335,6 +376,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void mernisSorgu_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
+            EnableForMernis(true);
             if (this.mernisSorgu.IsOK)
             {
                 _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;

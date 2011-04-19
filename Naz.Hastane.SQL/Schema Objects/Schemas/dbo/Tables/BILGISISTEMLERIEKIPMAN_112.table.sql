@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[BILGISISTEMLERIEKIPMAN_112] (
+    [SIRANO]          INT           IDENTITY (1, 1) NOT NULL,
+    [EKIPKODU]        NVARCHAR (50) NULL,
+    [EKIPADI]         NVARCHAR (50) NULL,
+    [EKIPKULDURUM]    INT           NULL,
+    [EKIPTOPADET]     INT           NULL,
+    [EKIPACILBOSADET] INT           NULL,
+    [EKIPANABOSADET]  INT           NULL,
+    [EKIPACIKLAMA]    NVARCHAR (50) NULL,
+    [TARIH]           DATETIME      NULL,
+    [GONDERMETARIHI]  DATETIME      NULL,
+    [USER112]         NVARCHAR (50) NULL,
+    [GONDERILDI]      NVARCHAR (50) NULL,
+    [HATA]            VARCHAR (200) NULL
+);
+

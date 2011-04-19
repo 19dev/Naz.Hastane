@@ -27,7 +27,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual double ECZKATPAYI { get; set; } // ECZKATPAYI; length(8); 0
         public virtual double ECZMUAUCRETI { get; set; } // ECZMUAUCRETI; length(8); 0
         public virtual double EKSIKODENEN { get; set; } // EKSIKODENEN; length(8); 0
-        public virtual string EPOSTA { get; set; } // EPOSTA; length(50); 1
+        //public virtual string EPOSTA { get; set; } // EPOSTA; length(50); 1
         public virtual string FAX { get; set; } // FAX; length(20); 1
         public virtual int FIXKURUM { get; set; } // FIXKURUM; length(2); 0
         public virtual string FIYLIST { get; set; } // FIYLIST; length(2); 1

@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[AVANSLAR_IADE] (
+    [AV_ID]       FLOAT        NOT NULL,
+    [TARIH]       DATETIME     NOT NULL,
+    [IADEMAKNO]   VARCHAR (7)  NOT NULL,
+    [TUTAR]       FLOAT        NOT NULL,
+    [USER_ID]     VARCHAR (20) NOT NULL,
+    [DATE_CREATE] DATETIME     NOT NULL
+);
+

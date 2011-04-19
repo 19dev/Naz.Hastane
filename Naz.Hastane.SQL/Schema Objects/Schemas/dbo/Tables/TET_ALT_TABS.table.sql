@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TET_ALT_TABS] (
+    [ARZT]             VARCHAR (4) NOT NULL,
+    [TAB_CODE]         VARCHAR (2) NOT NULL,
+    [ALT_TAB_CODE]     VARCHAR (3) NOT NULL,
+    [ALT_TAB_ACIKLAMA] CHAR (50)   NULL
+);
+

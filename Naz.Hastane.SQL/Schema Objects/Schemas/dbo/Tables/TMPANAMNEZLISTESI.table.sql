@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TMPANAMNEZLISTESI] (
+    [KNR]         VARCHAR (50)  NULL,
+    [SNR]         VARCHAR (50)  NULL,
+    [HASTAADI]    VARCHAR (100) NULL,
+    [HASTASOYADI] VARCHAR (100) NULL,
+    [TESKODU]     VARCHAR (50)  NULL,
+    [TESADI]      VARCHAR (250) NULL,
+    [TARIH]       DATETIME      NULL
+);
+

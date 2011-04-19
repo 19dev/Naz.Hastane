@@ -58,9 +58,6 @@
     <property name="EKSIKODENEN" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="EKSIKODENEN" length="8" />
     </property>
-    <property name="EPOSTA" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <column name="EPOSTA" length="50" />
-    </property>
     <property name="FAX" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <column name="FAX" length="20" />
     </property>

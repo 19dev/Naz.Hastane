@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[FATURALAR_DETAY]
+    ADD CONSTRAINT [DF_FATURALAR_DETAY_e_tutar] DEFAULT ((0)) FOR [e_tutar];
+

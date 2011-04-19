@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[TET_KAD_JINEKOLOJIK] (
+    [KNR]         VARCHAR (50) NULL,
+    [SNR]         VARCHAR (3)  NULL,
+    [GELISTARIHI] DATETIME     NULL,
+    [PAPSMEAR]    VARCHAR (50) NULL,
+    [SAT]         VARCHAR (50) NULL,
+    [TA]          VARCHAR (50) NULL,
+    [INSPEKSIYON] VARCHAR (50) NULL,
+    [BATIN]       VARCHAR (50) NULL,
+    [MEME]        VARCHAR (50) NULL,
+    [PERINA]      VARCHAR (50) NULL,
+    [SERVIKS]     VARCHAR (50) NULL,
+    [KORPUS]      VARCHAR (50) NULL,
+    [SAGANDEKS]   VARCHAR (50) NULL,
+    [SOLANDEKS]   VARCHAR (50) NULL,
+    [REKTAL]      VARCHAR (50) NULL,
+    [YAKINMA]     VARCHAR (50) NULL,
+    [TANI]        VARCHAR (50) NULL,
+    [TEDAVI]      VARCHAR (50) NULL,
+    [USG]         VARCHAR (50) NULL
+);
+
