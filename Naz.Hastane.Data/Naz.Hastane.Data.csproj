@@ -175,7 +175,9 @@
     <Compile Include="Entities\Reports\OzetKurumAnaIslem.cs" />
     <Compile Include="Entities\Reports\OzetServisAnaIslem.cs" />
     <Compile Include="Entities\Reports\SummaryReportItem.cs" />
-    <Compile Include="Entities\SGKAutoExamination.cs" />
+    <Compile Include="Entities\Product\SGKAutoExamination.cs" />
+    <Compile Include="Entities\Product\SGKAutoExaminationSameDay.cs" />
+    <Compile Include="Entities\Product\SGKAutoExaminationBase.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
@@ -278,7 +280,8 @@
     <Compile Include="Mappings\Reports\OzetHastaneServisAnaIslemMap.cs" />
     <Compile Include="Mappings\Reports\OzetKurumAnaIslemMap.cs" />
     <Compile Include="Mappings\Reports\OzetServisAnaIslemMap.cs" />
-    <Compile Include="Mappings\SGKAutoExaminationMap.cs" />
+    <Compile Include="Mappings\Product\SGKAutoExaminationMap.cs" />
+    <Compile Include="Mappings\Product\SGKAutoExaminationSameDayMap.cs" />
     <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
     <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
     <Compile Include="NHibernateSessionManager.cs" />

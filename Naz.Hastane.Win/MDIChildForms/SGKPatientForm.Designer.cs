@@ -2147,6 +2147,7 @@
             this.lciIslemler.TextSize = new System.Drawing.Size(0, 0);
             this.lciIslemler.TextToControlDistance = 0;
             this.lciIslemler.TextVisible = false;
+            this.lciIslemler.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciHastaFatura
             // 

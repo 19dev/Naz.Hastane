@@ -24,6 +24,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
                 .KeyColumn("SERVISKODU")
                 .Inverse()
                 .Not.LazyLoad();
+            HasMany(x => x.SGKAutoExaminationSameDays)
+                .KeyColumn("SERVISKODU")
+                .Inverse()
+                .Not.LazyLoad();
         }
     }
 }

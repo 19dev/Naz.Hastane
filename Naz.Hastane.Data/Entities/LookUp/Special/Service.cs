@@ -50,5 +50,19 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
             ae.Service = this;
             this.SGKAutoExaminations.Add(ae);
         }
+
+        private IList<SGKAutoExaminationSameDay> _SGKAutoExaminationSameDays = new List<SGKAutoExaminationSameDay>();
+
+        public virtual IList<SGKAutoExaminationSameDay> SGKAutoExaminationSameDays
+        {
+            get { return _SGKAutoExaminationSameDays; }
+            set { _SGKAutoExaminationSameDays = value; }
+        }
+
+        public virtual void AddSGKAutoExaminationSameDay(SGKAutoExaminationSameDay ae)
+        {
+            ae.Service = this;
+            this.SGKAutoExaminationSameDays.Add(ae);
+        }
     }
 }

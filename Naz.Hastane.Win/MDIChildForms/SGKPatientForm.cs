@@ -11,6 +11,10 @@ using Naz.Utilities.Classes;
 using System.Collections.Generic;
 using Naz.Mernis.Service;
 
+///Todo List
+///Medula Provizyonsuz karta provizyon isteme ekle
+///
+
 namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class SGKPatientForm : MDIChildForm
@@ -26,38 +30,24 @@ namespace Naz.Hastane.Win.MDIChildForms
             theMainForm = (frmMain)this.MdiParent;
         }
 
-        public SGKPatientForm(string aPatientID)
+        public SGKPatientForm(string aPatientID) : this()
         {
             if (String.IsNullOrEmpty(aPatientID))
                 _Patient = PatientServices.GetNewSGKPatient(Session);
             else
                 _Patient = PatientServices.GetPatientByID(aPatientID, Session);
 
-            InitializeComponent();
-
-            //insuranceTypes = LookUpServices.GetAll<InsuranceType>();
-
             InitBindings();
 
             this.gcIslemler.DataSource = _Patient.PatientVisits;
-            this.medulaSorgu.lueProvisionType.EditValue = "N";
-            this.medulaSorgu.lueInsuranceType.EditValue = "1";
-            this.medulaSorgu.lueTransferorInstitution.EditValue = "1";
-            this.medulaSorgu.lueBranchCode.EditValue = "N";
-            this.medulaSorgu.lueTreatmentType.EditValue = "0";
-            this.medulaSorgu.lueRelationType.EditValue = "0";
-            this.medulaSorgu.lueFollowUpType.EditValue = "N";
-            this.medulaSorgu.lueTreatmentStyle.EditValue = "A";
-
-        }
-
-        private void LoadLookUps()
-        {
-            UIUtilities.BindLookUpEdit(this.lueStatus, LookUpServices.PatientRelations);
-            UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
-            UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
-            UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities);
-            UIUtilities.BindLookUpEdit(this.lueJobCity, LookUpServices.Cities);
+            this.medulaSorgu.lueProvisionType.EditValue = LookUpServices.ProvisionTypeDefaultValue;
+            this.medulaSorgu.lueInsuranceType.EditValue = LookUpServices.InsuranceTypeDefaultValue;
+            this.medulaSorgu.lueTransferorInstitution.EditValue = LookUpServices.TransferorInstitutionDefaultValue;
+            this.medulaSorgu.lueBranchCode.EditValue = LookUpServices.BranchCodeDefaultValue;
+            this.medulaSorgu.lueTreatmentType.EditValue = LookUpServices.TreatmentTypeDefaultValue;
+            this.medulaSorgu.lueRelationType.EditValue = LookUpServices.RelationTypeDefaultValue;
+            this.medulaSorgu.lueFollowUpType.EditValue = LookUpServices.FollowUpTypeDeafultValue;
+            this.medulaSorgu.lueTreatmentStyle.EditValue = LookUpServices.TreatmentStyleDefaultValue;
         }
 
         private void InitBindings()
@@ -115,7 +105,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teJobPhone2.DataBindings.Add("EditValue", _Patient, "JobPhone2");
             this.teJobFax.DataBindings.Add("EditValue", _Patient, "JobFax");
             this.teEmail.DataBindings.Add("EditValue", _Patient, "Email");
+        }
 
+        private void LoadLookUps()
+        {
+            UIUtilities.BindLookUpEdit(this.lueStatus, LookUpServices.PatientRelations);
+            UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
+            UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
+            UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities);
+            UIUtilities.BindLookUpEdit(this.lueJobCity, LookUpServices.Cities);
         }
 
         private void sbKaydet_Click(object sender, EventArgs e)
@@ -137,7 +135,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
             _Patient.PatientLimit = 0;
-            _Patient.USER_ID = "aa";
+            _Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
             _Patient.DATE_CREATE = DateTime.Now;
             _Patient.DATE_UPDATE = DateTime.Now;
 
@@ -202,40 +200,24 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         #endregion
 
-        private void sbPoliklinik_Click(object sender, EventArgs e)
-        {
-            SelectPolyclinicForm frm = new SelectPolyclinicForm();
-            frm.ShowDialog();
-            if (frm.IsSelected && frm.Doctor != null)
-                ProcessNewPolyclinic(frm.Doctor);
-        }
-
-        private void ProcessNewPolyclinic(Doctor doctor)
-        {
-            if (_IsWaitingForPolyclinic)
-            {
-                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
-                // Should cancel the previous request?
-            }
-            else
-            {
-                _IsWaitingForPolyclinic = true;
-                _Doctor = doctor;
-                CallMedulaProvision();
-                //PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
-            }
-
-        }
+        #region Mernis
 
         private void sbMernis_Click(object sender, EventArgs e)
         {
-            EnableForMernis(false);
-            this.mernisSorgu.CallMernis(this.teTCID.Text);
+            CallMernis();
         }
 
-        private void sbMedula_Click(object sender, EventArgs e)
+        private void CallMernis()
         {
-            CallMedulaProvision();
+            if (this.mernisSorgu.IsWorking)
+            {
+                XtraMessageBox.Show("Şu anda sürmekte olan Mernis işlemi var. Lütfen bekleyiniz.", "Mernis İşlemleri");
+            }
+            else
+            {
+                EnableForMernis(false);
+                this.mernisSorgu.CallMernis(this.teTCID.Text);
+            }
         }
 
         private void EnableForMernis(bool enable)
@@ -244,7 +226,73 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbSavePatient.Enabled = enable;
             this.sbMedula.Enabled = enable;
         }
-        
+
+        private void mernisSorgu_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            EnableForMernis(true);
+            if (this.mernisSorgu.IsOK)
+            {
+                _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
+                _Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
+                _Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
+                _Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
+                if (this.mernisSorgu.KisiBilgisi.TemelBilgisi.Cinsiyet == CinsiyetTipi.Erkek)
+                    _Patient.Sex = "1";
+                else
+                    _Patient.Sex = "2";
+                _Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
+                    this.mernisSorgu.NufusCuzdani.DogumTarih.Ay,
+                    this.mernisSorgu.NufusCuzdani.DogumTarih.Gun);
+                _Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
+
+                if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
+                    _Patient.MaritalStatus = "E";
+                else
+                    _Patient.MaritalStatus = "B";
+
+                _Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
+                _Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
+                _Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
+                _Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
+                _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
+            }
+        }
+        #endregion
+
+        #region Poliklinik & Medula
+        private void sbPoliklinik_Click(object sender, EventArgs e)
+        {
+            ProcessNewPolyclinic();
+        }
+
+        private void ProcessNewPolyclinic()
+        {
+            SelectPolyclinicForm frm = new SelectPolyclinicForm();
+            frm.ShowDialog();
+            if (frm.IsSelected && frm.Doctor != null)
+            {
+                if (_IsWaitingForPolyclinic)
+                {
+                    XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
+                    // Should cancel the previous request?
+                }
+                else
+                {
+                    _IsWaitingForPolyclinic = true;
+                    _Doctor = frm.Doctor;
+                    CallMedulaProvision();
+                    //PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
+                }
+            }
+        }
+
+        private void sbMedula_Click(object sender, EventArgs e)
+        {
+            CallMedulaProvision();
+        }
+
         private void EnableForMedula(bool enable)
         {
             this.sbMernis.Enabled = enable;
@@ -261,28 +309,48 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return;
             EnableForMedula(false);
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+
+            this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
+
             this.medulaSorgu.CallMedula(this.teTCID.Text);
+        }
+
+        private string GetRelatedFollowUpNo()
+        {
+            string result = "";
+            for (int i = 0; i < this._Patient.PatientVisits.Count; i++)
+            {
+                if (this._Patient.PatientVisits[i].VisitDate.Date == DateTime.Today)
+                    result = this._Patient.PatientVisits[i].TAKIPNO;
+                else
+                    break;
+            }
+            return result;
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
             EnableForMedula(true);
-            XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
-            
             _IsWaitingForPolyclinic = false;
 
-            if (e.Result.SonucKodu == "0000")
+            if (this.medulaSorgu.IsOK)
             {
-                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
-                PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, e.Result);
+                XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
+                if (e.Result.SonucKodu == "0000")
+                {
+                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
+                    PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, e.Result);
+                    RefreshGrid();
+                }
             }
             else
             {
-                if (XtraMessageBox.Show("Medula'dan Cevap Alınamadı, Poliklinik Kaydı Oluşturmak İstiyor Musunuz?", "Medula Sorgu Sonucu",MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (XtraMessageBox.Show("Medula'dan Onay Alınamadı, Poliklinik Kaydı Oluşturmak İstiyor Musunuz?", "Medula Sorgu Sonucu",MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
             }
 
         }
+        #endregion
 
         private void sbInvoice_Click(object sender, EventArgs e)
         {
@@ -374,38 +442,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void mernisSorgu_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void RefreshGrid()
         {
-            EnableForMernis(true);
-            if (this.mernisSorgu.IsOK)
-            {
-                _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
-                _Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
-                _Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
-                _Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
-                if (this.mernisSorgu.KisiBilgisi.TemelBilgisi.Cinsiyet == CinsiyetTipi.Erkek)
-                    _Patient.Sex = "1";
-                else 
-                    _Patient.Sex = "2";
-                _Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
-                    this.mernisSorgu.NufusCuzdani.DogumTarih.Ay,
-                    this.mernisSorgu.NufusCuzdani.DogumTarih.Gun);
-                _Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
+            this.gvPatientVisit.CollapseAllDetails();
+            this.gcIslemler.RefreshDataSource();
 
-                if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
-                    _Patient.MaritalStatus = "E";
-                else
-                    _Patient.MaritalStatus = "B";
-
-                _Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
-                _Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
-                _Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
-                _Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
-                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
-                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
-                _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
-            }
         }
-
     }
 }

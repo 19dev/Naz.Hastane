@@ -173,6 +173,13 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
+        /// <summary>
+        /// SGK Poliklinik İşlemleri ekler
+        /// </summary>
+        /// <param name="session"></param>
+        /// <param name="user"></param>
+        /// <param name="patient"></param>
+        /// <param name="doctor"></param>
         public static void AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor)
         {
             if (patient == null || doctor == null)
@@ -186,24 +193,51 @@ namespace Naz.Hastane.Data.Services
 
                 PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
-                foreach (SGKAutoExamination sae in doctor.Service.SGKAutoExaminations)
-                {
-                    if (IsAutoExamItemValid(patient, sae))
+                if (IsSGKSameDay(patient))
+                    foreach (var sae in doctor.Service.SGKAutoExaminationSameDays)
                     {
-                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                        if (IsAutoExamItemValid(patient, sae))
+                        {
+                            PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                        }
                     }
-                }
-                //transaction.Commit();
+                else
+                    foreach (var sae in doctor.Service.SGKAutoExaminations)
+                    {
+                        if (IsAutoExamItemValid(patient, sae))
+                        {
+                            PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                        }
+                    }
+            //transaction.Commit();
             //}
 
         }
 
-        public static bool IsAutoExamItemValid(Patient patient, SGKAutoExamination sae)
+        public static bool IsSGKSameDay(Patient patient)
         {
-            if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
-                return true;
+            return (patient.PatientVisits.Count >= 2 && 
+                patient.PatientVisits[0].VisitDate.Date == patient.PatientVisits[1].VisitDate.Date);
+        }
+
+        public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
+        {
+            if (patient.InsuranceCompany.Name == LookUpServices.SGKCode)
+            {
+                if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
+                // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
+                    return (sae.Product.MEDGONDER == "1");
+                else
+                    // SGKKATILIM olanda "Çalışan"lar için katılım ekle seç
+                    return (patient.InsuranceType == InsuranceTypeValues.Worker.GetDescription());
+            }
             else
-                return (patient.InsuranceType == InsuranceTypeValues.Worker.GetDescription());
+            {
+                if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
+                    return (sae.Product.MEDGONDER == "0");
+                else
+                    return false;
+            }
         }
 
         public static PatientVisit AddNewPatientVisit(ISession asession, User user, Patient patient, Doctor doctor)

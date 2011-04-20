@@ -21,6 +21,14 @@ namespace Naz.Hastane.Data.Services
         public const string SGKCode = "SGK";
         public const string VATDefaultValue = "N";
         public const string PaymentTypeDefaultValue = "0";
+        public const string ProvisionTypeDefaultValue = "N";
+        public const string InsuranceTypeDefaultValue = "1";
+        public const string TransferorInstitutionDefaultValue = "1";
+        public const string BranchCodeDefaultValue = "N";
+        public const string TreatmentTypeDefaultValue = "0";
+        public const string RelationTypeDefaultValue = "0";
+        public const string FollowUpTypeDeafultValue = "N";
+        public const string TreatmentStyleDefaultValue = "A";
 
         public static T GetByID<T>(string aID)
         {

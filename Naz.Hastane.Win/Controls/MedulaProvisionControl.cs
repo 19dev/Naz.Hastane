@@ -2,6 +2,7 @@
 using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Medula.HastaKabulIslemleri;
+using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -14,12 +15,17 @@ namespace Naz.Hastane.Win.Controls
 
         private HastaKabulIslemleriClient hki;
 
-        private bool _IsWorking = false;
-        public bool IsWorking
-        {
-            get { return _IsWorking; }
-            private set { _IsWorking = value; }
+        private bool _IsWorking;
+        public bool IsWorking 
+        { 
+            get{ return _IsWorking;}
+            set
+            {
+                _IsWorking = value;
+                EnableControls(!_IsWorking);
+            }
         }
+        public bool IsOK { get; set; }
 
         public MedulaProvisionControl()
         {
@@ -78,8 +84,16 @@ namespace Naz.Hastane.Win.Controls
             pgd.yatisBitisTarihi = "";
 
             this.lblStatus.Text = "Medula Sorgusu Yapılıyor...";
+            IsOK = false;
+
             hki.hastaKabulAsync(pgd);
 
+        }
+
+        private void EnableControls(bool enable)
+        {
+            foreach (Control c in this.layoutControl1.Controls)
+                c.Enabled = enable;
         }
 
         void OnHastaKabulCompleted(Object sender, hastaKabulCompletedEventArgs e)
@@ -91,7 +105,9 @@ namespace Naz.Hastane.Win.Controls
             try
             {
                 this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
-                MedulaProvisionCompletedEventArgs mpcea = new MedulaProvisionCompletedEventArgs(mprs, e.Error, e.Cancelled, e.UserState);
+                mpr.SonucKodu = e.Result.sonucKodu;
+                mpr.SonucMesaji = e.Result.sonucMesaji;
+
                 if (e.Result.sonucKodu == "0000")
                 {
                     mpr.Ad = e.Result.hastaBilgileri.ad;
@@ -102,12 +118,10 @@ namespace Naz.Hastane.Win.Controls
                     mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
 
                     mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
-                    mpr.SonucKodu = e.Result.sonucKodu;
-                    mpr.SonucMesaji = e.Result.sonucMesaji;
                     mpr.TakipNo = e.Result.takipNo;
 
                     mpr.BranchCode = this.lueBranchCode.EditValue.ToString();
-                    mpr.RelatedFollowUpNo = this.teRelatedFollowUpNo.EditValue.ToString();
+                    mpr.RelatedFollowUpNo = this.teRelatedFollowUpNo.Text;
                     mpr.FollowUpType = this.lueFollowUpType.EditValue.ToString();
                     mpr.ProvisionType = this.lueProvisionType.EditValue.ToString();
                     mpr.TreatmentType = this.lueTreatmentType.EditValue.ToString();
@@ -118,20 +132,21 @@ namespace Naz.Hastane.Win.Controls
                     this.teFollowUpNo.Text = e.Result.takipNo;
                     this.tePatientApplicationNo.Text = e.Result.hastaBasvuruNo;
                 }
-                if (OnMedulaHastaKabulCompleted != null)
-                    OnMedulaHastaKabulCompleted(this, mpcea);
+                IsOK = true;
             }
             catch
             {
-                MedulaProvisionCompletedEventArgs mpcea = new MedulaProvisionCompletedEventArgs(mprs, e.Error, e.Cancelled, e.UserState);
-                mpr.SonucKodu = "0000";
+                mpr.SonucKodu = "xxxx";
                 mpr.SonucMesaji = "Medula'dan Sonuç Alınamadı!";
 
-                if (OnMedulaHastaKabulCompleted != null)
-                    OnMedulaHastaKabulCompleted(this, mpcea);
+                IsOK = false;
             }
             finally
             {
+                MedulaProvisionCompletedEventArgs mpcea = new MedulaProvisionCompletedEventArgs(mprs, e.Error, e.Cancelled, e.UserState);
+                if (OnMedulaHastaKabulCompleted != null)
+                    OnMedulaHastaKabulCompleted(this, mpcea);
+                hki = null;
             }
         }
     }

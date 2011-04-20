@@ -144,14 +144,16 @@ if @Dataset = 'İlac'
 begin
 
 select (case when replace(replace(IL.NAME2,'.',''),' ','') =  '' then H.CODE  else IL.NAME2 end) as Barkod,
-adet as adet,
+adet as adet,
+
 IL.NAME1,
 --(CASE WHEN (SELECT SLXA FROM KEYDAT WHERE SLK='00' AND SLB='KDVORANI')='1'  THEN round(h.KSATISF/1.08,2)   ELSE ( round(h.KSATISF,2) ) END) AS tutar,
 (CASE (SELECT SLXA FROM KEYDAT WHERE SLK='00' AND SLB='KDVORANI') WHEN '1' THEN round(h.KSATISF/1.08,2)  WHEN '0' THEN round(h.KSATISF,2)  WHEN '2' THEN round(h.KSATISF,2) END) AS tutar,
 convert(varchar,tarıh,112) as islemTarihi,
 IL.KATKIPAYI,
 IL.ILACTURU  as ilacTuru,
-SIRANO as hizmetSunucuRefNo,ISDURUM AS ISDURUM,
+SIRANO as hizmetSunucuRefNo,
+ISDURUM AS ISDURUM,
 H.MEDOZDURUM
 from HIZIL H
 left join  ILACSARF  IL on IL.CODE=h.code  
@@ -191,7 +193,8 @@ end
 
 
 
---*** Malzeme Bilgisi (  = 1) 
+--*** Malzeme Bilgisi (  = 1) 
+
 
 
 -- *** Ameliyat
@@ -238,7 +241,8 @@ convert(varchar,tarıh,112) as islemTarihi,
 --@servis as bransKodu,
 (case when b.ambu = 'A' then 'E' else 'H' end) as acilDurum,
 H.SIRANO as hizmetSunucuRefNo,
-(case when h.MEDANOMALI= '1' then 'E' else 'H' end) as  MEDANOMALI,
+(case when h.MEDANOMALI= '1' then 'E' else 'H' end) as  MEDANOMALI,
+
 H.MEDOZDURUM
 from HIZIL h
 left join HIZMET  hi on h.tanım=hi.tanım AND  h.grup=hi.grup and h.code = hi.code
@@ -262,7 +266,8 @@ d.slvv as doktorTescilNo,
 convert(varchar,tarıh,112)  as islemTarihi,
 H.SIRANO as hizmetSunucuRefNo,
 ISDURUM AS ISDURUM,
-H.MEDOZDURUMfrom HIZIL h
+H.MEDOZDURUM
+from HIZIL h
 left join HIZMET  hi on h.tanım=hi.tanım AND  h.grup=hi.grup and h.code = hi.code
 left join hizmet_gruplari hg on hg.slb = h.tanım
 left join doktor d on d.slb = h.ARZT2
@@ -272,7 +277,8 @@ where h.knr = @knr and h.snr = @snr and replace(replace((isnull(hi.bkodu ,h.code
 end
 ---*Konsültasyon
 
-
+
+
 -----Konsültasyon 
 if @Dataset = 'Hastayatis' 
 begin 

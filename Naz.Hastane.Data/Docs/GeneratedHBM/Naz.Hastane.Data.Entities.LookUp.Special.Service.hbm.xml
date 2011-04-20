@@ -28,5 +28,11 @@
       </key>
       <one-to-many class="Naz.Hastane.Data.Entities.SGKAutoExamination, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </bag>
+    <bag inverse="true" lazy="false" name="SGKAutoExaminationSameDays" mutable="true">
+      <key>
+        <column name="SERVISKODU" />
+      </key>
+      <one-to-many class="Naz.Hastane.Data.Entities.SGKAutoExaminationSameDay, Naz.Hastane.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
   </class>
 </hibernate-mapping>

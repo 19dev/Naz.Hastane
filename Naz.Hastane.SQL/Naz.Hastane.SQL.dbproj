@@ -4373,7 +4373,7 @@
     <Build Include="Schema Objects\Schemas\dbo\Views\DOKTORSERVISADI.view.sql">
       <SubType>Code</SubType>
     </Build>
-    <Build Include="Schema Objects\Schemas\dbo\Views\Drkodları.view.sql">
+    <Build Include="Schema Objects\Schemas\dbo\Views\Drkodlari.view.sql">
       <SubType>Code</SubType>
     </Build>
     <Build Include="Schema Objects\Schemas\dbo\Views\Fiyat_Listeleri.view.sql">

@@ -49,6 +49,10 @@ namespace Naz.Hastane.Win.Forms
             {
                 User = LookUpServices.GetByID<User>(this.teUserName.Text);
             }
+            catch(Exception e)
+            {
+                XtraMessageBox.Show("Veritabanı Hatası: " + e.Message);
+            }
             finally
             {
                 Cursor.Current = Cursors.Default;
