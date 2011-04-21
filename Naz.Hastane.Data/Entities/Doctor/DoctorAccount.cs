@@ -13,7 +13,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string ARZT { get; set; } // ARZT; length(4); 1
         public virtual double BORC { get; set; } // BORC; length(8); 0
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 0
-        public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
+        public virtual DateTime? DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
         public virtual string DIPLOMANO { get; set; } // DIPLOMANO; length(30); 1
         public virtual double EKSIKODENEN { get; set; } // EKSIKODENEN; length(8); 0
         public virtual string FAX1 { get; set; } // FAX1; length(20); 1

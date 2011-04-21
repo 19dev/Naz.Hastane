@@ -282,7 +282,7 @@ namespace Naz.Hastane.Win.Controls
             IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
             if (pv != null && pvds.Count>0)
             {
-                theMainForm.PrintInvoice(_Session, _Patient, pv, pvds,
+                theMainForm.PrintInvoice(_Session, _Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     VATTotal,

@@ -60,7 +60,7 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual string IPTAL_NEDENI { get; set; } // IPTAL_NEDENI; length(50); 1 Boş
 
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 0
-        public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
+        public virtual DateTime? DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
         public virtual string USER_ID { get; set; } // USER_ID; length(20); 0
         public virtual string USER_ID_UPDATE { get; set; } // USER_ID_UPDATE; length(20); 1
     }

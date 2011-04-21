@@ -47,9 +47,12 @@ namespace Naz.Utilities.Classes
                 arraypos++;
             }
             string result = "";
-            string[] sayi = { "", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz" };
-            string[] birim = { "", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan", "yüz" };
-            string[] birim2 = { "", "bin", "milyon", "milyar", "trilyon" };
+            string[] sayi = { "", "BİR", "İKİ", "ÜÇ", "DÖRT", "BEŞ", "ALTI", "YEDİ", "SEKİZ", "DOKUZ" };
+            string[] birim = { "", "ON", "YİRMİ", "OTUZ", "KIRK", "ELLİ", "ALTMIŞ", "YETMİŞ", "SEKSEN", "DOKSAN", "YÜZ" };
+            string[] birim2 = { "", "BİN", "MİLYON", "MİLYAR", "TRİLYON" };
+            //string[] sayi = { "", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz" };
+            //string[] birim = { "", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan", "yüz" };
+            //string[] birim2 = { "", "bin", "milyon", "milyar", "trilyon" };
             string[] birim3 = { "TL", "KURUŞ" };
             for (int i = array.Length - 1; i >= 0; i--)
             {
@@ -72,14 +75,15 @@ namespace Naz.Utilities.Classes
                 tmp += sayi[(array[i] % mod)];
                 result = tmp + birim2[array.Length - 1 - i] + result;
             }
-            result += birim3[0];
+            result += " " + birim3[0];
             if (sag != "")
             {
                 if (int.Parse(sag) / 10 != 0)
                     result += birim[(int.Parse(sag) % 100) / 10];
                 result += sayi[(int.Parse(sag) % 10)];
-                result += birim3[1];
+                result += " " + birim3[1];
             }
+            result = "# " + result + "#";
             return result;
         }
 

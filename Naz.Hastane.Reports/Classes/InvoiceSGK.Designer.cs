@@ -597,7 +597,7 @@ namespace Naz.Hastane.Reports
             // xrLabel41
             // 
             this.xrLabel41.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/mm/yyyy}")});
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/MM/yyyy}")});
             this.xrLabel41.Dpi = 254F;
             this.xrLabel41.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(1595.292F, 1726.271F);
@@ -1079,7 +1079,7 @@ namespace Naz.Hastane.Reports
             // lblTarihValue
             // 
             this.lblTarihValue.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/mm/yyyy}")});
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/MM/yyyy}")});
             this.lblTarihValue.Dpi = 254F;
             this.lblTarihValue.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.lblTarihValue.LocationFloat = new DevExpress.Utils.PointFloat(1595.292F, 345.0625F);

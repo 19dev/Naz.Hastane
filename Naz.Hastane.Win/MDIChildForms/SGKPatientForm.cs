@@ -10,6 +10,7 @@ using Naz.Hastane.Reports;
 using Naz.Utilities.Classes;
 using System.Collections.Generic;
 using Naz.Mernis.Service;
+using DevExpress.XtraGrid.Views.Grid;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -23,11 +24,12 @@ namespace Naz.Hastane.Win.MDIChildForms
         private Doctor _Doctor;
         private bool _IsWaitingForPolyclinic = false;
         private frmMain theMainForm;
+        private PatientVisitDetail voucherPVD = null;
+        private PatientVisitDetail invoicePVD = null;
 
         public SGKPatientForm()
         {
             InitializeComponent();
-            theMainForm = (frmMain)this.MdiParent;
         }
 
         public SGKPatientForm(string aPatientID) : this()
@@ -354,7 +356,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbInvoice_Click(object sender, EventArgs e)
         {
-            string NewTellerInvoiceNo = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+            string NewTellerInvoiceNo = this.teInvoiceNo.Text;
             string paymentType = "N";
             string POSType = null;
 
@@ -364,29 +366,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             double VATPercent = 0;
             double Payment = 0;
 
-            IList<PatientVisit> pvs = _Patient.PatientVisits;
-            PatientVisit pv = null;
+            theMainForm = (frmMain)this.MdiParent;
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
-            if (pvs.Count > 0)
+            PatientVisitDetail pvd = invoicePVD;
+            if (pvd != null && theMainForm != null)
             {
-                pv = pvs[0];
-            }
-            foreach(PatientVisitDetail pvd in pv.PatientVisitDetails)
-            {
-                if (pvd.CODE != "SGKKATILIM" && String.IsNullOrWhiteSpace(pvd.MAKNO))
-                {
-                    pvds.Add(pvd);
-                    ProductTotal += pvd.ADET * pvd.SATISF;
-                    VATPercent = pvd.KDV;
-                }
-            }
-            VATPercent = Math.Round(VATPercent, 2);
-            VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
-            InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
+                pvds.Add(pvd);
+                ProductTotal += pvd.ADET * pvd.SATISF;
+                VATPercent = pvd.KDV;
+                VATPercent = Math.Round(VATPercent, 2);
+                VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
+                InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
 
-            if (pv != null && pvds != null && pvds.Count > 0 && theMainForm != null)
-            {
-                theMainForm.PrintInvoice(Session, _Patient, pv, pvds,
+                theMainForm.PrintInvoice(Session, _Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     VATTotal,
@@ -397,48 +389,34 @@ namespace Naz.Hastane.Win.MDIChildForms
                     0,
                     NewTellerInvoiceNo
                     );
+                invoicePVD = null;
+                this.teInvoiceNo.Text = "";
             }
         }
 
         private void sbVoucher_Click(object sender, EventArgs e)
         {
-            string NewTellerVoucherNo = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+            string NewTellerVoucherNo = this.teVoucherNo.Text;
             string paymentType = "N";
             string POSType = null;
 
             double ProductTotal = 0;
-            double VATTotal = 0;
-            double InvoiceTotal = 0;
-            double VATPercent = 0;
-            double Payment = 0;
 
-            IList<PatientVisit> pvs = _Patient.PatientVisits;
-            PatientVisit pv = null;
+            theMainForm = (frmMain)this.MdiParent;
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
-            if (pvs.Count > 0)
+            PatientVisitDetail pvd = voucherPVD;
+            if (pvd != null && theMainForm != null)
             {
-                pv = pvs[0];
-            }
-            foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
-            {
-                if (pvd.CODE == "SGKKATILIM" && String.IsNullOrWhiteSpace(pvd.MAKNO))
-                {
-                    pvds.Add(pvd);
-                    ProductTotal += pvd.ADET * pvd.SATISF;
-                    VATPercent = pvd.KDV;
-                }
-            }
-            VATPercent = Math.Round(VATPercent, 2);
-            VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
-            InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
+                pvds.Add(pvd);
+                ProductTotal = pvd.ADET * pvd.SATISF;
 
-            if (pv != null && pvds != null && pvds.Count > 0 && theMainForm != null)
-            {
                 theMainForm.PrintVoucher(Session, _Patient, pvds,
                     paymentType, POSType,
-                    InvoiceTotal,
+                    ProductTotal,
                     NewTellerVoucherNo
                     );
+                voucherPVD = null;
+                this.teVoucherNo.Text = "";
             }
         }
 
@@ -448,5 +426,41 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.gcIslemler.RefreshDataSource();
 
         }
+
+        private void gvPatientVisitDetail_Click(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            PatientVisitDetail pvd = (PatientVisitDetail)view.GetFocusedRow();
+            if (pvd != null)
+            {
+                if (pvd.CODE == "SGKKATILIM")
+                {
+                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
+                    {
+                        voucherPVD = pvd;
+                        this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+                    }
+                    else
+                    {
+                        voucherPVD = null;
+                        this.teVoucherNo.Text = "";
+                    }
+                }
+                else
+                {
+                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
+                    {
+                        invoicePVD = pvd;
+                        this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+                    }
+                    else
+                    {
+                        invoicePVD = null;
+                        this.teInvoiceNo.Text = "";
+                    }
+                }
+            }
+        }
+
     }
 }

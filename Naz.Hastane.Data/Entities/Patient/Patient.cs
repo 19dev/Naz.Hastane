@@ -94,7 +94,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string USER_ID { get; set; } //USER_ID
         public virtual DateTime DATE_CREATE { get; set; } //DATE_CREATE
         public virtual string USER_ID_UPDATE { get; set; } //USER_ID_UPDATE
-        public virtual DateTime DATE_UPDATE { get; set; } //DATE_UPDATE
+        public virtual DateTime? DATE_UPDATE { get; set; } //DATE_UPDATE
 
         private IList<PatientVisit> _PatientVisits = new List<PatientVisit>();
 

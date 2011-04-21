@@ -10,7 +10,7 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual string KNR { get; set; } // KNR; length(6); 1
         public virtual string SNR { get; set; } // SNR; length(3); 1
 
-        public virtual DateTime TARIH { get; set; } // TARIH; length(8); 0
+        public virtual DateTime? TARIH { get; set; } // TARIH; length(8); 0
 
         public virtual string MAKBUZNO { get; set; } // MAKBUZNO; length(20); 0
         public virtual string MAKBUZTIPI { get; set; } // MAKBUZTIPI; length(1); 0
@@ -44,6 +44,6 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual double tutardoviz { get; set; } // tutardoviz; length(8); 1
 
         public virtual string USER_ID_UPDATE { get; set; } // USER_ID_UPDATE; length(20); 1
-        public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
+        public virtual DateTime? DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
     }
 }

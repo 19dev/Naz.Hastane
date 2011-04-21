@@ -989,61 +989,82 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
-        public void PrintInvoice(ISession session, Patient patient, PatientVisit pv, IList<PatientVisitDetail> pvds, 
+        public void PrintInvoice(ISession session, Patient patient, IList<PatientVisitDetail> pvds, 
             string paymentType, string POSType,
             double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
             double cashPayment, double advancePaymentUsed, string tellerInvoiceNo)
         {
+            if (pvds.Count == 0)
+                return;
 
-            PatientServices.AddNewInvoice(session, UIUtilities.CurrentUser, patient, pvds,
-                paymentType, POSType,
-                productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent,
-                cashPayment, advancePaymentUsed, tellerInvoiceNo);
+            try
+            {
+                PatientVisit pv = pvds[0].PatientVisit;
 
-            InvoiceSGK rpt = new InvoiceSGK();
-            rpt.prmAddress.Value = patient.HomeInvoiceAddress;
-            rpt.prmDate.Value = DateTime.Now;
-            rpt.prmDoctor.Value = pv.Doctor;
-            rpt.prmInvoiceNo.Value = tellerInvoiceNo;
-            rpt.prmPatientNo.Value = patient.PatientNo;
-            rpt.prmPatientPrice.Value = productTotal;
-            rpt.prmPatientTotal.Value = productTotal;
-            rpt.prmQueueNo.Value = pv.QueueNo;
-            rpt.prmServiceNo.Value = pv.Servis;
-            rpt.prmTaxOffice.Value = "";
-            rpt.prmTCID.Value = patient.TCId;
-            rpt.prmTime.Value = DateTime.Now;
-            rpt.prmTotal.Value = invoiceTotal;
-            rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(invoiceTotal.ToString("{0:#.00}"));
-            rpt.prmVAT.Value = VATPercent;
-            rpt.prmVATValue.Value = VATTotal;
+                PatientServices.AddNewInvoice(session, UIUtilities.CurrentUser, patient, pvds,
+                    paymentType, POSType,
+                    productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent,
+                    cashPayment, advancePaymentUsed, tellerInvoiceNo);
 
-            rpt.ShowPreview();
+                InvoiceSGK rpt = new InvoiceSGK();
+                rpt.prmAddress.Value = patient.HomeInvoiceAddress;
+                rpt.prmDate.Value = DateTime.Now;
+                rpt.prmDoctor.Value = pv.Doctor;
+                rpt.prmInvoiceNo.Value = tellerInvoiceNo;
+                rpt.prmPatientNo.Value = patient.PatientNo;
+                rpt.prmPatientPrice.Value = productTotal;
+                rpt.prmPatientTotal.Value = productTotal;
+                rpt.prmQueueNo.Value = pv.QueueNo;
+                rpt.prmServiceNo.Value = pv.Servis;
+                rpt.prmTaxOffice.Value = "";
+                rpt.prmTCID.Value = patient.TCId;
+                rpt.prmTime.Value = DateTime.Now;
+                rpt.prmTotal.Value = invoiceTotal;
+                rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(invoiceTotal.ToString());
+                rpt.prmVAT.Value = VATPercent;
+                rpt.prmVATValue.Value = VATTotal;
 
+                rpt.ShowPreview();
+
+            }
+            catch (Exception e)
+            {
+                XtraMessageBox.Show("Fatura Yazma Hatasý: " + e.Message);
+            }
         }
         public void PrintVoucher(ISession session, Patient patient, IList<PatientVisitDetail> pvds,
             string paymentType, string POSType,
             double paymentTotal, string tellerVoucherNo)
         {
-            PatientServices.AddNewVoucher(session, UIUtilities.CurrentUser, patient, pvds,
-                paymentType, POSType,
-                paymentTotal,
-                tellerVoucherNo
-                );
+            if (pvds.Count == 0)
+                return;
 
-            VoucherSGK rpt = new VoucherSGK();
-            rpt.prmDate.Value = DateTime.Now;
-            rpt.prmPatientName.Value = patient.FullName;
-            rpt.prmPatientNo.Value = patient.PatientNo;
-            rpt.prmTCID.Value = patient.TCId;
-            rpt.prmTime.Value = DateTime.Now;
-            rpt.prmTotal.Value = paymentTotal;
-            rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(paymentTotal.ToString("{0:#.00}"));
-            rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
-            rpt.prmVoucherNo.Value = tellerVoucherNo;
+            try
+            {
+                PatientServices.AddNewVoucher(session, UIUtilities.CurrentUser, pvds,
+                    paymentType, POSType,
+                    paymentTotal,
+                    tellerVoucherNo
+                    );
 
-            rpt.ShowPreview();
+                VoucherSGK rpt = new VoucherSGK();
+                rpt.prmDate.Value = DateTime.Now;
+                rpt.prmPatientName.Value = patient.FullName;
+                rpt.prmPatientNo.Value = patient.PatientNo;
+                rpt.prmTCID.Value = patient.TCId;
+                rpt.prmTime.Value = DateTime.Now;
+                rpt.prmTotal.Value = paymentTotal;
+                rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(paymentTotal.ToString());
+                rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
+                rpt.prmVoucherNo.Value = tellerVoucherNo;
 
+                rpt.ShowPreview();
+
+            }
+            catch (Exception e)
+            {
+                XtraMessageBox.Show("Makbuz Yazma Hatasý: " + e.Message);
+            }
         }
     }
 }

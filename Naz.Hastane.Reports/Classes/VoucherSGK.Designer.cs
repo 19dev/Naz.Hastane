@@ -31,26 +31,35 @@ namespace Naz.Hastane.Reports
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmTime = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmTotal = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmPatientNo = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmPatientName = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmTotalText = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmTCID = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmVoucherNo = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
@@ -65,15 +74,6 @@ namespace Naz.Hastane.Reports
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.prmUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmVoucherNo = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmTime = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmPatientNo = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmTotal = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmPatientName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmTCID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.prmTotalText = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -98,7 +98,7 @@ namespace Naz.Hastane.Reports
             // xrLabel10
             // 
             this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:DD/MM/YYYY}")});
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/MM/yyyy}")});
             this.xrLabel10.Dpi = 254F;
             this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(1540F, 500F);
@@ -107,6 +107,12 @@ namespace Naz.Hastane.Reports
             this.xrLabel10.SizeF = new System.Drawing.SizeF(170F, 40F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.Text = "xrLabel10";
+            // 
+            // prmDate
+            // 
+            this.prmDate.Name = "prmDate";
+            this.prmDate.Type = typeof(System.DateTime);
+            this.prmDate.Value = new System.DateTime(2011, 3, 15, 8, 51, 46, 322);
             // 
             // xrLabel9
             // 
@@ -189,6 +195,12 @@ namespace Naz.Hastane.Reports
             this.xrLabel27.Text = "xrLabel27";
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // prmTime
+            // 
+            this.prmTime.Name = "prmTime";
+            this.prmTime.Type = typeof(System.DateTime);
+            this.prmTime.Value = new System.DateTime(2011, 3, 15, 8, 51, 46, 340);
+            // 
             // xrLabel28
             // 
             this.xrLabel28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
@@ -204,6 +216,12 @@ namespace Naz.Hastane.Reports
             this.xrLabel28.Text = "xrLabel28";
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // prmTotal
+            // 
+            this.prmTotal.Name = "prmTotal";
+            this.prmTotal.Type = typeof(double);
+            this.prmTotal.Value = 0;
+            // 
             // xrLabel25
             // 
             this.xrLabel25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
@@ -216,6 +234,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel25.SizeF = new System.Drawing.SizeF(150F, 40F);
             this.xrLabel25.StylePriority.UseFont = false;
             this.xrLabel25.Text = "xrLabel25";
+            // 
+            // prmPatientNo
+            // 
+            this.prmPatientNo.Name = "prmPatientNo";
+            this.prmPatientNo.Value = "";
             // 
             // xrLabel26
             // 
@@ -230,6 +253,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel26.StylePriority.UseFont = false;
             this.xrLabel26.Text = "xrLabel26";
             // 
+            // prmPatientName
+            // 
+            this.prmPatientName.Name = "prmPatientName";
+            this.prmPatientName.Value = "";
+            // 
             // xrLabel31
             // 
             this.xrLabel31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
@@ -241,7 +269,12 @@ namespace Naz.Hastane.Reports
             this.xrLabel31.SizeF = new System.Drawing.SizeF(1460F, 40F);
             this.xrLabel31.StylePriority.UseTextAlignment = false;
             this.xrLabel31.Text = "xrLabel31";
-            this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // prmTotalText
+            // 
+            this.prmTotalText.Name = "prmTotalText";
+            this.prmTotalText.Value = "";
             // 
             // xrLabel32
             // 
@@ -254,7 +287,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel32.StylePriority.UseBackColor = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
             this.xrLabel32.Text = "ALINAN BU TUTAR S.U.T. 6.1 MADDESÝNE ÝSTÝNADEN SOSYAL GÜVENLÝK KURUMUNA VERÝLMEK " +
-                "ÜZERE TAHSÝL EDÝLMÝÞTÝR";
+    "ÜZERE TAHSÝL EDÝLMÝÞTÝR";
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel29
@@ -277,10 +310,15 @@ namespace Naz.Hastane.Reports
             this.xrLabel30.SizeF = new System.Drawing.SizeF(380F, 40F);
             this.xrLabel30.Text = "xrLabel30";
             // 
+            // prmTCID
+            // 
+            this.prmTCID.Name = "prmTCID";
+            this.prmTCID.Value = "";
+            // 
             // xrLabel19
             // 
             this.xrLabel19.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:DD/MM/YYYY}")});
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/MM/yyyy}")});
             this.xrLabel19.Dpi = 254F;
             this.xrLabel19.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(1547F, 1965.854F);
@@ -334,6 +372,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel23.StylePriority.UseFont = false;
             this.xrLabel23.Text = "xrLabel23";
             // 
+            // prmVoucherNo
+            // 
+            this.prmVoucherNo.Name = "prmVoucherNo";
+            this.prmVoucherNo.Value = "";
+            // 
             // xrLabel24
             // 
             this.xrLabel24.Dpi = 254F;
@@ -369,6 +412,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel22.StylePriority.UseFont = false;
             this.xrLabel22.Text = "xrLabel22";
             // 
+            // prmUserID
+            // 
+            this.prmUserID.Name = "prmUserID";
+            this.prmUserID.Value = "";
+            // 
             // xrLabel16
             // 
             this.xrLabel16.BackColor = System.Drawing.Color.Silver;
@@ -380,7 +428,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel16.StylePriority.UseBackColor = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.Text = "ALINAN BU TUTAR S.U.T. 6.1 MADDESÝNE ÝSTÝNADEN SOSYAL GÜVENLÝK KURUMUNA VERÝLMEK " +
-                "ÜZERE TAHSÝL EDÝLMÝÞTÝR";
+    "ÜZERE TAHSÝL EDÝLMÝÞTÝR";
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel15
@@ -394,7 +442,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel15.SizeF = new System.Drawing.SizeF(1460F, 40F);
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.Text = "xrLabel15";
-            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel14
             // 
@@ -534,54 +582,6 @@ namespace Naz.Hastane.Reports
             this.PageFooter.Dpi = 254F;
             this.PageFooter.HeightF = 0F;
             this.PageFooter.Name = "PageFooter";
-            // 
-            // prmUserID
-            // 
-            this.prmUserID.Name = "prmUserID";
-            this.prmUserID.Value = "";
-            // 
-            // prmVoucherNo
-            // 
-            this.prmVoucherNo.Name = "prmVoucherNo";
-            this.prmVoucherNo.Value = "";
-            // 
-            // prmDate
-            // 
-            this.prmDate.Name = "prmDate";
-            this.prmDate.Type = typeof(System.DateTime);
-            this.prmDate.Value = new System.DateTime(2011, 3, 15, 8, 51, 46, 322);
-            // 
-            // prmTime
-            // 
-            this.prmTime.Name = "prmTime";
-            this.prmTime.Type = typeof(System.DateTime);
-            this.prmTime.Value = new System.DateTime(2011, 3, 15, 8, 51, 46, 340);
-            // 
-            // prmPatientNo
-            // 
-            this.prmPatientNo.Name = "prmPatientNo";
-            this.prmPatientNo.Value = "";
-            // 
-            // prmTotal
-            // 
-            this.prmTotal.Name = "prmTotal";
-            this.prmTotal.Type = typeof(double);
-            this.prmTotal.Value = 0;
-            // 
-            // prmPatientName
-            // 
-            this.prmPatientName.Name = "prmPatientName";
-            this.prmPatientName.Value = "";
-            // 
-            // prmTCID
-            // 
-            this.prmTCID.Name = "prmTCID";
-            this.prmTCID.Value = "";
-            // 
-            // prmTotalText
-            // 
-            this.prmTotalText.Name = "prmTotalText";
-            this.prmTotalText.Value = "";
             // 
             // VoucherSGK
             // 

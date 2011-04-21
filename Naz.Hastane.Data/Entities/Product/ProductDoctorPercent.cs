@@ -16,7 +16,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string CODE { get; set; } // CODE; length(15); 0
         public virtual string CODE1 { get; set; } // CODE1; length(50); 1
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 1
-        public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
+        public virtual DateTime? DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
         public virtual double DRYUZDE { get; set; } // DRYUZDE; length(8); 0
         public virtual string GELIRGRUBU { get; set; } // GELIRGRUBU; length(10); 1
         public virtual string GRUP { get; set; } // GRUP; length(3); 0

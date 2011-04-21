@@ -573,22 +573,34 @@ namespace Naz.Hastane.Data.Services
             double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
             double cashPayment, double advancePaymentUsed, string tellerInvoiceNo)
         {
+            if (pvds.Count == 0)
+                return;
+
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                string newInvoiceNo = LookUpServices.GetNewInvoiceNo();
+                try
+                {
+                    string newInvoiceNo = LookUpServices.GetNewInvoiceNo();
 
-                UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
+                    UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
 
-                InsertNewAdvancePaymentForInvoice(session, transaction, user, patient,
-                    pvds[0].PatientVisit, paymentType, POSType, cashPayment,
-                    tellerInvoiceNo, newInvoiceNo);
+                    InsertNewAdvancePaymentForInvoice(session, transaction, user,
+                        pvds[0].PatientVisit, paymentType, POSType, cashPayment,
+                        tellerInvoiceNo, newInvoiceNo);
 
-                InsertNewInvoice(session, transaction, user, patient,
-                    pvds, paymentType, POSType, 
-                    productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent, cashPayment, 
-                    tellerInvoiceNo, "");
-                transaction.Commit();
+                    InsertNewInvoice(session, transaction, user, patient,
+                        pvds, paymentType, POSType,
+                        productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent, cashPayment,
+                        tellerInvoiceNo, newInvoiceNo);
+                    transaction.Commit();
+
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
             }
         }
 
@@ -612,76 +624,86 @@ namespace Naz.Hastane.Data.Services
             IList<AdvancePayment> aps = GetPatientAdvancePaymentsForInvoice(session, patient);
             for (int i = 0; i < aps.Count && remainingAdvancePayment > 0; i++)
             {
-                AdvancePayment ap = aps[i];
-                double usedPayment = Math.Min(remainingAdvancePayment, ap.RemainingAmount);
-                ap.KULLANILAN += usedPayment;
+                AdvancePayment ap        = aps[i];
+                double usedPayment       = Math.Min(remainingAdvancePayment, ap.RemainingAmount);
+                ap.KULLANILAN           += usedPayment;
+                ap.DATE_UPDATE           = DateTime.Now;
                 remainingAdvancePayment -= usedPayment;
                 session.Update(ap);
 
                 AdvancePaymentUsed apu = new AdvancePaymentUsed();
-                apu.AdvancePayment = ap;
-                apu.TARIH = DateTime.Today;
-                apu.TUTAR = usedPayment;
-                apu.USER_ID = user.USER_ID;
-                apu.DATE_CREATE = DateTime.Today;
+                apu.AdvancePayment     = ap;
+                apu.TARIH              = DateTime.Today;
+                apu.TUTAR              = usedPayment;
+                apu.USER_ID            = user.USER_ID;
+                apu.DATE_CREATE        = DateTime.Today;
                 session.Save(apu);
             }
         }
 
         public static void InsertNewAdvancePaymentForInvoice(ISession session, ITransaction transaction, User user, 
-            Patient patient, PatientVisit pv,
+            PatientVisit pv,
             string paymentType, string POSType, 
             double cashPayment, string tellerInvoiceNo, string invoiceNo)
         {
-            string makNo = LookUpServices.GetNewVoucherNo();
+            CashDeskRecord cdr = AddNewCashDeskRecord(session, transaction, user, pv,
+                "F-" + tellerInvoiceNo, invoiceNo, "A", paymentType, POSType, cashPayment);
+
             string apNo = LookUpServices.GetNewAdvancePaymentNo();
 
             AdvancePayment ap = new AdvancePayment();
-            ap.AV_ID = Convert.ToDouble(apNo);
-            ap.PatientVisit = pv;
-            ap.TARIH = DateTime.Today;
-            ap.TUTAR = cashPayment;
-            ap.KULLANILAN = cashPayment;
-            ap.ODEMESEKLI = paymentType;
-            ap.POSNO = POSType;
-            ap.MAKNO = makNo;
-            ap.HESAPKODU = null;
-            ap.ALTHESAPKODU = null;
-            ap.USER_ID = user.USER_ID;
-            ap.DATE_CREATE = DateTime.Now;
+            ap.AV_ID          = Convert.ToDouble(apNo);
+            ap.PatientVisit   = pv;
+            ap.TARIH          = DateTime.Today;
+            ap.TUTAR          = cashPayment;
+            ap.KULLANILAN     = cashPayment;
+            ap.ODEMESEKLI     = paymentType;
+            ap.POSNO          = POSType;
+            ap.MAKNO          = cdr.MAKNO;
+            ap.HESAPKODU      = null;
+            ap.ALTHESAPKODU   = null;
+            ap.USER_ID        = user.USER_ID;
+            ap.DATE_CREATE    = DateTime.Now;
 
             session.Save(ap);
 
             AdvancePaymentUsed apu = new AdvancePaymentUsed();
-            apu.AdvancePayment = ap;
-            apu.TARIH = DateTime.Today;
-            apu.FATURANO = invoiceNo;
-            apu.TUTAR = cashPayment;
-            apu.USER_ID = user.USER_ID;
-            apu.DATE_CREATE = DateTime.Now;
+            apu.AdvancePayment     = ap;
+            apu.TARIH              = DateTime.Today;
+            apu.FATURANO           = invoiceNo;
+            apu.TUTAR              = cashPayment;
+            apu.USER_ID            = user.USER_ID;
+            apu.DATE_CREATE        = DateTime.Now;
 
             session.Save(apu);
+        }
+
+        public static CashDeskRecord AddNewCashDeskRecord(ISession session, ITransaction transaction, User user,
+            PatientVisit pv, string tellerVoucherNo, string invoiceNo, string voucherType, string paymentType, string POSType, double payment)
+        {
+            string makNo = LookUpServices.GetNewVoucherNo();
 
             CashDeskRecord cdr = new CashDeskRecord();
-            cdr.MAKNO = makNo;
-            cdr.KNR = patient.PatientNo;
-            cdr.SNR = pv.VisitNo;
-            cdr.TARIH = DateTime.Today;
-            cdr.MAKBUZNO = "F-" + tellerInvoiceNo;
-            cdr.MAKBUZTIPI = "A";
-            cdr.ODEMESEKLI = paymentType[0];
-            cdr.POSNO = POSType;
-            cdr.TUTAR = cashPayment;
-            cdr.BORCALACAK = 'B';
-            cdr.FATURANO = invoiceNo;
-            cdr.VEZNE = user.VEZNE;
-            cdr.HESAPKODU = null;
-            cdr.ALTHESAPKODU = null;
-            cdr.USER_ID = user.USER_ID;
-            cdr.DATE_CREATE = DateTime.Now;
+            cdr.MAKNO          = makNo;
+            cdr.KNR            = pv.Patient.PatientNo;
+            cdr.SNR            = pv.VisitNo;
+            cdr.TARIH          = DateTime.Today;
+            cdr.MAKBUZNO       = tellerVoucherNo;
+            cdr.MAKBUZTIPI     = voucherType;
+            cdr.ODEMESEKLI     = paymentType[0];
+            cdr.POSNO          = POSType;
+            cdr.TUTAR          = payment;
+            cdr.BORCALACAK     = 'B';
+            cdr.FATURANO       = invoiceNo;
+            cdr.VEZNE          = user.VEZNE;
+            cdr.HESAPKODU      = null;
+            cdr.ALTHESAPKODU   = null;
+            cdr.USER_ID        = user.USER_ID;
+            cdr.DATE_CREATE    = DateTime.Now;
 
             session.Save(cdr);
 
+            return cdr;
         }
 
         public static void InsertNewInvoice(ISession session, ITransaction transaction, User user,
@@ -692,36 +714,45 @@ namespace Naz.Hastane.Data.Services
         {
             string makNo = LookUpServices.GetNewVoucherNo();
 
-            Invoice invoice = new Invoice();
-            invoice.KNR = patient.PatientNo;
-            invoice.FATURA_ID = invoiceNo;
-            invoice.SLNR = tellerInvoiceNo;
-            invoice.FATURANO = tellerInvoiceNo;
+            Invoice invoice      = new Invoice();
+            invoice.KNR          = patient.PatientNo;
+            invoice.FATURA_ID    = invoiceNo;
+            invoice.SLNR         = tellerInvoiceNo;
+            invoice.FATURANO     = tellerInvoiceNo;
             invoice.FATURATARIHI = DateTime.Now;
             invoice.HIZMETTUTARI = productTotal;
-            invoice.INDIRIM = discountTotal;
-            invoice.KDVTUTARI = VATTotal;
-            invoice.YUVARLAMA = 0;
+            invoice.INDIRIM      = discountTotal;
+            invoice.KDVTUTARI    = VATTotal;
+            invoice.YUVARLAMA    = 0;
             invoice.FATURATUTARI = invoiceTotal;
-            invoice.KDVORANI = VATPercent.ToString();
-            invoice.NAME = patient.FullName;
-            invoice.FATURATIPI = "H";
-            invoice.FAK = "K";
-            invoice.ZHLKZ = "N";
-            invoice.PSG = "";
-            invoice.ISODENDI = "1";
-            invoice.MAKNO = makNo;
-            invoice.VEZNE = user.VEZNE;
-            invoice.USER_ID = user.USER_ID;
-            invoice.DATE_CREATE = DateTime.Now;
+            invoice.KDVORANI     = VATPercent.ToString();
+            invoice.NAME         = patient.FullName;
+            invoice.FATURATIPI   = "H";
+            invoice.FAK          = "K";
+            invoice.ZHLKZ        = "N";
+            invoice.PSG          = "";
+            invoice.ISODENDI     = "1";
+            invoice.MAKNO        = makNo;
+            invoice.VEZNE        = user.VEZNE;
+            invoice.USER_ID      = user.USER_ID;
+            invoice.DATE_CREATE  = DateTime.Now;
 
             session.Save(invoice);
 
+            UpdatePatientVisitDetails(session, pvds, makNo);
+
+            LookUpServices.UpdateTellerInvoiceNo(user, tellerInvoiceNo);
+        }
+
+        public static void UpdatePatientVisitDetails(ISession session, IList<PatientVisitDetail> pvds, string voucherNo)
+        {
             foreach (PatientVisitDetail pvd in pvds)
             {
-                pvd.MAKNO = makNo;
+                pvd.MAKNO = voucherNo;
+                pvd.DATE_UPDATE = DateTime.Now;
                 session.Update(pvd);
             }
+
         }
 
         public static void InsertDoctorInvoice(ISession session, ITransaction transaction, User user,
@@ -748,26 +779,38 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
 
-        public static void AddNewVoucher(ISession Session, User user, Patient patient, IList<PatientVisitDetail> pvds,
+        public static void AddNewVoucher(ISession Session, User user, IList<PatientVisitDetail> pvds,
         string paymentType, string POSType,
         double cashPayment, string tellerVoucherNo)
         {
+            if (pvds.Count == 0)
+                return;
+
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-//                string newInvoiceNo = LookUpServices.GetNewInvoiceNo();
+                try
+                {
+                    CashDeskRecord cdr = AddNewCashDeskRecord(session, transaction, user,
+                        pv: pvds[0].PatientVisit,
+                        tellerVoucherNo: tellerVoucherNo,
+                        invoiceNo: "",
+                        voucherType: "V",
+                        paymentType: paymentType,
+                        POSType: POSType,
+                        payment: cashPayment);
 
-                //UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
+                    UpdatePatientVisitDetails(session, pvds, cdr.MAKNO);
 
-                //InsertNewAdvancePaymentForInvoice(session, transaction, user, patient,
-                //    pvds[0].PatientVisit, paymentType, POSType, cashPayment,
-                //    tellerInvoiceNo, newInvoiceNo);
+                    LookUpServices.UpdateTellerVoucherNo(user, tellerVoucherNo);
+                    transaction.Commit();
 
-                //InsertNewInvoice(session, transaction, user, patient,
-                //    pvds, paymentType, POSType,
-                //    productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent, cashPayment,
-                //    tellerInvoiceNo, "");
-                transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
             }
         }
 

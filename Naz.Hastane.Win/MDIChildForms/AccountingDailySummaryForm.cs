@@ -47,5 +47,17 @@ namespace Naz.Hastane.Win.MDIChildForms
             newForm.ShowReport<AccountingDailySummaryReport>(this.gridControl1.DataSource);
 
         }
+
+        private void sbMonthly_Click(object sender, EventArgs e)
+        {
+            for (DateTime day = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1); day < DateTime.Today; day = day.AddDays(1))
+            {
+                this.lbStatus.Text = day.ToString();
+                AccountingDailySummaryReport report = new AccountingDailySummaryReport();
+                report.DataSource = LookUpServices.GetAccountingDailySummary(day);
+                report.ExportToPdf(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".pdf");
+                report.ExportToXlsx(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".xlsx");
+            }
+        }
     }
 }

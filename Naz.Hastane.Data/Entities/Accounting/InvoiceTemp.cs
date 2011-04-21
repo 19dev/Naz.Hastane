@@ -20,8 +20,8 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual double SIRAID { get; set; } // SIRAID; length(8); 1
         public virtual string SNR { get; set; } // SNR; length(3); 1
         public virtual string TANIM { get; set; } // TANIM; length(2); 1
-        public virtual DateTime TARIH1 { get; set; } // TARIH1; length(8); 1
-        public virtual DateTime TARIH2 { get; set; } // TARIH2; length(8); 1
+        public virtual DateTime? TARIH1 { get; set; } // TARIH1; length(8); 1
+        public virtual DateTime? TARIH2 { get; set; } // TARIH2; length(8); 1
         public virtual double TUTAR { get; set; } // TUTAR; length(8); 1
         public virtual string USER_ID { get; set; } // USER_ID; length(100); 1
         public virtual string YAZIYLA { get; set; } // YAZIYLA; length(150); 1

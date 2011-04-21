@@ -19,7 +19,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual double c_borc { get; set; } // c_borc; length(8); 1
         public virtual string c_hesap_kodu { get; set; } // c_hesap_kodu; length(20); 1
         public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 0
-        public virtual DateTime DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
+        public virtual DateTime? DATE_UPDATE { get; set; } // DATE_UPDATE; length(8); 1
         public virtual string DESTEKPSG { get; set; } // DESTEKPSG; length(6); 1
         public virtual string DRPAYNEZAMAN { get; set; } // DRPAYNEZAMAN; length(1); 0
         public virtual string DSTKDUS { get; set; } // DSTKDUS; length(1); 1
