@@ -90,11 +90,11 @@
     <Compile Include="Classes\OzetReports\OZETAYPReport.Designer.cs">
       <DependentUpon>OZETAYPReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\InvoiceSGK.cs">
+    <Compile Include="Classes\InvoiceSGKReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\InvoiceSGK.Designer.cs">
-      <DependentUpon>InvoiceSGK.cs</DependentUpon>
+    <Compile Include="Classes\InvoiceSGKReport.Designer.cs">
+      <DependentUpon>InvoiceSGKReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\OzetReports\OZETAYPKurumReport.cs">
       <SubType>Component</SubType>
@@ -156,6 +156,12 @@
     <Compile Include="Classes\OzetReports\OZETYatakServisAyXTab.designer.cs">
       <DependentUpon>OZETYatakServisAyXTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\SGKTaahhutnameReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\SGKTaahhutnameReport.Designer.cs">
+      <DependentUpon>SGKTaahhutnameReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\SPGetGunlukMuhasebeFisi.cs">
       <DependentUpon>SPGetGunlukMuhasebeFisi.xsd</DependentUpon>
     </Compile>
@@ -184,11 +190,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TIPDATADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Classes\VoucherSGK.cs">
+    <Compile Include="Classes\VoucherSGKReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\VoucherSGK.Designer.cs">
-      <DependentUpon>VoucherSGK.cs</DependentUpon>
+    <Compile Include="Classes\VoucherSGKReport.Designer.cs">
+      <DependentUpon>VoucherSGKReport.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -210,8 +216,8 @@
     <EmbeddedResource Include="Classes\OzetReports\OZETAYPReport.resx">
       <DependentUpon>OZETAYPReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes\InvoiceSGK.resx">
-      <DependentUpon>InvoiceSGK.cs</DependentUpon>
+    <EmbeddedResource Include="Classes\InvoiceSGKReport.resx">
+      <DependentUpon>InvoiceSGKReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETAYPKurumReport.resx">
       <DependentUpon>OZETAYPKurumReport.cs</DependentUpon>
@@ -243,9 +249,12 @@
     <EmbeddedResource Include="Classes\OzetReports\OZETYatakServisAyXTab.resx">
       <DependentUpon>OZETYatakServisAyXTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\SGKTaahhutnameReport.resx">
+      <DependentUpon>SGKTaahhutnameReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Classes\VoucherSGK.resx">
-      <DependentUpon>VoucherSGK.cs</DependentUpon>
+    <EmbeddedResource Include="Classes\VoucherSGKReport.resx">
+      <DependentUpon>VoucherSGKReport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -112,7 +112,7 @@ namespace Naz.Hastane.Win {
             EnableRibbonButtons(false);
             ShowLoginForm();
 
-            Tests.TestNewIDGenerators();
+            //Tests.TestNewIDGenerators();
         }
 
         int documentIndex = 0;
@@ -795,6 +795,7 @@ namespace Naz.Hastane.Win {
             iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
+            iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
         }
         #endregion
 

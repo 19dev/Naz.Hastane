@@ -410,6 +410,19 @@ namespace Naz.Hastane.Data.Services
         
         }
 
+        public static IList<DailyTellerReport> GetDailyTellerReportData(string userName, DateTime startDate, DateTime endDate)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery("sp_GetDailyTellerReport")
+                    .SetString("UserList", userName)
+                    .SetDateTime("StartDate", startDate.Date)
+                    .SetDateTime("EndDate", endDate.Date)
+                    .List<DailyTellerReport>();
+            }
+
+        }
+
         #region ID Generators
         public static string GetNewSystemSettingNo(string key, bool updateDB = true)
         {

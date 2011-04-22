@@ -127,6 +127,7 @@ namespace Naz.Hastane.Data
                 .Mappings(m =>m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly())
                     .ExportTo("D:\\Projects\\Naz.Hastane.Git\\Naz.Hastane.Data\\Docs\\GeneratedHBM"))
                 .Mappings(m => m.HbmMappings.AddClasses(typeof(AccountingDailySummary)))
+                .Mappings(m => m.HbmMappings.AddClasses(typeof(DailyTellerReport)))
 
                 .ExposeConfiguration(x => x.SetInterceptor(intercepter))
                   

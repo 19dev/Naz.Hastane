@@ -10,12 +10,12 @@ namespace Naz.Hastane.Win {
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
@@ -156,9 +156,6 @@ namespace Naz.Hastane.Win {
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpUser = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgUserFunctions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpSGKPatients = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSGK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -177,6 +174,9 @@ namespace Naz.Hastane.Win {
             this.rbDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgGeneralDefinitions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpUser = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgUserFunctions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpGallery = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgAra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -192,6 +192,7 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -484,10 +485,11 @@ namespace Naz.Hastane.Win {
             this.iExportToPDF,
             this.iExportToXSLX,
             this.iSubFunctionGroup,
-            this.iPriceList});
+            this.iPriceList,
+            this.iDailyTellerReport});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 290;
+            this.rcMain.MaxItemId = 292;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -508,7 +510,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpSGKPatients;
+            this.rcMain.SelectedPage = this.rpAccounting;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1577,36 +1579,6 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Format";
             // 
-            // rpUser
-            // 
-            this.rpUser.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgUserFunctions,
-            this.ribbonPageGroup9});
-            this.rpUser.Name = "rpUser";
-            this.rpUser.Text = "Kullanýcý Ýþlemleri";
-            // 
-            // rpgUserFunctions
-            // 
-            this.rpgUserFunctions.ItemLinks.Add(this.iLogin);
-            this.rpgUserFunctions.ItemLinks.Add(this.iPasswordChange);
-            this.rpgUserFunctions.Name = "rpgUserFunctions";
-            this.rpgUserFunctions.Text = "Kullanýcý Ýþlemleri";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ImageIndex = 22;
-            this.ribbonPageGroup9.ItemLinks.Add(this.iCik);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            toolTipTitleItem2.Text = "Save File Dialog";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.Text = "Show the Save file dialog box";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.ribbonPageGroup9.SuperTip = superToolTip2;
-            this.ribbonPageGroup9.Text = "Exit";
-            // 
             // rpSGKPatients
             // 
             this.rpSGKPatients.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1620,6 +1592,7 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iYeniSGKHastasi);
             this.rpgSGK.ItemLinks.Add(this.iSGKInvoiceVoucher);
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
+            this.rpgSGK.ItemLinks.Add(this.iDailyTellerReport);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
             // 
@@ -1797,6 +1770,36 @@ namespace Naz.Hastane.Win {
             this.rpgGeneralDefinitions.Name = "rpgGeneralDefinitions";
             this.rpgGeneralDefinitions.Text = "Genel Tanýmlar";
             // 
+            // rpUser
+            // 
+            this.rpUser.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgUserFunctions,
+            this.ribbonPageGroup9});
+            this.rpUser.Name = "rpUser";
+            this.rpUser.Text = "Kullanýcý Ýþlemleri";
+            // 
+            // rpgUserFunctions
+            // 
+            this.rpgUserFunctions.ItemLinks.Add(this.iLogin);
+            this.rpgUserFunctions.ItemLinks.Add(this.iPasswordChange);
+            this.rpgUserFunctions.Name = "rpgUserFunctions";
+            this.rpgUserFunctions.Text = "Kullanýcý Ýþlemleri";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ImageIndex = 22;
+            this.ribbonPageGroup9.ItemLinks.Add(this.iCik);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            toolTipTitleItem2.Text = "Save File Dialog";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.Text = "Show the Save file dialog box";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.ribbonPageGroup9.SuperTip = superToolTip2;
+            this.ribbonPageGroup9.Text = "Exit";
+            // 
             // rpGallery
             // 
             this.rpGallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1928,6 +1931,12 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
+            // 
+            // iDailyTellerReport
+            // 
+            this.iDailyTellerReport.Caption = "Günlük Kasa Raporu";
+            this.iDailyTellerReport.Id = 291;
+            this.iDailyTellerReport.Name = "iDailyTellerReport";
             // 
             // frmMain
             // 
@@ -2143,6 +2152,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rpAccounting;
         private DevExpress.XtraBars.BarButtonItem iSubFunctionGroup;
         private DevExpress.XtraBars.BarButtonItem iPriceList;
+        private DevExpress.XtraBars.BarButtonItem iDailyTellerReport;
 
     }
 }

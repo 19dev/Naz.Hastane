@@ -11,6 +11,7 @@ using Naz.Utilities.Classes;
 using System.Collections.Generic;
 using Naz.Mernis.Service;
 using DevExpress.XtraGrid.Views.Grid;
+using Naz.Hastane.Reports.Classes;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -460,6 +461,24 @@ namespace Naz.Hastane.Win.MDIChildForms
                     }
                 }
             }
+        }
+
+        private void sbTaahutname_Click(object sender, EventArgs e)
+        {
+            SGKTaahhutnameReport report = new SGKTaahhutnameReport();
+
+            report.prmHomeAddress.Value = _Patient.HomeAddress;
+            report.prmHomeCity.Value = _Patient.HomeCity;
+            report.prmHomeDistrict.Value = _Patient.HomeDistrict;
+            report.prmHomeTown.Value = _Patient.HomeTown;
+            report.prmPatientName.Value = _Patient.FullName;
+            report.prmPatientNo.Value = _Patient.PatientNo;
+            report.prmPhone1.Value = _Patient.HomePhone1;
+            report.prmPhone2.Value = _Patient.HomePhone2;
+            report.prmPrintDate.Value = DateTime.Today;
+            report.prmTCID.Value = _Patient.TCId;
+
+            report.ShowPreview();
         }
 
     }

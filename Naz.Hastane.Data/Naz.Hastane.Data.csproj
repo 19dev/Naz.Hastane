@@ -180,6 +180,7 @@
     <Compile Include="Entities\Product\SGKAutoExaminationBase.cs" />
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
+    <Compile Include="Entities\StoredProcedure\DailyTellerReport.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentUsedMap.cs" />
@@ -284,6 +285,7 @@
     <Compile Include="Mappings\Product\SGKAutoExaminationSameDayMap.cs" />
     <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
     <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\DailyTellerReportMap.cs" />
     <Compile Include="NHibernateSessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -317,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\NHibernateCode.txt" />
+    <EmbeddedResource Include="Entities\StoredProcedure\DailyTellerReport.hbm.xml" />
     <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
