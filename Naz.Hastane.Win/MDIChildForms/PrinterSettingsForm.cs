@@ -18,50 +18,27 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
 
-            this.lueInvoicePrinter.Properties.DataSource = GetPrinters();
-            this.lueVoucherPrinter.Properties.DataSource = GetPrinters();
+            IConfigSource cs = UIUtilities.Configuration;
 
-            IConfigSource cs = new IniConfigSource("Naz.Hastane.ini");
-            
-            this.lueInvoicePrinter.EditValue = cs.Configs["Printer"].Get("InvoicePrinter");
-            lueInvoicePrinterTray.Properties.DataSource = GetPrinterTrays(lueInvoicePrinter.EditValue.ToString());
-            this.lueInvoicePrinterTray.EditValue = cs.Configs["Printer"].Get("InvoicePrinterTray");
+            this.lueInvoicePrinter.Properties.DataSource = UIUtilities.GetPrinters();
+            this.lueInvoicePrinter.EditValue = cs.Configs["Printer"].Get("InvoicePrinter", "");
+            this.lueInvoicePrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueInvoicePrinter.EditValue.ToString());
+            this.lueInvoicePrinterTray.EditValue = cs.Configs["Printer"].Get("InvoicePrinterTray", "");
 
-            this.lueVoucherPrinter.EditValue = cs.Configs["Printer"].Get("VoucherPrinter");
+            this.lueVoucherPrinter.Properties.DataSource = UIUtilities.GetPrinters();
+            this.lueVoucherPrinter.EditValue = cs.Configs["Printer"].Get("VoucherPrinter", "");
+            this.lueVoucherPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueVoucherPrinter.EditValue.ToString());
+            this.lueVoucherPrinterTray.EditValue = cs.Configs["Printer"].Get("VoucherPrinterTray", "");
 
-            lueVoucherPrinterTray.Properties.DataSource = GetPrinterTrays(lueVoucherPrinter.EditValue.ToString());
-            this.lueVoucherPrinterTray.EditValue = cs.Configs["Printer"].Get("VoucherPrinterTray");
-        }
-
-        private List<string> GetPrinters()
-        {
-            List<string> printers = new List<string>();
-            foreach (string printer in PrinterSettings.InstalledPrinters)
-            {
-                printers.Add(printer);
-            }
-            return printers;
-        }
-
-        private List<string> GetPrinterTrays(string printerName)
-        {
-            PrinterSettings printer = new PrinterSettings();
-            printer.PrinterName = printerName;
-
-            List<string> paperSources = new List<string>();
-            if (printer.IsValid)
-            {
-                foreach (PaperSource paperSource in printer.PaperSources)
-                {
-                    paperSources.Add(paperSource.SourceName);
-                }
-            }
-            return paperSources;
+            this.lueNormalPrinter.Properties.DataSource = UIUtilities.GetPrinters();
+            this.lueNormalPrinter.EditValue = cs.Configs["Printer"].Get("NormalPrinter", "");
+            this.lueNormalPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueVoucherPrinter.EditValue.ToString());
+            this.lueNormalPrinterTray.EditValue = cs.Configs["Printer"].Get("NormalPrinterTray", "");
         }
 
         private void sbSave_Click(object sender, EventArgs e)
         {
-            IConfigSource cs = new IniConfigSource("Naz.Hastane.ini");
+            IConfigSource cs = UIUtilities.Configuration;
 
             cs.Configs["Printer"].Set("InvoicePrinter", this.lueInvoicePrinter.Text);
             cs.Configs["Printer"].Set("InvoicePrinterTray", this.lueInvoicePrinterTray.Text);
@@ -69,17 +46,25 @@ namespace Naz.Hastane.Win.MDIChildForms
             cs.Configs["Printer"].Set("VoucherPrinter", this.lueVoucherPrinter.Text);
             cs.Configs["Printer"].Set("VoucherPrinterTray", this.lueVoucherPrinterTray.Text);
 
+            cs.Configs["Printer"].Set("NormalPrinter", this.lueNormalPrinter.Text);
+            cs.Configs["Printer"].Set("NormalPrinterTray", this.lueNormalPrinterTray.Text);
+
             cs.Save();
         }
 
         private void lueInvoicePrinter_EditValueChanged(object sender, EventArgs e)
         {
-            lueInvoicePrinterTray.Properties.DataSource = GetPrinterTrays(lueInvoicePrinter.Text);
+            lueInvoicePrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueInvoicePrinter.Text);
         }
 
         private void lueVoucherPrinter_EditValueChanged(object sender, EventArgs e)
         {
-            lueVoucherPrinterTray.Properties.DataSource = GetPrinterTrays(lueVoucherPrinter.Text);
+            lueVoucherPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueVoucherPrinter.Text);
+        }
+
+        private void lueNormalPrinter_EditValueChanged(object sender, EventArgs e)
+        {
+            lueNormalPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueNormalPrinter.Text);
         }
     }
 }

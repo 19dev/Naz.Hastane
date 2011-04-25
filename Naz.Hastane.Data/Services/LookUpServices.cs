@@ -18,17 +18,6 @@ namespace Naz.Hastane.Data.Services
 {
     public static class LookUpServices
     {
-        public const string SGKCode = "SGK";
-        public const string VATDefaultValue = "N";
-        public const string PaymentTypeDefaultValue = "0";
-        public const string ProvisionTypeDefaultValue = "N";
-        public const string InsuranceTypeDefaultValue = "1";
-        public const string TransferorInstitutionDefaultValue = "1";
-        public const string BranchCodeDefaultValue = "N";
-        public const string TreatmentTypeDefaultValue = "0";
-        public const string RelationTypeDefaultValue = "0";
-        public const string FollowUpTypeDeafultValue = "N";
-        public const string TreatmentStyleDefaultValue = "A";
 
         public static T GetByID<T>(string aID)
         {
@@ -274,6 +263,27 @@ namespace Naz.Hastane.Data.Services
         public static IList<User> Users
         { get { return LookUpTable(ref _Users); } }
 
+        private static IList<User> _Tellers;
+        public static IList<User> Tellers
+        {
+            get
+            {
+                if (_Tellers == null)
+                {
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    {
+                        _Tellers = (from user in session.Query<User>()
+                                       where user.VEZNE != null
+                                       orderby user.USER_ID ascending
+                                       select user
+                                      )
+                                      .ToList<User>();
+                    }
+                }
+                return _Tellers;
+            }
+        }
+
         private static IList<Warehouse> _Warehouses;
         public static IList<Warehouse> Warehouses
         { get { return LookUpTable(ref _Warehouses); } }
@@ -310,7 +320,7 @@ namespace Naz.Hastane.Data.Services
 
         public static InsuranceCompany GetSGK(ISession session)
         {
-            return session.Get<InsuranceCompany>(SGKCode);
+            return session.Get<InsuranceCompany>(InsuranceCompany.SGKCode);
         }
 
         private static IList<Doctor> _SGKDoctors;
@@ -410,7 +420,7 @@ namespace Naz.Hastane.Data.Services
         
         }
 
-        public static IList<DailyTellerReport> GetDailyTellerReportData(string userName, DateTime startDate, DateTime endDate)
+        public static IList<DailyTellerReportRecord> GetDailyTellerReportData(string userName, DateTime startDate, DateTime endDate)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
@@ -418,7 +428,7 @@ namespace Naz.Hastane.Data.Services
                     .SetString("UserList", userName)
                     .SetDateTime("StartDate", startDate.Date)
                     .SetDateTime("EndDate", endDate.Date)
-                    .List<DailyTellerReport>();
+                    .List<DailyTellerReportRecord>();
             }
 
         }

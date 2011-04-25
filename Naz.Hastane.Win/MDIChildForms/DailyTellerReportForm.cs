@@ -17,21 +17,26 @@ namespace Naz.Hastane.Win.MDIChildForms
         public DailyTellerReportForm()
         {
             InitializeComponent();
+            this.lueUser.Properties.DataSource = LookUpServices.Tellers;
         }
 
         private void AccountingDailySummaryForm_Load(object sender, EventArgs e)
         {
-            this.deFirstDate.DateTime = DateTime.Today;
-            this.deLastDate.DateTime = DateTime.Today;
+            this.deStartDate.DateTime = DateTime.Today;
+            this.deEndDate.DateTime = DateTime.Today;
         }
 
-        private void deDate_EditValueChanged(object sender, EventArgs e)
+        private void RefreshData()
         {
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                var records = LookUpServices.GetDailyTellerReportData(UIUtilities.CurrentUser.USER_ID, this.deFirstDate.DateTime.Date, this.deLastDate.DateTime.Date);
+                if (this.deEndDate.DateTime == null || this.deEndDate.DateTime < this.deStartDate.DateTime)
+                    this.deEndDate.DateTime = this.deStartDate.DateTime;
+
+                var records = LookUpServices.GetDailyTellerReportData(this.lueUser.Text, this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
                 this.gridControl1.DataSource = records;
+                this.gridView1.ExpandAllGroups();
             }
             finally
             {
@@ -42,22 +47,27 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbPrint_Click(object sender, EventArgs e)
         {
             PrintPreviewForm newForm = new PrintPreviewForm();
-            newForm.Text = "Günlük Kasa Raporu:" + this.deFirstDate.DateTime.Date.ToString() + " - " + this.deLastDate.DateTime.Date.ToString();
+            newForm.Text = "Günlük Kasa Raporu:" + this.deStartDate.DateTime.Date.ToString() + " - " + this.deEndDate.DateTime.Date.ToString();
             ((frmMain)this.MdiParent).ShowNewDocument(newForm);
-            //newForm.ShowReport<DailyTellerReport>(this.gridControl1.DataSource);
+            newForm.ShowReport<Naz.Hastane.Reports.Classes.DailyTellerReport>(this.gridControl1.DataSource);
 
         }
 
         private void sbMonthly_Click(object sender, EventArgs e)
         {
-            for (DateTime day = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1); day < DateTime.Today; day = day.AddDays(1))
-            {
-                this.lbStatus.Text = day.ToString();
-                AccountingDailySummaryReport report = new AccountingDailySummaryReport();
-                report.DataSource = LookUpServices.GetAccountingDailySummary(day);
-                report.ExportToPdf(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".pdf");
-                report.ExportToXlsx(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".xlsx");
-            }
+            //for (DateTime day = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1); day < DateTime.Today; day = day.AddDays(1))
+            //{
+            //    this.lbStatus.Text = day.ToString();
+            //    AccountingDailySummaryReport report = new AccountingDailySummaryReport();
+            //    report.DataSource = LookUpServices.GetAccountingDailySummary(day);
+            //    report.ExportToPdf(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".pdf");
+            //    report.ExportToXlsx(@"D:\SurpPirgic\Muhasebe\Reports\" + day.ToString("yyyyMMdd") + ".xlsx");
+            //}
+        }
+
+        private void sbRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }

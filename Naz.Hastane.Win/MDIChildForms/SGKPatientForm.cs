@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using Naz.Mernis.Service;
 using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Reports.Classes;
+using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -24,33 +25,43 @@ namespace Naz.Hastane.Win.MDIChildForms
         private Patient _Patient;
         private Doctor _Doctor;
         private bool _IsWaitingForPolyclinic = false;
-        private frmMain theMainForm;
         private PatientVisitDetail voucherPVD = null;
         private PatientVisitDetail invoicePVD = null;
 
-        public SGKPatientForm()
+        private SGKPatientForm()
         {
             InitializeComponent();
         }
 
         public SGKPatientForm(string aPatientID) : this()
         {
-            if (String.IsNullOrEmpty(aPatientID))
+            _Patient = PatientServices.GetPatientByID(aPatientID, Session);
+            if (_Patient == null)
+            {
                 _Patient = PatientServices.GetNewSGKPatient(Session);
+                this.teTCID.Enabled = true;
+            }
             else
-                _Patient = PatientServices.GetPatientByID(aPatientID, Session);
-
+            {
+                this.teTCID.Enabled = false;
+            }
             InitBindings();
 
             this.gcIslemler.DataSource = _Patient.PatientVisits;
-            this.medulaSorgu.lueProvisionType.EditValue = LookUpServices.ProvisionTypeDefaultValue;
-            this.medulaSorgu.lueInsuranceType.EditValue = LookUpServices.InsuranceTypeDefaultValue;
-            this.medulaSorgu.lueTransferorInstitution.EditValue = LookUpServices.TransferorInstitutionDefaultValue;
-            this.medulaSorgu.lueBranchCode.EditValue = LookUpServices.BranchCodeDefaultValue;
-            this.medulaSorgu.lueTreatmentType.EditValue = LookUpServices.TreatmentTypeDefaultValue;
-            this.medulaSorgu.lueRelationType.EditValue = LookUpServices.RelationTypeDefaultValue;
-            this.medulaSorgu.lueFollowUpType.EditValue = LookUpServices.FollowUpTypeDeafultValue;
-            this.medulaSorgu.lueTreatmentStyle.EditValue = LookUpServices.TreatmentStyleDefaultValue;
+            this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
+            this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
+            this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
+            this.medulaSorgu.lueBranchCode.EditValue = BranchCode.DefaultValue;
+            this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
+            this.medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
+            this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DeafultValue;
+            this.medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
+        }
+
+        public void SetNewTCID(string TCID)
+        {
+            this.teTCID.Text = TCID;
+            CallMernis();
         }
 
         private void InitBindings()
@@ -121,6 +132,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbKaydet_Click(object sender, EventArgs e)
         {
+            SavePatient();
+        }
+
+        private void SavePatient()
+        {
             if (String.IsNullOrWhiteSpace(_Patient.FirstName))
             {
                 XtraMessageBox.Show("Lütfen Hastanın Adını Kontrol Ediniz", "Hasta Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -144,12 +160,13 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             try
             {
-                PatientServices.SavePatient(Session, _Patient);
+                PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
             }
             catch (Exception error)
             {
                 XtraMessageBox.Show("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         #region GridBindings
@@ -235,6 +252,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             EnableForMernis(true);
             if (this.mernisSorgu.IsOK)
             {
+                _Patient.TCId = this.mernisSorgu.NufusCuzdani.TCKimlikNo.ToString();
                 _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
                 _Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
                 _Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
@@ -260,6 +278,17 @@ namespace Naz.Hastane.Win.MDIChildForms
                     this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
                     this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
                 _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
+
+                if (String.IsNullOrWhiteSpace(_Patient.PatientNo))
+                {
+                    SavePatient();
+                    (this.MdiParent as frmMain).OpenSGKPatient(_Patient.PatientNo);
+                    this.Close();
+                }
+                else
+                { 
+                    SavePatient(); 
+                }
             }
         }
         #endregion
@@ -367,10 +396,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             double VATPercent = 0;
             double Payment = 0;
 
-            theMainForm = (frmMain)this.MdiParent;
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
             PatientVisitDetail pvd = invoicePVD;
-            if (pvd != null && theMainForm != null)
+            if (pvd != null)
             {
                 pvds.Add(pvd);
                 ProductTotal += pvd.ADET * pvd.SATISF;
@@ -379,7 +407,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
                 InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
 
-                theMainForm.PrintInvoice(Session, _Patient, pvds,
+                UIUtilities.PrintInvoice(Session, _Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     VATTotal,
@@ -388,7 +416,8 @@ namespace Naz.Hastane.Win.MDIChildForms
                     VATPercent,
                     Payment,
                     0,
-                    NewTellerInvoiceNo
+                    NewTellerInvoiceNo,
+                    true
                     );
                 invoicePVD = null;
                 this.teInvoiceNo.Text = "";
@@ -403,18 +432,18 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             double ProductTotal = 0;
 
-            theMainForm = (frmMain)this.MdiParent;
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
             PatientVisitDetail pvd = voucherPVD;
-            if (pvd != null && theMainForm != null)
+            if (pvd != null)
             {
                 pvds.Add(pvd);
                 ProductTotal = pvd.ADET * pvd.SATISF;
 
-                theMainForm.PrintVoucher(Session, _Patient, pvds,
+                UIUtilities.PrintVoucher(Session, _Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
-                    NewTellerVoucherNo
+                    NewTellerVoucherNo,
+                    true
                     );
                 voucherPVD = null;
                 this.teVoucherNo.Text = "";
@@ -465,21 +494,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbTaahutname_Click(object sender, EventArgs e)
         {
-            SGKTaahhutnameReport report = new SGKTaahhutnameReport();
-
-            report.prmHomeAddress.Value = _Patient.HomeAddress;
-            report.prmHomeCity.Value = _Patient.HomeCity;
-            report.prmHomeDistrict.Value = _Patient.HomeDistrict;
-            report.prmHomeTown.Value = _Patient.HomeTown;
-            report.prmPatientName.Value = _Patient.FullName;
-            report.prmPatientNo.Value = _Patient.PatientNo;
-            report.prmPhone1.Value = _Patient.HomePhone1;
-            report.prmPhone2.Value = _Patient.HomePhone2;
-            report.prmPrintDate.Value = DateTime.Today;
-            report.prmTCID.Value = _Patient.TCId;
-
-            report.ShowPreview();
+            UIUtilities.PrintTaahhutname(_Patient, true);
         }
-
     }
 }

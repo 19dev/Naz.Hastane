@@ -16,6 +16,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.Data.Filtering;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
+using DevExpress.XtraEditors;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -40,9 +41,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 try
                 {
-                    string cellValue;
-                    cellValue = gridView1.GetFocusedRowCellDisplayText("PatientNo");
-                    (this.MdiParent as frmMain).OpenHastaSGK(cellValue);
+                    string patientNo;
+                    patientNo = gridView1.GetFocusedRowCellDisplayText("PatientNo");
+                    (this.MdiParent as frmMain).OpenSGKPatient(patientNo);
                 }
                 finally
                 {
@@ -62,6 +63,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             try
             {
+                if (SearchByTCID()) return;
+                if (SearchByPatientNo()) return;
+
                 string criteriaString = "";
 
                 GetCriteria(this.teTCKimlikNo, ref criteriaString, "TCId");
@@ -75,6 +79,10 @@ namespace Naz.Hastane.Win.MDIChildForms
                     IList<Patient> patients = PatientServices.GetByWhere(criteriaString);
                     this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
                     this.gridHastaArama.DataSource = patients;
+                    if (patients.Count == 1)
+                    {
+                        (this.MdiParent as frmMain).OpenSGKPatient(patients[0].PatientNo);
+                    }
                 }
                 this.AcceptButton = this.sbSec;
             }
@@ -83,6 +91,52 @@ namespace Naz.Hastane.Win.MDIChildForms
                 Cursor.Current = Cursors.Default;
             }
 
+        }
+
+        private bool SearchByTCID()
+        {
+            string TCID = this.teTCKimlikNo.Text;
+            if (PatientServices.IsValidTCID(TCID))
+            {
+                Patient patient = PatientServices.GetByTCId(TCID);
+                if (patient == null)
+                {
+                    if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        (this.MdiParent as frmMain).OpenNewSGKPatientWithTCID(TCID);
+                    }
+                }
+                else
+                {
+                    (this.MdiParent as frmMain).OpenSGKPatient(patient.PatientNo);
+                }
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool SearchByPatientNo()
+        {
+            string patientNo = this.teHastaNo.Text;
+            if (PatientServices.IsValidPatientNo(patientNo))
+            {
+                Patient patient = PatientServices.GetPatientByID(patientNo);
+                if (patient == null)
+                {
+                    if (XtraMessageBox.Show("Bu Hasta Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        (this.MdiParent as frmMain).OpenNewSGKPatient();
+                    }
+                }
+                else
+                {
+                    (this.MdiParent as frmMain).OpenSGKPatient(patientNo);
+                }
+                return true;
+            }
+
+            return false;
         }
 
         private void AddCriteria(ref string aCriteria1, string aCriteria2)
@@ -136,7 +190,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             //MessageBox.Show("Yeni Hasta No:" + YeniHastaNo);
 
 
-            (this.MdiParent as frmMain).OpenNewHastaSGK();
+            (this.MdiParent as frmMain).OpenNewSGKPatient();
         }
     }
 }

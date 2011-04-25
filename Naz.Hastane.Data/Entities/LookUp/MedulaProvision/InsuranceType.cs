@@ -18,5 +18,6 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
     [Description("Sigorta Tipi")]
     public class InsuranceType : LookUpBase
     {
+        public static readonly string DefaultValue = "1";
     }
 }

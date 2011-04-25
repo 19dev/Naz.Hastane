@@ -151,6 +151,7 @@ namespace Naz.Hastane.Win {
             this.iExportToXSLX = new DevExpress.XtraBars.BarButtonItem();
             this.iSubFunctionGroup = new DevExpress.XtraBars.BarButtonItem();
             this.iPriceList = new DevExpress.XtraBars.BarButtonItem();
+            this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -192,7 +193,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -251,7 +251,6 @@ namespace Naz.Hastane.Win {
             this.iPaste.Hint = "Paste";
             this.iPaste.Id = 11;
             this.iPaste.ImageIndex = 8;
-            this.iPaste.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V));
             this.iPaste.Name = "iPaste";
             this.iPaste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPaste_ItemClick);
             // 
@@ -489,7 +488,7 @@ namespace Naz.Hastane.Win {
             this.iDailyTellerReport});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 292;
+            this.rcMain.MaxItemId = 293;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1544,6 +1543,12 @@ namespace Naz.Hastane.Win {
             this.iPriceList.Id = 287;
             this.iPriceList.Name = "iPriceList";
             // 
+            // iDailyTellerReport
+            // 
+            this.iDailyTellerReport.Caption = "Günlük Kasa Raporu";
+            this.iDailyTellerReport.Id = 291;
+            this.iDailyTellerReport.Name = "iDailyTellerReport";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1931,12 +1936,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // iDailyTellerReport
-            // 
-            this.iDailyTellerReport.Caption = "Günlük Kasa Raporu";
-            this.iDailyTellerReport.Id = 291;
-            this.iDailyTellerReport.Name = "iDailyTellerReport";
             // 
             // frmMain
             // 

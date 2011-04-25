@@ -7,5 +7,6 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
     [Description("Provizyon Tipi")]
     public class ProvisionType : LookUpBase
     {
+        public static readonly string DefaultValue = "N";
     }
 }

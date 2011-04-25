@@ -13,18 +13,11 @@ using DevExpress.XtraBars.Ribbon.Gallery;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Entities.LookUp.General;
-using Naz.Hastane.Data.Entities.LookUp.MedulaDiabet;
-using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
-using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Reports;
 using Naz.Hastane.Reports.Classes;
-using Naz.Hastane.Win.MDIChildForms;
-using Naz.Utilities.Classes;
-using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 using Naz.Hastane.Win.Forms;
-using NHibernate;
+using Naz.Hastane.Win.MDIChildForms;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -230,56 +223,8 @@ namespace Naz.Hastane.Win {
 
         private void iPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //XtraMessageBox.Show(this, "Yazýcý Ýþlemleri", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            VoucherSGK rpt = new VoucherSGK();
-            rpt.prmDate.Value = DateTime.Now;
-            rpt.prmPatientName.Value = "AYDIN SAKAR";
-            rpt.prmPatientNo.Value = "882301";
-            rpt.prmTCID.Value = "38872435224";
-            rpt.prmTime.Value = DateTime.Now;
-            rpt.prmTotal.Value = 12;
-            rpt.prmTotalText.Value = "OnÝki TürkLirasý Sýfýr Kuruþ";
-            rpt.prmUserID.Value = "AYDIN";
-            rpt.prmVoucherNo.Value = "123456";
-            
-            rpt.ShowPreview();
-
-
-            //ReportPrintTool pt = new ReportPrintTool(rpt);
-            //pt.AutoShowParametersPanel = true;
-            //pt.ShowPreviewDialog();
-
-            //InvoiceSGK rpt = new InvoiceSGK();
-            //rpt.ShowPreview();
-
-            //rptIL rpt = new rptIL();
-            //rpt.ShowPreview();
         }
 
-        //        private void button1_Click(object sender, EventArgs e) {
-        //    ReportPrintTool pt = new ReportPrintTool(new XtraReport1());
-        //    pt.PrintingSystem.StartPrint += 
-        //        new PrintDocumentEventHandler(printingSystem_StartPrint);
-        //    pt.PrintDialog();
-        //}
-
-        //        private void printingSystem_StartPrint(object sender, PrintDocumentEventArgs e) {
-        //            for (int i = 0; i < e.PrintDocument.PrinterSettings.PaperSources.Count; i++)
-        //                if (e.PrintDocument.PrinterSettings.PaperSources[i].Kind == 
-        //                    PaperSourceKind.TractorFeed) {
-        //                    e.PrintDocument.DefaultPageSettings.PaperSource = 
-        //                        e.PrintDocument.PrinterSettings.PaperSources[i];
-        //                    break;
-        //                }
-
-        //            for (int i = 0; i < e.PrintDocument.PrinterSettings.PrinterResolutions.Count; i++)
-        //                if (e.PrintDocument.PrinterSettings.PrinterResolutions[i].Kind == 
-        //                    PrinterResolutionKind.High) {
-        //                    e.PrintDocument.DefaultPageSettings.PrinterResolution = 
-        //                        e.PrintDocument.PrinterSettings.PrinterResolutions[i];
-        //                    break;
-        //                }
-        //        }
         void iSakla_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Save();
@@ -735,7 +680,7 @@ namespace Naz.Hastane.Win {
         #region Patient Forms
         private void iYeniSGKHastasi_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenNewHastaSGK();
+            OpenNewSGKPatient();
         }
 
         private void iYeniHasta_ItemClick(object sender, ItemClickEventArgs e)
@@ -762,14 +707,23 @@ namespace Naz.Hastane.Win {
                 AddToMostRecentFiles(name, arMRUList);
             }
         }
-        public void OpenNewHastaSGK()
+        public void OpenNewSGKPatient()
         {
             string name = "Yeni SGK Hastasý";
             SGKPatientForm newForm = new SGKPatientForm("");
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenHastaSGK(string patientID)
+        public void OpenNewSGKPatientWithTCID(string newTCID)
+        {
+            string name = "Yeni SGK Hastasý";
+            SGKPatientForm newForm = new SGKPatientForm("");
+            newForm.Text = name;
+            ShowNewDocument(newForm);
+            newForm.SetNewTCID(newTCID);
+        }
+
+        public void OpenSGKPatient(string patientID)
         {
             Patient patient = PatientServices.GetPatientByID(patientID);
             if (patient != null)
@@ -990,82 +944,5 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
-        public void PrintInvoice(ISession session, Patient patient, IList<PatientVisitDetail> pvds, 
-            string paymentType, string POSType,
-            double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
-            double cashPayment, double advancePaymentUsed, string tellerInvoiceNo)
-        {
-            if (pvds.Count == 0)
-                return;
-
-            try
-            {
-                PatientVisit pv = pvds[0].PatientVisit;
-
-                PatientServices.AddNewInvoice(session, UIUtilities.CurrentUser, patient, pvds,
-                    paymentType, POSType,
-                    productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent,
-                    cashPayment, advancePaymentUsed, tellerInvoiceNo);
-
-                InvoiceSGK rpt = new InvoiceSGK();
-                rpt.prmAddress.Value = patient.HomeInvoiceAddress;
-                rpt.prmDate.Value = DateTime.Now;
-                rpt.prmDoctor.Value = pv.Doctor;
-                rpt.prmInvoiceNo.Value = tellerInvoiceNo;
-                rpt.prmPatientNo.Value = patient.PatientNo;
-                rpt.prmPatientPrice.Value = productTotal;
-                rpt.prmPatientTotal.Value = productTotal;
-                rpt.prmQueueNo.Value = pv.QueueNo;
-                rpt.prmServiceNo.Value = pv.Servis;
-                rpt.prmTaxOffice.Value = "";
-                rpt.prmTCID.Value = patient.TCId;
-                rpt.prmTime.Value = DateTime.Now;
-                rpt.prmTotal.Value = invoiceTotal;
-                rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(invoiceTotal.ToString());
-                rpt.prmVAT.Value = VATPercent;
-                rpt.prmVATValue.Value = VATTotal;
-
-                rpt.ShowPreview();
-
-            }
-            catch (Exception e)
-            {
-                XtraMessageBox.Show("Fatura Yazma Hatasý: " + e.Message);
-            }
-        }
-        public void PrintVoucher(ISession session, Patient patient, IList<PatientVisitDetail> pvds,
-            string paymentType, string POSType,
-            double paymentTotal, string tellerVoucherNo)
-        {
-            if (pvds.Count == 0)
-                return;
-
-            try
-            {
-                PatientServices.AddNewVoucher(session, UIUtilities.CurrentUser, pvds,
-                    paymentType, POSType,
-                    paymentTotal,
-                    tellerVoucherNo
-                    );
-
-                VoucherSGK rpt = new VoucherSGK();
-                rpt.prmDate.Value = DateTime.Now;
-                rpt.prmPatientName.Value = patient.FullName;
-                rpt.prmPatientNo.Value = patient.PatientNo;
-                rpt.prmTCID.Value = patient.TCId;
-                rpt.prmTime.Value = DateTime.Now;
-                rpt.prmTotal.Value = paymentTotal;
-                rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(paymentTotal.ToString());
-                rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
-                rpt.prmVoucherNo.Value = tellerVoucherNo;
-
-                rpt.ShowPreview();
-
-            }
-            catch (Exception e)
-            {
-                XtraMessageBox.Show("Makbuz Yazma Hatasý: " + e.Message);
-            }
-        }
     }
 }

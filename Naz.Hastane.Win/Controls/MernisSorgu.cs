@@ -108,14 +108,11 @@ namespace Naz.Hastane.Win.Controls
                 //var cevap1 = service.IlListesiGetir();
 
                 //var cevap2 = service.IlceListesiGetir();
-                this.lcStatus.Text = "Mernis Sorgusu Başarılı!";
                 IsOK = true;
             }
             catch (Exception ee)
             {
-                this.lcStatus.Text = "Mernis Sorgusu Yapılamadı!"; 
                 IsOK = false;
-                XtraMessageBox.Show(ee.Message.ToString(), "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -123,6 +120,16 @@ namespace Naz.Hastane.Win.Controls
         void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             IsWorking = false;
+
+            if (IsOK)
+            {
+                this.lcStatus.Text = "Mernis Sorgusu Başarılı!";
+            }
+            else
+            {
+                this.lcStatus.Text = "Mernis Sorgusu Yapılamadı!";
+                XtraMessageBox.Show(e.Error.ToString(), "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             if (RunWorkerCompleted != null)
                 RunWorkerCompleted(this, e);

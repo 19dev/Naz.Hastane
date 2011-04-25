@@ -7,5 +7,6 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
     [Description("Devreden Kurum")]
     public class TransferorInstitution : LookUpBase
     {
+        public static readonly string DefaultValue = "1";
     }
 }

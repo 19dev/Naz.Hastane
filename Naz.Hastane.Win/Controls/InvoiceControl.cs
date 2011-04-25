@@ -11,6 +11,7 @@ using Naz.Hastane.Data.Services;
 using NHibernate;
 using Naz.Hastane.Win.Utilities;
 using DevExpress.XtraGrid.Views.Base;
+using Naz.Hastane.Data.Entities.LookUp.General;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -60,9 +61,9 @@ namespace Naz.Hastane.Win.Controls
         private void LoadLookUps()
         {
             UIUtilities.BindLookUpEdit(this.luePaymentType, LookUpServices.PaymentTypes);
-            this.luePaymentType.EditValue = LookUpServices.VATDefaultValue;
+            this.luePaymentType.EditValue = VAT.DefaultValue;
             UIUtilities.BindLookUpEdit(this.lueVAT, LookUpServices.VATs);
-            this.lueVAT.EditValue = LookUpServices.PaymentTypeDefaultValue;
+            this.lueVAT.EditValue = PaymentType.DefaultValue;
             UIUtilities.BindLookUpEdit(this.luePOS, LookUpServices.POSs);
         }
 
@@ -100,8 +101,8 @@ namespace Naz.Hastane.Win.Controls
 
             this.ceAdvancePayment.Checked = false;
             this.cePayment.Checked = false;
-            this.luePaymentType.EditValue = LookUpServices.VATDefaultValue;
-            this.lueVAT.EditValue = LookUpServices.PaymentTypeDefaultValue;
+            this.luePaymentType.EditValue = VAT.DefaultValue;
+            this.lueVAT.EditValue = PaymentType.DefaultValue;
         }
         public void QueryPatientVisitDetails()
         {
@@ -211,7 +212,7 @@ namespace Naz.Hastane.Win.Controls
             if (!this.cePayment.Checked)
             {
                 this.tePayment.EditValue = "0";
-                this.luePaymentType.EditValue = LookUpServices.VATDefaultValue;
+                this.luePaymentType.EditValue = VAT.DefaultValue;
             }
 
             this.luePOS.Enabled = (this.luePaymentType.EditValue.ToString() == "K");
@@ -282,7 +283,7 @@ namespace Naz.Hastane.Win.Controls
             IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
             if (pv != null && pvds.Count>0)
             {
-                theMainForm.PrintInvoice(_Session, _Patient, pvds,
+                UIUtilities.PrintInvoice(_Session, _Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     VATTotal,
@@ -291,7 +292,8 @@ namespace Naz.Hastane.Win.Controls
                     VATPercent,
                     Payment,
                     AdvancePaymentUsed,
-                    NewTellerInvoiceNo
+                    NewTellerInvoiceNo,
+                    true
                     );
                 this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
             }
@@ -305,10 +307,11 @@ namespace Naz.Hastane.Win.Controls
             IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
             if (pvds.Count > 0)
             {
-                theMainForm.PrintVoucher(_Session, _Patient, pvds,
+                UIUtilities.PrintVoucher(_Session, _Patient, pvds,
                     paymentType, POSType,
                     Payment,
-                    NewTellerVoucherNo
+                    NewTellerVoucherNo,
+                    true
                     );
                 this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
             }

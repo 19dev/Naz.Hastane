@@ -60,6 +60,12 @@
     <Compile Include="Classes\AccountingDailySummaryReport.Designer.cs">
       <DependentUpon>AccountingDailySummaryReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DailyTellerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\DailyTellerReport.Designer.cs">
+      <DependentUpon>DailyTellerReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemAyXTab.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="Classes\AccountingDailySummaryReport.resx">
       <DependentUpon>AccountingDailySummaryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\DailyTellerReport.resx">
+      <DependentUpon>DailyTellerReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETAnaIslemAyXTab.resx">
       <DependentUpon>OZETAnaIslemAyXTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +286,7 @@
       <DependentUpon>SPGetGunlukMuhasebeFisi.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.AccountingDailySummary.datasource" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.DailyTellerReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

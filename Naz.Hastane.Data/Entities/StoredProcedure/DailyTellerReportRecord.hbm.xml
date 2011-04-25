@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="sp_GetDailyTellerReport" callable="true">
+    <query-param name="UserList" type="string" />
+    <query-param name="StartDate" type ="DateTime" />
+    <query-param name="EndDate" type="DateTime" />
+    <return alias="DailyTellerReportRecord" class="Naz.Hastane.Data.Entities.StoredProcedure.DailyTellerReportRecord, Naz.Hastane.Data">
+      <return-property name="RowNumber" column="RowNumber"></return-property>
+      <return-property name="Date" column="TARIH"></return-property>
+      <return-property name="Description" column="HNEREYEODENDI"></return-property>
+      <return-property name="TellerVoucherNo" column="MAKBUZNO"></return-property>
+      <return-property name="PaymentType" column="ODEMESEKLI"></return-property>
+      <return-property name="Payment" column="TUTAR"></return-property>
+      <return-property name="RecordType" column="BORCALACAK"></return-property>
+      <return-property name="USER_ID" column="USER_ID"></return-property>
+      <return-property name="Aciklama" column="ACIKLAMA"></return-property>
+      <return-property name="GirenTutar" column="GIRENTUTAR"></return-property>
+      <return-property name="CikanTutar" column="CIKANTUTAR"></return-property>
+      <return-property name="PatientFirstName" column="HASTAADI"></return-property>
+      <return-property name="PatientLastName" column="HASTASOYADI"></return-property>
+      <return-property name="PatientNo" column="KNR"></return-property>
+      <return-property name="TCID" column="TCKIMLIKNO"></return-property>
+    </return>
+    exec sp_GetDailyTellerReport
+      @UserList=:UserList,
+      @StartDate=:StartDate,
+      @EndDate=:EndDate
+    <!--:UserList
+    --><!--:StartDate,
+    :EndDate-->
+  </sql-query>
+</hibernate-mapping>

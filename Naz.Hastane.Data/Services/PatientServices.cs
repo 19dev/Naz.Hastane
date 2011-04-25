@@ -11,11 +11,32 @@ using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Entities.Accounting;
+using Naz.Utilities.Classes;
 
 namespace Naz.Hastane.Data.Services
 {
     public static class PatientServices
     {
+        public static bool IsValidTCID(string aTCID)
+        {
+            return IsValidNumeric(aTCID, 11);
+        }
+
+        public static bool IsValidPatientNo(string aPatientNo)
+        {
+            return IsValidNumeric(aPatientNo, 6);
+        }
+
+        public static bool IsValidNumeric(string aString, int length)
+        {
+            if (String.IsNullOrWhiteSpace(aString) || aString.Length != length)
+                return false;
+            foreach (char c in aString)
+                if (!Char.IsNumber(c))
+                    return false;
+            return true;
+        }
+
         public static Patient GetPatientByID(string aPatientNo)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -23,6 +44,9 @@ namespace Naz.Hastane.Data.Services
         }
         public static Patient GetPatientByID(string aPatientNo, ISession session)
         {
+            if (String.IsNullOrWhiteSpace(aPatientNo))
+                return null;
+
             return session.Get<Patient>(aPatientNo);
         }
 
@@ -48,13 +72,18 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void SavePatient(ISession session, Patient patient)
+        public static void SavePatient(ISession session, Patient patient, User user)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
+                patient.USER_ID_UPDATE = user.USER_ID;
+                patient.DATE_UPDATE = DateTime.Now;
+
                 if (patient.PatientNo == null || patient.PatientNo == "")
                 {
                     patient.PatientNo = GetNewPatientNo();
+                    patient.USER_ID = user.USER_ID;
+                    patient.DATE_CREATE = DateTime.Now;
                     session.Save(patient);
                 }
                 else
@@ -83,10 +112,8 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static Patient GetNewPatient()
+        public static Patient InitNewPatient(Patient patient)
         {
-            Patient patient = new Patient();
-
             patient.FirstName = ""; //HASTAADI
             patient.LastName = ""; //HASTASOYADI
             patient.TCId = ""; //TCKIMLIKNO
@@ -162,9 +189,11 @@ namespace Naz.Hastane.Data.Services
 
             return patient;
         }
+
         public static Patient GetNewSGKPatient(ISession session)
         {
-            Patient patient = GetNewPatient();
+            Patient patient = new Patient();
+            InitNewPatient(patient);
             patient.InsuranceCompany = LookUpServices.GetSGK(session);
             patient.PatientContribution = 'T';
             patient.InsuranceType = "1";
@@ -222,7 +251,7 @@ namespace Naz.Hastane.Data.Services
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
         {
-            if (patient.InsuranceCompany.Name == LookUpServices.SGKCode)
+            if (patient.InsuranceCompany.Name == InsuranceCompany.SGKCode)
             {
                 if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
                 // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
@@ -316,9 +345,9 @@ namespace Naz.Hastane.Data.Services
 
                 pvd.KDV = 0;
                 pvd.ADET = 1;
-                string price = Utilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
+                string price = ReflectionUtilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
                 pvd.SATISF = Convert.ToDouble(price);
-                string kprice = Utilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
+                string kprice = ReflectionUtilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
                 pvd.KSATISF = Convert.ToDouble(kprice);
                 pvd.PSG = pv.PSG;
                 pvd.Doctor = pv.Doctor;
@@ -388,21 +417,22 @@ namespace Naz.Hastane.Data.Services
         #region New Key Generators
         public static string GetNewPatientNo()
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                SystemSetting ss = session
-                    .CreateCriteria(typeof(SystemSetting))
-                    .Add(Restrictions.Eq("ID0", "00"))
-                    .Add(Restrictions.Eq("ID", "KNR"))
-                    .UniqueResult<SystemSetting>();
-                int id = Convert.ToInt32(ss.Value);
-                id += 1;
-                ss.Value = id.ToString();
-                session.Update(ss);
-                transaction.Commit();
-                return ss.Value;
-            }
+            return LookUpServices.GetNewSystemSettingNo("KNR");
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (ITransaction transaction = session.BeginTransaction())
+            //{
+            //    SystemSetting ss = session
+            //        .CreateCriteria(typeof(SystemSetting))
+            //        .Add(Restrictions.Eq("ID0", "00"))
+            //        .Add(Restrictions.Eq("ID", "KNR"))
+            //        .UniqueResult<SystemSetting>();
+            //    int id = Convert.ToInt32(ss.Value);
+            //    id += 1;
+            //    ss.Value = id.ToString();
+            //    session.Update(ss);
+            //    transaction.Commit();
+            //    return ss.Value;
+            //}
         }
 
         public static string GetNewPatientVisitNo(Patient patient)

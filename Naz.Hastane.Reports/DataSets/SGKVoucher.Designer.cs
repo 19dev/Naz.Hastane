@@ -964,7 +964,7 @@ namespace Naz.Hastane.Reports.DataSets.SGKVoucherTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Naz.Hastane.Reports.Properties.Settings.Default.TIPDATAConnectionString1;
+            this._connection.ConnectionString = global::Naz.Hastane.Reports.Properties.Settings.Default.TIPDATAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

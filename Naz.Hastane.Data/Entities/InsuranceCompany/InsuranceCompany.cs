@@ -7,6 +7,7 @@ namespace Naz.Hastane.Data.Entities
 {
     public class InsuranceCompany
     {
+        public static readonly string SGKCode = "SGK";
         public virtual string Name { get; set; } // PSG; length(6); 0
 
         public virtual string ACILKATILIM { get; set; } // ACILKATILIM; length(1); 0

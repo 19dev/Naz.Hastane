@@ -72,7 +72,6 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,7 +89,7 @@ namespace Naz.Hastane.Reports.Classes
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 61F;
+            this.TopMargin.HeightF = 13.37499F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -98,7 +97,7 @@ namespace Naz.Hastane.Reports.Classes
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 42.8333F;
+            this.BottomMargin.HeightF = 8.604126F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -134,9 +133,13 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel7,
             this.xrLabel6,
             this.xrLabel5,
-            this.xrPictureBox1});
+            this.xrPictureBox1,
+            this.xrLabel1,
+            this.xrLabel2,
+            this.xrLabel3,
+            this.xrLabel4});
             this.PageHeader.Dpi = 254F;
-            this.PageHeader.HeightF = 1045.104F;
+            this.PageHeader.HeightF = 1299.104F;
             this.PageHeader.Name = "PageHeader";
             // 
             // xrLabel32
@@ -530,22 +533,11 @@ namespace Naz.Hastane.Reports.Classes
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(415.3961F, 145.5209F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
-            // PageFooter
-            // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel4,
-            this.xrLabel3,
-            this.xrLabel2,
-            this.xrLabel1});
-            this.PageFooter.Dpi = 254F;
-            this.PageFooter.HeightF = 280.4583F;
-            this.PageFooter.Name = "PageFooter";
-            // 
             // xrLabel4
             // 
             this.xrLabel4.Dpi = 254F;
             this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1394.354F, 209.2325F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1407.583F, 1235.816F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(537.1042F, 58.41998F);
@@ -556,7 +548,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrLabel3.Dpi = 254F;
             this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(555.625F, 209.2325F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(568.8542F, 1235.816F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(838.7291F, 58.41998F);
@@ -569,7 +561,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrLabel2.Dpi = 254F;
             this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(63.5F, 209.2325F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1235.816F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(492.125F, 58.41998F);
@@ -580,7 +572,7 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.xrLabel1.Dpi = 254F;
             this.xrLabel1.Font = new System.Drawing.Font("Arial", 8F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(63.5F, 0F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1026.583F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -594,14 +586,12 @@ namespace Naz.Hastane.Reports.Classes
             this.Detail,
             this.TopMargin,
             this.BottomMargin,
-            this.PageHeader,
-            this.PageFooter});
+            this.PageHeader});
             this.Dpi = 254F;
-            this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(45, 56, 61, 43);
-            this.PageHeight = 1481;
+            this.Margins = new System.Drawing.Printing.Margins(11, 71, 13, 9);
+            this.PageHeight = 2969;
             this.PageWidth = 2101;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A5;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.prmPrintDate,
             this.prmPatientNo,
@@ -657,7 +647,6 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
-        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
