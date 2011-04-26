@@ -18,7 +18,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
 
-            IConfigSource cs = UIUtilities.Configuration;
+            IConfigSource cs = UIUtilities.ConfigurationSource;
 
             this.lueInvoicePrinter.Properties.DataSource = UIUtilities.GetPrinters();
             this.lueInvoicePrinter.EditValue = cs.Configs["Printer"].Get("InvoicePrinter", "");
@@ -38,7 +38,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbSave_Click(object sender, EventArgs e)
         {
-            IConfigSource cs = UIUtilities.Configuration;
+            IConfigSource cs = UIUtilities.ConfigurationSource;
 
             cs.Configs["Printer"].Set("InvoicePrinter", this.lueInvoicePrinter.Text);
             cs.Configs["Printer"].Set("InvoicePrinterTray", this.lueInvoicePrinterTray.Text);

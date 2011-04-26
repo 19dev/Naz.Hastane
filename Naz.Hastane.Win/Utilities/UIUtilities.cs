@@ -15,6 +15,8 @@ using Naz.Hastane.Reports.Classes;
 using Naz.Utilities.Classes;
 using NHibernate;
 using Nini.Config;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Naz.Hastane.Win
 {
@@ -68,13 +70,31 @@ namespace Naz.Hastane.Win
             view.GridControl.DataSource = dataSourceList;
         }
 
-        private static IConfigSource _Configuration;
-        public static IConfigSource Configuration
+        private static IConfigSource _Configuration = null;
+        public static IConfigSource ConfigurationSource
         {
             get
             {
                 if (_Configuration == null)
-                    _Configuration = new IniConfigSource("Naz.Hastane.ini");
+                {
+                    //string appPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SurpMed");
+                    //if (!Directory.Exists(appPath))
+                    //{
+                    //    Directory.CreateDirectory(appPath);
+                    //    StreamWriter SW;
+                    //    SW = File.CreateText(appPath + "\\Naz.Hastane.ini");
+                    //    SW.WriteLine("[Database]");
+                    //    SW.WriteLine();
+                    //    SW.WriteLine("[Printer]");
+                    //    SW.WriteLine();
+
+                    //    SW.Close();
+                    //}
+                    string appPath = Application.StartupPath;
+                    appPath = Path.Combine(appPath, "Naz.Hastane.ini");
+                    _Configuration = new IniConfigSource(appPath);
+                    
+                }
                 return _Configuration;
             }
         }
@@ -162,8 +182,8 @@ namespace Naz.Hastane.Win
                 rpt.prmVAT.Value = VATPercent;
                 rpt.prmVATValue.Value = VATTotal;
 
-                CurrentPrinter = Configuration.Configs["Printer"].Get("InvoicePrinter", "");
-                CurrentPrinterTray = Configuration.Configs["Printer"].Get("InvoicePrinterTray", "");
+                CurrentPrinter = ConfigurationSource.Configs["Printer"].Get("InvoicePrinter", "");
+                CurrentPrinterTray = ConfigurationSource.Configs["Printer"].Get("InvoicePrinterTray", "");
 
                 PrintReport(rpt, directPrint);
             }
@@ -198,8 +218,8 @@ namespace Naz.Hastane.Win
                 rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
                 rpt.prmVoucherNo.Value = tellerVoucherNo;
 
-                CurrentPrinter = Configuration.Configs["Printer"].Get("VoucherPrinter", "");
-                CurrentPrinterTray = Configuration.Configs["Printer"].Get("VoucherPrinterTray", "");
+                CurrentPrinter = ConfigurationSource.Configs["Printer"].Get("VoucherPrinter", "");
+                CurrentPrinterTray = ConfigurationSource.Configs["Printer"].Get("VoucherPrinterTray", "");
                 PrintReport(rpt, directPrint);
 
             }
@@ -224,8 +244,8 @@ namespace Naz.Hastane.Win
             rpt.prmPrintDate.Value = DateTime.Today;
             rpt.prmTCID.Value = patient.TCId;
 
-            CurrentPrinter = Configuration.Configs["Printer"].Get("NormalPrinter", "");
-            CurrentPrinterTray = Configuration.Configs["Printer"].Get("NormalPrinterTray", "");
+            CurrentPrinter = ConfigurationSource.Configs["Printer"].Get("NormalPrinter", "");
+            CurrentPrinterTray = ConfigurationSource.Configs["Printer"].Get("NormalPrinterTray", "");
             PrintReport(rpt, directPrint);
         }
 

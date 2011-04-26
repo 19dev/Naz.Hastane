@@ -107,6 +107,7 @@
             // 
             this.teUserPassword.Location = new System.Drawing.Point(85, 36);
             this.teUserPassword.Name = "teUserPassword";
+            this.teUserPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.teUserPassword.Properties.PasswordChar = '*';
             this.teUserPassword.Size = new System.Drawing.Size(207, 20);
             this.teUserPassword.StyleController = this.layoutControl1;

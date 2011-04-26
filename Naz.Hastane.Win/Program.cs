@@ -15,12 +15,12 @@ namespace Naz.Hastane.Win {
         [STAThread]
         static void Main() {
 
-            IConfigSource cs = new IniConfigSource("Naz.Hastane.ini");
+            IConfigSource cs = UIUtilities.ConfigurationSource;
 
+            NHibernateSessionManager.Instance.DatabaseServer = cs.Configs["Database"].Get("Server", "DBSERVER");
             NHibernateSessionManager.Instance.DatabaseName = cs.Configs["Database"].Get("Name", "TIPDATA");
-            NHibernateSessionManager.Instance.DatabasePassword = cs.Configs["Database"].Get("Password");
-            NHibernateSessionManager.Instance.DatabaseServer = cs.Configs["Database"].Get("Server", "AydinLaptop");
             NHibernateSessionManager.Instance.DatabaseUserName = cs.Configs["Database"].Get("UserName", "sa");
+            NHibernateSessionManager.Instance.DatabasePassword = cs.Configs["Database"].Get("Password", "");
 
             DevExpress.UserSkins.OfficeSkins.Register();
             DevExpress.UserSkins.BonusSkins.Register();

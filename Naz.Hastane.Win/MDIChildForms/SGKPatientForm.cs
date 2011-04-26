@@ -454,7 +454,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             this.gvPatientVisit.CollapseAllDetails();
             this.gcIslemler.RefreshDataSource();
-
+            if (this.gvPatientVisit.RowCount > 0)
+                this.gvPatientVisit.ExpandMasterRow(0);
         }
 
         private void gvPatientVisitDetail_Click(object sender, EventArgs e)

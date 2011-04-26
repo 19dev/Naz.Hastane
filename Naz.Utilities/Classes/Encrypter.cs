@@ -16,7 +16,7 @@ namespace Naz.Utilities.Classes
             strCryptMatrix[0] = Matrix;
             for(int i = 1; i < Matrix.Length; i++)
             {
-                strCryptMatrix[i] = Matrix.Substring(i, Matrix.Length - i) + Matrix.Substring(0, i);
+                strCryptMatrix[i] = strCryptMatrix[i - 1].Substring(1, Matrix.Length - 1) + strCryptMatrix[i - 1].Substring(0, 1);
             }
         }
 
@@ -45,9 +45,9 @@ namespace Naz.Utilities.Classes
                         EncryptedString = EncryptedString + EncryptedLetter;
                         break;
                     }
-                    Y++;
-                    if (Y >= _CodeWord.Length) Y = 0;
                 }
+                Y++;
+                if (Y >= _CodeWord.Length) Y = 0;
             }
 
             return EncryptedString;
