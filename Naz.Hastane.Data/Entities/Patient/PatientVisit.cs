@@ -66,14 +66,23 @@ namespace Naz.Hastane.Data.Entities
         public virtual string ProtocolNo { get; set; } //PROTOKOLNO ??
         public virtual string ProvisionNo { get; set; } //PROVIZYONNO x
 
+        public virtual string HASTABASNO { get; set; } //HASTABASNO (MEDFATURANO ile aynı?)
         public virtual string TAKIPNO { get; set; } //TAKIPNO Medula'dan gelen
         public virtual string TAKIPSEND { get; set; } //TAKIPSEND 9: gönderilmemiş(default), 3: gönderilmiş faturası kesilmemiş, 4: faturası kesilmiş
         public virtual double TAKIPTUTAR { get; set; } //TAKIPTUTAR Medula'ya fatura kesilince karşıdan gelen tutar
-        public virtual string TAKIPTURU { get; set; } //TAKIPTURU Normal, Acil, Null
-        public virtual string HASTABASNO { get; set; } //HASTABASNO (MEDFATURANO ile aynı?)
-        public virtual string ILISKILITAKIPNO { get; set; } //ILISKILITAKIPNO
+        /// <summary>
+        /// TAKIPTURU
+        /// </summary>
+        public virtual string ProvisionType { get; set; } //TAKIPTURU Normal, Acil, Null
+        /// <summary>
+        /// ILISKILITAKIPNO
+        /// </summary>
+        public virtual string RelatedFollowUpNo { get; set; } //ILISKILITAKIPNO
         public virtual string SEVKTAKIPNO { get; set; } //SEVKTAKIPNO
-        public virtual string TEDAVITURU { get; set; } //TEDAVITURU A:Ayakta, Y:Yatan, G:Günübirlik
+        /// <summary>
+        /// TEDAVITURU
+        /// </summary>
+        public virtual string TreatmentStyle { get; set; } //TEDAVITURU A:Ayakta, Y:Yatan, G:Günübirlik
 
         public virtual string MEDFATURANO { get; set; } //MEDFATURANO
         public virtual DateTime? MEDFATURATARIHI { get; set; } //MEDFATURATARIHI
@@ -141,6 +150,11 @@ namespace Naz.Hastane.Data.Entities
             this.PatientVisitDetails.Insert(PatientVisitDetails.Count, pvd);
         }
 
+        public virtual void RemovePatientVisitDetail(PatientVisitDetail pvd)
+        {
+            _PatientVisitDetails.Remove(pvd);
+        }
+
         private IList<PatientVisitRecord> _PatientVisitRecords = new List<PatientVisitRecord>();
 
         public virtual IList<PatientVisitRecord> PatientVisitRecords
@@ -202,5 +216,22 @@ namespace Naz.Hastane.Data.Entities
             return hash;
         }
 
+
+        public virtual bool IsOKForDelete()
+        {
+            if (!IsDetailVisitsOKForDelete())
+                return false;
+            return true;
+        }
+
+        public virtual bool IsDetailVisitsOKForDelete()
+        {
+            foreach (PatientVisitDetail pvd in PatientVisitDetails)
+            {
+                if (!pvd.IsOKForDelete())
+                    return false;
+            }
+            return true;
+        }
     }
 }

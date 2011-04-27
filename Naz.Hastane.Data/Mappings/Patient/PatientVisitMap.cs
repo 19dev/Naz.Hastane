@@ -60,7 +60,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.TAKIPNO).Column("TAKIPNO").Length(20);
             Map(x => x.TAKIPSEND).Column("TAKIPSEND").Length(2);
             Map(x => x.TAKIPTUTAR).Column("TAKIPTUTAR");
-            Map(x => x.TAKIPTURU).Column("TAKIPTURU").Length(10);
+            Map(x => x.ProvisionType).Column("TAKIPTURU").Length(10);
             Map(x => x.SEVKTAKIPNO).Column("SEVKTAKIPNO").Length(20);
 
             Map(x => x.HZLNO).Column("HZLNO");
@@ -76,8 +76,8 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.REFGUNSAY).Column("REFGUNSAY");
             Map(x => x.DESFATURATARIHI).Column("DESFATURATARIHI");
             Map(x => x.HASTABASNO).Column("HASTABASNO");
-            Map(x => x.ILISKILITAKIPNO).Column("ILISKILITAKIPNO");
-            Map(x => x.TEDAVITURU).Column("TEDAVITURU");
+            Map(x => x.RelatedFollowUpNo).Column("ILISKILITAKIPNO");
+            Map(x => x.TreatmentStyle).Column("TEDAVITURU");
             Map(x => x.FARKTUTAR).Column("FARKTUTAR");
             Map(x => x.ARACIKLAMA).Column("ARACIKLAMA");
             Map(x => x.ARGONDERILDI).Column("ARGONDERILDI");

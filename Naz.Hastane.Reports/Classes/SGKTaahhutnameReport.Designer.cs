@@ -72,10 +72,10 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -89,7 +89,7 @@ namespace Naz.Hastane.Reports.Classes
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 13.37499F;
+            this.TopMargin.HeightF = 13F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -97,7 +97,7 @@ namespace Naz.Hastane.Reports.Classes
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 8.604126F;
+            this.BottomMargin.HeightF = 9F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -533,16 +533,28 @@ namespace Naz.Hastane.Reports.Classes
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(415.3961F, 145.5209F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
-            // xrLabel4
+            // xrLabel1
             // 
-            this.xrLabel4.Dpi = 254F;
-            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1407.583F, 1235.816F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(537.1042F, 58.41998F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.Text = "SPEH.YV.FR.03/00";
+            this.xrLabel1.Dpi = 254F;
+            this.xrLabel1.Font = new System.Drawing.Font("Arial", 8F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1026.583F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(1867.958F, 209.2325F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = resources.GetString("xrLabel1.Text");
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Dpi = 254F;
+            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1235.816F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(492.125F, 58.41998F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.Text = "SPEH.KYB.FR.03";
             // 
             // xrLabel3
             // 
@@ -557,28 +569,16 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel3.Text = "SURP PIRGIÇ ERMENI HASTANESI";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrLabel2
+            // xrLabel4
             // 
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1235.816F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(492.125F, 58.41998F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.Text = "SPEH.KYB.FR.03";
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Dpi = 254F;
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 8F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(76.72916F, 1026.583F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(1867.958F, 209.2325F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = resources.GetString("xrLabel1.Text");
+            this.xrLabel4.Dpi = 254F;
+            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1407.583F, 1235.816F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(537.1042F, 58.41998F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.Text = "SPEH.YV.FR.03/00";
             // 
             // SGKTaahhutnameReport
             // 
@@ -588,7 +588,7 @@ namespace Naz.Hastane.Reports.Classes
             this.BottomMargin,
             this.PageHeader});
             this.Dpi = 254F;
-            this.Margins = new System.Drawing.Printing.Margins(11, 71, 13, 9);
+            this.Margins = new System.Drawing.Printing.Margins(11, 37, 13, 9);
             this.PageHeight = 2969;
             this.PageWidth = 2101;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
@@ -605,6 +605,7 @@ namespace Naz.Hastane.Reports.Classes
             this.prmHomeTown});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.RequestParameters = false;
+            this.ShowPrintMarginsWarning = false;
             this.ShowPrintStatusDialog = false;
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";

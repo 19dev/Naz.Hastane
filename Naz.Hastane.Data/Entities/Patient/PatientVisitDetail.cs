@@ -101,5 +101,10 @@ namespace Naz.Hastane.Data.Entities
         //        //KNR = HastaHelper.GetNewHastaNumber();
         //    }
         //}
+
+        public virtual bool IsOKForDelete()
+        {
+            return String.IsNullOrWhiteSpace(MAKNO);
+        }
     }
 }

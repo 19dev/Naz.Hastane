@@ -238,6 +238,8 @@ namespace Naz.Hastane.Data.Services
                             PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
                         }
                     }
+
+                UpdatePatientVisitFromDetails(session, user, pv);
             //transaction.Commit();
             //}
 
@@ -269,13 +271,13 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static PatientVisit AddNewPatientVisit(ISession asession, User user, Patient patient, Doctor doctor)
+        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 patient.InsuranceCompany.SIRAID += 1;
-                asession.Save(patient.InsuranceCompany);
+                session.Save(patient.InsuranceCompany);
 
                 PatientVisit pv = new PatientVisit();
                 pv.VisitNo = GetNewPatientVisitNo(session, patient);
@@ -301,9 +303,9 @@ namespace Naz.Hastane.Data.Services
                 return pv;
             }
         }
-        public static PatientVisitRecord AddNewPatientVisitRecord(ISession asession, User user, PatientVisit pv)
+        public static PatientVisitRecord AddNewPatientVisitRecord(ISession session, User user, PatientVisit pv)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 PatientVisitRecord pvr = new PatientVisitRecord();
@@ -326,9 +328,9 @@ namespace Naz.Hastane.Data.Services
             }
 
         }
-        public static PatientVisitDetail AddNewPatientVisitDetail(ISession asession, User user, Patient patient, PatientVisit pv, Product product)
+        public static PatientVisitDetail AddNewPatientVisitDetail(ISession session, User user, Patient patient, PatientVisit pv, Product product)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 PatientVisitDetail pvd = new PatientVisitDetail();
@@ -366,6 +368,58 @@ namespace Naz.Hastane.Data.Services
             }
 
         }
+        public static void UpdatePatientVisitFromDetails(ISession session, User user, PatientVisit pv)
+        {
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                double patientTotal = 0;
+                double companyTotal = 0;
+
+                foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
+                {
+                    patientTotal += pvd.ADET * pvd.SATISF;
+                    companyTotal += pvd.ADET * pvd.KSATISF;
+                }
+                pv.PatientTotal = patientTotal;
+                pv.InsuranceTotal = companyTotal;
+
+                session.Update(pv);
+                transaction.Commit();
+            }
+
+        }
+
+        public static bool DeletePatientVisit(ISession session, User user, PatientVisit pv)
+        {
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                pv.Patient.RemovePatientVisit(pv);
+                foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
+                    session.Delete(pvd);
+                foreach (PatientVisitRecord pvr in pv.PatientVisitRecords)
+                    session.Delete(pvr);
+
+                session.Delete(pv);
+                transaction.Commit();
+                return true;
+            }
+        }
+        public static bool DeletePatientVisitDetail(ISession session, User user, PatientVisitDetail pvd)
+        {
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                pvd.PatientVisit.RemovePatientVisitDetail(pvd);
+                session.Delete(pvd);
+                transaction.Commit();
+            }
+
+            UpdatePatientVisitFromDetails(session, user, pvd.PatientVisit);
+
+            return true;
+        }
 
         public static void UpdatePatientRecordsFromMedula(ISession session, User user, Patient patient, MedulaProvisionResult mpr)
         {
@@ -380,38 +434,55 @@ namespace Naz.Hastane.Data.Services
             UpdatePatientVisitRecordWithMedulaProvision(session, user, patient.PatientVisits[0].PatientVisitRecords[0], mpr);
         }
 
-        public static void UpdatePatientVisitWithMedulaProvision(ISession asession, User user, PatientVisit pv, MedulaProvisionResult mpr)
+        public static void UpdatePatientVisitWithMedulaProvision(ISession session, User user, PatientVisit pv, MedulaProvisionResult mpr)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 pv.TAKIPNO = mpr.TakipNo;
                 pv.HASTABASNO = mpr.HastaBasvuruNo;
-                pv.ILISKILITAKIPNO = mpr.RelatedFollowUpNo;
-                pv.TEDAVITURU = mpr.TreatmentStyle;
-                pv.TAKIPTURU = mpr.ProvisionType;
+                pv.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
+                pv.TreatmentStyle = mpr.TreatmentStyle;
+                pv.ProvisionType = mpr.ProvisionType;
 
                 session.Update(pv);
                 transaction.Commit();
             }
         }
-        public static void UpdatePatientVisitRecordWithMedulaProvision(ISession asession, User user, PatientVisitRecord pvr, MedulaProvisionResult mpr)
+        public static void UpdatePatientVisitRecordWithMedulaProvision(ISession session, User user, PatientVisitRecord pvr, MedulaProvisionResult mpr)
         {
-            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                pvr.BRANSKODU = mpr.BranchCode;
+                pvr.BranchCode = mpr.BranchCode;
                 pvr.HASTABASNO = mpr.HastaBasvuruNo;
-                pvr.ILISKILITAKIPNO = mpr.RelatedFollowUpNo;
-                pvr.TEDAVITIPI = mpr.TreatmentType;
-                pvr.TAKIPTIPI = mpr.FollowUpType;
-                pvr.TEDAVITURU = mpr.TreatmentStyle;
+                pvr.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
+                pvr.TreatmentType = mpr.TreatmentType;
+                pvr.FollowUpType = mpr.FollowUpType;
+                pvr.TreatmentStyle = mpr.TreatmentStyle;
                 pvr.SEVKTAKIPNO = mpr.TakipNo;
-                pvr.TAKIPTURU = mpr.ProvisionType;
+                pvr.ProvisionType = mpr.ProvisionType;
 
                 session.Update(pvr);
                 transaction.Commit();
             }
+        }
+
+        public static bool UpdatePatientVisitWithMedulaProvisionDelete(ISession session, User user, Patient patient, string takipNo)
+        {
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                foreach (PatientVisit pv in patient.PatientVisits)
+                    if (pv.TAKIPNO == takipNo)
+                    {
+                        pv.TAKIPNO = "";
+                        session.Update(pv);
+                        transaction.Commit();
+                        return true;
+                    }
+            }
+            return false;
         }
 
         #region New Key Generators
@@ -553,32 +624,29 @@ namespace Naz.Hastane.Data.Services
             return result;
         }
 
-        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(ISession Session, IList<PatientVisit> pvs)
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInvoice(ISession session, IList<PatientVisit> pvs)
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-            {
-                if (pvs.Count == 0)
-                    return new List<PatientVisitDetail>();
+            if (pvs.Count == 0)
+                return new List<PatientVisitDetail>();
 
-                IList<string> pvIDs = (from pv in pvs
-                                       select pv.VisitNo)
-                                       .ToList<string>();
+            IList<string> pvIDs = (from pv in pvs
+                                    select pv.VisitNo)
+                                    .ToList<string>();
 
 
-                IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
-                                                    where
-                                                        pvd.PatientVisit.Patient == pvs[0].Patient
-                                                        && pvIDs.Contains(pvd.PatientVisit.VisitNo)
-                                                        && pvd.MAKNO == null && pvd.AMAKNO == null
-                                                        && pvd.ADET != 0 && pvd.SATISF != 0
-                                                    join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
-                                                    //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
-                                                    select pvd
-                                                    )
-                                                    .Distinct<PatientVisitDetail>()
-                                                    .ToList<PatientVisitDetail>();
-                return result;
-            }
+            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                                where
+                                                    pvd.PatientVisit.Patient == pvs[0].Patient
+                                                    && pvIDs.Contains(pvd.PatientVisit.VisitNo)
+                                                    && pvd.MAKNO == null && pvd.AMAKNO == null
+                                                    && pvd.ADET != 0 && pvd.SATISF != 0
+                                                join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
+                                                //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
+                                                select pvd
+                                                )
+                                                .Distinct<PatientVisitDetail>()
+                                                .ToList<PatientVisitDetail>();
+            return result;
         }
 
         public static IList<AdvancePayment> GetPatientAdvancePaymentsForInvoice(ISession session, Patient patient)
@@ -598,7 +666,7 @@ namespace Naz.Hastane.Data.Services
             return result;
         }
 
-        public static void AddNewInvoice(ISession Session, User user, Patient patient, IList<PatientVisitDetail> pvds, 
+        public static void AddNewInvoice(ISession session, User user, Patient patient, IList<PatientVisitDetail> pvds, 
             string paymentType, string POSType,
             double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
             double cashPayment, double advancePaymentUsed, string tellerInvoiceNo)
@@ -606,20 +674,20 @@ namespace Naz.Hastane.Data.Services
             if (pvds.Count == 0)
                 return;
 
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 try
                 {
                     string newInvoiceNo = LookUpServices.GetNewInvoiceNo();
 
-                    UpdateAdvancePaymentRecords(session, transaction, user, patient, advancePaymentUsed);
+                    UpdateAdvancePaymentRecords(session, user, patient, advancePaymentUsed);
 
-                    InsertNewAdvancePaymentForInvoice(session, transaction, user,
+                    InsertNewAdvancePaymentForInvoice(session, user,
                         pvds[0].PatientVisit, paymentType, POSType, cashPayment,
                         tellerInvoiceNo, newInvoiceNo);
 
-                    InsertNewInvoice(session, transaction, user, patient,
+                    InsertNewInvoice(session, user, patient,
                         pvds, paymentType, POSType,
                         productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent, cashPayment,
                         tellerInvoiceNo, newInvoiceNo);
@@ -643,7 +711,7 @@ namespace Naz.Hastane.Data.Services
         /// <param name="user"></param>
         /// <param name="patient"></param>
         /// <param name="advancePaymentUsed"></param>
-        public static void UpdateAdvancePaymentRecords(ISession session, ITransaction transaction, User user, Patient patient, 
+        public static void UpdateAdvancePaymentRecords(ISession session, User user, Patient patient, 
             double advancePaymentUsed)
         {
             if (advancePaymentUsed == 0)
@@ -671,12 +739,12 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void InsertNewAdvancePaymentForInvoice(ISession session, ITransaction transaction, User user, 
+        public static void InsertNewAdvancePaymentForInvoice(ISession session, User user, 
             PatientVisit pv,
             string paymentType, string POSType, 
             double cashPayment, string tellerInvoiceNo, string invoiceNo)
         {
-            CashDeskRecord cdr = AddNewCashDeskRecord(session, transaction, user, pv,
+            CashDeskRecord cdr = AddNewCashDeskRecord(session, user, pv,
                 "F-" + tellerInvoiceNo, invoiceNo, "A", paymentType, POSType, cashPayment);
 
             string apNo = LookUpServices.GetNewAdvancePaymentNo();
@@ -708,7 +776,7 @@ namespace Naz.Hastane.Data.Services
             session.Save(apu);
         }
 
-        public static CashDeskRecord AddNewCashDeskRecord(ISession session, ITransaction transaction, User user,
+        public static CashDeskRecord AddNewCashDeskRecord(ISession session, User user,
             PatientVisit pv, string tellerVoucherNo, string invoiceNo, string voucherType, string paymentType, string POSType, double payment)
         {
             string makNo = LookUpServices.GetNewVoucherNo();
@@ -736,7 +804,7 @@ namespace Naz.Hastane.Data.Services
             return cdr;
         }
 
-        public static void InsertNewInvoice(ISession session, ITransaction transaction, User user,
+        public static void InsertNewInvoice(ISession session, User user,
             Patient patient, IList<PatientVisitDetail> pvds,
             string paymentType, string POSType,
             double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
@@ -809,19 +877,19 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
 
-        public static void AddNewVoucher(ISession Session, User user, IList<PatientVisitDetail> pvds,
+        public static void AddNewVoucher(ISession session, User user, IList<PatientVisitDetail> pvds,
         string paymentType, string POSType,
         double cashPayment, string tellerVoucherNo)
         {
             if (pvds.Count == 0)
                 return;
 
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            //using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 try
                 {
-                    CashDeskRecord cdr = AddNewCashDeskRecord(session, transaction, user,
+                    CashDeskRecord cdr = AddNewCashDeskRecord(session, user,
                         pv: pvds[0].PatientVisit,
                         tellerVoucherNo: tellerVoucherNo,
                         invoiceNo: "",

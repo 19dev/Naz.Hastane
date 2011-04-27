@@ -207,6 +207,12 @@
     <Compile Include="Controls\MedulaDiabetReportControl.Designer.cs">
       <DependentUpon>MedulaDiabetReportControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MedulaFollowUpQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MedulaFollowUpQueryControl.Designer.cs">
+      <DependentUpon>MedulaFollowUpQueryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MedulaReportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MedulaDiabetReportControl.resx">
       <DependentUpon>MedulaDiabetReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MedulaFollowUpQueryControl.resx">
+      <DependentUpon>MedulaFollowUpQueryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MedulaReportControl.resx">
       <DependentUpon>MedulaReportControl.cs</DependentUpon>

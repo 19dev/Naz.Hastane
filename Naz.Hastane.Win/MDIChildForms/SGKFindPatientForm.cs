@@ -17,6 +17,7 @@ using DevExpress.Data.Filtering;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
+using System.Linq.Expressions;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -28,7 +29,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitializeComponent();
         }
 
-        private void bntSec_Click(object sender, EventArgs e)
+        private void bntSelect_Click(object sender, EventArgs e)
         {
             OpenDetail();
         }
@@ -52,7 +53,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void btnAra_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             HastaAra();
         }
@@ -68,11 +69,15 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 string criteriaString = "";
 
-                GetCriteria(this.teTCKimlikNo, ref criteriaString, "TCId");
-                GetCriteria(this.teHastaNo, ref criteriaString, "PatientNo");
-                GetCriteria(this.teAdi, ref criteriaString, "FirstName");
-                GetCriteria(this.teSoyadi, ref criteriaString, "LastName");
-                GetCriteria(this.teBabaAdi, ref criteriaString, "FatherName");
+                GetCriteria(this.teTCId, ref criteriaString, "TCId");
+                GetCriteria(this.tePatientNo, ref criteriaString, "PatientNo");
+                GetCriteria(this.teFirstName, ref criteriaString, "FirstName");
+                GetCriteria(this.teLastName, ref criteriaString, "LastName");
+                GetCriteria(this.teFatherName, ref criteriaString, "FatherName");
+                GetCriteria(this.teBirthPlace, ref criteriaString, "BirthPlace");
+
+                //List<Expression<Func<Patient, bool>>> predicates = new List<Expression<Func<Patient, bool>>>();
+                //predicates.Add(x => x.TCId == "");
 
                 if (criteriaString.Length > 0)
                 {
@@ -84,7 +89,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                         (this.MdiParent as frmMain).OpenSGKPatient(patients[0].PatientNo);
                     }
                 }
-                this.AcceptButton = this.sbSec;
+                //this.AcceptButton = this.sbSec;
             }
             finally
             {
@@ -95,7 +100,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private bool SearchByTCID()
         {
-            string TCID = this.teTCKimlikNo.Text;
+            string TCID = this.teTCId.Text;
             if (PatientServices.IsValidTCID(TCID))
             {
                 Patient patient = PatientServices.GetByTCId(TCID);
@@ -118,7 +123,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private bool SearchByPatientNo()
         {
-            string patientNo = this.teHastaNo.Text;
+            string patientNo = this.tePatientNo.Text;
             if (PatientServices.IsValidPatientNo(patientNo))
             {
                 Patient patient = PatientServices.GetPatientByID(patientNo);
@@ -138,7 +143,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             return false;
         }
-
+        //private void AddPredicate(List<Expression<Func<Patient, bool>>> predicates, Control c, )
         private void AddCriteria(ref string aCriteria1, string aCriteria2)
         {
             if (aCriteria1.Length > 0)
@@ -156,15 +161,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (c.Text.Length > 0) AddCriteria(ref aCriteria, "patient." + aFieldName + " Like '%" + c.Text + "%'");
         }
 
-        private void btnTemizle_Click(object sender, EventArgs e)
+        private void btnClean_Click(object sender, EventArgs e)
         {
-            this.teTCKimlikNo.Text = "";
-            this.teHastaNo.Text = "";
-            this.teAdi.Text = "";
-            this.teSoyadi.Text = "";
-            this.teBabaAdi.Text = "";
+            this.teTCId.Text = "";
+            this.tePatientNo.Text = "";
+            this.teFirstName.Text = "";
+            this.teLastName.Text = "";
+            this.teFatherName.Text = "";
 
-            this.AcceptButton = this.sbAra;
+            this.AcceptButton = this.sbSearch;
         }
 
         private void gridHastaArama_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -172,25 +177,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             OpenDetail();
         }
 
-        private void frmHastaAra_FormClosing(object sender, FormClosingEventArgs e)
+        private void sbNew_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Closing");
-        }
-
-        private void frmHastaAra_Shown(object sender, EventArgs e)
-        {
-            this.teTCKimlikNo.Focus();
-        }
-
-        private void sbYeni_Click(object sender, EventArgs e)
-        {
-            //string YeniHastaNo = "";
-
-            //YeniHastaNo = session.ExecuteSproc("a_YeniHastaNo").ResultSet[0].Rows[0].Values[0].ToString();
-            //MessageBox.Show("Yeni Hasta No:" + YeniHastaNo);
-
-
             (this.MdiParent as frmMain).OpenNewSGKPatient();
+        }
+
+        private void sbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SGKFindPatientForm_Shown(object sender, EventArgs e)
+        {
+            this.teTCId.Focus();
         }
     }
 }

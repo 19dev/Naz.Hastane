@@ -27,6 +27,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private bool _IsWaitingForPolyclinic = false;
         private PatientVisitDetail voucherPVD = null;
         private PatientVisitDetail invoicePVD = null;
+        private PatientVisitDetail currentPVD = null;
 
         private SGKPatientForm()
         {
@@ -56,11 +57,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
             this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DeafultValue;
             this.medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
+
+            this.medulaFollowUpQueryControl.TCId = _Patient.TCId;
         }
 
         public void SetNewTCID(string TCID)
         {
             this.teTCID.Text = TCID;
+            this.medulaFollowUpQueryControl.TCId = TCID;
             CallMernis();
         }
 
@@ -315,14 +319,13 @@ namespace Naz.Hastane.Win.MDIChildForms
                     _IsWaitingForPolyclinic = true;
                     _Doctor = frm.Doctor;
                     CallMedulaProvision();
-                    //PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
                 }
             }
         }
 
         private void sbMedula_Click(object sender, EventArgs e)
         {
-            CallMedulaProvision();
+            //CallMedulaProvision();
         }
 
         private void EnableForMedula(bool enable)
@@ -340,10 +343,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (this._Doctor == null)
                 return;
             EnableForMedula(false);
+
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
-
             this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
-
             this.medulaSorgu.CallMedula(this.teTCID.Text);
         }
 
@@ -464,6 +466,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             PatientVisitDetail pvd = (PatientVisitDetail)view.GetFocusedRow();
             if (pvd != null)
             {
+                currentPVD = pvd;
                 if (pvd.CODE == "SGKKATILIM")
                 {
                     if (String.IsNullOrWhiteSpace(pvd.MAKNO))
@@ -497,5 +500,92 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             UIUtilities.PrintTaahhutname(_Patient, true);
         }
+
+        private void gvPatientVisit_DoubleClick(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view.FocusedRowHandle >= 0)
+                view.SetMasterRowExpanded(view.FocusedRowHandle, !view.GetMasterRowExpanded(view.FocusedRowHandle));
+
+        }
+
+        private void sbDeletePatientVisitDetail_Click(object sender, EventArgs e)
+        {
+            PatientVisitDetail pvd = currentPVD;
+            if (pvd == null)
+                return;
+            if (!pvd.IsOKForDelete())
+            {
+                XtraMessageBox.Show("Fatura veya Makbuz Kesilmiş Kayıtı Silemezsiniz", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                return;
+            }
+            if (XtraMessageBox.Show("Bu İşlem Kaydını Silmek İstiyor Musunuz?", "İşlem Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    if (PatientServices.DeletePatientVisitDetail(Session, UIUtilities.CurrentUser, pvd))
+                    {
+                        XtraMessageBox.Show("İşlem Kaydı Başarıyla Silindi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                        RefreshGrid();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                    }
+                }
+                catch
+                {
+                    XtraMessageBox.Show("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                }
+            }
+        }
+
+        private void sbDeletePatientVisit_Click(object sender, EventArgs e)
+        {
+            PatientVisit pv = this.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (pv == null)
+                return;
+            if (!pv.IsOKForDelete())
+            {
+                XtraMessageBox.Show("Bu Ziyaret Kartını Silemezseniz", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (XtraMessageBox.Show("Bu Ziyaret Kartını Bütün İşlemleri İle Birlikte Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (!String.IsNullOrWhiteSpace(pv.TAKIPNO))
+                    if (XtraMessageBox.Show("Bu Ziyaret Kartını Medula Takip Numarasını Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        this.medulaFollowUpQueryControl.CallMedulaHastaKabulIptal(pv.TAKIPNO);
+
+                try
+                {
+                    if (PatientServices.DeletePatientVisit(Session, UIUtilities.CurrentUser, pv))
+                    {
+                        XtraMessageBox.Show("Ziyaret Kartı Başarıyla Silindi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshGrid();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch
+                {
+                    XtraMessageBox.Show("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void medulaFollowUpQueryControl_OnHastaKabulIptalCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulIptalCompletedEventArgs e)
+        {
+            if (this.medulaFollowUpQueryControl.IsOK)
+                UpdatePatientVisitWithMedulaProvisionDelete(e.Result.takipNo);
+        }
+
+        private void UpdatePatientVisitWithMedulaProvisionDelete(string takipNo)
+        {
+            if (PatientServices.UpdatePatientVisitWithMedulaProvisionDelete(Session, UIUtilities.CurrentUser, _Patient, takipNo))
+                RefreshGrid();
+        }
+
     }
 }
