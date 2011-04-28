@@ -459,10 +459,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void RefreshGrid()
         {
-            this.gvPatientVisit.CollapseAllDetails();
             this.gcIslemler.RefreshDataSource();
-            if (this.gvPatientVisit.RowCount > 0)
-                this.gvPatientVisit.ExpandMasterRow(0);
+            this.gvPatientVisit.CollapseAllDetails();
         }
 
         private void gvPatientVisitDetail_Click(object sender, EventArgs e)

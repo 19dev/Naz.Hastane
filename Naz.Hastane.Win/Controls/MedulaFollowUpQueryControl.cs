@@ -20,7 +20,22 @@ namespace Naz.Hastane.Win.Controls
         private YardimciIslemlerClient yic;
         private HastaKabulIslemleriClient hki;
 
-        public string TCId { get; set; }
+        private bool _IsLoaded = false;
+        private string _TCId;
+
+        public string TCId 
+        {
+            get { return _TCId; }
+            set
+            {
+                _TCId = value;
+                if (this.deStartDate.DateTime == null)
+                {
+                    this.deStartDate.DateTime = DateTime.Today;
+                    this.deEndDate.DateTime = DateTime.Today;
+                }
+            }
+        }
 
         public MedulaFollowUpQueryControl()
         {
@@ -52,6 +67,7 @@ namespace Naz.Hastane.Win.Controls
             this.lueOnlyExternalTransfers.EditValue = "H";
             this.deStartDate.DateTime = DateTime.Today;
             this.deEndDate.DateTime = DateTime.Today;
+            _IsLoaded = true;
         }
 
         public void CallMedulaTakipAra()
@@ -161,7 +177,7 @@ namespace Naz.Hastane.Win.Controls
                 yic = null;
                 if (OnHastaKabulIptalCompleted != null)
                     OnHastaKabulIptalCompleted(this, e);
-                if (IsOK)
+                if (IsOK && _IsLoaded)
                     CallMedulaTakipAra();
             }
         }
