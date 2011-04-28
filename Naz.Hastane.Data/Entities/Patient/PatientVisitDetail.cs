@@ -5,7 +5,13 @@ namespace Naz.Hastane.Data.Entities
 {
     public class PatientVisitDetail
     {
+        /// <summary>
+        /// KNR; SNR
+        /// </summary>
         public virtual PatientVisit PatientVisit { get; set; } //KNR; SNR
+        /// <summary>
+        /// SIRANO
+        /// </summary>
         public virtual double DetailNo { get; set; } //SIRANO
 
         public virtual string AKOD { get; set; } //AKOD Ambar Kodu
@@ -21,8 +27,13 @@ namespace Naz.Hastane.Data.Entities
         public virtual double DSATISF { get; set; } //DSATISF
         public virtual double KDV { get; set; } //KDV
         public virtual DateTime TARIH { get; set; } //TARIH
-
+        /// <summary>
+        /// ARZT
+        /// </summary>
         public virtual string Doctor { get; set; } //Doctor; //ARZT
+        /// <summary>
+        /// ARZT2
+        /// </summary>
         public virtual string Doctor2 { get; set; } //doktor2; //ARZT2
 
         public virtual string PSG { get; set; } //PSG

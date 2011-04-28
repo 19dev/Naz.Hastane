@@ -209,40 +209,37 @@ namespace Naz.Hastane.Data.Services
         /// <param name="user"></param>
         /// <param name="patient"></param>
         /// <param name="doctor"></param>
-        public static void AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor)
+        public static PatientVisit AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor)
         {
             if (patient == null || doctor == null)
-                return;
+                return null;
 
-            //using (ITransaction transaction = session.BeginTransaction())
-            //{
-                float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
+            float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
 
-                PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor);
+            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor);
 
-                PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
+            PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
-                if (IsSGKSameDay(patient))
-                    foreach (var sae in doctor.Service.SGKAutoExaminationSameDays)
+            if (IsSGKSameDay(patient))
+                foreach (var sae in doctor.Service.SGKAutoExaminationSameDays)
+                {
+                    if (IsAutoExamItemValid(patient, sae))
                     {
-                        if (IsAutoExamItemValid(patient, sae))
-                        {
-                            PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
-                        }
+                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
                     }
-                else
-                    foreach (var sae in doctor.Service.SGKAutoExaminations)
+                }
+            else
+                foreach (var sae in doctor.Service.SGKAutoExaminations)
+                {
+                    if (IsAutoExamItemValid(patient, sae))
                     {
-                        if (IsAutoExamItemValid(patient, sae))
-                        {
-                            PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
-                        }
+                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
                     }
+                }
 
-                UpdatePatientVisitFromDetails(session, user, pv);
-            //transaction.Commit();
-            //}
+            UpdatePatientVisitFromDetails(session, user, pv);
 
+            return pv;
         }
 
         public static bool IsSGKSameDay(Patient patient)
@@ -285,17 +282,20 @@ namespace Naz.Hastane.Data.Services
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
                 pv.Doctor = doctor.Code;
                 pv.Servis = doctor.Service.Code;
-                pv.QueueNo = doctor.QueueNo.ToString("f0");
+                pv.QueueNo = String.Format("{0:00000}",doctor.QueueNo);
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
                 pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
                 pv.ProvisionNo = "";
                 pv.USER_ID = user.USER_ID;
                 pv.SupportInsCompany = "";
-                pv.PSG = patient.InsuranceCompany.Name;
                 pv.DATE_CREATE = DateTime.Now;
+                pv.PSG = patient.InsuranceCompany.Name;
                 pv.ExitTime = "";
                 pv.SEVKTAKIPNO = "";
+                pv.TAKIPSEND = "9";
+                pv.TABKODU = "02";
+                pv.Status = '1';
 
                 patient.AddPatientVisit(pv);
                 session.Save(pv);
@@ -319,7 +319,10 @@ namespace Naz.Hastane.Data.Services
                 pvr.USER_ID = user.USER_ID;
                 pvr.DATE_CREATE = DateTime.Now;
 
-                pvr.MUAYENEOLDU = "";
+                pvr.MUAYENEOLDU = "F";
+                pvr.PSG = pv.PSG;
+                pvr.ISTISNAIDURUM = "0";
+                pvr.EKSORGU = "H";
 
                 pv.AddPatientVisitRecord(pvr);
                 session.Save(pvr);
@@ -354,11 +357,20 @@ namespace Naz.Hastane.Data.Services
                 pvd.PSG = pv.PSG;
                 pvd.Doctor = pv.Doctor;
                 pvd.Doctor2 = pv.Doctor;
-                pvd.HZLNO = 0;
+                pvd.HZLNO = pv.HZLNO;
 
                 pvd.USER_ID = user.USER_ID;
                 pvd.DATE_CREATE = DateTime.Now;
 
+                pvd.FATURAEDILSIN = "E";
+                pvd.KABUL = "0";
+                pvd.ISDURUM = "0";
+                pvd.HODENDI = "0";
+                pvd.HYATISTARIHI = pvd.DATE_CREATE;
+                pvd.HCIKISTARIHI = pvd.DATE_CREATE;
+                pvd.MEDSIRANO = "";
+                pvd.MEDONAY = "0";
+                pvd.TG = 1;
                 pvd.MEDANOMALI = "0";
 
                 pv.AddPatientVisitDetail(pvd);
@@ -421,7 +433,7 @@ namespace Naz.Hastane.Data.Services
             return true;
         }
 
-        public static void UpdatePatientRecordsFromMedula(ISession session, User user, Patient patient, MedulaProvisionResult mpr)
+        public static void UpdatePatientRecordsFromMedula(ISession session, User user, Patient patient, PatientVisit pv, MedulaProvisionResult mpr)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
@@ -430,8 +442,8 @@ namespace Naz.Hastane.Data.Services
                 session.Update(patient);
                 transaction.Commit();
             }
-            UpdatePatientVisitWithMedulaProvision(session, user, patient.PatientVisits[0], mpr);
-            UpdatePatientVisitRecordWithMedulaProvision(session, user, patient.PatientVisits[0].PatientVisitRecords[0], mpr);
+            UpdatePatientVisitWithMedulaProvision(session, user, pv, mpr);
+            UpdatePatientVisitRecordWithMedulaProvision(session, user, pv.PatientVisitRecords[0], mpr);
         }
 
         public static void UpdatePatientVisitWithMedulaProvision(ISession session, User user, PatientVisit pv, MedulaProvisionResult mpr)

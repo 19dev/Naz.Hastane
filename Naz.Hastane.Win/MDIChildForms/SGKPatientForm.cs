@@ -22,9 +22,10 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class SGKPatientForm : MDIChildForm
     {
-        private Patient _Patient;
-        private Doctor _Doctor;
-        private bool _IsWaitingForPolyclinic = false;
+        private Patient _Patient = null;
+        private Doctor _Doctor = null;
+        private PatientVisit currentPatientVisit = null;
+        private bool _IsWaitingForMedulaProvision = false;
         private PatientVisitDetail voucherPVD = null;
         private PatientVisitDetail invoicePVD = null;
         private PatientVisitDetail currentPVD = null;
@@ -309,23 +310,20 @@ namespace Naz.Hastane.Win.MDIChildForms
             frm.ShowDialog();
             if (frm.IsSelected && frm.Doctor != null)
             {
-                if (_IsWaitingForPolyclinic)
-                {
-                    XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
-                    // Should cancel the previous request?
-                }
-                else
-                {
-                    _IsWaitingForPolyclinic = true;
-                    _Doctor = frm.Doctor;
-                    CallMedulaProvision();
-                }
+                _Doctor = frm.Doctor;
+                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, _Doctor);
+                CallMedulaProvision();
             }
         }
 
         private void sbMedula_Click(object sender, EventArgs e)
         {
-            //CallMedulaProvision();
+            currentPatientVisit = this.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (currentPatientVisit != null)
+            {
+                _Doctor = LookUpServices.GetByID<Doctor>(currentPatientVisit.Doctor);
+                CallMedulaProvision();
+            }
         }
 
         private void EnableForMedula(bool enable)
@@ -336,17 +334,28 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbPoliklinik.Enabled = enable;
             this.sbInvoice.Enabled = enable;
             this.sbVoucher.Enabled = enable;
+            this.gcIslemler.Enabled = enable;
         }
 
         private void CallMedulaProvision()
         {
             if (this._Doctor == null)
                 return;
-            EnableForMedula(false);
+            if (_IsWaitingForMedulaProvision)
+            {
+                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
+                // Should cancel the previous request?
+            }
+            else
+            {
+                _IsWaitingForMedulaProvision = true;
+                EnableForMedula(false);
 
-            this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
-            this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
-            this.medulaSorgu.CallMedula(this.teTCID.Text);
+                this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+                this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
+
+                this.medulaSorgu.CallMedula(this.teTCID.Text);
+            }
         }
 
         private string GetRelatedFollowUpNo()
@@ -365,24 +374,20 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
             EnableForMedula(true);
-            _IsWaitingForPolyclinic = false;
+            _IsWaitingForMedulaProvision = false;
 
             if (this.medulaSorgu.IsOK)
             {
                 XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
                 if (e.Result.SonucKodu == "0000")
                 {
-                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
-                    PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, e.Result);
-                    RefreshGrid();
+                    if (currentPatientVisit != null)
+                    {
+                        PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, e.Result);
+                        RefreshGrid();
+                    }
                 }
             }
-            else
-            {
-                if (XtraMessageBox.Show("Medula'dan Onay Alınamadı, Poliklinik Kaydı Oluşturmak İstiyor Musunuz?", "Medula Sorgu Sonucu",MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                    PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, this._Doctor);
-            }
-
         }
         #endregion
 

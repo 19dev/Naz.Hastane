@@ -59,17 +59,17 @@ namespace Naz.Hastane.Data.Entities
         public virtual string Doctor { get; set; } //ARZT Doctor
 
         public virtual string ODANO { get; set; } //ODANO ODALAR.ODANO Tablosu
-        public virtual char ODAUCR { get; set; } //ODAUCR
+        public virtual char ODAUCR { get; set; } //ODAUCR Null
 
         public virtual string PSG { get; set; } //PSG Kurum
         public virtual string InsuranceType { get; set; } //STURU ?? SevkTuru Kullanılmıyor
         public virtual string ProtocolNo { get; set; } //PROTOKOLNO ??
         public virtual string ProvisionNo { get; set; } //PROVIZYONNO x
 
-        public virtual string HASTABASNO { get; set; } //HASTABASNO (MEDFATURANO ile aynı?)
+        public virtual string HASTABASNO { get; set; } //HASTABASNO (MEDFATURANO ile aynı?) Null
         public virtual string TAKIPNO { get; set; } //TAKIPNO Medula'dan gelen
         public virtual string TAKIPSEND { get; set; } //TAKIPSEND 9: gönderilmemiş(default), 3: gönderilmiş faturası kesilmemiş, 4: faturası kesilmiş
-        public virtual double TAKIPTUTAR { get; set; } //TAKIPTUTAR Medula'ya fatura kesilince karşıdan gelen tutar
+        public virtual double TAKIPTUTAR { get; set; } //TAKIPTUTAR Medula'ya fatura kesilince karşıdan gelen tutar Null
         /// <summary>
         /// TAKIPTURU
         /// </summary>
@@ -77,7 +77,7 @@ namespace Naz.Hastane.Data.Entities
         /// <summary>
         /// ILISKILITAKIPNO
         /// </summary>
-        public virtual string RelatedFollowUpNo { get; set; } //ILISKILITAKIPNO
+        public virtual string RelatedFollowUpNo { get; set; } //ILISKILITAKIPNO Null
         public virtual string SEVKTAKIPNO { get; set; } //SEVKTAKIPNO
         /// <summary>
         /// TEDAVITURU
@@ -86,7 +86,7 @@ namespace Naz.Hastane.Data.Entities
 
         public virtual string MEDFATURANO { get; set; } //MEDFATURANO
         public virtual DateTime? MEDFATURATARIHI { get; set; } //MEDFATURATARIHI
-        public virtual double MEDFATTUTAR { get; set; } //MEDFATTUTAR
+        public virtual double MEDFATTUTAR { get; set; } //MEDFATTUTAR Null
         public virtual DateTime? MCIKISTARIHI { get; set; } //MCIKISTARIHI 
         public virtual double FARKTUTAR { get; set; } //FARKTUTAR
         public virtual string TESLIMNO { get; set; } //TESLIMNO Medula'nın kesilen faturaya dönderdiği numara
@@ -119,7 +119,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual short HZLNO { get; set; } //HZLNO ??
         public virtual double SIRAID { get; set; } //SIRAID ??
         public virtual string SpecialNote { get; set; } //OZELNOT
-        public virtual bool XLOCK { get; set; } //XLOCK x
+        public virtual bool XLOCK { get; set; } //XLOCK x Null
         public virtual string MYBUTKOD { get; set; } //MYBUTKOD xx
 
         public virtual string ARACIKLAMA { get; set; } //ARACIKLAMA Armakom
@@ -129,7 +129,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual char Status { get; set; } //DURUM Cumhur Kapıönü
         public virtual DateTime? KONTROLTAR { get; set; } //KONTROLTAR
         public virtual DateTime? KONTROLT { get; set; } //KONTROLT
-        public virtual char KONTROL { get; set; } //KONTROL
+        public virtual char KONTROL { get; set; } //KONTROL Null
 
         public virtual string USER_ID { get; set; } //USER_ID
         public virtual DateTime DATE_CREATE { get; set; } //DATE_CREATE
