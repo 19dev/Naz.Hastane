@@ -41,11 +41,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (_Patient == null)
             {
                 _Patient = PatientServices.GetNewSGKPatient(Session);
-                this.teTCID.Enabled = true;
+                //this.teTCID.Enabled = true;
             }
             else
             {
-                this.teTCID.Enabled = false;
+                //this.teTCID.Enabled = false;
             }
             InitBindings();
 
@@ -159,19 +159,28 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
             _Patient.PatientLimit = 0;
-            _Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
-            _Patient.DATE_CREATE = DateTime.Now;
-            _Patient.DATE_UPDATE = DateTime.Now;
 
             try
             {
-                PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
+                if (String.IsNullOrWhiteSpace(_Patient.PatientNo))
+                {
+                    _Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
+                    _Patient.DATE_CREATE = DateTime.Now;
+                    PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
+                    (this.MdiParent as frmMain).OpenSGKPatient(_Patient.PatientNo);
+                    this.Close();
+                }
+                else
+                {
+                    _Patient.USER_ID_UPDATE = UIUtilities.CurrentUser.USER_ID;
+                    _Patient.DATE_UPDATE = DateTime.Now;
+                    PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
+                }
             }
             catch (Exception error)
             {
                 XtraMessageBox.Show("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         #region GridBindings
@@ -284,16 +293,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
                 _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
 
-                if (String.IsNullOrWhiteSpace(_Patient.PatientNo))
-                {
-                    SavePatient();
-                    (this.MdiParent as frmMain).OpenSGKPatient(_Patient.PatientNo);
-                    this.Close();
-                }
-                else
-                { 
-                    SavePatient(); 
-                }
+                SavePatient(); 
             }
         }
         #endregion
@@ -608,6 +608,13 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void CloseForm()
         {
             this.Close();
+        }
+
+        private void sbIslemler_Click(object sender, EventArgs e)
+        {
+            SelectFunctionForm frm = new SelectFunctionForm();
+            frm.ShowDialog();
+
         }
     }
 }

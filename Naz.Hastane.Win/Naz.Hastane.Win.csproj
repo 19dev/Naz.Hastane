@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -291,6 +291,12 @@
     <Compile Include="MDIChildForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\SelectFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectFunctionForm.Designer.cs">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\SGKFindPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,9 +375,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SplashForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Tests.cs" />
     <Compile Include="Utilities\GridCheckMarksSelection.cs" />
     <Compile Include="Utilities\GridCheckMarksSelectionWeb.cs" />
@@ -417,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectFromLookUpForm.resx">
       <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\SelectFunctionForm.resx">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
       <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
@@ -467,9 +473,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\online.gif" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="SplashForm.resx">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

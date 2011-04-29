@@ -17,6 +17,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
 
             Map(x => x.FunctionGroupCode)       .Column("SLX"); // float
             References(x => x.FunctionGroupType).Column("lngAnaIslemID");
+            HasMany<SubFunctionGroup>(x => x.SubFunctionGroups)
+                .KeyColumn("TANIMCODE")
+                .Inverse()
+                .Not.LazyLoad();
         }
     }
 }

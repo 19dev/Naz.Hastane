@@ -107,6 +107,7 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblStatus.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.lblStatus.Location = new System.Drawing.Point(2, 266);
             this.lblStatus.Name = "lblStatus";
@@ -118,6 +119,8 @@
             // 
             this.tePatientApplicationNo.Location = new System.Drawing.Point(92, 242);
             this.tePatientApplicationNo.Name = "tePatientApplicationNo";
+            this.tePatientApplicationNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.tePatientApplicationNo.Properties.Appearance.Options.UseBackColor = true;
             this.tePatientApplicationNo.Size = new System.Drawing.Size(118, 20);
             this.tePatientApplicationNo.StyleController = this.layoutControl1;
             this.tePatientApplicationNo.TabIndex = 18;
@@ -126,6 +129,8 @@
             // 
             this.teFollowUpNo.Location = new System.Drawing.Point(92, 218);
             this.teFollowUpNo.Name = "teFollowUpNo";
+            this.teFollowUpNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.teFollowUpNo.Properties.Appearance.Options.UseBackColor = true;
             this.teFollowUpNo.Size = new System.Drawing.Size(118, 20);
             this.teFollowUpNo.StyleController = this.layoutControl1;
             this.teFollowUpNo.TabIndex = 17;
@@ -134,6 +139,8 @@
             // 
             this.teRelatedFollowUpNo.Location = new System.Drawing.Point(92, 194);
             this.teRelatedFollowUpNo.Name = "teRelatedFollowUpNo";
+            this.teRelatedFollowUpNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.teRelatedFollowUpNo.Properties.Appearance.Options.UseBackColor = true;
             this.teRelatedFollowUpNo.Size = new System.Drawing.Size(118, 20);
             this.teRelatedFollowUpNo.StyleController = this.layoutControl1;
             this.teRelatedFollowUpNo.TabIndex = 16;
@@ -143,6 +150,8 @@
             this.lueTransferorInstitution.EditValue = "1";
             this.lueTransferorInstitution.Location = new System.Drawing.Point(92, 50);
             this.lueTransferorInstitution.Name = "lueTransferorInstitution";
+            this.lueTransferorInstitution.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueTransferorInstitution.Properties.Appearance.Options.UseBackColor = true;
             this.lueTransferorInstitution.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTransferorInstitution.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -159,6 +168,8 @@
             this.lueInsuranceType.EditValue = "1";
             this.lueInsuranceType.Location = new System.Drawing.Point(92, 26);
             this.lueInsuranceType.Name = "lueInsuranceType";
+            this.lueInsuranceType.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueInsuranceType.Properties.Appearance.Options.UseBackColor = true;
             this.lueInsuranceType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueInsuranceType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -175,6 +186,8 @@
             this.lueProvisionType.EditValue = "N";
             this.lueProvisionType.Location = new System.Drawing.Point(92, 2);
             this.lueProvisionType.Name = "lueProvisionType";
+            this.lueProvisionType.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueProvisionType.Properties.Appearance.Options.UseBackColor = true;
             this.lueProvisionType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueProvisionType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -191,6 +204,8 @@
             this.lueTreatmentStyle.EditValue = "A";
             this.lueTreatmentStyle.Location = new System.Drawing.Point(92, 170);
             this.lueTreatmentStyle.Name = "lueTreatmentStyle";
+            this.lueTreatmentStyle.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueTreatmentStyle.Properties.Appearance.Options.UseBackColor = true;
             this.lueTreatmentStyle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTreatmentStyle.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -207,6 +222,8 @@
             this.lueFollowUpType.EditValue = "N";
             this.lueFollowUpType.Location = new System.Drawing.Point(92, 146);
             this.lueFollowUpType.Name = "lueFollowUpType";
+            this.lueFollowUpType.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueFollowUpType.Properties.Appearance.Options.UseBackColor = true;
             this.lueFollowUpType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueFollowUpType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -223,6 +240,8 @@
             this.lueRelationType.EditValue = "0";
             this.lueRelationType.Location = new System.Drawing.Point(92, 122);
             this.lueRelationType.Name = "lueRelationType";
+            this.lueRelationType.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueRelationType.Properties.Appearance.Options.UseBackColor = true;
             this.lueRelationType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueRelationType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -239,6 +258,8 @@
             this.lueTreatmentType.EditValue = "0";
             this.lueTreatmentType.Location = new System.Drawing.Point(92, 98);
             this.lueTreatmentType.Name = "lueTreatmentType";
+            this.lueTreatmentType.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueTreatmentType.Properties.Appearance.Options.UseBackColor = true;
             this.lueTreatmentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTreatmentType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -255,6 +276,8 @@
             this.lueBranchCode.EditValue = "N";
             this.lueBranchCode.Location = new System.Drawing.Point(92, 74);
             this.lueBranchCode.Name = "lueBranchCode";
+            this.lueBranchCode.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.lueBranchCode.Properties.Appearance.Options.UseBackColor = true;
             this.lueBranchCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueBranchCode.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -288,12 +311,13 @@
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(212, 322);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciBranchCode
             // 
+            this.lciBranchCode.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciBranchCode.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciBranchCode.Control = this.lueBranchCode;
             this.lciBranchCode.CustomizationFormText = "Branş Kodu";
             this.lciBranchCode.Location = new System.Drawing.Point(0, 72);
@@ -304,6 +328,8 @@
             // 
             // lciTreatmentType
             // 
+            this.lciTreatmentType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciTreatmentType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciTreatmentType.Control = this.lueTreatmentType;
             this.lciTreatmentType.CustomizationFormText = "Tedavi Tipi";
             this.lciTreatmentType.Location = new System.Drawing.Point(0, 96);
@@ -314,6 +340,8 @@
             // 
             // lciRelationType
             // 
+            this.lciRelationType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciRelationType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciRelationType.Control = this.lueRelationType;
             this.lciRelationType.CustomizationFormText = "Yakınlık Kodu";
             this.lciRelationType.Location = new System.Drawing.Point(0, 120);
@@ -324,6 +352,8 @@
             // 
             // lciFollowUpType
             // 
+            this.lciFollowUpType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciFollowUpType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciFollowUpType.Control = this.lueFollowUpType;
             this.lciFollowUpType.CustomizationFormText = "Takip Tipi";
             this.lciFollowUpType.Location = new System.Drawing.Point(0, 144);
@@ -334,6 +364,8 @@
             // 
             // lciTreatmentStyle
             // 
+            this.lciTreatmentStyle.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciTreatmentStyle.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciTreatmentStyle.Control = this.lueTreatmentStyle;
             this.lciTreatmentStyle.CustomizationFormText = "Tedavi Türü";
             this.lciTreatmentStyle.Location = new System.Drawing.Point(0, 168);
@@ -344,6 +376,8 @@
             // 
             // lciProvisionType
             // 
+            this.lciProvisionType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciProvisionType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciProvisionType.Control = this.lueProvisionType;
             this.lciProvisionType.CustomizationFormText = "Provizyon Türü";
             this.lciProvisionType.Location = new System.Drawing.Point(0, 0);
@@ -354,6 +388,8 @@
             // 
             // lciInsuranceType
             // 
+            this.lciInsuranceType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciInsuranceType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciInsuranceType.Control = this.lueInsuranceType;
             this.lciInsuranceType.CustomizationFormText = "Sigortalı Türü";
             this.lciInsuranceType.Location = new System.Drawing.Point(0, 24);
@@ -364,6 +400,8 @@
             // 
             // lciTransferorInstitution
             // 
+            this.lciTransferorInstitution.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciTransferorInstitution.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciTransferorInstitution.Control = this.lueTransferorInstitution;
             this.lciTransferorInstitution.CustomizationFormText = "Devreden Kurum";
             this.lciTransferorInstitution.Location = new System.Drawing.Point(0, 48);
@@ -374,6 +412,8 @@
             // 
             // lciRelatedFollowUpNo
             // 
+            this.lciRelatedFollowUpNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciRelatedFollowUpNo.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciRelatedFollowUpNo.Control = this.teRelatedFollowUpNo;
             this.lciRelatedFollowUpNo.CustomizationFormText = "İlişkili Takip No";
             this.lciRelatedFollowUpNo.Location = new System.Drawing.Point(0, 192);
@@ -384,6 +424,8 @@
             // 
             // lciFollowUpNo
             // 
+            this.lciFollowUpNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciFollowUpNo.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciFollowUpNo.Control = this.teFollowUpNo;
             this.lciFollowUpNo.CustomizationFormText = "Takip No";
             this.lciFollowUpNo.Location = new System.Drawing.Point(0, 216);
@@ -394,6 +436,8 @@
             // 
             // lciPatientApplicationNo
             // 
+            this.lciPatientApplicationNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciPatientApplicationNo.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciPatientApplicationNo.Control = this.tePatientApplicationNo;
             this.lciPatientApplicationNo.CustomizationFormText = "Hasta Başvuru No";
             this.lciPatientApplicationNo.Location = new System.Drawing.Point(0, 240);

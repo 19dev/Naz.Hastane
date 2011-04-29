@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvPatientVisitDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -144,18 +144,9 @@
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tbcHastaBilgileri = new DevExpress.XtraLayout.TabbedControlGroup();
             this.lcgHastaBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciBirthPlace = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciMotherName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciFatherName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciLastName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciFirstName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciInsuranceCompany = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciPatientNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDNO = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDPlace = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciStatus = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNationality = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDType = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -163,14 +154,23 @@
             this.lciHomeDistrict = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomeTown = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePostCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomeCity = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPatientNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciInsuranceCompany = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFirstName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciLastName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFatherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMotherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthPlace = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciStatus = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciInsuranceType = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePhone2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomeCity = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDigerBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lcgEkBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciSigortaliKartNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -284,18 +284,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceCompany)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDPlace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNationality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -303,14 +294,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePostCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).BeginInit();
@@ -482,17 +482,17 @@
             // gcIslemler
             // 
             this.gcIslemler.DataMember = null;
-            gridLevelNode3.LevelTemplate = this.gvPatientVisitDetail;
-            gridLevelNode3.RelationName = "PatientVisitDetails";
-            gridLevelNode4.LevelTemplate = this.gvPatientVisitRecord;
-            gridLevelNode4.RelationName = "PatientVisitRecords";
+            gridLevelNode1.LevelTemplate = this.gvPatientVisitDetail;
+            gridLevelNode1.RelationName = "PatientVisitDetails";
+            gridLevelNode2.LevelTemplate = this.gvPatientVisitRecord;
+            gridLevelNode2.RelationName = "PatientVisitRecords";
             this.gcIslemler.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3,
-            gridLevelNode4});
-            this.gcIslemler.Location = new System.Drawing.Point(5, 425);
+            gridLevelNode1,
+            gridLevelNode2});
+            this.gcIslemler.Location = new System.Drawing.Point(7, 427);
             this.gcIslemler.MainView = this.gvPatientVisit;
             this.gcIslemler.Name = "gcIslemler";
-            this.gcIslemler.Size = new System.Drawing.Size(924, 224);
+            this.gcIslemler.Size = new System.Drawing.Size(920, 220);
             this.gcIslemler.TabIndex = 23;
             this.gcIslemler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisitRecord,
@@ -1044,7 +1044,7 @@
             this.sbIslemler.StyleController = this.layoutControl1;
             this.sbIslemler.TabIndex = 68;
             this.sbIslemler.Text = "İşlemler";
-            this.sbIslemler.Visible = false;
+            this.sbIslemler.Click += new System.EventHandler(this.sbIslemler_Click);
             // 
             // sbSavePatient
             // 
@@ -1554,18 +1554,9 @@
             // 
             this.lcgHastaBilgileri.CustomizationFormText = "Hasta Bilgileri";
             this.lcgHastaBilgileri.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciBirthDate,
-            this.lciBirthPlace,
-            this.lciMotherName,
-            this.lciFatherName,
-            this.lciLastName,
-            this.lciFirstName,
-            this.lciInsuranceCompany,
-            this.lciPatientNo,
             this.lciIDNO,
             this.lciIDDate,
             this.lciIDPlace,
-            this.lciStatus,
             this.lciNationality,
             this.lciIDType,
             this.layoutControlItem1,
@@ -1573,101 +1564,32 @@
             this.lciHomeDistrict,
             this.lciHomeTown,
             this.lciHomePostCode,
-            this.lciInsuranceType,
-            this.lciHomePhone2,
-            this.lciHomePhone1,
             this.lciHomeCity,
+            this.layoutControlItem2,
+            this.lciPatientNo,
+            this.lciInsuranceCompany,
             this.lciTCID,
+            this.lciFirstName,
+            this.lciLastName,
             this.lciSex,
             this.lciMaritalStatus,
-            this.layoutControlItem2});
+            this.lciFatherName,
+            this.lciMotherName,
+            this.lciBirthPlace,
+            this.lciBirthDate,
+            this.lciStatus,
+            this.lciInsuranceType,
+            this.lciHomePhone2,
+            this.lciHomePhone1});
             this.lcgHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.lcgHastaBilgileri.Name = "lcgHastaBilgileri";
             this.lcgHastaBilgileri.Size = new System.Drawing.Size(781, 360);
             this.lcgHastaBilgileri.Text = "Hasta Bilgileri";
             // 
-            // lciBirthDate
-            // 
-            this.lciBirthDate.Control = this.deBirthDate;
-            this.lciBirthDate.CustomizationFormText = "Doğum Tarihi";
-            this.lciBirthDate.Location = new System.Drawing.Point(0, 240);
-            this.lciBirthDate.Name = "lciBirthDate";
-            this.lciBirthDate.Size = new System.Drawing.Size(246, 24);
-            this.lciBirthDate.Text = "Doğum Tarihi";
-            this.lciBirthDate.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciBirthPlace
-            // 
-            this.lciBirthPlace.Control = this.teBirthPlace;
-            this.lciBirthPlace.CustomizationFormText = "Doğum Yeri";
-            this.lciBirthPlace.Location = new System.Drawing.Point(0, 216);
-            this.lciBirthPlace.Name = "lciBirthPlace";
-            this.lciBirthPlace.Size = new System.Drawing.Size(246, 24);
-            this.lciBirthPlace.Text = "Doğum Yeri";
-            this.lciBirthPlace.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciMotherName
-            // 
-            this.lciMotherName.Control = this.teMotherName;
-            this.lciMotherName.CustomizationFormText = "Ana Adı";
-            this.lciMotherName.Location = new System.Drawing.Point(0, 192);
-            this.lciMotherName.Name = "lciMotherName";
-            this.lciMotherName.Size = new System.Drawing.Size(246, 24);
-            this.lciMotherName.Text = "Ana Adı";
-            this.lciMotherName.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciFatherName
-            // 
-            this.lciFatherName.Control = this.teFatherName;
-            this.lciFatherName.CustomizationFormText = "Baba Adı";
-            this.lciFatherName.Location = new System.Drawing.Point(0, 168);
-            this.lciFatherName.Name = "lciFatherName";
-            this.lciFatherName.Size = new System.Drawing.Size(246, 24);
-            this.lciFatherName.Text = "Baba Adı";
-            this.lciFatherName.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciLastName
-            // 
-            this.lciLastName.Control = this.teLastName;
-            this.lciLastName.CustomizationFormText = "Soyadı";
-            this.lciLastName.Location = new System.Drawing.Point(0, 96);
-            this.lciLastName.Name = "lciLastName";
-            this.lciLastName.Size = new System.Drawing.Size(246, 24);
-            this.lciLastName.Text = "Soyadı";
-            this.lciLastName.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciFirstName
-            // 
-            this.lciFirstName.Control = this.teFirstName;
-            this.lciFirstName.CustomizationFormText = "Adı";
-            this.lciFirstName.Location = new System.Drawing.Point(0, 72);
-            this.lciFirstName.Name = "lciFirstName";
-            this.lciFirstName.Size = new System.Drawing.Size(246, 24);
-            this.lciFirstName.Text = "Adı";
-            this.lciFirstName.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciInsuranceCompany
-            // 
-            this.lciInsuranceCompany.Control = this.teInsuranceCompany;
-            this.lciInsuranceCompany.CustomizationFormText = "Kurum Kodu";
-            this.lciInsuranceCompany.Location = new System.Drawing.Point(0, 24);
-            this.lciInsuranceCompany.Name = "lciInsuranceCompany";
-            this.lciInsuranceCompany.Size = new System.Drawing.Size(246, 24);
-            this.lciInsuranceCompany.Text = "Kurum";
-            this.lciInsuranceCompany.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciPatientNo
-            // 
-            this.lciPatientNo.Control = this.tePatientNo;
-            this.lciPatientNo.CustomizationFormText = "Hasta No";
-            this.lciPatientNo.Location = new System.Drawing.Point(0, 0);
-            this.lciPatientNo.Name = "lciPatientNo";
-            this.lciPatientNo.Size = new System.Drawing.Size(246, 24);
-            this.lciPatientNo.Text = "Hasta No";
-            this.lciPatientNo.TextSize = new System.Drawing.Size(87, 13);
-            // 
             // lciIDNO
             // 
+            this.lciIDNO.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciIDNO.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciIDNO.Control = this.teIDNO;
             this.lciIDNO.CustomizationFormText = "Nosu";
             this.lciIDNO.Location = new System.Drawing.Point(246, 91);
@@ -1678,6 +1600,8 @@
             // 
             // lciIDDate
             // 
+            this.lciIDDate.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciIDDate.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciIDDate.Control = this.deIDDate;
             this.lciIDDate.CustomizationFormText = "Tarihi";
             this.lciIDDate.Location = new System.Drawing.Point(246, 115);
@@ -1688,6 +1612,8 @@
             // 
             // lciIDPlace
             // 
+            this.lciIDPlace.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciIDPlace.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciIDPlace.Control = this.teIDPlace;
             this.lciIDPlace.CustomizationFormText = "Verildiği Yer";
             this.lciIDPlace.Location = new System.Drawing.Point(246, 139);
@@ -1696,18 +1622,10 @@
             this.lciIDPlace.Text = "Verildiği Yer";
             this.lciIDPlace.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // lciStatus
-            // 
-            this.lciStatus.Control = this.lueStatus;
-            this.lciStatus.CustomizationFormText = "Yakınlık Kodu";
-            this.lciStatus.Location = new System.Drawing.Point(0, 264);
-            this.lciStatus.Name = "lciStatus";
-            this.lciStatus.Size = new System.Drawing.Size(246, 24);
-            this.lciStatus.Text = "Durumu";
-            this.lciStatus.TextSize = new System.Drawing.Size(87, 13);
-            // 
             // lciNationality
             // 
+            this.lciNationality.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciNationality.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciNationality.Control = this.lueNationality;
             this.lciNationality.CustomizationFormText = "Uyruğu";
             this.lciNationality.Location = new System.Drawing.Point(246, 163);
@@ -1718,6 +1636,8 @@
             // 
             // lciIDType
             // 
+            this.lciIDType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciIDType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciIDType.Control = this.rgIDType;
             this.lciIDType.CustomizationFormText = "Hüviyet";
             this.lciIDType.Location = new System.Drawing.Point(246, 0);
@@ -1743,6 +1663,8 @@
             // 
             // lciHomeAddress
             // 
+            this.lciHomeAddress.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeAddress.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciHomeAddress.Control = this.teHomeAddress;
             this.lciHomeAddress.CustomizationFormText = "Ev Adresi";
             this.lciHomeAddress.Location = new System.Drawing.Point(246, 187);
@@ -1754,6 +1676,8 @@
             // 
             // lciHomeDistrict
             // 
+            this.lciHomeDistrict.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeDistrict.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciHomeDistrict.Control = this.teHomeDistrict;
             this.lciHomeDistrict.CustomizationFormText = "Mahalle";
             this.lciHomeDistrict.Location = new System.Drawing.Point(246, 264);
@@ -1764,6 +1688,8 @@
             // 
             // lciHomeTown
             // 
+            this.lciHomeTown.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeTown.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciHomeTown.Control = this.teHomeTown;
             this.lciHomeTown.CustomizationFormText = "İlçe";
             this.lciHomeTown.Location = new System.Drawing.Point(246, 288);
@@ -1774,6 +1700,8 @@
             // 
             // lciHomePostCode
             // 
+            this.lciHomePostCode.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomePostCode.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciHomePostCode.Control = this.teHomePostCode;
             this.lciHomePostCode.CustomizationFormText = "Posta Kodu";
             this.lciHomePostCode.Location = new System.Drawing.Point(246, 312);
@@ -1782,38 +1710,10 @@
             this.lciHomePostCode.Text = "Posta Kodu";
             this.lciHomePostCode.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // lciInsuranceType
-            // 
-            this.lciInsuranceType.Control = this.lueInsuranceType;
-            this.lciInsuranceType.CustomizationFormText = "Sigorta Türü";
-            this.lciInsuranceType.Location = new System.Drawing.Point(0, 288);
-            this.lciInsuranceType.Name = "lciInsuranceType";
-            this.lciInsuranceType.Size = new System.Drawing.Size(246, 24);
-            this.lciInsuranceType.Text = "Sigorta Türü";
-            this.lciInsuranceType.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciHomePhone2
-            // 
-            this.lciHomePhone2.Control = this.teHomePhone2;
-            this.lciHomePhone2.CustomizationFormText = "Cep Telefonu";
-            this.lciHomePhone2.Location = new System.Drawing.Point(0, 312);
-            this.lciHomePhone2.Name = "lciHomePhone2";
-            this.lciHomePhone2.Size = new System.Drawing.Size(246, 24);
-            this.lciHomePhone2.Text = "Cep Telefonu";
-            this.lciHomePhone2.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciHomePhone1
-            // 
-            this.lciHomePhone1.Control = this.teHomePhone1;
-            this.lciHomePhone1.CustomizationFormText = "Ev Tlf";
-            this.lciHomePhone1.Location = new System.Drawing.Point(0, 336);
-            this.lciHomePhone1.Name = "lciHomePhone1";
-            this.lciHomePhone1.Size = new System.Drawing.Size(246, 24);
-            this.lciHomePhone1.Text = "Ev Tlf";
-            this.lciHomePhone1.TextSize = new System.Drawing.Size(87, 13);
-            // 
             // lciHomeCity
             // 
+            this.lciHomeCity.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeCity.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciHomeCity.Control = this.lueHomeCity;
             this.lciHomeCity.CustomizationFormText = "İl";
             this.lciHomeCity.Location = new System.Drawing.Point(246, 336);
@@ -1821,38 +1721,6 @@
             this.lciHomeCity.Size = new System.Drawing.Size(277, 24);
             this.lciHomeCity.Text = "İl";
             this.lciHomeCity.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciTCID
-            // 
-            this.lciTCID.Control = this.teTCID;
-            this.lciTCID.CustomizationFormText = "T.C. Kimlik No";
-            this.lciTCID.Location = new System.Drawing.Point(0, 48);
-            this.lciTCID.Name = "lciTCID";
-            this.lciTCID.Size = new System.Drawing.Size(246, 24);
-            this.lciTCID.Text = "T.C. Kimlik No";
-            this.lciTCID.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciSex
-            // 
-            this.lciSex.Control = this.rgSex;
-            this.lciSex.CustomizationFormText = "Cinsiyet";
-            this.lciSex.Location = new System.Drawing.Point(0, 120);
-            this.lciSex.Name = "lciSex";
-            this.lciSex.Size = new System.Drawing.Size(123, 48);
-            this.lciSex.Text = "Cinsiyet";
-            this.lciSex.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciSex.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lciMaritalStatus
-            // 
-            this.lciMaritalStatus.Control = this.rgMaritalStatus;
-            this.lciMaritalStatus.CustomizationFormText = "Medeni Hali";
-            this.lciMaritalStatus.Location = new System.Drawing.Point(123, 120);
-            this.lciMaritalStatus.Name = "lciMaritalStatus";
-            this.lciMaritalStatus.Size = new System.Drawing.Size(123, 48);
-            this.lciMaritalStatus.Text = "Medeni Hali";
-            this.lciMaritalStatus.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciMaritalStatus.TextSize = new System.Drawing.Size(87, 13);
             // 
             // layoutControlItem2
             // 
@@ -1866,6 +1734,188 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // lciPatientNo
+            // 
+            this.lciPatientNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciPatientNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciPatientNo.Control = this.tePatientNo;
+            this.lciPatientNo.CustomizationFormText = "Hasta No";
+            this.lciPatientNo.Location = new System.Drawing.Point(0, 0);
+            this.lciPatientNo.Name = "lciPatientNo";
+            this.lciPatientNo.Size = new System.Drawing.Size(246, 24);
+            this.lciPatientNo.Text = "Hasta No";
+            this.lciPatientNo.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciInsuranceCompany
+            // 
+            this.lciInsuranceCompany.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciInsuranceCompany.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciInsuranceCompany.Control = this.teInsuranceCompany;
+            this.lciInsuranceCompany.CustomizationFormText = "Kurum Kodu";
+            this.lciInsuranceCompany.Location = new System.Drawing.Point(0, 24);
+            this.lciInsuranceCompany.Name = "lciInsuranceCompany";
+            this.lciInsuranceCompany.Size = new System.Drawing.Size(246, 24);
+            this.lciInsuranceCompany.Text = "Kurum";
+            this.lciInsuranceCompany.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciTCID
+            // 
+            this.lciTCID.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciTCID.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciTCID.Control = this.teTCID;
+            this.lciTCID.CustomizationFormText = "T.C. Kimlik No";
+            this.lciTCID.Location = new System.Drawing.Point(0, 48);
+            this.lciTCID.Name = "lciTCID";
+            this.lciTCID.Size = new System.Drawing.Size(246, 24);
+            this.lciTCID.Text = "T.C. Kimlik No";
+            this.lciTCID.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciFirstName
+            // 
+            this.lciFirstName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciFirstName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciFirstName.Control = this.teFirstName;
+            this.lciFirstName.CustomizationFormText = "Adı";
+            this.lciFirstName.Location = new System.Drawing.Point(0, 72);
+            this.lciFirstName.Name = "lciFirstName";
+            this.lciFirstName.Size = new System.Drawing.Size(246, 24);
+            this.lciFirstName.Text = "Adı";
+            this.lciFirstName.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciLastName
+            // 
+            this.lciLastName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciLastName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciLastName.Control = this.teLastName;
+            this.lciLastName.CustomizationFormText = "Soyadı";
+            this.lciLastName.Location = new System.Drawing.Point(0, 96);
+            this.lciLastName.Name = "lciLastName";
+            this.lciLastName.Size = new System.Drawing.Size(246, 24);
+            this.lciLastName.Text = "Soyadı";
+            this.lciLastName.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciSex
+            // 
+            this.lciSex.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciSex.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciSex.Control = this.rgSex;
+            this.lciSex.CustomizationFormText = "Cinsiyet";
+            this.lciSex.Location = new System.Drawing.Point(0, 120);
+            this.lciSex.Name = "lciSex";
+            this.lciSex.Size = new System.Drawing.Size(123, 48);
+            this.lciSex.Text = "Cinsiyet";
+            this.lciSex.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciSex.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciMaritalStatus
+            // 
+            this.lciMaritalStatus.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciMaritalStatus.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciMaritalStatus.Control = this.rgMaritalStatus;
+            this.lciMaritalStatus.CustomizationFormText = "Medeni Hali";
+            this.lciMaritalStatus.Location = new System.Drawing.Point(123, 120);
+            this.lciMaritalStatus.Name = "lciMaritalStatus";
+            this.lciMaritalStatus.Size = new System.Drawing.Size(123, 48);
+            this.lciMaritalStatus.Text = "Medeni Hali";
+            this.lciMaritalStatus.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciMaritalStatus.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciFatherName
+            // 
+            this.lciFatherName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciFatherName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciFatherName.Control = this.teFatherName;
+            this.lciFatherName.CustomizationFormText = "Baba Adı";
+            this.lciFatherName.Location = new System.Drawing.Point(0, 168);
+            this.lciFatherName.Name = "lciFatherName";
+            this.lciFatherName.Size = new System.Drawing.Size(246, 24);
+            this.lciFatherName.Text = "Baba Adı";
+            this.lciFatherName.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciMotherName
+            // 
+            this.lciMotherName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciMotherName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciMotherName.Control = this.teMotherName;
+            this.lciMotherName.CustomizationFormText = "Ana Adı";
+            this.lciMotherName.Location = new System.Drawing.Point(0, 192);
+            this.lciMotherName.Name = "lciMotherName";
+            this.lciMotherName.Size = new System.Drawing.Size(246, 24);
+            this.lciMotherName.Text = "Ana Adı";
+            this.lciMotherName.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciBirthPlace
+            // 
+            this.lciBirthPlace.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciBirthPlace.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthPlace.Control = this.teBirthPlace;
+            this.lciBirthPlace.CustomizationFormText = "Doğum Yeri";
+            this.lciBirthPlace.Location = new System.Drawing.Point(0, 216);
+            this.lciBirthPlace.Name = "lciBirthPlace";
+            this.lciBirthPlace.Size = new System.Drawing.Size(246, 24);
+            this.lciBirthPlace.Text = "Doğum Yeri";
+            this.lciBirthPlace.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciBirthDate
+            // 
+            this.lciBirthDate.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciBirthDate.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthDate.Control = this.deBirthDate;
+            this.lciBirthDate.CustomizationFormText = "Doğum Tarihi";
+            this.lciBirthDate.Location = new System.Drawing.Point(0, 240);
+            this.lciBirthDate.Name = "lciBirthDate";
+            this.lciBirthDate.Size = new System.Drawing.Size(246, 24);
+            this.lciBirthDate.Text = "Doğum Tarihi";
+            this.lciBirthDate.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciStatus
+            // 
+            this.lciStatus.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciStatus.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciStatus.Control = this.lueStatus;
+            this.lciStatus.CustomizationFormText = "Yakınlık Kodu";
+            this.lciStatus.Location = new System.Drawing.Point(0, 264);
+            this.lciStatus.Name = "lciStatus";
+            this.lciStatus.Size = new System.Drawing.Size(246, 24);
+            this.lciStatus.Text = "Durumu";
+            this.lciStatus.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciInsuranceType
+            // 
+            this.lciInsuranceType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciInsuranceType.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciInsuranceType.Control = this.lueInsuranceType;
+            this.lciInsuranceType.CustomizationFormText = "Sigorta Türü";
+            this.lciInsuranceType.Location = new System.Drawing.Point(0, 288);
+            this.lciInsuranceType.Name = "lciInsuranceType";
+            this.lciInsuranceType.Size = new System.Drawing.Size(246, 24);
+            this.lciInsuranceType.Text = "Sigorta Türü";
+            this.lciInsuranceType.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciHomePhone2
+            // 
+            this.lciHomePhone2.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciHomePhone2.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomePhone2.Control = this.teHomePhone2;
+            this.lciHomePhone2.CustomizationFormText = "Cep Telefonu";
+            this.lciHomePhone2.Location = new System.Drawing.Point(0, 312);
+            this.lciHomePhone2.Name = "lciHomePhone2";
+            this.lciHomePhone2.Size = new System.Drawing.Size(246, 24);
+            this.lciHomePhone2.Text = "Cep Telefonu";
+            this.lciHomePhone2.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lciHomePhone1
+            // 
+            this.lciHomePhone1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciHomePhone1.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomePhone1.Control = this.teHomePhone1;
+            this.lciHomePhone1.CustomizationFormText = "Ev Tlf";
+            this.lciHomePhone1.Location = new System.Drawing.Point(0, 336);
+            this.lciHomePhone1.Name = "lciHomePhone1";
+            this.lciHomePhone1.Size = new System.Drawing.Size(246, 24);
+            this.lciHomePhone1.Text = "Ev Tlf";
+            this.lciHomePhone1.TextSize = new System.Drawing.Size(87, 13);
             // 
             // lcgDigerBilgiler
             // 
@@ -2222,7 +2272,6 @@
             this.lciIslemler.TextSize = new System.Drawing.Size(0, 0);
             this.lciIslemler.TextToControlDistance = 0;
             this.lciIslemler.TextVisible = false;
-            this.lciIslemler.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lciHastaFatura
             // 
@@ -2467,11 +2516,15 @@
             // 
             // lciIslemlerGrid
             // 
+            this.lciIslemlerGrid.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lciIslemlerGrid.AppearanceItemCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lciIslemlerGrid.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciIslemlerGrid.Control = this.gcIslemler;
             this.lciIslemlerGrid.CustomizationFormText = "Ziyaretler";
             this.lciIslemlerGrid.Location = new System.Drawing.Point(0, 404);
             this.lciIslemlerGrid.Name = "lciIslemlerGrid";
             this.lciIslemlerGrid.Size = new System.Drawing.Size(928, 244);
+            this.lciIslemlerGrid.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.lciIslemlerGrid.Text = "Ziyaretler";
             this.lciIslemlerGrid.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciIslemlerGrid.TextSize = new System.Drawing.Size(87, 13);
@@ -2563,18 +2616,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceCompany)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDPlace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNationality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -2582,14 +2626,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePostCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).EndInit();
@@ -2672,22 +2725,10 @@
         private DevExpress.XtraEditors.TextEdit teFirstName;
         private DevExpress.XtraLayout.TabbedControlGroup tbcHastaBilgileri;
         private DevExpress.XtraLayout.LayoutControlGroup lcgHastaBilgileri;
-        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceType;
-        private DevExpress.XtraLayout.LayoutControlItem lciBirthDate;
-        private DevExpress.XtraLayout.LayoutControlItem lciBirthPlace;
-        private DevExpress.XtraLayout.LayoutControlItem lciMotherName;
-        private DevExpress.XtraLayout.LayoutControlItem lciFatherName;
-        private DevExpress.XtraLayout.LayoutControlItem lciLastName;
-        private DevExpress.XtraLayout.LayoutControlItem lciFirstName;
-        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceCompany;
-        private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;
-        private DevExpress.XtraLayout.LayoutControlItem lciMaritalStatus;
-        private DevExpress.XtraLayout.LayoutControlItem lciSex;
         private DevExpress.XtraLayout.LayoutControlItem lciIDType;
         private DevExpress.XtraLayout.LayoutControlItem lciIDNO;
         private DevExpress.XtraLayout.LayoutControlItem lciIDDate;
         private DevExpress.XtraLayout.LayoutControlItem lciIDPlace;
-        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone1;
         private DevExpress.XtraEditors.MemoEdit memoEdit3;
         private DevExpress.XtraEditors.SimpleButton sbClose;
         private DevExpress.XtraEditors.SimpleButton sbInvoice;
@@ -2720,15 +2761,12 @@
         private DevExpress.XtraEditors.TextEdit teHomePhone2;
         private DevExpress.XtraGrid.Columns.GridColumn colSevkTarihi;
         private DevExpress.XtraGrid.Columns.GridColumn colTakipDurumu;
-        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone2;
         private DevExpress.XtraLayout.LayoutControlItem lciHomeAddress;
         private DevExpress.XtraLayout.LayoutControlItem lciHomeDistrict;
         private DevExpress.XtraLayout.LayoutControlItem lciHomeTown;
         private DevExpress.XtraLayout.LayoutControlItem lciHomeCity;
         private DevExpress.XtraLayout.LayoutControlItem lciHomePostCode;
         private DevExpress.XtraLayout.LayoutControlItem lciNationality;
-        private DevExpress.XtraLayout.LayoutControlItem lciTCID;
-        private DevExpress.XtraLayout.LayoutControlItem lciStatus;
         private DevExpress.XtraLayout.LayoutControlGroup lcgDigerBilgiler;
         private DevExpress.XtraLayout.LayoutControlGroup lcgEkBilgiler;
         private DevExpress.XtraLayout.LayoutControlItem lciSigortaliKartNo;
@@ -2845,5 +2883,20 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private Controls.MedulaFollowUpQueryControl medulaFollowUpQueryControl;
         private DevExpress.XtraLayout.LayoutControlItem lcimedulaFollowUpQueryControl;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceCompany;
+        private DevExpress.XtraLayout.LayoutControlItem lciTCID;
+        private DevExpress.XtraLayout.LayoutControlItem lciFirstName;
+        private DevExpress.XtraLayout.LayoutControlItem lciLastName;
+        private DevExpress.XtraLayout.LayoutControlItem lciSex;
+        private DevExpress.XtraLayout.LayoutControlItem lciMaritalStatus;
+        private DevExpress.XtraLayout.LayoutControlItem lciFatherName;
+        private DevExpress.XtraLayout.LayoutControlItem lciMotherName;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthPlace;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthDate;
+        private DevExpress.XtraLayout.LayoutControlItem lciStatus;
+        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceType;
+        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone2;
+        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone1;
     }
 }

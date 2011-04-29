@@ -14,6 +14,9 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
 
             Map(x => x.ID0).Column("SLK").Length(2);
             Map(x => x.Value).Column("SLT").Length(150);
+
+            Map(x => x.TanimCode).Column("TANIMCODE").ReadOnly();
+            Map(x => x.GrupCode).Column("GRUPCODE").ReadOnly();
         }
     }
 }

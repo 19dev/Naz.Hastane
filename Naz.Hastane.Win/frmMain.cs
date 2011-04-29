@@ -24,39 +24,39 @@ namespace Naz.Hastane.Win {
     {
 
         #region Splash Screen
-        const int kSplashUpdateInterval_ms = 200;
-        const int kMinAmountOfSplashTime_ms = 8000;
+        //const int kSplashUpdateInterval_ms = 200;
+        //const int kMinAmountOfSplashTime_ms = 8000;
 
         /// <summary>
         /// Instance of the splash form.
         /// </summary>
-        private SplashForm splash = null;
+        //private SplashForm splash = null;
 
         /// <summary>
         /// Starts the splash screen on a separate thread
         /// </summary>
-        public void StartSplash()
-        {
-            // Instance a splash form given the image names
-            splash = new SplashForm(kSplashUpdateInterval_ms);
+        //public void StartSplash()
+        //{
+        //    // Instance a splash form given the image names
+        //    splash = new SplashForm(kSplashUpdateInterval_ms);
 
-            // Run the form
-            Application.Run(splash);
-        }
+        //    // Run the form
+        //    Application.Run(splash);
+        //}
 
         /// <summary>
         /// Shuts down and cleans up the splash screen
         /// </summary>
-        private void CloseSplash()
-        {
-            if (splash == null)
-                return;
+        //private void CloseSplash()
+        //{
+        //    if (splash == null)
+        //        return;
 
-            // Shut down the splash screen
-            splash.Invoke(new EventHandler(splash.KillMe));
-            splash.Dispose();
-            splash = null;
-        }
+        //    // Shut down the splash screen
+        //    splash.Invoke(new EventHandler(splash.KillMe));
+        //    splash.Dispose();
+        //    splash = null;
+        //}
         #endregion
 
         public frmMain()
@@ -84,8 +84,8 @@ namespace Naz.Hastane.Win {
         {
             //TestUsers();
             // Create a new thread from which to start the splash screen form
-            Thread splashThread = new Thread(new ThreadStart(StartSplash));
-            splashThread.Start();
+            //Thread splashThread = new Thread(new ThreadStart(StartSplash));
+            //splashThread.Start();
 
             arMRUList = new MRUArrayList(pcAppMenuFileLabels, imageCollection3.Images[0], imageCollection3.Images[1]);
             arMRUList.LabelClicked += new EventHandler(OnLabelClicked);
@@ -96,8 +96,8 @@ namespace Naz.Hastane.Win {
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
 
-            // Close the splash screen
-            CloseSplash();
+            //// Close the splash screen
+            //CloseSplash();
 
             EnableRibbonButtons(false);
             ShowLoginForm();

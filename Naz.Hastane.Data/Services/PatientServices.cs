@@ -112,8 +112,10 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static Patient InitNewPatient(Patient patient)
+        public static Patient CreateNewPatient()
         {
+            Patient patient = DataBindingFactory.Create<Patient>();
+
             patient.FirstName = ""; //HASTAADI
             patient.LastName = ""; //HASTASOYADI
             patient.TCId = ""; //TCKIMLIKNO
@@ -192,8 +194,7 @@ namespace Naz.Hastane.Data.Services
 
         public static Patient GetNewSGKPatient(ISession session)
         {
-            Patient patient = new Patient();
-            InitNewPatient(patient);
+            Patient patient = CreateNewPatient();
             patient.InsuranceCompany = LookUpServices.GetSGK(session);
             patient.PatientContribution = 'T';
             patient.InsuranceType = "1";
