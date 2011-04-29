@@ -31,13 +31,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpo.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\Naz.Shared\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\Naz.Shared\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Naz.Shared\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Naz.Shared\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\Naz.Shared\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini">
+      <HintPath>..\Naz.Shared\Nini.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,11 +75,265 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Hasta.cs" />
-    <Compile Include="Classes\LookUpTables.cs" />
-    <Compile Include="Classes\PersistentClasses1.cs" />
+    <Compile Include="Entities\Accounting\AdvancePayment.cs" />
+    <Compile Include="Entities\Accounting\AdvancePaymentRebate.cs" />
+    <Compile Include="Entities\Accounting\AdvancePaymentUsed.cs" />
+    <Compile Include="Entities\Accounting\CashDeskRecord.cs" />
+    <Compile Include="Entities\Doctor\DoctorAccount.cs" />
+    <Compile Include="Entities\Doctor\DoctorAccountDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorInvoiceDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorPool.cs" />
+    <Compile Include="Entities\Doctor\DoctorProcess.cs" />
+    <Compile Include="Entities\Doctor\DoctorVoucherDetail.cs" />
+    <Compile Include="Entities\Doctor\DoctorProductPercent.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyContribution.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDetail.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
+    <Compile Include="Entities\Accounting\Invoice.cs" />
+    <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
+    <Compile Include="Entities\LookUp\General\BloodType.cs" />
+    <Compile Include="Entities\LookUp\General\PaymentType.cs" />
+    <Compile Include="Entities\LookUp\General\YesNo.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\KidneyType.cs" />
+    <Compile Include="Entities\LookUp\Special\Depository.cs" />
+    <Compile Include="Entities\LookUp\Special\POS.cs" />
+    <Compile Include="Entities\LookUp\Special\Doctor.cs" />
+    <Compile Include="Entities\LookUp\General\City.cs" />
+    <Compile Include="Entities\LookUp\General\IDType.cs" />
+    <Compile Include="Entities\LookUp\LookUpBase.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\AcuteComplication.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\ApplicationReason.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\DiseaseCode.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\EKG.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\Exercise.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\EyeExam.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\FootExam.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\HabitCode.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\PositiveNegative.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\ResidentialType.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\TBT.cs" />
+    <Compile Include="Entities\LookUp\MedulaDiabet\VarYok.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\BranchCode.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\FollowUpType.cs" />
+    <Compile Include="Entities\LookUp\Special\FunctionGroup.cs" />
+    <Compile Include="Entities\InsuranceCompany\InsuranceCompany.cs" />
+    <Compile Include="Entities\LookUp\Special\SubFunctionGroup.cs" />
+    <Compile Include="Entities\LookUp\Special\FunctionGroupType.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\InsuranceType.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\EditingType.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\DoctorType.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\ESWTBodyPart.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\FTRBodyPart.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\MedulaReportTreatmentType.cs" />
+    <Compile Include="Entities\LookUp\MedulaReport\MedulaReportType.cs" />
+    <Compile Include="Entities\LookUp\OldLookUpBase.cs" />
+    <Compile Include="Entities\LookUp\General\Nationality.cs" />
+    <Compile Include="Entities\LookUp\General\PatientRelation.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\ProvisionType.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\RelationType.cs" />
+    <Compile Include="Entities\LookUp\Special\Room.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\TransferorInstitution.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\TreatmentStyle.cs" />
+    <Compile Include="Entities\LookUp\MedulaProvision\TreatmentType.cs" />
+    <Compile Include="Entities\LookUp\Special\PriceList.cs" />
+    <Compile Include="Entities\Medula\MEDDIABETALISKANLIKLAR.cs" />
+    <Compile Include="Entities\Medula\MEDDIABETDOKTORLAR.cs" />
+    <Compile Include="Entities\Medula\MEDDIABETHASTALIKLAR.cs" />
+    <Compile Include="Entities\Medula\MEDDIABETILACLAR.cs" />
+    <Compile Include="Entities\Medula\MedulaDiabetReport.cs" />
+    <Compile Include="Entities\Medula\MEDESWLTASBILGISI.cs" />
+    <Compile Include="Entities\Medula\MEDILACRAPOR.cs" />
+    <Compile Include="Entities\Medula\MEDRAPORDOKTOR.cs" />
+    <Compile Include="Entities\Medula\MEDRAPORETKENMADDE.cs" />
+    <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
+    <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
+    <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
+    <Compile Include="Entities\Product\Product.cs" />
+    <Compile Include="Entities\Product\ProductCoefficient.cs" />
+    <Compile Include="Entities\Product\ProductDoctorPercent.cs" />
+    <Compile Include="Entities\Product\ProductOld.cs" />
+    <Compile Include="Entities\Product\ProductOtherCode.cs" />
+    <Compile Include="Entities\Product\ProductOtherName.cs" />
+    <Compile Include="Entities\LookUp\Special\Service.cs" />
+    <Compile Include="Entities\LookUp\General\VAT.cs" />
+    <Compile Include="Entities\LookUp\Special\Warehouse.cs" />
+    <Compile Include="Entities\Patient\PatientDiscount.cs" />
+    <Compile Include="Entities\Patient\PatientDiscountDetail.cs" />
+    <Compile Include="Entities\Patient\Patient.cs" />
+    <Compile Include="Entities\Patient\PatientContribution.cs" />
+    <Compile Include="Entities\Patient\PatientVisit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\LookUp\Special\SystemSetting.cs" />
+    <Compile Include="Entities\Patient\PatientVisitRecord.cs" />
+    <Compile Include="Entities\Reports\OzetAYPAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetAYPKurum.cs" />
+    <Compile Include="Entities\Reports\OzetDoktorAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetHastaneServisAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetKurumAnaIslem.cs" />
+    <Compile Include="Entities\Reports\OzetServisAnaIslem.cs" />
+    <Compile Include="Entities\Reports\SummaryReportItem.cs" />
+    <Compile Include="Entities\Product\SGKAutoExamination.cs" />
+    <Compile Include="Entities\Product\SGKAutoExaminationSameDay.cs" />
+    <Compile Include="Entities\Product\SGKAutoExaminationBase.cs" />
+    <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
+    <Compile Include="Entities\LookUp\Special\User.cs" />
+    <Compile Include="Entities\StoredProcedure\DailyTellerReportRecord.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
+    <Compile Include="Mappings\Accounting\AdvancePaymentUsedMap.cs" />
+    <Compile Include="Mappings\Accounting\CashDeskRecordMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorAccountDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorAccountMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorInvoiceDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorPoolMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorProcessMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorVoucherDetailMap.cs" />
+    <Compile Include="Mappings\Doctor\DoctorProductPercentMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyContributionMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDetailMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyDiscountMap.cs" />
+    <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyMap.cs" />
+    <Compile Include="Mappings\Accounting\InvoiceMap.cs" />
+    <Compile Include="Mappings\Accounting\InvoiceTempMap.cs" />
+    <Compile Include="Mappings\LookUp\General\BloodTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\General\PaymentTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\General\YesNoMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\DoctorTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\EditingTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\ESWTBodyPartMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\EffectiveSubstanceMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\FTRBodyPartMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\KidneyTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\KidneyStoneLocalisationCodeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\MedulaReportTreatmentTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaReport\MedulaReportTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\DepositoryMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\POSMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\DoctorMap.cs" />
+    <Compile Include="Mappings\LookUp\General\CityMap.cs" />
+    <Compile Include="Mappings\LookUp\General\IDTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\AcuteComplicationMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\ApplicationReasonMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\DiseaseCodeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\EKGMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\ExerciseMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\EyeExamMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\FootExamMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\HabitCodeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\PositiveNegativeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\ResidentialTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\TBTMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaDiabet\VarYokMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\BranchCodeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\FollowUpTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\FunctionGroupMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\SubFunctionGroupMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\FunctionGroupTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\InsuranceTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\OldLookUpBaseMap.cs" />
+    <Compile Include="Mappings\LookUp\General\NationalityMap.cs" />
+    <Compile Include="Mappings\LookUp\General\PatientRelationMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\ProvisionTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\RelationTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\RoomMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\TransferorInstitutionMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\TreatmentStyleMap.cs" />
+    <Compile Include="Mappings\LookUp\MedulaProvision\TreatmentTypeMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\PriceListMap.cs" />
+    <Compile Include="Mappings\Medula\MEDDIABETALISKANLIKLARMap.cs" />
+    <Compile Include="Mappings\Medula\MEDDIABETDOKTORLARMap.cs" />
+    <Compile Include="Mappings\Medula\MEDDIABETHASTALIKLARMap.cs" />
+    <Compile Include="Mappings\Medula\MEDDIABETILACLARMap.cs" />
+    <Compile Include="Mappings\Medula\MedulaDiabetReportMap.cs" />
+    <Compile Include="Mappings\Medula\MEDESWLTASBILGISIMap.cs" />
+    <Compile Include="Mappings\Medula\MEDILACRAPORMap.cs" />
+    <Compile Include="Mappings\Medula\MEDRAPORDOKTORMap.cs" />
+    <Compile Include="Mappings\Medula\MEDRAPORETKENMADDEMap.cs" />
+    <Compile Include="Mappings\Medula\MEDRAPORTESHISMap.cs" />
+    <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
+    <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
+    <Compile Include="Mappings\Product\ProductMap.cs" />
+    <Compile Include="Mappings\Product\ProductOldMap.cs" />
+    <Compile Include="Mappings\Product\ProductOtherCodeMap.cs" />
+    <Compile Include="Mappings\Product\ProductOtherNameMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\ServiceMap.cs" />
+    <Compile Include="Mappings\LookUp\General\VATMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\WarehouseMap.cs" />
+    <Compile Include="Mappings\Patient\PatientDiscountDetailMap.cs" />
+    <Compile Include="Mappings\Patient\PatientDiscountMap.cs" />
+    <Compile Include="Mappings\Patient\PatientContributionMap.cs" />
+    <Compile Include="Mappings\Patient\PatientMap.cs" />
+    <Compile Include="Entities\Patient\PatientVisitDetail.cs" />
+    <Compile Include="Mappings\Patient\PatientVisitDetailMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappings\Patient\PatientVisitMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappings\LookUp\Special\SystemSettingMap.cs" />
+    <Compile Include="Mappings\Patient\PatientVisitRecordMap.cs" />
+    <Compile Include="Mappings\Reports\OzetAYPAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetAYPKurumMap.cs" />
+    <Compile Include="Mappings\Reports\OzetDoktorAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetHastaneServisAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetKurumAnaIslemMap.cs" />
+    <Compile Include="Mappings\Reports\OzetServisAnaIslemMap.cs" />
+    <Compile Include="Mappings\Product\SGKAutoExaminationMap.cs" />
+    <Compile Include="Mappings\Product\SGKAutoExaminationSameDayMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
+    <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\DailyTellerReportRecordMap.cs" />
+    <Compile Include="NHibernateSessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataBindingFactory.cs" />
+    <Compile Include="Services\DataBindingIntercepter .cs" />
+    <Compile Include="Services\DataObjectInterceptor.cs" />
+    <Compile Include="Services\LookUpServices.cs" />
+    <Compile Include="Services\MedulaReportServices.cs" />
+    <Compile Include="Services\PatientServices.cs" />
+    <Compile Include="Services\SafeDataBindingList.cs" />
+    <Compile Include="Services\SafeDataBindingSet.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Design\Doctor.cd" />
+    <None Include="Design\InsuranceCompany.cd" />
+    <None Include="Design\LookUpBase.cd" />
+    <None Include="Design\Medula.cd" />
+    <None Include="Design\Patient.cd" />
+    <None Include="Design\Product.cd" />
+    <None Include="Docs\TipdataTables.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Docs\NHibernateCode.txt" />
+    <EmbeddedResource Include="Entities\StoredProcedure\DailyTellerReportRecord.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naz.Hastane.Medula\Naz.Hastane.Medula.csproj">
+      <Project>{2F79C8A5-6235-4D45-8C9C-28BEC3C33C51}</Project>
+      <Name>Naz.Hastane.Medula</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naz.Utilities\Naz.Utilities.csproj">
+      <Project>{65745D12-84D5-4224-8820-F83E5BE8A2B1}</Project>
+      <Name>Naz.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

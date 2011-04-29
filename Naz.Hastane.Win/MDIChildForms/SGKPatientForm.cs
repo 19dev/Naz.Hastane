@@ -590,5 +590,24 @@ namespace Naz.Hastane.Win.MDIChildForms
                 RefreshGrid();
         }
 
+        private void SGKPatientForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F3)
+                CloseForm();
+            else if (e.KeyCode == Keys.F5)
+                SavePatient();
+            else if (e.KeyCode == Keys.F8)
+                ProcessNewPolyclinic();
+        }
+
+        private void sbClose_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        private void CloseForm()
+        {
+            this.Close();
+        }
     }
 }

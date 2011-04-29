@@ -1,6 +1,8 @@
 ﻿using System;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.Data;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -15,9 +17,13 @@ namespace Naz.Hastane.Win.MDIChildForms
         public SelectPolyclinicForm()
         {
             InitializeComponent();
+            this.AcceptButton = this.sbSelect;
 
             var doctors = LookUpServices.SGKDoctors;
             gcView.DataSource = doctors;
+            gvPolyclinics.SortInfo.ClearAndAddRange(new GridColumnSortInfo[] { 
+              new GridColumnSortInfo(colService, ColumnSortOrder.Ascending), 
+              new GridColumnSortInfo(colDoctor, ColumnSortOrder.Ascending)});
         }
 
         private void sbSelect_Click(object sender, EventArgs e)

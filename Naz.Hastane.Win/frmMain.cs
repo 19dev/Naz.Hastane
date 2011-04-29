@@ -96,16 +96,12 @@ namespace Naz.Hastane.Win {
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGalleryDropDown(skins);
             iPaintStyle.DropDownControl = skins;
 
-            // Force the loading of the database
-            //var doctors = LookUpServices.Doctors;
-
             // Close the splash screen
             CloseSplash();
 
             EnableRibbonButtons(false);
             ShowLoginForm();
 
-            //Tests.TestNewIDGenerators();
         }
 
         int documentIndex = 0;

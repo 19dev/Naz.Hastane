@@ -96,6 +96,7 @@
             this.gvPolyclinics.GridControl = this.gcView;
             this.gvPolyclinics.Name = "gvPolyclinics";
             this.gvPolyclinics.OptionsBehavior.Editable = false;
+            this.gvPolyclinics.OptionsFind.AlwaysVisible = true;
             this.gvPolyclinics.OptionsView.ShowGroupPanel = false;
             this.gvPolyclinics.DoubleClick += new System.EventHandler(this.gvPolyclinics_DoubleClick);
             // 
@@ -140,7 +141,6 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(696, 481);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -244,7 +244,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoctor;
-        private DevExpress.XtraGrid.Columns.GridColumn colService;
+        public DevExpress.XtraGrid.Columns.GridColumn colDoctor;
+        public DevExpress.XtraGrid.Columns.GridColumn colService;
     }
 }

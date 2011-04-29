@@ -338,40 +338,35 @@ namespace Naz.Hastane.Data.Services
             {
                 PatientVisitDetail pvd = new PatientVisitDetail();
 
-                pvd.PatientVisit = pv;
-                pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
-
-                pvd.TARIH = DateTime.Now;
-
-                pvd.TANIM = product.TANIM;
-                pvd.GRUP = product.GRUP;
-                pvd.CODE = product.CODE;
-                pvd.NAME1 = product.NAME1;
-
-                pvd.KDV = 0;
-                pvd.ADET = 1;
-                string price = ReflectionUtilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
-                pvd.SATISF = Convert.ToDouble(price);
-                string kprice = ReflectionUtilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
-                pvd.KSATISF = Convert.ToDouble(kprice);
-                pvd.PSG = pv.PSG;
-                pvd.Doctor = pv.Doctor;
-                pvd.Doctor2 = pv.Doctor;
-                pvd.HZLNO = pv.HZLNO;
-
-                pvd.USER_ID = user.USER_ID;
-                pvd.DATE_CREATE = DateTime.Now;
-
+                pvd.PatientVisit  = pv;
+                pvd.DetailNo      = GetNewPatientVisitDetailNo(session, pv);
+                pvd.TARIH         = DateTime.Now;
+                pvd.TANIM         = product.TANIM;
+                pvd.GRUP          = product.GRUP;
+                pvd.CODE          = product.CODE;
+                pvd.NAME1         = product.NAME1;
+                pvd.KDV           = product.KDV;
+                pvd.ADET          = 1;
+                string price      = ReflectionUtilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
+                pvd.SATISF        = Convert.ToDouble(price);
+                string kprice     = ReflectionUtilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
+                pvd.KSATISF       = Convert.ToDouble(kprice);
+                pvd.PSG           = pv.PSG;
+                pvd.Doctor        = pv.Doctor;
+                pvd.Doctor2       = pv.Doctor;
+                pvd.HZLNO         = pv.HZLNO;
+                pvd.USER_ID       = user.USER_ID;
+                pvd.DATE_CREATE   = DateTime.Now;
                 pvd.FATURAEDILSIN = "E";
-                pvd.KABUL = "0";
-                pvd.ISDURUM = "0";
-                pvd.HODENDI = "0";
-                pvd.HYATISTARIHI = pvd.DATE_CREATE;
-                pvd.HCIKISTARIHI = pvd.DATE_CREATE;
-                pvd.MEDSIRANO = "";
-                pvd.MEDONAY = "0";
-                pvd.TG = 1;
-                pvd.MEDANOMALI = "0";
+                pvd.KABUL         = "0";
+                pvd.ISDURUM       = "0";
+                pvd.HODENDI       = "0";
+                pvd.HYATISTARIHI  = pvd.DATE_CREATE;
+                pvd.HCIKISTARIHI  = pvd.DATE_CREATE;
+                pvd.MEDSIRANO     = "";
+                pvd.MEDONAY       = "0";
+                pvd.TG            = 1;
+                pvd.MEDANOMALI    = "0";
 
                 pv.AddPatientVisitDetail(pvd);
                 session.Save(pvd);
@@ -393,8 +388,10 @@ namespace Naz.Hastane.Data.Services
                     patientTotal += pvd.ADET * pvd.SATISF;
                     companyTotal += pvd.ADET * pvd.KSATISF;
                 }
-                pv.PatientTotal = patientTotal;
+                pv.PatientTotal   = patientTotal;
                 pv.InsuranceTotal = companyTotal;
+                pv.USER_ID_UPDATE = user.USER_ID;
+                pv.DATE_UPDATE    = DateTime.Now;
 
                 session.Update(pv);
                 transaction.Commit();
@@ -437,8 +434,11 @@ namespace Naz.Hastane.Data.Services
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                patient.InsuranceType = mpr.SigortaliTuru;
+                patient.InsuranceType         = mpr.SigortaliTuru;
                 patient.TransferorInstitution = mpr.TransferorInstitution;
+                patient.USER_ID_UPDATE        = user.USER_ID;
+                patient.DATE_UPDATE           = DateTime.Now;
+
                 session.Update(patient);
                 transaction.Commit();
             }
@@ -451,11 +451,13 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                pv.TAKIPNO = mpr.TakipNo;
-                pv.HASTABASNO = mpr.HastaBasvuruNo;
+                pv.TAKIPNO           = mpr.TakipNo;
+                pv.HASTABASNO        = mpr.HastaBasvuruNo;
                 pv.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
-                pv.TreatmentStyle = mpr.TreatmentStyle;
-                pv.ProvisionType = mpr.ProvisionType;
+                pv.TreatmentStyle    = mpr.TreatmentStyle;
+                pv.ProvisionType     = mpr.ProvisionType;
+                pv.USER_ID_UPDATE    = user.USER_ID;
+                pv.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pv);
                 transaction.Commit();
@@ -466,14 +468,16 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                pvr.BranchCode = mpr.BranchCode;
-                pvr.HASTABASNO = mpr.HastaBasvuruNo;
+                pvr.BranchCode        = mpr.BranchCode;
+                pvr.HASTABASNO        = mpr.HastaBasvuruNo;
                 pvr.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
-                pvr.TreatmentType = mpr.TreatmentType;
-                pvr.FollowUpType = mpr.FollowUpType;
-                pvr.TreatmentStyle = mpr.TreatmentStyle;
-                pvr.SEVKTAKIPNO = mpr.TakipNo;
-                pvr.ProvisionType = mpr.ProvisionType;
+                pvr.TreatmentType     = mpr.TreatmentType;
+                pvr.FollowUpType      = mpr.FollowUpType;
+                pvr.TreatmentStyle    = mpr.TreatmentStyle;
+                pvr.SEVKTAKIPNO       = mpr.TakipNo;
+                pvr.ProvisionType     = mpr.ProvisionType;
+                pvr.USER_ID_UPDATE    = user.USER_ID;
+                pvr.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pvr);
                 transaction.Commit();
@@ -489,6 +493,14 @@ namespace Naz.Hastane.Data.Services
                     if (pv.TAKIPNO == takipNo)
                     {
                         pv.TAKIPNO = "";
+                        pv.HASTABASNO = "";
+                        pv.RelatedFollowUpNo = "";
+                        pv.TreatmentStyle = "";
+                        pv.ProvisionType = "";
+
+                        pv.USER_ID_UPDATE = user.USER_ID;
+                        pv.DATE_UPDATE = DateTime.Now;
+
                         session.Update(pv);
                         transaction.Commit();
                         return true;
@@ -849,16 +861,17 @@ namespace Naz.Hastane.Data.Services
 
             session.Save(invoice);
 
-            UpdatePatientVisitDetails(session, pvds, makNo);
+            UpdatePatientVisitDetails(session, user, pvds, makNo);
 
             LookUpServices.UpdateTellerInvoiceNo(user, tellerInvoiceNo);
         }
 
-        public static void UpdatePatientVisitDetails(ISession session, IList<PatientVisitDetail> pvds, string voucherNo)
+        public static void UpdatePatientVisitDetails(ISession session, User user, IList<PatientVisitDetail> pvds, string voucherNo)
         {
             foreach (PatientVisitDetail pvd in pvds)
             {
                 pvd.MAKNO = voucherNo;
+                pvd.USER_ID_UPDATE = user.USER_ID;
                 pvd.DATE_UPDATE = DateTime.Now;
                 session.Update(pvd);
             }
@@ -910,7 +923,7 @@ namespace Naz.Hastane.Data.Services
                         POSType: POSType,
                         payment: cashPayment);
 
-                    UpdatePatientVisitDetails(session, pvds, cdr.MAKNO);
+                    UpdatePatientVisitDetails(session, user, pvds, cdr.MAKNO);
 
                     LookUpServices.UpdateTellerVoucherNo(user, tellerVoucherNo);
                     transaction.Commit();

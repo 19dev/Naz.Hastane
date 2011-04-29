@@ -88,6 +88,13 @@ namespace Naz.Hastane.Win.MDIChildForms
                     {
                         (this.MdiParent as frmMain).OpenSGKPatient(patients[0].PatientNo);
                     }
+                    else if (patients.Count == 0)
+                    {
+                        if (XtraMessageBox.Show("Bu Kriterlerle Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            (this.MdiParent as frmMain).OpenNewSGKPatient();
+                        }
+                    }
                 }
                 //this.AcceptButton = this.sbSec;
             }
