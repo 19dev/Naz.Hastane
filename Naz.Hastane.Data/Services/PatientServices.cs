@@ -348,10 +348,8 @@ namespace Naz.Hastane.Data.Services
                 pvd.NAME1         = product.NAME1;
                 pvd.KDV           = product.KDV;
                 pvd.ADET          = 1;
-                string price      = ReflectionUtilities.GetMemberValueByName(product, "SATISF" + patient.InsuranceCompany.YFIYLIST);
-                pvd.SATISF        = Convert.ToDouble(price);
-                string kprice     = ReflectionUtilities.GetMemberValueByName(product, "KSATISF" + patient.InsuranceCompany.YFIYLIST);
-                pvd.KSATISF       = Convert.ToDouble(kprice);
+                pvd.SATISF        = product.GetPatientPrice(patient.InsuranceCompany.YFIYLIST);
+                pvd.KSATISF       = product.GetCompanyPrice(patient.InsuranceCompany.YFIYLIST);
                 pvd.PSG           = pv.PSG;
                 pvd.Doctor        = pv.Doctor;
                 pvd.Doctor2       = pv.Doctor;

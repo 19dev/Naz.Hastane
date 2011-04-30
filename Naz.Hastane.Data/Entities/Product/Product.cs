@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Naz.Utilities.Classes;
 
 namespace Naz.Hastane.Data.Entities
 {
@@ -10,6 +11,35 @@ namespace Naz.Hastane.Data.Entities
         public virtual string TANIM { get; set; } // TANIM; length(2); 0
         public virtual string GRUP { get; set; } // GRUP; length(3); 0
         public virtual string CODE { get; set; } // CODE; length(15); 0
+
+        public virtual string NAME1 { get; set; } // NAME1; length(100); 0
+
+        private string _PriceList;
+        public virtual void SetPriceList(string priceList)
+        {
+            _PriceList = priceList;
+        }
+        public virtual double PatientPrice
+        {
+            get {return GetPatientPrice(_PriceList);}
+        }
+        public virtual double GetPatientPrice(string priceList)
+        {
+            if (String.IsNullOrWhiteSpace(priceList))
+                return 0;
+            return Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "SATISF" + priceList));
+        }
+
+        public virtual double CompanyPrice
+        {
+            get{return GetCompanyPrice(_PriceList);}
+        }
+        public virtual double GetCompanyPrice(string priceList)
+        {
+            if (String.IsNullOrWhiteSpace(priceList))
+                return 0;
+            return Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "KSATISF" + priceList));
+        }
 
         public virtual string ANAHIZ { get; set; } // ANAHIZ; length(1); 1
         public virtual string ANHIZ { get; set; } // ANHIZ; length(1); 1
@@ -136,7 +166,6 @@ namespace Naz.Hastane.Data.Entities
         public virtual string MEDGONDER { get; set; } // MEDGONDER; length(1); 1
         public virtual string MEDONAY { get; set; } // MEDONAY; length(1); 1
         public virtual string MEDSONUC { get; set; } // MEDSONUC; length(1); 1
-        public virtual string NAME1 { get; set; } // NAME1; length(100); 0
         public virtual char OTOISLE { get; set; } // OTOISLE; length(1); 0
         public virtual string OZELKOD { get; set; } // OZELKOD; length(10); 0
         public virtual string P { get; set; } // P; length(1); 1

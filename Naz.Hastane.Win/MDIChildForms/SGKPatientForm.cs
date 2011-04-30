@@ -612,8 +612,12 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbIslemler_Click(object sender, EventArgs e)
         {
-            SelectFunctionForm frm = new SelectFunctionForm();
-            frm.ShowDialog();
+            if (_Patient != null && _Patient.InsuranceCompany != null)
+            {
+                SelectFunctionForm frm = new SelectFunctionForm();
+                frm.PriceListCode = _Patient.InsuranceCompany.YFIYLIST;
+                frm.ShowDialog();
+            }
 
         }
     }

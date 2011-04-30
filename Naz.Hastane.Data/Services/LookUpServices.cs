@@ -342,13 +342,6 @@ namespace Naz.Hastane.Data.Services
                                       )
                                       .Distinct<Doctor>()
                                       .ToList<Doctor>();
-                            //.OrderBy(x => x.Value).Asc
-                            //.JoinQueryOver(x => x.Service)
-                            //    .Where(s => s.Type == ServiceTypes.ServiceTypePolyclinic)
-                            //.JoinQueryOver<SGKAutoExamination>(x => x.SGKAutoExaminations)
-                            //.JoinQueryOver<Product>(x => x.Product)
-                            //.TransformUsing(Transformers.DistinctRootEntity)
-                            //.List();
                     }
                 }
                 return _SGKDoctors;
@@ -393,6 +386,24 @@ namespace Naz.Hastane.Data.Services
                 }
                 return _ServiceBranchCodes;
             }
+        }
+
+        public static IList<Product> GetProducts(string tanim, string grup, string priceList)
+        {
+            IList<Product> products = null;
+
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                products = (from p in session.Query<Product>()
+                               where p.TANIM == tanim && p.GRUP == grup
+                               orderby p.NAME1
+                               select p
+                              )
+                              .ToList<Product>();
+            }
+            foreach (Product p in products)
+                p.SetPriceList(priceList);
+            return products;
         }
 
         #endregion
