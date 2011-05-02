@@ -23,14 +23,14 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.NAME1).Column("NAME1");
             Map(x => x.ADET).Column("ADET");
             Map(x => x.UNITE).Column("UNITE");
-            Map(x => x.SATISF).Column("SATISF");
-            Map(x => x.KSATISF).Column("KSATISF");
+            Map(x => x.PatientPrice).Column("SATISF");
+            Map(x => x.CompanyPrice).Column("KSATISF");
             Map(x => x.DSATISF).Column("DSATISF");
             Map(x => x.KDV).Column("KDV");
             Map(x => x.TARIH).Column("TARIH");
 
-            Map(x => x.Doctor).Column("ARZT");
-            Map(x => x.Doctor2).Column("ARZT2");
+            References(x => x.Doctor).Column("ARZT");
+            References(x => x.Doctor2).Column("ARZT2");
 
             Map(x => x.PSG).Column("PSG");
             Map(x => x.HZLNO).Column("HZLNO");

@@ -173,7 +173,7 @@ namespace Naz.Hastane.Win.Controls
             for (int i = 0; i < selectionVisitDetail.SelectedCount; i++)
             {
                 PatientVisitDetail pvd = (PatientVisitDetail)selectionVisitDetail.GetSelectedRow(i);
-                ProductTotal += pvd.ADET * pvd.SATISF;
+                ProductTotal += pvd.ADET * pvd.PatientPrice;
             }
             CalculateTotals();
         }

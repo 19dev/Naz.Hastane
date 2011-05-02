@@ -35,12 +35,14 @@ namespace Naz.Hastane.Reports.Classes
             this.fieldKey21 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.fieldKey1 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.fieldToplamC = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
+            this.fieldAdetC = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmPeriod = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.fieldAdetC = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -124,6 +126,14 @@ namespace Naz.Hastane.Reports.Classes
             this.fieldToplamC.ValueFormat.FormatString = "{0:#,#}";
             this.fieldToplamC.ValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             // 
+            // fieldAdetC
+            // 
+            this.fieldAdetC.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldAdetC.AreaIndex = 0;
+            this.fieldAdetC.Caption = "Yatak";
+            this.fieldAdetC.FieldName = "AdetC";
+            this.fieldAdetC.Name = "fieldAdetC";
+            // 
             // TopMargin
             // 
             this.TopMargin.HeightF = 35F;
@@ -141,10 +151,29 @@ namespace Naz.Hastane.Reports.Classes
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel2,
             this.xrLabel3,
             this.xrLabel1});
-            this.PageHeader.HeightF = 52.08333F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmPeriod, "Text", "")});
+            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(97.91666F, 49.37499F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(817.7083F, 40.625F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "xrLabel2";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // prmPeriod
+            // 
+            this.prmPeriod.Name = "prmPeriod";
+            this.prmPeriod.Value = "";
             // 
             // xrLabel3
             // 
@@ -167,18 +196,10 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel1.SizeF = new System.Drawing.SizeF(732.2918F, 30.20834F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "SERVÝSLER BAZINDA YATAN HASTA RAPORU (Mart 2011)";
+            this.xrLabel1.Text = "SERVÝSLER BAZINDA YATAN HASTA RAPORU";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // fieldAdetC
-            // 
-            this.fieldAdetC.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldAdetC.AreaIndex = 0;
-            this.fieldAdetC.Caption = "Yatak";
-            this.fieldAdetC.FieldName = "AdetC";
-            this.fieldAdetC.Name = "fieldAdetC";
-            // 
-            // OZEYatakServisAyXTab
+            // OZETYatakServisAyXTab
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -189,6 +210,11 @@ namespace Naz.Hastane.Reports.Classes
             this.Margins = new System.Drawing.Printing.Margins(25, 31, 35, 39);
             this.PageHeight = 850;
             this.PageWidth = 1100;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.prmPeriod});
+            this.RequestParameters = false;
+            this.ShowPrintMarginsWarning = false;
+            this.ShowPrintStatusDialog = false;
             this.Version = "10.2";
             this.VerticalContentSplitting = DevExpress.XtraPrinting.VerticalContentSplitting.Smart;
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).EndInit();
@@ -211,5 +237,7 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField fieldAdetC;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        public DevExpress.XtraReports.Parameters.Parameter prmPeriod;
     }
 }

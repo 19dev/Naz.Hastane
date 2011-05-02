@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 
 namespace Naz.Hastane.Data.Entities
 {
@@ -17,7 +18,17 @@ namespace Naz.Hastane.Data.Entities
         /// <summary>
         /// AZT
         /// </summary>
-        public virtual string Doctor { get; set; } // ARZT; length(4); 0
+        public virtual Doctor Doctor { get; set; } // ARZT; length(4); 0
+        public virtual string DoctorName
+        {
+            get
+            {
+                if (Doctor == null)
+                    return "";
+                else
+                    return Doctor.Value;
+            }
+        }
         /// <summary>
         /// SERVIS
         /// </summary>

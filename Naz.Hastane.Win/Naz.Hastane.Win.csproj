@@ -228,6 +228,12 @@
     <Compile Include="Controls\MedulaProvisionControl.Designer.cs">
       <DependentUpon>MedulaProvisionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PatientVisitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PatientVisitControl.Designer.cs">
+      <DependentUpon>PatientVisitControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ColorBox.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MedulaReportControl.resx">
       <DependentUpon>MedulaReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PatientVisitControl.resx">
+      <DependentUpon>PatientVisitControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

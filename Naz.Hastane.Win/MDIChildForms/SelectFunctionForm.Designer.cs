@@ -51,6 +51,23 @@
             this.lciFunctionGroups = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciProducts = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSelectedProducts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colSelectedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedGroup = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedDoctor2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedUser = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colShouldBeIncoiced = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAdmittedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExitDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRefDays = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMedulaPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTedaviBaslangic = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTedaviBitis = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelDurum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAnomali = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
@@ -71,11 +88,11 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.gcSelectedProducts);
             this.layoutControl1.Controls.Add(this.gcProducts);
             this.layoutControl1.Controls.Add(this.tlFunctionGroups);
             this.layoutControl1.Controls.Add(this.sbClose);
             this.layoutControl1.Controls.Add(this.sbSelect);
+            this.layoutControl1.Controls.Add(this.gcSelectedProducts);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -86,10 +103,10 @@
             // 
             // gcSelectedProducts
             // 
-            this.gcSelectedProducts.Location = new System.Drawing.Point(386, 417);
+            this.gcSelectedProducts.Location = new System.Drawing.Point(12, 376);
             this.gcSelectedProducts.MainView = this.gvSelectedProducts;
             this.gcSelectedProducts.Name = "gcSelectedProducts";
-            this.gcSelectedProducts.Size = new System.Drawing.Size(428, 197);
+            this.gcSelectedProducts.Size = new System.Drawing.Size(911, 238);
             this.gcSelectedProducts.TabIndex = 10;
             this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSelectedProducts});
@@ -97,9 +114,26 @@
             // gvSelectedProducts
             // 
             this.gvSelectedProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSelectedDate,
+            this.colSelectedGroup,
+            this.colSelectedCode,
             this.colSelectedProductName,
+            this.colSelectedAmount,
             this.colSelectedPatientPrice,
-            this.colSelectedCompanyPrice});
+            this.colSelectedCompanyPrice,
+            this.colSelectedDoctor,
+            this.colSelectedDoctor2,
+            this.colSelectedUser,
+            this.colShouldBeIncoiced,
+            this.colAdmittedDate,
+            this.colExitDate,
+            this.colRefDays,
+            this.colMedulaPrice,
+            this.colTedaviBaslangic,
+            this.colTedaviBitis,
+            this.colOzelDurum,
+            this.colAnomali,
+            this.colAKOD});
             this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
             this.gvSelectedProducts.Name = "gvSelectedProducts";
             this.gvSelectedProducts.OptionsBehavior.Editable = false;
@@ -112,7 +146,7 @@
             this.colSelectedProductName.FieldName = "NAME1";
             this.colSelectedProductName.Name = "colSelectedProductName";
             this.colSelectedProductName.Visible = true;
-            this.colSelectedProductName.VisibleIndex = 0;
+            this.colSelectedProductName.VisibleIndex = 3;
             // 
             // colSelectedPatientPrice
             // 
@@ -120,7 +154,7 @@
             this.colSelectedPatientPrice.FieldName = "PatientPrice";
             this.colSelectedPatientPrice.Name = "colSelectedPatientPrice";
             this.colSelectedPatientPrice.Visible = true;
-            this.colSelectedPatientPrice.VisibleIndex = 1;
+            this.colSelectedPatientPrice.VisibleIndex = 5;
             // 
             // colSelectedCompanyPrice
             // 
@@ -128,14 +162,14 @@
             this.colSelectedCompanyPrice.FieldName = "CompanyPrice";
             this.colSelectedCompanyPrice.Name = "colSelectedCompanyPrice";
             this.colSelectedCompanyPrice.Visible = true;
-            this.colSelectedCompanyPrice.VisibleIndex = 2;
+            this.colSelectedCompanyPrice.VisibleIndex = 6;
             // 
             // gcProducts
             // 
             this.gcProducts.Location = new System.Drawing.Point(386, 28);
             this.gcProducts.MainView = this.gvProducts;
             this.gcProducts.Name = "gcProducts";
-            this.gcProducts.Size = new System.Drawing.Size(428, 369);
+            this.gcProducts.Size = new System.Drawing.Size(428, 328);
             this.gcProducts.TabIndex = 9;
             this.gcProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProducts});
@@ -181,13 +215,13 @@
             this.tlFunctionGroups.Location = new System.Drawing.Point(12, 28);
             this.tlFunctionGroups.Name = "tlFunctionGroups";
             this.tlFunctionGroups.OptionsBehavior.Editable = false;
-            this.tlFunctionGroups.Size = new System.Drawing.Size(370, 586);
+            this.tlFunctionGroups.Size = new System.Drawing.Size(370, 328);
             this.tlFunctionGroups.TabIndex = 8;
             this.tlFunctionGroups.Click += new System.EventHandler(this.tlFunctionGroups_Click);
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(818, 370);
+            this.sbClose.Location = new System.Drawing.Point(818, 324);
             this.sbClose.Name = "sbClose";
             this.sbClose.Size = new System.Drawing.Size(105, 22);
             this.sbClose.StyleController = this.layoutControl1;
@@ -197,7 +231,7 @@
             // 
             // sbSelect
             // 
-            this.sbSelect.Location = new System.Drawing.Point(818, 88);
+            this.sbSelect.Location = new System.Drawing.Point(818, 83);
             this.sbSelect.Name = "sbSelect";
             this.sbSelect.Size = new System.Drawing.Size(105, 22);
             this.sbSelect.StyleController = this.layoutControl1;
@@ -228,7 +262,7 @@
             // 
             this.layoutControlItem3.Control = this.sbSelect;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(806, 76);
+            this.layoutControlItem3.Location = new System.Drawing.Point(806, 71);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(109, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
@@ -240,7 +274,7 @@
             // 
             this.layoutControlItem4.Control = this.sbClose;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(806, 358);
+            this.layoutControlItem4.Location = new System.Drawing.Point(806, 312);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(109, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
@@ -251,9 +285,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(806, 102);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(806, 97);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(109, 256);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(109, 215);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -262,16 +296,16 @@
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(806, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(109, 76);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(109, 71);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(806, 384);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(806, 338);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(109, 222);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(109, 10);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -281,7 +315,7 @@
             this.lciFunctionGroups.CustomizationFormText = "Hizmetler";
             this.lciFunctionGroups.Location = new System.Drawing.Point(0, 0);
             this.lciFunctionGroups.Name = "lciFunctionGroups";
-            this.lciFunctionGroups.Size = new System.Drawing.Size(374, 606);
+            this.lciFunctionGroups.Size = new System.Drawing.Size(374, 348);
             this.lciFunctionGroups.Text = "Hizmetler";
             this.lciFunctionGroups.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciFunctionGroups.TextSize = new System.Drawing.Size(63, 13);
@@ -292,7 +326,7 @@
             this.lciProducts.CustomizationFormText = "İşlemler";
             this.lciProducts.Location = new System.Drawing.Point(374, 0);
             this.lciProducts.Name = "lciProducts";
-            this.lciProducts.Size = new System.Drawing.Size(432, 389);
+            this.lciProducts.Size = new System.Drawing.Size(432, 348);
             this.lciProducts.Text = "İşlemler";
             this.lciProducts.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciProducts.TextSize = new System.Drawing.Size(63, 13);
@@ -301,12 +335,146 @@
             // 
             this.lciSelectedProducts.Control = this.gcSelectedProducts;
             this.lciSelectedProducts.CustomizationFormText = "Seçili İşlemler";
-            this.lciSelectedProducts.Location = new System.Drawing.Point(374, 389);
+            this.lciSelectedProducts.Location = new System.Drawing.Point(0, 348);
             this.lciSelectedProducts.Name = "lciSelectedProducts";
-            this.lciSelectedProducts.Size = new System.Drawing.Size(432, 217);
+            this.lciSelectedProducts.Size = new System.Drawing.Size(915, 258);
             this.lciSelectedProducts.Text = "Seçili İşlemler";
             this.lciSelectedProducts.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciSelectedProducts.TextSize = new System.Drawing.Size(63, 13);
+            // 
+            // colSelectedDate
+            // 
+            this.colSelectedDate.Caption = "Tarih / Saat";
+            this.colSelectedDate.FieldName = "TARIH";
+            this.colSelectedDate.Name = "colSelectedDate";
+            this.colSelectedDate.Visible = true;
+            this.colSelectedDate.VisibleIndex = 0;
+            // 
+            // colSelectedGroup
+            // 
+            this.colSelectedGroup.Caption = "Grup";
+            this.colSelectedGroup.FieldName = "GRUP";
+            this.colSelectedGroup.Name = "colSelectedGroup";
+            this.colSelectedGroup.Visible = true;
+            this.colSelectedGroup.VisibleIndex = 1;
+            // 
+            // colSelectedCode
+            // 
+            this.colSelectedCode.Caption = "Kodu";
+            this.colSelectedCode.FieldName = "CODE";
+            this.colSelectedCode.Name = "colSelectedCode";
+            this.colSelectedCode.Visible = true;
+            this.colSelectedCode.VisibleIndex = 2;
+            // 
+            // colSelectedAmount
+            // 
+            this.colSelectedAmount.Caption = "Adet";
+            this.colSelectedAmount.FieldName = "ADET";
+            this.colSelectedAmount.Name = "colSelectedAmount";
+            this.colSelectedAmount.Visible = true;
+            this.colSelectedAmount.VisibleIndex = 4;
+            // 
+            // colSelectedDoctor
+            // 
+            this.colSelectedDoctor.Caption = "Doktor";
+            this.colSelectedDoctor.FieldName = "DoctorName";
+            this.colSelectedDoctor.Name = "colSelectedDoctor";
+            this.colSelectedDoctor.Visible = true;
+            this.colSelectedDoctor.VisibleIndex = 8;
+            // 
+            // colSelectedDoctor2
+            // 
+            this.colSelectedDoctor2.Caption = "Yapan Doktor";
+            this.colSelectedDoctor2.FieldName = "Doctor2Name";
+            this.colSelectedDoctor2.Name = "colSelectedDoctor2";
+            this.colSelectedDoctor2.Visible = true;
+            this.colSelectedDoctor2.VisibleIndex = 9;
+            // 
+            // colSelectedUser
+            // 
+            this.colSelectedUser.Caption = "Kullanıcı";
+            this.colSelectedUser.FieldName = "USER_ID";
+            this.colSelectedUser.Name = "colSelectedUser";
+            this.colSelectedUser.Visible = true;
+            this.colSelectedUser.VisibleIndex = 10;
+            // 
+            // colShouldBeIncoiced
+            // 
+            this.colShouldBeIncoiced.Caption = "Fatura Edilsin";
+            this.colShouldBeIncoiced.FieldName = "FATURAEDILSIN";
+            this.colShouldBeIncoiced.Name = "colShouldBeIncoiced";
+            this.colShouldBeIncoiced.Visible = true;
+            this.colShouldBeIncoiced.VisibleIndex = 11;
+            // 
+            // colAdmittedDate
+            // 
+            this.colAdmittedDate.Caption = "Yatış Tarihi";
+            this.colAdmittedDate.FieldName = "HYATISTARIHI";
+            this.colAdmittedDate.Name = "colAdmittedDate";
+            this.colAdmittedDate.Visible = true;
+            this.colAdmittedDate.VisibleIndex = 12;
+            // 
+            // colExitDate
+            // 
+            this.colExitDate.Caption = "Çıkış Tarihi";
+            this.colExitDate.FieldName = "HCIKISTARIHI";
+            this.colExitDate.Name = "colExitDate";
+            this.colExitDate.Visible = true;
+            this.colExitDate.VisibleIndex = 13;
+            // 
+            // colRefDays
+            // 
+            this.colRefDays.Caption = "Ref. Gün Sayısı";
+            this.colRefDays.FieldName = "REFGUNSAY";
+            this.colRefDays.Name = "colRefDays";
+            this.colRefDays.Visible = true;
+            this.colRefDays.VisibleIndex = 14;
+            // 
+            // colMedulaPrice
+            // 
+            this.colMedulaPrice.Caption = "Medula Fiyatı";
+            this.colMedulaPrice.Name = "colMedulaPrice";
+            this.colMedulaPrice.Visible = true;
+            this.colMedulaPrice.VisibleIndex = 15;
+            // 
+            // colTedaviBaslangic
+            // 
+            this.colTedaviBaslangic.Caption = "Tedavi Başlangıç";
+            this.colTedaviBaslangic.FieldName = "MEDTUTAR";
+            this.colTedaviBaslangic.Name = "colTedaviBaslangic";
+            this.colTedaviBaslangic.Visible = true;
+            this.colTedaviBaslangic.VisibleIndex = 16;
+            // 
+            // colTedaviBitis
+            // 
+            this.colTedaviBitis.Caption = "Tedavi Bitiş";
+            this.colTedaviBitis.Name = "colTedaviBitis";
+            this.colTedaviBitis.Visible = true;
+            this.colTedaviBitis.VisibleIndex = 17;
+            // 
+            // colOzelDurum
+            // 
+            this.colOzelDurum.Caption = "Özel Durum";
+            this.colOzelDurum.FieldName = "MEDOZDURUM";
+            this.colOzelDurum.Name = "colOzelDurum";
+            this.colOzelDurum.Visible = true;
+            this.colOzelDurum.VisibleIndex = 18;
+            // 
+            // colAnomali
+            // 
+            this.colAnomali.Caption = "Anomali";
+            this.colAnomali.FieldName = "MEDANOMALI";
+            this.colAnomali.Name = "colAnomali";
+            this.colAnomali.Visible = true;
+            this.colAnomali.VisibleIndex = 19;
+            // 
+            // colAKOD
+            // 
+            this.colAKOD.Caption = "Ambar Kodu";
+            this.colAKOD.FieldName = "AKOD";
+            this.colAKOD.Name = "colAKOD";
+            this.colAKOD.Visible = true;
+            this.colAKOD.VisibleIndex = 7;
             // 
             // SelectFunctionForm
             // 
@@ -361,5 +529,22 @@
         private DevExpress.XtraGrid.Columns.GridColumn colProductName;
         private DevExpress.XtraGrid.Columns.GridColumn colPatientPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedGroup;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedDoctor;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedDoctor2;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelectedUser;
+        private DevExpress.XtraGrid.Columns.GridColumn colShouldBeIncoiced;
+        private DevExpress.XtraGrid.Columns.GridColumn colAdmittedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colExitDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colRefDays;
+        private DevExpress.XtraGrid.Columns.GridColumn colMedulaPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colTedaviBaslangic;
+        private DevExpress.XtraGrid.Columns.GridColumn colTedaviBitis;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelDurum;
+        private DevExpress.XtraGrid.Columns.GridColumn colAnomali;
+        private DevExpress.XtraGrid.Columns.GridColumn colAKOD;
     }
 }

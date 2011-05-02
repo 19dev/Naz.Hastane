@@ -26,7 +26,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.InsuranceTotal).Column("KTOPT");
             Map(x => x.DTOPT).Column("DTOPT");
 
-            Map(x => x.Doctor).Column("ARZT").Length(4);
+            References(x => x.Doctor).Column("ARZT");
 
             Map(x => x.Servis).Column("SERVIS").Length(2);
             Map(x => x.ODANO).Column("ODANO").Length(10);

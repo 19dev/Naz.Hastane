@@ -18,7 +18,7 @@ namespace Naz.Hastane.Data.Mappings
 
             Map(x => x.ACIL_KONS).Column("ACIL_KONS").Length(1); //1
             Map(x => x.VisitType).Column("AMBU").Length(1); //0
-            Map(x => x.Doctor).Column("ARZT").Length(4); //0
+            References(x => x.Doctor).Column("ARZT"); //0
             Map(x => x.BranchCode).Column("BRANSKODU").Length(10); //1
             Map(x => x.DATE_CREATE).Column("DATE_CREATE").Length(8); //0
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE").Length(8); //1

@@ -176,8 +176,8 @@ namespace Naz.Hastane.Data.Services
             patient.IDDate = ""; //HUVIYETTARIHI
             patient.IDPlace = ""; //HUVIYETVYER
 
-            patient.ArchiveID = ""; //ARSIVNO
-            patient.CriminalArchiveID = ""; //ADLIARSIVNO
+            patient.ArchiveID = null; //ARSIVNO
+            patient.CriminalArchiveID = null; //ADLIARSIVNO
 
             patient.YKARTNO = ""; //YKARTNO
             patient.GELHAST = ""; //GELHAST
@@ -281,7 +281,7 @@ namespace Naz.Hastane.Data.Services
                 pv.VisitNo = GetNewPatientVisitNo(session, patient);
                 pv.VisitDate = DateTime.Now.Date;
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
-                pv.Doctor = doctor.Code;
+                pv.Doctor = doctor;
                 pv.Servis = doctor.Service.Code;
                 pv.QueueNo = String.Format("{0:00000}",doctor.QueueNo);
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
@@ -348,8 +348,8 @@ namespace Naz.Hastane.Data.Services
                 pvd.NAME1         = product.NAME1;
                 pvd.KDV           = product.KDV;
                 pvd.ADET          = 1;
-                pvd.SATISF        = product.GetPatientPrice(patient.InsuranceCompany.YFIYLIST);
-                pvd.KSATISF       = product.GetCompanyPrice(patient.InsuranceCompany.YFIYLIST);
+                pvd.PatientPrice        = product.GetPatientPrice(patient.InsuranceCompany.YFIYLIST);
+                pvd.CompanyPrice       = product.GetCompanyPrice(patient.InsuranceCompany.YFIYLIST);
                 pvd.PSG           = pv.PSG;
                 pvd.Doctor        = pv.Doctor;
                 pvd.Doctor2       = pv.Doctor;
@@ -384,8 +384,8 @@ namespace Naz.Hastane.Data.Services
 
                 foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
                 {
-                    patientTotal += pvd.ADET * pvd.SATISF;
-                    companyTotal += pvd.ADET * pvd.KSATISF;
+                    patientTotal += pvd.ADET * pvd.PatientPrice;
+                    companyTotal += pvd.ADET * pvd.CompanyPrice;
                 }
                 pv.PatientTotal   = patientTotal;
                 pv.InsuranceTotal = companyTotal;
@@ -577,7 +577,7 @@ namespace Naz.Hastane.Data.Services
                             join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
                             where  pvd.MAKNO == null && pvd.AMAKNO == null
                             && pvd.ADET != 0
-                            && pvd.SATISF != 0
+                            && pvd.PatientPrice != 0
                             && pvd.TARIH >= new DateTime(2011, 3, 1)
                             orderby p.FirstName ascending, p.LastName ascending
                             select p
@@ -598,7 +598,7 @@ namespace Naz.Hastane.Data.Services
                     .Where(d => d.MAKNO == null)
                     .And(d => d.AMAKNO == null)
                     .And(d => d.ADET != 0)
-                    .And(d => d.SATISF != 0)
+                    .And(d => d.PatientPrice != 0)
                     .And(d => d.TARIH >= new DateTime(2011, 3, 1))
                 //.Select(Projections.ProjectionList()
                 //.Add(Projections.Property(() => patient.FirstName), "First Name")
@@ -638,7 +638,7 @@ namespace Naz.Hastane.Data.Services
                     join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
                     where pv.Patient == patient 
                     && pvd.MAKNO == null && pvd.AMAKNO == null
-                    && pvd.ADET != 0 && pvd.SATISF != 0
+                    && pvd.ADET != 0 && pvd.PatientPrice != 0
                     orderby pv.VisitNo descending
                     select pv
                     )
@@ -662,7 +662,7 @@ namespace Naz.Hastane.Data.Services
                                                     pvd.PatientVisit.Patient == pvs[0].Patient
                                                     && pvIDs.Contains(pvd.PatientVisit.VisitNo)
                                                     && pvd.MAKNO == null && pvd.AMAKNO == null
-                                                    && pvd.ADET != 0 && pvd.SATISF != 0
+                                                    && pvd.ADET != 0 && pvd.PatientPrice != 0
                                                 join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
                                                 //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
                                                 select pvd
@@ -888,11 +888,12 @@ namespace Naz.Hastane.Data.Services
                 if (pvd.TANIM != "09" && pvd.TANIM != "16")
                 {
                     DoctorProductPercent dpp1 = (from dpp in session.Query<DoctorProductPercent>()
+                                                 //join doctor in session.Query<Doctor>() on dpp.ARZT equals doctor.Code
                                                  where
                                                         dpp.TANIM == pvd.TANIM &&
                                                         dpp.GRUP == pvd.GRUP &&
                                                         dpp.CODE == pvd.CODE &&
-                                                        dpp.ARZT == pvd.Doctor2
+                                                        dpp.ARZT == pvd.Doctor2.Code
                                                  select dpp)
                                                  .FirstOrDefault();
 

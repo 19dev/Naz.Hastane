@@ -110,7 +110,7 @@ namespace Naz.Hastane.Win.Controls
                 //var cevap2 = service.IlceListesiGetir();
                 IsOK = true;
             }
-            catch (Exception ee)
+            catch
             {
                 IsOK = false;
             }

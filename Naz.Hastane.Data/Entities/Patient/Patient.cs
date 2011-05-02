@@ -82,8 +82,13 @@ namespace Naz.Hastane.Data.Entities
         public virtual string IDNO { get; set; } //HUVIYETNO
         public virtual string IDDate { get; set; } //HUVIYETTARIHI
         public virtual string IDPlace { get; set; } //HUVIYETVYER
-
+        /// <summary>
+        /// ARSIVNO
+        /// </summary>
         public virtual string ArchiveID { get; set; } //ARSIVNO
+        /// <summary>
+        /// ADLIARSIVNO
+        /// </summary>
         public virtual string CriminalArchiveID { get; set; } //ADLIARSIVNO
 
         public virtual string YKARTNO { get; set; } //YKARTNO

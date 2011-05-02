@@ -88,6 +88,7 @@ namespace Naz.Hastane.Reports.Classes
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmPeriod = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -333,7 +334,7 @@ namespace Naz.Hastane.Reports.Classes
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 86F;
+            this.TopMargin.HeightF = 30.4375F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -341,7 +342,7 @@ namespace Naz.Hastane.Reports.Classes
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 127F;
+            this.BottomMargin.HeightF = 39.6875F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -360,7 +361,7 @@ namespace Naz.Hastane.Reports.Classes
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable3});
             this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.HeightF = 195.7917F;
+            this.ReportFooter.HeightF = 105.8333F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrTable3
@@ -623,7 +624,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTable4,
             this.xrTable1});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 452.4375F;
+            this.ReportHeader.HeightF = 410.1042F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.StylePriority.UseTextAlignment = false;
             this.ReportHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -643,6 +644,8 @@ namespace Naz.Hastane.Reports.Classes
             // 
             // xrLabel2
             // 
+            this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmPeriod, "Text", "")});
             this.xrLabel2.Dpi = 254F;
             this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(346.6042F, 127F);
@@ -651,8 +654,13 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel2.SizeF = new System.Drawing.SizeF(2076.979F, 103.1875F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Mart 2011";
+            this.xrLabel2.Text = "xrLabel2";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // prmPeriod
+            // 
+            this.prmPeriod.Name = "prmPeriod";
+            this.prmPeriod.Value = "";
             // 
             // xrLabel1
             // 
@@ -670,7 +678,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTable4
             // 
             this.xrTable4.Dpi = 254F;
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(268.5208F, 313.9375F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(268.5208F, 253.0833F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
@@ -721,9 +729,8 @@ namespace Naz.Hastane.Reports.Classes
             // 
             // xrTable1
             // 
-            this.xrTable1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(18.52083F, 377.4375F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(18.52083F, 316.5833F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -933,11 +940,15 @@ namespace Naz.Hastane.Reports.Classes
             this.DataSource = this.tipdataDataSet;
             this.Dpi = 254F;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(64, 94, 86, 127);
+            this.Margins = new System.Drawing.Printing.Margins(64, 94, 30, 40);
             this.PageHeight = 2159;
             this.PageWidth = 2794;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.prmPeriod});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.RequestParameters = false;
+            this.ShowPrintMarginsWarning = false;
+            this.ShowPrintStatusDialog = false;
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -1020,5 +1031,6 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        public DevExpress.XtraReports.Parameters.Parameter prmPeriod;
     }
 }

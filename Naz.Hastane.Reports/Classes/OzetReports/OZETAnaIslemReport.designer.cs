@@ -112,6 +112,8 @@ namespace Naz.Hastane.Reports.Classes
             this.xrTableCell28 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmPeriod = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -645,13 +647,13 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel1.SizeF = new System.Drawing.SizeF(1860.021F, 76.72917F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "ÝÞLEMLER ÖZET RAPORU (Mart 2011)";
+            this.xrLabel1.Text = "ÝÞLEMLER ÖZET RAPORU";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrTable4
             // 
             this.xrTable4.Dpi = 254F;
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(426.0002F, 81.85418F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(425.0002F, 227.375F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
@@ -703,7 +705,7 @@ namespace Naz.Hastane.Reports.Classes
             // xrTable1
             // 
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(426.0002F, 145.3542F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(425.0002F, 290.8751F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -902,14 +904,35 @@ namespace Naz.Hastane.Reports.Classes
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel2,
             this.xrTable1,
             this.xrTable4,
             this.xrLabel1,
             this.xrPageInfo1,
             this.xrLabel3});
             this.PageHeader.Dpi = 254F;
-            this.PageHeader.HeightF = 220.3542F;
+            this.PageHeader.HeightF = 371.1667F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmPeriod, "Text", "")});
+            this.xrLabel2.Dpi = 254F;
+            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(452.4375F, 97.89584F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(2076.979F, 103.1875F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "xrLabel2";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // prmPeriod
+            // 
+            this.prmPeriod.Name = "prmPeriod";
+            this.prmPeriod.Value = "";
             // 
             // OZETAnaIslemReport
             // 
@@ -928,7 +951,12 @@ namespace Naz.Hastane.Reports.Classes
             this.Margins = new System.Drawing.Printing.Margins(41, 53, 51, 0);
             this.PageHeight = 2159;
             this.PageWidth = 2794;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.prmPeriod});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
+            this.RequestParameters = false;
+            this.ShowPrintMarginsWarning = false;
+            this.ShowPrintStatusDialog = false;
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -1011,5 +1039,7 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        public DevExpress.XtraReports.Parameters.Parameter prmPeriod;
     }
 }

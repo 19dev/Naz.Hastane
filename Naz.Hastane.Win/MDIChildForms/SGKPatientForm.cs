@@ -49,7 +49,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
             InitBindings();
 
-            this.gcIslemler.DataSource = _Patient.PatientVisits;
+            this.PatientVisitControl.gcPatientVisit.DataSource = _Patient.PatientVisits;
             this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
             this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
             this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
@@ -135,7 +135,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindLookUpEdit(this.lueJobCity, LookUpServices.Cities);
         }
 
-        private void sbKaydet_Click(object sender, EventArgs e)
+        private void sbSavePatient_Click(object sender, EventArgs e)
         {
             SavePatient();
         }
@@ -182,57 +182,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 XtraMessageBox.Show("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #region GridBindings
-        private void gvZiyaret_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
-        {
-            PatientVisit pv = (PatientVisit)gvPatientVisit.GetRow(e.RowHandle);
-            if (e.RelationIndex == 0)
-                e.IsEmpty = pv.PatientVisitDetails.Count == 0;
-            else
-                e.IsEmpty = pv.PatientVisitRecords.Count == 0;
-        }
-
-        private void gvZiyaret_MasterRowGetRelationCount(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventArgs e)
-        {
-            e.RelationCount = 2;
-        }
-
-        private void gvZiyaret_MasterRowGetRelationName(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventArgs e)
-        {
-            if (e.RelationIndex == 0)
-                e.RelationName = "PatientVisitDetails";
-            else
-                e.RelationName = "PatientVisitRecords";
-        }
-
-        private void gvZiyaret_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)
-        {
-            PatientVisit pv = (PatientVisit)gvPatientVisit.GetRow(e.RowHandle);
-            if (e.RelationIndex == 0)
-                e.ChildList = new BindingSource(pv, "PatientVisitDetails");
-            else
-                e.ChildList = new BindingSource(pv, "PatientVisitRecords");
-
-        }
-
-        private void gvZiyaret_MasterRowGetLevelDefaultView(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetLevelDefaultViewEventArgs e)
-        {
-            if (e.RelationIndex == 0)
-                e.DefaultView = gvPatientVisitDetail;
-            else
-                e.DefaultView = gvPatientVisitRecord;
-        }
-
-        private void gvPatientVisit_MasterRowGetRelationDisplayCaption(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventArgs e)
-        {
-            if (e.RelationIndex == 0)
-                e.RelationName = "İşlemler";
-            else
-                e.RelationName = "Kayıtlar";
-        }
-
-        #endregion
 
         #region Mernis
 
@@ -318,10 +267,10 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbMedula_Click(object sender, EventArgs e)
         {
-            currentPatientVisit = this.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (currentPatientVisit != null)
             {
-                _Doctor = LookUpServices.GetByID<Doctor>(currentPatientVisit.Doctor);
+                _Doctor = currentPatientVisit.Doctor;
                 CallMedulaProvision();
             }
         }
@@ -334,7 +283,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbPoliklinik.Enabled = enable;
             this.sbInvoice.Enabled = enable;
             this.sbVoucher.Enabled = enable;
-            this.gcIslemler.Enabled = enable;
+            this.PatientVisitControl.gcPatientVisit.Enabled = enable;
         }
 
         private void CallMedulaProvision()
@@ -408,7 +357,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (pvd != null)
             {
                 pvds.Add(pvd);
-                ProductTotal += pvd.ADET * pvd.SATISF;
+                ProductTotal += pvd.ADET * pvd.PatientPrice;
                 VATPercent = pvd.KDV;
                 VATPercent = Math.Round(VATPercent, 2);
                 VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
@@ -444,7 +393,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (pvd != null)
             {
                 pvds.Add(pvd);
-                ProductTotal = pvd.ADET * pvd.SATISF;
+                ProductTotal = pvd.ADET * pvd.PatientPrice;
 
                 UIUtilities.PrintVoucher(Session, _Patient, pvds,
                     paymentType, POSType,
@@ -459,8 +408,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void RefreshGrid()
         {
-            this.gcIslemler.RefreshDataSource();
-            this.gvPatientVisit.CollapseAllDetails();
+            this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
+            this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
         }
 
         private void gvPatientVisitDetail_Click(object sender, EventArgs e)
@@ -499,17 +448,17 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void sbTaahutname_Click(object sender, EventArgs e)
-        {
-            UIUtilities.PrintTaahhutname(_Patient, true);
-        }
-
         private void gvPatientVisit_DoubleClick(object sender, EventArgs e)
         {
             GridView view = sender as GridView;
             if (view.FocusedRowHandle >= 0)
                 view.SetMasterRowExpanded(view.FocusedRowHandle, !view.GetMasterRowExpanded(view.FocusedRowHandle));
 
+        }
+
+        private void sbTaahutname_Click(object sender, EventArgs e)
+        {
+            UIUtilities.PrintTaahhutname(_Patient, true);
         }
 
         private void sbDeletePatientVisitDetail_Click(object sender, EventArgs e)
@@ -545,7 +494,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbDeletePatientVisit_Click(object sender, EventArgs e)
         {
-            PatientVisit pv = this.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (pv == null)
                 return;
             if (!pv.IsOKForDelete())

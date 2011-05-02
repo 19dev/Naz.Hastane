@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Naz.Hastane.Data.Entities.LookUp.Special;
 
 namespace Naz.Hastane.Data.Entities
 {
@@ -56,11 +57,22 @@ namespace Naz.Hastane.Data.Entities
         /// <summary>
         /// ARZT
         /// </summary>
-        public virtual string Doctor { get; set; } //ARZT Doctor
-
+        public virtual Doctor Doctor { get; set; } //ARZT Doctor
+        public virtual string DoctorName
+        {
+            get
+            {
+                if (Doctor == null)
+                    return "";
+                else
+                    return Doctor.Value;
+            }
+        }
         public virtual string ODANO { get; set; } //ODANO ODALAR.ODANO Tablosu
         public virtual char ODAUCR { get; set; } //ODAUCR Null
-
+        /// <summary>
+        /// PSG
+        /// </summary>
         public virtual string PSG { get; set; } //PSG Kurum
         public virtual string InsuranceType { get; set; } //STURU ?? SevkTuru Kullanılmıyor
         public virtual string ProtocolNo { get; set; } //PROTOKOLNO ??
