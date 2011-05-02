@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
-            this.gvSelectedProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSelectedProductName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSelectedPatientPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSelectedCompanyPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcProducts = new DevExpress.XtraGrid.GridControl();
             this.gvProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,19 +37,15 @@
             this.tlFunctionGroups = new DevExpress.XtraTreeList.TreeList();
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciFunctionGroups = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciProducts = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciSelectedProducts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
+            this.gvSelectedProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSelectedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedGroup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedPatientPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelectedCompanyPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedDoctor2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedUser = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,13 +59,28 @@
             this.colOzelDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAnomali = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciFunctionGroups = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciProducts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSelectedProducts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tePatientTotal = new DevExpress.XtraEditors.TextEdit();
+            this.lciPatientTotal = new DevExpress.XtraLayout.LayoutControlItem();
+            this.teCompanyTotal = new DevExpress.XtraEditors.TextEdit();
+            this.lciCompanyTotal = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlFunctionGroups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -84,10 +90,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciFunctionGroups)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelectedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCompanyTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCompanyTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.teCompanyTotal);
+            this.layoutControl1.Controls.Add(this.tePatientTotal);
             this.layoutControl1.Controls.Add(this.gcProducts);
             this.layoutControl1.Controls.Add(this.tlFunctionGroups);
             this.layoutControl1.Controls.Add(this.sbClose);
@@ -101,75 +115,12 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // gcSelectedProducts
-            // 
-            this.gcSelectedProducts.Location = new System.Drawing.Point(12, 376);
-            this.gcSelectedProducts.MainView = this.gvSelectedProducts;
-            this.gcSelectedProducts.Name = "gcSelectedProducts";
-            this.gcSelectedProducts.Size = new System.Drawing.Size(911, 238);
-            this.gcSelectedProducts.TabIndex = 10;
-            this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvSelectedProducts});
-            // 
-            // gvSelectedProducts
-            // 
-            this.gvSelectedProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSelectedDate,
-            this.colSelectedGroup,
-            this.colSelectedCode,
-            this.colSelectedProductName,
-            this.colSelectedAmount,
-            this.colSelectedPatientPrice,
-            this.colSelectedCompanyPrice,
-            this.colSelectedDoctor,
-            this.colSelectedDoctor2,
-            this.colSelectedUser,
-            this.colShouldBeIncoiced,
-            this.colAdmittedDate,
-            this.colExitDate,
-            this.colRefDays,
-            this.colMedulaPrice,
-            this.colTedaviBaslangic,
-            this.colTedaviBitis,
-            this.colOzelDurum,
-            this.colAnomali,
-            this.colAKOD});
-            this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
-            this.gvSelectedProducts.Name = "gvSelectedProducts";
-            this.gvSelectedProducts.OptionsBehavior.Editable = false;
-            this.gvSelectedProducts.OptionsView.ShowGroupPanel = false;
-            this.gvSelectedProducts.DoubleClick += new System.EventHandler(this.gvSelectedProducts_DoubleClick);
-            // 
-            // colSelectedProductName
-            // 
-            this.colSelectedProductName.Caption = "Açıklama";
-            this.colSelectedProductName.FieldName = "NAME1";
-            this.colSelectedProductName.Name = "colSelectedProductName";
-            this.colSelectedProductName.Visible = true;
-            this.colSelectedProductName.VisibleIndex = 3;
-            // 
-            // colSelectedPatientPrice
-            // 
-            this.colSelectedPatientPrice.Caption = "Hasta Fiyatı";
-            this.colSelectedPatientPrice.FieldName = "PatientPrice";
-            this.colSelectedPatientPrice.Name = "colSelectedPatientPrice";
-            this.colSelectedPatientPrice.Visible = true;
-            this.colSelectedPatientPrice.VisibleIndex = 5;
-            // 
-            // colSelectedCompanyPrice
-            // 
-            this.colSelectedCompanyPrice.Caption = "Kurum Fiyatı";
-            this.colSelectedCompanyPrice.FieldName = "CompanyPrice";
-            this.colSelectedCompanyPrice.Name = "colSelectedCompanyPrice";
-            this.colSelectedCompanyPrice.Visible = true;
-            this.colSelectedCompanyPrice.VisibleIndex = 6;
-            // 
             // gcProducts
             // 
             this.gcProducts.Location = new System.Drawing.Point(386, 28);
             this.gcProducts.MainView = this.gvProducts;
             this.gcProducts.Name = "gcProducts";
-            this.gcProducts.Size = new System.Drawing.Size(428, 328);
+            this.gcProducts.Size = new System.Drawing.Size(428, 289);
             this.gcProducts.TabIndex = 9;
             this.gcProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProducts});
@@ -215,13 +166,13 @@
             this.tlFunctionGroups.Location = new System.Drawing.Point(12, 28);
             this.tlFunctionGroups.Name = "tlFunctionGroups";
             this.tlFunctionGroups.OptionsBehavior.Editable = false;
-            this.tlFunctionGroups.Size = new System.Drawing.Size(370, 328);
+            this.tlFunctionGroups.Size = new System.Drawing.Size(370, 289);
             this.tlFunctionGroups.TabIndex = 8;
             this.tlFunctionGroups.Click += new System.EventHandler(this.tlFunctionGroups_Click);
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(818, 324);
+            this.sbClose.Location = new System.Drawing.Point(818, 285);
             this.sbClose.Name = "sbClose";
             this.sbClose.Size = new System.Drawing.Size(105, 22);
             this.sbClose.StyleController = this.layoutControl1;
@@ -231,116 +182,53 @@
             // 
             // sbSelect
             // 
-            this.sbSelect.Location = new System.Drawing.Point(818, 83);
+            this.sbSelect.Location = new System.Drawing.Point(818, 74);
             this.sbSelect.Name = "sbSelect";
             this.sbSelect.Size = new System.Drawing.Size(105, 22);
             this.sbSelect.StyleController = this.layoutControl1;
             this.sbSelect.TabIndex = 6;
             this.sbSelect.Text = "Seçilileri Ekle";
+            this.sbSelect.Click += new System.EventHandler(this.sbSelect_Click);
             // 
-            // layoutControlGroup1
+            // gcSelectedProducts
             // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.emptySpaceItem1,
-            this.emptySpaceItem2,
-            this.emptySpaceItem3,
-            this.lciFunctionGroups,
-            this.lciProducts,
-            this.lciSelectedProducts});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(935, 626);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
+            this.gcSelectedProducts.Location = new System.Drawing.Point(12, 337);
+            this.gcSelectedProducts.MainView = this.gvSelectedProducts;
+            this.gcSelectedProducts.Name = "gcSelectedProducts";
+            this.gcSelectedProducts.Size = new System.Drawing.Size(911, 253);
+            this.gcSelectedProducts.TabIndex = 10;
+            this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSelectedProducts});
             // 
-            // layoutControlItem3
+            // gvSelectedProducts
             // 
-            this.layoutControlItem3.Control = this.sbSelect;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(806, 71);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(109, 26);
-            this.layoutControlItem3.Text = "layoutControlItem3";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextToControlDistance = 0;
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.sbClose;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(806, 312);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(109, 26);
-            this.layoutControlItem4.Text = "layoutControlItem4";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextToControlDistance = 0;
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(806, 97);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(109, 215);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(806, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(109, 71);
-            this.emptySpaceItem2.Text = "emptySpaceItem2";
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(806, 338);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(109, 10);
-            this.emptySpaceItem3.Text = "emptySpaceItem3";
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lciFunctionGroups
-            // 
-            this.lciFunctionGroups.Control = this.tlFunctionGroups;
-            this.lciFunctionGroups.CustomizationFormText = "Hizmetler";
-            this.lciFunctionGroups.Location = new System.Drawing.Point(0, 0);
-            this.lciFunctionGroups.Name = "lciFunctionGroups";
-            this.lciFunctionGroups.Size = new System.Drawing.Size(374, 348);
-            this.lciFunctionGroups.Text = "Hizmetler";
-            this.lciFunctionGroups.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciFunctionGroups.TextSize = new System.Drawing.Size(63, 13);
-            // 
-            // lciProducts
-            // 
-            this.lciProducts.Control = this.gcProducts;
-            this.lciProducts.CustomizationFormText = "İşlemler";
-            this.lciProducts.Location = new System.Drawing.Point(374, 0);
-            this.lciProducts.Name = "lciProducts";
-            this.lciProducts.Size = new System.Drawing.Size(432, 348);
-            this.lciProducts.Text = "İşlemler";
-            this.lciProducts.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciProducts.TextSize = new System.Drawing.Size(63, 13);
-            // 
-            // lciSelectedProducts
-            // 
-            this.lciSelectedProducts.Control = this.gcSelectedProducts;
-            this.lciSelectedProducts.CustomizationFormText = "Seçili İşlemler";
-            this.lciSelectedProducts.Location = new System.Drawing.Point(0, 348);
-            this.lciSelectedProducts.Name = "lciSelectedProducts";
-            this.lciSelectedProducts.Size = new System.Drawing.Size(915, 258);
-            this.lciSelectedProducts.Text = "Seçili İşlemler";
-            this.lciSelectedProducts.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciSelectedProducts.TextSize = new System.Drawing.Size(63, 13);
+            this.gvSelectedProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSelectedDate,
+            this.colSelectedGroup,
+            this.colSelectedCode,
+            this.colSelectedProductName,
+            this.colSelectedAmount,
+            this.colSelectedPatientPrice,
+            this.colSelectedCompanyPrice,
+            this.colSelectedDoctor,
+            this.colSelectedDoctor2,
+            this.colSelectedUser,
+            this.colShouldBeIncoiced,
+            this.colAdmittedDate,
+            this.colExitDate,
+            this.colRefDays,
+            this.colMedulaPrice,
+            this.colTedaviBaslangic,
+            this.colTedaviBitis,
+            this.colOzelDurum,
+            this.colAnomali,
+            this.colAKOD});
+            this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
+            this.gvSelectedProducts.Name = "gvSelectedProducts";
+            this.gvSelectedProducts.OptionsBehavior.Editable = false;
+            this.gvSelectedProducts.OptionsView.ColumnAutoWidth = false;
+            this.gvSelectedProducts.OptionsView.ShowGroupPanel = false;
+            this.gvSelectedProducts.DoubleClick += new System.EventHandler(this.gvSelectedProducts_DoubleClick);
             // 
             // colSelectedDate
             // 
@@ -366,6 +254,14 @@
             this.colSelectedCode.Visible = true;
             this.colSelectedCode.VisibleIndex = 2;
             // 
+            // colSelectedProductName
+            // 
+            this.colSelectedProductName.Caption = "Açıklama";
+            this.colSelectedProductName.FieldName = "NAME1";
+            this.colSelectedProductName.Name = "colSelectedProductName";
+            this.colSelectedProductName.Visible = true;
+            this.colSelectedProductName.VisibleIndex = 3;
+            // 
             // colSelectedAmount
             // 
             this.colSelectedAmount.Caption = "Adet";
@@ -373,6 +269,22 @@
             this.colSelectedAmount.Name = "colSelectedAmount";
             this.colSelectedAmount.Visible = true;
             this.colSelectedAmount.VisibleIndex = 4;
+            // 
+            // colSelectedPatientPrice
+            // 
+            this.colSelectedPatientPrice.Caption = "Hasta Fiyatı";
+            this.colSelectedPatientPrice.FieldName = "PatientPrice";
+            this.colSelectedPatientPrice.Name = "colSelectedPatientPrice";
+            this.colSelectedPatientPrice.Visible = true;
+            this.colSelectedPatientPrice.VisibleIndex = 5;
+            // 
+            // colSelectedCompanyPrice
+            // 
+            this.colSelectedCompanyPrice.Caption = "Kurum Fiyatı";
+            this.colSelectedCompanyPrice.FieldName = "CompanyPrice";
+            this.colSelectedCompanyPrice.Name = "colSelectedCompanyPrice";
+            this.colSelectedCompanyPrice.Visible = true;
+            this.colSelectedCompanyPrice.VisibleIndex = 6;
             // 
             // colSelectedDoctor
             // 
@@ -476,6 +388,174 @@
             this.colAKOD.Visible = true;
             this.colAKOD.VisibleIndex = 7;
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3,
+            this.lciFunctionGroups,
+            this.lciProducts,
+            this.lciSelectedProducts,
+            this.lciPatientTotal,
+            this.lciCompanyTotal,
+            this.emptySpaceItem4,
+            this.emptySpaceItem5});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(935, 626);
+            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.sbSelect;
+            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
+            this.layoutControlItem3.Location = new System.Drawing.Point(806, 62);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem3.Text = "layoutControlItem3";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextToControlDistance = 0;
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.sbClose;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
+            this.layoutControlItem4.Location = new System.Drawing.Point(806, 273);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem4.Text = "layoutControlItem4";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextToControlDistance = 0;
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(806, 88);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(109, 185);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem2.Location = new System.Drawing.Point(806, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(109, 62);
+            this.emptySpaceItem2.Text = "emptySpaceItem2";
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
+            this.emptySpaceItem3.Location = new System.Drawing.Point(806, 299);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(109, 10);
+            this.emptySpaceItem3.Text = "emptySpaceItem3";
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciFunctionGroups
+            // 
+            this.lciFunctionGroups.Control = this.tlFunctionGroups;
+            this.lciFunctionGroups.CustomizationFormText = "Hizmetler";
+            this.lciFunctionGroups.Location = new System.Drawing.Point(0, 0);
+            this.lciFunctionGroups.Name = "lciFunctionGroups";
+            this.lciFunctionGroups.Size = new System.Drawing.Size(374, 309);
+            this.lciFunctionGroups.Text = "Hizmetler";
+            this.lciFunctionGroups.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciFunctionGroups.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // lciProducts
+            // 
+            this.lciProducts.Control = this.gcProducts;
+            this.lciProducts.CustomizationFormText = "İşlemler";
+            this.lciProducts.Location = new System.Drawing.Point(374, 0);
+            this.lciProducts.Name = "lciProducts";
+            this.lciProducts.Size = new System.Drawing.Size(432, 309);
+            this.lciProducts.Text = "İşlemler";
+            this.lciProducts.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciProducts.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // lciSelectedProducts
+            // 
+            this.lciSelectedProducts.Control = this.gcSelectedProducts;
+            this.lciSelectedProducts.CustomizationFormText = "Seçili İşlemler";
+            this.lciSelectedProducts.Location = new System.Drawing.Point(0, 309);
+            this.lciSelectedProducts.Name = "lciSelectedProducts";
+            this.lciSelectedProducts.Size = new System.Drawing.Size(915, 273);
+            this.lciSelectedProducts.Text = "Seçili İşlemler";
+            this.lciSelectedProducts.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciSelectedProducts.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // tePatientTotal
+            // 
+            this.tePatientTotal.Enabled = false;
+            this.tePatientTotal.Location = new System.Drawing.Point(275, 594);
+            this.tePatientTotal.Name = "tePatientTotal";
+            this.tePatientTotal.Properties.DisplayFormat.FormatString = "{0:#,##0.00}";
+            this.tePatientTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.tePatientTotal.Size = new System.Drawing.Size(127, 20);
+            this.tePatientTotal.StyleController = this.layoutControl1;
+            this.tePatientTotal.TabIndex = 11;
+            // 
+            // lciPatientTotal
+            // 
+            this.lciPatientTotal.Control = this.tePatientTotal;
+            this.lciPatientTotal.CustomizationFormText = "Hasta Toplamı:";
+            this.lciPatientTotal.Location = new System.Drawing.Point(186, 582);
+            this.lciPatientTotal.Name = "lciPatientTotal";
+            this.lciPatientTotal.Size = new System.Drawing.Size(208, 24);
+            this.lciPatientTotal.Text = "Hasta Toplamı:";
+            this.lciPatientTotal.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // teCompanyTotal
+            // 
+            this.teCompanyTotal.Enabled = false;
+            this.teCompanyTotal.Location = new System.Drawing.Point(483, 594);
+            this.teCompanyTotal.Name = "teCompanyTotal";
+            this.teCompanyTotal.Properties.DisplayFormat.FormatString = "{0:#,##0.00}";
+            this.teCompanyTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.teCompanyTotal.Size = new System.Drawing.Size(128, 20);
+            this.teCompanyTotal.StyleController = this.layoutControl1;
+            this.teCompanyTotal.TabIndex = 12;
+            // 
+            // lciCompanyTotal
+            // 
+            this.lciCompanyTotal.Control = this.teCompanyTotal;
+            this.lciCompanyTotal.CustomizationFormText = "Kurum Toplamı:";
+            this.lciCompanyTotal.Location = new System.Drawing.Point(394, 582);
+            this.lciCompanyTotal.Name = "lciCompanyTotal";
+            this.lciCompanyTotal.Size = new System.Drawing.Size(209, 24);
+            this.lciCompanyTotal.Text = "Kurum Toplamı:";
+            this.lciCompanyTotal.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
+            this.emptySpaceItem4.Location = new System.Drawing.Point(603, 582);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(312, 24);
+            this.emptySpaceItem4.Text = "emptySpaceItem4";
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 582);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(186, 24);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // SelectFunctionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,11 +566,11 @@
             this.Text = "SGK Poliklinik Seçim Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlFunctionGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -500,6 +580,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciFunctionGroups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelectedProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCompanyTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCompanyTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,5 +632,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn colOzelDurum;
         private DevExpress.XtraGrid.Columns.GridColumn colAnomali;
         private DevExpress.XtraGrid.Columns.GridColumn colAKOD;
+        private DevExpress.XtraEditors.TextEdit teCompanyTotal;
+        private DevExpress.XtraEditors.TextEdit tePatientTotal;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatientTotal;
+        private DevExpress.XtraLayout.LayoutControlItem lciCompanyTotal;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
     }
 }

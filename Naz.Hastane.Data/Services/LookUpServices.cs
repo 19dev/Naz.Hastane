@@ -348,6 +348,34 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static IList<SGKAutoExamination> GetSGKAutoExaminations(Service service)
+        {
+            IList<SGKAutoExamination> result = new List<SGKAutoExamination>();
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                result = (from sae in session.Query<SGKAutoExamination>()
+                        where sae.Service == service
+                        select sae
+                        )
+                        .ToList<SGKAutoExamination>();
+            }
+            return result;
+        }
+
+        public static IList<SGKAutoExaminationSameDay> GetSGKAutoExaminationSameDays(Service service)
+        {
+            IList<SGKAutoExaminationSameDay> result = new List<SGKAutoExaminationSameDay>();
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                result = (from sae in session.Query<SGKAutoExaminationSameDay>()
+                          where sae.Service == service
+                          select sae
+                        )
+                        .ToList<SGKAutoExaminationSameDay>();
+            }
+            return result;
+        }
+
         private static IList<Doctor> _SGKLicensedDoctors;
         public static IList<Doctor> SGKLicensedDoctors
         {

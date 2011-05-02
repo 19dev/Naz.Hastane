@@ -14,27 +14,18 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class SelectFunctionForm : MDIChildForm
     {
-        //private GridCheckMarksSelectionWeb selectionProducts;
-        //private GridCheckMarksSelectionWeb selectionSelectedProducts;
+        public PatientVisit PatientVisit;
 
         private bool _IsSelected = false;
         public bool IsSelected { get { return _IsSelected; } }
 
-        private IList<Product> _SelectedProducts = new List<Product>();
-        public IList<Product> SelectedProducts { get { return _SelectedProducts; } }
+        private IList<PatientVisitDetail> _SelectedProducts = new List<PatientVisitDetail>();
+        public IList<PatientVisitDetail> SelectedProducts { get { return _SelectedProducts; } }
 
         public string PriceListCode { get; set; }
         public SelectFunctionForm()
         {
             InitializeComponent();
-
-            //selectionProducts = new GridCheckMarksSelectionWeb(this.gvProducts);
-            //selectionProducts.CheckMarkColumn.VisibleIndex = 0;
-            //selectionProducts.OnSelectionChanged += new EventHandler<EventArgs>(selectionProducts_OnSelectionChanged);
-
-            //selectionSelectedProducts = new GridCheckMarksSelectionWeb(this.gvSelectedProducts);
-            //selectionSelectedProducts.CheckMarkColumn.VisibleIndex = 0;
-            //selectionSelectedProducts.OnSelectionChanged += new EventHandler<EventArgs>(selectionSelectedProducts_OnSelectionChanged);
 
             CreateColumns(this.tlFunctionGroups);
             CreateNodes(this.tlFunctionGroups, LookUpServices.FunctionGroups);
@@ -44,7 +35,6 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void CreateColumns(TreeList tl)
         {
-            // Create three columns. 
             tl.BeginUpdate();
             tl.Columns.Add();
             tl.Columns[0].Caption = "Açıklama";
@@ -75,23 +65,17 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbClose_Click(object sender, EventArgs e)
         {
+            _IsSelected = false;
             this.Close();
         }
-        //void selectionProducts_OnSelectionChanged(object o, EventArgs e)
-        //{
-        //    //QueryPatientProductsDetails();
-        //}
-        //void selectionSelectedProducts_OnSelectionChanged(object o, EventArgs e)
-        //{
-        //    //QueryPatientProductsDetails();
-        //}
 
         private void AddToSelectedProducts(Product product)
         {
-            foreach (Product p in _SelectedProducts)
-                if (p == product)
+            PatientVisitDetail pvd = PatientServices.GetNewPatientVisitDetailFromProduct(PatientVisit, product);
+            foreach (PatientVisitDetail p in _SelectedProducts)
+                if (p == pvd)
                     return;
-            _SelectedProducts.Add(product);
+            _SelectedProducts.Add(pvd);
             this.gcSelectedProducts.RefreshDataSource();
         }
 
@@ -125,13 +109,33 @@ namespace Naz.Hastane.Win.MDIChildForms
             GridView view = sender as GridView;
             if (view != null)
             {
-                Product product = view.GetFocusedRow() as Product;
-                if (product != null)
+                PatientVisitDetail pvd = view.GetFocusedRow() as PatientVisitDetail;
+                if (pvd != null)
                 {
-                    _SelectedProducts.Remove(product);
+                    _SelectedProducts.Remove(pvd);
                     this.gcSelectedProducts.RefreshDataSource();
                 }
             }
+        }
+        private void CalculateProductTotals()
+        {
+            double patientTotal = 0;
+            double companyTotal = 0;
+
+            foreach (PatientVisitDetail pvd in SelectedProducts)
+            {
+                patientTotal += (pvd.PatientPrice * pvd.ADET) * (1 + pvd.KDV / 100);
+                companyTotal += (pvd.CompanyPrice * pvd.ADET) * (1 + pvd.KDV / 100);
+            }
+
+            this.tePatientTotal.EditValue = patientTotal;
+            this.teCompanyTotal.EditValue = companyTotal;
+        }
+
+        private void sbSelect_Click(object sender, EventArgs e)
+        {
+            _IsSelected = true;
+            this.Close();
         }
     }
 }

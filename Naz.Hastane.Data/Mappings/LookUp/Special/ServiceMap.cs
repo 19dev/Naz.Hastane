@@ -22,12 +22,12 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
 
             HasMany(x => x.SGKAutoExaminations)
                 .KeyColumn("SERVISKODU")
-                .Inverse()
-                .Not.LazyLoad();
+                .Inverse();
+                //.Not.LazyLoad();
             HasMany(x => x.SGKAutoExaminationSameDays)
                 .KeyColumn("SERVISKODU")
-                .Inverse()
-                .Not.LazyLoad();
+                .Inverse();
+                //.Not.LazyLoad();
         }
     }
 }

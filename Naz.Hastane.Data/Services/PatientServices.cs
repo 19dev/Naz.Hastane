@@ -222,7 +222,7 @@ namespace Naz.Hastane.Data.Services
             PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
             if (IsSGKSameDay(patient))
-                foreach (var sae in doctor.Service.SGKAutoExaminationSameDays)
+                foreach (var sae in LookUpServices.GetSGKAutoExaminationSameDays(doctor.Service))
                 {
                     if (IsAutoExamItemValid(patient, sae))
                     {
@@ -230,7 +230,7 @@ namespace Naz.Hastane.Data.Services
                     }
                 }
             else
-                foreach (var sae in doctor.Service.SGKAutoExaminations)
+                foreach (var sae in LookUpServices.GetSGKAutoExaminations(doctor.Service))
                 {
                     if (IsAutoExamItemValid(patient, sae))
                     {
@@ -337,35 +337,14 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                PatientVisitDetail pvd = new PatientVisitDetail();
+                PatientVisitDetail pvd = GetNewPatientVisitDetailFromProduct(pv, product);
 
                 pvd.PatientVisit  = pv;
                 pvd.DetailNo      = GetNewPatientVisitDetailNo(session, pv);
-                pvd.TARIH         = DateTime.Now;
-                pvd.TANIM         = product.TANIM;
-                pvd.GRUP          = product.GRUP;
-                pvd.CODE          = product.CODE;
-                pvd.NAME1         = product.NAME1;
-                pvd.KDV           = product.KDV;
-                pvd.ADET          = 1;
                 pvd.PatientPrice        = product.GetPatientPrice(patient.InsuranceCompany.YFIYLIST);
                 pvd.CompanyPrice       = product.GetCompanyPrice(patient.InsuranceCompany.YFIYLIST);
-                pvd.PSG           = pv.PSG;
-                pvd.Doctor        = pv.Doctor;
-                pvd.Doctor2       = pv.Doctor;
-                pvd.HZLNO         = pv.HZLNO;
                 pvd.USER_ID       = user.USER_ID;
                 pvd.DATE_CREATE   = DateTime.Now;
-                pvd.FATURAEDILSIN = "E";
-                pvd.KABUL         = "0";
-                pvd.ISDURUM       = "0";
-                pvd.HODENDI       = "0";
-                pvd.HYATISTARIHI  = pvd.DATE_CREATE;
-                pvd.HCIKISTARIHI  = pvd.DATE_CREATE;
-                pvd.MEDSIRANO     = "";
-                pvd.MEDONAY       = "0";
-                pvd.TG            = 1;
-                pvd.MEDANOMALI    = "0";
 
                 pv.AddPatientVisitDetail(pvd);
                 session.Save(pvd);
@@ -374,6 +353,60 @@ namespace Naz.Hastane.Data.Services
             }
 
         }
+
+        public static void AddPatientVisitDetails(ISession session, User user, Patient patient, PatientVisit pv, IList<PatientVisitDetail> pvds)
+        {
+            //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                foreach (PatientVisitDetail pvd in pvds)
+                {
+                    pvd.PatientVisit = pv;
+                    pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
+                    pvd.USER_ID = user.USER_ID;
+                    pvd.DATE_CREATE = DateTime.Now;
+
+                    pv.AddPatientVisitDetail(pvd);
+                    session.Save(pvd);
+                }
+                transaction.Commit();
+                UpdatePatientVisitFromDetails(session, user, pv);
+                return;
+            }
+
+        }
+        public static PatientVisitDetail GetNewPatientVisitDetailFromProduct(PatientVisit pv, Product product)
+        {
+            PatientVisitDetail pvd = new PatientVisitDetail();
+
+            pvd.TARIH = DateTime.Now;
+            pvd.TANIM = product.TANIM;
+            pvd.GRUP = product.GRUP;
+            pvd.CODE = product.CODE;
+            pvd.NAME1 = product.NAME1;
+            pvd.KDV = product.KDV;
+            pvd.ADET = 1;
+            pvd.PatientPrice = product.PatientPrice;
+            pvd.CompanyPrice = product.CompanyPrice;
+            pvd.PSG = pv.PSG;
+            pvd.Doctor = pv.Doctor;
+            pvd.Doctor2 = pv.Doctor;
+            pvd.HZLNO = pv.HZLNO;
+            pvd.DATE_CREATE = DateTime.Now;
+            pvd.FATURAEDILSIN = "E";
+            pvd.KABUL = "0";
+            pvd.ISDURUM = "0";
+            pvd.HODENDI = "0";
+            pvd.HYATISTARIHI = pvd.DATE_CREATE;
+            pvd.HCIKISTARIHI = pvd.DATE_CREATE;
+            pvd.MEDSIRANO = "";
+            pvd.MEDONAY = "0";
+            pvd.TG = 1;
+            pvd.MEDANOMALI = "0";
+
+            return pvd;
+        }
+
         public static void UpdatePatientVisitFromDetails(ISession session, User user, PatientVisit pv)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())

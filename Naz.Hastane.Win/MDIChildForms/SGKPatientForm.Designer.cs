@@ -48,7 +48,7 @@
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.sbDeletePatientVisitDetail = new DevExpress.XtraEditors.SimpleButton();
-            this.sbIslemler = new DevExpress.XtraEditors.SimpleButton();
+            this.sbAddPatientVisitDetail = new DevExpress.XtraEditors.SimpleButton();
             this.sbSavePatient = new DevExpress.XtraEditors.SimpleButton();
             this.sbAra = new DevExpress.XtraEditors.SimpleButton();
             this.teEmail = new DevExpress.XtraEditors.TextEdit();
@@ -157,7 +157,7 @@
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAra = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSavePatient = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciIslemler = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddPatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHastaFatura = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciClose = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -293,7 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciIslemler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -340,7 +340,7 @@
             this.layoutControl1.Controls.Add(this.sbClose);
             this.layoutControl1.Controls.Add(this.sbInvoice);
             this.layoutControl1.Controls.Add(this.sbDeletePatientVisitDetail);
-            this.layoutControl1.Controls.Add(this.sbIslemler);
+            this.layoutControl1.Controls.Add(this.sbAddPatientVisitDetail);
             this.layoutControl1.Controls.Add(this.sbSavePatient);
             this.layoutControl1.Controls.Add(this.sbAra);
             this.layoutControl1.Controls.Add(this.teEmail);
@@ -587,15 +587,15 @@
             this.sbDeletePatientVisitDetail.Text = "İşlem Kartı Sil";
             this.sbDeletePatientVisitDetail.Click += new System.EventHandler(this.sbDeletePatientVisitDetail_Click);
             // 
-            // sbIslemler
+            // sbAddPatientVisitDetail
             // 
-            this.sbIslemler.Location = new System.Drawing.Point(822, 167);
-            this.sbIslemler.Name = "sbIslemler";
-            this.sbIslemler.Size = new System.Drawing.Size(95, 22);
-            this.sbIslemler.StyleController = this.layoutControl1;
-            this.sbIslemler.TabIndex = 68;
-            this.sbIslemler.Text = "İşlem Ekle";
-            this.sbIslemler.Click += new System.EventHandler(this.sbIslemler_Click);
+            this.sbAddPatientVisitDetail.Location = new System.Drawing.Point(822, 167);
+            this.sbAddPatientVisitDetail.Name = "sbAddPatientVisitDetail";
+            this.sbAddPatientVisitDetail.Size = new System.Drawing.Size(95, 22);
+            this.sbAddPatientVisitDetail.StyleController = this.layoutControl1;
+            this.sbAddPatientVisitDetail.TabIndex = 68;
+            this.sbAddPatientVisitDetail.Text = "İşlem Ekle";
+            this.sbAddPatientVisitDetail.Click += new System.EventHandler(this.sbAddPatientVisitDetail_Click);
             // 
             // sbSavePatient
             // 
@@ -1767,7 +1767,7 @@
             this.lcgSagTuslar.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciAra,
             this.lciSavePatient,
-            this.lciIslemler,
+            this.lciAddPatientVisitDetail,
             this.lciHastaFatura,
             this.lciClose,
             this.emptySpaceItem3,
@@ -1812,17 +1812,17 @@
             this.lciSavePatient.TextToControlDistance = 0;
             this.lciSavePatient.TextVisible = false;
             // 
-            // lciIslemler
+            // lciAddPatientVisitDetail
             // 
-            this.lciIslemler.Control = this.sbIslemler;
-            this.lciIslemler.CustomizationFormText = "İşlemler";
-            this.lciIslemler.Location = new System.Drawing.Point(0, 150);
-            this.lciIslemler.Name = "lciIslemler";
-            this.lciIslemler.Size = new System.Drawing.Size(99, 26);
-            this.lciIslemler.Text = "İşlemler";
-            this.lciIslemler.TextSize = new System.Drawing.Size(0, 0);
-            this.lciIslemler.TextToControlDistance = 0;
-            this.lciIslemler.TextVisible = false;
+            this.lciAddPatientVisitDetail.Control = this.sbAddPatientVisitDetail;
+            this.lciAddPatientVisitDetail.CustomizationFormText = "İşlemler";
+            this.lciAddPatientVisitDetail.Location = new System.Drawing.Point(0, 150);
+            this.lciAddPatientVisitDetail.Name = "lciAddPatientVisitDetail";
+            this.lciAddPatientVisitDetail.Size = new System.Drawing.Size(99, 26);
+            this.lciAddPatientVisitDetail.Text = "İşlemler";
+            this.lciAddPatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddPatientVisitDetail.TextToControlDistance = 0;
+            this.lciAddPatientVisitDetail.TextVisible = false;
             // 
             // lciHastaFatura
             // 
@@ -2219,7 +2219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciIslemler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -2276,7 +2276,7 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit3;
         private DevExpress.XtraEditors.SimpleButton sbClose;
         private DevExpress.XtraEditors.SimpleButton sbInvoice;
-        private DevExpress.XtraEditors.SimpleButton sbIslemler;
+        private DevExpress.XtraEditors.SimpleButton sbAddPatientVisitDetail;
         private DevExpress.XtraEditors.SimpleButton sbSavePatient;
         private DevExpress.XtraEditors.SimpleButton sbAra;
         private DevExpress.XtraEditors.TextEdit teEmail;
@@ -2338,7 +2338,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciAra;
         private DevExpress.XtraLayout.LayoutControlItem lciPoliklinik;
         private DevExpress.XtraLayout.LayoutControlItem lciSavePatient;
-        private DevExpress.XtraLayout.LayoutControlItem lciIslemler;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddPatientVisitDetail;
         private DevExpress.XtraLayout.LayoutControlItem lciHastaFatura;
         private DevExpress.XtraLayout.LayoutControlItem lciClose;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;

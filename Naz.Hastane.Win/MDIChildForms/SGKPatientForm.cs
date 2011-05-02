@@ -270,7 +270,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (currentPatientVisit != null)
             {
-                _Doctor = currentPatientVisit.Doctor;
+                //_Doctor = currentPatientVisit.Doctor;
                 CallMedulaProvision();
             }
         }
@@ -559,13 +559,21 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.Close();
         }
 
-        private void sbIslemler_Click(object sender, EventArgs e)
+        private void sbAddPatientVisitDetail_Click(object sender, EventArgs e)
         {
-            if (_Patient != null && _Patient.InsuranceCompany != null)
+            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (_Patient != null && _Patient.InsuranceCompany != null && currentPatientVisit != null)
             {
                 SelectFunctionForm frm = new SelectFunctionForm();
+                frm.PatientVisit = currentPatientVisit;
                 frm.PriceListCode = _Patient.InsuranceCompany.YFIYLIST;
                 frm.ShowDialog();
+
+                if (frm.IsSelected)
+                {
+                    PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, _Patient, currentPatientVisit, frm.SelectedProducts);
+                    RefreshGrid();
+                }
             }
 
         }
