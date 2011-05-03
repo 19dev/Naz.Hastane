@@ -165,7 +165,7 @@
             this.colVisitDetailAmount.FieldName = "ADET";
             this.colVisitDetailAmount.Name = "colVisitDetailAmount";
             this.colVisitDetailAmount.Visible = true;
-            this.colVisitDetailAmount.VisibleIndex = 6;
+            this.colVisitDetailAmount.VisibleIndex = 7;
             // 
             // colSATISF
             // 
@@ -173,7 +173,7 @@
             this.colSATISF.FieldName = "SATISF";
             this.colSATISF.Name = "colSATISF";
             this.colSATISF.Visible = true;
-            this.colSATISF.VisibleIndex = 7;
+            this.colSATISF.VisibleIndex = 8;
             // 
             // colKSATISF
             // 
@@ -181,7 +181,7 @@
             this.colKSATISF.FieldName = "KSATISF";
             this.colKSATISF.Name = "colKSATISF";
             this.colKSATISF.Visible = true;
-            this.colKSATISF.VisibleIndex = 8;
+            this.colKSATISF.VisibleIndex = 9;
             // 
             // colVisitDetailDoctor
             // 
@@ -189,7 +189,7 @@
             this.colVisitDetailDoctor.FieldName = "DoctorName";
             this.colVisitDetailDoctor.Name = "colVisitDetailDoctor";
             this.colVisitDetailDoctor.Visible = true;
-            this.colVisitDetailDoctor.VisibleIndex = 9;
+            this.colVisitDetailDoctor.VisibleIndex = 6;
             // 
             // colVisitDetailDoctor2
             // 
@@ -403,7 +403,7 @@
             this.colInvoiceNo.FieldName = "InvoiceNo";
             this.colInvoiceNo.Name = "colInvoiceNo";
             this.colInvoiceNo.Visible = true;
-            this.colInvoiceNo.VisibleIndex = 5;
+            this.colInvoiceNo.VisibleIndex = 6;
             // 
             // colInvoiceDate
             // 
@@ -411,7 +411,7 @@
             this.colInvoiceDate.FieldName = "InvoiceDate";
             this.colInvoiceDate.Name = "colInvoiceDate";
             this.colInvoiceDate.Visible = true;
-            this.colInvoiceDate.VisibleIndex = 6;
+            this.colInvoiceDate.VisibleIndex = 7;
             // 
             // colVisitType
             // 
@@ -419,7 +419,7 @@
             this.colVisitType.FieldName = "VisitType";
             this.colVisitType.Name = "colVisitType";
             this.colVisitType.Visible = true;
-            this.colVisitType.VisibleIndex = 7;
+            this.colVisitType.VisibleIndex = 8;
             // 
             // colPatientAppNo
             // 
@@ -427,7 +427,7 @@
             this.colPatientAppNo.FieldName = "HASTABASNO";
             this.colPatientAppNo.Name = "colPatientAppNo";
             this.colPatientAppNo.Visible = true;
-            this.colPatientAppNo.VisibleIndex = 8;
+            this.colPatientAppNo.VisibleIndex = 9;
             // 
             // colTakipNo
             // 
@@ -435,7 +435,7 @@
             this.colTakipNo.FieldName = "TAKIPNO";
             this.colTakipNo.Name = "colTakipNo";
             this.colTakipNo.Visible = true;
-            this.colTakipNo.VisibleIndex = 9;
+            this.colTakipNo.VisibleIndex = 10;
             // 
             // colIMPF2
             // 
@@ -443,7 +443,7 @@
             this.colIMPF2.FieldName = "IMPF2";
             this.colIMPF2.Name = "colIMPF2";
             this.colIMPF2.Visible = true;
-            this.colIMPF2.VisibleIndex = 13;
+            this.colIMPF2.VisibleIndex = 14;
             // 
             // colKar_No
             // 
@@ -458,7 +458,7 @@
             this.colSevkTarihi.Caption = "Sevk Tarihi";
             this.colSevkTarihi.Name = "colSevkTarihi";
             this.colSevkTarihi.Visible = true;
-            this.colSevkTarihi.VisibleIndex = 11;
+            this.colSevkTarihi.VisibleIndex = 12;
             // 
             // colProvisionNo
             // 
@@ -466,7 +466,7 @@
             this.colProvisionNo.FieldName = "ProvisionNo";
             this.colProvisionNo.Name = "colProvisionNo";
             this.colProvisionNo.Visible = true;
-            this.colProvisionNo.VisibleIndex = 12;
+            this.colProvisionNo.VisibleIndex = 13;
             // 
             // colTakipTuru
             // 
@@ -474,14 +474,14 @@
             this.colTakipTuru.FieldName = "TAKIPTURU";
             this.colTakipTuru.Name = "colTakipTuru";
             this.colTakipTuru.Visible = true;
-            this.colTakipTuru.VisibleIndex = 14;
+            this.colTakipTuru.VisibleIndex = 15;
             // 
             // colTakipDurumu
             // 
             this.colTakipDurumu.Caption = "Takip Durumu";
             this.colTakipDurumu.Name = "colTakipDurumu";
             this.colTakipDurumu.Visible = true;
-            this.colTakipDurumu.VisibleIndex = 15;
+            this.colTakipDurumu.VisibleIndex = 16;
             // 
             // colIliskiliTakipNo
             // 
@@ -489,7 +489,7 @@
             this.colIliskiliTakipNo.FieldName = "ILISKILITAKIPNO";
             this.colIliskiliTakipNo.Name = "colIliskiliTakipNo";
             this.colIliskiliTakipNo.Visible = true;
-            this.colIliskiliTakipNo.VisibleIndex = 10;
+            this.colIliskiliTakipNo.VisibleIndex = 11;
             // 
             // colDoctor
             // 
@@ -497,7 +497,7 @@
             this.colDoctor.FieldName = "DoctorName";
             this.colDoctor.Name = "colDoctor";
             this.colDoctor.Visible = true;
-            this.colDoctor.VisibleIndex = 16;
+            this.colDoctor.VisibleIndex = 5;
             // 
             // layoutControl1
             // 

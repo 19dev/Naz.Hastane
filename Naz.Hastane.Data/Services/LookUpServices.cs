@@ -227,6 +227,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<Doctor> Doctors
         { get { return LookUpTable(ref _Doctors); } }
 
+        private static IList<InsuranceCompany> _InsuranceCompanys;
+        public static IList<InsuranceCompany> InsuranceCompanys
+        { get { return LookUpTable(ref _InsuranceCompanys); } }
+
         private static IList<FunctionGroup> _FunctionGroups;
         public static IList<FunctionGroup> FunctionGroups
         { get { return LookUpTable(ref _FunctionGroups); } }
@@ -322,6 +326,18 @@ namespace Naz.Hastane.Data.Services
         {
             return session.Get<InsuranceCompany>(InsuranceCompany.SGKCode);
         }
+        public static InsuranceCompany GetSGKAcil(ISession session)
+        {
+            return session.Get<InsuranceCompany>(InsuranceCompany.SGKAcilCode);
+        }
+        public static InsuranceCompany GetNormalPatientCode(ISession session)
+        {
+            return session.Get<InsuranceCompany>(InsuranceCompany.NormalPatientCode);
+        }
+        public static InsuranceCompany GetSpecialPatientCode(ISession session)
+        {
+            return session.Get<InsuranceCompany>(InsuranceCompany.SpecialPatientCode);
+        }
 
         private static IList<Doctor> _SGKDoctors;
         public static IList<Doctor> SGKDoctors
@@ -333,7 +349,9 @@ namespace Naz.Hastane.Data.Services
                     using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
                     {
                         _SGKDoctors = (from doctor in session.Query<Doctor>()
-                                       where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic && doctor.Service.SGKAutoExaminations.Count > 0
+                                       where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic 
+                                           && doctor.Service.SGKAutoExaminations.Count > 0
+                                           && doctor.OnLeave == 0
                                        join service in session.Query<Service>() on doctor.Service.Code equals service.Code
                                        join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
                                        join product in session.Query<Product>() on sae.Product equals product

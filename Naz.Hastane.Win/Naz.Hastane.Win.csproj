@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -279,6 +279,12 @@
     <Compile Include="MDIChildForms\DBTestForm.Designer.cs">
       <DependentUpon>DBTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.Designer.cs">
+      <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\MedulaDiabetReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,12 @@
     </Compile>
     <Compile Include="MDIChildForms\SelectFunctionForm.Designer.cs">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.Designer.cs">
+      <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\SGKFindPatientForm.cs">
       <SubType>Form</SubType>
@@ -415,6 +427,9 @@
     <EmbeddedResource Include="MDIChildForms\DBTestForm.resx">
       <DependentUpon>DBTestForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\ChangeInsuranceCompanyForm.resx">
+      <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\MedulaDiabetReportForm.resx">
       <DependentUpon>MedulaDiabetReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectFunctionForm.resx">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\SelectInsuranceCompanyForm.resx">
+      <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
       <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>

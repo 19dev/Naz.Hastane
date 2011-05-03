@@ -251,7 +251,7 @@ namespace Naz.Hastane.Data.Services
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
         {
-            if (patient.InsuranceCompany.Name == InsuranceCompany.SGKCode)
+            if (patient.InsuranceCompany.Code == InsuranceCompany.SGKCode)
             {
                 if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
                 // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
@@ -291,7 +291,7 @@ namespace Naz.Hastane.Data.Services
                 pv.USER_ID = user.USER_ID;
                 pv.SupportInsCompany = "";
                 pv.DATE_CREATE = DateTime.Now;
-                pv.PSG = patient.InsuranceCompany.Name;
+                pv.PSG = patient.InsuranceCompany.Code;
                 pv.ExitTime = "";
                 pv.SEVKTAKIPNO = "";
                 pv.TAKIPSEND = "9";
@@ -970,6 +970,73 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static IList<PatientVisit> GetPatientVisitsForInsuranceCompanyChange(ISession session, Patient patient)
+        {
+            IList<PatientVisit> result = (from pv in session.Query<PatientVisit>()
+                                     where pv.Patient == patient
+                                        && pv.IMPF2 == null && pv.ExitDate == null && pv.TAKIPSEND == "9"
+                                     orderby pv.VisitNo descending
+                                     select pv
+                                    )
+                                    .ToList<PatientVisit>();
+            return result;
+        }
+
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInsuranceCompanyChange(ISession session, IList<PatientVisit> pvs)
+        {
+            if (pvs.Count == 0)
+                return new List<PatientVisitDetail>();
+
+            IList<string> pvIDs = (from pv in pvs
+                                   select pv.VisitNo)
+                                    .ToList<string>();
+
+            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                        where
+                                            pvd.PatientVisit.Patient == pvs[0].Patient
+                                            && pvIDs.Contains(pvd.PatientVisit.VisitNo)
+                                        join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
+                                        orderby pvd.TARIH
+                                        select pvd
+                                        )
+                                    .ToList<PatientVisitDetail>();
+            foreach (PatientVisitDetail pvd in result)
+            { }
+
+            return result;
+        }
+
+        public static void ChangeInsuranceCompany(ISession session, IList<PatientVisit> pvs)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+
+        }
+        
+        //'select H.SNR, H.AKOD, H.TANIM, H.GRUP, H.CODE, H.TARIH, H.NAME1, H.ADET, H.SATISF, H.KSATISF, H.MAKNO, H.SIRANO, B.AMBU 
+        //from HIZIL H, BEHAND B 
+        //where H.KNR=B.KNR and H.SNR=B.SNR and H.KNR=''870366'' AND h.SNR in (''993'') and B.IMPF2 is NULL and B.CIKTAR is null  
+        //AND B.TAKIPSEND=''9'' order by H.TARIH'
+
+        //select isnull(sum(ESATISF),0) as ESKISATISF, isnull(sum(YSATISF),0) as YENISATISF from HASTAINDIRIMLER_DETAY 
+        //    where KNR='870366' and SNR='993' and SIRANO=1
+
+        //select KNR, PFIYLIST, YFIYLIST,  ILACODE, SARFODE, HASTAKATILIM from KURADR where PSG='SGK'
+
+        //select SATISF93 As SATISF, KSATISF93 As KSATISF from HIZMET where TANIM='00' and GRUP='011' and CODE='1700'
+
+        //'SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR=''01035'' AND TANIM=''00'' AND GRUP=''011''
     }
 
 }

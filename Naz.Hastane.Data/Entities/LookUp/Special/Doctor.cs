@@ -11,8 +11,11 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
         public virtual float QueueNo { get; set; } // SLX Günlük Doktor SıraNo  => BEHAND.SERNO
         [Description("Doktor Lisans No")]
         public virtual string LicenseNo { get; set; } // SLVV Length 100
+        /// <summary>
+        /// SLY
+        /// </summary>
         [Description("İzinli")]
-        public virtual float SLY { get; set; } // SLY 0:Çalışan, 1:İzinli
+        public virtual float OnLeave { get; set; } // SLY 0:Çalışan, 1:İzinli
 
         //Map(x => x.Value).Column("SLZ"); // float
         //Map(x => x.Value).Column("SLYY").Length(100); Çalışma Günleri

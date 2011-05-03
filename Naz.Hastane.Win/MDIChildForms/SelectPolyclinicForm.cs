@@ -17,7 +17,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         public SelectPolyclinicForm()
         {
             InitializeComponent();
-            this.AcceptButton = this.sbSelect;
+            //this.AcceptButton = this.sbSelect;
 
             var doctors = LookUpServices.SGKDoctors;
             gcView.DataSource = doctors;

@@ -8,10 +8,19 @@ namespace Naz.Hastane.Data.Entities
     public class InsuranceCompany
     {
         public static readonly string SGKCode = "SGK";
-        public virtual string Name { get; set; } // PSG; length(6); 0
+        public static readonly string SGKAcilCode = "SLK";
+        public static readonly string NormalPatientCode = "KRM000";
+        public static readonly string SpecialPatientCode = "KRM008";
+        /// <summary>
+        /// PSG
+        /// </summary>
+        public virtual string Code { get; set; } // PSG; length(6); 0
+        /// <summary>
+        /// ADI1
+        /// </summary>
+        public virtual string Name { get; set; } // ADI1; length(200); 0
 
         public virtual string ACILKATILIM { get; set; } // ACILKATILIM; length(1); 0
-        public virtual string ADI1 { get; set; } // ADI1; length(200); 0
         public virtual string ADRZUS { get; set; } // ADRZUS; length(200); 1
         public virtual double ALACAK { get; set; } // ALACAK; length(8); 0
         public virtual char ANLASMADURUMU { get; set; } // ANLASMADURUMU; length(1); 0

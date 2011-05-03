@@ -75,7 +75,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.tePatientNo.DataBindings.Add("EditValue", _Patient, "PatientNo");
             //this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany.Name");
             if (this._Patient.InsuranceCompany != null)
-                this.teInsuranceCompany.Text = this._Patient.InsuranceCompany.Name;
+                this.teInsuranceCompany.Text = this._Patient.InsuranceCompany.Code;
 
             this.teTCID.DataBindings.Add("EditValue", _Patient, "TCId");
             this.teFirstName.DataBindings.Add("EditValue", _Patient, "FirstName");
@@ -408,8 +408,10 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void RefreshGrid()
         {
+            this.PatientVisitControl.gvPatientVisit.BeginDataUpdate();
             this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
-            this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
+            //this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
+            this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
         }
 
         private void gvPatientVisitDetail_Click(object sender, EventArgs e)
@@ -576,6 +578,39 @@ namespace Naz.Hastane.Win.MDIChildForms
                 }
             }
 
+        }
+
+        private void ddbChangeSecurityCompany_Click(object sender, EventArgs e)
+        {
+            SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm();
+            frm.ShowDialog();
+            if (frm.IsSelected)
+                ChangeInsuranceCompany(frm.InsuranceCompany);
+        }
+
+        private void iSGK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSGK(Session));
+        }
+
+        private void iSGKAcil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSGKAcil(Session));
+        }
+
+        private void iNormal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetNormalPatientCode(Session));
+        }
+
+        private void iOzelHasta_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSpecialPatientCode(Session));
+        }
+
+        private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
+        {
+            if (_Patient.InsuranceCompany == newInsuranceCompany) return;
         }
     }
 }

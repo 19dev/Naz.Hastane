@@ -10,10 +10,10 @@ namespace Naz.Hastane.Data.Mappings
         {
             Table("KURADR");
 
-            Id(x => x.Name).Column("PSG").Length(6);
+            Id(x => x.Code).Column("PSG").Length(6);
 
             Map(x => x.ACILKATILIM).Column("ACILKATILIM").Length(1); //0
-            Map(x => x.ADI1).Column("ADI1").Length(200); //0
+            Map(x => x.Name).Column("ADI1").Length(200); //0
             Map(x => x.ADRZUS).Column("ADRZUS").Length(200); //1
             Map(x => x.ALACAK).Column("ALACAK").Length(8); //0
             Map(x => x.ANLASMADURUMU).Column("ANLASMADURUMU").Length(1); //0

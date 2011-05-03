@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ddbChangeSecurityCompany = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.iSGK = new DevExpress.XtraBars.BarButtonItem();
+            this.iSGKAcil = new DevExpress.XtraBars.BarButtonItem();
+            this.iNormal = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzelHasta = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.PatientVisitControl = new Naz.Hastane.Win.Controls.PatientVisitControl();
             this.medulaFollowUpQueryControl = new Naz.Hastane.Win.Controls.MedulaFollowUpQueryControl();
             this.sbTaahutname = new DevExpress.XtraEditors.SimpleButton();
@@ -178,11 +190,15 @@
             this.lciDeletePatientVisit = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDetayDok = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDeletePatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teVoucherNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teInvoiceNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
@@ -314,6 +330,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -321,6 +339,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ddbChangeSecurityCompany);
             this.layoutControl1.Controls.Add(this.PatientVisitControl);
             this.layoutControl1.Controls.Add(this.medulaFollowUpQueryControl);
             this.layoutControl1.Controls.Add(this.sbTaahutname);
@@ -364,11 +383,11 @@
             this.layoutControl1.Controls.Add(this.teOfficer);
             this.layoutControl1.Controls.Add(this.teTCID);
             this.layoutControl1.Controls.Add(this.lueNationality);
-            this.layoutControl1.Controls.Add(this.teHomePostCode);
             this.layoutControl1.Controls.Add(this.lueHomeCity);
             this.layoutControl1.Controls.Add(this.teHomePhone2);
             this.layoutControl1.Controls.Add(this.teHomePhone1);
             this.layoutControl1.Controls.Add(this.deIDDate);
+            this.layoutControl1.Controls.Add(this.teHomePostCode);
             this.layoutControl1.Controls.Add(this.teIDPlace);
             this.layoutControl1.Controls.Add(this.teIDNO);
             this.layoutControl1.Controls.Add(this.rgSex);
@@ -397,6 +416,100 @@
             this.layoutControl1.Size = new System.Drawing.Size(934, 690);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // ddbChangeSecurityCompany
+            // 
+            this.ddbChangeSecurityCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ddbChangeSecurityCompany.DropDownControl = this.popupMenu1;
+            this.ddbChangeSecurityCompany.Location = new System.Drawing.Point(187, 658);
+            this.ddbChangeSecurityCompany.MaximumSize = new System.Drawing.Size(110, 0);
+            this.ddbChangeSecurityCompany.Name = "ddbChangeSecurityCompany";
+            this.ddbChangeSecurityCompany.Size = new System.Drawing.Size(104, 22);
+            this.ddbChangeSecurityCompany.StyleController = this.layoutControl1;
+            this.ddbChangeSecurityCompany.TabIndex = 120;
+            this.ddbChangeSecurityCompany.Text = "Kurum Değiştir";
+            this.ddbChangeSecurityCompany.Click += new System.EventHandler(this.ddbChangeSecurityCompany_Click);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.iSGK),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iSGKAcil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iNormal),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iOzelHasta)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // iSGK
+            // 
+            this.iSGK.Caption = "SGK";
+            this.iSGK.Id = 0;
+            this.iSGK.Name = "iSGK";
+            this.iSGK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGK_ItemClick);
+            // 
+            // iSGKAcil
+            // 
+            this.iSGKAcil.Caption = "SGK Acil";
+            this.iSGKAcil.Id = 1;
+            this.iSGKAcil.Name = "iSGKAcil";
+            this.iSGKAcil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGKAcil_ItemClick);
+            // 
+            // iNormal
+            // 
+            this.iNormal.Caption = "KRM000 - Normal";
+            this.iNormal.Id = 2;
+            this.iNormal.Name = "iNormal";
+            this.iNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNormal_ItemClick);
+            // 
+            // iOzelHasta
+            // 
+            this.iOzelHasta.Caption = "KRM008 - Özel Hasta";
+            this.iOzelHasta.Id = 3;
+            this.iOzelHasta.Name = "iOzelHasta";
+            this.iOzelHasta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzelHasta_ItemClick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.iSGK,
+            this.iSGKAcil,
+            this.iNormal,
+            this.iOzelHasta});
+            this.barManager1.MaxItemId = 4;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(934, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 690);
+            this.barDockControlBottom.Size = new System.Drawing.Size(934, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 690);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(934, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 690);
             // 
             // PatientVisitControl
             // 
@@ -488,7 +601,7 @@
             // sbDetayDok
             // 
             this.sbDetayDok.AutoWidthInLayoutControl = true;
-            this.sbDetayDok.Location = new System.Drawing.Point(188, 658);
+            this.sbDetayDok.Location = new System.Drawing.Point(562, 658);
             this.sbDetayDok.Name = "sbDetayDok";
             this.sbDetayDok.Size = new System.Drawing.Size(61, 22);
             this.sbDetayDok.StyleController = this.layoutControl1;
@@ -500,8 +613,9 @@
             // 
             this.sbDeletePatientVisit.AutoWidthInLayoutControl = true;
             this.sbDeletePatientVisit.Location = new System.Drawing.Point(10, 658);
+            this.sbDeletePatientVisit.MaximumSize = new System.Drawing.Size(100, 0);
             this.sbDeletePatientVisit.Name = "sbDeletePatientVisit";
-            this.sbDeletePatientVisit.Size = new System.Drawing.Size(83, 22);
+            this.sbDeletePatientVisit.Size = new System.Drawing.Size(86, 22);
             this.sbDeletePatientVisit.StyleController = this.layoutControl1;
             this.sbDeletePatientVisit.TabIndex = 106;
             this.sbDeletePatientVisit.Text = "Ziyaret Kartı Sil";
@@ -510,7 +624,7 @@
             // sbBelgeBas
             // 
             this.sbBelgeBas.AutoWidthInLayoutControl = true;
-            this.sbBelgeBas.Location = new System.Drawing.Point(265, 658);
+            this.sbBelgeBas.Location = new System.Drawing.Point(627, 658);
             this.sbBelgeBas.Name = "sbBelgeBas";
             this.sbBelgeBas.Size = new System.Drawing.Size(80, 22);
             this.sbBelgeBas.StyleController = this.layoutControl1;
@@ -529,7 +643,7 @@
             // sbKurumCarisineIsle
             // 
             this.sbKurumCarisineIsle.AutoWidthInLayoutControl = true;
-            this.sbKurumCarisineIsle.Location = new System.Drawing.Point(371, 658);
+            this.sbKurumCarisineIsle.Location = new System.Drawing.Point(711, 658);
             this.sbKurumCarisineIsle.Name = "sbKurumCarisineIsle";
             this.sbKurumCarisineIsle.Size = new System.Drawing.Size(102, 22);
             this.sbKurumCarisineIsle.StyleController = this.layoutControl1;
@@ -540,7 +654,7 @@
             // sbKurumCaridenSil
             // 
             this.sbKurumCaridenSil.AutoWidthInLayoutControl = true;
-            this.sbKurumCaridenSil.Location = new System.Drawing.Point(496, 658);
+            this.sbKurumCaridenSil.Location = new System.Drawing.Point(817, 658);
             this.sbKurumCaridenSil.Name = "sbKurumCaridenSil";
             this.sbKurumCaridenSil.Size = new System.Drawing.Size(94, 22);
             this.sbKurumCaridenSil.StyleController = this.layoutControl1;
@@ -580,8 +694,9 @@
             // 
             this.sbDeletePatientVisitDetail.AutoWidthInLayoutControl = true;
             this.sbDeletePatientVisitDetail.Location = new System.Drawing.Point(100, 658);
+            this.sbDeletePatientVisitDetail.MaximumSize = new System.Drawing.Size(80, 0);
             this.sbDeletePatientVisitDetail.Name = "sbDeletePatientVisitDetail";
-            this.sbDeletePatientVisitDetail.Size = new System.Drawing.Size(74, 22);
+            this.sbDeletePatientVisitDetail.Size = new System.Drawing.Size(80, 22);
             this.sbDeletePatientVisitDetail.StyleController = this.layoutControl1;
             this.sbDeletePatientVisitDetail.TabIndex = 103;
             this.sbDeletePatientVisitDetail.Text = "İşlem Kartı Sil";
@@ -1975,7 +2090,9 @@
             this.lciBelgeBas,
             this.lciDeletePatientVisit,
             this.lciDetayDok,
-            this.lciDeletePatientVisitDetail});
+            this.lciDeletePatientVisitDetail,
+            this.layoutControlItem6,
+            this.emptySpaceItem1});
             this.lcgAltTuslar.Location = new System.Drawing.Point(0, 648);
             this.lcgAltTuslar.Name = "lcgAltTuslar";
             this.lcgAltTuslar.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -1987,9 +2104,9 @@
             // 
             this.lciKurumCarisineIsle.Control = this.sbKurumCarisineIsle;
             this.lciKurumCarisineIsle.CustomizationFormText = "Kurum Carisine İşle";
-            this.lciKurumCarisineIsle.Location = new System.Drawing.Point(361, 0);
+            this.lciKurumCarisineIsle.Location = new System.Drawing.Point(701, 0);
             this.lciKurumCarisineIsle.Name = "lciKurumCarisineIsle";
-            this.lciKurumCarisineIsle.Size = new System.Drawing.Size(125, 26);
+            this.lciKurumCarisineIsle.Size = new System.Drawing.Size(106, 26);
             this.lciKurumCarisineIsle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lciKurumCarisineIsle.Text = "Kurum Carisine İşle";
             this.lciKurumCarisineIsle.TextSize = new System.Drawing.Size(0, 0);
@@ -2001,9 +2118,9 @@
             // 
             this.lciKurumCaridenSil.Control = this.sbKurumCaridenSil;
             this.lciKurumCaridenSil.CustomizationFormText = "Kurum Cariden Sil";
-            this.lciKurumCaridenSil.Location = new System.Drawing.Point(486, 0);
+            this.lciKurumCaridenSil.Location = new System.Drawing.Point(807, 0);
             this.lciKurumCaridenSil.Name = "lciKurumCaridenSil";
-            this.lciKurumCaridenSil.Size = new System.Drawing.Size(432, 26);
+            this.lciKurumCaridenSil.Size = new System.Drawing.Size(111, 26);
             this.lciKurumCaridenSil.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lciKurumCaridenSil.Text = "Kurum Cariden Sil";
             this.lciKurumCaridenSil.TextSize = new System.Drawing.Size(0, 0);
@@ -2015,9 +2132,9 @@
             // 
             this.lciBelgeBas.Control = this.sbBelgeBas;
             this.lciBelgeBas.CustomizationFormText = "Belge Bas";
-            this.lciBelgeBas.Location = new System.Drawing.Point(255, 0);
+            this.lciBelgeBas.Location = new System.Drawing.Point(617, 0);
             this.lciBelgeBas.Name = "lciBelgeBas";
-            this.lciBelgeBas.Size = new System.Drawing.Size(106, 26);
+            this.lciBelgeBas.Size = new System.Drawing.Size(84, 26);
             this.lciBelgeBas.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lciBelgeBas.Text = "Belge Bas";
             this.lciBelgeBas.TextSize = new System.Drawing.Size(0, 0);
@@ -2042,9 +2159,9 @@
             // 
             this.lciDetayDok.Control = this.sbDetayDok;
             this.lciDetayDok.CustomizationFormText = "Detay Dök";
-            this.lciDetayDok.Location = new System.Drawing.Point(178, 0);
+            this.lciDetayDok.Location = new System.Drawing.Point(552, 0);
             this.lciDetayDok.Name = "lciDetayDok";
-            this.lciDetayDok.Size = new System.Drawing.Size(77, 26);
+            this.lciDetayDok.Size = new System.Drawing.Size(65, 26);
             this.lciDetayDok.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lciDetayDok.Text = "Detay Dök";
             this.lciDetayDok.TextSize = new System.Drawing.Size(0, 0);
@@ -2058,12 +2175,33 @@
             this.lciDeletePatientVisitDetail.CustomizationFormText = "İşlem Kartı Sil";
             this.lciDeletePatientVisitDetail.Location = new System.Drawing.Point(90, 0);
             this.lciDeletePatientVisitDetail.Name = "lciDeletePatientVisitDetail";
-            this.lciDeletePatientVisitDetail.Size = new System.Drawing.Size(88, 26);
+            this.lciDeletePatientVisitDetail.Size = new System.Drawing.Size(87, 26);
             this.lciDeletePatientVisitDetail.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lciDeletePatientVisitDetail.Text = "İşlem Kartı Sil";
             this.lciDeletePatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
             this.lciDeletePatientVisitDetail.TextToControlDistance = 0;
             this.lciDeletePatientVisitDetail.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(285, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(267, 26);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.ddbChangeSecurityCompany;
+            this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
+            this.layoutControlItem6.Location = new System.Drawing.Point(177, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(108, 26);
+            this.layoutControlItem6.Text = "layoutControlItem6";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextToControlDistance = 0;
+            this.layoutControlItem6.TextVisible = false;
             // 
             // lciPatientVisitControl
             // 
@@ -2103,12 +2241,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 690);
             this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
             this.Name = "SGKPatientForm";
             this.Text = "HastaIslemleri";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SGKPatientForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teVoucherNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teInvoiceNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
@@ -2240,6 +2384,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -2402,5 +2548,18 @@
         private DevExpress.XtraLayout.LayoutControlItem lciHomePhone1;
         private Controls.PatientVisitControl PatientVisitControl;
         private DevExpress.XtraLayout.LayoutControlItem lciPatientVisitControl;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.DropDownButton ddbChangeSecurityCompany;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem iSGK;
+        private DevExpress.XtraBars.BarButtonItem iSGKAcil;
+        private DevExpress.XtraBars.BarButtonItem iNormal;
+        private DevExpress.XtraBars.BarButtonItem iOzelHasta;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
