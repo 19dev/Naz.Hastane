@@ -34,14 +34,17 @@ namespace Naz.Hastane.Win
         //    lue.Properties.ValueMember = valueMember;
         //    lue.Properties.DataSource = dataSourceList;
         //}
-        public static void BindLookUpEdit<T>(LookUpEdit lue, IList<T> dataSourceList) where T : new()
+        public static void BindLookUpEdit<T>(LookUpEdit lue, IList<T> dataSourceList,
+            string displayMember = "Value", string valueMember = "Code") where T : new()
         {
             lue.Properties.Columns.Clear();
-            lue.Properties.DisplayMember = "Value";
-            lue.Properties.ValueMember = "Code";
+            lue.Properties.DisplayMember = displayMember;
+            lue.Properties.ValueMember = valueMember;
             lue.Properties.Columns.Add(new LookUpColumnInfo("Code", 10, "Kod"));
             lue.Properties.Columns.Add(new LookUpColumnInfo("Value", 30, typeof(T).GetDescription()));
             lue.Properties.DataSource = dataSourceList;
+            //if (dataSourceList.Count > 0)
+            //    lue.ItemIndex = 0;
         }
         
         public static void BindLookUpEditAllColumns<T>(LookUpEdit lue, IList<T> dataSourceList) where T : new()

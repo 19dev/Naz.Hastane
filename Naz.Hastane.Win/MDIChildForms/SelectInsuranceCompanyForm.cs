@@ -17,7 +17,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         public SelectInsuranceCompanyForm()
         {
             InitializeComponent();
-            //this.AcceptButton = this.sbSelect;
 
             var InsuranceCompanys = LookUpServices.InsuranceCompanys;
             gcGrid.DataSource = InsuranceCompanys;
@@ -48,6 +47,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbClose_Click(object sender, EventArgs e)
         {
+            _IsSelected = false;
             this.Close();
         }
     }

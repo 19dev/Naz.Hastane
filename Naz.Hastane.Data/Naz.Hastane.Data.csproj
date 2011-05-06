@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\PatientVisitDetailWithProduct.cs" />
     <Compile Include="Entities\Accounting\AdvancePayment.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentRebate.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentUsed.cs" />

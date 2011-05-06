@@ -452,6 +452,17 @@ namespace Naz.Hastane.Data.Services
             return products;
         }
 
+        public static Product GetProduct(ISession session, string tanim, string grup, string code, string priceList)
+        {
+            Product product = (from p in session.Query<Product>()
+                        where p.TANIM == tanim && p.GRUP == grup && p.CODE == code
+                        select p
+                            )
+                            .SingleOrDefault<Product>();
+            product.SetPriceList(priceList);
+            return product;
+        }
+
         #endregion
 
         public static IList<SGKAutoExamination> SGKAutoExaminations(string servisCode)
@@ -580,10 +591,12 @@ namespace Naz.Hastane.Data.Services
 
         public static float GetNewDoctorQueueNo(ISession asession, Doctor doctor)
         {
+            Doctor d;
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                // Get No QueueNo for the Doctor, If new date reset the number
+                d = session.Get<Doctor>(doctor.Code);
+
                 SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
                                     where systemSetting.ID0 == "00" && systemSetting.Code == "TARİH"
                                     select systemSetting
@@ -593,15 +606,14 @@ namespace Naz.Hastane.Data.Services
                 if (today != ss.Value)
                 {
                     ss.Value = today;
-                    doctor.QueueNo = 0;
+                    d.QueueNo = 0;
                     session.Update(ss);
                 }
-                doctor.QueueNo += 1;
-                session.Update(doctor);
-
+                d.QueueNo += 1;
+                session.Update(d);
                 transaction.Commit();
             }
-            return doctor.QueueNo;
+            return d.QueueNo;
         }
 
         public static string GetNewInvoiceNo(bool updateDB = true)

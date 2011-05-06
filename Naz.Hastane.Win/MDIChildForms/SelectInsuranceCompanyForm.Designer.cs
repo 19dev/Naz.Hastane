@@ -64,15 +64,15 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(696, 481);
+            this.layoutControl1.Size = new System.Drawing.Size(498, 483);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(521, 287);
+            this.sbClose.Location = new System.Drawing.Point(420, 288);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(163, 22);
+            this.sbClose.Size = new System.Drawing.Size(66, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 7;
             this.sbClose.Text = "Kapat";
@@ -83,7 +83,7 @@
             this.gcGrid.Location = new System.Drawing.Point(12, 12);
             this.gcGrid.MainView = this.gvView;
             this.gcGrid.Name = "gcGrid";
-            this.gcGrid.Size = new System.Drawing.Size(505, 457);
+            this.gcGrid.Size = new System.Drawing.Size(404, 459);
             this.gcGrid.TabIndex = 4;
             this.gcGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvView});
@@ -97,6 +97,7 @@
             this.gvView.Name = "gvView";
             this.gvView.OptionsBehavior.Editable = false;
             this.gvView.OptionsFind.AlwaysVisible = true;
+            this.gvView.OptionsView.ColumnAutoWidth = false;
             this.gvView.OptionsView.ShowGroupPanel = false;
             this.gvView.DoubleClick += new System.EventHandler(this.gvPolyclinics_DoubleClick);
             // 
@@ -106,7 +107,8 @@
             this.colCode.FieldName = "Name";
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 1;
+            this.colCode.VisibleIndex = 0;
+            this.colCode.Width = 73;
             // 
             // colName
             // 
@@ -114,13 +116,14 @@
             this.colName.FieldName = "Code";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
+            this.colName.VisibleIndex = 1;
+            this.colName.Width = 274;
             // 
             // sbSelect
             // 
-            this.sbSelect.Location = new System.Drawing.Point(521, 70);
+            this.sbSelect.Location = new System.Drawing.Point(420, 70);
             this.sbSelect.Name = "sbSelect";
-            this.sbSelect.Size = new System.Drawing.Size(163, 22);
+            this.sbSelect.Size = new System.Drawing.Size(66, 22);
             this.sbSelect.StyleController = this.layoutControl1;
             this.sbSelect.TabIndex = 6;
             this.sbSelect.Text = "Seç";
@@ -140,7 +143,7 @@
             this.emptySpaceItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(696, 481);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(498, 483);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -150,7 +153,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(509, 461);
+            this.layoutControlItem1.Size = new System.Drawing.Size(408, 463);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -160,9 +163,9 @@
             // 
             this.layoutControlItem3.Control = this.sbSelect;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(509, 58);
+            this.layoutControlItem3.Location = new System.Drawing.Point(408, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(167, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(70, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -172,9 +175,9 @@
             // 
             this.layoutControlItem4.Control = this.sbClose;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(509, 275);
+            this.layoutControlItem4.Location = new System.Drawing.Point(408, 276);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(167, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(70, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
@@ -183,27 +186,27 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(509, 84);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(408, 84);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(167, 191);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(70, 192);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(509, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(408, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(167, 58);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(70, 58);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(509, 301);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(408, 302);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(167, 160);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(70, 161);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -211,10 +214,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 481);
+            this.ClientSize = new System.Drawing.Size(498, 483);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SelectInsuranceCompanyForm";
-            this.Text = "SGK Poliklinik Seçim Formu";
+            this.Text = "Kurum Seçim Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcGrid)).EndInit();

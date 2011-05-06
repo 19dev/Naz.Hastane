@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.ddbChangeSecurityCompany = new DevExpress.XtraEditors.DropDownButton();
+            this.ddbChangeInsuranceCompany = new DevExpress.XtraEditors.DropDownButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iSGK = new DevExpress.XtraBars.BarButtonItem();
             this.iSGKAcil = new DevExpress.XtraBars.BarButtonItem();
@@ -84,11 +84,11 @@
             this.teOfficer = new DevExpress.XtraEditors.TextEdit();
             this.teTCID = new DevExpress.XtraEditors.TextEdit();
             this.lueNationality = new DevExpress.XtraEditors.LookUpEdit();
-            this.teHomePostCode = new DevExpress.XtraEditors.TextEdit();
             this.lueHomeCity = new DevExpress.XtraEditors.LookUpEdit();
             this.teHomePhone2 = new DevExpress.XtraEditors.TextEdit();
             this.teHomePhone1 = new DevExpress.XtraEditors.TextEdit();
             this.deIDDate = new DevExpress.XtraEditors.DateEdit();
+            this.teHomePostCode = new DevExpress.XtraEditors.TextEdit();
             this.teIDPlace = new DevExpress.XtraEditors.TextEdit();
             this.teIDNO = new DevExpress.XtraEditors.TextEdit();
             this.rgSex = new DevExpress.XtraEditors.RadioGroup();
@@ -190,8 +190,8 @@
             this.lciDeletePatientVisit = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDetayDok = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDeletePatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciChangeInsuranceCompany = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
@@ -222,12 +222,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teOfficer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deIDDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deIDDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teIDPlace.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teIDNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).BeginInit();
@@ -330,8 +330,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -339,7 +339,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.ddbChangeSecurityCompany);
+            this.layoutControl1.Controls.Add(this.ddbChangeInsuranceCompany);
             this.layoutControl1.Controls.Add(this.PatientVisitControl);
             this.layoutControl1.Controls.Add(this.medulaFollowUpQueryControl);
             this.layoutControl1.Controls.Add(this.sbTaahutname);
@@ -417,19 +417,18 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // ddbChangeSecurityCompany
+            // ddbChangeInsuranceCompany
             // 
-            this.ddbChangeSecurityCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ddbChangeInsuranceCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ddbChangeSecurityCompany.DropDownControl = this.popupMenu1;
-            this.ddbChangeSecurityCompany.Location = new System.Drawing.Point(187, 658);
-            this.ddbChangeSecurityCompany.MaximumSize = new System.Drawing.Size(110, 0);
-            this.ddbChangeSecurityCompany.Name = "ddbChangeSecurityCompany";
-            this.ddbChangeSecurityCompany.Size = new System.Drawing.Size(104, 22);
-            this.ddbChangeSecurityCompany.StyleController = this.layoutControl1;
-            this.ddbChangeSecurityCompany.TabIndex = 120;
-            this.ddbChangeSecurityCompany.Text = "Kurum Değiştir";
-            this.ddbChangeSecurityCompany.Click += new System.EventHandler(this.ddbChangeSecurityCompany_Click);
+            this.ddbChangeInsuranceCompany.DropDownControl = this.popupMenu1;
+            this.ddbChangeInsuranceCompany.Location = new System.Drawing.Point(187, 658);
+            this.ddbChangeInsuranceCompany.MaximumSize = new System.Drawing.Size(110, 0);
+            this.ddbChangeInsuranceCompany.Name = "ddbChangeInsuranceCompany";
+            this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(104, 22);
+            this.ddbChangeInsuranceCompany.StyleController = this.layoutControl1;
+            this.ddbChangeInsuranceCompany.TabIndex = 120;
+            this.ddbChangeInsuranceCompany.Text = "Kurum Değiştir";
             // 
             // popupMenu1
             // 
@@ -918,14 +917,6 @@
             this.lueNationality.StyleController = this.layoutControl1;
             this.lueNationality.TabIndex = 31;
             // 
-            // teHomePostCode
-            // 
-            this.teHomePostCode.Location = new System.Drawing.Point(354, 349);
-            this.teHomePostCode.Name = "teHomePostCode";
-            this.teHomePostCode.Size = new System.Drawing.Size(182, 20);
-            this.teHomePostCode.StyleController = this.layoutControl1;
-            this.teHomePostCode.TabIndex = 30;
-            // 
             // lueHomeCity
             // 
             this.lueHomeCity.Location = new System.Drawing.Point(354, 373);
@@ -969,6 +960,14 @@
             this.deIDDate.Size = new System.Drawing.Size(182, 20);
             this.deIDDate.StyleController = this.layoutControl1;
             this.deIDDate.TabIndex = 22;
+            // 
+            // teHomePostCode
+            // 
+            this.teHomePostCode.Location = new System.Drawing.Point(354, 349);
+            this.teHomePostCode.Name = "teHomePostCode";
+            this.teHomePostCode.Size = new System.Drawing.Size(182, 20);
+            this.teHomePostCode.StyleController = this.layoutControl1;
+            this.teHomePostCode.TabIndex = 30;
             // 
             // teIDPlace
             // 
@@ -2091,7 +2090,7 @@
             this.lciDeletePatientVisit,
             this.lciDetayDok,
             this.lciDeletePatientVisitDetail,
-            this.layoutControlItem6,
+            this.lciChangeInsuranceCompany,
             this.emptySpaceItem1});
             this.lcgAltTuslar.Location = new System.Drawing.Point(0, 648);
             this.lcgAltTuslar.Name = "lcgAltTuslar";
@@ -2182,6 +2181,19 @@
             this.lciDeletePatientVisitDetail.TextToControlDistance = 0;
             this.lciDeletePatientVisitDetail.TextVisible = false;
             // 
+            // lciChangeInsuranceCompany
+            // 
+            this.lciChangeInsuranceCompany.Control = this.ddbChangeInsuranceCompany;
+            this.lciChangeInsuranceCompany.CustomizationFormText = "layoutControlItem6";
+            this.lciChangeInsuranceCompany.Location = new System.Drawing.Point(177, 0);
+            this.lciChangeInsuranceCompany.Name = "lciChangeInsuranceCompany";
+            this.lciChangeInsuranceCompany.Size = new System.Drawing.Size(108, 26);
+            this.lciChangeInsuranceCompany.Text = "lciChangeInsuranceCompany";
+            this.lciChangeInsuranceCompany.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangeInsuranceCompany.TextToControlDistance = 0;
+            this.lciChangeInsuranceCompany.TextVisible = false;
+            this.lciChangeInsuranceCompany.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
+            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
@@ -2190,18 +2202,6 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(267, 26);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.ddbChangeSecurityCompany;
-            this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(177, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(108, 26);
-            this.layoutControlItem6.Text = "layoutControlItem6";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextToControlDistance = 0;
-            this.layoutControlItem6.TextVisible = false;
             // 
             // lciPatientVisitControl
             // 
@@ -2276,12 +2276,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teOfficer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deIDDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deIDDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teHomePostCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teIDPlace.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teIDNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).EndInit();
@@ -2384,8 +2384,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -2549,7 +2549,7 @@
         private Controls.PatientVisitControl PatientVisitControl;
         private DevExpress.XtraLayout.LayoutControlItem lciPatientVisitControl;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraEditors.DropDownButton ddbChangeSecurityCompany;
+        private DevExpress.XtraEditors.DropDownButton ddbChangeInsuranceCompany;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem iSGK;
         private DevExpress.XtraBars.BarButtonItem iSGKAcil;
@@ -2560,6 +2560,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem lciChangeInsuranceCompany;
     }
 }

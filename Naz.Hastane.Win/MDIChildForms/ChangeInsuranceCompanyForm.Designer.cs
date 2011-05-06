@@ -46,6 +46,10 @@
             this.colDetailComment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailPatientTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDetailCompanyTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNewPatientTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNewCompanyTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiscount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.sbSave = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -196,15 +200,20 @@
             this.colDetailDate,
             this.colDetailComment,
             this.colDetailCount,
-            this.colDetailPatientTotal});
+            this.colDetailPatientTotal,
+            this.colDetailCompanyTotal,
+            this.colNewPatientTotal,
+            this.colNewCompanyTotal,
+            this.colDiscount});
             this.gvPatientVisitDetails.GridControl = this.gcPatientVisitDetails;
             this.gvPatientVisitDetails.Name = "gvPatientVisitDetails";
+            this.gvPatientVisitDetails.OptionsView.ColumnAutoWidth = false;
             this.gvPatientVisitDetails.OptionsView.ShowGroupPanel = false;
             // 
             // colPatientVisitDetailVisitNo
             // 
             this.colPatientVisitDetailVisitNo.Caption = "Kart No";
-            this.colPatientVisitDetailVisitNo.FieldName = "PatientVisit.VisitNo";
+            this.colPatientVisitDetailVisitNo.FieldName = "PatientVisitDetail.PatientVisit.VisitNo";
             this.colPatientVisitDetailVisitNo.Name = "colPatientVisitDetailVisitNo";
             this.colPatientVisitDetailVisitNo.Visible = true;
             this.colPatientVisitDetailVisitNo.VisibleIndex = 0;
@@ -212,7 +221,7 @@
             // colDetailNo
             // 
             this.colDetailNo.Caption = "İşlem No";
-            this.colDetailNo.FieldName = "DetailNo";
+            this.colDetailNo.FieldName = "PatientVisitDetail.DetailNo";
             this.colDetailNo.Name = "colDetailNo";
             this.colDetailNo.OptionsColumn.AllowEdit = false;
             this.colDetailNo.Visible = true;
@@ -221,7 +230,7 @@
             // colDetailDate
             // 
             this.colDetailDate.Caption = "İşlem Tarihi";
-            this.colDetailDate.FieldName = "TARIH";
+            this.colDetailDate.FieldName = "PatientVisitDetail.TARIH";
             this.colDetailDate.Name = "colDetailDate";
             this.colDetailDate.OptionsColumn.AllowEdit = false;
             this.colDetailDate.Visible = true;
@@ -230,7 +239,7 @@
             // colDetailComment
             // 
             this.colDetailComment.Caption = "Açıklama";
-            this.colDetailComment.FieldName = "NAME1";
+            this.colDetailComment.FieldName = "PatientVisitDetail.NAME1";
             this.colDetailComment.Name = "colDetailComment";
             this.colDetailComment.OptionsColumn.AllowEdit = false;
             this.colDetailComment.Visible = true;
@@ -239,7 +248,7 @@
             // colDetailCount
             // 
             this.colDetailCount.Caption = "Adet";
-            this.colDetailCount.FieldName = "ADET";
+            this.colDetailCount.FieldName = "PatientVisitDetail.ADET";
             this.colDetailCount.Name = "colDetailCount";
             this.colDetailCount.OptionsColumn.AllowEdit = false;
             this.colDetailCount.Visible = true;
@@ -250,11 +259,43 @@
             this.colDetailPatientTotal.Caption = "Hasta Tutarı";
             this.colDetailPatientTotal.DisplayFormat.FormatString = "{0:#,##0.00}";
             this.colDetailPatientTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colDetailPatientTotal.FieldName = "SATISF";
+            this.colDetailPatientTotal.FieldName = "PatientVisitDetail.SATISF";
             this.colDetailPatientTotal.Name = "colDetailPatientTotal";
             this.colDetailPatientTotal.OptionsColumn.AllowEdit = false;
             this.colDetailPatientTotal.Visible = true;
             this.colDetailPatientTotal.VisibleIndex = 5;
+            // 
+            // colDetailCompanyTotal
+            // 
+            this.colDetailCompanyTotal.Caption = "Kurum Fiyatı";
+            this.colDetailCompanyTotal.FieldName = "PatientVisitDetail.KSATISF";
+            this.colDetailCompanyTotal.Name = "colDetailCompanyTotal";
+            this.colDetailCompanyTotal.Visible = true;
+            this.colDetailCompanyTotal.VisibleIndex = 6;
+            // 
+            // colNewPatientTotal
+            // 
+            this.colNewPatientTotal.Caption = "Yeni Hasta F.";
+            this.colNewPatientTotal.FieldName = "Product.PatientPrice";
+            this.colNewPatientTotal.Name = "colNewPatientTotal";
+            this.colNewPatientTotal.Visible = true;
+            this.colNewPatientTotal.VisibleIndex = 7;
+            // 
+            // colNewCompanyTotal
+            // 
+            this.colNewCompanyTotal.Caption = "Yeni Kurum F.";
+            this.colNewCompanyTotal.FieldName = "Product.CompanyPrice";
+            this.colNewCompanyTotal.Name = "colNewCompanyTotal";
+            this.colNewCompanyTotal.Visible = true;
+            this.colNewCompanyTotal.VisibleIndex = 8;
+            // 
+            // colDiscount
+            // 
+            this.colDiscount.Caption = "İndirim";
+            this.colDiscount.FieldName = "Discount";
+            this.colDiscount.Name = "colDiscount";
+            this.colDiscount.Visible = true;
+            this.colDiscount.VisibleIndex = 9;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -425,5 +466,9 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
         private DevExpress.XtraEditors.SimpleButton sbSave;
         private DevExpress.XtraLayout.LayoutControlItem lciSave;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetailCompanyTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colNewPatientTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colNewCompanyTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiscount;
     }
 }

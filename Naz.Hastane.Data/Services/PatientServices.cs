@@ -12,6 +12,7 @@ using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Entities.Accounting;
 using Naz.Utilities.Classes;
+using Naz.Hastane.Data.DTO;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -217,7 +218,7 @@ namespace Naz.Hastane.Data.Services
 
             float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
 
-            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor);
+            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, doctorQueueNo);
 
             PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
@@ -269,7 +270,7 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor)
+        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor, float queueNo)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
@@ -283,7 +284,7 @@ namespace Naz.Hastane.Data.Services
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
                 pv.Doctor = doctor;
                 pv.Servis = doctor.Service.Code;
-                pv.QueueNo = String.Format("{0:00000}",doctor.QueueNo);
+                pv.QueueNo = String.Format("{0:00000}",queueNo);
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
                 pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
@@ -982,37 +983,47 @@ namespace Naz.Hastane.Data.Services
             return result;
         }
 
-        public static IList<PatientVisitDetail> GetPatientVisitDetailsForInsuranceCompanyChange(ISession session, IList<PatientVisit> pvs)
+        public static IList<PatientVisitDetailWithProduct> GetPatientVisitDetailsForInsuranceCompanyChange(ISession session, IList<PatientVisit> pvs, string priceListCode)
         {
+            IList<PatientVisitDetailWithProduct> pvdwps = new List<PatientVisitDetailWithProduct>();
             if (pvs.Count == 0)
-                return new List<PatientVisitDetail>();
+                return pvdwps;
 
-            IList<string> pvIDs = (from pv in pvs
-                                   select pv.VisitNo)
-                                    .ToList<string>();
-
-            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
-                                        where
-                                            pvd.PatientVisit.Patient == pvs[0].Patient
-                                            && pvIDs.Contains(pvd.PatientVisit.VisitNo)
-                                        join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
-                                        orderby pvd.TARIH
+            IList<PatientVisitDetail> pvds = (from pv in pvs
+                                              from pvd in pv.PatientVisitDetails
                                         select pvd
                                         )
                                     .ToList<PatientVisitDetail>();
-            foreach (PatientVisitDetail pvd in result)
-            { }
+            foreach (PatientVisitDetail pvd in pvds)
+            {
+                pvdwps.Add(new PatientVisitDetailWithProduct
+                {
+                    PatientVisitDetail = pvd,
+                    Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, priceListCode),
+                    Discount = 0
+                });
+            }
 
-            return result;
+            return pvdwps;
         }
 
-        public static void ChangeInsuranceCompany(ISession session, IList<PatientVisit> pvs)
+        public static void ChangeInsuranceCompany(ISession session, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
                 try
                 {
-
+                    foreach (PatientVisit pv in pvs)
+                    {
+                        pv.PSG = insuranceCompany.Code;
+                        session.Update(pv);
+                    }
+                    foreach (PatientVisitDetailWithProduct pvdwp in pvdwps)
+                    {
+                        pvdwp.PatientVisitDetail.PatientPrice = pvdwp.Product.PatientPrice;
+                        pvdwp.PatientVisitDetail.CompanyPrice = pvdwp.Product.CompanyPrice;
+                        session.Update(pvdwp.PatientVisitDetail);
+                    }
                     transaction.Commit();
                 }
                 catch

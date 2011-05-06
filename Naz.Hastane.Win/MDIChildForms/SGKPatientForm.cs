@@ -56,7 +56,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueBranchCode.EditValue = BranchCode.DefaultValue;
             this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
             this.medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
-            this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DeafultValue;
+            this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
             this.medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
 
             this.medulaFollowUpQueryControl.TCId = _Patient.TCId;
@@ -92,6 +92,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teHomePhone2.DataBindings.Add("EditValue", _Patient, "HomePhone2");
             this.teHomePhone1.DataBindings.Add("EditValue", _Patient, "HomePhone1");
 
+            this.medulaSorgu.lueTransferorInstitution.DataBindings.Add("EditValue", _Patient, "TransferorInstitution");
+            
             this.rgIDType.DataBindings.Add("EditValue", _Patient, "IDType");
             this.teIDNO.DataBindings.Add("EditValue", _Patient, "IDNO");
             this.deIDDate.DataBindings.Add("EditValue", _Patient, "IDDate");
@@ -131,7 +133,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindLookUpEdit(this.lueStatus, LookUpServices.PatientRelations);
             UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
             UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
-            UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities);
+            UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Value" );
             UIUtilities.BindLookUpEdit(this.lueJobCity, LookUpServices.Cities);
         }
 
@@ -261,6 +263,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _Doctor = frm.Doctor;
                 currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, _Doctor);
+                RefreshGrid();
                 CallMedulaProvision();
             }
         }
@@ -268,15 +271,12 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbMedula_Click(object sender, EventArgs e)
         {
             currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
-            if (currentPatientVisit != null)
-            {
-                //_Doctor = currentPatientVisit.Doctor;
-                CallMedulaProvision();
-            }
+            CallMedulaProvision();
         }
 
         private void EnableForMedula(bool enable)
         {
+            _IsWaitingForMedulaProvision = !enable;
             this.sbMernis.Enabled = enable;
             this.sbSavePatient.Enabled = enable;
             this.sbMedula.Enabled = enable;
@@ -288,23 +288,43 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void CallMedulaProvision()
         {
-            if (this._Doctor == null)
+            if (currentPatientVisit == null)
+            {
+                XtraMessageBox.Show("Lütfen Bir Ziytaret Kartı Seçiniz!", "Medula İşlemleri");
                 return;
+            }
+            if (!String.IsNullOrWhiteSpace(this.currentPatientVisit.TAKIPNO))
+            {
+                XtraMessageBox.Show("Seçili Kart İçin Provizyon Alınmış!", "Medula İşlemleri");
+                return;
+            }
+            _Doctor = currentPatientVisit.Doctor;
+            if (this._Doctor == null)
+            {
+                XtraMessageBox.Show("Seçili Kartta Geçerli Doktor Tanımı Yok!", "Medula İşlemleri");
+                return;
+            }
             if (_IsWaitingForMedulaProvision)
             {
-                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Poliklinik İşlemleri");
-                // Should cancel the previous request?
+                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Medula İşlemleri");
+                return;
             }
-            else
+            string TCID = this.teTCID.Text;
+            if (!PatientServices.IsValidTCID(TCID))
             {
-                _IsWaitingForMedulaProvision = true;
-                EnableForMedula(false);
+                XtraMessageBox.Show("T.C. Kimlik No Geçerli Değil!", "Medula İşlemleri");
+                return;
+            }
 
-                this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+            EnableForMedula(false);
+
+            this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+            
+            if (String.IsNullOrWhiteSpace(this.medulaSorgu.teRelatedFollowUpNo.Text))
                 this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
 
-                this.medulaSorgu.CallMedula(this.teTCID.Text);
-            }
+            this.medulaSorgu.CallMedula(this.teTCID.Text);
+
         }
 
         private string GetRelatedFollowUpNo()
@@ -322,20 +342,25 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
-            EnableForMedula(true);
-            _IsWaitingForMedulaProvision = false;
-
-            if (this.medulaSorgu.IsOK)
+            try
             {
-                XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
-                if (e.Result.SonucKodu == "0000")
+                if (this.medulaSorgu.IsOK)
                 {
-                    if (currentPatientVisit != null)
+                    XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
+                    if (e.Result.SonucKodu == "0000")
                     {
-                        PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, e.Result);
-                        RefreshGrid();
+                        if (currentPatientVisit != null)
+                        {
+                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, e.Result);
+                            RefreshGrid();
+                        }
                     }
                 }
+
+            }
+            finally
+            {
+                EnableForMedula(true);
             }
         }
         #endregion
@@ -580,7 +605,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
-        private void ddbChangeSecurityCompany_Click(object sender, EventArgs e)
+        private void ddbChangeInsuranceCompany_Click(object sender, EventArgs e)
         {
             SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm();
             frm.ShowDialog();
@@ -611,6 +636,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
         {
             if (_Patient.InsuranceCompany == newInsuranceCompany) return;
+            ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm();
+            frm.ShowDialog();
+            if (frm.IsOK)
+            { }
+
         }
     }
 }

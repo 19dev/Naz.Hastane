@@ -170,7 +170,7 @@
             // colSATISF
             // 
             this.colSATISF.Caption = "Hasta Fiyatı";
-            this.colSATISF.FieldName = "SATISF";
+            this.colSATISF.FieldName = "PatientPrice";
             this.colSATISF.Name = "colSATISF";
             this.colSATISF.Visible = true;
             this.colSATISF.VisibleIndex = 8;
@@ -178,7 +178,7 @@
             // colKSATISF
             // 
             this.colKSATISF.Caption = "Kurum Fiyatı";
-            this.colKSATISF.FieldName = "KSATISF";
+            this.colKSATISF.FieldName = "CompanyPrice";
             this.colKSATISF.Name = "colKSATISF";
             this.colKSATISF.Visible = true;
             this.colKSATISF.VisibleIndex = 9;

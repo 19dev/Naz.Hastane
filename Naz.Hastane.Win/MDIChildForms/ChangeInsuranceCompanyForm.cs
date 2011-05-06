@@ -4,6 +4,7 @@ using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Win.Utilities;
 using NHibernate;
+using Naz.Hastane.Data.DTO;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -17,7 +18,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         public bool IsOK { get { return _IsOK; } }
 
         private IList<PatientVisit> _PatientVisits = new List<PatientVisit>();
-        private IList<PatientVisitDetail> _PatientVisitDetails = new List<PatientVisitDetail>();
+        private IList<PatientVisitDetailWithProduct> _PatientVisitDetails = new List<PatientVisitDetailWithProduct>();
 
         private GridCheckMarksSelectionWeb selectionVisit;
 
@@ -31,28 +32,33 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
-        public void QueryPatientVisits(ISession session, Patient patient, InsuranceCompany insuranceCompany)
+        public ChangeInsuranceCompanyForm(ISession session, Patient patient, InsuranceCompany insuranceCompany) :this()
         {
             _Session = session;
             _Patient = patient;
             _InsuranceCompany = insuranceCompany;
+            QueryPatientVisits();
+        }
 
+        private void QueryPatientVisits()
+        {
             selectionVisit.ClearSelection();
-            _PatientVisits = PatientServices.GetPatientVisitsForInsuranceCompanyChange(session, patient);
+            _PatientVisits = PatientServices.GetPatientVisitsForInsuranceCompanyChange(_Session, _Patient);
             this.gcPatientVisits.DataSource = _PatientVisits;
         }
 
         public void QueryPatientVisitDetails()
         {
+            if (_InsuranceCompany == null) return;
             gvPatientVisitDetails.BeginDataUpdate();
             try
             {
-                _PatientVisitDetails = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits());
+                _PatientVisitDetails = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
                 this.gcPatientVisitDetails.DataSource = _PatientVisitDetails;
 
                 gvPatientVisitDetails.ClearSorting();
-                gvPatientVisitDetails.Columns["PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
-                gvPatientVisitDetails.Columns["DetailNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                gvPatientVisitDetails.Columns["PatientVisitDetail.PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+                gvPatientVisitDetails.Columns["PatientVisitDetail.DetailNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             }
             finally
             {
@@ -79,8 +85,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbSave_Click(object sender, EventArgs e)
         {
-
             _IsOK = true;
+            PatientServices.ChangeInsuranceCompany(_Session, GetSelectedVisits(), _PatientVisitDetails, _InsuranceCompany);
             this.Close();
         }
 

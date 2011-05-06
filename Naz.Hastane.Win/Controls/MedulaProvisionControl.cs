@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Medula.HastaKabulIslemleri;
 using System.Windows.Forms;
+using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -50,6 +51,15 @@ namespace Naz.Hastane.Win.Controls
             UIUtilities.BindLookUpEdit(this.lueTransferorInstitution, LookUpServices.TransferorInstitutions);
             UIUtilities.BindLookUpEdit(this.lueTreatmentStyle, LookUpServices.TreatmentStyles);
             UIUtilities.BindLookUpEdit(this.lueTreatmentType, LookUpServices.TreatmentTypes);
+
+            this.lueBranchCode.ItemIndex = -1;
+            this.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
+            this.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
+            this.lueProvisionType.EditValue = ProvisionType.DefaultValue;
+            this.lueRelationType.EditValue = RelationType.DefaultValue;
+            this.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
+            this.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
+            this.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
         }
 
         public void CallMedula(string TCID)
