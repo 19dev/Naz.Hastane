@@ -157,7 +157,7 @@ namespace Naz.Hastane.Data.Services
 
             //patient.InsuranceCompany = ""; //PSG SGK: SGK
             patient.ProtocolNo = ""; //PROTNO
-            patient.PatientContribution = 'F'; //HASTAKATILIM SGK 'T'
+            patient.PatientContribution = 'F'; //HASTAKATILIM SGK 'T' !!! Yanlış
             patient.PatientLimit = 0.0; //HASTALIMIT
             patient.InsuranceType = ""; //SIGORTATURU SGK 1
             patient.TransferorInstitution = ""; //DEVREDILENKURUM
@@ -197,7 +197,7 @@ namespace Naz.Hastane.Data.Services
         {
             Patient patient = CreateNewPatient();
             patient.InsuranceCompany = LookUpServices.GetSGK(session);
-            patient.PatientContribution = 'T';
+            patient.PatientContribution = 'F';
             patient.InsuranceType = "1";
             patient.TransferorInstitution = "1";
 
