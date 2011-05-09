@@ -29,6 +29,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private PatientVisitDetail voucherPVD = null;
         private PatientVisitDetail invoicePVD = null;
         private PatientVisitDetail currentPVD = null;
+        private string _OldProvisionCode;
 
         private SGKPatientForm()
         {
@@ -355,6 +356,18 @@ namespace Naz.Hastane.Win.MDIChildForms
                             RefreshGrid();
                         }
                     }
+                    else if (e.Result.SonucKodu == "1163")
+                    {
+                        string oldProvision = Helpers.GetSubString(e.Result.SonucMesaji, "[", "]");
+
+                        if (!String.IsNullOrWhiteSpace(oldProvision))
+                        {
+                            _OldProvisionCode = oldProvision;
+                            timerHastaKabulOku.Interval = 400;
+                            timerHastaKabulOku.Enabled = true;
+                        }
+
+                    }
                 }
 
             }
@@ -363,6 +376,53 @@ namespace Naz.Hastane.Win.MDIChildForms
                 EnableForMedula(true);
             }
         }
+
+        private void medulaFollowUpQueryControl_OnHastaKabulOkuCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulOkuCompletedEventArgs e)
+        {
+            try
+            {
+                if (this.medulaFollowUpQueryControl.IsOK)
+                {
+                    if (e.Result.sonucKodu == "0000")
+                    {
+                        if (currentPatientVisit != null)
+                        {
+                            MedulaProvisionResult mpr = new MedulaProvisionResult();
+                            mpr.BranchCode = e.Result.bransKodu;
+                            mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
+                            mpr.Ad = e.Result.hastaBilgileri.ad;
+                            mpr.Cinsiyet = e.Result.hastaBilgileri.cinsiyet;
+                            mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
+                            mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
+                            mpr.Soyad = e.Result.hastaBilgileri.soyad;
+                            mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
+                            mpr.RelatedFollowUpNo = e.Result.ilkTakipNo;
+                            //mpr.BranchCode                      = e.Result.kayitTarihi;
+                            mpr.ProvisionType = e.Result.provizyonTipi;
+                            //mpr.BranchCode                      = e.Result.sevkDurumu;
+                            mpr.SonucKodu = e.Result.sonucKodu;
+                            mpr.SonucMesaji = e.Result.sonucMesaji;
+                            //mpr.BranchCode                      = e.Result.takipDurumu;
+                            mpr.TakipNo = e.Result.takipNo;
+                            //mpr.BranchCode                      = e.Result.takipTarihi;
+                            mpr.FollowUpType = e.Result.takipTipi;
+                            mpr.TreatmentType = e.Result.tedaviTipi;
+                            //mpr.BranchCode                      = e.Result.tesisKodu;
+                            //mpr.BranchCode                      = e.Result.takipDurumu;
+
+                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, mpr);
+                            RefreshGrid();
+                        }
+                    }
+                }
+
+            }
+            finally
+            {
+                EnableForMedula(true);
+            }
+        }
+
         #endregion
 
         private void sbInvoice_Click(object sender, EventArgs e)
@@ -429,58 +489,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 voucherPVD = null;
                 this.teVoucherNo.Text = "";
             }
-        }
-
-        private void RefreshGrid()
-        {
-            this.PatientVisitControl.gvPatientVisit.BeginDataUpdate();
-            this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
-            //this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
-            this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
-        }
-
-        private void gvPatientVisitDetail_Click(object sender, EventArgs e)
-        {
-            GridView view = sender as GridView;
-            PatientVisitDetail pvd = (PatientVisitDetail)view.GetFocusedRow();
-            if (pvd != null)
-            {
-                currentPVD = pvd;
-                if (pvd.CODE == "SGKKATILIM")
-                {
-                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
-                    {
-                        voucherPVD = pvd;
-                        this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
-                    }
-                    else
-                    {
-                        voucherPVD = null;
-                        this.teVoucherNo.Text = "";
-                    }
-                }
-                else
-                {
-                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
-                    {
-                        invoicePVD = pvd;
-                        this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
-                    }
-                    else
-                    {
-                        invoicePVD = null;
-                        this.teInvoiceNo.Text = "";
-                    }
-                }
-            }
-        }
-
-        private void gvPatientVisit_DoubleClick(object sender, EventArgs e)
-        {
-            GridView view = sender as GridView;
-            if (view.FocusedRowHandle >= 0)
-                view.SetMasterRowExpanded(view.FocusedRowHandle, !view.GetMasterRowExpanded(view.FocusedRowHandle));
-
         }
 
         private void sbTaahutname_Click(object sender, EventArgs e)
@@ -554,6 +562,58 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
+        private void RefreshGrid()
+        {
+            this.PatientVisitControl.gvPatientVisit.BeginDataUpdate();
+            this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
+            //this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
+            this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
+        }
+
+        private void gvPatientVisitDetail_Click(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            PatientVisitDetail pvd = (PatientVisitDetail)view.GetFocusedRow();
+            if (pvd != null)
+            {
+                currentPVD = pvd;
+                if (pvd.CODE == "SGKKATILIM")
+                {
+                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
+                    {
+                        voucherPVD = pvd;
+                        this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+                    }
+                    else
+                    {
+                        voucherPVD = null;
+                        this.teVoucherNo.Text = "";
+                    }
+                }
+                else
+                {
+                    if (String.IsNullOrWhiteSpace(pvd.MAKNO))
+                    {
+                        invoicePVD = pvd;
+                        this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+                    }
+                    else
+                    {
+                        invoicePVD = null;
+                        this.teInvoiceNo.Text = "";
+                    }
+                }
+            }
+        }
+
+        private void gvPatientVisit_DoubleClick(object sender, EventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view.FocusedRowHandle >= 0)
+                view.SetMasterRowExpanded(view.FocusedRowHandle, !view.GetMasterRowExpanded(view.FocusedRowHandle));
+
+        }
+
         private void medulaFollowUpQueryControl_OnHastaKabulIptalCompleted(object sender, Medula.HastaKabulIslemleri.hastaKabulIptalCompletedEventArgs e)
         {
             if (this.medulaFollowUpQueryControl.IsOK)
@@ -605,6 +665,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
+        #region Change Insurance Company
         private void ddbChangeInsuranceCompany_Click(object sender, EventArgs e)
         {
             SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm();
@@ -642,5 +703,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             { }
 
         }
+        #endregion
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timerHastaKabulOku.Enabled = false;
+            EnableForMedula(false);
+            this.medulaFollowUpQueryControl.CallMedulaHastaKabulOku(_OldProvisionCode);
+
+        }
+
     }
 }

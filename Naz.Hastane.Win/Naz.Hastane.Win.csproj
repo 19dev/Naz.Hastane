@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -369,12 +369,6 @@
     <Compile Include="MDIChildForms\PrinterSettingsForm.Designer.cs">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SelectFromLookUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDIChildForms\SelectFromLookUpForm.Designer.cs">
-      <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,9 +435,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SelectFromLookUpForm.resx">
-      <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectFunctionForm.resx">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>

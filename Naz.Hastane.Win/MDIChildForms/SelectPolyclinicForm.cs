@@ -19,7 +19,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitializeComponent();
             //this.AcceptButton = this.sbSelect;
 
-            var doctors = LookUpServices.SGKDoctors;
+            var doctors = LookUpServices.GetSGKDoctors(Session);
             gcView.DataSource = doctors;
             gvPolyclinics.SortInfo.ClearAndAddRange(new GridColumnSortInfo[] { 
               new GridColumnSortInfo(colService, ColumnSortOrder.Ascending), 

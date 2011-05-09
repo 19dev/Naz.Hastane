@@ -141,7 +141,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual char Status { get; set; } //DURUM Cumhur Kapıönü
         public virtual DateTime? KONTROLTAR { get; set; } //KONTROLTAR
         public virtual DateTime? KONTROLT { get; set; } //KONTROLT
-        public virtual char KONTROL { get; set; } //KONTROL Null
+        public virtual char KONTROL { get; set; } //KONTROL Cumhur Kapıönü
 
         public virtual string USER_ID { get; set; } //USER_ID
         public virtual DateTime DATE_CREATE { get; set; } //DATE_CREATE

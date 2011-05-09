@@ -128,7 +128,7 @@ namespace Naz.Hastane.Win.Controls
             else
             {
                 this.lcStatus.Text = "Mernis Sorgusu Yapılamadı!";
-                XtraMessageBox.Show(e.Error.ToString(), "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Mernis Sorgusu Yapılamadı!", "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (RunWorkerCompleted != null)

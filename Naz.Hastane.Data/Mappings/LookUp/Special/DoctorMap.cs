@@ -15,7 +15,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
             Map(x => x.ID0).Column("SLK").Length(2);
             Map(x => x.Value).Column("SLT").Length(150);
 
-            References(x => x.Service).Column("SLXX").Not.LazyLoad();
+            References(x => x.Service).Column("SLXX");
             Map(x => x.OnLeave).Column("SLY");
             Map(x => x.QueueNo).Column("SLX");
             Map(x => x.LicenseNo).Column("SLVV").Length(100);

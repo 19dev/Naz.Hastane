@@ -16,6 +16,7 @@ namespace Naz.Hastane.Win.Controls
     {
         public event System.EventHandler<takipAraCompletedEventArgs> OnTakipAraCompleted;
         public event System.EventHandler<hastaKabulIptalCompletedEventArgs> OnHastaKabulIptalCompleted;
+        public event System.EventHandler<hastaKabulOkuCompletedEventArgs> OnHastaKabulOkuCompleted;
 
         private YardimciIslemlerClient yic;
         private HastaKabulIslemleriClient hki;
@@ -127,6 +128,62 @@ namespace Naz.Hastane.Win.Controls
             }
         }
 
+        public void CallMedulaHastaKabulOku(string takipNo)
+        {
+            if (IsWorking) return;
+            if (String.IsNullOrWhiteSpace(takipNo)) return;
+
+            IsWorking = true;
+
+            hki = new HastaKabulIslemleriClient();
+
+            System.Net.ServicePointManager.Expect100Continue = false;
+
+            hki.ClientCredentials.UserName.UserName = "10343154";
+            hki.ClientCredentials.UserName.Password = "19031903";
+
+            hki.hastaKabulOkuCompleted += new EventHandler<hastaKabulOkuCompletedEventArgs>(HastaKabulOkuCompleted);
+
+            TakipOkuGirisDVO tog = new TakipOkuGirisDVO();
+            tog.takipNo = takipNo;
+            tog.saglikTesisKodu = 10343154;
+
+            this.lblStatus.Text = "Medula Hasta Kabul Okuma Sorgusu Yapılıyor...";
+            IsOK = false;
+
+            hki.hastaKabulOkuAsync(tog);
+
+        }
+
+        void HastaKabulOkuCompleted(Object sender, hastaKabulOkuCompletedEventArgs e)
+        {
+            IsWorking = false;
+            try
+            {
+                this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
+
+                if (e.Result.sonucKodu == "0000")
+                {
+                    IList<Naz.Hastane.Medula.HastaKabulIslemleri.TakipDVO> takipDVOs = new List<Naz.Hastane.Medula.HastaKabulIslemleri.TakipDVO>();
+                    takipDVOs.Add(e.Result);
+                    this.gcResult.DataSource = takipDVOs;
+                }
+                IsOK = true;
+            }
+            catch
+            {
+                this.lblStatus.Text = "Medula Takip Arama Sorgusu Yapılamadı!";
+
+                IsOK = false;
+            }
+            finally
+            {
+                yic = null;
+                if (OnHastaKabulOkuCompleted != null)
+                    OnHastaKabulOkuCompleted(this, e);
+            }
+        }
+
         public void CallMedulaHastaKabulIptal(string takipNo)
         {
             if (IsWorking) return;
@@ -181,7 +238,6 @@ namespace Naz.Hastane.Win.Controls
                     CallMedulaTakipAra();
             }
         }
-
 
         private void LoadLookUps()
         {

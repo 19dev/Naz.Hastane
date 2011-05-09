@@ -111,6 +111,8 @@
             this.teHomeAddress = new DevExpress.XtraEditors.MemoEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tbcHastaBilgileri = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lcimedulaFollowUpQueryControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgHastaBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIDNO = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDDate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -164,8 +166,6 @@
             this.lciEMail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgKurumOzelNot = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciKurumOzelNot = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lcimedulaFollowUpQueryControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAra = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSavePatient = new DevExpress.XtraLayout.LayoutControlItem();
@@ -195,6 +195,7 @@
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -251,6 +252,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).BeginInit();
@@ -304,8 +307,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciEMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgKurumOzelNot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumOzelNot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).BeginInit();
@@ -530,6 +531,7 @@
             this.medulaFollowUpQueryControl.TabIndex = 117;
             this.medulaFollowUpQueryControl.TCId = null;
             this.medulaFollowUpQueryControl.OnHastaKabulIptalCompleted += new System.EventHandler<Naz.Hastane.Medula.HastaKabulIslemleri.hastaKabulIptalCompletedEventArgs>(this.medulaFollowUpQueryControl_OnHastaKabulIptalCompleted);
+            this.medulaFollowUpQueryControl.OnHastaKabulOkuCompleted += new System.EventHandler<Naz.Hastane.Medula.HastaKabulIslemleri.hastaKabulOkuCompletedEventArgs>(this.medulaFollowUpQueryControl_OnHastaKabulOkuCompleted);
             // 
             // sbTaahutname
             // 
@@ -1215,6 +1217,28 @@
             this.layoutControlGroup1});
             this.tbcHastaBilgileri.Text = "Patient Bilgileri";
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "Medula Takip Sorgusu";
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lcimedulaFollowUpQueryControl});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(781, 360);
+            this.layoutControlGroup1.Text = "Medula Takip Sorgusu";
+            // 
+            // lcimedulaFollowUpQueryControl
+            // 
+            this.lcimedulaFollowUpQueryControl.Control = this.medulaFollowUpQueryControl;
+            this.lcimedulaFollowUpQueryControl.CustomizationFormText = "lcimedulaFollowUpQueryControl";
+            this.lcimedulaFollowUpQueryControl.Location = new System.Drawing.Point(0, 0);
+            this.lcimedulaFollowUpQueryControl.Name = "lcimedulaFollowUpQueryControl";
+            this.lcimedulaFollowUpQueryControl.Size = new System.Drawing.Size(781, 360);
+            this.lcimedulaFollowUpQueryControl.Text = "lcimedulaFollowUpQueryControl";
+            this.lcimedulaFollowUpQueryControl.TextSize = new System.Drawing.Size(0, 0);
+            this.lcimedulaFollowUpQueryControl.TextToControlDistance = 0;
+            this.lcimedulaFollowUpQueryControl.TextVisible = false;
+            // 
             // lcgHastaBilgileri
             // 
             this.lcgHastaBilgileri.CustomizationFormText = "Hasta Bilgileri";
@@ -1853,28 +1877,6 @@
             this.lciKurumOzelNot.TextToControlDistance = 0;
             this.lciKurumOzelNot.TextVisible = false;
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.CustomizationFormText = "Medula Takip Sorgusu";
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lcimedulaFollowUpQueryControl});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(781, 360);
-            this.layoutControlGroup1.Text = "Medula Takip Sorgusu";
-            // 
-            // lcimedulaFollowUpQueryControl
-            // 
-            this.lcimedulaFollowUpQueryControl.Control = this.medulaFollowUpQueryControl;
-            this.lcimedulaFollowUpQueryControl.CustomizationFormText = "lcimedulaFollowUpQueryControl";
-            this.lcimedulaFollowUpQueryControl.Location = new System.Drawing.Point(0, 0);
-            this.lcimedulaFollowUpQueryControl.Name = "lcimedulaFollowUpQueryControl";
-            this.lcimedulaFollowUpQueryControl.Size = new System.Drawing.Size(781, 360);
-            this.lcimedulaFollowUpQueryControl.Text = "lcimedulaFollowUpQueryControl";
-            this.lcimedulaFollowUpQueryControl.TextSize = new System.Drawing.Size(0, 0);
-            this.lcimedulaFollowUpQueryControl.TextToControlDistance = 0;
-            this.lcimedulaFollowUpQueryControl.TextVisible = false;
-            // 
             // lcgSagTuslar
             // 
             this.lcgSagTuslar.CustomizationFormText = "layoutControlGroup7";
@@ -2235,6 +2237,11 @@
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 108;
             // 
+            // timerHastaKabulOku
+            // 
+            this.timerHastaKabulOku.Interval = 200;
+            this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // SGKPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2305,6 +2312,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).EndInit();
@@ -2358,8 +2367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciEMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgKurumOzelNot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumOzelNot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).EndInit();
@@ -2561,5 +2568,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraLayout.LayoutControlItem lciChangeInsuranceCompany;
+        private System.Windows.Forms.Timer timerHastaKabulOku;
     }
 }

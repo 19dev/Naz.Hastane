@@ -42,6 +42,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.colQueueNo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcView)).BeginInit();
@@ -92,7 +93,8 @@
             // 
             this.gvPolyclinics.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colService,
-            this.colDoctor});
+            this.colDoctor,
+            this.colQueueNo});
             this.gvPolyclinics.GridControl = this.gcView;
             this.gvPolyclinics.Name = "gvPolyclinics";
             this.gvPolyclinics.OptionsBehavior.Editable = false;
@@ -107,6 +109,7 @@
             this.colService.Name = "colService";
             this.colService.Visible = true;
             this.colService.VisibleIndex = 1;
+            this.colService.Width = 140;
             // 
             // colDoctor
             // 
@@ -115,6 +118,7 @@
             this.colDoctor.Name = "colDoctor";
             this.colDoctor.Visible = true;
             this.colDoctor.VisibleIndex = 0;
+            this.colDoctor.Width = 179;
             // 
             // sbSelect
             // 
@@ -207,6 +211,15 @@
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // colQueueNo
+            // 
+            this.colQueueNo.Caption = "Hasta Sayısı";
+            this.colQueueNo.FieldName = "QueueNo";
+            this.colQueueNo.Name = "colQueueNo";
+            this.colQueueNo.Visible = true;
+            this.colQueueNo.VisibleIndex = 2;
+            this.colQueueNo.Width = 67;
+            // 
             // SelectPolyclinicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +259,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         public DevExpress.XtraGrid.Columns.GridColumn colDoctor;
         public DevExpress.XtraGrid.Columns.GridColumn colService;
+        private DevExpress.XtraGrid.Columns.GridColumn colQueueNo;
     }
 }

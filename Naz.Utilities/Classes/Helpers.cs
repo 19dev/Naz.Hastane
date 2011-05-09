@@ -87,6 +87,15 @@ namespace Naz.Utilities.Classes
             return result;
         }
 
+        public static string GetSubString(string orig, string start, string end)
+        {
+            int startIndex = orig.IndexOf(start);
+            int endIndex = orig.IndexOf(end);
+            if (endIndex > startIndex)
+                return orig.Substring(startIndex + 1, endIndex - startIndex - 1);
+            else
+                return "";
+        }
     }
 
 }

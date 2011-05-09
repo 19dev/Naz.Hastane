@@ -51,15 +51,15 @@ namespace Naz.Hastane.Data.Services
             return session.Get<Patient>(aPatientNo);
         }
 
-        public static Patient GetByTCId(string aTCID)
+        public static IList<Patient> GetByTCId(string aTCID)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
-                Patient patient = session
+                IList<Patient> result = session
                     .CreateCriteria(typeof(Patient))
                     .Add(Restrictions.Eq("TCId", aTCID))
-                    .UniqueResult<Patient>();
-                return patient;
+                    .List<Patient>();
+                return result;
             }
         }
 
@@ -1048,6 +1048,16 @@ namespace Naz.Hastane.Data.Services
         //select SATISF93 As SATISF, KSATISF93 As KSATISF from HIZMET where TANIM='00' and GRUP='011' and CODE='1700'
 
         //'SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR=''01035'' AND TANIM=''00'' AND GRUP=''011''
+
+        // INSERT into LOGKURUM_DEGISTI (KD_ID, KNR, TARIH, EPSG, YPSG, OHASTATOP, EHASTATOP, EKURUMTOP, YHASTATOP, YKURUMTOP, USER_ID, DATE_CREATE) values (275977,'870366','09.05.2011 10:32:10','SGK - ','SGK',0,20.33
+
+
+
+        // Hasta Borç Alacak
+
+        //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR
+        //select SNR, TARIH, TUTAR, MAKBUZTIPI, BORCALACAK from KASA where KATILIM is NULL AND KNR='870366' and ISIPTAL is null order by SNR
+        //select FATURATARIHI, INDIRIM, KDVTUTARI, YUVARLAMA from FATURA where KNR='870366' and ISIPTAL is null order by FATURATARIHI
     }
 
 }

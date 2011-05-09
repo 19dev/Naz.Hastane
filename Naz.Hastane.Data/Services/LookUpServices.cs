@@ -339,31 +339,21 @@ namespace Naz.Hastane.Data.Services
             return session.Get<InsuranceCompany>(InsuranceCompany.SpecialPatientCode);
         }
 
-        private static IList<Doctor> _SGKDoctors;
-        public static IList<Doctor> SGKDoctors
+        public static IList<Doctor> GetSGKDoctors(ISession session)
         { 
-            get 
-            {
-                if (_SGKDoctors == null)
-                {
-                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                    {
-                        _SGKDoctors = (from doctor in session.Query<Doctor>()
-                                       where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic 
-                                           && doctor.Service.SGKAutoExaminations.Count > 0
-                                           && doctor.OnLeave == 0
-                                       join service in session.Query<Service>() on doctor.Service.Code equals service.Code
-                                       join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
-                                       join product in session.Query<Product>() on sae.Product equals product
-                                       orderby doctor.Value
-                                       select doctor
-                                      )
-                                      .Distinct<Doctor>()
-                                      .ToList<Doctor>();
-                    }
-                }
-                return _SGKDoctors;
-            }
+            IList<Doctor> result = (from doctor in session.Query<Doctor>()
+                            where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic 
+                                && doctor.Service.SGKAutoExaminations.Count > 0
+                                && doctor.OnLeave == 0
+                            join service in session.Query<Service>() on doctor.Service.Code equals service.Code
+                            join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
+                            join product in session.Query<Product>() on sae.Product equals product
+                            orderby doctor.Value
+                            select doctor
+                            )
+                            .Distinct<Doctor>()
+                            .ToList<Doctor>();
+            return result;
         }
 
         public static IList<SGKAutoExamination> GetSGKAutoExaminations(Service service)
@@ -444,6 +434,24 @@ namespace Naz.Hastane.Data.Services
                                where p.TANIM == tanim && p.GRUP == grup
                                orderby p.NAME1
                                select p
+                              )
+                              .ToList<Product>();
+            }
+            foreach (Product p in products)
+                p.SetPriceList(priceList);
+            return products;
+        }
+
+        public static IList<Product> GetProducts(string tanim, string priceList)
+        {
+            IList<Product> products = null;
+
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                products = (from p in session.Query<Product>()
+                            where p.TANIM == tanim
+                            orderby p.NAME1
+                            select p
                               )
                               .ToList<Product>();
             }

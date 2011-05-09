@@ -31,6 +31,7 @@
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvPatientVisitDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colPVDDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTANIM = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,6 +43,16 @@
             this.colKSATISF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitDetailDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitDetailDoctor2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDUSER_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDFATURAEDILSIN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDHYATISTARIHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDHCIKISTARIHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDREFGUNSAY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDMEDTUTAR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDTBASLANGICSAATI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDTBITISSAATI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDMEDOZDURUM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDMEDANOMALI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPatientVisit = new DevExpress.XtraGrid.GridControl();
             this.gvPatientVisitRecord = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colVisitRecordDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -89,6 +100,7 @@
             // gvPatientVisitDetail
             // 
             this.gvPatientVisitDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPVDDate,
             this.colSiraNo,
             this.colAKOD,
             this.colTANIM,
@@ -99,7 +111,17 @@
             this.colSATISF,
             this.colKSATISF,
             this.colVisitDetailDoctor,
-            this.colVisitDetailDoctor2});
+            this.colVisitDetailDoctor2,
+            this.colPVDUSER_ID,
+            this.colPVDFATURAEDILSIN,
+            this.colPVDHYATISTARIHI,
+            this.colPVDHCIKISTARIHI,
+            this.colPVDREFGUNSAY,
+            this.colPVDMEDTUTAR,
+            this.colPVDTBASLANGICSAATI,
+            this.colPVDTBITISSAATI,
+            this.colPVDMEDOZDURUM,
+            this.colPVDMEDANOMALI});
             this.gvPatientVisitDetail.DefaultRelationIndex = 1;
             this.gvPatientVisitDetail.GridControl = this.gcPatientVisit;
             this.gvPatientVisitDetail.Name = "gvPatientVisitDetail";
@@ -111,13 +133,25 @@
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSiraNo, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gvPatientVisitDetail.Click += new System.EventHandler(this.gvPatientVisitDetail_Click);
             // 
+            // colPVDDate
+            // 
+            this.colPVDDate.Caption = "Tarih / Saat";
+            this.colPVDDate.DisplayFormat.FormatString = "G";
+            this.colPVDDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colPVDDate.FieldName = "TARIH";
+            this.colPVDDate.Name = "colPVDDate";
+            this.colPVDDate.Visible = true;
+            this.colPVDDate.VisibleIndex = 0;
+            this.colPVDDate.Width = 100;
+            // 
             // colSiraNo
             // 
             this.colSiraNo.Caption = "Sıra No";
             this.colSiraNo.FieldName = "DetailNo";
             this.colSiraNo.Name = "colSiraNo";
             this.colSiraNo.Visible = true;
-            this.colSiraNo.VisibleIndex = 0;
+            this.colSiraNo.VisibleIndex = 1;
+            this.colSiraNo.Width = 58;
             // 
             // colAKOD
             // 
@@ -125,7 +159,8 @@
             this.colAKOD.FieldName = "AKOD";
             this.colAKOD.Name = "colAKOD";
             this.colAKOD.Visible = true;
-            this.colAKOD.VisibleIndex = 1;
+            this.colAKOD.VisibleIndex = 2;
+            this.colAKOD.Width = 44;
             // 
             // colTANIM
             // 
@@ -133,7 +168,8 @@
             this.colTANIM.FieldName = "TANIM";
             this.colTANIM.Name = "colTANIM";
             this.colTANIM.Visible = true;
-            this.colTANIM.VisibleIndex = 2;
+            this.colTANIM.VisibleIndex = 3;
+            this.colTANIM.Width = 39;
             // 
             // colGRUP
             // 
@@ -141,7 +177,8 @@
             this.colGRUP.FieldName = "GRUP";
             this.colGRUP.Name = "colGRUP";
             this.colGRUP.Visible = true;
-            this.colGRUP.VisibleIndex = 3;
+            this.colGRUP.VisibleIndex = 4;
+            this.colGRUP.Width = 38;
             // 
             // colCODE
             // 
@@ -149,7 +186,7 @@
             this.colCODE.FieldName = "CODE";
             this.colCODE.Name = "colCODE";
             this.colCODE.Visible = true;
-            this.colCODE.VisibleIndex = 4;
+            this.colCODE.VisibleIndex = 5;
             // 
             // colNAME1
             // 
@@ -157,7 +194,8 @@
             this.colNAME1.FieldName = "NAME1";
             this.colNAME1.Name = "colNAME1";
             this.colNAME1.Visible = true;
-            this.colNAME1.VisibleIndex = 5;
+            this.colNAME1.VisibleIndex = 6;
+            this.colNAME1.Width = 133;
             // 
             // colVisitDetailAmount
             // 
@@ -166,6 +204,7 @@
             this.colVisitDetailAmount.Name = "colVisitDetailAmount";
             this.colVisitDetailAmount.Visible = true;
             this.colVisitDetailAmount.VisibleIndex = 7;
+            this.colVisitDetailAmount.Width = 32;
             // 
             // colSATISF
             // 
@@ -174,6 +213,7 @@
             this.colSATISF.Name = "colSATISF";
             this.colSATISF.Visible = true;
             this.colSATISF.VisibleIndex = 8;
+            this.colSATISF.Width = 67;
             // 
             // colKSATISF
             // 
@@ -182,6 +222,7 @@
             this.colKSATISF.Name = "colKSATISF";
             this.colKSATISF.Visible = true;
             this.colKSATISF.VisibleIndex = 9;
+            this.colKSATISF.Width = 65;
             // 
             // colVisitDetailDoctor
             // 
@@ -189,7 +230,8 @@
             this.colVisitDetailDoctor.FieldName = "DoctorName";
             this.colVisitDetailDoctor.Name = "colVisitDetailDoctor";
             this.colVisitDetailDoctor.Visible = true;
-            this.colVisitDetailDoctor.VisibleIndex = 6;
+            this.colVisitDetailDoctor.VisibleIndex = 10;
+            this.colVisitDetailDoctor.Width = 123;
             // 
             // colVisitDetailDoctor2
             // 
@@ -197,7 +239,93 @@
             this.colVisitDetailDoctor2.FieldName = "Doctor2Name";
             this.colVisitDetailDoctor2.Name = "colVisitDetailDoctor2";
             this.colVisitDetailDoctor2.Visible = true;
-            this.colVisitDetailDoctor2.VisibleIndex = 10;
+            this.colVisitDetailDoctor2.VisibleIndex = 11;
+            this.colVisitDetailDoctor2.Width = 114;
+            // 
+            // colPVDUSER_ID
+            // 
+            this.colPVDUSER_ID.Caption = "Kullanıcı";
+            this.colPVDUSER_ID.FieldName = "USER_ID";
+            this.colPVDUSER_ID.Name = "colPVDUSER_ID";
+            this.colPVDUSER_ID.Visible = true;
+            this.colPVDUSER_ID.VisibleIndex = 12;
+            // 
+            // colPVDFATURAEDILSIN
+            // 
+            this.colPVDFATURAEDILSIN.Caption = "Fatura Edilsin";
+            this.colPVDFATURAEDILSIN.FieldName = "FATURAEDILSIN";
+            this.colPVDFATURAEDILSIN.Name = "colPVDFATURAEDILSIN";
+            this.colPVDFATURAEDILSIN.Visible = true;
+            this.colPVDFATURAEDILSIN.VisibleIndex = 13;
+            // 
+            // colPVDHYATISTARIHI
+            // 
+            this.colPVDHYATISTARIHI.Caption = "Yatış Tarihi";
+            this.colPVDHYATISTARIHI.FieldName = "HYATISTARIHI";
+            this.colPVDHYATISTARIHI.Name = "colPVDHYATISTARIHI";
+            this.colPVDHYATISTARIHI.Visible = true;
+            this.colPVDHYATISTARIHI.VisibleIndex = 14;
+            this.colPVDHYATISTARIHI.Width = 64;
+            // 
+            // colPVDHCIKISTARIHI
+            // 
+            this.colPVDHCIKISTARIHI.Caption = "Çıkış Tarihi";
+            this.colPVDHCIKISTARIHI.FieldName = "HCIKISTARIHI";
+            this.colPVDHCIKISTARIHI.Name = "colPVDHCIKISTARIHI";
+            this.colPVDHCIKISTARIHI.Visible = true;
+            this.colPVDHCIKISTARIHI.VisibleIndex = 15;
+            this.colPVDHCIKISTARIHI.Width = 62;
+            // 
+            // colPVDREFGUNSAY
+            // 
+            this.colPVDREFGUNSAY.Caption = "Ref.Gün Sayısı";
+            this.colPVDREFGUNSAY.FieldName = "REFGUNSAY";
+            this.colPVDREFGUNSAY.Name = "colPVDREFGUNSAY";
+            this.colPVDREFGUNSAY.Visible = true;
+            this.colPVDREFGUNSAY.VisibleIndex = 16;
+            // 
+            // colPVDMEDTUTAR
+            // 
+            this.colPVDMEDTUTAR.Caption = "Medula Fiyatı";
+            this.colPVDMEDTUTAR.FieldName = "MEDTUTAR";
+            this.colPVDMEDTUTAR.Name = "colPVDMEDTUTAR";
+            this.colPVDMEDTUTAR.Visible = true;
+            this.colPVDMEDTUTAR.VisibleIndex = 17;
+            // 
+            // colPVDTBASLANGICSAATI
+            // 
+            this.colPVDTBASLANGICSAATI.Caption = "Tedavi Başlangıç";
+            this.colPVDTBASLANGICSAATI.FieldName = "TBASLANGICSAATI";
+            this.colPVDTBASLANGICSAATI.Name = "colPVDTBASLANGICSAATI";
+            this.colPVDTBASLANGICSAATI.Visible = true;
+            this.colPVDTBASLANGICSAATI.VisibleIndex = 18;
+            // 
+            // colPVDTBITISSAATI
+            // 
+            this.colPVDTBITISSAATI.Caption = "Tedavi Bitiş";
+            this.colPVDTBITISSAATI.FieldName = "TBITISSAATI";
+            this.colPVDTBITISSAATI.Name = "colPVDTBITISSAATI";
+            this.colPVDTBITISSAATI.Visible = true;
+            this.colPVDTBITISSAATI.VisibleIndex = 19;
+            this.colPVDTBITISSAATI.Width = 64;
+            // 
+            // colPVDMEDOZDURUM
+            // 
+            this.colPVDMEDOZDURUM.Caption = "Özel Durum";
+            this.colPVDMEDOZDURUM.FieldName = "MEDOZDURUM";
+            this.colPVDMEDOZDURUM.Name = "colPVDMEDOZDURUM";
+            this.colPVDMEDOZDURUM.Visible = true;
+            this.colPVDMEDOZDURUM.VisibleIndex = 20;
+            this.colPVDMEDOZDURUM.Width = 63;
+            // 
+            // colPVDMEDANOMALI
+            // 
+            this.colPVDMEDANOMALI.Caption = "Anomali";
+            this.colPVDMEDANOMALI.FieldName = "MEDANOMALI";
+            this.colPVDMEDANOMALI.Name = "colPVDMEDANOMALI";
+            this.colPVDMEDANOMALI.Visible = true;
+            this.colPVDMEDANOMALI.VisibleIndex = 21;
+            this.colPVDMEDANOMALI.Width = 45;
             // 
             // gcPatientVisit
             // 
@@ -607,5 +735,16 @@
         public DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisitDetail;
         public DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisitRecord;
         public DevExpress.XtraGrid.Views.Grid.GridView gvPatientVisit;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDUSER_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDFATURAEDILSIN;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDHYATISTARIHI;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDHCIKISTARIHI;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDREFGUNSAY;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDMEDTUTAR;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDTBASLANGICSAATI;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDTBITISSAATI;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDMEDOZDURUM;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDMEDANOMALI;
     }
 }

@@ -110,19 +110,20 @@ namespace Naz.Hastane.Win.MDIChildForms
             string TCID = this.teTCId.Text;
             if (PatientServices.IsValidTCID(TCID))
             {
-                Patient patient = PatientServices.GetByTCId(TCID);
-                if (patient == null)
+                IList<Patient> result = PatientServices.GetByTCId(TCID);
+                if (result.Count == 0)
                 {
                     if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         (this.MdiParent as frmMain).OpenNewSGKPatientWithTCID(TCID);
+                        return true;
                     }
                 }
-                else
+                else if (result.Count == 1)
                 {
-                    (this.MdiParent as frmMain).OpenSGKPatient(patient.PatientNo);
+                    (this.MdiParent as frmMain).OpenSGKPatient(result[0].PatientNo);
+                    return true;
                 }
-                return true;
             }
 
             return false;

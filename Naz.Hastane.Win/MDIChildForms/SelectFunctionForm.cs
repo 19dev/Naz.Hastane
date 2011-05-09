@@ -81,6 +81,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void tlFunctionGroups_Click(object sender, EventArgs e)
         {
+            //DisplayFunctions();
+        }
+
+        private void DisplayFunctions()
+        {
             TreeListNode node = this.tlFunctionGroups.FocusedNode;
             if (node.ParentNode != null)
             {
@@ -89,8 +94,13 @@ namespace Naz.Hastane.Win.MDIChildForms
                 IList<Product> products = LookUpServices.GetProducts(tanim, grup, PriceListCode);
                 this.gcProducts.DataSource = products;
             }
+            else
+            {
+                string tanim = node.Tag.ToString();
+                IList<Product> products = LookUpServices.GetProducts(tanim, PriceListCode);
+                this.gcProducts.DataSource = products;
+            }
         }
-
         private void gvProducts_DoubleClick(object sender, EventArgs e)
         {
             GridView view = sender as GridView;
@@ -136,6 +146,46 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             _IsSelected = true;
             this.Close();
+        }
+
+        private void SelectFunctionForm_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            string key = e.KeyChar.ToString();
+            key = key.ToUpper();
+            FindNode(this.tlFunctionGroups.FocusedNode, key[0]);
+        }
+
+        private void FindNode(TreeListNode parentNode, char searchChar)
+        {
+            if (parentNode == null) return;
+
+            if (parentNode.Expanded)
+            {
+                foreach (TreeListNode n in parentNode.Nodes)
+                {
+                    if (n.GetDisplayText(0)[0] == searchChar)
+                    {
+                        this.tlFunctionGroups.SetFocusedNode(n);
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                foreach (TreeListNode n in this.tlFunctionGroups.Nodes)
+                {
+                    if (n.ParentNode == null && n.GetDisplayText(0)[0] == searchChar)
+                    {
+                        this.tlFunctionGroups.SetFocusedNode(n);
+                        return;
+                    }
+                }
+            }
+        }
+
+        private void tlFunctionGroups_AfterFocusNode(object sender, NodeEventArgs e)
+        {
+            DisplayFunctions();
         }
     }
 }
