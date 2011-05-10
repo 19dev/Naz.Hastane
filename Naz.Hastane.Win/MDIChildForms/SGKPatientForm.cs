@@ -14,6 +14,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using System.Drawing;
+using NHibernate;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -722,14 +723,17 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
         {
+            using (ITransaction transaction = Session.BeginTransaction())
+            {
+            }
             if (Patient.InsuranceCompany == newInsuranceCompany) return;
-            ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm();
+            ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm(Session, Patient, newInsuranceCompany);
             frm.ShowDialog();
             if (frm.IsOK)
             {
                 try
                 {
-                    PatientServices.ChangeInsuranceCompany(Session, frm.GetSelectedVisits(), frm.PatientVisitDetails, newInsuranceCompany);
+                    PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, frm.GetSelectedVisits(), frm.PatientVisitDetails, newInsuranceCompany);
                     XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception e)

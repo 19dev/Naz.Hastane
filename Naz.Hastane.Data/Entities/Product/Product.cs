@@ -48,7 +48,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string BKODU { get; set; } // BKODU; length(15); 1
         public virtual string BUT { get; set; } // BUT; length(50); 1
         public virtual string CODE1 { get; set; } // CODE1; length(20); 1
-        public virtual DateTime DATE_CREATE { get; set; } // DATE_CREATE; length(8); 1
+        public virtual DateTime? DATE_CREATE { get; set; } // DATE_CREATE; length(8); 1
         public virtual string DATE_UPDATE { get; set; } // DATE_UPDATE; length(50); 1
         public virtual double DRYUZDE { get; set; } // DRYUZDE; length(8); 0
         public virtual string GELIRGRUBU { get; set; } // GELIRGRUBU; length(10); 1

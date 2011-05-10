@@ -989,25 +989,22 @@ namespace Naz.Hastane.Data.Services
             if (pvs.Count == 0)
                 return pvdwps;
 
-            IList<PatientVisitDetail> pvds = (from pv in pvs
-                                              from pvd in pv.PatientVisitDetails
-                                        select pvd
-                                        )
-                                    .ToList<PatientVisitDetail>();
-            foreach (PatientVisitDetail pvd in pvds)
-            {
-                pvdwps.Add(new PatientVisitDetailWithProduct
+            IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
+            foreach(PatientVisit pv in pvs)
+                foreach(PatientVisitDetail pvd in pv.PatientVisitDetails)
                 {
-                    PatientVisitDetail = pvd,
-                    Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, priceListCode),
-                    Discount = 0
-                });
-            }
+                    pvdwps.Add(new PatientVisitDetailWithProduct
+                    {
+                        PatientVisitDetail = pvd,
+                        Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, priceListCode),
+                        Discount = 0
+                    });
+                }
 
             return pvdwps;
         }
 
-        public static void ChangeInsuranceCompany(ISession session, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
+        public static void ChangeInsuranceCompany(ISession session, User user, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
         {
             if (pvs.Count == 0) return;
 
@@ -1015,12 +1012,17 @@ namespace Naz.Hastane.Data.Services
             {
                 try
                 {
-                    pvs[0].Patient.InsuranceCompany = insuranceCompany;
-                    session.Update(pvs[0].Patient);
+                    Patient patient = pvs[0].Patient;
+                    patient.InsuranceCompany = insuranceCompany;
+                    patient.USER_ID_UPDATE = user.USER_ID;
+                    patient.DATE_UPDATE = DateTime.Now;
+                    session.Update(patient);
 
                     foreach (PatientVisit pv in pvs)
                     {
                         pv.PSG = insuranceCompany.Code;
+                        pv.USER_ID_UPDATE = user.USER_ID;
+                        pv.DATE_UPDATE = DateTime.Now;
                         session.Update(pv);
                         foreach (PatientVisitRecord pvr in pv.PatientVisitRecords)
                         {
@@ -1032,6 +1034,7 @@ namespace Naz.Hastane.Data.Services
                     {
                         pvdwp.PatientVisitDetail.PatientPrice = pvdwp.Product.PatientPrice;
                         pvdwp.PatientVisitDetail.CompanyPrice = pvdwp.Product.CompanyPrice;
+                        pvdwp.PatientVisitDetail.PSG = insuranceCompany.Code;
                         session.Update(pvdwp.PatientVisitDetail);
                     }
                     transaction.Commit();

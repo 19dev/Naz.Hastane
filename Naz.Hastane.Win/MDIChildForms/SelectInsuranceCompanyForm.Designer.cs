@@ -97,14 +97,13 @@
             this.gvView.Name = "gvView";
             this.gvView.OptionsBehavior.Editable = false;
             this.gvView.OptionsFind.AlwaysVisible = true;
-            this.gvView.OptionsView.ColumnAutoWidth = false;
             this.gvView.OptionsView.ShowGroupPanel = false;
             this.gvView.DoubleClick += new System.EventHandler(this.gvPolyclinics_DoubleClick);
             // 
             // colCode
             // 
             this.colCode.Caption = "Kurum Kodu";
-            this.colCode.FieldName = "Name";
+            this.colCode.FieldName = "Code";
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
             this.colCode.VisibleIndex = 0;
@@ -113,7 +112,7 @@
             // colName
             // 
             this.colName.Caption = "Kurum Adı";
-            this.colName.FieldName = "Code";
+            this.colName.FieldName = "Name";
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;

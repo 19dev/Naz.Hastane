@@ -91,16 +91,16 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1672, -141, 387, 543);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(683, 575);
+            this.layoutControl1.Size = new System.Drawing.Size(830, 622);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // ceSelectAll
             // 
-            this.ceSelectAll.Location = new System.Drawing.Point(6, 550);
+            this.ceSelectAll.Location = new System.Drawing.Point(6, 597);
             this.ceSelectAll.Name = "ceSelectAll";
             this.ceSelectAll.Properties.Caption = "Hepsini Seç";
-            this.ceSelectAll.Size = new System.Drawing.Size(77, 19);
+            this.ceSelectAll.Size = new System.Drawing.Size(95, 19);
             this.ceSelectAll.StyleController = this.layoutControl1;
             this.ceSelectAll.TabIndex = 30;
             // 
@@ -111,7 +111,7 @@
             this.gcPatientVisits.Name = "gcPatientVisits";
             this.gcPatientVisits.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gcPatientVisits.Size = new System.Drawing.Size(571, 251);
+            this.gcPatientVisits.Size = new System.Drawing.Size(723, 274);
             this.gcPatientVisits.TabIndex = 4;
             this.gcPatientVisits.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisits});
@@ -172,9 +172,9 @@
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(581, 524);
+            this.sbClose.Location = new System.Drawing.Point(733, 571);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(96, 22);
+            this.sbClose.Size = new System.Drawing.Size(91, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 8;
             this.sbClose.Text = "Kapat";
@@ -182,12 +182,12 @@
             // 
             // gcPatientVisitDetails
             // 
-            this.gcPatientVisitDetails.Location = new System.Drawing.Point(6, 293);
+            this.gcPatientVisitDetails.Location = new System.Drawing.Point(6, 316);
             this.gcPatientVisitDetails.MainView = this.gvPatientVisitDetails;
             this.gcPatientVisitDetails.Name = "gcPatientVisitDetails";
             this.gcPatientVisitDetails.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gcPatientVisitDetails.Size = new System.Drawing.Size(571, 253);
+            this.gcPatientVisitDetails.Size = new System.Drawing.Size(723, 277);
             this.gcPatientVisitDetails.TabIndex = 9;
             this.gcPatientVisitDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisitDetails});
@@ -207,7 +207,6 @@
             this.colDiscount});
             this.gvPatientVisitDetails.GridControl = this.gcPatientVisitDetails;
             this.gvPatientVisitDetails.Name = "gvPatientVisitDetails";
-            this.gvPatientVisitDetails.OptionsView.ColumnAutoWidth = false;
             this.gvPatientVisitDetails.OptionsView.ShowGroupPanel = false;
             // 
             // colPatientVisitDetailVisitNo
@@ -259,7 +258,7 @@
             this.colDetailPatientTotal.Caption = "Hasta Tutarı";
             this.colDetailPatientTotal.DisplayFormat.FormatString = "{0:#,##0.00}";
             this.colDetailPatientTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colDetailPatientTotal.FieldName = "PatientVisitDetail.SATISF";
+            this.colDetailPatientTotal.FieldName = "PatientVisitDetail.PatientPrice";
             this.colDetailPatientTotal.Name = "colDetailPatientTotal";
             this.colDetailPatientTotal.OptionsColumn.AllowEdit = false;
             this.colDetailPatientTotal.Visible = true;
@@ -268,7 +267,7 @@
             // colDetailCompanyTotal
             // 
             this.colDetailCompanyTotal.Caption = "Kurum Fiyatı";
-            this.colDetailCompanyTotal.FieldName = "PatientVisitDetail.KSATISF";
+            this.colDetailCompanyTotal.FieldName = "PatientVisitDetail.CompanyPrice";
             this.colDetailCompanyTotal.Name = "colDetailCompanyTotal";
             this.colDetailCompanyTotal.Visible = true;
             this.colDetailCompanyTotal.VisibleIndex = 6;
@@ -304,9 +303,9 @@
             // 
             // sbSave
             // 
-            this.sbSave.Location = new System.Drawing.Point(581, 6);
+            this.sbSave.Location = new System.Drawing.Point(733, 6);
             this.sbSave.Name = "sbSave";
-            this.sbSave.Size = new System.Drawing.Size(96, 22);
+            this.sbSave.Size = new System.Drawing.Size(91, 22);
             this.sbSave.StyleController = this.layoutControl1;
             this.sbSave.TabIndex = 31;
             this.sbSave.Text = "Kaydet";
@@ -328,7 +327,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(683, 575);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(830, 622);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -338,7 +337,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(575, 271);
+            this.layoutControlItem1.Size = new System.Drawing.Size(727, 294);
             this.layoutControlItem1.Text = "Kartlar";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(37, 13);
@@ -347,9 +346,9 @@
             // 
             this.layoutControlItem6.Control = this.gcPatientVisitDetails;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 271);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 294);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(575, 273);
+            this.layoutControlItem6.Size = new System.Drawing.Size(727, 297);
             this.layoutControlItem6.Text = "İşlemler";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(37, 13);
@@ -358,9 +357,9 @@
             // 
             this.layoutControlItem12.Control = this.ceSelectAll;
             this.layoutControlItem12.CustomizationFormText = "layoutControlItem12";
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 544);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 591);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(81, 23);
+            this.layoutControlItem12.Size = new System.Drawing.Size(99, 23);
             this.layoutControlItem12.Text = "layoutControlItem12";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextToControlDistance = 0;
@@ -369,18 +368,18 @@
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
-            this.emptySpaceItem8.Location = new System.Drawing.Point(81, 544);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(99, 591);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(594, 23);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(723, 23);
             this.emptySpaceItem8.Text = "emptySpaceItem8";
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
-            this.emptySpaceItem9.Location = new System.Drawing.Point(575, 26);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(727, 26);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(100, 492);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(95, 539);
             this.emptySpaceItem9.Text = "emptySpaceItem9";
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -388,9 +387,9 @@
             // 
             this.lciClose.Control = this.sbClose;
             this.lciClose.CustomizationFormText = "Kapat";
-            this.lciClose.Location = new System.Drawing.Point(575, 518);
+            this.lciClose.Location = new System.Drawing.Point(727, 565);
             this.lciClose.Name = "lciClose";
-            this.lciClose.Size = new System.Drawing.Size(100, 26);
+            this.lciClose.Size = new System.Drawing.Size(95, 26);
             this.lciClose.Text = "Kapat";
             this.lciClose.TextSize = new System.Drawing.Size(0, 0);
             this.lciClose.TextToControlDistance = 0;
@@ -400,9 +399,9 @@
             // 
             this.lciSave.Control = this.sbSave;
             this.lciSave.CustomizationFormText = "Kaydet";
-            this.lciSave.Location = new System.Drawing.Point(575, 0);
+            this.lciSave.Location = new System.Drawing.Point(727, 0);
             this.lciSave.Name = "lciSave";
-            this.lciSave.Size = new System.Drawing.Size(100, 26);
+            this.lciSave.Size = new System.Drawing.Size(95, 26);
             this.lciSave.Text = "Kaydet";
             this.lciSave.TextSize = new System.Drawing.Size(0, 0);
             this.lciSave.TextToControlDistance = 0;
@@ -412,7 +411,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 575);
+            this.ClientSize = new System.Drawing.Size(830, 622);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ChangeInsuranceCompanyForm";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

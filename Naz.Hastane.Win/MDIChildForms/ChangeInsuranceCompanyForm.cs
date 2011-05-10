@@ -22,7 +22,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private GridCheckMarksSelectionWeb selectionVisit;
 
-        public ChangeInsuranceCompanyForm()
+        private ChangeInsuranceCompanyForm()
         {
             InitializeComponent();
 
@@ -86,7 +86,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbSave_Click(object sender, EventArgs e)
         {
             _IsOK = true;
-            PatientServices.ChangeInsuranceCompany(_Session, GetSelectedVisits(), PatientVisitDetails, _InsuranceCompany);
+            //PatientServices.ChangeInsuranceCompany(_Session, UIUtilities.CurrentUser, GetSelectedVisits(), PatientVisitDetails, _InsuranceCompany);
             this.Close();
         }
 

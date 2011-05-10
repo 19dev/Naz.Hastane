@@ -87,6 +87,9 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colPSG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDPSG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVRPSG = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).BeginInit();
@@ -121,7 +124,8 @@
             this.colPVDTBASLANGICSAATI,
             this.colPVDTBITISSAATI,
             this.colPVDMEDOZDURUM,
-            this.colPVDMEDANOMALI});
+            this.colPVDMEDANOMALI,
+            this.colPVDPSG});
             this.gvPatientVisitDetail.DefaultRelationIndex = 1;
             this.gvPatientVisitDetail.GridControl = this.gcPatientVisit;
             this.gvPatientVisitDetail.Name = "gvPatientVisitDetail";
@@ -256,7 +260,7 @@
             this.colPVDFATURAEDILSIN.FieldName = "FATURAEDILSIN";
             this.colPVDFATURAEDILSIN.Name = "colPVDFATURAEDILSIN";
             this.colPVDFATURAEDILSIN.Visible = true;
-            this.colPVDFATURAEDILSIN.VisibleIndex = 13;
+            this.colPVDFATURAEDILSIN.VisibleIndex = 14;
             // 
             // colPVDHYATISTARIHI
             // 
@@ -264,7 +268,7 @@
             this.colPVDHYATISTARIHI.FieldName = "HYATISTARIHI";
             this.colPVDHYATISTARIHI.Name = "colPVDHYATISTARIHI";
             this.colPVDHYATISTARIHI.Visible = true;
-            this.colPVDHYATISTARIHI.VisibleIndex = 14;
+            this.colPVDHYATISTARIHI.VisibleIndex = 15;
             this.colPVDHYATISTARIHI.Width = 64;
             // 
             // colPVDHCIKISTARIHI
@@ -273,7 +277,7 @@
             this.colPVDHCIKISTARIHI.FieldName = "HCIKISTARIHI";
             this.colPVDHCIKISTARIHI.Name = "colPVDHCIKISTARIHI";
             this.colPVDHCIKISTARIHI.Visible = true;
-            this.colPVDHCIKISTARIHI.VisibleIndex = 15;
+            this.colPVDHCIKISTARIHI.VisibleIndex = 16;
             this.colPVDHCIKISTARIHI.Width = 62;
             // 
             // colPVDREFGUNSAY
@@ -282,7 +286,7 @@
             this.colPVDREFGUNSAY.FieldName = "REFGUNSAY";
             this.colPVDREFGUNSAY.Name = "colPVDREFGUNSAY";
             this.colPVDREFGUNSAY.Visible = true;
-            this.colPVDREFGUNSAY.VisibleIndex = 16;
+            this.colPVDREFGUNSAY.VisibleIndex = 17;
             // 
             // colPVDMEDTUTAR
             // 
@@ -290,7 +294,7 @@
             this.colPVDMEDTUTAR.FieldName = "MEDTUTAR";
             this.colPVDMEDTUTAR.Name = "colPVDMEDTUTAR";
             this.colPVDMEDTUTAR.Visible = true;
-            this.colPVDMEDTUTAR.VisibleIndex = 17;
+            this.colPVDMEDTUTAR.VisibleIndex = 18;
             // 
             // colPVDTBASLANGICSAATI
             // 
@@ -298,7 +302,7 @@
             this.colPVDTBASLANGICSAATI.FieldName = "TBASLANGICSAATI";
             this.colPVDTBASLANGICSAATI.Name = "colPVDTBASLANGICSAATI";
             this.colPVDTBASLANGICSAATI.Visible = true;
-            this.colPVDTBASLANGICSAATI.VisibleIndex = 18;
+            this.colPVDTBASLANGICSAATI.VisibleIndex = 19;
             // 
             // colPVDTBITISSAATI
             // 
@@ -306,7 +310,7 @@
             this.colPVDTBITISSAATI.FieldName = "TBITISSAATI";
             this.colPVDTBITISSAATI.Name = "colPVDTBITISSAATI";
             this.colPVDTBITISSAATI.Visible = true;
-            this.colPVDTBITISSAATI.VisibleIndex = 19;
+            this.colPVDTBITISSAATI.VisibleIndex = 20;
             this.colPVDTBITISSAATI.Width = 64;
             // 
             // colPVDMEDOZDURUM
@@ -315,7 +319,7 @@
             this.colPVDMEDOZDURUM.FieldName = "MEDOZDURUM";
             this.colPVDMEDOZDURUM.Name = "colPVDMEDOZDURUM";
             this.colPVDMEDOZDURUM.Visible = true;
-            this.colPVDMEDOZDURUM.VisibleIndex = 20;
+            this.colPVDMEDOZDURUM.VisibleIndex = 21;
             this.colPVDMEDOZDURUM.Width = 63;
             // 
             // colPVDMEDANOMALI
@@ -324,7 +328,7 @@
             this.colPVDMEDANOMALI.FieldName = "MEDANOMALI";
             this.colPVDMEDANOMALI.Name = "colPVDMEDANOMALI";
             this.colPVDMEDANOMALI.Visible = true;
-            this.colPVDMEDANOMALI.VisibleIndex = 21;
+            this.colPVDMEDANOMALI.VisibleIndex = 22;
             this.colPVDMEDANOMALI.Width = 45;
             // 
             // gcPatientVisit
@@ -359,7 +363,8 @@
             this.colMedulaExitDate,
             this.colVisitRecordControl,
             this.colVisitRecordExceptionalStatus,
-            this.colVisitRecordAddQuery});
+            this.colVisitRecordAddQuery,
+            this.colPVRPSG});
             this.gvPatientVisitRecord.GridControl = this.gcPatientVisit;
             this.gvPatientVisitRecord.Name = "gvPatientVisitRecord";
             this.gvPatientVisitRecord.OptionsBehavior.Editable = false;
@@ -421,7 +426,7 @@
             this.colMedulaExitDate.FieldName = "MCIKISTARIHI";
             this.colMedulaExitDate.Name = "colMedulaExitDate";
             this.colMedulaExitDate.Visible = true;
-            this.colMedulaExitDate.VisibleIndex = 6;
+            this.colMedulaExitDate.VisibleIndex = 7;
             // 
             // colVisitRecordControl
             // 
@@ -429,7 +434,7 @@
             this.colVisitRecordControl.FieldName = "KONT";
             this.colVisitRecordControl.Name = "colVisitRecordControl";
             this.colVisitRecordControl.Visible = true;
-            this.colVisitRecordControl.VisibleIndex = 7;
+            this.colVisitRecordControl.VisibleIndex = 8;
             // 
             // colVisitRecordExceptionalStatus
             // 
@@ -437,7 +442,7 @@
             this.colVisitRecordExceptionalStatus.FieldName = "ISTISNAIDURUM";
             this.colVisitRecordExceptionalStatus.Name = "colVisitRecordExceptionalStatus";
             this.colVisitRecordExceptionalStatus.Visible = true;
-            this.colVisitRecordExceptionalStatus.VisibleIndex = 8;
+            this.colVisitRecordExceptionalStatus.VisibleIndex = 9;
             // 
             // colVisitRecordAddQuery
             // 
@@ -445,7 +450,7 @@
             this.colVisitRecordAddQuery.FieldName = "EKSORGU";
             this.colVisitRecordAddQuery.Name = "colVisitRecordAddQuery";
             this.colVisitRecordAddQuery.Visible = true;
-            this.colVisitRecordAddQuery.VisibleIndex = 9;
+            this.colVisitRecordAddQuery.VisibleIndex = 10;
             // 
             // gvPatientVisit
             // 
@@ -467,7 +472,8 @@
             this.colTakipTuru,
             this.colTakipDurumu,
             this.colIliskiliTakipNo,
-            this.colDoctor});
+            this.colDoctor,
+            this.colPSG});
             this.gvPatientVisit.GridControl = this.gcPatientVisit;
             this.gvPatientVisit.Name = "gvPatientVisit";
             this.gvPatientVisit.OptionsBehavior.Editable = false;
@@ -531,7 +537,7 @@
             this.colInvoiceNo.FieldName = "InvoiceNo";
             this.colInvoiceNo.Name = "colInvoiceNo";
             this.colInvoiceNo.Visible = true;
-            this.colInvoiceNo.VisibleIndex = 6;
+            this.colInvoiceNo.VisibleIndex = 7;
             // 
             // colInvoiceDate
             // 
@@ -539,7 +545,7 @@
             this.colInvoiceDate.FieldName = "InvoiceDate";
             this.colInvoiceDate.Name = "colInvoiceDate";
             this.colInvoiceDate.Visible = true;
-            this.colInvoiceDate.VisibleIndex = 7;
+            this.colInvoiceDate.VisibleIndex = 8;
             // 
             // colVisitType
             // 
@@ -547,7 +553,7 @@
             this.colVisitType.FieldName = "VisitType";
             this.colVisitType.Name = "colVisitType";
             this.colVisitType.Visible = true;
-            this.colVisitType.VisibleIndex = 8;
+            this.colVisitType.VisibleIndex = 9;
             // 
             // colPatientAppNo
             // 
@@ -555,7 +561,7 @@
             this.colPatientAppNo.FieldName = "HASTABASNO";
             this.colPatientAppNo.Name = "colPatientAppNo";
             this.colPatientAppNo.Visible = true;
-            this.colPatientAppNo.VisibleIndex = 9;
+            this.colPatientAppNo.VisibleIndex = 10;
             // 
             // colTakipNo
             // 
@@ -563,7 +569,7 @@
             this.colTakipNo.FieldName = "TAKIPNO";
             this.colTakipNo.Name = "colTakipNo";
             this.colTakipNo.Visible = true;
-            this.colTakipNo.VisibleIndex = 10;
+            this.colTakipNo.VisibleIndex = 11;
             // 
             // colIMPF2
             // 
@@ -571,7 +577,7 @@
             this.colIMPF2.FieldName = "IMPF2";
             this.colIMPF2.Name = "colIMPF2";
             this.colIMPF2.Visible = true;
-            this.colIMPF2.VisibleIndex = 14;
+            this.colIMPF2.VisibleIndex = 15;
             // 
             // colKar_No
             // 
@@ -579,14 +585,14 @@
             this.colKar_No.FieldName = "KAR_NO";
             this.colKar_No.Name = "colKar_No";
             this.colKar_No.Visible = true;
-            this.colKar_No.VisibleIndex = 17;
+            this.colKar_No.VisibleIndex = 18;
             // 
             // colSevkTarihi
             // 
             this.colSevkTarihi.Caption = "Sevk Tarihi";
             this.colSevkTarihi.Name = "colSevkTarihi";
             this.colSevkTarihi.Visible = true;
-            this.colSevkTarihi.VisibleIndex = 12;
+            this.colSevkTarihi.VisibleIndex = 13;
             // 
             // colProvisionNo
             // 
@@ -594,7 +600,7 @@
             this.colProvisionNo.FieldName = "ProvisionNo";
             this.colProvisionNo.Name = "colProvisionNo";
             this.colProvisionNo.Visible = true;
-            this.colProvisionNo.VisibleIndex = 13;
+            this.colProvisionNo.VisibleIndex = 14;
             // 
             // colTakipTuru
             // 
@@ -602,14 +608,14 @@
             this.colTakipTuru.FieldName = "TAKIPTURU";
             this.colTakipTuru.Name = "colTakipTuru";
             this.colTakipTuru.Visible = true;
-            this.colTakipTuru.VisibleIndex = 15;
+            this.colTakipTuru.VisibleIndex = 16;
             // 
             // colTakipDurumu
             // 
             this.colTakipDurumu.Caption = "Takip Durumu";
             this.colTakipDurumu.Name = "colTakipDurumu";
             this.colTakipDurumu.Visible = true;
-            this.colTakipDurumu.VisibleIndex = 16;
+            this.colTakipDurumu.VisibleIndex = 17;
             // 
             // colIliskiliTakipNo
             // 
@@ -617,7 +623,7 @@
             this.colIliskiliTakipNo.FieldName = "ILISKILITAKIPNO";
             this.colIliskiliTakipNo.Name = "colIliskiliTakipNo";
             this.colIliskiliTakipNo.Visible = true;
-            this.colIliskiliTakipNo.VisibleIndex = 11;
+            this.colIliskiliTakipNo.VisibleIndex = 12;
             // 
             // colDoctor
             // 
@@ -625,7 +631,8 @@
             this.colDoctor.FieldName = "DoctorName";
             this.colDoctor.Name = "colDoctor";
             this.colDoctor.Visible = true;
-            this.colDoctor.VisibleIndex = 5;
+            this.colDoctor.VisibleIndex = 6;
+            this.colDoctor.Width = 96;
             // 
             // layoutControl1
             // 
@@ -667,6 +674,33 @@
             this.lciPatientVisitControl.TextSize = new System.Drawing.Size(0, 0);
             this.lciPatientVisitControl.TextToControlDistance = 0;
             this.lciPatientVisitControl.TextVisible = false;
+            // 
+            // colPSG
+            // 
+            this.colPSG.Caption = "Kurum";
+            this.colPSG.FieldName = "PSG";
+            this.colPSG.Name = "colPSG";
+            this.colPSG.Visible = true;
+            this.colPSG.VisibleIndex = 5;
+            this.colPSG.Width = 44;
+            // 
+            // colPVDPSG
+            // 
+            this.colPVDPSG.Caption = "Kurum";
+            this.colPVDPSG.FieldName = "PSG";
+            this.colPVDPSG.Name = "colPVDPSG";
+            this.colPVDPSG.Visible = true;
+            this.colPVDPSG.VisibleIndex = 13;
+            this.colPVDPSG.Width = 42;
+            // 
+            // colPVRPSG
+            // 
+            this.colPVRPSG.Caption = "Kurum";
+            this.colPVRPSG.FieldName = "PSG";
+            this.colPVRPSG.Name = "colPVRPSG";
+            this.colPVRPSG.Visible = true;
+            this.colPVRPSG.VisibleIndex = 6;
+            this.colPVRPSG.Width = 46;
             // 
             // PatientVisitControl
             // 
@@ -746,5 +780,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPVDTBITISSAATI;
         private DevExpress.XtraGrid.Columns.GridColumn colPVDMEDOZDURUM;
         private DevExpress.XtraGrid.Columns.GridColumn colPVDMEDANOMALI;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVDPSG;
+        private DevExpress.XtraGrid.Columns.GridColumn colPVRPSG;
+        private DevExpress.XtraGrid.Columns.GridColumn colPSG;
     }
 }
