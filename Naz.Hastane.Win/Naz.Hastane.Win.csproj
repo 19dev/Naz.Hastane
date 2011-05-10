@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -234,6 +234,12 @@
     <Compile Include="Controls\PatientVisitControl.Designer.cs">
       <DependentUpon>PatientVisitControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PatientBalanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PatientBalanceControl.Designer.cs">
+      <DependentUpon>PatientBalanceControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ColorBox.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -405,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PatientVisitControl.resx">
       <DependentUpon>PatientVisitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PatientBalanceControl.resx">
+      <DependentUpon>PatientBalanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

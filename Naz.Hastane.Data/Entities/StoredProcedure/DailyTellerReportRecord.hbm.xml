@@ -25,8 +25,5 @@
       @UserList=:UserList,
       @StartDate=:StartDate,
       @EndDate=:EndDate
-    <!--:UserList
-    --><!--:StartDate,
-    :EndDate-->
   </sql-query>
 </hibernate-mapping>

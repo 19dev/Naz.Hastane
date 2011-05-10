@@ -13,6 +13,7 @@ using Naz.Mernis.Service;
 using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
+using System.Drawing;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -23,6 +24,31 @@ namespace Naz.Hastane.Win.MDIChildForms
     public partial class SGKPatientForm : MDIChildForm
     {
         private Patient _Patient = null;
+
+        public Patient Patient
+        {
+            get { return _Patient; }
+            set
+            {
+                if (_Patient != value)
+                {
+                    _Patient = value;
+                    this.patientBalanceControl.Patient = _Patient;
+                    if (this.patientBalanceControl.Balance < 0)
+                    {
+                        this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Red;
+                        this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Red;
+                        this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Black;
+                        this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Black;
+                        this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Black;
+                    }
+                }
+            }
+        }
         private Doctor _Doctor = null;
         private PatientVisit currentPatientVisit = null;
         private bool _IsWaitingForMedulaProvision = false;
@@ -38,10 +64,10 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         public SGKPatientForm(string aPatientID) : this()
         {
-            _Patient = PatientServices.GetPatientByID(aPatientID, Session);
-            if (_Patient == null)
+            Patient = PatientServices.GetPatientByID(aPatientID, Session);
+            if (Patient == null)
             {
-                _Patient = PatientServices.GetNewSGKPatient(Session);
+                Patient = PatientServices.GetNewSGKPatient(Session);
                 //this.teTCID.Enabled = true;
             }
             else
@@ -50,7 +76,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
             InitBindings();
 
-            this.PatientVisitControl.gcPatientVisit.DataSource = _Patient.PatientVisits;
+            this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
             this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
             this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
             this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
@@ -60,7 +86,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
             this.medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
 
-            this.medulaFollowUpQueryControl.TCId = _Patient.TCId;
+            this.medulaFollowUpQueryControl.TCId = Patient.TCId;
         }
 
         public void SetNewTCID(string TCID)
@@ -73,60 +99,60 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void InitBindings()
         {
             LoadLookUps();
-            this.tePatientNo.DataBindings.Add("EditValue", _Patient, "PatientNo");
-            //this.teInsuranceCompany.DataBindings.Add("EditValue", _Patient, "InsuranceCompany.Name");
-            if (this._Patient.InsuranceCompany != null)
-                this.teInsuranceCompany.Text = this._Patient.InsuranceCompany.Code;
+            this.tePatientNo.DataBindings.Add("EditValue", Patient, "PatientNo");
+            //this.teInsuranceCompany.DataBindings.Add("EditValue", Patient, "InsuranceCompany.Name");
+            if (this.Patient.InsuranceCompany != null)
+                this.teInsuranceCompany.Text = this.Patient.InsuranceCompany.Code;
 
-            this.teTCID.DataBindings.Add("EditValue", _Patient, "TCId");
-            this.teFirstName.DataBindings.Add("EditValue", _Patient, "FirstName");
-            this.teLastName.DataBindings.Add("EditValue", _Patient, "LastName");
-            this.rgSex.DataBindings.Add("EditValue", _Patient, "Sex");
-            this.rgMaritalStatus.DataBindings.Add("EditValue", _Patient, "MaritalStatus");
-            this.teFatherName.DataBindings.Add("EditValue", _Patient, "FatherName");
-            this.teMotherName.DataBindings.Add("EditValue", _Patient, "MotherName");
-            this.teBirthPlace.DataBindings.Add("EditValue", _Patient, "BirthPlace");
-            this.deBirthDate.DataBindings.Add("EditValue", _Patient, "BirthDate");
-            this.lueStatus.DataBindings.Add("EditValue", _Patient, "Status");
-            this.lueInsuranceType.DataBindings.Add("EditValue", _Patient, "InsuranceType");
-            this.medulaSorgu.lueInsuranceType.DataBindings.Add("EditValue", _Patient, "InsuranceType");
-            this.teHomePhone2.DataBindings.Add("EditValue", _Patient, "HomePhone2");
-            this.teHomePhone1.DataBindings.Add("EditValue", _Patient, "HomePhone1");
+            this.teTCID.DataBindings.Add("EditValue", Patient, "TCId");
+            this.teFirstName.DataBindings.Add("EditValue", Patient, "FirstName");
+            this.teLastName.DataBindings.Add("EditValue", Patient, "LastName");
+            this.rgSex.DataBindings.Add("EditValue", Patient, "Sex");
+            this.rgMaritalStatus.DataBindings.Add("EditValue", Patient, "MaritalStatus");
+            this.teFatherName.DataBindings.Add("EditValue", Patient, "FatherName");
+            this.teMotherName.DataBindings.Add("EditValue", Patient, "MotherName");
+            this.teBirthPlace.DataBindings.Add("EditValue", Patient, "BirthPlace");
+            this.deBirthDate.DataBindings.Add("EditValue", Patient, "BirthDate");
+            this.lueStatus.DataBindings.Add("EditValue", Patient, "Status");
+            this.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
+            this.medulaSorgu.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
+            this.teHomePhone2.DataBindings.Add("EditValue", Patient, "HomePhone2");
+            this.teHomePhone1.DataBindings.Add("EditValue", Patient, "HomePhone1");
 
-            this.medulaSorgu.lueTransferorInstitution.DataBindings.Add("EditValue", _Patient, "TransferorInstitution");
+            this.medulaSorgu.lueTransferorInstitution.DataBindings.Add("EditValue", Patient, "TransferorInstitution");
             
-            this.rgIDType.DataBindings.Add("EditValue", _Patient, "IDType");
-            this.teIDNO.DataBindings.Add("EditValue", _Patient, "IDNO");
-            this.deIDDate.DataBindings.Add("EditValue", _Patient, "IDDate");
-            this.teIDPlace.DataBindings.Add("EditValue", _Patient, "IDPlace");
-            this.lueNationality.DataBindings.Add("EditValue", _Patient, "Nationality");
-            this.teHomeAddress.DataBindings.Add("EditValue", _Patient, "HomeAddress");
-            this.teHomeDistrict.DataBindings.Add("EditValue", _Patient, "HomeDistrict");
-            this.teHomeTown.DataBindings.Add("EditValue", _Patient, "HomeTown");
-            this.teHomePostCode.DataBindings.Add("EditValue", _Patient, "HomePostCode");
-            this.lueHomeCity.DataBindings.Add("EditValue", _Patient, "HomeCity");
+            this.rgIDType.DataBindings.Add("EditValue", Patient, "IDType");
+            this.teIDNO.DataBindings.Add("EditValue", Patient, "IDNO");
+            this.deIDDate.DataBindings.Add("EditValue", Patient, "IDDate");
+            this.teIDPlace.DataBindings.Add("EditValue", Patient, "IDPlace");
+            this.lueNationality.DataBindings.Add("EditValue", Patient, "Nationality");
+            this.teHomeAddress.DataBindings.Add("EditValue", Patient, "HomeAddress");
+            this.teHomeDistrict.DataBindings.Add("EditValue", Patient, "HomeDistrict");
+            this.teHomeTown.DataBindings.Add("EditValue", Patient, "HomeTown");
+            this.teHomePostCode.DataBindings.Add("EditValue", Patient, "HomePostCode");
+            this.lueHomeCity.DataBindings.Add("EditValue", Patient, "HomeCity");
 
-            this.teOfficer.DataBindings.Add("EditValue", _Patient, "Officer");
-            this.teProfession.DataBindings.Add("EditValue", _Patient, "Profession");
-            this.teEMSNo.DataBindings.Add("EditValue", _Patient, "EMSNO");
-            this.teProtocolNo.DataBindings.Add("EditValue", _Patient, "ProtocolNo");
-            this.teBAGNO.DataBindings.Add("EditValue", _Patient, "BAGNO");
-            this.teSSKSicilNo.DataBindings.Add("EditValue", _Patient, "YKARTNO");
-            this.teSevkEdilenYer.DataBindings.Add("EditValue", _Patient, "GELHAST");
-            this.lueSigortaMudurlugu.DataBindings.Add("EditValue", _Patient, "SIGMUD");
-            this.teNufusaKayitliIl.DataBindings.Add("EditValue", _Patient, "RegisteredCity");
-            this.teNufusaKayitliIlce.DataBindings.Add("EditValue", _Patient, "RegisteredTown");
-            this.teSigortaliKartNo.DataBindings.Add("EditValue", _Patient, "SIGORTALIKARTNO");
+            this.teOfficer.DataBindings.Add("EditValue", Patient, "Officer");
+            this.teProfession.DataBindings.Add("EditValue", Patient, "Profession");
+            this.teEMSNo.DataBindings.Add("EditValue", Patient, "EMSNO");
+            this.teProtocolNo.DataBindings.Add("EditValue", Patient, "ProtocolNo");
+            this.teBAGNO.DataBindings.Add("EditValue", Patient, "BAGNO");
+            this.teSSKSicilNo.DataBindings.Add("EditValue", Patient, "YKARTNO");
+            this.teSevkEdilenYer.DataBindings.Add("EditValue", Patient, "GELHAST");
+            this.lueSigortaMudurlugu.DataBindings.Add("EditValue", Patient, "SIGMUD");
+            this.teNufusaKayitliIl.DataBindings.Add("EditValue", Patient, "RegisteredCity");
+            this.teNufusaKayitliIlce.DataBindings.Add("EditValue", Patient, "RegisteredTown");
+            this.teSigortaliKartNo.DataBindings.Add("EditValue", Patient, "SIGORTALIKARTNO");
 
-            this.teJobName.DataBindings.Add("EditValue", _Patient, "JobName");
-            this.teJobNo.DataBindings.Add("EditValue", _Patient, "JobNo");
-            this.meJobAddress.DataBindings.Add("EditValue", _Patient, "JobAddress");
-            this.lueJobCity.DataBindings.Add("EditValue", _Patient, "JobCity");
-            this.teJobPostCode.DataBindings.Add("EditValue", _Patient, "JobPostCode");
-            this.teJobPhone1.DataBindings.Add("EditValue", _Patient, "JobPhone1");
-            this.teJobPhone2.DataBindings.Add("EditValue", _Patient, "JobPhone2");
-            this.teJobFax.DataBindings.Add("EditValue", _Patient, "JobFax");
-            this.teEmail.DataBindings.Add("EditValue", _Patient, "Email");
+            this.teJobName.DataBindings.Add("EditValue", Patient, "JobName");
+            this.teJobNo.DataBindings.Add("EditValue", Patient, "JobNo");
+            this.meJobAddress.DataBindings.Add("EditValue", Patient, "JobAddress");
+            this.lueJobCity.DataBindings.Add("EditValue", Patient, "JobCity");
+            this.teJobPostCode.DataBindings.Add("EditValue", Patient, "JobPostCode");
+            this.teJobPhone1.DataBindings.Add("EditValue", Patient, "JobPhone1");
+            this.teJobPhone2.DataBindings.Add("EditValue", Patient, "JobPhone2");
+            this.teJobFax.DataBindings.Add("EditValue", Patient, "JobFax");
+            this.teEmail.DataBindings.Add("EditValue", Patient, "Email");
         }
 
         private void LoadLookUps()
@@ -145,39 +171,39 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SavePatient()
         {
-            if (String.IsNullOrWhiteSpace(_Patient.FirstName))
+            if (String.IsNullOrWhiteSpace(Patient.FirstName))
             {
                 XtraMessageBox.Show("Lütfen Hastanın Adını Kontrol Ediniz", "Hasta Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-            if (String.IsNullOrWhiteSpace(_Patient.LastName))
+            if (String.IsNullOrWhiteSpace(Patient.LastName))
             {
                 XtraMessageBox.Show("Lütfen Hastanın Soyadını Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (_Patient.BirthDate == null)
+            if (Patient.BirthDate == null)
             {
                 XtraMessageBox.Show("Lütfen Hastanın Doğum Tarihini Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            _Patient.PatientLimit = 0;
+            Patient.PatientLimit = 0;
 
             try
             {
-                if (String.IsNullOrWhiteSpace(_Patient.PatientNo))
+                if (String.IsNullOrWhiteSpace(Patient.PatientNo))
                 {
-                    _Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
-                    _Patient.DATE_CREATE = DateTime.Now;
-                    PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
-                    (this.MdiParent as frmMain).OpenSGKPatient(_Patient.PatientNo);
+                    Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
+                    Patient.DATE_CREATE = DateTime.Now;
+                    PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
+                    (this.MdiParent as frmMain).OpenSGKPatient(Patient.PatientNo);
                     this.Close();
                 }
                 else
                 {
-                    _Patient.USER_ID_UPDATE = UIUtilities.CurrentUser.USER_ID;
-                    _Patient.DATE_UPDATE = DateTime.Now;
-                    PatientServices.SavePatient(Session, _Patient, UIUtilities.CurrentUser);
+                    Patient.USER_ID_UPDATE = UIUtilities.CurrentUser.USER_ID;
+                    Patient.DATE_UPDATE = DateTime.Now;
+                    PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
                 }
             }
             catch (Exception error)
@@ -218,32 +244,32 @@ namespace Naz.Hastane.Win.MDIChildForms
             EnableForMernis(true);
             if (this.mernisSorgu.IsOK)
             {
-                _Patient.TCId = this.mernisSorgu.NufusCuzdani.TCKimlikNo.ToString();
-                _Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
-                _Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
-                _Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
-                _Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
+                Patient.TCId = this.mernisSorgu.NufusCuzdani.TCKimlikNo.ToString();
+                Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
+                Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
+                Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
+                Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
                 if (this.mernisSorgu.KisiBilgisi.TemelBilgisi.Cinsiyet == CinsiyetTipi.Erkek)
-                    _Patient.Sex = "1";
+                    Patient.Sex = "1";
                 else
-                    _Patient.Sex = "2";
-                _Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
+                    Patient.Sex = "2";
+                Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
                     this.mernisSorgu.NufusCuzdani.DogumTarih.Ay,
                     this.mernisSorgu.NufusCuzdani.DogumTarih.Gun);
-                _Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
+                Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
 
                 if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
-                    _Patient.MaritalStatus = "E";
+                    Patient.MaritalStatus = "E";
                 else
-                    _Patient.MaritalStatus = "B";
+                    Patient.MaritalStatus = "B";
 
-                _Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
-                _Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
-                _Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
-                _Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
+                Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
+                Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
+                Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
+                Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
                     this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
                     this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
-                _Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
+                Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
 
                 SavePatient(); 
             }
@@ -263,7 +289,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (frm.IsSelected && frm.Doctor != null)
             {
                 _Doctor = frm.Doctor;
-                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this._Patient, _Doctor);
+                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor);
                 RefreshGrid();
                 CallMedulaProvision();
             }
@@ -331,10 +357,10 @@ namespace Naz.Hastane.Win.MDIChildForms
         private string GetRelatedFollowUpNo()
         {
             string result = "";
-            for (int i = 0; i < this._Patient.PatientVisits.Count; i++)
+            for (int i = 0; i < this.Patient.PatientVisits.Count; i++)
             {
-                if (this._Patient.PatientVisits[i].VisitDate.Date == DateTime.Today)
-                    result = this._Patient.PatientVisits[i].TAKIPNO;
+                if (this.Patient.PatientVisits[i].VisitDate.Date == DateTime.Today)
+                    result = this.Patient.PatientVisits[i].TAKIPNO;
                 else
                     break;
             }
@@ -352,7 +378,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     {
                         if (currentPatientVisit != null)
                         {
-                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, e.Result);
+                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this.Patient, currentPatientVisit, e.Result);
                             RefreshGrid();
                         }
                     }
@@ -410,7 +436,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                             //mpr.BranchCode                      = e.Result.tesisKodu;
                             //mpr.BranchCode                      = e.Result.takipDurumu;
 
-                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this._Patient, currentPatientVisit, mpr);
+                            PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this.Patient, currentPatientVisit, mpr);
                             RefreshGrid();
                         }
                     }
@@ -448,7 +474,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 VATTotal = Math.Round(ProductTotal * VATPercent / 100.0, 2);
                 InvoiceTotal = Math.Round(ProductTotal * (1 + VATPercent / 100.0), 2);
 
-                UIUtilities.PrintInvoice(Session, _Patient, pvds,
+                UIUtilities.PrintInvoice(Session, Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     VATTotal,
@@ -480,7 +506,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 pvds.Add(pvd);
                 ProductTotal = pvd.ADET * pvd.PatientPrice;
 
-                UIUtilities.PrintVoucher(Session, _Patient, pvds,
+                UIUtilities.PrintVoucher(Session, Patient, pvds,
                     paymentType, POSType,
                     ProductTotal,
                     NewTellerVoucherNo,
@@ -493,7 +519,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbTaahutname_Click(object sender, EventArgs e)
         {
-            UIUtilities.PrintTaahhutname(_Patient, true);
+            UIUtilities.PrintTaahhutname(Patient, true);
         }
 
         private void sbDeletePatientVisitDetail_Click(object sender, EventArgs e)
@@ -622,7 +648,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void UpdatePatientVisitWithMedulaProvisionDelete(string takipNo)
         {
-            if (PatientServices.UpdatePatientVisitWithMedulaProvisionDelete(Session, UIUtilities.CurrentUser, _Patient, takipNo))
+            if (PatientServices.UpdatePatientVisitWithMedulaProvisionDelete(Session, UIUtilities.CurrentUser, Patient, takipNo))
                 RefreshGrid();
         }
 
@@ -649,16 +675,16 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbAddPatientVisitDetail_Click(object sender, EventArgs e)
         {
             currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
-            if (_Patient != null && _Patient.InsuranceCompany != null && currentPatientVisit != null)
+            if (Patient != null && Patient.InsuranceCompany != null && currentPatientVisit != null)
             {
                 SelectFunctionForm frm = new SelectFunctionForm();
                 frm.PatientVisit = currentPatientVisit;
-                frm.PriceListCode = _Patient.InsuranceCompany.YFIYLIST;
+                frm.PriceListCode = Patient.InsuranceCompany.YFIYLIST;
                 frm.ShowDialog();
 
                 if (frm.IsSelected)
                 {
-                    PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, _Patient, currentPatientVisit, frm.SelectedProducts);
+                    PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, Patient, currentPatientVisit, frm.SelectedProducts);
                     RefreshGrid();
                 }
             }
@@ -696,11 +722,21 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
         {
-            if (_Patient.InsuranceCompany == newInsuranceCompany) return;
+            if (Patient.InsuranceCompany == newInsuranceCompany) return;
             ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm();
             frm.ShowDialog();
             if (frm.IsOK)
-            { }
+            {
+                try
+                {
+                    PatientServices.ChangeInsuranceCompany(Session, frm.GetSelectedVisits(), frm.PatientVisitDetails, newInsuranceCompany);
+                    XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarısız Oldu:" + e.Message, "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
         #endregion

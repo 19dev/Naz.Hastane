@@ -129,6 +129,7 @@ namespace Naz.Hastane.Data
                     )
                 .Mappings(m => m.HbmMappings.AddClasses(typeof(AccountingDailySummary)))
                 .Mappings(m => m.HbmMappings.AddClasses(typeof(DailyTellerReportRecord)))
+                .Mappings(m => m.HbmMappings.AddClasses(typeof(PatientBalanceRecord)))
 
                 .ExposeConfiguration(x => x.SetInterceptor(intercepter))
                   

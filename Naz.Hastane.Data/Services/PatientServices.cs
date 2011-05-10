@@ -1009,14 +1009,24 @@ namespace Naz.Hastane.Data.Services
 
         public static void ChangeInsuranceCompany(ISession session, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
         {
+            if (pvs.Count == 0) return;
+
             using (ITransaction transaction = session.BeginTransaction())
             {
                 try
                 {
+                    pvs[0].Patient.InsuranceCompany = insuranceCompany;
+                    session.Update(pvs[0].Patient);
+
                     foreach (PatientVisit pv in pvs)
                     {
                         pv.PSG = insuranceCompany.Code;
                         session.Update(pv);
+                        foreach (PatientVisitRecord pvr in pv.PatientVisitRecords)
+                        {
+                            pvr.PSG = pv.PSG;
+                            session.Update(pvr);
+                        }
                     }
                     foreach (PatientVisitDetailWithProduct pvdwp in pvdwps)
                     {

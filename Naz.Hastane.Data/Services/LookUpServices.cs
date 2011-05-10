@@ -509,6 +509,19 @@ namespace Naz.Hastane.Data.Services
 
         }
 
+        public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)
+        {
+            if (patient == null) return new List<PatientBalanceRecord>();
+
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery("sp_GetPatientBalance")
+                    .SetString("PatientNo", patient.PatientNo)
+                    .List<PatientBalanceRecord>();
+            }
+
+        }
+
         #region ID Generators
         public static string GetNewSystemSettingNo(string key, bool updateDB = true)
         {

@@ -18,7 +18,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         public bool IsOK { get { return _IsOK; } }
 
         private IList<PatientVisit> _PatientVisits = new List<PatientVisit>();
-        private IList<PatientVisitDetailWithProduct> _PatientVisitDetails = new List<PatientVisitDetailWithProduct>();
+        public IList<PatientVisitDetailWithProduct> PatientVisitDetails = new List<PatientVisitDetailWithProduct>();
 
         private GridCheckMarksSelectionWeb selectionVisit;
 
@@ -53,8 +53,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             gvPatientVisitDetails.BeginDataUpdate();
             try
             {
-                _PatientVisitDetails = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
-                this.gcPatientVisitDetails.DataSource = _PatientVisitDetails;
+                PatientVisitDetails = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
+                this.gcPatientVisitDetails.DataSource = PatientVisitDetails;
 
                 gvPatientVisitDetails.ClearSorting();
                 gvPatientVisitDetails.Columns["PatientVisitDetail.PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
@@ -72,7 +72,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             QueryPatientVisitDetails();
         }
 
-        private IList<PatientVisit> GetSelectedVisits()
+        public IList<PatientVisit> GetSelectedVisits()
         {
             List<PatientVisit> pvs = new List<PatientVisit>();
             for (int i = 0; i < selectionVisit.SelectedCount; i++)
@@ -86,7 +86,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbSave_Click(object sender, EventArgs e)
         {
             _IsOK = true;
-            PatientServices.ChangeInsuranceCompany(_Session, GetSelectedVisits(), _PatientVisitDetails, _InsuranceCompany);
+            PatientServices.ChangeInsuranceCompany(_Session, GetSelectedVisits(), PatientVisitDetails, _InsuranceCompany);
             this.Close();
         }
 
