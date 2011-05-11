@@ -197,8 +197,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
                     Patient.DATE_CREATE = DateTime.Now;
                     PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
-                    (this.MdiParent as frmMain).OpenSGKPatient(Patient.PatientNo);
-                    this.Close();
+                    OpenNewForm();
                 }
                 else
                 {
@@ -213,6 +212,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
+        private void OpenNewForm()
+        {
+            (this.MdiParent as frmMain).OpenSGKPatient(Patient.PatientNo);
+            this.Close();
+        }
         #region Mernis
 
         private void sbMernis_Click(object sender, EventArgs e)
@@ -285,12 +289,12 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void ProcessNewPolyclinic()
         {
-            SelectPolyclinicForm frm = new SelectPolyclinicForm();
+            SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
             frm.ShowDialog();
             if (frm.IsSelected && frm.Doctor != null)
             {
                 _Doctor = frm.Doctor;
-                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor);
+                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
                 RefreshGrid();
                 CallMedulaProvision();
             }
@@ -375,7 +379,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (this.medulaSorgu.IsOK)
                 {
                     XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
-                    if (e.Result.SonucKodu == "0000")
+                    if (e.Result.SonucKodu == "0000" || e.Result.SonucKodu == "9000")
                     {
                         if (currentPatientVisit != null)
                         {
@@ -735,6 +739,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, frm.GetSelectedVisits(), frm.PatientVisitDetails, newInsuranceCompany);
                     XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OpenNewForm();
                 }
                 catch (Exception e)
                 {

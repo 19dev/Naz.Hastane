@@ -53,6 +53,7 @@
             this.colPVDTBITISSAATI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPVDMEDOZDURUM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPVDMEDANOMALI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVDPSG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPatientVisit = new DevExpress.XtraGrid.GridControl();
             this.gvPatientVisitRecord = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colVisitRecordDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,6 +66,7 @@
             this.colVisitRecordControl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitRecordExceptionalStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitRecordAddQuery = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPVRPSG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvPatientVisit = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colVisitNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,12 +86,10 @@
             this.colTakipDurumu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIliskiliTakipNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPSG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colPSG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPVDPSG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPVRPSG = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).BeginInit();
@@ -331,6 +331,15 @@
             this.colPVDMEDANOMALI.VisibleIndex = 22;
             this.colPVDMEDANOMALI.Width = 45;
             // 
+            // colPVDPSG
+            // 
+            this.colPVDPSG.Caption = "Kurum";
+            this.colPVDPSG.FieldName = "PSG";
+            this.colPVDPSG.Name = "colPVDPSG";
+            this.colPVDPSG.Visible = true;
+            this.colPVDPSG.VisibleIndex = 13;
+            this.colPVDPSG.Width = 42;
+            // 
             // gcPatientVisit
             // 
             this.gcPatientVisit.DataMember = null;
@@ -451,6 +460,15 @@
             this.colVisitRecordAddQuery.Name = "colVisitRecordAddQuery";
             this.colVisitRecordAddQuery.Visible = true;
             this.colVisitRecordAddQuery.VisibleIndex = 10;
+            // 
+            // colPVRPSG
+            // 
+            this.colPVRPSG.Caption = "Kurum";
+            this.colPVRPSG.FieldName = "PSG";
+            this.colPVRPSG.Name = "colPVRPSG";
+            this.colPVRPSG.Visible = true;
+            this.colPVRPSG.VisibleIndex = 6;
+            this.colPVRPSG.Width = 46;
             // 
             // gvPatientVisit
             // 
@@ -620,7 +638,7 @@
             // colIliskiliTakipNo
             // 
             this.colIliskiliTakipNo.Caption = "İlişkili Takip No";
-            this.colIliskiliTakipNo.FieldName = "ILISKILITAKIPNO";
+            this.colIliskiliTakipNo.FieldName = "RelatedFollowUpNo";
             this.colIliskiliTakipNo.Name = "colIliskiliTakipNo";
             this.colIliskiliTakipNo.Visible = true;
             this.colIliskiliTakipNo.VisibleIndex = 12;
@@ -633,6 +651,15 @@
             this.colDoctor.Visible = true;
             this.colDoctor.VisibleIndex = 6;
             this.colDoctor.Width = 96;
+            // 
+            // colPSG
+            // 
+            this.colPSG.Caption = "Kurum";
+            this.colPSG.FieldName = "PSG";
+            this.colPSG.Name = "colPSG";
+            this.colPSG.Visible = true;
+            this.colPSG.VisibleIndex = 5;
+            this.colPSG.Width = 44;
             // 
             // layoutControl1
             // 
@@ -674,33 +701,6 @@
             this.lciPatientVisitControl.TextSize = new System.Drawing.Size(0, 0);
             this.lciPatientVisitControl.TextToControlDistance = 0;
             this.lciPatientVisitControl.TextVisible = false;
-            // 
-            // colPSG
-            // 
-            this.colPSG.Caption = "Kurum";
-            this.colPSG.FieldName = "PSG";
-            this.colPSG.Name = "colPSG";
-            this.colPSG.Visible = true;
-            this.colPSG.VisibleIndex = 5;
-            this.colPSG.Width = 44;
-            // 
-            // colPVDPSG
-            // 
-            this.colPVDPSG.Caption = "Kurum";
-            this.colPVDPSG.FieldName = "PSG";
-            this.colPVDPSG.Name = "colPVDPSG";
-            this.colPVDPSG.Visible = true;
-            this.colPVDPSG.VisibleIndex = 13;
-            this.colPVDPSG.Width = 42;
-            // 
-            // colPVRPSG
-            // 
-            this.colPVRPSG.Caption = "Kurum";
-            this.colPVRPSG.FieldName = "PSG";
-            this.colPVRPSG.Name = "colPVRPSG";
-            this.colPVRPSG.Visible = true;
-            this.colPVRPSG.VisibleIndex = 6;
-            this.colPVRPSG.Width = 46;
             // 
             // PatientVisitControl
             // 

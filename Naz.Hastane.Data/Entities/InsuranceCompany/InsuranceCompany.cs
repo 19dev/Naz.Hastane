@@ -11,6 +11,15 @@ namespace Naz.Hastane.Data.Entities
         public static readonly string SGKAcilCode = "SLK";
         public static readonly string NormalPatientCode = "KRM000";
         public static readonly string SpecialPatientCode = "KRM008";
+
+        public virtual bool IsSGK()
+        {
+            return (Code == SGKCode);
+        }
+        public virtual bool IsSGKAcil()
+        {
+            return (Code == SGKAcilCode);
+        }
         /// <summary>
         /// PSG
         /// </summary>

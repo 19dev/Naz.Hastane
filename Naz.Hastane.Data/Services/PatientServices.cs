@@ -13,6 +13,7 @@ using Naz.Hastane.Data.Entities.Medula;
 using Naz.Hastane.Data.Entities.Accounting;
 using Naz.Utilities.Classes;
 using Naz.Hastane.Data.DTO;
+using Naz.Hastane.Data.Entities.Logs;
 
 namespace Naz.Hastane.Data.Services
 {
@@ -211,7 +212,7 @@ namespace Naz.Hastane.Data.Services
         /// <param name="user"></param>
         /// <param name="patient"></param>
         /// <param name="doctor"></param>
-        public static PatientVisit AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor)
+        public static PatientVisit AddSGKPolyclinic(ISession session, User user, Patient patient, Doctor doctor, bool sameDay)
         {
             if (patient == null || doctor == null)
                 return null;
@@ -222,7 +223,7 @@ namespace Naz.Hastane.Data.Services
 
             PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
-            if (IsSGKSameDay(patient))
+            if (sameDay)
                 foreach (var sae in LookUpServices.GetSGKAutoExaminationSameDays(doctor.Service))
                 {
                     if (IsAutoExamItemValid(patient, sae))
@@ -246,13 +247,14 @@ namespace Naz.Hastane.Data.Services
 
         public static bool IsSGKSameDay(Patient patient)
         {
-            return (patient.PatientVisits.Count >= 2 && 
+            return ((patient.InsuranceCompany.IsSGK() || patient.InsuranceCompany.IsSGKAcil()) && 
+                patient.PatientVisits.Count >= 2 && 
                 patient.PatientVisits[0].VisitDate.Date == patient.PatientVisits[1].VisitDate.Date);
         }
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
         {
-            if (patient.InsuranceCompany.Code == InsuranceCompany.SGKCode)
+            if (patient.InsuranceCompany.IsSGK())
             {
                 if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
                 // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
@@ -413,22 +415,27 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                double patientTotal = 0;
-                double companyTotal = 0;
-
-                foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
-                {
-                    patientTotal += pvd.ADET * pvd.PatientPrice;
-                    companyTotal += pvd.ADET * pvd.CompanyPrice;
-                }
-                pv.PatientTotal   = patientTotal;
-                pv.InsuranceTotal = companyTotal;
-                pv.USER_ID_UPDATE = user.USER_ID;
-                pv.DATE_UPDATE    = DateTime.Now;
+                UpdatePatientVisitFromDetails(user, pv);
 
                 session.Update(pv);
                 transaction.Commit();
             }
+
+        }
+        public static void UpdatePatientVisitFromDetails(User user, PatientVisit pv)
+        {
+            double patientTotal = 0;
+            double companyTotal = 0;
+
+            foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
+            {
+                patientTotal += pvd.ADET * pvd.PatientPrice;
+                companyTotal += pvd.ADET * pvd.CompanyPrice;
+            }
+            pv.PatientTotal = patientTotal;
+            pv.InsuranceTotal = companyTotal;
+            pv.USER_ID_UPDATE = user.USER_ID;
+            pv.DATE_UPDATE = DateTime.Now;
 
         }
 
@@ -1013,6 +1020,15 @@ namespace Naz.Hastane.Data.Services
                 try
                 {
                     Patient patient = pvs[0].Patient;
+
+                    LOGKURUM_DEGISTI log = new LOGKURUM_DEGISTI();
+                    log.KD_ID = Convert.ToDecimal(LookUpServices.GetNewLOGKURUM_DEGISTINo(user));
+                    log.KNR = patient.PatientNo;
+                    log.TARIH = DateTime.Now;
+                    log.EPSG = patient.InsuranceCompany.Code;
+                    log.YPSG = insuranceCompany.Code;
+                    log.OHASTATOP = 0; //??
+
                     patient.InsuranceCompany = insuranceCompany;
                     patient.USER_ID_UPDATE = user.USER_ID;
                     patient.DATE_UPDATE = DateTime.Now;
@@ -1037,6 +1053,23 @@ namespace Naz.Hastane.Data.Services
                         pvdwp.PatientVisitDetail.PSG = insuranceCompany.Code;
                         session.Update(pvdwp.PatientVisitDetail);
                     }
+                    foreach (PatientVisit pv in pvs)
+                    {
+                        log.EHASTATOP += pv.PatientTotal;
+                        log.EKURUMTOP += pv.InsuranceTotal;
+
+                        UpdatePatientVisitFromDetails(user, pv);
+
+                        log.YHASTATOP += pv.PatientTotal;
+                        log.YKURUMTOP += pv.InsuranceTotal;
+
+                        session.Update(pv);
+                    }
+
+                    log.USER_ID = user.USER_ID;
+                    log.DATE_CREATE = DateTime.Now;
+                    session.Save(log);
+
                     transaction.Commit();
                 }
                 catch

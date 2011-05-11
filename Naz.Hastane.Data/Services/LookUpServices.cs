@@ -665,6 +665,10 @@ namespace Naz.Hastane.Data.Services
         {
             UpdateSystemSettingNo("MAKNUM" + user.VEZNE, value);
         }
+        public static string GetNewLOGKURUM_DEGISTINo(User user, bool updateDB = true)
+        {
+            return GetNewSystemSettingNo("KD_ID", updateDB);
+        }
 
         #endregion
 

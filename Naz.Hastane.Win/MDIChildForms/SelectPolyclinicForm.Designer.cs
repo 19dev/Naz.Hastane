@@ -34,6 +34,7 @@
             this.gvPolyclinics = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colService = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoctor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQueueNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -42,7 +43,8 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.colQueueNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ceSameDay = new DevExpress.XtraEditors.CheckEdit();
+            this.lciSameDay = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcView)).BeginInit();
@@ -54,10 +56,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSameDay)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ceSameDay);
             this.layoutControl1.Controls.Add(this.sbClose);
             this.layoutControl1.Controls.Add(this.gcView);
             this.layoutControl1.Controls.Add(this.sbSelect);
@@ -71,9 +76,9 @@
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(521, 287);
+            this.sbClose.Location = new System.Drawing.Point(557, 378);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(163, 22);
+            this.sbClose.Size = new System.Drawing.Size(127, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 7;
             this.sbClose.Text = "Kapat";
@@ -84,7 +89,7 @@
             this.gcView.Location = new System.Drawing.Point(12, 12);
             this.gcView.MainView = this.gvPolyclinics;
             this.gcView.Name = "gcView";
-            this.gcView.Size = new System.Drawing.Size(505, 457);
+            this.gcView.Size = new System.Drawing.Size(541, 457);
             this.gcView.TabIndex = 4;
             this.gcView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPolyclinics});
@@ -120,11 +125,20 @@
             this.colDoctor.VisibleIndex = 0;
             this.colDoctor.Width = 179;
             // 
+            // colQueueNo
+            // 
+            this.colQueueNo.Caption = "Hasta Sayısı";
+            this.colQueueNo.FieldName = "QueueNo";
+            this.colQueueNo.Name = "colQueueNo";
+            this.colQueueNo.Visible = true;
+            this.colQueueNo.VisibleIndex = 2;
+            this.colQueueNo.Width = 67;
+            // 
             // sbSelect
             // 
-            this.sbSelect.Location = new System.Drawing.Point(521, 70);
+            this.sbSelect.Location = new System.Drawing.Point(557, 64);
             this.sbSelect.Name = "sbSelect";
-            this.sbSelect.Size = new System.Drawing.Size(163, 22);
+            this.sbSelect.Size = new System.Drawing.Size(127, 22);
             this.sbSelect.StyleController = this.layoutControl1;
             this.sbSelect.TabIndex = 6;
             this.sbSelect.Text = "Seç";
@@ -141,7 +155,8 @@
             this.layoutControlItem4,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.lciSameDay});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(696, 481);
@@ -154,7 +169,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(509, 461);
+            this.layoutControlItem1.Size = new System.Drawing.Size(545, 461);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -164,9 +179,9 @@
             // 
             this.layoutControlItem3.Control = this.sbSelect;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(509, 58);
+            this.layoutControlItem3.Location = new System.Drawing.Point(545, 52);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(167, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(131, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -176,9 +191,9 @@
             // 
             this.layoutControlItem4.Control = this.sbClose;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(509, 275);
+            this.layoutControlItem4.Location = new System.Drawing.Point(545, 366);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(167, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(131, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
@@ -187,38 +202,51 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(509, 84);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(545, 78);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(167, 191);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(131, 288);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(509, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(545, 23);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(167, 58);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(131, 29);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(509, 301);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(545, 392);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(167, 160);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(131, 69);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // colQueueNo
+            // ceSameDay
             // 
-            this.colQueueNo.Caption = "Hasta Sayısı";
-            this.colQueueNo.FieldName = "QueueNo";
-            this.colQueueNo.Name = "colQueueNo";
-            this.colQueueNo.Visible = true;
-            this.colQueueNo.VisibleIndex = 2;
-            this.colQueueNo.Width = 67;
+            this.ceSameDay.Location = new System.Drawing.Point(557, 12);
+            this.ceSameDay.Name = "ceSameDay";
+            this.ceSameDay.Properties.Caption = "İkinci Muayene";
+            this.ceSameDay.Size = new System.Drawing.Size(127, 19);
+            this.ceSameDay.StyleController = this.layoutControl1;
+            this.ceSameDay.TabIndex = 8;
+            this.ceSameDay.CheckedChanged += new System.EventHandler(this.ceSameDay_CheckedChanged);
+            // 
+            // lciSameDay
+            // 
+            this.lciSameDay.Control = this.ceSameDay;
+            this.lciSameDay.CustomizationFormText = "İkinci Muayene";
+            this.lciSameDay.Location = new System.Drawing.Point(545, 0);
+            this.lciSameDay.Name = "lciSameDay";
+            this.lciSameDay.Size = new System.Drawing.Size(131, 23);
+            this.lciSameDay.Text = "İkinci Muayene";
+            this.lciSameDay.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSameDay.TextToControlDistance = 0;
+            this.lciSameDay.TextVisible = false;
             // 
             // SelectPolyclinicForm
             // 
@@ -239,6 +267,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSameDay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +290,7 @@
         public DevExpress.XtraGrid.Columns.GridColumn colDoctor;
         public DevExpress.XtraGrid.Columns.GridColumn colService;
         private DevExpress.XtraGrid.Columns.GridColumn colQueueNo;
+        private DevExpress.XtraEditors.CheckEdit ceSameDay;
+        private DevExpress.XtraLayout.LayoutControlItem lciSameDay;
     }
 }

@@ -118,7 +118,7 @@ namespace Naz.Hastane.Win.Controls
                 mpr.SonucKodu = e.Result.sonucKodu;
                 mpr.SonucMesaji = e.Result.sonucMesaji;
 
-                if (e.Result.sonucKodu == "0000")
+                if (e.Result.sonucKodu == "0000" || e.Result.sonucKodu == "9000")
                 {
                     mpr.Ad = e.Result.hastaBilgileri.ad;
                     mpr.Soyad = e.Result.hastaBilgileri.soyad;
@@ -126,6 +126,7 @@ namespace Naz.Hastane.Win.Controls
                     mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
                     mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
                     mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
+                    this.lueInsuranceType.EditValue = e.Result.hastaBilgileri.sigortaliTuru;
 
                     mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
                     mpr.TakipNo = e.Result.takipNo;

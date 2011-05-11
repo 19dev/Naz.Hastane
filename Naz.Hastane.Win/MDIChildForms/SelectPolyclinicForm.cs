@@ -13,11 +13,23 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private bool _IsSelected = false;
         public bool IsSelected { get { return _IsSelected; } }
+        public bool SameDay;
 
         public SelectPolyclinicForm()
         {
             InitializeComponent();
+        }
+        public SelectPolyclinicForm(bool sameDay) :this()
+        {
+
             //this.AcceptButton = this.sbSelect;
+            if (sameDay)
+                this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            else
+                this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.ceSameDay.Visible = sameDay;
+            this.ceSameDay.Checked = sameDay;
+            SameDay = sameDay;
 
             var doctors = LookUpServices.GetSGKDoctors(Session);
             gcView.DataSource = doctors;
@@ -49,6 +61,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ceSameDay_CheckedChanged(object sender, EventArgs e)
+        {
+            SameDay = this.ceSameDay.Checked;
         }
     }
 }

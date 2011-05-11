@@ -92,6 +92,8 @@
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
     <Compile Include="Entities\Accounting\Invoice.cs" />
     <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
+    <Compile Include="Entities\Logs\LOGKURUM_DEGISTI.cs" />
+    <Compile Include="Entities\Logs\LOGTCKIMLIKNOSORGU.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
@@ -200,6 +202,8 @@
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyMap.cs" />
     <Compile Include="Mappings\Accounting\InvoiceMap.cs" />
     <Compile Include="Mappings\Accounting\InvoiceTempMap.cs" />
+    <Compile Include="Mappings\Logs\LOGKURUM_DEGISTIMap.cs" />
+    <Compile Include="Mappings\Logs\LOGTCKIMLIKNOSORGUMap.cs" />
     <Compile Include="Mappings\LookUp\General\BloodTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\PaymentTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\YesNoMap.cs" />
