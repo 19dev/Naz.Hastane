@@ -12,6 +12,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class PrintPreviewForm : MDIChildForm
     {
+
         public PrintPreviewForm()
         {
             InitializeComponent();
@@ -29,6 +30,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             T report = new T();
             printControl.PrintingSystem = report.PrintingSystem;
             report.DataSource = dataSource;
+            report.CreateDocument();
+        }
+
+        public void ShowReport(DevExpress.XtraReports.UI.XtraReport report)
+        {
+            printControl.PrintingSystem = report.PrintingSystem;
             report.CreateDocument();
         }
 

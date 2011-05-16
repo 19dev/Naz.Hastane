@@ -18,7 +18,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         public bool IsOK { get { return _IsOK; } }
 
         private IList<PatientVisit> _PatientVisits = new List<PatientVisit>();
-        public IList<PatientVisitDetailWithProduct> PatientVisitDetails = new List<PatientVisitDetailWithProduct>();
+        public IList<PatientVisitDetailWithProduct> PatientVisitDetailWithProducts = new List<PatientVisitDetailWithProduct>();
 
         private GridCheckMarksSelectionWeb selectionVisit;
 
@@ -32,19 +32,14 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
-        public ChangeInsuranceCompanyForm(ISession session, Patient patient, InsuranceCompany insuranceCompany) :this()
+        public ChangeInsuranceCompanyForm(ISession session, Patient patient, InsuranceCompany insuranceCompany, IList<PatientVisit> pvs)
+            : this()
         {
             _Session = session;
             _Patient = patient;
             _InsuranceCompany = insuranceCompany;
-            QueryPatientVisits();
-        }
-
-        private void QueryPatientVisits()
-        {
-            selectionVisit.ClearSelection();
-            _PatientVisits = PatientServices.GetPatientVisitsForInsuranceCompanyChange(_Session, _Patient);
-            this.gcPatientVisits.DataSource = _PatientVisits;
+            _PatientVisits = pvs;
+            this.gcPatientVisits.DataSource = pvs;
         }
 
         public void QueryPatientVisitDetails()
@@ -53,8 +48,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             gvPatientVisitDetails.BeginDataUpdate();
             try
             {
-                PatientVisitDetails = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
-                this.gcPatientVisitDetails.DataSource = PatientVisitDetails;
+                PatientVisitDetailWithProducts = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
+                this.gcPatientVisitDetails.DataSource = PatientVisitDetailWithProducts;
 
                 gvPatientVisitDetails.ClearSorting();
                 gvPatientVisitDetails.Columns["PatientVisitDetail.PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
@@ -86,7 +81,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbSave_Click(object sender, EventArgs e)
         {
             _IsOK = true;
-            //PatientServices.ChangeInsuranceCompany(_Session, UIUtilities.CurrentUser, GetSelectedVisits(), PatientVisitDetails, _InsuranceCompany);
             this.Close();
         }
 

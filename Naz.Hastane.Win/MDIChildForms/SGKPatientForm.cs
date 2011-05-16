@@ -15,6 +15,7 @@ using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using System.Drawing;
 using NHibernate;
+using Naz.Hastane.Data.DTO;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -194,6 +195,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 if (String.IsNullOrWhiteSpace(Patient.PatientNo))
                 {
+                    this.teFirstName.Focus();
                     Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
                     Patient.DATE_CREATE = DateTime.Now;
                     PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
@@ -230,7 +232,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 XtraMessageBox.Show("Şu anda sürmekte olan Mernis işlemi var. Lütfen bekleyiniz.", "Mernis İşlemleri");
             }
-            else
+            else if (!String.IsNullOrWhiteSpace(this.teTCID.Text))
             {
                 EnableForMernis(false);
                 this.mernisSorgu.CallMernis(this.teTCID.Text);
@@ -296,6 +298,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 _Doctor = frm.Doctor;
                 currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
                 RefreshGrid();
+                //XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CallMedulaProvision();
             }
         }
@@ -320,6 +323,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void CallMedulaProvision()
         {
+            if (!(Patient.InsuranceCompany.IsSGK() || Patient.InsuranceCompany.IsSGKAcil())) return;
+
             if (currentPatientVisit == null)
             {
                 XtraMessageBox.Show("Lütfen Bir Ziytaret Kartı Seçiniz!", "Medula İşlemleri");
@@ -362,10 +367,15 @@ namespace Naz.Hastane.Win.MDIChildForms
         private string GetRelatedFollowUpNo()
         {
             string result = "";
-            for (int i = 0; i < this.Patient.PatientVisits.Count; i++)
+            
+            for (int i = 0; i <= this.PatientVisitControl.gvPatientVisit.RowCount; i++)
             {
-                if (this.Patient.PatientVisits[i].VisitDate.Date == DateTime.Today)
-                    result = this.Patient.PatientVisits[i].TAKIPNO;
+                PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetRow(i) as PatientVisit;
+                if (pv != null && pv.VisitDate.Date == DateTime.Today)
+                {
+                    if (!String.IsNullOrWhiteSpace(pv.TAKIPNO))
+                        result = this.Patient.PatientVisits[i].TAKIPNO;
+                }
                 else
                     break;
             }
@@ -597,7 +607,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             this.PatientVisitControl.gvPatientVisit.BeginDataUpdate();
             this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
-            //this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
+            this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
             this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
         }
 
@@ -727,17 +737,28 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
         {
-            using (ITransaction transaction = Session.BeginTransaction())
-            {
-            }
             if (Patient.InsuranceCompany == newInsuranceCompany) return;
-            ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm(Session, Patient, newInsuranceCompany);
-            frm.ShowDialog();
-            if (frm.IsOK)
+
+            bool isOK = false;
+            IList<PatientVisit> pvs = PatientServices.GetPatientVisitsForInsuranceCompanyChange(Session, Patient);
+            IList<PatientVisitDetailWithProduct> pvdwps = new List<PatientVisitDetailWithProduct>();
+
+            if (pvs.Count > 0)
+            {
+                ChangeInsuranceCompanyForm frm = new ChangeInsuranceCompanyForm(Session, Patient, newInsuranceCompany, pvs);
+                frm.ShowDialog();
+                isOK = frm.IsOK;
+                pvdwps = frm.PatientVisitDetailWithProducts;
+                pvs = frm.GetSelectedVisits();
+            }
+            else
+                isOK = true;
+
+            if (isOK)
             {
                 try
                 {
-                    PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, frm.GetSelectedVisits(), frm.PatientVisitDetails, newInsuranceCompany);
+                    PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, pvs, pvdwps, newInsuranceCompany);
                     XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     OpenNewForm();
                 }

@@ -509,6 +509,30 @@ namespace Naz.Hastane.Data.Services
 
         }
 
+        public static IList<Key1Key2ValueRecord> GetEczaneDagilim(DateTime startDate, DateTime endDate)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery("sp_GetEczaneDagilim")
+                    .SetDateTime("StartDate", startDate.Date)
+                    .SetDateTime("EndDate", endDate.Date)
+                    .List<Key1Key2ValueRecord>();
+            }
+
+        }
+
+        public static IList<Key1Key2ValueRecord> GetEczaneDagilimYatakli(DateTime startDate, DateTime endDate)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery("sp_GetEczaneDagilimYatakli")
+                    .SetDateTime("StartDate", startDate.Date)
+                    .SetDateTime("EndDate", endDate.Date)
+                    .List<Key1Key2ValueRecord>();
+            }
+
+        }
+
         public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)
         {
             if (patient == null) return new List<PatientBalanceRecord>();

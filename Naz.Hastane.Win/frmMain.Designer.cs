@@ -193,6 +193,9 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.rpEczane = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpbEczaneReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -485,10 +488,11 @@ namespace Naz.Hastane.Win {
             this.iExportToXSLX,
             this.iSubFunctionGroup,
             this.iPriceList,
-            this.iDailyTellerReport});
+            this.iDailyTellerReport,
+            this.iHarcamaRaporu});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 293;
+            this.rcMain.MaxItemId = 295;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -503,13 +507,14 @@ namespace Naz.Hastane.Win {
             this.rbAdminReports,
             this.rbDefinitions,
             this.rpUser,
-            this.rpGallery});
+            this.rpGallery,
+            this.rpEczane});
             this.rcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpAccounting;
+            this.rcMain.SelectedPage = this.rpEczane;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1937,6 +1942,25 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
+            // rpEczane
+            // 
+            this.rpEczane.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpbEczaneReports});
+            this.rpEczane.Name = "rpEczane";
+            this.rpEczane.Text = "Eczane";
+            // 
+            // rpbEczaneReports
+            // 
+            this.rpbEczaneReports.ItemLinks.Add(this.iHarcamaRaporu);
+            this.rpbEczaneReports.Name = "rpbEczaneReports";
+            this.rpbEczaneReports.Text = "Eczane Raporlarý";
+            // 
+            // iHarcamaRaporu
+            // 
+            this.iHarcamaRaporu.Caption = "Harcama Raporu";
+            this.iHarcamaRaporu.Id = 294;
+            this.iHarcamaRaporu.Name = "iHarcamaRaporu";
+            // 
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
@@ -2152,6 +2176,9 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iSubFunctionGroup;
         private DevExpress.XtraBars.BarButtonItem iPriceList;
         private DevExpress.XtraBars.BarButtonItem iDailyTellerReport;
+        private DevExpress.XtraBars.BarButtonItem iHarcamaRaporu;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpEczane;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpbEczaneReports;
 
     }
 }

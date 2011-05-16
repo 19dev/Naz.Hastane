@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -279,6 +279,12 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\EczaneReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\EczaneReportForm.Designer.cs">
+      <DependentUpon>EczaneReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\DBTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -427,6 +433,9 @@
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\EczaneReportForm.resx">
+      <DependentUpon>EczaneReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DBTestForm.resx">
       <DependentUpon>DBTestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -507,6 +516,7 @@
     </None>
     <None Include="Naz.Hastane.ini" />
     <None Include="Naz.Hastane.Win_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1Key2ValueRecord.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -541,9 +551,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Ring.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Docs\PrinterCodes.txt" />
     <Content Include="Docs\Testler.txt" />

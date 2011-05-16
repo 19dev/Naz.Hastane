@@ -90,6 +90,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).BeginInit();
@@ -484,6 +485,7 @@
             this.colPatientAppNo,
             this.colTakipNo,
             this.colIMPF2,
+            this.colUserId,
             this.colKar_No,
             this.colSevkTarihi,
             this.colProvisionNo,
@@ -595,7 +597,7 @@
             this.colIMPF2.FieldName = "IMPF2";
             this.colIMPF2.Name = "colIMPF2";
             this.colIMPF2.Visible = true;
-            this.colIMPF2.VisibleIndex = 15;
+            this.colIMPF2.VisibleIndex = 16;
             // 
             // colKar_No
             // 
@@ -603,14 +605,14 @@
             this.colKar_No.FieldName = "KAR_NO";
             this.colKar_No.Name = "colKar_No";
             this.colKar_No.Visible = true;
-            this.colKar_No.VisibleIndex = 18;
+            this.colKar_No.VisibleIndex = 19;
             // 
             // colSevkTarihi
             // 
             this.colSevkTarihi.Caption = "Sevk Tarihi";
             this.colSevkTarihi.Name = "colSevkTarihi";
             this.colSevkTarihi.Visible = true;
-            this.colSevkTarihi.VisibleIndex = 13;
+            this.colSevkTarihi.VisibleIndex = 14;
             // 
             // colProvisionNo
             // 
@@ -618,7 +620,7 @@
             this.colProvisionNo.FieldName = "ProvisionNo";
             this.colProvisionNo.Name = "colProvisionNo";
             this.colProvisionNo.Visible = true;
-            this.colProvisionNo.VisibleIndex = 14;
+            this.colProvisionNo.VisibleIndex = 15;
             // 
             // colTakipTuru
             // 
@@ -626,14 +628,14 @@
             this.colTakipTuru.FieldName = "TAKIPTURU";
             this.colTakipTuru.Name = "colTakipTuru";
             this.colTakipTuru.Visible = true;
-            this.colTakipTuru.VisibleIndex = 16;
+            this.colTakipTuru.VisibleIndex = 17;
             // 
             // colTakipDurumu
             // 
             this.colTakipDurumu.Caption = "Takip Durumu";
             this.colTakipDurumu.Name = "colTakipDurumu";
             this.colTakipDurumu.Visible = true;
-            this.colTakipDurumu.VisibleIndex = 17;
+            this.colTakipDurumu.VisibleIndex = 18;
             // 
             // colIliskiliTakipNo
             // 
@@ -701,6 +703,14 @@
             this.lciPatientVisitControl.TextSize = new System.Drawing.Size(0, 0);
             this.lciPatientVisitControl.TextToControlDistance = 0;
             this.lciPatientVisitControl.TextVisible = false;
+            // 
+            // colUserId
+            // 
+            this.colUserId.Caption = "Kullanıcı";
+            this.colUserId.FieldName = "USER_ID";
+            this.colUserId.Name = "colUserId";
+            this.colUserId.Visible = true;
+            this.colUserId.VisibleIndex = 13;
             // 
             // PatientVisitControl
             // 
@@ -783,5 +793,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPVDPSG;
         private DevExpress.XtraGrid.Columns.GridColumn colPVRPSG;
         private DevExpress.XtraGrid.Columns.GridColumn colPSG;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserId;
     }
 }

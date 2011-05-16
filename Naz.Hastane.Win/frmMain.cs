@@ -18,6 +18,7 @@ using Naz.Hastane.Reports;
 using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Win.Forms;
 using Naz.Hastane.Win.MDIChildForms;
+using Naz.Hastane.Data.Entities.StoredProcedure;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -99,6 +100,15 @@ namespace Naz.Hastane.Win {
             //// Close the splash screen
             //CloseSplash();
 
+            try
+            {
+                IList<Key1Key2ValueRecord> records0 = LookUpServices.GetEczaneDagilim(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+                IList<Key1Key2ValueRecord> records = LookUpServices.GetEczaneDagilimYatakli(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+            }
+            catch (Exception e1)
+            {
+
+            }
             EnableRibbonButtons(false);
             ShowLoginForm();
 
@@ -746,6 +756,7 @@ namespace Naz.Hastane.Win {
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
+            iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
         }
         #endregion
 

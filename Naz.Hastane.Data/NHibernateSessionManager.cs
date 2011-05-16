@@ -127,9 +127,11 @@ namespace Naz.Hastane.Data
                 .Mappings(m =>m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly())
                     //.ExportTo("D:\\Projects\\Naz.Hastane.Git\\Naz.Hastane.Data\\Docs\\GeneratedHBM")
                     )
-                .Mappings(m => m.HbmMappings.AddClasses(typeof(AccountingDailySummary)))
-                .Mappings(m => m.HbmMappings.AddClasses(typeof(DailyTellerReportRecord)))
-                .Mappings(m => m.HbmMappings.AddClasses(typeof(PatientBalanceRecord)))
+                //.Mappings(m => m.HbmMappings.AddClasses(typeof(AccountingDailySummary)))
+                //.Mappings(m => m.HbmMappings.AddClasses(typeof(DailyTellerReportRecord)))
+                //.Mappings(m => m.HbmMappings.AddClasses(typeof(PatientBalanceRecord)))
+                //.Mappings(m => m.HbmMappings.AddClasses(typeof(EczaneDagilim)))
+                .Mappings(m => m.HbmMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
 
                 .ExposeConfiguration(x => x.SetInterceptor(intercepter))
                   

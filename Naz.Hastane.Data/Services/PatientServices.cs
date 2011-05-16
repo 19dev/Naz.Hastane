@@ -248,8 +248,8 @@ namespace Naz.Hastane.Data.Services
         public static bool IsSGKSameDay(Patient patient)
         {
             return ((patient.InsuranceCompany.IsSGK() || patient.InsuranceCompany.IsSGKAcil()) && 
-                patient.PatientVisits.Count >= 2 && 
-                patient.PatientVisits[0].VisitDate.Date == patient.PatientVisits[1].VisitDate.Date);
+                patient.PatientVisits.Count >= 1 && 
+                patient.PatientVisits[0].VisitDate.Date == DateTime.Today);
         }
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
@@ -1011,16 +1011,12 @@ namespace Naz.Hastane.Data.Services
             return pvdwps;
         }
 
-        public static void ChangeInsuranceCompany(ISession session, User user, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
+        public static void ChangeInsuranceCompany(ISession session, User user, Patient patient, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
         {
-            if (pvs.Count == 0) return;
-
             using (ITransaction transaction = session.BeginTransaction())
             {
                 try
                 {
-                    Patient patient = pvs[0].Patient;
-
                     LOGKURUM_DEGISTI log = new LOGKURUM_DEGISTI();
                     log.KD_ID = Convert.ToDecimal(LookUpServices.GetNewLOGKURUM_DEGISTINo(user));
                     log.KNR = patient.PatientNo;

@@ -23,8 +23,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class SGKFindPatientForm : MDIChildForm
     {
-        public SGKFindPatientForm
-            ()
+        public SGKFindPatientForm()
         {
             InitializeComponent();
         }
@@ -176,6 +175,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teFirstName.Text = "";
             this.teLastName.Text = "";
             this.teFatherName.Text = "";
+
+            this.gridHastaArama.DataSource = new List<Patient>();
 
             this.AcceptButton = this.sbSearch;
         }
