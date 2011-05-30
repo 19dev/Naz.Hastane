@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="sp_GetEczanePoliklinikHastaUcretsiz" callable="true">
+    <query-param name="StartDate" type ="DateTime" />
+    <query-param name="EndDate" type="DateTime" />
+    <return alias="Key1ValueRecord" class="Naz.Hastane.Data.Entities.StoredProcedure.Key1ValueRecord, Naz.Hastane.Data">
+      <return-property name="RowNumber" column="RowNumber"></return-property>
+      <return-property name="Key1" column="Key1"></return-property>
+      <return-property name="Value" column="Value"></return-property>
+    </return>
+    exec sp_GetEczanePoliklinikHastaUcretsiz
+    @StartDate=:StartDate,
+    @EndDate=:EndDate
+  </sql-query>
+</hibernate-mapping>

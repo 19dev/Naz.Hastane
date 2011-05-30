@@ -185,6 +185,7 @@
     <Compile Include="Entities\LookUp\Special\User.cs" />
     <Compile Include="Entities\StoredProcedure\DailyTellerReportRecord.cs" />
     <Compile Include="Entities\StoredProcedure\Key1Key2ValueRecord.cs" />
+    <Compile Include="Entities\StoredProcedure\Key1ValueRecord.cs" />
     <Compile Include="Entities\StoredProcedure\PatientBalanceRecord.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
@@ -294,6 +295,7 @@
     <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
     <Compile Include="Mappings\StoredProcedure\DailyTellerReportRecordMap.cs" />
     <Compile Include="Mappings\StoredProcedure\Key1Key2ValueMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\Key1ValueMap.cs" />
     <Compile Include="Mappings\StoredProcedure\PatientBalanceRecordMap.cs" />
     <Compile Include="NHibernateSessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -327,13 +329,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\NHibernateCode.txt" />
-    <EmbeddedResource Include="Entities\StoredProcedure\EczaneDagilimYatakli.hbm.xml" />
-    <EmbeddedResource Include="Entities\StoredProcedure\EczaneDagilim.hbm.xml" />
-    <EmbeddedResource Include="Entities\StoredProcedure\PatientBalanceRecord.hbm.xml" />
-    <EmbeddedResource Include="Entities\StoredProcedure\DailyTellerReportRecord.hbm.xml">
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaParasiPesin.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaUcretsiz.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaEczanedenTahsilEdilmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaParasiTahsilEdilmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaParasiPesin.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaUcretsiz.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneSiparisFaturalari.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneParasiGeriDonmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneParasiGeriDonecek.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\PatientBalanceRecord.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\DailyTellerReportRecord.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\AccountingDailySummary.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naz.Hastane.Medula\Naz.Hastane.Medula.csproj">

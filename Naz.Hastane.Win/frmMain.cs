@@ -102,8 +102,8 @@ namespace Naz.Hastane.Win {
 
             try
             {
-                IList<Key1Key2ValueRecord> records0 = LookUpServices.GetEczaneDagilim(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
-                IList<Key1Key2ValueRecord> records = LookUpServices.GetEczaneDagilimYatakli(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+                IList<Key1Key2ValueRecord> records0 = LookUpServices.GetEczaneParasiGeriDonecek(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+                IList<Key1Key2ValueRecord> records = LookUpServices.GetEczaneParasiGeriDonmeyen(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
             }
             catch (Exception e1)
             {
@@ -866,7 +866,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "Nisan 2011";
+            report.Parameters[0].Value = "2010";
             report.ExportToPdf(path + aPath + ".pdf");
         }
 
@@ -892,7 +892,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "Nisan 2011";
+            report.Parameters[0].Value = "2010";
             report.ExportToXlsx(path + aPath + ".xlsx");
         }
 

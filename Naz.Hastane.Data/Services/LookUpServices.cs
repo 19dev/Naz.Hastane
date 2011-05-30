@@ -509,29 +509,57 @@ namespace Naz.Hastane.Data.Services
 
         }
 
-        public static IList<Key1Key2ValueRecord> GetEczaneDagilim(DateTime startDate, DateTime endDate)
+        #region Eczane Durumu
+        public static IList<T> GetQuery<T>(string queryName, DateTime startDate, DateTime endDate)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
-                return session.GetNamedQuery("sp_GetEczaneDagilim")
+                return session.GetNamedQuery(queryName)
                     .SetDateTime("StartDate", startDate.Date)
                     .SetDateTime("EndDate", endDate.Date)
-                    .List<Key1Key2ValueRecord>();
+                    .List<T>();
             }
-
         }
 
-        public static IList<Key1Key2ValueRecord> GetEczaneDagilimYatakli(DateTime startDate, DateTime endDate)
+        public static IList<Key1Key2ValueRecord> GetEczaneParasiGeriDonecek(DateTime startDate, DateTime endDate)
         {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                return session.GetNamedQuery("sp_GetEczaneDagilimYatakli")
-                    .SetDateTime("StartDate", startDate.Date)
-                    .SetDateTime("EndDate", endDate.Date)
-                    .List<Key1Key2ValueRecord>();
-            }
-
+            return GetQuery<Key1Key2ValueRecord>("sp_GetEczaneParasiGeriDonecek", startDate, endDate);
         }
+        public static IList<Key1Key2ValueRecord> GetEczaneParasiGeriDonmeyen(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1Key2ValueRecord>("sp_GetEczaneParasiGeriDonmeyen", startDate, endDate);
+        }
+
+        public static IList<Key1ValueRecord> GetEczanePoliklinikHastaParasiPesin(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczanePoliklinikHastaParasiPesin", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczanePoliklinikHastaUcretsiz(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczanePoliklinikHastaUcretsiz", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneSiparisFaturalari(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneSiparisFaturalari", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneYatanHastaEczanedenTahsilEdilmeyen(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaEczanedenTahsilEdilmeyen", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneYatanHastaParasiPesin(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaParasiPesin", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneYatanHastaParasiTahsilEdilmeyen(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaParasiTahsilEdilmeyen", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneYatanHastaUcretsiz(DateTime startDate, DateTime endDate)
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaUcretsiz", startDate, endDate);
+        }
+
+        #endregion
 
         public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)
         {

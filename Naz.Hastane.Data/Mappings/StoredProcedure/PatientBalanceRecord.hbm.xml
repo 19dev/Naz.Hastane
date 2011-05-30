@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="sp_GetPatientBalance" callable="true">
+    <query-param name="PatientNo" type="string" />
+    <return alias="PatientBalanceRecord" class="Naz.Hastane.Data.Entities.StoredProcedure.PatientBalanceRecord, Naz.Hastane.Data">
+      <return-property name="RowNumber" column="RowNumber"></return-property>
+      <return-property name="Date" column="TARIH"></return-property>
+      <return-property name="Type" column="TIP"></return-property>
+      <return-property name="Borc" column="BORC"></return-property>
+      <return-property name="Alacak" column="ALACAK"></return-property>
+    </return>
+    exec sp_GetPatientBalance
+    @PatientNo=:PatientNo
+  </sql-query>
+</hibernate-mapping>
+

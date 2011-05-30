@@ -33,11 +33,46 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (this.deEndDate.DateTime == null || this.deEndDate.DateTime < this.deStartDate.DateTime)
                     this.deEndDate.DateTime = this.deStartDate.DateTime;
 
-                var records = LookUpServices.GetEczaneDagilim(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
-                this.pgcParasiGeriOdenecek.DataSource = records;
+                var EczaneSiparisFaturalariRecords = LookUpServices.GetEczaneSiparisFaturalari(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                this.gcSiparisFaturalari.DataSource = EczaneSiparisFaturalariRecords;
 
-                var records2 = LookUpServices.GetEczaneDagilimYatakli(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
-                this.pgcYatakliServisler.DataSource = records2;
+                var ToplamSatisRecords = LookUpServices.GetEczaneYatanHastaEczanedenTahsilEdilmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                var records11 = LookUpServices.GetEczaneYatanHastaParasiTahsilEdilmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                var records12 = LookUpServices.GetEczaneYatanHastaParasiPesin(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                var records13 = LookUpServices.GetEczanePoliklinikHastaParasiPesin(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+
+                ToplamSatisRecords[0].Key1 = "YATAN HASTA HESABINA GEÇEN";
+                ToplamSatisRecords[0].Value += records11[0].Value;
+                ToplamSatisRecords.Add(records12[0]);
+                ToplamSatisRecords.Add(records13[0]);
+                this.gcToplamSatis.DataSource = ToplamSatisRecords;
+
+                var EczaneParasiGeriDonecekRecords = LookUpServices.GetEczaneParasiGeriDonecek(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+
+                var UcretsizlerRecords = LookUpServices.GetEczaneYatanHastaUcretsiz(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                var UcretsizlerRecords2 = LookUpServices.GetEczanePoliklinikHastaUcretsiz(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+                UcretsizlerRecords.Add(UcretsizlerRecords2[0]);
+                this.gcUcretsizler.DataSource = UcretsizlerRecords;
+
+                var EczaneParasiGeriDonmeyenRecords = LookUpServices.GetEczaneParasiGeriDonmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
+
+                List<Key1Key2ValueRecord> tempRecords = new List<Key1Key2ValueRecord>();
+
+                foreach (var record in EczaneParasiGeriDonecekRecords)
+                {
+                    if (record.Key1.StartsWith("ÇAMAŞIRHANE") || record.Key1.StartsWith("HUZUREV") || record.Key1.StartsWith("MUTFAK"))
+                    {
+                        tempRecords.Add(record);
+                    }
+                }
+                foreach (var record in tempRecords)
+                {
+                    EczaneParasiGeriDonmeyenRecords.Add(record);
+                    EczaneParasiGeriDonecekRecords.Remove(record);
+                }
+
+                this.pgcParasiGeriDonecek.DataSource = EczaneParasiGeriDonecekRecords;
+                this.pgcParasiGeriDonmeyen.DataSource = EczaneParasiGeriDonmeyenRecords;
             }
             finally
             {
@@ -52,8 +87,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((frmMain)this.MdiParent).ShowNewDocument(newForm);
             Naz.Hastane.Reports.Classes.EczaneReport report = new Naz.Hastane.Reports.Classes.EczaneReport();
 
-            report.pgcParasiGeriOdenecek.DataSource = this.pgcParasiGeriOdenecek.DataSource;
-            report.pgcYatakliServisler.DataSource = this.pgcYatakliServisler.DataSource;
+            report.pgParasiGeriDonecek.DataSource = this.pgcParasiGeriDonecek.DataSource;
+            report.pgParasiGeriDonmeyen.DataSource = this.pgcParasiGeriDonmeyen.DataSource;
 
             newForm.ShowReport(report);
         }
