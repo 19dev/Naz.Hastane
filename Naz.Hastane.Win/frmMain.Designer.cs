@@ -152,6 +152,7 @@ namespace Naz.Hastane.Win {
             this.iSubFunctionGroup = new DevExpress.XtraBars.BarButtonItem();
             this.iPriceList = new DevExpress.XtraBars.BarButtonItem();
             this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
+            this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -186,6 +187,8 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgDosya = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgTest = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpEczane = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpbEczaneReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmNew = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -193,9 +196,7 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.rpEczane = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpbEczaneReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -489,10 +490,11 @@ namespace Naz.Hastane.Win {
             this.iSubFunctionGroup,
             this.iPriceList,
             this.iDailyTellerReport,
-            this.iHarcamaRaporu});
+            this.iHarcamaRaporu,
+            this.iOzetServisAnaIslem3Pivot});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 295;
+            this.rcMain.MaxItemId = 297;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -514,7 +516,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpEczane;
+            this.rcMain.SelectedPage = this.rbAdminReports;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1554,6 +1556,12 @@ namespace Naz.Hastane.Win {
             this.iDailyTellerReport.Id = 291;
             this.iDailyTellerReport.Name = "iDailyTellerReport";
             // 
+            // iHarcamaRaporu
+            // 
+            this.iHarcamaRaporu.Caption = "Harcama Raporu";
+            this.iHarcamaRaporu.Id = 294;
+            this.iHarcamaRaporu.Name = "iHarcamaRaporu";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1734,6 +1742,7 @@ namespace Naz.Hastane.Win {
             this.rpgPivotTables.ItemLinks.Add(this.iOzetServisAnaIslemPivot);
             this.rpgPivotTables.ItemLinks.Add(this.iOzetAnaIslemAyXTab);
             this.rpgPivotTables.ItemLinks.Add(this.iOzetYatakServisAy);
+            this.rpgPivotTables.ItemLinks.Add(this.iOzetServisAnaIslem3Pivot);
             this.rpgPivotTables.Name = "rpgPivotTables";
             this.rpgPivotTables.Text = "Pivot Tables";
             // 
@@ -1891,6 +1900,19 @@ namespace Naz.Hastane.Win {
             this.rpgTest.Name = "rpgTest";
             this.rpgTest.Text = "Test";
             // 
+            // rpEczane
+            // 
+            this.rpEczane.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpbEczaneReports});
+            this.rpEczane.Name = "rpEczane";
+            this.rpEczane.Text = "Eczane";
+            // 
+            // rpbEczaneReports
+            // 
+            this.rpbEczaneReports.ItemLinks.Add(this.iHarcamaRaporu);
+            this.rpbEczaneReports.Name = "rpbEczaneReports";
+            this.rpbEczaneReports.Text = "Eczane Raporlarý";
+            // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.AllowFocused = false;
@@ -1942,24 +1964,11 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
-            // rpEczane
+            // iOzetServisAnaIslem3Pivot
             // 
-            this.rpEczane.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpbEczaneReports});
-            this.rpEczane.Name = "rpEczane";
-            this.rpEczane.Text = "Eczane";
-            // 
-            // rpbEczaneReports
-            // 
-            this.rpbEczaneReports.ItemLinks.Add(this.iHarcamaRaporu);
-            this.rpbEczaneReports.Name = "rpbEczaneReports";
-            this.rpbEczaneReports.Text = "Eczane Raporlarý";
-            // 
-            // iHarcamaRaporu
-            // 
-            this.iHarcamaRaporu.Caption = "Harcama Raporu";
-            this.iHarcamaRaporu.Id = 294;
-            this.iHarcamaRaporu.Name = "iHarcamaRaporu";
+            this.iOzetServisAnaIslem3Pivot.Caption = "Servis/Ana Ýþlem 3";
+            this.iOzetServisAnaIslem3Pivot.Id = 296;
+            this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
             // 
             // frmMain
             // 
@@ -2179,6 +2188,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iHarcamaRaporu;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpEczane;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpbEczaneReports;
+        private DevExpress.XtraBars.BarButtonItem iOzetServisAnaIslem3Pivot;
 
     }
 }

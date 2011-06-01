@@ -858,6 +858,7 @@ namespace Naz.Hastane.Win {
             iOzetServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>(args.Item.Caption);
             iOzetServis.ItemClick += (o, args) => ShowReport<OZETServisReport>(args.Item.Caption);
             iOzetYatakServisAy.ItemClick += (o, args) => ShowReport<OZETYatakServisAyXTab>(args.Item.Caption);
+            iOzetServisAnaIslem3Pivot.ItemClick += (o, args) => ShowReport<OZETAnaIslemServisXTab3>(args.Item.Caption);
 
             //iOzetHastaneServisAnaIslem.ItemClick += (o, args) => ShowReport<OZETServisAnaIslemReport>();
         }
@@ -866,7 +867,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "2010";
+            report.Parameters[0].Value = "2011";
             report.ExportToPdf(path + aPath + ".pdf");
         }
 
@@ -892,7 +893,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "2010";
+            report.Parameters[0].Value = "2011";
             report.ExportToXlsx(path + aPath + ".xlsx");
         }
 

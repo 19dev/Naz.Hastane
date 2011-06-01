@@ -125,10 +125,10 @@
             // 
             // gcUcretsizler
             // 
-            this.gcUcretsizler.Location = new System.Drawing.Point(12, 443);
+            this.gcUcretsizler.Location = new System.Drawing.Point(627, 28);
             this.gcUcretsizler.MainView = this.gvUcretsizler;
             this.gcUcretsizler.Name = "gcUcretsizler";
-            this.gcUcretsizler.Size = new System.Drawing.Size(864, 87);
+            this.gcUcretsizler.Size = new System.Drawing.Size(249, 166);
             this.gcUcretsizler.TabIndex = 17;
             this.gcUcretsizler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvUcretsizler});
@@ -150,6 +150,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
+            this.gridColumn5.Width = 165;
             // 
             // gridColumn6
             // 
@@ -158,17 +159,18 @@
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "Value";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.SummaryItem.DisplayFormat = "Ücretsizler Toplamı: {0:#,###.00}";
+            this.gridColumn6.SummaryItem.DisplayFormat = "{0:#,###.00}";
             this.gridColumn6.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
+            this.gridColumn6.Width = 66;
             // 
             // gcToplamSatis
             // 
-            this.gcToplamSatis.Location = new System.Drawing.Point(12, 158);
+            this.gcToplamSatis.Location = new System.Drawing.Point(347, 28);
             this.gcToplamSatis.MainView = this.gvToplamSatis;
             this.gcToplamSatis.Name = "gcToplamSatis";
-            this.gcToplamSatis.Size = new System.Drawing.Size(864, 91);
+            this.gcToplamSatis.Size = new System.Drawing.Size(276, 166);
             this.gcToplamSatis.TabIndex = 16;
             this.gcToplamSatis.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvToplamSatis});
@@ -190,6 +192,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 186;
             // 
             // gridColumn4
             // 
@@ -198,17 +201,18 @@
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Value";
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.SummaryItem.DisplayFormat = "Toplam Satış: {0:#,###.00}";
+            this.gridColumn4.SummaryItem.DisplayFormat = "{0:#,###.00}";
             this.gridColumn4.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.Width = 72;
             // 
             // gcSiparisFaturalari
             // 
             this.gcSiparisFaturalari.Location = new System.Drawing.Point(12, 28);
             this.gcSiparisFaturalari.MainView = this.gvSiparisFaturalari;
             this.gcSiparisFaturalari.Name = "gcSiparisFaturalari";
-            this.gcSiparisFaturalari.Size = new System.Drawing.Size(864, 110);
+            this.gcSiparisFaturalari.Size = new System.Drawing.Size(331, 166);
             this.gcSiparisFaturalari.TabIndex = 15;
             this.gcSiparisFaturalari.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSiparisFaturalari});
@@ -230,6 +234,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 226;
             // 
             // gridColumn2
             // 
@@ -238,10 +243,11 @@
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn2.FieldName = "Value";
             this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.SummaryItem.DisplayFormat = "Sipariş Faturaları Toplamı: {0:#,###.00}";
+            this.gridColumn2.SummaryItem.DisplayFormat = "{0:#,###.00}";
             this.gridColumn2.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // pgcParasiGeriDonmeyen
             // 
@@ -250,9 +256,9 @@
             this.pivotGridField4,
             this.pivotGridField5,
             this.pivotGridField6});
-            this.pgcParasiGeriDonmeyen.Location = new System.Drawing.Point(12, 550);
+            this.pgcParasiGeriDonmeyen.Location = new System.Drawing.Point(12, 478);
             this.pgcParasiGeriDonmeyen.Name = "pgcParasiGeriDonmeyen";
-            this.pgcParasiGeriDonmeyen.Size = new System.Drawing.Size(864, 167);
+            this.pgcParasiGeriDonmeyen.Size = new System.Drawing.Size(864, 239);
             this.pgcParasiGeriDonmeyen.TabIndex = 14;
             // 
             // bsParasiGeriDonmeyen
@@ -275,7 +281,7 @@
             this.pivotGridField5.Caption = "Tutar";
             this.pivotGridField5.FieldName = "Key2";
             this.pivotGridField5.Name = "pivotGridField5";
-            this.pivotGridField5.Width = 70;
+            this.pivotGridField5.Width = 120;
             // 
             // pivotGridField6
             // 
@@ -345,9 +351,9 @@
             this.pivotGridField1,
             this.pivotGridField2,
             this.pivotGridField3});
-            this.pgcParasiGeriDonecek.Location = new System.Drawing.Point(12, 269);
+            this.pgcParasiGeriDonecek.Location = new System.Drawing.Point(12, 214);
             this.pgcParasiGeriDonecek.Name = "pgcParasiGeriDonecek";
-            this.pgcParasiGeriDonecek.Size = new System.Drawing.Size(864, 154);
+            this.pgcParasiGeriDonecek.Size = new System.Drawing.Size(864, 244);
             this.pgcParasiGeriDonecek.TabIndex = 13;
             // 
             // bsParasiGeriDonecek
@@ -370,7 +376,7 @@
             this.pivotGridField2.Caption = "Gruplar";
             this.pivotGridField2.FieldName = "Key2";
             this.pivotGridField2.Name = "pivotGridField2";
-            this.pivotGridField2.Width = 70;
+            this.pivotGridField2.Width = 120;
             // 
             // pivotGridField3
             // 
@@ -512,9 +518,9 @@
             // 
             this.lciParasiGeriDonecek.Control = this.pgcParasiGeriDonecek;
             this.lciParasiGeriDonecek.CustomizationFormText = "Parası Geri Ödenecek";
-            this.lciParasiGeriDonecek.Location = new System.Drawing.Point(0, 241);
+            this.lciParasiGeriDonecek.Location = new System.Drawing.Point(0, 186);
             this.lciParasiGeriDonecek.Name = "lciParasiGeriDonecek";
-            this.lciParasiGeriDonecek.Size = new System.Drawing.Size(868, 174);
+            this.lciParasiGeriDonecek.Size = new System.Drawing.Size(868, 264);
             this.lciParasiGeriDonecek.Text = "Parası Geri Ödenecek";
             this.lciParasiGeriDonecek.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciParasiGeriDonecek.TextSize = new System.Drawing.Size(105, 13);
@@ -523,9 +529,9 @@
             // 
             this.lciParasiGeriDonmeyen.Control = this.pgcParasiGeriDonmeyen;
             this.lciParasiGeriDonmeyen.CustomizationFormText = "Parası Geri Dönmeyen";
-            this.lciParasiGeriDonmeyen.Location = new System.Drawing.Point(0, 522);
+            this.lciParasiGeriDonmeyen.Location = new System.Drawing.Point(0, 450);
             this.lciParasiGeriDonmeyen.Name = "lciParasiGeriDonmeyen";
-            this.lciParasiGeriDonmeyen.Size = new System.Drawing.Size(868, 187);
+            this.lciParasiGeriDonmeyen.Size = new System.Drawing.Size(868, 259);
             this.lciParasiGeriDonmeyen.Text = "Parası Geri Dönmeyen";
             this.lciParasiGeriDonmeyen.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciParasiGeriDonmeyen.TextSize = new System.Drawing.Size(105, 13);
@@ -536,7 +542,7 @@
             this.lciSiparisFaturalari.CustomizationFormText = "Sipariş Faturaları";
             this.lciSiparisFaturalari.Location = new System.Drawing.Point(0, 0);
             this.lciSiparisFaturalari.Name = "lciSiparisFaturalari";
-            this.lciSiparisFaturalari.Size = new System.Drawing.Size(868, 130);
+            this.lciSiparisFaturalari.Size = new System.Drawing.Size(335, 186);
             this.lciSiparisFaturalari.Text = "Sipariş Faturaları";
             this.lciSiparisFaturalari.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciSiparisFaturalari.TextSize = new System.Drawing.Size(105, 13);
@@ -545,9 +551,9 @@
             // 
             this.lciToplamSatis.Control = this.gcToplamSatis;
             this.lciToplamSatis.CustomizationFormText = "Toplam Satış";
-            this.lciToplamSatis.Location = new System.Drawing.Point(0, 130);
+            this.lciToplamSatis.Location = new System.Drawing.Point(335, 0);
             this.lciToplamSatis.Name = "lciToplamSatis";
-            this.lciToplamSatis.Size = new System.Drawing.Size(868, 111);
+            this.lciToplamSatis.Size = new System.Drawing.Size(280, 186);
             this.lciToplamSatis.Text = "Toplam Satış";
             this.lciToplamSatis.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciToplamSatis.TextSize = new System.Drawing.Size(105, 13);
@@ -556,9 +562,9 @@
             // 
             this.lciUcretsizler.Control = this.gcUcretsizler;
             this.lciUcretsizler.CustomizationFormText = "Ücretsizler";
-            this.lciUcretsizler.Location = new System.Drawing.Point(0, 415);
+            this.lciUcretsizler.Location = new System.Drawing.Point(615, 0);
             this.lciUcretsizler.Name = "lciUcretsizler";
-            this.lciUcretsizler.Size = new System.Drawing.Size(868, 107);
+            this.lciUcretsizler.Size = new System.Drawing.Size(253, 186);
             this.lciUcretsizler.Text = "Ücretsizler";
             this.lciUcretsizler.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciUcretsizler.TextSize = new System.Drawing.Size(105, 13);
