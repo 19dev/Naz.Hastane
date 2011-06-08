@@ -66,5 +66,10 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             lueNormalPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueNormalPrinter.Text);
         }
+
+        private void sbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

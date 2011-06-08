@@ -167,6 +167,7 @@
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 9;
             this.sbClose.Text = "Kapat";
+            this.sbClose.Click += new System.EventHandler(this.sbClose_Click);
             // 
             // lueInvoicePrinter
             // 
@@ -197,7 +198,6 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(460, 347);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 

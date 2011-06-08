@@ -170,7 +170,7 @@ namespace Naz.Hastane.Win
                 InvoiceSGK rpt = new InvoiceSGK();
                 rpt.prmAddress.Value = patient.HomeInvoiceAddress;
                 rpt.prmDate.Value = DateTime.Now;
-                rpt.prmDoctor.Value = pv.Doctor;
+                rpt.prmDoctor.Value = pv.Doctor.Value;
                 rpt.prmInvoiceNo.Value = tellerInvoiceNo;
                 rpt.prmPatientNo.Value = patient.PatientNo;
                 rpt.prmPatientPrice.Value = productTotal;

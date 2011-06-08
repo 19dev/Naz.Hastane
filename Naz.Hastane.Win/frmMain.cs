@@ -867,7 +867,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "2011";
+            report.Parameters[0].Value = "OCAK-MAYIS 2011";
             report.ExportToPdf(path + aPath + ".pdf");
         }
 
@@ -893,7 +893,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "2011";
+            report.Parameters[0].Value = "OCAK-MAYIS 2011";
             report.ExportToXlsx(path + aPath + ".xlsx");
         }
 

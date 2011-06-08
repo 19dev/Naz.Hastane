@@ -14,6 +14,12 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class EczaneReportForm : MDIChildForm
     {
+        private double siparisFaturalariToplam = 0;
+        private double toplamSatisToplam = 0;
+        private double parasiGeriDonecekToplam = 0;
+        private double ucretsizlerToplam = 0;
+        private double parasiGeriDonmeyenToplam = 0;
+
         public EczaneReportForm()
         {
             InitializeComponent();
@@ -35,6 +41,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 var EczaneSiparisFaturalariRecords = LookUpServices.GetEczaneSiparisFaturalari(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
                 this.gcSiparisFaturalari.DataSource = EczaneSiparisFaturalariRecords;
+                siparisFaturalariToplam = LookUpServices.GetTotal(EczaneSiparisFaturalariRecords);
 
                 var ToplamSatisRecords = LookUpServices.GetEczaneYatanHastaEczanedenTahsilEdilmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
                 var records11 = LookUpServices.GetEczaneYatanHastaParasiTahsilEdilmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
@@ -46,6 +53,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 ToplamSatisRecords.Add(records12[0]);
                 ToplamSatisRecords.Add(records13[0]);
                 this.gcToplamSatis.DataSource = ToplamSatisRecords;
+                toplamSatisToplam = LookUpServices.GetTotal(ToplamSatisRecords);
 
                 var EczaneParasiGeriDonecekRecords = LookUpServices.GetEczaneParasiGeriDonecek(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
 
@@ -53,6 +61,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 var UcretsizlerRecords2 = LookUpServices.GetEczanePoliklinikHastaUcretsiz(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
                 UcretsizlerRecords.Add(UcretsizlerRecords2[0]);
                 this.gcUcretsizler.DataSource = UcretsizlerRecords;
+                ucretsizlerToplam = LookUpServices.GetTotal(UcretsizlerRecords);
 
                 var EczaneParasiGeriDonmeyenRecords = LookUpServices.GetEczaneParasiGeriDonmeyen(this.deStartDate.DateTime.Date, this.deEndDate.DateTime.Date);
 
@@ -73,6 +82,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 this.pgcParasiGeriDonecek.DataSource = EczaneParasiGeriDonecekRecords;
                 this.pgcParasiGeriDonmeyen.DataSource = EczaneParasiGeriDonmeyenRecords;
+                parasiGeriDonecekToplam = LookUpServices.GetTotal(EczaneParasiGeriDonecekRecords);
+                parasiGeriDonmeyenToplam = LookUpServices.GetTotal(EczaneParasiGeriDonmeyenRecords);
             }
             finally
             {
@@ -87,9 +98,16 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((frmMain)this.MdiParent).ShowNewDocument(newForm);
             Naz.Hastane.Reports.Classes.EczaneReport report = new Naz.Hastane.Reports.Classes.EczaneReport();
 
+            report.srptSiparisFaturalari.ReportSource.DataSource = this.gcSiparisFaturalari.DataSource;
+            report.srptToplamSatis.ReportSource.DataSource = this.gcToplamSatis.DataSource;
             report.pgParasiGeriDonecek.DataSource = this.pgcParasiGeriDonecek.DataSource;
+            report.srptUcretsizler.ReportSource.DataSource = this.gcUcretsizler.DataSource;
             report.pgParasiGeriDonmeyen.DataSource = this.pgcParasiGeriDonmeyen.DataSource;
 
+            report.lblMeccaniler.Text = (ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
+            report.lblEczanedenCikan.Text = (toplamSatisToplam + parasiGeriDonecekToplam + ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
+            report.lblMeccanilerCiktiktanSonraKalan.Text = (toplamSatisToplam + parasiGeriDonecekToplam).ToString("n2");
+            
             newForm.ShowReport(report);
         }
 

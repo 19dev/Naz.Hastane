@@ -68,6 +68,17 @@ namespace Naz.Hastane.Data.Entities
                     return Doctor.Value;
             }
         }
+
+        public virtual string BranchCode
+        {
+            get
+            {
+                if (Doctor != null && Doctor.Service != null)
+                    return Doctor.Service.BranchCode;
+                else
+                    return String.Empty;
+            }
+        }
         public virtual string ODANO { get; set; } //ODANO ODALAR.ODANO Tablosu
         public virtual char ODAUCR { get; set; } //ODAUCR Null
         /// <summary>

@@ -559,6 +559,15 @@ namespace Naz.Hastane.Data.Services
             return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaUcretsiz", startDate, endDate);
         }
 
+        public static double GetTotal<T>(IList<T> records) where T: Key1ValueRecord
+        {
+            double total = 0;
+            foreach (T record in records)
+            {
+                total += record.Value;
+            }
+            return total;
+        }
         #endregion
 
         public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)

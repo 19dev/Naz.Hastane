@@ -8,5 +8,7 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
     public class ProvisionType : LookUpBase
     {
         public static readonly string DefaultValue = "N";
+        public static readonly string NormalValue = "N";
+        public static readonly string EmergencyValue = "N";
     }
 }

@@ -293,7 +293,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
             frm.ShowDialog();
-            if (frm.IsSelected && frm.Doctor != null)
+            if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
             {
                 _Doctor = frm.Doctor;
                 currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
@@ -303,6 +303,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
+        private bool IsNewPolyclinicOK(Doctor doctor)
+        {
+            string branchCode = doctor.Service.BranchCode;
+            foreach(PatientVisit pv in Patient.PatientVisits)
+            {
+                if (pv.VisitDate.Date == DateTime.Today && pv.BranchCode == branchCode)
+                {
+                    if (XtraMessageBox.Show("Aynı Gün İçinde Bu Branştan Kart Açılmış, Yeni Kart Açmak İstiyor musunuz?", "Poliklinik Uyarısı", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                        return true;
+                    else
+                        return false;
+                }
+            
+            }
+            return true;
+        }
         private void sbMedula_Click(object sender, EventArgs e)
         {
             currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
@@ -355,6 +371,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             EnableForMedula(false);
 
+            if (this.Patient.InsuranceCompany.IsSGK())
+                this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.NormalValue;
+            else if (this.Patient.InsuranceCompany.IsSGKAcil())
+                this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.EmergencyValue;
+
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
             
             if (String.IsNullOrWhiteSpace(this.medulaSorgu.teRelatedFollowUpNo.Text))
@@ -388,7 +409,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 if (this.medulaSorgu.IsOK)
                 {
-                    XtraMessageBox.Show(e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
+                    XtraMessageBox.Show(Patient.FullName + " için " + this.medulaSorgu.lueInsuranceType.Text + 
+                        " Medula Sorgusu Sonucu:" + e.Result.SonucKodu + ": " + e.Result.SonucMesaji, "Medula Sorgu Sonucu");
+
                     if (e.Result.SonucKodu == "0000" || e.Result.SonucKodu == "9000")
                     {
                         if (currentPatientVisit != null)

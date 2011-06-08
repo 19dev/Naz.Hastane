@@ -371,7 +371,7 @@ namespace Naz.Hastane.Reports.Classes
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 50F;
+            this.TopMargin.HeightF = 51F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -379,7 +379,7 @@ namespace Naz.Hastane.Reports.Classes
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 50F;
+            this.BottomMargin.HeightF = 51F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -404,11 +404,13 @@ namespace Naz.Hastane.Reports.Classes
             // xrTable3
             // 
             this.xrTable3.Dpi = 254F;
+            this.xrTable3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(18.52083F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
             this.xrTable3.SizeF = new System.Drawing.SizeF(2500F, 75F);
+            this.xrTable3.StylePriority.UseFont = false;
             this.xrTable3.StylePriority.UseTextAlignment = false;
             this.xrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -963,11 +965,13 @@ namespace Naz.Hastane.Reports.Classes
             // xrTable5
             // 
             this.xrTable5.Dpi = 254F;
+            this.xrTable5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.xrTable5.LocationFloat = new DevExpress.Utils.PointFloat(18.52083F, 0F);
             this.xrTable5.Name = "xrTable5";
             this.xrTable5.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow5});
             this.xrTable5.SizeF = new System.Drawing.SizeF(2500F, 75F);
+            this.xrTable5.StylePriority.UseFont = false;
             this.xrTable5.StylePriority.UseTextAlignment = false;
             this.xrTable5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -1265,7 +1269,7 @@ namespace Naz.Hastane.Reports.Classes
             this.DataSource = this.tipdataDataSet;
             this.Dpi = 254F;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(64, 94, 50, 50);
+            this.Margins = new System.Drawing.Printing.Margins(64, 94, 51, 51);
             this.PageHeight = 2159;
             this.PageWidth = 2794;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
