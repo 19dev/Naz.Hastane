@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.Special;
-using Naz.Hastane.Data.Services;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
@@ -92,6 +91,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     session.Update(patient);
                 }
+                session.Flush();
                 transaction.Commit();
             }
         }
@@ -110,6 +110,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     session.Update(pv);
                 }
+                session.Flush(); 
                 transaction.Commit();
             }
         }
@@ -303,6 +304,7 @@ namespace Naz.Hastane.Data.Services
 
                 patient.AddPatientVisit(pv);
                 session.Save(pv);
+                session.Flush();
                 transaction.Commit();
                 return pv;
             }
@@ -330,6 +332,7 @@ namespace Naz.Hastane.Data.Services
 
                 pv.AddPatientVisitRecord(pvr);
                 session.Save(pvr);
+                session.Flush();
                 transaction.Commit();
                 return pvr;
             }
@@ -351,6 +354,7 @@ namespace Naz.Hastane.Data.Services
 
                 pv.AddPatientVisitDetail(pvd);
                 session.Save(pvd);
+                session.Flush();
                 transaction.Commit();
                 return pvd;
             }
@@ -372,6 +376,7 @@ namespace Naz.Hastane.Data.Services
                     pv.AddPatientVisitDetail(pvd);
                     session.Save(pvd);
                 }
+                session.Flush();
                 transaction.Commit();
                 UpdatePatientVisitFromDetails(session, user, pv);
                 return;
@@ -399,10 +404,10 @@ namespace Naz.Hastane.Data.Services
             pvd.FATURAEDILSIN = "E";
             pvd.KABUL = "0";
             pvd.ISDURUM = "0";
-            pvd.HODENDI = "0";
+            pvd.HODENDI = "H";
             pvd.HYATISTARIHI = pvd.DATE_CREATE;
             pvd.HCIKISTARIHI = pvd.DATE_CREATE;
-            pvd.MEDSIRANO = "";
+            //pvd.MEDSIRANO = "";
             pvd.MEDONAY = "0";
             pvd.TG = 1;
             pvd.MEDANOMALI = "0";
@@ -418,6 +423,7 @@ namespace Naz.Hastane.Data.Services
                 UpdatePatientVisitFromDetails(user, pv);
 
                 session.Update(pv);
+                session.Flush();
                 transaction.Commit();
             }
 
@@ -451,6 +457,7 @@ namespace Naz.Hastane.Data.Services
                     session.Delete(pvr);
 
                 session.Delete(pv);
+                session.Flush();
                 transaction.Commit();
                 return true;
             }
@@ -462,6 +469,7 @@ namespace Naz.Hastane.Data.Services
             {
                 pvd.PatientVisit.RemovePatientVisitDetail(pvd);
                 session.Delete(pvd);
+                session.Flush();
                 transaction.Commit();
             }
 
@@ -480,6 +488,7 @@ namespace Naz.Hastane.Data.Services
                 patient.DATE_UPDATE           = DateTime.Now;
 
                 session.Update(patient);
+                session.Flush();
                 transaction.Commit();
             }
             UpdatePatientVisitWithMedulaProvision(session, user, pv, mpr);
@@ -500,6 +509,7 @@ namespace Naz.Hastane.Data.Services
                 pv.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pv);
+                session.Flush();
                 transaction.Commit();
             }
         }
@@ -520,6 +530,7 @@ namespace Naz.Hastane.Data.Services
                 pvr.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pvr);
+                session.Flush();
                 transaction.Commit();
             }
         }
@@ -542,6 +553,7 @@ namespace Naz.Hastane.Data.Services
                         pv.DATE_UPDATE = DateTime.Now;
 
                         session.Update(pv);
+                        session.Flush();
                         transaction.Commit();
                         return true;
                     }
@@ -751,10 +763,14 @@ namespace Naz.Hastane.Data.Services
                         pvds[0].PatientVisit, paymentType, POSType, cashPayment,
                         tellerInvoiceNo, newInvoiceNo);
 
-                    InsertNewInvoice(session, user, patient,
+                    Invoice invoice = InsertNewInvoice(session, user, patient,
                         pvds, paymentType, POSType,
                         productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent, cashPayment,
                         tellerInvoiceNo, newInvoiceNo);
+
+                    InsertDoctorPercents(session, user, pvds, invoice);
+
+                    session.Flush();
                     transaction.Commit();
 
                 }
@@ -775,7 +791,7 @@ namespace Naz.Hastane.Data.Services
         /// <param name="user"></param>
         /// <param name="patient"></param>
         /// <param name="advancePaymentUsed"></param>
-        public static void UpdateAdvancePaymentRecords(ISession session, User user, Patient patient, 
+        private static void UpdateAdvancePaymentRecords(ISession session, User user, Patient patient, 
             double advancePaymentUsed)
         {
             if (advancePaymentUsed == 0)
@@ -795,15 +811,15 @@ namespace Naz.Hastane.Data.Services
 
                 AdvancePaymentUsed apu = new AdvancePaymentUsed();
                 apu.AdvancePayment     = ap;
-                apu.TARIH              = DateTime.Today;
+                apu.TARIH              = DateTime.Now;
                 apu.TUTAR              = usedPayment;
                 apu.USER_ID            = user.USER_ID;
-                apu.DATE_CREATE        = DateTime.Today;
+                apu.DATE_CREATE = DateTime.Now;
                 session.Save(apu);
             }
         }
 
-        public static void InsertNewAdvancePaymentForInvoice(ISession session, User user, 
+        private static void InsertNewAdvancePaymentForInvoice(ISession session, User user, 
             PatientVisit pv,
             string paymentType, string POSType, 
             double cashPayment, string tellerInvoiceNo, string invoiceNo)
@@ -813,25 +829,26 @@ namespace Naz.Hastane.Data.Services
 
             string apNo = LookUpServices.GetNewAdvancePaymentNo();
 
-            AdvancePayment ap = new AdvancePayment();
-            ap.AV_ID          = Convert.ToDouble(apNo);
-            ap.PatientVisit   = pv;
-            ap.TARIH          = DateTime.Today;
-            ap.TUTAR          = cashPayment;
-            ap.KULLANILAN     = cashPayment;
-            ap.ODEMESEKLI     = paymentType;
-            ap.POSNO          = POSType;
-            ap.MAKNO          = cdr.MAKNO;
-            ap.HESAPKODU      = null;
-            ap.ALTHESAPKODU   = null;
-            ap.USER_ID        = user.USER_ID;
-            ap.DATE_CREATE    = DateTime.Now;
+            AdvancePayment ap = new AdvancePayment() { 
+                AV_ID = Convert.ToDouble(apNo), 
+                PatientVisit = pv, 
+                TARIH = DateTime.Now, 
+                TUTAR = cashPayment, 
+                KULLANILAN = cashPayment, 
+                ODEMESEKLI = paymentType, 
+                POSNO = POSType,
+                MAKNO = cdr.MAKNO, 
+                HESAPKODU = "", 
+                ALTHESAPKODU = "", 
+                KALAN = 0,
+                USER_ID = user.USER_ID,
+                DATE_CREATE = DateTime.Now };
 
             session.Save(ap);
 
             AdvancePaymentUsed apu = new AdvancePaymentUsed();
             apu.AdvancePayment     = ap;
-            apu.TARIH              = DateTime.Today;
+            apu.TARIH              = DateTime.Now;
             apu.FATURANO           = invoiceNo;
             apu.TUTAR              = cashPayment;
             apu.USER_ID            = user.USER_ID;
@@ -840,7 +857,7 @@ namespace Naz.Hastane.Data.Services
             session.Save(apu);
         }
 
-        public static CashDeskRecord AddNewCashDeskRecord(ISession session, User user,
+        private static CashDeskRecord AddNewCashDeskRecord(ISession session, User user,
             PatientVisit pv, string tellerVoucherNo, string invoiceNo, string voucherType, string paymentType, string POSType, double payment)
         {
             string makNo = LookUpServices.GetNewVoucherNo();
@@ -849,7 +866,7 @@ namespace Naz.Hastane.Data.Services
             cdr.MAKNO          = makNo;
             cdr.KNR            = pv.Patient.PatientNo;
             cdr.SNR            = pv.VisitNo;
-            cdr.TARIH          = DateTime.Today;
+            cdr.TARIH          = DateTime.Now;
             cdr.MAKBUZNO       = tellerVoucherNo;
             cdr.MAKBUZTIPI     = voucherType;
             cdr.ODEMESEKLI     = paymentType[0];
@@ -868,7 +885,7 @@ namespace Naz.Hastane.Data.Services
             return cdr;
         }
 
-        public static void InsertNewInvoice(ISession session, User user,
+        private static Invoice InsertNewInvoice(ISession session, User user,
             Patient patient, IList<PatientVisitDetail> pvds,
             string paymentType, string POSType,
             double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
@@ -876,40 +893,38 @@ namespace Naz.Hastane.Data.Services
         {
             string makNo = LookUpServices.GetNewVoucherNo();
 
-            Invoice invoice      = new Invoice();
-            invoice.KNR          = patient.PatientNo;
-            invoice.FATURA_ID    = invoiceNo;
-            invoice.SLNR         = tellerInvoiceNo;
-            invoice.FATURANO     = tellerInvoiceNo;
-            invoice.FATURATARIHI = DateTime.Now;
-            invoice.HIZMETTUTARI = productTotal;
-            invoice.INDIRIM      = discountTotal;
-            invoice.KDVTUTARI    = VATTotal;
-            invoice.YUVARLAMA    = 0;
-            invoice.FATURATUTARI = invoiceTotal;
-            invoice.KDVORANI     = VATPercent.ToString();
-            invoice.NAME         = patient.FullName;
-            invoice.FATURATIPI   = "H";
-            invoice.FAK          = "K";
-            invoice.ZHLKZ        = "N";
-            invoice.PSG          = "";
-            invoice.ISODENDI     = "1";
-            invoice.MAKNO        = makNo;
-            invoice.VEZNE        = user.VEZNE;
-            invoice.USER_ID      = user.USER_ID;
-            invoice.DATE_CREATE  = DateTime.Now;
+            Invoice invoice = new Invoice() { 
+                PatientNo = patient.PatientNo, 
+                FATURA_ID = invoiceNo, 
+                SLNR = tellerInvoiceNo, 
+                FATURANO = tellerInvoiceNo, 
+                FATURATARIHI = DateTime.Now, 
+                HIZMETTUTARI = productTotal, 
+                INDIRIM = discountTotal, 
+                KDVTUTARI = VATTotal, 
+                YUVARLAMA = 0, 
+                FATURATUTARI = invoiceTotal,
+                KDVORANI = VATPercent.ToString(),
+                NAME = patient.FullName, 
+                FATURATIPI = "H", FAK = "K", ZHLKZ = "N", PSG = "", ISODENDI = "1", mk = 'H',
+                MAKNO = makNo, 
+                VEZNE = user.VEZNE,
+                USER_ID = user.USER_ID, DATE_CREATE = DateTime.Now };
 
             session.Save(invoice);
 
             UpdatePatientVisitDetails(session, user, pvds, makNo);
 
             LookUpServices.UpdateTellerInvoiceNo(user, tellerInvoiceNo);
+
+            return invoice;
         }
 
-        public static void UpdatePatientVisitDetails(ISession session, User user, IList<PatientVisitDetail> pvds, string voucherNo)
+        private static void UpdatePatientVisitDetails(ISession session, User user, IList<PatientVisitDetail> pvds, string voucherNo)
         {
             foreach (PatientVisitDetail pvd in pvds)
             {
+                pvd.ESKI_SATISF = pvd.PatientPrice;
                 pvd.MAKNO = voucherNo;
                 pvd.USER_ID_UPDATE = user.USER_ID;
                 pvd.DATE_UPDATE = DateTime.Now;
@@ -918,28 +933,97 @@ namespace Naz.Hastane.Data.Services
 
         }
 
-        public static void InsertDoctorInvoice(ISession session, ITransaction transaction, User user,
-            Patient patient, IList<PatientVisitDetail> pvds,
-            string paymentType, string POSType,
-            double productTotal, double VATTotal, double invoiceTotal, double discountTotal, double VATPercent,
-            double cashPayment, string tellerInvoiceNo, string invoiceNo)
+        private static void InsertDoctorPercents(ISession session, User user,
+            IList<PatientVisitDetail> pvds, Invoice invoice)
         {
             foreach (PatientVisitDetail pvd in pvds)
             {
                 if (pvd.TANIM != "09" && pvd.TANIM != "16")
                 {
-                    DoctorProductPercent dpp1 = (from dpp in session.Query<DoctorProductPercent>()
+
+                    DoctorProductPercent dpp = (from dppr in session.Query<DoctorProductPercent>()
                                                  //join doctor in session.Query<Doctor>() on dpp.ARZT equals doctor.Code
                                                  where
-                                                        dpp.TANIM == pvd.TANIM &&
-                                                        dpp.GRUP == pvd.GRUP &&
-                                                        dpp.CODE == pvd.CODE &&
-                                                        dpp.ARZT == pvd.Doctor2.Code
-                                                 select dpp)
+                                                        dppr.TANIM == pvd.TANIM &&
+                                                        dppr.GRUP == pvd.GRUP &&
+                                                        dppr.CODE == pvd.CODE &&
+                                                        dppr.ARZT == pvd.Doctor2.Code
+                                                 select dppr)
                                                  .FirstOrDefault();
+                    Product product = (from p in session.Query<Product>()
+                                       where
+                                           p.TANIM == pvd.TANIM &&
+                                           p.GRUP == pvd.GRUP &&
+                                           p.CODE == pvd.CODE
+                                       select p)
+                                            .FirstOrDefault();
+
+                    double percent = 0;
+                    if (dpp != null && dpp.YUZDE != 0)
+                        percent = dpp.YUZDE;
+                    else
+                        percent = product.DRYUZDE;
+
+                    InsertDoctorPercent(session, user, pvd, invoice, pvd.Doctor2.Code, percent);
+
+                    if (product.PHYUZDE != 0 && !String.IsNullOrWhiteSpace(product.HAVUZ))
+                    {
+                        InsertDoctorPercent(session, user, pvd, invoice, product.HAVUZ, product.PHYUZDE);
+                    }
 
                 }
             }
+        }
+
+        private static void InsertDoctorPercent(ISession session, User user,
+            PatientVisitDetail pvd, Invoice invoice, string doctorCode, double percent)
+        {
+            DoctorAccount da = (from d in session.Query<DoctorAccount>()
+                                where d.ARZT == doctorCode
+                                select d
+                                ).FirstOrDefault();
+
+            int NextSiraNo = (from didr in session.Query<DoctorInvoiceDetail>()
+                              where didr.KNR == da.KNR
+                              select didr.SIRA
+                              ).Max();
+            NextSiraNo++;
+
+            double toplam = pvd.ADET * pvd.PatientPrice;
+            double pay = Math.Round(pvd.ADET * pvd.PatientPrice * percent / 100, 2);
+
+            DoctorInvoiceDetail did = new DoctorInvoiceDetail()
+                { 
+                    KNR = da.KNR,
+                    SIRA = NextSiraNo,
+                    
+                    PatientNo = pvd.PatientVisit.Patient.PatientNo,
+                    PatientVisitNo = pvd.PatientVisit.VisitNo,
+                    PatientVisitDetailNo = pvd.DetailNo,
+                    
+                    HAREKETTIPI = 'F',
+                    
+                    FATNO = invoice.FATURA_ID,
+                    FATURANO = invoice.FATURANO,
+                    FATURATARIHI = invoice.FATURATARIHI,
+                    MAKNO = invoice.MAKNO,
+
+                    VisitType = pvd.PatientVisit.VisitType[0],
+                    
+                    TANIM = pvd.TANIM,
+                    GRUP = pvd.GRUP,
+                    CODE = pvd.CODE,
+                    TOPLAM = toplam,
+                    PAY = pay,
+                    ISODENDI = 'F',
+
+                    USER_ID = user.USER_ID,
+                    DATE_CREATE = DateTime.Now
+                };
+
+
+
+            session.Save(did);
         }
         #endregion
 
@@ -967,6 +1051,7 @@ namespace Naz.Hastane.Data.Services
                     UpdatePatientVisitDetails(session, user, pvds, cdr.MAKNO);
 
                     LookUpServices.UpdateTellerVoucherNo(user, tellerVoucherNo);
+                    session.Flush();
                     transaction.Commit();
 
                 }
@@ -978,13 +1063,14 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        #region Insurance Company Change
         public static IList<PatientVisit> GetPatientVisitsForInsuranceCompanyChange(ISession session, Patient patient)
         {
             IList<PatientVisit> result = (from pv in session.Query<PatientVisit>()
-                                     where pv.Patient == patient
-                                        && pv.IMPF2 == null && pv.ExitDate == null && pv.TAKIPSEND == "9"
-                                     orderby pv.VisitNo descending
-                                     select pv
+                                          where pv.Patient == patient
+                                             && pv.IMPF2 == null && pv.ExitDate == null && pv.TAKIPSEND == "9"
+                                          orderby pv.VisitNo descending
+                                          select pv
                                     )
                                     .ToList<PatientVisit>();
             return result;
@@ -997,8 +1083,8 @@ namespace Naz.Hastane.Data.Services
                 return pvdwps;
 
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
-            foreach(PatientVisit pv in pvs)
-                foreach(PatientVisitDetail pvd in pv.PatientVisitDetails)
+            foreach (PatientVisit pv in pvs)
+                foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
                 {
                     pvdwps.Add(new PatientVisitDetailWithProduct
                     {
@@ -1011,7 +1097,7 @@ namespace Naz.Hastane.Data.Services
             return pvdwps;
         }
 
-        public static void ChangeInsuranceCompany(ISession session, User user, Patient patient, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct>  pvdwps, InsuranceCompany insuranceCompany)
+        public static void ChangeInsuranceCompany(ISession session, User user, Patient patient, IList<PatientVisit> pvs, IList<PatientVisitDetailWithProduct> pvdwps, InsuranceCompany insuranceCompany)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
@@ -1065,6 +1151,7 @@ namespace Naz.Hastane.Data.Services
                     log.USER_ID = user.USER_ID;
                     log.DATE_CREATE = DateTime.Now;
                     session.Save(log);
+                    session.Flush();
 
                     transaction.Commit();
                 }
@@ -1076,6 +1163,7 @@ namespace Naz.Hastane.Data.Services
             }
 
         }
+        #endregion
         
         //'select H.SNR, H.AKOD, H.TANIM, H.GRUP, H.CODE, H.TARIH, H.NAME1, H.ADET, H.SATISF, H.KSATISF, H.MAKNO, H.SIRANO, B.AMBU 
         //from HIZIL H, BEHAND B 

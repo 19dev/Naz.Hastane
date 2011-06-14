@@ -6,9 +6,9 @@ using FluentNHibernate.Mapping;
 namespace Naz.Hastane.Data.Entities {
     
     
-    public class HIZMETDOKTORYUZDEMap : ClassMap<DoctorProductPercent> {
+    public class DoctorProductPercentMap : ClassMap<DoctorProductPercent> {
         
-        public HIZMETDOKTORYUZDEMap() {
+        public DoctorProductPercentMap() {
 
             Table("HIZMETDOKTORYUZDE");
 			

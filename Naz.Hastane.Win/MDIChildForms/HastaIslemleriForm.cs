@@ -27,9 +27,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
         }
-        public HastaIslemleriForm(string aPatientID)
+        public HastaIslemleriForm(string aPatientNo)
         {
-            _patient = PatientServices.GetPatientByID(aPatientID);
+            _patient = PatientServices.GetPatientByID(aPatientNo);
             InitializeComponent();
             InitBindings();
 //            this.xpHastaZiyaret.CriteriaString = "ID.KNR = '" + _hasta.KNR + "'";

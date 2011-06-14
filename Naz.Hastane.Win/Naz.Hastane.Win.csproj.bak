@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\SurpMed\</InstallUrl>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -129,40 +129,43 @@
       <Name>DevExpress.XtraEditors.v10.2</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2.Extensions, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v10.2.Extensions, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
     <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
@@ -225,6 +228,18 @@
     <Compile Include="Controls\MedulaProvisionControl.Designer.cs">
       <DependentUpon>MedulaProvisionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PatientVisitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PatientVisitControl.Designer.cs">
+      <DependentUpon>PatientVisitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PatientBalanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PatientBalanceControl.Designer.cs">
+      <DependentUpon>PatientBalanceControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ColorBox.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -264,11 +279,23 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\EczaneReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\EczaneReportForm.Designer.cs">
+      <DependentUpon>EczaneReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\DBTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIChildForms\DBTestForm.Designer.cs">
       <DependentUpon>DBTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.Designer.cs">
+      <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\MedulaDiabetReportForm.cs">
       <SubType>Form</SubType>
@@ -287,6 +314,18 @@
     </Compile>
     <Compile Include="MDIChildForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectFunctionForm.Designer.cs">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.Designer.cs">
+      <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\SGKFindPatientForm.cs">
       <SubType>Form</SubType>
@@ -342,12 +381,6 @@
     <Compile Include="MDIChildForms\PrinterSettingsForm.Designer.cs">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SelectFromLookUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDIChildForms\SelectFromLookUpForm.Designer.cs">
-      <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,9 +399,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SplashForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Tests.cs" />
     <Compile Include="Utilities\GridCheckMarksSelection.cs" />
     <Compile Include="Utilities\GridCheckMarksSelectionWeb.cs" />
@@ -385,6 +415,12 @@
     <EmbeddedResource Include="Controls\MedulaReportControl.resx">
       <DependentUpon>MedulaReportControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PatientVisitControl.resx">
+      <DependentUpon>PatientVisitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PatientBalanceControl.resx">
+      <DependentUpon>PatientBalanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,8 +433,14 @@
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\EczaneReportForm.resx">
+      <DependentUpon>EczaneReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DBTestForm.resx">
       <DependentUpon>DBTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\ChangeInsuranceCompanyForm.resx">
+      <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\MedulaDiabetReportForm.resx">
       <DependentUpon>MedulaDiabetReportForm.cs</DependentUpon>
@@ -412,8 +454,11 @@
     <EmbeddedResource Include="MDIChildForms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SelectFromLookUpForm.resx">
-      <DependentUpon>SelectFromLookUpForm.cs</DependentUpon>
+    <EmbeddedResource Include="MDIChildForms\SelectFunctionForm.resx">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\SelectInsuranceCompanyForm.resx">
+      <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
       <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
@@ -464,9 +509,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\online.gif" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="SplashForm.resx">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -474,6 +516,7 @@
     </None>
     <None Include="Naz.Hastane.ini" />
     <None Include="Naz.Hastane.Win_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1Key2ValueRecord.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -508,9 +551,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Ring.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Docs\PrinterCodes.txt" />
     <Content Include="Docs\Testler.txt" />

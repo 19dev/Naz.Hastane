@@ -64,9 +64,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitializeComponent();
         }
 
-        public SGKPatientForm(string aPatientID) : this()
+        public SGKPatientForm(string aPatientNo) : this()
         {
-            Patient = PatientServices.GetPatientByID(aPatientID, Session);
+            Patient = PatientServices.GetPatientByID(aPatientNo, Session);
             if (Patient == null)
             {
                 Patient = PatientServices.GetNewSGKPatient(Session);
@@ -492,7 +492,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbInvoice_Click(object sender, EventArgs e)
         {
             string NewTellerInvoiceNo = this.teInvoiceNo.Text;
-            string paymentType = "N";
+            const string paymentType = "N";
             string POSType = null;
 
             double ProductTotal = 0;
@@ -519,7 +519,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     InvoiceTotal,
                     0,
                     VATPercent,
-                    Payment,
+                    InvoiceTotal,
                     0,
                     NewTellerInvoiceNo,
                     true

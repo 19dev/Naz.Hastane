@@ -11,8 +11,10 @@ namespace Naz.Hastane.Data.Entities.Accounting
         /// KEYDAT "00","FATNO" alanında son kesilen FaturaNo
         /// </summary>
         public virtual string FATURA_ID { get; set; } // FATURA_ID; length(8); 0 
-
-        public virtual string KNR { get; set; } // KNR; length(6); 0
+        /// <summary>
+        /// KNR
+        /// </summary>
+        public virtual string PatientNo { get; set; } // KNR; length(6); 0
 
         public virtual string SLNR { get; set; } // SLNR; length(10); 0
         public virtual string FATURANO { get; set; } // FATURANO; length(20); 0
@@ -52,7 +54,7 @@ namespace Naz.Hastane.Data.Entities.Accounting
         public virtual string teslimNo { get; set; } // teslimNo; length(10); 1 Boş
         public virtual string MAKBUZNO { get; set; } // MAKBUZNO; length(10); 1 Boş
         //public virtual double SEC { get; set; } // SEC; length(8); 1 ??
-        public virtual double KALAN { get; set; } // KALAN; length(8); 1 ??
+        public virtual double? KALAN { get; set; } // KALAN; length(8); 1 ??
         /// <summary>
         /// Açık Fatura Makbuz No
         /// </summary>

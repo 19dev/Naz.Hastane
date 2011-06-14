@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Naz.Hastane.Data.Entities
 {
+    /// <summary>
+    /// DOKTORLAR
+    /// </summary>
     public class DoctorAccount
     {
         public virtual string ADI1 { get; set; } // ADI1; length(50); 0

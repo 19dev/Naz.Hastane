@@ -604,7 +604,8 @@ namespace Naz.Hastane.Data.Services
                     {
                         serialID = ss.Value.Substring(0, i+1);
                         string s = ss.Value.Substring(i + 1);
-                        serialNo = Convert.ToInt32(s);
+                        if (!String.IsNullOrWhiteSpace(s))
+                            serialNo = Convert.ToInt32(s);
                         break;
                     }
                     if (i == 0)

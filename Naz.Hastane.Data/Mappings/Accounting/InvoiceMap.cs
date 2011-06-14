@@ -28,7 +28,7 @@ namespace Naz.Hastane.Data.Mappings.Accounting
             Map(x => x.KALAN).Column("KALAN").Length(8); //1
             Map(x => x.KDVORANI).Column("KDVORANI").Length(1); //0
             Map(x => x.KDVTUTARI).Column("KDVTUTARI").Length(8); //0
-            Map(x => x.KNR).Column("KNR").Length(6); //0
+            Map(x => x.PatientNo).Column("KNR").Length(6); //0
             Map(x => x.MAKBUZNO).Column("MAKBUZNO").Length(10); //1
             Map(x => x.MAKNO).Column("MAKNO").Length(7); //1
             Map(x => x.mk).Column("mk").Length(1); //0

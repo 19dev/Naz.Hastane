@@ -31,18 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeParser.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v10.2.Core, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v10.2.Extensions, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -66,6 +67,18 @@
     <Compile Include="Classes\DailyTellerReport.Designer.cs">
       <DependentUpon>DailyTellerReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\EczaneReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\EczaneReport.Designer.cs">
+      <DependentUpon>EczaneReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\KeyValueReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\KeyValueReport.Designer.cs">
+      <DependentUpon>KeyValueReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemAyXTab.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -83,6 +96,12 @@
     </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab.Designer.cs">
       <DependentUpon>OZETAnaIslemServisXTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab3.Designer.cs">
+      <DependentUpon>OZETAnaIslemServisXTab3.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\OzetReports\OZETAYPAnaIslemReport.cs">
       <SubType>Component</SubType>
@@ -210,6 +229,12 @@
     <EmbeddedResource Include="Classes\DailyTellerReport.resx">
       <DependentUpon>DailyTellerReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\EczaneReport.resx">
+      <DependentUpon>EczaneReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\KeyValueReport.resx">
+      <DependentUpon>KeyValueReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETAnaIslemAyXTab.resx">
       <DependentUpon>OZETAnaIslemAyXTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETAnaIslemServisXTab.resx">
       <DependentUpon>OZETAnaIslemServisXTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\OzetReports\OZETAnaIslemServisXTab3.resx">
+      <DependentUpon>OZETAnaIslemServisXTab3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETAYPAnaIslemReport.resx">
       <DependentUpon>OZETAYPAnaIslemReport.cs</DependentUpon>
@@ -287,6 +315,8 @@
     </None>
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.AccountingDailySummary.datasource" />
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.DailyTellerReport.datasource" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1Key2ValueRecord.datasource" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1ValueRecord.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

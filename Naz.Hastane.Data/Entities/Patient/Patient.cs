@@ -24,7 +24,7 @@ namespace Naz.Hastane.Data.Entities
         {
             get
             {
-                return FirstName + " " + LastName;
+                return String.Format("{0} {1}", FirstName, LastName);
             }
         }
         public virtual int BloodType { get; set; } //KANGRUBU
@@ -44,9 +44,7 @@ namespace Naz.Hastane.Data.Entities
         {
             get
             {
-                return FirstName + " " + LastName + "\n"
-                    + HomeDistrict + " " + HomeAddress + "\n"
-                    + HomeTown + " " + HomePostCode + " " + HomeCity;
+                return String.Format("{0} {1}\r\n{2} {3}\r\n{4} {5} {6}", FirstName, LastName, HomeDistrict, HomeAddress, HomeTown, HomePostCode, HomeCity);
             }
         }
         public virtual string JobName { get; set; } //IS_ADI

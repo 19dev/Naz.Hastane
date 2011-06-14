@@ -153,6 +153,7 @@ namespace Naz.Hastane.Win {
             this.iPriceList = new DevExpress.XtraBars.BarButtonItem();
             this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -193,10 +194,10 @@ namespace Naz.Hastane.Win {
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmNew = new DevExpress.XtraBars.PopupMenu(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -214,9 +215,10 @@ namespace Naz.Hastane.Win {
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmNew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // iHakkinda
@@ -494,7 +496,7 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem3Pivot});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 297;
+            this.rcMain.MaxItemId = 298;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1562,6 +1564,12 @@ namespace Naz.Hastane.Win {
             this.iHarcamaRaporu.Id = 294;
             this.iHarcamaRaporu.Name = "iHarcamaRaporu";
             // 
+            // iOzetServisAnaIslem3Pivot
+            // 
+            this.iOzetServisAnaIslem3Pivot.Caption = "Servis/Ana Ýþlem 3";
+            this.iOzetServisAnaIslem3Pivot.Id = 296;
+            this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1941,14 +1949,6 @@ namespace Naz.Hastane.Win {
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Black";
             // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.FloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabbedMdiManager1.FloatOnDrag = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            this.xtraTabbedMdiManager1.FloatMDIChildActivated += new System.EventHandler(this.xtraTabbedMdiManager1_FloatMDIChildActivated);
-            this.xtraTabbedMdiManager1.FloatMDIChildDeactivated += new System.EventHandler(this.xtraTabbedMdiManager1_FloatMDIChildDeactivated);
-            // 
             // pmMain
             // 
             this.pmMain.ItemLinks.Add(this.iPaste);
@@ -1964,11 +1964,13 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
-            // iOzetServisAnaIslem3Pivot
+            // xtraTabbedMdiManager1
             // 
-            this.iOzetServisAnaIslem3Pivot.Caption = "Servis/Ana Ýþlem 3";
-            this.iOzetServisAnaIslem3Pivot.Id = 296;
-            this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            this.xtraTabbedMdiManager1.MenuManager = this.rcMain;
+            this.xtraTabbedMdiManager1.View = this.tabbedView1;
+            this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView1});
             // 
             // frmMain
             // 
@@ -2005,9 +2007,10 @@ namespace Naz.Hastane.Win {
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmNew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2042,7 +2045,6 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMedulaReports;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbDefinitions;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.Utils.ImageCollection imageCollection1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarButtonGroup bgAlign;
@@ -2189,6 +2191,8 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rpEczane;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpbEczaneReports;
         private DevExpress.XtraBars.BarButtonItem iOzetServisAnaIslem3Pivot;
+        private DevExpress.XtraBars.Docking2010.DocumentManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
 
     }
 }

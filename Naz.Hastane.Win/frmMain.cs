@@ -213,8 +213,8 @@ namespace Naz.Hastane.Win {
         MDIChildForm CurrentForm {
             get {
                 if(this.ActiveMdiChild == null) return null;
-                if(xtraTabbedMdiManager1.ActiveFloatForm != null)
-                    return xtraTabbedMdiManager1.ActiveFloatForm as MDIChildForm;
+                //if(xtraTabbedMdiManager1.ActiveFloatForm != null)
+                //    return xtraTabbedMdiManager1.ActiveFloatForm as MDIChildForm;
                 return this.ActiveMdiChild as MDIChildForm;
             }
         }
@@ -701,12 +701,12 @@ namespace Naz.Hastane.Win {
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenHasta(string patientID)
+        public void OpenHasta(string PatientNo)
         {
-            Patient patient = PatientServices.GetPatientByID(patientID);
+            Patient patient = PatientServices.GetPatientByID(PatientNo);
             if (patient != null)
             {
-                HastaIslemleriForm newForm = new HastaIslemleriForm(patientID);
+                HastaIslemleriForm newForm = new HastaIslemleriForm(PatientNo);
                 string name = patient.FirstName + " " + patient.LastName;
                 newForm.Text = name;
                 ShowNewDocument(newForm);
@@ -729,12 +729,12 @@ namespace Naz.Hastane.Win {
             newForm.SetNewTCID(newTCID);
         }
 
-        public void OpenSGKPatient(string patientID)
+        public void OpenSGKPatient(string PatientNo)
         {
-            Patient patient = PatientServices.GetPatientByID(patientID);
+            Patient patient = PatientServices.GetPatientByID(PatientNo);
             if (patient != null)
             {
-                SGKPatientForm newForm = new SGKPatientForm(patientID);
+                SGKPatientForm newForm = new SGKPatientForm(PatientNo);
                 string name = patient.FirstName + " " + patient.LastName;
                 newForm.Text = name;
                 ShowNewDocument(newForm);

@@ -37,9 +37,9 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\PatientVisitDetailWithProduct.cs" />
     <Compile Include="Entities\Accounting\AdvancePayment.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentRebate.cs" />
     <Compile Include="Entities\Accounting\AdvancePaymentUsed.cs" />
@@ -91,6 +92,8 @@
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
     <Compile Include="Entities\Accounting\Invoice.cs" />
     <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
+    <Compile Include="Entities\Logs\LOGKURUM_DEGISTI.cs" />
+    <Compile Include="Entities\Logs\LOGTCKIMLIKNOSORGU.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
@@ -181,6 +184,9 @@
     <Compile Include="Entities\StoredProcedure\AccountingDailySummary.cs" />
     <Compile Include="Entities\LookUp\Special\User.cs" />
     <Compile Include="Entities\StoredProcedure\DailyTellerReportRecord.cs" />
+    <Compile Include="Entities\StoredProcedure\Key1Key2ValueRecord.cs" />
+    <Compile Include="Entities\StoredProcedure\Key1ValueRecord.cs" />
+    <Compile Include="Entities\StoredProcedure\PatientBalanceRecord.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentRebateMap.cs" />
     <Compile Include="Mappings\Accounting\AdvancePaymentUsedMap.cs" />
@@ -198,6 +204,8 @@
     <Compile Include="Mappings\InsuranceCompany\InsuranceCompanyMap.cs" />
     <Compile Include="Mappings\Accounting\InvoiceMap.cs" />
     <Compile Include="Mappings\Accounting\InvoiceTempMap.cs" />
+    <Compile Include="Mappings\Logs\LOGKURUM_DEGISTIMap.cs" />
+    <Compile Include="Mappings\Logs\LOGTCKIMLIKNOSORGUMap.cs" />
     <Compile Include="Mappings\LookUp\General\BloodTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\PaymentTypeMap.cs" />
     <Compile Include="Mappings\LookUp\General\YesNoMap.cs" />
@@ -286,6 +294,9 @@
     <Compile Include="Mappings\StoredProcedure\AccountingDailySummaryMap.cs" />
     <Compile Include="Mappings\LookUp\Special\UserMap.cs" />
     <Compile Include="Mappings\StoredProcedure\DailyTellerReportRecordMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\Key1Key2ValueMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\Key1ValueMap.cs" />
+    <Compile Include="Mappings\StoredProcedure\PatientBalanceRecordMap.cs" />
     <Compile Include="NHibernateSessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -318,10 +329,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\NHibernateCode.txt" />
-    <EmbeddedResource Include="Entities\StoredProcedure\DailyTellerReportRecord.hbm.xml">
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaParasiPesin.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaUcretsiz.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaEczanedenTahsilEdilmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaParasiTahsilEdilmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaParasiPesin.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaUcretsiz.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneSiparisFaturalari.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneParasiGeriDonmeyen.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneParasiGeriDonecek.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\PatientBalanceRecord.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\DailyTellerReportRecord.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\StoredProcedure\AccountingDailySummary.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\AccountingDailySummary.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naz.Hastane.Medula\Naz.Hastane.Medula.csproj">
