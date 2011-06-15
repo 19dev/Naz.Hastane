@@ -2024,6 +2024,7 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 344);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -2033,6 +2034,7 @@
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 114);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
@@ -2078,6 +2080,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 78);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -2087,6 +2090,7 @@
             // 
             // emptySpaceItem5
             // 
+            this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 176);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
@@ -2256,6 +2260,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(285, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -2279,6 +2284,7 @@
             // 
             // emptySpaceItem9
             // 
+            this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
             this.emptySpaceItem9.Location = new System.Drawing.Point(0, 288);
             this.emptySpaceItem9.Name = "emptySpaceItem9";

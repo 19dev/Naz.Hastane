@@ -110,8 +110,10 @@ namespace Naz.Hastane.Win
                 foreach(PaperSource ps in doc.PrinterSettings.PaperSources)
                 {
                     if (ps.SourceName == trayName)
+                    {
                         doc.DefaultPageSettings.PaperSource = ps;
                         break;
+                    }
                 }
             }
         }

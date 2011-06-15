@@ -261,8 +261,8 @@ namespace Naz.Hastane.Win.MDIChildForms
                 else
                     Patient.Sex = "2";
                 Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
-                    this.mernisSorgu.NufusCuzdani.DogumTarih.Ay,
-                    this.mernisSorgu.NufusCuzdani.DogumTarih.Gun);
+                    Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Ay, 1),
+                    Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Gun, 1));
                 Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
 
                 if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
