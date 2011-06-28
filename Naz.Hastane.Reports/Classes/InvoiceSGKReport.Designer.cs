@@ -141,7 +141,7 @@ namespace Naz.Hastane.Reports
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 0F;
+            this.TopMargin.HeightF = 84.66671F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -226,14 +226,14 @@ namespace Naz.Hastane.Reports
             this.xrLabel21,
             this.xrLabel20});
             this.PageHeader.Dpi = 254F;
-            this.PageHeader.HeightF = 2670.083F;
+            this.PageHeader.HeightF = 2675.25F;
             this.PageHeader.Name = "PageHeader";
             // 
             // xrLabel55
             // 
             this.xrLabel55.Dpi = 254F;
             this.xrLabel55.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(1425.292F, 1816.271F);
+            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(1420F, 1863.896F);
             this.xrLabel55.Name = "xrLabel55";
             this.xrLabel55.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel55.SizeF = new System.Drawing.SizeF(170F, 40F);
@@ -244,7 +244,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel54.Dpi = 254F;
             this.xrLabel54.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(1425.292F, 1726.271F);
+            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(1420F, 1773.896F);
             this.xrLabel54.Name = "xrLabel54";
             this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel54.SizeF = new System.Drawing.SizeF(160F, 40F);
@@ -254,7 +254,7 @@ namespace Naz.Hastane.Reports
             // xrLine3
             // 
             this.xrLine3.Dpi = 254F;
-            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(5.291667F, 2126.271F);
+            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2173.896F);
             this.xrLine3.Name = "xrLine3";
             this.xrLine3.SizeF = new System.Drawing.SizeF(1990F, 10F);
             // 
@@ -262,7 +262,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel56.Dpi = 254F;
             this.xrLabel56.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(1145.292F, 2006.271F);
+            this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(1140F, 2053.896F);
             this.xrLabel56.Name = "xrLabel56";
             this.xrLabel56.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel56.SizeF = new System.Drawing.SizeF(190F, 40F);
@@ -275,7 +275,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmServiceNo, "Text", "")});
             this.xrLabel51.Dpi = 254F;
             this.xrLabel51.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 1896.271F);
+            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1943.896F);
             this.xrLabel51.Name = "xrLabel51";
             this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel51.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -293,7 +293,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel50.Dpi = 254F;
             this.xrLabel50.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(135.2918F, 2086.271F);
+            this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(130.0001F, 2133.896F);
             this.xrLabel50.Name = "xrLabel50";
             this.xrLabel50.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel50.SizeF = new System.Drawing.SizeF(380F, 40F);
@@ -308,7 +308,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmPatientTotal, "Text", "")});
             this.xrLabel53.Dpi = 254F;
             this.xrLabel53.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(1735.291F, 2149.5F);
+            this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(1729.999F, 2197.125F);
             this.xrLabel53.Name = "xrLabel53";
             this.xrLabel53.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel53.SizeF = new System.Drawing.SizeF(210F, 40F);
@@ -325,7 +325,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel52.Dpi = 254F;
             this.xrLabel52.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(145.5208F, 2174.875F);
+            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(140.2292F, 2222.5F);
             this.xrLabel52.Name = "xrLabel52";
             this.xrLabel52.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel52.SizeF = new System.Drawing.SizeF(1390F, 50F);
@@ -335,7 +335,7 @@ namespace Naz.Hastane.Reports
             // xrLine4
             // 
             this.xrLine4.Dpi = 254F;
-            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(5.291667F, 2316.271F);
+            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2363.896F);
             this.xrLine4.Name = "xrLine4";
             this.xrLine4.SizeF = new System.Drawing.SizeF(1990F, 10F);
             // 
@@ -343,7 +343,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel62.Dpi = 254F;
             this.xrLabel62.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(1383.771F, 2343.625F);
+            this.xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(1378.479F, 2391.25F);
             this.xrLabel62.Name = "xrLabel62";
             this.xrLabel62.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel62.SizeF = new System.Drawing.SizeF(300F, 39.99988F);
@@ -357,7 +357,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel61.Dpi = 254F;
             this.xrLabel61.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(1383.771F, 2524.124F);
+            this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(1378.479F, 2571.749F);
             this.xrLabel61.Name = "xrLabel61";
             this.xrLabel61.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel61.SizeF = new System.Drawing.SizeF(160F, 40F);
@@ -372,7 +372,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmVAT, "Text", "")});
             this.xrLabel64.Dpi = 254F;
             this.xrLabel64.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(1700.625F, 2524.124F);
+            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(1695.334F, 2573.896F);
             this.xrLabel64.Name = "xrLabel64";
             this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel64.SizeF = new System.Drawing.SizeF(75.33337F, 40F);
@@ -390,7 +390,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel63.Dpi = 254F;
             this.xrLabel63.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(1625.292F, 2524.124F);
+            this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(1620.001F, 2571.749F);
             this.xrLabel63.Name = "xrLabel63";
             this.xrLabel63.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel63.SizeF = new System.Drawing.SizeF(75.33337F, 40F);
@@ -403,7 +403,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel58.Dpi = 254F;
             this.xrLabel58.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(1383.771F, 2397.125F);
+            this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(1378.479F, 2444.75F);
             this.xrLabel58.Name = "xrLabel58";
             this.xrLabel58.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel58.SizeF = new System.Drawing.SizeF(180F, 40F);
@@ -424,7 +424,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel57.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.prmTotalText, "Text", "")});
             this.xrLabel57.Dpi = 254F;
-            this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(85.29163F, 2506.271F);
+            this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(79.99996F, 2553.896F);
             this.xrLabel57.Name = "xrLabel57";
             this.xrLabel57.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel57.SizeF = new System.Drawing.SizeF(1260F, 60F);
@@ -445,7 +445,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel60.Dpi = 254F;
             this.xrLabel60.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(1383.771F, 2460.625F);
+            this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(1378.479F, 2508.25F);
             this.xrLabel60.Name = "xrLabel60";
             this.xrLabel60.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel60.SizeF = new System.Drawing.SizeF(200F, 40F);
@@ -458,7 +458,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel59.Dpi = 254F;
             this.xrLabel59.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(1383.771F, 2587.625F);
+            this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(1378.479F, 2635.25F);
             this.xrLabel59.Name = "xrLabel59";
             this.xrLabel59.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel59.SizeF = new System.Drawing.SizeF(300F, 40F);
@@ -471,7 +471,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel38.Dpi = 254F;
             this.xrLabel38.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1735.291F, 2086.271F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1729.999F, 2133.896F);
             this.xrLabel38.Name = "xrLabel38";
             this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel38.SizeF = new System.Drawing.SizeF(210F, 40.00006F);
@@ -484,7 +484,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmVATValue, "Text", "{0:#,##0.00}")});
             this.xrLabel37.Dpi = 254F;
             this.xrLabel37.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(1785.291F, 2524.124F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(1779.999F, 2571.749F);
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel37.SizeF = new System.Drawing.SizeF(160F, 40F);
@@ -505,7 +505,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmQueueNo, "Text", "")});
             this.xrLabel40.Dpi = 254F;
             this.xrLabel40.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 1836.271F);
+            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1883.896F);
             this.xrLabel40.Name = "xrLabel40";
             this.xrLabel40.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel40.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -523,7 +523,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel39.Dpi = 254F;
             this.xrLabel39.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(85.29163F, 1936.271F);
+            this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(79.99996F, 1983.896F);
             this.xrLabel39.Name = "xrLabel39";
             this.xrLabel39.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel39.SizeF = new System.Drawing.SizeF(300F, 40F);
@@ -534,7 +534,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel34.Dpi = 254F;
             this.xrLabel34.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(1795.291F, 2397.125F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(1789.999F, 2444.75F);
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel34.SizeF = new System.Drawing.SizeF(150F, 40F);
@@ -550,7 +550,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmTotal, "Text", "{0:#,###.00}")});
             this.xrLabel15.Dpi = 254F;
             this.xrLabel15.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(1755.291F, 2587.625F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(1749.999F, 2635.25F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(190F, 40F);
@@ -569,7 +569,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel36.Dpi = 254F;
             this.xrLabel36.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(1795.291F, 2343.625F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(1789.999F, 2391.25F);
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel36.SizeF = new System.Drawing.SizeF(150F, 39.99988F);
@@ -585,7 +585,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmPatientTotal, "Text", "{0:#,###.00}")});
             this.xrLabel35.Dpi = 254F;
             this.xrLabel35.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(1735.291F, 2460.625F);
+            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(1729.999F, 2508.25F);
             this.xrLabel35.Name = "xrLabel35";
             this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel35.SizeF = new System.Drawing.SizeF(210F, 40F);
@@ -600,7 +600,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmDate, "Text", "{0:dd/MM/yyyy}")});
             this.xrLabel41.Dpi = 254F;
             this.xrLabel41.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(1595.292F, 1726.271F);
+            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(1590F, 1773.896F);
             this.xrLabel41.Name = "xrLabel41";
             this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel41.SizeF = new System.Drawing.SizeF(200F, 40F);
@@ -618,7 +618,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmTime, "Text", "{0:HH:mm}")});
             this.xrLabel47.Dpi = 254F;
             this.xrLabel47.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(1805.292F, 1726.271F);
+            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(1800F, 1773.896F);
             this.xrLabel47.Name = "xrLabel47";
             this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel47.SizeF = new System.Drawing.SizeF(120F, 40F);
@@ -636,7 +636,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmPatientNo, "Text", "")});
             this.xrLabel46.Dpi = 254F;
             this.xrLabel46.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(1595.292F, 1816.271F);
+            this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(1590F, 1863.896F);
             this.xrLabel46.Name = "xrLabel46";
             this.xrLabel46.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel46.SizeF = new System.Drawing.SizeF(210F, 40F);
@@ -654,7 +654,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmAddress, "Text", "")});
             this.xrLabel49.Dpi = 254F;
             this.xrLabel49.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(101.1666F, 1708.917F);
+            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(95.87496F, 1756.542F);
             this.xrLabel49.Multiline = true;
             this.xrLabel49.Name = "xrLabel49";
             this.xrLabel49.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -673,7 +673,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmTCID, "Text", "")});
             this.xrLabel48.Dpi = 254F;
             this.xrLabel48.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(385.2917F, 1936.271F);
+            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(380.0001F, 1983.896F);
             this.xrLabel48.Name = "xrLabel48";
             this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel48.SizeF = new System.Drawing.SizeF(440F, 40F);
@@ -689,7 +689,7 @@ namespace Naz.Hastane.Reports
             // 
             this.xrLabel43.Dpi = 254F;
             this.xrLabel43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 1776.271F);
+            this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1823.896F);
             this.xrLabel43.Name = "xrLabel43";
             this.xrLabel43.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel43.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -704,7 +704,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmInvoiceNo, "Text", "")});
             this.xrLabel42.Dpi = 254F;
             this.xrLabel42.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(1595.292F, 1646.271F);
+            this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(1590F, 1693.896F);
             this.xrLabel42.Name = "xrLabel42";
             this.xrLabel42.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel42.SizeF = new System.Drawing.SizeF(210F, 40F);
@@ -722,7 +722,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmTaxOffice, "Text", "")});
             this.xrLabel45.Dpi = 254F;
             this.xrLabel45.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(85.29163F, 2006.271F);
+            this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(79.99996F, 2053.896F);
             this.xrLabel45.Name = "xrLabel45";
             this.xrLabel45.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel45.SizeF = new System.Drawing.SizeF(620F, 40F);
@@ -740,7 +740,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmDoctor, "Text", "")});
             this.xrLabel44.Dpi = 254F;
             this.xrLabel44.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(1335.292F, 2006.271F);
+            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(1330F, 2053.896F);
             this.xrLabel44.Name = "xrLabel44";
             this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel44.SizeF = new System.Drawing.SizeF(700F, 40F);
@@ -1204,7 +1204,7 @@ namespace Naz.Hastane.Reports
             this.BottomMargin,
             this.PageHeader});
             this.Dpi = 254F;
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 85, 0);
             this.PageHeight = 2969;
             this.PageWidth = 2101;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

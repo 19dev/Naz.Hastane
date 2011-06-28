@@ -464,6 +464,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(754, 95);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -473,6 +474,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(754, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -482,6 +484,7 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(754, 329);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -544,6 +547,7 @@
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(547, 648);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
@@ -553,6 +557,7 @@
             // 
             // emptySpaceItem5
             // 
+            this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 648);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
@@ -568,7 +573,7 @@
             this.Controls.Add(this.layoutControl1);
             this.KeyPreview = true;
             this.Name = "SelectFunctionForm";
-            this.Text = "SGK Poliklinik Seçim Formu";
+            this.Text = "İşlem Seçim Formu";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectFunctionForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

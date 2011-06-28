@@ -19,6 +19,10 @@ namespace Naz.Hastane.Data.Entities
         /// AMBU
         /// </summary>
         public virtual string VisitType { get; set; } //AMBU A, Y, P Kart Tipi
+        public virtual bool IsPolyclinicVisit()
+        {
+            return VisitType == "P";
+        }
         /// <summary>
         /// CIKTAR
         /// </summary>

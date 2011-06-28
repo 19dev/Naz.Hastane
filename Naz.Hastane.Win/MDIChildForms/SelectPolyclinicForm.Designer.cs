@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ceSameDay = new DevExpress.XtraEditors.CheckEdit();
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.gcView = new DevExpress.XtraGrid.GridControl();
             this.gvPolyclinics = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,10 +44,10 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.ceSameDay = new DevExpress.XtraEditors.CheckEdit();
             this.lciSameDay = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPolyclinics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSameDay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(696, 481);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // ceSameDay
+            // 
+            this.ceSameDay.Location = new System.Drawing.Point(557, 12);
+            this.ceSameDay.Name = "ceSameDay";
+            this.ceSameDay.Properties.Caption = "İkinci Muayene";
+            this.ceSameDay.Size = new System.Drawing.Size(127, 19);
+            this.ceSameDay.StyleController = this.layoutControl1;
+            this.ceSameDay.TabIndex = 8;
+            this.ceSameDay.CheckedChanged += new System.EventHandler(this.ceSameDay_CheckedChanged);
             // 
             // sbClose
             // 
@@ -201,6 +211,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(545, 78);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -210,6 +221,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(545, 23);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -219,22 +231,13 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(545, 392);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(131, 69);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // ceSameDay
-            // 
-            this.ceSameDay.Location = new System.Drawing.Point(557, 12);
-            this.ceSameDay.Name = "ceSameDay";
-            this.ceSameDay.Properties.Caption = "İkinci Muayene";
-            this.ceSameDay.Size = new System.Drawing.Size(127, 19);
-            this.ceSameDay.StyleController = this.layoutControl1;
-            this.ceSameDay.TabIndex = 8;
-            this.ceSameDay.CheckedChanged += new System.EventHandler(this.ceSameDay_CheckedChanged);
             // 
             // lciSameDay
             // 
@@ -255,9 +258,10 @@
             this.ClientSize = new System.Drawing.Size(696, 481);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SelectPolyclinicForm";
-            this.Text = "SGK Poliklinik Seçim Formu";
+            this.Text = "Poliklinik Seçim Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPolyclinics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -267,7 +271,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceSameDay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSameDay)).EndInit();
             this.ResumeLayout(false);
 

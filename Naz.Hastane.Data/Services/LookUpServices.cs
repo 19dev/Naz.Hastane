@@ -431,7 +431,7 @@ namespace Naz.Hastane.Data.Services
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 products = (from p in session.Query<Product>()
-                               where p.TANIM == tanim && p.GRUP == grup
+                               where p.APHIZMET == "1" && p.TANIM == tanim && p.GRUP == grup
                                orderby p.NAME1
                                select p
                               )
@@ -449,7 +449,7 @@ namespace Naz.Hastane.Data.Services
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 products = (from p in session.Query<Product>()
-                            where p.TANIM == tanim
+                            where p.APHIZMET == "1" && p.TANIM == tanim
                             orderby p.NAME1
                             select p
                               )

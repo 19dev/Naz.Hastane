@@ -12,8 +12,6 @@ namespace Naz.Hastane.Data.Mappings
 
             CompositeId()
                 .KeyReference(x => x.PatientVisit, "KNR", "SNR")
-                //.KeyProperty(x => x.KNR, "KNR")
-                //.KeyProperty(x => x.SNR, "SNR")
                 .KeyProperty(x => x.VisitDate, "GELISTARIHI");
 
             Map(x => x.ACIL_KONS).Column("ACIL_KONS").Length(1); //1
@@ -50,6 +48,9 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.TreatmentStyle).Column("TEDAVITURU").Length(10); //1
             Map(x => x.USER_ID).Column("USER_ID").Length(20); //0
             Map(x => x.USER_ID_UPDATE).Column("USER_ID_UPDATE").Length(20); //1
+
+            //HasOne(x => x.PatientAnamnesis)
+            //    .ForeignKey("KNR, SNR, GELIS_TARIHI");
         }
     }
 }

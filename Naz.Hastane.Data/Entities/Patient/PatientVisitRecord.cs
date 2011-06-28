@@ -116,5 +116,6 @@ namespace Naz.Hastane.Data.Entities
             return hash;
         }
 
+        //public virtual PatientAnamnesis PatientAnamnesis { get; set; }
     }
 }

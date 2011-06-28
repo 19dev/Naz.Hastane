@@ -154,6 +154,10 @@
     <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
     <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
+    <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
+    <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
+    <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
+    <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
     <Compile Include="Entities\Product\Product.cs" />
     <Compile Include="Entities\Product\ProductCoefficient.cs" />
     <Compile Include="Entities\Product\ProductDoctorPercent.cs" />

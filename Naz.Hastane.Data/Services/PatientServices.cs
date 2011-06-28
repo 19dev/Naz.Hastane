@@ -347,8 +347,15 @@ namespace Naz.Hastane.Data.Services
 
                 pvd.PatientVisit  = pv;
                 pvd.DetailNo      = GetNewPatientVisitDetailNo(session, pv);
-                pvd.PatientPrice        = product.GetPatientPrice(patient.InsuranceCompany.YFIYLIST);
-                pvd.CompanyPrice       = product.GetCompanyPrice(patient.InsuranceCompany.YFIYLIST);
+
+                string priceListCode;
+                if (pv.IsPolyclinicVisit())
+                    priceListCode = patient.InsuranceCompany.PFIYLIST;
+                else
+                    priceListCode = patient.InsuranceCompany.YFIYLIST;
+
+                pvd.PatientPrice = product.GetPatientPrice(priceListCode);
+                pvd.CompanyPrice = product.GetCompanyPrice(priceListCode);
                 pvd.USER_ID       = user.USER_ID;
                 pvd.DATE_CREATE   = DateTime.Now;
 
@@ -809,12 +816,13 @@ namespace Naz.Hastane.Data.Services
                 remainingAdvancePayment -= usedPayment;
                 session.Update(ap);
 
-                AdvancePaymentUsed apu = new AdvancePaymentUsed();
-                apu.AdvancePayment     = ap;
-                apu.TARIH              = DateTime.Now;
-                apu.TUTAR              = usedPayment;
-                apu.USER_ID            = user.USER_ID;
-                apu.DATE_CREATE = DateTime.Now;
+                AdvancePaymentUsed apu = new AdvancePaymentUsed() {
+                    AdvancePayment     = ap,
+                    TARIH              = DateTime.Now,
+                    TUTAR              = usedPayment, 
+                    USER_ID            = user.USER_ID,
+                    DATE_CREATE        = DateTime.Now };
+
                 session.Save(apu);
             }
         }
@@ -830,29 +838,29 @@ namespace Naz.Hastane.Data.Services
             string apNo = LookUpServices.GetNewAdvancePaymentNo();
 
             AdvancePayment ap = new AdvancePayment() { 
-                AV_ID = Convert.ToDouble(apNo), 
-                PatientVisit = pv, 
-                TARIH = DateTime.Now, 
-                TUTAR = cashPayment, 
-                KULLANILAN = cashPayment, 
-                ODEMESEKLI = paymentType, 
-                POSNO = POSType,
-                MAKNO = cdr.MAKNO, 
-                HESAPKODU = "", 
-                ALTHESAPKODU = "", 
-                KALAN = 0,
-                USER_ID = user.USER_ID,
-                DATE_CREATE = DateTime.Now };
+                AV_ID         = Convert.ToDouble(apNo), 
+                PatientVisit  = pv, 
+                TARIH         = DateTime.Now, 
+                TUTAR         = cashPayment, 
+                KULLANILAN    = cashPayment, 
+                ODEMESEKLI    = paymentType, 
+                POSNO         = POSType,
+                MAKNO         = cdr.MAKNO, 
+                HESAPKODU     = "", 
+                ALTHESAPKODU  = "", 
+                KALAN         = 0,
+                USER_ID       = user.USER_ID,
+                DATE_CREATE   = DateTime.Now };
 
             session.Save(ap);
 
-            AdvancePaymentUsed apu = new AdvancePaymentUsed();
-            apu.AdvancePayment     = ap;
-            apu.TARIH              = DateTime.Now;
-            apu.FATURANO           = invoiceNo;
-            apu.TUTAR              = cashPayment;
-            apu.USER_ID            = user.USER_ID;
-            apu.DATE_CREATE        = DateTime.Now;
+            AdvancePaymentUsed apu = new AdvancePaymentUsed() { 
+                AdvancePayment     = ap, 
+                TARIH              = DateTime.Now,
+                FATURANO           = invoiceNo, 
+                TUTAR              = cashPayment,
+                USER_ID            = user.USER_ID, 
+                DATE_CREATE        = DateTime.Now };
 
             session.Save(apu);
         }
@@ -862,23 +870,23 @@ namespace Naz.Hastane.Data.Services
         {
             string makNo = LookUpServices.GetNewVoucherNo();
 
-            CashDeskRecord cdr = new CashDeskRecord();
-            cdr.MAKNO          = makNo;
-            cdr.KNR            = pv.Patient.PatientNo;
-            cdr.SNR            = pv.VisitNo;
-            cdr.TARIH          = DateTime.Now;
-            cdr.MAKBUZNO       = tellerVoucherNo;
-            cdr.MAKBUZTIPI     = voucherType;
-            cdr.ODEMESEKLI     = paymentType[0];
-            cdr.POSNO          = POSType;
-            cdr.TUTAR          = payment;
-            cdr.BORCALACAK     = 'B';
-            cdr.FATURANO       = invoiceNo;
-            cdr.VEZNE          = user.VEZNE;
-            cdr.HESAPKODU      = null;
-            cdr.ALTHESAPKODU   = null;
-            cdr.USER_ID        = user.USER_ID;
-            cdr.DATE_CREATE    = DateTime.Now;
+            CashDeskRecord cdr = new CashDeskRecord() { 
+                MAKNO          = makNo, 
+                KNR            = pv.Patient.PatientNo, 
+                SNR            = pv.VisitNo, 
+                TARIH          = DateTime.Now, 
+                MAKBUZNO       = tellerVoucherNo, 
+                MAKBUZTIPI     = voucherType, 
+                ODEMESEKLI     = paymentType[0], 
+                POSNO          = POSType, 
+                TUTAR          = payment, 
+                BORCALACAK     = 'B', 
+                FATURANO       = invoiceNo, 
+                VEZNE          = user.VEZNE, 
+                HESAPKODU      = null, 
+                ALTHESAPKODU   = null, 
+                USER_ID        = user.USER_ID, 
+                DATE_CREATE    = DateTime.Now };
 
             session.Save(cdr);
 
@@ -893,23 +901,29 @@ namespace Naz.Hastane.Data.Services
         {
             string makNo = LookUpServices.GetNewVoucherNo();
 
-            Invoice invoice = new Invoice() { 
-                PatientNo = patient.PatientNo, 
-                FATURA_ID = invoiceNo, 
-                SLNR = tellerInvoiceNo, 
-                FATURANO = tellerInvoiceNo, 
+            Invoice invoice  = new Invoice() { 
+                PatientNo    = patient.PatientNo, 
+                FATURA_ID    = invoiceNo, 
+                SLNR         = tellerInvoiceNo, 
+                FATURANO     = tellerInvoiceNo, 
                 FATURATARIHI = DateTime.Now, 
                 HIZMETTUTARI = productTotal, 
-                INDIRIM = discountTotal, 
-                KDVTUTARI = VATTotal, 
-                YUVARLAMA = 0, 
+                INDIRIM      = discountTotal, 
+                KDVTUTARI    = VATTotal, 
+                YUVARLAMA    = 0, 
                 FATURATUTARI = invoiceTotal,
-                KDVORANI = VATPercent.ToString(),
-                NAME = patient.FullName, 
-                FATURATIPI = "H", FAK = "K", ZHLKZ = "N", PSG = "", ISODENDI = "1", mk = 'H',
-                MAKNO = makNo, 
-                VEZNE = user.VEZNE,
-                USER_ID = user.USER_ID, DATE_CREATE = DateTime.Now };
+                KDVORANI     = VATPercent.ToString(),
+                NAME         = patient.FullName, 
+                FATURATIPI   = "H", 
+                FAK          = "K", 
+                ZHLKZ        = "N", 
+                PSG          = "", 
+                ISODENDI     = "1",
+                mk           = 'H',
+                MAKNO        = makNo, 
+                VEZNE        = user.VEZNE,
+                USER_ID      = user.USER_ID, 
+                DATE_CREATE  = DateTime.Now };
 
             session.Save(invoice);
 
@@ -924,10 +938,11 @@ namespace Naz.Hastane.Data.Services
         {
             foreach (PatientVisitDetail pvd in pvds)
             {
-                pvd.ESKI_SATISF = pvd.PatientPrice;
-                pvd.MAKNO = voucherNo;
+                pvd.ESKI_SATISF    = pvd.PatientPrice;
+                pvd.MAKNO          = voucherNo;
                 pvd.USER_ID_UPDATE = user.USER_ID;
-                pvd.DATE_UPDATE = DateTime.Now;
+                pvd.DATE_UPDATE    = DateTime.Now;
+
                 session.Update(pvd);
             }
 
