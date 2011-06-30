@@ -747,7 +747,7 @@ namespace Naz.Hastane.Win {
         private void AttachMDIChildButtons()
         {
             iHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraForm>();
-            iSGKHastaAra.ItemClick += (o, args) => ShowNewDocument<SGKFindPatientForm>();
+            iSGKHastaAra.ItemClick += (o, args) => OpenFindPatientForm();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
             iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiceVoucherForm>();
@@ -757,6 +757,11 @@ namespace Naz.Hastane.Win {
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
+        }
+
+        public void OpenFindPatientForm()
+        {
+            ShowNewDocument<FindPatientForm>();
         }
         #endregion
 

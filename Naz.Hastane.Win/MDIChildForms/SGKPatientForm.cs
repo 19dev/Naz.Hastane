@@ -26,7 +26,8 @@ namespace Naz.Hastane.Win.MDIChildForms
     public partial class SGKPatientForm : MDIChildForm
     {
         private Patient _Patient = null;
-
+        private frmMain _MainForm;
+ 
         public Patient Patient
         {
             get { return _Patient; }
@@ -62,6 +63,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private SGKPatientForm()
         {
             InitializeComponent();
+            _MainForm = this.MdiParent as frmMain;
         }
 
         public SGKPatientForm(string aPatientNo) : this()
@@ -216,7 +218,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void OpenNewForm()
         {
-            (this.MdiParent as frmMain).OpenSGKPatient(Patient.PatientNo);
+            _MainForm.OpenSGKPatient(Patient.PatientNo);
             this.Close();
         }
         #region Mernis
@@ -489,7 +491,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         #endregion
 
-        private void sbInvoice_Click(object sender, EventArgs e)
+        private void GenerateInvoice()
         {
             string NewTellerInvoiceNo = this.teInvoiceNo.Text;
             const string paymentType = "N";
@@ -528,8 +530,12 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.teInvoiceNo.Text = "";
             }
         }
+        private void sbInvoice_Click(object sender, EventArgs e)
+        {
+            GenerateInvoice();
+        }
 
-        private void sbVoucher_Click(object sender, EventArgs e)
+        private void GenerateVoucher()
         {
             string NewTellerVoucherNo = this.teVoucherNo.Text;
             string paymentType = "N";
@@ -554,10 +560,18 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.teVoucherNo.Text = "";
             }
         }
+        private void sbVoucher_Click(object sender, EventArgs e)
+        {
+            GenerateVoucher();
+        }
 
-        private void sbTaahutname_Click(object sender, EventArgs e)
+        private void PrintCommitmentLetter()
         {
             UIUtilities.PrintTaahhutname(Patient, true);
+        }
+        private void sbTaahutname_Click(object sender, EventArgs e)
+        {
+            PrintCommitmentLetter();
         }
 
         private void sbDeletePatientVisitDetail_Click(object sender, EventArgs e)
@@ -692,12 +706,30 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SGKPatientForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F3)
+            if (e.KeyCode == Keys.F1)
+                CallMernis();
+            else if (e.KeyCode == Keys.F2)
+                CallMedulaProvision();
+            else if (e.KeyCode == Keys.F3)
                 CloseForm();
+            else if (e.KeyCode == Keys.F4)
+                AddPatientVisitDetail();
             else if (e.KeyCode == Keys.F5)
                 SavePatient();
+            else if (e.KeyCode == Keys.F6)
+                PrintCommitmentLetter();
+            else if (e.KeyCode == Keys.F7)
+                SearchPatient();
             else if (e.KeyCode == Keys.F8)
                 ProcessNewPolyclinic();
+            else if (e.KeyCode == Keys.F9)
+                AddHospitalizationRecord();
+            else if (e.KeyCode == Keys.F10)
+                AddEmergencyRecord();
+            else if (e.KeyCode == Keys.F11)
+                GenerateInvoice();
+            else if (e.KeyCode == Keys.F12)
+                GenerateVoucher();
         }
 
         private void sbClose_Click(object sender, EventArgs e)
@@ -711,6 +743,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
         private void sbAddPatientVisitDetail_Click(object sender, EventArgs e)
+        {
+            AddPatientVisitDetail();
+        }
+
+        private void AddPatientVisitDetail()
         {
             currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (Patient != null && Patient.InsuranceCompany != null && currentPatientVisit != null)
@@ -726,7 +763,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                     RefreshGrid();
                 }
             }
-
         }
 
         #region Change Insurance Company
@@ -800,6 +836,34 @@ namespace Naz.Hastane.Win.MDIChildForms
             EnableForMedula(false);
             this.medulaFollowUpQueryControl.CallMedulaHastaKabulOku(_OldProvisionCode);
 
+        }
+
+        private void sbAra_Click(object sender, EventArgs e)
+        {
+            SearchPatient();
+        }
+
+        private void SearchPatient()
+        {
+            _MainForm.OpenFindPatientForm();
+        }
+
+        private void sbYatis_Click(object sender, EventArgs e)
+        {
+            AddHospitalizationRecord();
+        }
+
+        private void AddHospitalizationRecord()
+        {
+        }
+
+        private void sbAcil_Click(object sender, EventArgs e)
+        {
+            AddEmergencyRecord();
+        }
+
+        private void AddEmergencyRecord()
+        {
         }
 
     }

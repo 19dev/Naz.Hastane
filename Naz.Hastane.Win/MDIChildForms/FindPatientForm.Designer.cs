@@ -1,6 +1,6 @@
 ﻿namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class SGKFindPatientForm
+    partial class FindPatientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -355,7 +355,6 @@
             this.lcgSayfa.Location = new System.Drawing.Point(0, 0);
             this.lcgSayfa.Name = "lcgSayfa";
             this.lcgSayfa.Size = new System.Drawing.Size(954, 638);
-            this.lcgSayfa.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.lcgSayfa.Text = "Sayfa";
             this.lcgSayfa.TextVisible = false;
             // 
@@ -566,7 +565,7 @@
             this.ClientSize = new System.Drawing.Size(954, 638);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SGKFindPatientForm";
-            this.Text = "SGK Hasta Arama Ekranı";
+            this.Text = "Hasta Arama Ekranı";
             this.Shown += new System.EventHandler(this.SGKFindPatientForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

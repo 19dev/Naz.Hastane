@@ -591,6 +591,7 @@ namespace Naz.Hastane.Data.Services
             {
                 string serialID = "";
                 int serialNo = 0;
+                int numLength = 0;
 
                 /// TODO Add control for no element
                 SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
@@ -605,14 +606,20 @@ namespace Naz.Hastane.Data.Services
                         serialID = ss.Value.Substring(0, i+1);
                         string s = ss.Value.Substring(i + 1);
                         if (!String.IsNullOrWhiteSpace(s))
+                        {
                             serialNo = Convert.ToInt32(s);
+                            numLength = s.Length;
+                        }
                         break;
                     }
                     if (i == 0)
+                    {
                         serialNo = Convert.ToInt32(ss.Value);
+                        numLength = ss.Value.Length;
+                    }
                 }
                 serialNo += 1;
-                ss.Value = serialID + serialNo.ToString();
+                ss.Value = serialID + serialNo.ToString(new String('0', numLength));
                 if (updateDB)
                 {
                     try

@@ -21,9 +21,9 @@ using System.Linq.Expressions;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class SGKFindPatientForm : MDIChildForm
+    public partial class FindPatientForm : MDIChildForm
     {
-        public SGKFindPatientForm()
+        public FindPatientForm()
         {
             InitializeComponent();
         }
