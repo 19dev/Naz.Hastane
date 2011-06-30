@@ -789,6 +789,8 @@ namespace Naz.Hastane.Win {
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
+
+            iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
         }
 
         public void OpenFindPatientForm()
@@ -990,6 +992,6 @@ namespace Naz.Hastane.Win {
             this.rcMain.SelectedPage = rpSGKPatients;
         }
         #endregion
-        
+
     }
 }

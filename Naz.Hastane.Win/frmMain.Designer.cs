@@ -257,7 +257,7 @@ namespace Naz.Hastane.Win {
             this.iPaste.Caption = "&Paste";
             this.iPaste.CategoryGuid = new System.Guid("7c2486e1-92ea-4293-ad55-b819f61ff7f1");
             this.iPaste.Description = "Inserts the contents of the Clipboard at the insertion point, and replaces any se" +
-                "lection. This command is available only if you have cut or copied a text.";
+    "lection. This command is available only if you have cut or copied a text.";
             this.iPaste.Hint = "Paste";
             this.iPaste.Id = 11;
             this.iPaste.ImageIndex = 8;
@@ -502,7 +502,7 @@ namespace Naz.Hastane.Win {
             this.iYeniPersonel});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 303;
+            this.rcMain.MaxItemId = 304;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -749,7 +749,7 @@ namespace Naz.Hastane.Win {
             this.iBold.Caption = "&Bold";
             this.iBold.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iBold.Description = "Makes selected text and numbers bold. If the selection is already bold, clicking " +
-                "button removes bold formatting.";
+    "button removes bold formatting.";
             this.iBold.Hint = "Bold";
             this.iBold.Id = 24;
             this.iBold.ImageIndex = 15;
@@ -763,7 +763,7 @@ namespace Naz.Hastane.Win {
             this.iItalic.Caption = "&Italic";
             this.iItalic.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iItalic.Description = "Makes selected text and numbers italic. If the selection is already italic, click" +
-                "ing button removes italic formatting.";
+    "ing button removes italic formatting.";
             this.iItalic.Hint = "Italic";
             this.iItalic.Id = 25;
             this.iItalic.ImageIndex = 16;
@@ -777,7 +777,7 @@ namespace Naz.Hastane.Win {
             this.iUnderline.Caption = "&Underline";
             this.iUnderline.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iUnderline.Description = "Underlines selected text and numbers. If the selection is already underlined, cli" +
-                "cking button removes underlining.";
+    "cking button removes underlining.";
             this.iUnderline.Hint = "Underline";
             this.iUnderline.Id = 26;
             this.iUnderline.ImageIndex = 17;
@@ -916,8 +916,8 @@ namespace Naz.Hastane.Win {
             this.sbiFind.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.iReplace)});
             this.sbiFind.Name = "sbiFind";
-            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
-                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // iPasteSpecial
             // 
@@ -2001,6 +2001,7 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
             // xtraTabbedMdiManager1
+            // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.MenuManager = this.rcMain;
             this.xtraTabbedMdiManager1.View = this.tabbedView1;
