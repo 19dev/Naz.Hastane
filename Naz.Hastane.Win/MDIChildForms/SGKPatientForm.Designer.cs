@@ -240,7 +240,6 @@
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAra = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciAddPatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHastaFatura = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciClose = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -250,11 +249,14 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciInvoiceNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciVoucherNo = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciTaahutname = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSavePatient = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPoliklinik = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddPatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciTaahutname = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lcgAltTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciKurumCarisineIsle = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciKurumCaridenSil = new DevExpress.XtraLayout.LayoutControlItem();
@@ -268,8 +270,6 @@
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
@@ -434,7 +434,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -444,11 +443,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInvoiceNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciVoucherNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPoliklinik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAltTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).BeginInit();
@@ -461,8 +463,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -586,7 +586,6 @@
             this.sbYatis.StyleController = this.layoutControl1;
             this.sbYatis.TabIndex = 144;
             this.sbYatis.Text = "&Yatış(F9)";
-            this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(104, 20);
             // 
             // gridControl3
             // 
@@ -2792,18 +2791,6 @@
             this.lciAra.TextVisible = false;
             this.lciAra.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
-            // lciAddPatientVisitDetail
-            // 
-            this.lciAddPatientVisitDetail.Control = this.sbAddPatientVisitDetail;
-            this.lciAddPatientVisitDetail.CustomizationFormText = "İşlemler";
-            this.lciAddPatientVisitDetail.Location = new System.Drawing.Point(0, 186);
-            this.lciAddPatientVisitDetail.Name = "lciAddPatientVisitDetail";
-            this.lciAddPatientVisitDetail.Size = new System.Drawing.Size(123, 26);
-            this.lciAddPatientVisitDetail.Text = "İşlemler";
-            this.lciAddPatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
-            this.lciAddPatientVisitDetail.TextToControlDistance = 0;
-            this.lciAddPatientVisitDetail.TextVisible = false;
-            // 
             // lciHastaFatura
             // 
             this.lciHastaFatura.Control = this.sbInvoice;
@@ -2906,18 +2893,6 @@
             this.lciVoucherNo.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciVoucherNo.TextSize = new System.Drawing.Size(119, 13);
             // 
-            // lciTaahutname
-            // 
-            this.lciTaahutname.Control = this.sbTaahutname;
-            this.lciTaahutname.CustomizationFormText = "lciTaahutname";
-            this.lciTaahutname.Location = new System.Drawing.Point(0, 238);
-            this.lciTaahutname.Name = "lciTaahutname";
-            this.lciTaahutname.Size = new System.Drawing.Size(123, 26);
-            this.lciTaahutname.Text = "lciTaahutname";
-            this.lciTaahutname.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTaahutname.TextToControlDistance = 0;
-            this.lciTaahutname.TextVisible = false;
-            // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.sbYatis;
@@ -2965,6 +2940,50 @@
             this.lciPoliklinik.TextSize = new System.Drawing.Size(0, 0);
             this.lciPoliklinik.TextToControlDistance = 0;
             this.lciPoliklinik.TextVisible = false;
+            // 
+            // lciAddPatientVisitDetail
+            // 
+            this.lciAddPatientVisitDetail.Control = this.sbAddPatientVisitDetail;
+            this.lciAddPatientVisitDetail.CustomizationFormText = "İşlemler";
+            this.lciAddPatientVisitDetail.Location = new System.Drawing.Point(0, 186);
+            this.lciAddPatientVisitDetail.Name = "lciAddPatientVisitDetail";
+            this.lciAddPatientVisitDetail.Size = new System.Drawing.Size(123, 26);
+            this.lciAddPatientVisitDetail.Text = "İşlemler";
+            this.lciAddPatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddPatientVisitDetail.TextToControlDistance = 0;
+            this.lciAddPatientVisitDetail.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 176);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 10);
+            this.emptySpaceItem2.Text = "emptySpaceItem2";
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciTaahutname
+            // 
+            this.lciTaahutname.Control = this.sbTaahutname;
+            this.lciTaahutname.CustomizationFormText = "lciTaahutname";
+            this.lciTaahutname.Location = new System.Drawing.Point(0, 238);
+            this.lciTaahutname.Name = "lciTaahutname";
+            this.lciTaahutname.Size = new System.Drawing.Size(123, 26);
+            this.lciTaahutname.Text = "lciTaahutname";
+            this.lciTaahutname.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTaahutname.TextToControlDistance = 0;
+            this.lciTaahutname.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 26);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(123, 10);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lcgAltTuslar
             // 
@@ -3127,26 +3146,6 @@
             // 
             this.timerHastaKabulOku.Interval = 200;
             this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 176);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 10);
-            this.emptySpaceItem2.Text = "emptySpaceItem2";
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 26);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(123, 10);
-            this.emptySpaceItem5.Text = "emptySpaceItem5";
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // SGKPatientForm
             // 
@@ -3326,7 +3325,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -3336,11 +3334,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInvoiceNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciVoucherNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPoliklinik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAltTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).EndInit();
@@ -3353,8 +3354,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
