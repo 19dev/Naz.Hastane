@@ -688,7 +688,6 @@ namespace Naz.Hastane.Win {
         {
             OpenNewSGKPatient();
         }
-
         private void iYeniHasta_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenNewHasta();
@@ -728,7 +727,6 @@ namespace Naz.Hastane.Win {
             ShowNewDocument(newForm);
             newForm.SetNewTCID(newTCID);
         }
-
         public void OpenSGKPatient(string patientID)
         {
             Patient patient = PatientServices.GetPatientByID(patientID);
@@ -740,6 +738,40 @@ namespace Naz.Hastane.Win {
                 ShowNewDocument(newForm);
                 AddToMostRecentFiles(name, arMRUList);
             }
+        }
+        #endregion
+
+        #region Personnel Forms
+        private void iYeniPersonel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenNewPersonnel();
+        }
+        public void OpenNewPersonnel()
+        {
+            string name = "Yeni Personel";
+            PersonelForm newForm = new PersonelForm(0);
+            newForm.Text = name;
+            ShowNewDocument(newForm);
+        }
+        public void OpenPersonnel(int aPersonnelNo)
+        {
+            Personel personnel = PersonnelServices.GetPersonnelByID(aPersonnelNo);
+            if (personnel != null)
+            {
+                PersonelForm newForm = new PersonelForm(aPersonnelNo);
+                string name = personnel.Ad + " " + personnel.Soyad;
+                newForm.Text = name;
+                ShowNewDocument(newForm);
+                AddToMostRecentFiles(name, arMRUList);
+            }
+        }
+        public void OpenNewPersonnelWithTCID(string newTCID)
+        {
+            string name = "Yeni Personel";
+            PersonelForm newForm = new PersonelForm(0);
+            newForm.Text = name;
+            ShowNewDocument(newForm);
+            newForm.SetNewTCID(newTCID);
         }
         #endregion
 
@@ -757,6 +789,8 @@ namespace Naz.Hastane.Win {
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
+
+            iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
         }
         #endregion
 
@@ -953,6 +987,6 @@ namespace Naz.Hastane.Win {
             this.rcMain.SelectedPage = rpSGKPatients;
         }
         #endregion
-
+        
     }
 }

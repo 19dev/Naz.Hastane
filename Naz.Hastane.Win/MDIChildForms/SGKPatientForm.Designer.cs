@@ -441,7 +441,7 @@
             this.ddbChangeInsuranceCompany.Location = new System.Drawing.Point(187, 658);
             this.ddbChangeInsuranceCompany.MaximumSize = new System.Drawing.Size(110, 0);
             this.ddbChangeInsuranceCompany.Name = "ddbChangeInsuranceCompany";
-            this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(104, 22);
+            this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(104, 20);
             this.ddbChangeInsuranceCompany.StyleController = this.layoutControl1;
             this.ddbChangeInsuranceCompany.TabIndex = 120;
             this.ddbChangeInsuranceCompany.Text = "Kurum Değiştir";

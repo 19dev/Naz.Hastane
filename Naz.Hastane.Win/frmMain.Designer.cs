@@ -153,6 +153,9 @@ namespace Naz.Hastane.Win {
             this.iPriceList = new DevExpress.XtraBars.BarButtonItem();
             this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
+            this.iPersonelAra = new DevExpress.XtraBars.BarButtonItem();
+            this.iYeniPersonel = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -189,6 +192,8 @@ namespace Naz.Hastane.Win {
             this.rpgTest = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpEczane = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpbEczaneReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbPersonel = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgPersonel = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmNew = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -196,7 +201,6 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -251,7 +255,7 @@ namespace Naz.Hastane.Win {
             this.iPaste.Caption = "&Paste";
             this.iPaste.CategoryGuid = new System.Guid("7c2486e1-92ea-4293-ad55-b819f61ff7f1");
             this.iPaste.Description = "Inserts the contents of the Clipboard at the insertion point, and replaces any se" +
-    "lection. This command is available only if you have cut or copied a text.";
+                "lection. This command is available only if you have cut or copied a text.";
             this.iPaste.Hint = "Paste";
             this.iPaste.Id = 11;
             this.iPaste.ImageIndex = 8;
@@ -491,10 +495,12 @@ namespace Naz.Hastane.Win {
             this.iPriceList,
             this.iDailyTellerReport,
             this.iHarcamaRaporu,
-            this.iOzetServisAnaIslem3Pivot});
+            this.iOzetServisAnaIslem3Pivot,
+            this.iPersonelAra,
+            this.iYeniPersonel});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 297;
+            this.rcMain.MaxItemId = 303;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -510,13 +516,14 @@ namespace Naz.Hastane.Win {
             this.rbDefinitions,
             this.rpUser,
             this.rpGallery,
-            this.rpEczane});
+            this.rpEczane,
+            this.rbPersonel});
             this.rcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rbAdminReports;
+            this.rcMain.SelectedPage = this.rbPersonel;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -740,7 +747,7 @@ namespace Naz.Hastane.Win {
             this.iBold.Caption = "&Bold";
             this.iBold.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iBold.Description = "Makes selected text and numbers bold. If the selection is already bold, clicking " +
-    "button removes bold formatting.";
+                "button removes bold formatting.";
             this.iBold.Hint = "Bold";
             this.iBold.Id = 24;
             this.iBold.ImageIndex = 15;
@@ -754,7 +761,7 @@ namespace Naz.Hastane.Win {
             this.iItalic.Caption = "&Italic";
             this.iItalic.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iItalic.Description = "Makes selected text and numbers italic. If the selection is already italic, click" +
-    "ing button removes italic formatting.";
+                "ing button removes italic formatting.";
             this.iItalic.Hint = "Italic";
             this.iItalic.Id = 25;
             this.iItalic.ImageIndex = 16;
@@ -768,7 +775,7 @@ namespace Naz.Hastane.Win {
             this.iUnderline.Caption = "&Underline";
             this.iUnderline.CategoryGuid = new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258");
             this.iUnderline.Description = "Underlines selected text and numbers. If the selection is already underlined, cli" +
-    "cking button removes underlining.";
+                "cking button removes underlining.";
             this.iUnderline.Hint = "Underline";
             this.iUnderline.Id = 26;
             this.iUnderline.ImageIndex = 17;
@@ -907,8 +914,8 @@ namespace Naz.Hastane.Win {
             this.sbiFind.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.iReplace)});
             this.sbiFind.Name = "sbiFind";
-            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.sbiFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // iPasteSpecial
             // 
@@ -1562,6 +1569,27 @@ namespace Naz.Hastane.Win {
             this.iHarcamaRaporu.Id = 294;
             this.iHarcamaRaporu.Name = "iHarcamaRaporu";
             // 
+            // iOzetServisAnaIslem3Pivot
+            // 
+            this.iOzetServisAnaIslem3Pivot.Caption = "Servis/Ana Ýþlem 3";
+            this.iOzetServisAnaIslem3Pivot.Id = 296;
+            this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
+            // 
+            // iPersonelAra
+            // 
+            this.iPersonelAra.Caption = "Personel Ara";
+            this.iPersonelAra.Id = 298;
+            this.iPersonelAra.LargeImageIndex = 4;
+            this.iPersonelAra.Name = "iPersonelAra";
+            // 
+            // iYeniPersonel
+            // 
+            this.iYeniPersonel.Caption = "Yeni Personel";
+            this.iYeniPersonel.Id = 299;
+            this.iYeniPersonel.LargeImageIndex = 0;
+            this.iYeniPersonel.Name = "iYeniPersonel";
+            this.iYeniPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYeniPersonel_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1913,6 +1941,20 @@ namespace Naz.Hastane.Win {
             this.rpbEczaneReports.Name = "rpbEczaneReports";
             this.rpbEczaneReports.Text = "Eczane Raporlarý";
             // 
+            // rbPersonel
+            // 
+            this.rbPersonel.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgPersonel});
+            this.rbPersonel.Name = "rbPersonel";
+            this.rbPersonel.Text = "Personel";
+            // 
+            // rpgPersonel
+            // 
+            this.rpgPersonel.ItemLinks.Add(this.iPersonelAra);
+            this.rpgPersonel.ItemLinks.Add(this.iYeniPersonel);
+            this.rpgPersonel.Name = "rpgPersonel";
+            this.rpgPersonel.Text = "Personel";
+            // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.AllowFocused = false;
@@ -1963,12 +2005,6 @@ namespace Naz.Hastane.Win {
             // 
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
-            // iOzetServisAnaIslem3Pivot
-            // 
-            this.iOzetServisAnaIslem3Pivot.Caption = "Servis/Ana Ýþlem 3";
-            this.iOzetServisAnaIslem3Pivot.Id = 296;
-            this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
             // 
             // frmMain
             // 
@@ -2189,6 +2225,10 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rpEczane;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpbEczaneReports;
         private DevExpress.XtraBars.BarButtonItem iOzetServisAnaIslem3Pivot;
+        private DevExpress.XtraBars.BarButtonItem iPersonelAra;
+        private DevExpress.XtraBars.BarButtonItem iYeniPersonel;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbPersonel;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPersonel;
 
     }
 }

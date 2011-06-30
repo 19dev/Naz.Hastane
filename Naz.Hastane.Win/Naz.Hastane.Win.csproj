@@ -101,71 +101,78 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v10.2">
+    <Reference Include="DevExpress.BonusSkins.v11.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2">
-      <Name>DevExpress.Data.v10.2</Name>
+    <Reference Include="DevExpress.Printing.v11.1.Core">
+      <Name>DevExpress.Printing.v11.1.Core</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.OfficeSkins.v10.2">
+    <Reference Include="DevExpress.Data.v11.1">
+      <Name>DevExpress.Data.v11.1</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Tutorials.v10.2">
-      <Name>DevExpress.Tutorials.v10.2</Name>
+    <Reference Include="DevExpress.Tutorials.v11.1">
+      <Name>DevExpress.Tutorials.v11.1</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v10.2">
-      <Name>DevExpress.Utils.v10.2</Name>
+    <Reference Include="DevExpress.Utils.v11.1">
+      <Name>DevExpress.Utils.v11.1</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v10.2">
-      <Name>DevExpress.XtraBars.v10.2</Name>
+    <Reference Include="DevExpress.XtraBars.v11.1">
+      <Name>DevExpress.XtraBars.v11.1</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v10.2">
-      <Name>DevExpress.XtraEditors.v10.2</Name>
+    <Reference Include="DevExpress.XtraEditors.v11.1">
+      <Name>DevExpress.XtraEditors.v11.1</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v11.1.Design, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2.Extensions, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v10.2.Core, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
     <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
@@ -333,6 +340,12 @@
     <Compile Include="MDIChildForms\SGKFindPatientForm.Designer.cs">
       <DependentUpon>SGKFindPatientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\PersonelAraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\PersonelAraForm.Designer.cs">
+      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\SGKPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,7 +406,18 @@
     <Compile Include="MDIChildForms\SelectPolyclinicForm.Designer.cs">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\PersonelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\PersonelForm.Designer.cs">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -460,11 +484,21 @@
     <EmbeddedResource Include="MDIChildForms\SelectInsuranceCompanyForm.resx">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\PersonelAraForm.resx">
+      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
       <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectPolyclinicForm.resx">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\PersonelForm.resx">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\animation.bmp" />
     <EmbeddedResource Include="Resources\splash.jpg" />
@@ -579,7 +613,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="DevExpress.CodeParser.v10.2">
+    <PublishFile Include="DevExpress.CodeParser.v11.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -589,7 +623,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.DemoData.v10.2">
+    <PublishFile Include="DevExpress.DemoData.v11.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -599,7 +633,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Design.v10.2">
+    <PublishFile Include="DevExpress.Design.v11.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -609,7 +643,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.RichEdit.v10.2.Core">
+    <PublishFile Include="DevExpress.RichEdit.v11.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -619,7 +653,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraCharts.v10.2.Extensions">
+    <PublishFile Include="DevExpress.XtraCharts.v11.1.Extensions">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -629,7 +663,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraEditors.v10.2.Design">
+    <PublishFile Include="DevExpress.XtraEditors.v11.1.Design">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -639,7 +673,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraNavBar.v10.2">
+    <PublishFile Include="DevExpress.XtraNavBar.v11.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -649,7 +683,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraVerticalGrid.v10.2">
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v11.1">
       <Visible>False</Visible>
       <Group>
       </Group>
