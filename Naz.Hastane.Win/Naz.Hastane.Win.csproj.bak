@@ -333,6 +333,12 @@
     <Compile Include="MDIChildForms\SGKFindPatientForm.Designer.cs">
       <DependentUpon>SGKFindPatientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\PersonelAraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\PersonelAraForm.Designer.cs">
+      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\SGKPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,7 +399,18 @@
     <Compile Include="MDIChildForms\SelectPolyclinicForm.Designer.cs">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\PersonelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\PersonelForm.Designer.cs">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -460,11 +477,21 @@
     <EmbeddedResource Include="MDIChildForms\SelectInsuranceCompanyForm.resx">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\PersonelAraForm.resx">
+      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
       <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectPolyclinicForm.resx">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\PersonelForm.resx">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\animation.bmp" />
     <EmbeddedResource Include="Resources\splash.jpg" />

@@ -154,8 +154,11 @@ namespace Naz.Hastane.Win {
             this.iDailyTellerReport = new DevExpress.XtraBars.BarButtonItem();
             this.iHarcamaRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
+<<<<<<< HEAD
+=======
             this.iPersonelAra = new DevExpress.XtraBars.BarButtonItem();
             this.iYeniPersonel = new DevExpress.XtraBars.BarButtonItem();
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -200,8 +203,11 @@ namespace Naz.Hastane.Win {
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+<<<<<<< HEAD
             this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+=======
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -502,7 +508,11 @@ namespace Naz.Hastane.Win {
             this.iYeniPersonel});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+            this.rcMain.MaxItemId = 298;
+=======
             this.rcMain.MaxItemId = 303;
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1577,6 +1587,8 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem3Pivot.Id = 296;
             this.iOzetServisAnaIslem3Pivot.Name = "iOzetServisAnaIslem3Pivot";
             // 
+<<<<<<< HEAD
+=======
             // iPersonelAra
             // 
             this.iPersonelAra.Caption = "Personel Ara";
@@ -1592,6 +1604,7 @@ namespace Naz.Hastane.Win {
             this.iYeniPersonel.Name = "iYeniPersonel";
             this.iYeniPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYeniPersonel_ItemClick);
             // 
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -2000,13 +2013,17 @@ namespace Naz.Hastane.Win {
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
+<<<<<<< HEAD
             // xtraTabbedMdiManager1
+            // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.MenuManager = this.rcMain;
             this.xtraTabbedMdiManager1.View = this.tabbedView1;
             this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
+=======
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
@@ -2226,12 +2243,15 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rpEczane;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpbEczaneReports;
         private DevExpress.XtraBars.BarButtonItem iOzetServisAnaIslem3Pivot;
-        private DevExpress.XtraBars.BarButtonItem iPersonelAra;
-        private DevExpress.XtraBars.BarButtonItem iYeniPersonel;
+<<<<<<< HEAD
         private DevExpress.XtraBars.Docking2010.DocumentManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+=======
+        private DevExpress.XtraBars.BarButtonItem iPersonelAra;
+        private DevExpress.XtraBars.BarButtonItem iYeniPersonel;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbPersonel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPersonel;
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
 
     }
 }

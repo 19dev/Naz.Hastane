@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Naz.Hastane.Data.DTO;
 using Naz.Hastane.Data.Entities;
+<<<<<<< HEAD
+using Naz.Hastane.Data.Entities.LookUp.Special;
+using NHibernate;
+using NHibernate.Criterion;
+using NHibernate.Linq;
+=======
 using Naz.Hastane.Data.Entities.Accounting;
-using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities.Logs;
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
 using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.LookUp.Special;

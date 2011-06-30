@@ -727,7 +727,12 @@ namespace Naz.Hastane.Win {
             ShowNewDocument(newForm);
             newForm.SetNewTCID(newTCID);
         }
+<<<<<<< HEAD
+
         public void OpenSGKPatient(string PatientNo)
+=======
+        public void OpenSGKPatient(string patientID)
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
         {
             Patient patient = PatientServices.GetPatientByID(PatientNo);
             if (patient != null)
@@ -789,6 +794,8 @@ namespace Naz.Hastane.Win {
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
+
+            iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
         }
 
         public void OpenFindPatientForm()

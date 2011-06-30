@@ -37,9 +37,10 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -153,10 +154,12 @@
     <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
     <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
+<<<<<<< HEAD
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
+=======
     <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\PersonelEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelHastaneBolumu.cs" />
@@ -165,6 +168,7 @@
     <Compile Include="Entities\Personel\PersonelRapor.cs" />
     <Compile Include="Entities\Personel\PersonelSertifika.cs" />
     <Compile Include="Entities\Personel\PersonelYabanciDil.cs" />
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
     <Compile Include="Entities\Product\Product.cs" />
     <Compile Include="Entities\Product\ProductCoefficient.cs" />
     <Compile Include="Entities\Product\ProductDoctorPercent.cs" />

@@ -580,13 +580,27 @@
             // 
             // sbYatis
             // 
+<<<<<<< HEAD
             this.sbYatis.Location = new System.Drawing.Point(928, 141);
             this.sbYatis.Name = "sbYatis";
             this.sbYatis.Size = new System.Drawing.Size(119, 22);
             this.sbYatis.StyleController = this.layoutControl1;
             this.sbYatis.TabIndex = 144;
             this.sbYatis.Text = "&Yatış(F9)";
+            this.sbYatis.Click += new System.EventHandler(this.sbYatis_Click);
+=======
+            this.ddbChangeInsuranceCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ddbChangeInsuranceCompany.DropDownControl = this.popupMenu1;
+            this.ddbChangeInsuranceCompany.Location = new System.Drawing.Point(187, 658);
+            this.ddbChangeInsuranceCompany.MaximumSize = new System.Drawing.Size(110, 0);
+            this.ddbChangeInsuranceCompany.Name = "ddbChangeInsuranceCompany";
             this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(104, 20);
+            this.ddbChangeInsuranceCompany.StyleController = this.layoutControl1;
+            this.ddbChangeInsuranceCompany.TabIndex = 120;
+            this.ddbChangeInsuranceCompany.Text = "Kurum Değiştir";
+            this.ddbChangeInsuranceCompany.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
+>>>>>>> 429d9dd1772cc9052d61fb88c46ada7775b02304
             // 
             // gridControl3
             // 

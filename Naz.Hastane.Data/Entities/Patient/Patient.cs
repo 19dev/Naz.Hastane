@@ -99,6 +99,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string USER_ID_UPDATE { get; set; } //USER_ID_UPDATE
         public virtual DateTime? DATE_UPDATE { get; set; } //DATE_UPDATE
 
+        #region PatientVisit
         private IList<PatientVisit> _PatientVisits = new List<PatientVisit>();
 
         public virtual IList<PatientVisit> PatientVisits
@@ -118,5 +119,6 @@ namespace Naz.Hastane.Data.Entities
         {
             _PatientVisits.Remove(pv);
         }
+        #endregion
     }
 }

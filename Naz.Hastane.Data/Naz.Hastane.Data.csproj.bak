@@ -153,6 +153,14 @@
     <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
     <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
+    <Compile Include="Entities\Personel\Personel.cs" />
+    <Compile Include="Entities\Personel\PersonelEgitim.cs" />
+    <Compile Include="Entities\Personel\PersonelHastaneBolumu.cs" />
+    <Compile Include="Entities\Personel\PersonelHizmetIciEgitim.cs" />
+    <Compile Include="Entities\Personel\PersonelIzin.cs" />
+    <Compile Include="Entities\Personel\PersonelRapor.cs" />
+    <Compile Include="Entities\Personel\PersonelSertifika.cs" />
+    <Compile Include="Entities\Personel\PersonelYabanciDil.cs" />
     <Compile Include="Entities\Product\Product.cs" />
     <Compile Include="Entities\Product\ProductCoefficient.cs" />
     <Compile Include="Entities\Product\ProductDoctorPercent.cs" />
@@ -261,6 +269,14 @@
     <Compile Include="Mappings\Medula\MEDRAPORDOKTORMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORETKENMADDEMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORTESHISMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelEgitimMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelHastaneBolumuMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelHizmetIciEgitimMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelIzinMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelRaporMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelSertifikaMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelYabanciDilMap.cs" />
     <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
     <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
     <Compile Include="Mappings\Product\ProductMap.cs" />
@@ -310,6 +326,7 @@
     <Compile Include="Services\LookUpServices.cs" />
     <Compile Include="Services\MedulaReportServices.cs" />
     <Compile Include="Services\PatientServices.cs" />
+    <Compile Include="Services\PersonnelServices.cs" />
     <Compile Include="Services\SafeDataBindingList.cs" />
     <Compile Include="Services\SafeDataBindingSet.cs" />
   </ItemGroup>
