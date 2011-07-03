@@ -235,6 +235,12 @@
     <Compile Include="Controls\MedulaProvisionControl.Designer.cs">
       <DependentUpon>MedulaProvisionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PatientAnamnesisControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PatientAnamnesisControl.Designer.cs">
+      <DependentUpon>PatientAnamnesisControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PatientVisitControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -394,11 +400,11 @@
     <Compile Include="MDIChildForms\PrinterSettingsForm.Designer.cs">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.cs">
+    <Compile Include="MDIChildForms\InvoiceVoucherForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SGKInvoiceVoucherForm.Designer.cs">
-      <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
+    <Compile Include="MDIChildForms\InvoiceVoucherForm.Designer.cs">
+      <DependentUpon>InvoiceVoucherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\SelectPolyclinicForm.cs">
       <SubType>Form</SubType>
@@ -487,8 +493,8 @@
     <EmbeddedResource Include="MDIChildForms\PersonelAraForm.resx">
       <DependentUpon>PersonelAraForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SGKInvoiceVoucherForm.resx">
-      <DependentUpon>SGKInvoiceVoucherForm.cs</DependentUpon>
+    <EmbeddedResource Include="MDIChildForms\InvoiceVoucherForm.resx">
+      <DependentUpon>InvoiceVoucherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\SelectPolyclinicForm.resx">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>

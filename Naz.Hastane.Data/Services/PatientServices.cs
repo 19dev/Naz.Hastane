@@ -631,7 +631,7 @@ namespace Naz.Hastane.Data.Services
         #endregion
 
         #region Invoice
-        public static IList<Patient> GetPatientsForInvoice(ISession session)
+        public static IList<Patient> GetPatientsForInvoice(ISession session, InsuranceCompany insuranceCompany, DateTime startDate, DateTime endDate)
         {
             IList<Patient> result = (from p in session.Query<Patient>()
                             join pv in session.Query<PatientVisit>() on p equals pv.Patient
@@ -639,7 +639,8 @@ namespace Naz.Hastane.Data.Services
                             where  pvd.MAKNO == null && pvd.AMAKNO == null
                             && pvd.ADET != 0
                             && pvd.PatientPrice != 0
-                            && pvd.TARIH >= new DateTime(2011, 3, 1)
+                            && pvd.TARIH >= startDate && pvd.TARIH <= endDate
+                            && ((insuranceCompany == null) || (p.InsuranceCompany == insuranceCompany))
                             orderby p.FirstName ascending, p.LastName ascending
                             select p
                             )

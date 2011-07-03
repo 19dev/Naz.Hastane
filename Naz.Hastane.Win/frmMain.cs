@@ -782,7 +782,7 @@ namespace Naz.Hastane.Win {
             iSGKHastaAra.ItemClick += (o, args) => OpenFindPatientForm();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
-            iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiceVoucherForm>();
+            iInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<InvoiceVoucherForm>();
             iDiabetReports.ItemClick += (o, args) => ShowNewDocument<MedulaDiabetReportForm>();
             iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();

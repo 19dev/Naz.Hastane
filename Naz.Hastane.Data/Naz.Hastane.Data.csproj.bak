@@ -153,6 +153,10 @@
     <Compile Include="Entities\Medula\MEDRAPORTESHIS.cs" />
     <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
+    <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
+    <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
+    <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
+    <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
     <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\PersonelEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelHastaneBolumu.cs" />
@@ -334,6 +338,7 @@
     <None Include="App.Config" />
     <None Include="Design\Doctor.cd" />
     <None Include="Design\InsuranceCompany.cd" />
+    <None Include="Design\Invoice.cd" />
     <None Include="Design\LookUpBase.cd" />
     <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
