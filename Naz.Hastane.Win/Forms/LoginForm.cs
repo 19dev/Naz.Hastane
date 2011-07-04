@@ -78,5 +78,6 @@ namespace Naz.Hastane.Win.Forms
                 this.Close();
             }
         }
+
     }
 }

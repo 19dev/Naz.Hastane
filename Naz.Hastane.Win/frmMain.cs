@@ -967,7 +967,10 @@ namespace Naz.Hastane.Win {
             LoginForm form = new LoginForm();
             form.ShowDialog();
             if (form.IsOK)
+            {
                 UIUtilities.CurrentUser = form.User;
+                this.Text = String.Format("SurpMed v. {0} ({1})", Application.ProductVersion, UIUtilities.CurrentUser.USER_ID);
+            }
             EnableRibbonButtons(form.IsOK);
         }
 

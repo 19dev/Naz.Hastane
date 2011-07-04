@@ -36,8 +36,16 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             try
             {
-                this.Text = String.Format("Fatura Makbuz Basma Ekranı ({0})", GetSelectedInsuranceCompanyName());
-                this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session, _InsuranceCompany, deStartDate.DateTime.Date, deEndDate.DateTime.Date);
+                if (String.IsNullOrWhiteSpace(this.tePatientNo.Text))
+                {
+                    this.Text = String.Format("Fatura Makbuz Basma Ekranı ({0})", GetSelectedInsuranceCompanyName());
+                    this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session, _InsuranceCompany, deStartDate.DateTime.Date, deEndDate.DateTime.Date);
+                }
+                else
+                {
+                    this.Text = String.Format("Fatura Makbuz Basma Ekranı ({0})", this.tePatientNo.Text);
+                    this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session, this.tePatientNo.Text);
+                }
                 RefreshDetails();
             }
             finally
@@ -111,9 +119,21 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (_InsuranceCompany == newInsuranceCompany) return;
 
             _InsuranceCompany = newInsuranceCompany;
+            this.tePatientNo.Text = "";
             QueryPatients();
         }
                 #endregion
+
+        private void sbClear_Click(object sender, EventArgs e)
+        {
+            this.tePatientNo.Text = "";
+        }
+
+        private void deStartDate_EditValueChanged(object sender, EventArgs e)
+        {
+            this.tePatientNo.Text = "";
+            QueryPatients();
+        }
 
     }
 }

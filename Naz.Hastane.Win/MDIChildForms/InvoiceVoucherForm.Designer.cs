@@ -30,18 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.iSGK = new DevExpress.XtraBars.BarButtonItem();
-            this.iSGKAcil = new DevExpress.XtraBars.BarButtonItem();
-            this.iNormal = new DevExpress.XtraBars.BarButtonItem();
-            this.iOzelHasta = new DevExpress.XtraBars.BarButtonItem();
-            this.iAll = new DevExpress.XtraBars.BarButtonItem();
+            this.sbClear = new DevExpress.XtraEditors.SimpleButton();
+            this.tePatientNo = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.iSGK = new DevExpress.XtraBars.BarButtonItem();
+            this.iSGKAcil = new DevExpress.XtraBars.BarButtonItem();
+            this.iNormal = new DevExpress.XtraBars.BarButtonItem();
+            this.iOzelHasta = new DevExpress.XtraBars.BarButtonItem();
+            this.iAll = new DevExpress.XtraBars.BarButtonItem();
+            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.deEndDate = new DevExpress.XtraEditors.DateEdit();
             this.deStartDate = new DevExpress.XtraEditors.DateEdit();
             this.invoiceControl = new Naz.Hastane.Win.Controls.InvoiceControl();
@@ -59,10 +61,13 @@
             this.lciEndDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPatientNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties.VistaTimeProperties)).BeginInit();
@@ -76,10 +81,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciEndDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sbClear);
+            this.layoutControl1.Controls.Add(this.tePatientNo);
             this.layoutControl1.Controls.Add(this.dropDownButton1);
             this.layoutControl1.Controls.Add(this.deEndDate);
             this.layoutControl1.Controls.Add(this.deStartDate);
@@ -95,63 +104,24 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dropDownButton1
+            // sbClear
             // 
-            this.dropDownButton1.DropDownControl = this.popupMenu1;
-            this.dropDownButton1.Location = new System.Drawing.Point(192, 12);
-            this.dropDownButton1.MenuManager = this.barManager1;
-            this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(136, 22);
-            this.dropDownButton1.StyleController = this.layoutControl1;
-            this.dropDownButton1.TabIndex = 14;
-            this.dropDownButton1.Text = "Kurum Seç";
-            this.dropDownButton1.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
+            this.sbClear.Location = new System.Drawing.Point(192, 38);
+            this.sbClear.Name = "sbClear";
+            this.sbClear.Size = new System.Drawing.Size(136, 22);
+            this.sbClear.StyleController = this.layoutControl1;
+            this.sbClear.TabIndex = 16;
+            this.sbClear.Text = "Temizle";
+            this.sbClear.Click += new System.EventHandler(this.sbClear_Click);
             // 
-            // popupMenu1
+            // tePatientNo
             // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.iSGK),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iSGKAcil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iNormal),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iOzelHasta),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iAll)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
-            // iSGK
-            // 
-            this.iSGK.Caption = "SGK";
-            this.iSGK.Id = 0;
-            this.iSGK.Name = "iSGK";
-            this.iSGK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGK_ItemClick);
-            // 
-            // iSGKAcil
-            // 
-            this.iSGKAcil.Caption = "SGK Acil";
-            this.iSGKAcil.Id = 1;
-            this.iSGKAcil.Name = "iSGKAcil";
-            this.iSGKAcil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGKAcil_ItemClick);
-            // 
-            // iNormal
-            // 
-            this.iNormal.Caption = "KRM000 - Normal";
-            this.iNormal.Id = 2;
-            this.iNormal.Name = "iNormal";
-            this.iNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNormal_ItemClick);
-            // 
-            // iOzelHasta
-            // 
-            this.iOzelHasta.Caption = "KRM008 - Özel Hasta";
-            this.iOzelHasta.Id = 3;
-            this.iOzelHasta.Name = "iOzelHasta";
-            this.iOzelHasta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzelHasta_ItemClick);
-            // 
-            // iAll
-            // 
-            this.iAll.Caption = "Hepsi";
-            this.iAll.Id = 4;
-            this.iAll.Name = "iAll";
-            this.iAll.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAll_ItemClick);
+            this.tePatientNo.Location = new System.Drawing.Point(89, 60);
+            this.tePatientNo.MenuManager = this.barManager1;
+            this.tePatientNo.Name = "tePatientNo";
+            this.tePatientNo.Size = new System.Drawing.Size(99, 20);
+            this.tePatientNo.StyleController = this.layoutControl1;
+            this.tePatientNo.TabIndex = 15;
             // 
             // barManager1
             // 
@@ -196,6 +166,64 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1071, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 721);
             // 
+            // iSGK
+            // 
+            this.iSGK.Caption = "SGK";
+            this.iSGK.Id = 0;
+            this.iSGK.Name = "iSGK";
+            this.iSGK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGK_ItemClick);
+            // 
+            // iSGKAcil
+            // 
+            this.iSGKAcil.Caption = "SGK Acil";
+            this.iSGKAcil.Id = 1;
+            this.iSGKAcil.Name = "iSGKAcil";
+            this.iSGKAcil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGKAcil_ItemClick);
+            // 
+            // iNormal
+            // 
+            this.iNormal.Caption = "KRM000 - Normal";
+            this.iNormal.Id = 2;
+            this.iNormal.Name = "iNormal";
+            this.iNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNormal_ItemClick);
+            // 
+            // iOzelHasta
+            // 
+            this.iOzelHasta.Caption = "KRM008 - Özel Hasta";
+            this.iOzelHasta.Id = 3;
+            this.iOzelHasta.Name = "iOzelHasta";
+            this.iOzelHasta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzelHasta_ItemClick);
+            // 
+            // iAll
+            // 
+            this.iAll.Caption = "Hepsi";
+            this.iAll.Id = 4;
+            this.iAll.Name = "iAll";
+            this.iAll.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAll_ItemClick);
+            // 
+            // dropDownButton1
+            // 
+            this.dropDownButton1.DropDownControl = this.popupMenu1;
+            this.dropDownButton1.Location = new System.Drawing.Point(192, 12);
+            this.dropDownButton1.MenuManager = this.barManager1;
+            this.dropDownButton1.Name = "dropDownButton1";
+            this.dropDownButton1.Size = new System.Drawing.Size(136, 22);
+            this.dropDownButton1.StyleController = this.layoutControl1;
+            this.dropDownButton1.TabIndex = 14;
+            this.dropDownButton1.Text = "Kurum Seç";
+            this.dropDownButton1.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.iSGK),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iSGKAcil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iNormal),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iOzelHasta),
+            new DevExpress.XtraBars.LinkPersistInfo(this.iAll)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
             // deEndDate
             // 
             this.deEndDate.EditValue = null;
@@ -208,7 +236,7 @@
             this.deEndDate.Size = new System.Drawing.Size(99, 20);
             this.deEndDate.StyleController = this.layoutControl1;
             this.deEndDate.TabIndex = 13;
-            this.deEndDate.EditValueChanged += new System.EventHandler(this.sbRefresh_Click);
+            this.deEndDate.EditValueChanged += new System.EventHandler(this.deStartDate_EditValueChanged);
             // 
             // deStartDate
             // 
@@ -222,7 +250,7 @@
             this.deStartDate.Size = new System.Drawing.Size(99, 20);
             this.deStartDate.StyleController = this.layoutControl1;
             this.deStartDate.TabIndex = 12;
-            this.deStartDate.EditValueChanged += new System.EventHandler(this.sbRefresh_Click);
+            this.deStartDate.EditValueChanged += new System.EventHandler(this.deStartDate_EditValueChanged);
             // 
             // invoiceControl
             // 
@@ -234,10 +262,10 @@
             // 
             // gcPatients
             // 
-            this.gcPatients.Location = new System.Drawing.Point(12, 80);
+            this.gcPatients.Location = new System.Drawing.Point(12, 106);
             this.gcPatients.MainView = this.gvPatients;
             this.gcPatients.Name = "gcPatients";
-            this.gcPatients.Size = new System.Drawing.Size(316, 629);
+            this.gcPatients.Size = new System.Drawing.Size(316, 603);
             this.gcPatients.TabIndex = 10;
             this.gcPatients.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatients});
@@ -289,7 +317,7 @@
             // 
             // sbRefresh
             // 
-            this.sbRefresh.Location = new System.Drawing.Point(192, 38);
+            this.sbRefresh.Location = new System.Drawing.Point(192, 64);
             this.sbRefresh.Name = "sbRefresh";
             this.sbRefresh.Size = new System.Drawing.Size(136, 22);
             this.sbRefresh.StyleController = this.layoutControl1;
@@ -308,7 +336,9 @@
             this.lciStartDate,
             this.lciEndDate,
             this.layoutControlItem5,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.lciPatientNo,
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1071, 721);
@@ -319,9 +349,9 @@
             // 
             this.layoutControlItem7.Control = this.gcPatients;
             this.layoutControlItem7.CustomizationFormText = "Hastalar";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(320, 649);
+            this.layoutControlItem7.Size = new System.Drawing.Size(320, 623);
             this.layoutControlItem7.Text = "Hastalar";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(73, 13);
@@ -356,7 +386,7 @@
             this.lciEndDate.CustomizationFormText = "Bitiş Tarihi";
             this.lciEndDate.Location = new System.Drawing.Point(0, 24);
             this.lciEndDate.Name = "lciEndDate";
-            this.lciEndDate.Size = new System.Drawing.Size(180, 28);
+            this.lciEndDate.Size = new System.Drawing.Size(180, 24);
             this.lciEndDate.Text = "Bitiş Tarihi";
             this.lciEndDate.TextSize = new System.Drawing.Size(73, 13);
             // 
@@ -364,7 +394,7 @@
             // 
             this.layoutControlItem5.Control = this.sbRefresh;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(180, 26);
+            this.layoutControlItem5.Location = new System.Drawing.Point(180, 52);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(140, 26);
             this.layoutControlItem5.Text = "layoutControlItem5";
@@ -384,8 +414,31 @@
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
             // 
+            // lciPatientNo
+            // 
+            this.lciPatientNo.Control = this.tePatientNo;
+            this.lciPatientNo.CustomizationFormText = "Protokol No:";
+            this.lciPatientNo.Location = new System.Drawing.Point(0, 48);
+            this.lciPatientNo.Name = "lciPatientNo";
+            this.lciPatientNo.Size = new System.Drawing.Size(180, 30);
+            this.lciPatientNo.Text = "Protokol No:";
+            this.lciPatientNo.TextSize = new System.Drawing.Size(73, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.sbClear;
+            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
+            this.layoutControlItem3.Location = new System.Drawing.Point(180, 26);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(140, 26);
+            this.layoutControlItem3.Text = "layoutControlItem3";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextToControlDistance = 0;
+            this.layoutControlItem3.TextVisible = false;
+            // 
             // InvoiceVoucherForm
             // 
+            this.AcceptButton = this.sbRefresh;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 721);
@@ -398,8 +451,9 @@
             this.Text = "Fatura/Makbuz Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatientNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deEndDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deStartDate.Properties.VistaTimeProperties)).EndInit();
@@ -413,6 +467,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciEndDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,5 +505,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem iAll;
+        private DevExpress.XtraEditors.SimpleButton sbClear;
+        private DevExpress.XtraEditors.TextEdit tePatientNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

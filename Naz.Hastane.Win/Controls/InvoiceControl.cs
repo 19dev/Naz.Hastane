@@ -120,7 +120,7 @@ namespace Naz.Hastane.Win.Controls
             try
             {
                 gvPatientVisitDetails.ClearSorting();
-                gvPatientVisitDetails.Columns["PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+                gvPatientVisitDetails.Columns["PatientVisit.VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
                 gvPatientVisitDetails.Columns["DetailNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             }
             finally
@@ -274,7 +274,10 @@ namespace Naz.Hastane.Win.Controls
         {
             string NewTellerInvoiceNo = this.teInvoiceNo.Text;
             string paymentType = this.luePaymentType.EditValue.ToString();
-            string POSType = this.luePOS.EditValue.ToString();
+            string POSType = "";
+            
+            if (this.luePOS.EditValue != null)
+                POSType = this.luePOS.EditValue.ToString();
 
             IList<PatientVisit> pvs = GetSelectedVisits();
             PatientVisit pv = null;
@@ -301,9 +304,13 @@ namespace Naz.Hastane.Win.Controls
 
         private void sbVoucher_Click(object sender, EventArgs e)
         {
-            string NewTellerVoucherNo = this.teInvoiceNo.Text;
+            string NewTellerVoucherNo = this.teVoucherNo.Text;
             string paymentType = this.luePaymentType.EditValue.ToString();
-            string POSType = this.luePOS.EditValue.ToString();
+            string POSType = "";
+
+            if (this.luePOS.EditValue != null)
+                POSType = this.luePOS.EditValue.ToString();
+
             IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
             if (pvds.Count > 0)
             {

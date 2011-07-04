@@ -221,7 +221,10 @@ namespace Naz.Hastane.Data.Services
 
             float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
 
-            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, doctorQueueNo);
+            patient.InsuranceCompany.SIRAID += 1;
+            session.Save(patient.InsuranceCompany);
+
+            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, doctor.Service.Code, doctorQueueNo);
 
             PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
@@ -274,20 +277,17 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor, float queueNo)
+        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor, string serviceCode, float queueNo)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                patient.InsuranceCompany.SIRAID += 1;
-                session.Save(patient.InsuranceCompany);
-
                 PatientVisit pv = new PatientVisit();
                 pv.VisitNo = GetNewPatientVisitNo(session, patient);
                 pv.VisitDate = DateTime.Now.Date;
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
                 pv.Doctor = doctor;
-                pv.Servis = doctor.Service.Code;
+                pv.Servis = serviceCode;
                 pv.QueueNo = String.Format("{0:00000}",queueNo);
                 pv.VisitType = PatientCardType.Polyclinic.GetDescription();
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
@@ -643,6 +643,22 @@ namespace Naz.Hastane.Data.Services
                             && ((insuranceCompany == null) || (p.InsuranceCompany == insuranceCompany))
                             orderby p.FirstName ascending, p.LastName ascending
                             select p
+                            )
+                .Distinct<Patient>().ToList<Patient>();
+            return result;
+        }
+
+        public static IList<Patient> GetPatientsForInvoice(ISession session, string patientNo)
+        {
+            IList<Patient> result = (from p in session.Query<Patient>()
+                                     join pv in session.Query<PatientVisit>() on p equals pv.Patient
+                                     join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                                     where pvd.MAKNO == null && pvd.AMAKNO == null
+                                     && pvd.ADET != 0
+                                     && pvd.PatientPrice != 0
+                                     && p.PatientNo == patientNo
+                                     orderby p.FirstName ascending, p.LastName ascending
+                                     select p
                             )
                 .Distinct<Patient>().ToList<Patient>();
             return result;

@@ -252,6 +252,7 @@
             // 
             // luePOS
             // 
+            this.luePOS.EditValue = "";
             this.luePOS.Location = new System.Drawing.Point(504, 348);
             this.luePOS.Name = "luePOS";
             this.luePOS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -405,6 +406,7 @@
             // 
             // luePaymentType
             // 
+            this.luePaymentType.EditValue = "";
             this.luePaymentType.Location = new System.Drawing.Point(506, 324);
             this.luePaymentType.Name = "luePaymentType";
             this.luePaymentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

@@ -4,7 +4,7 @@
     <return alias="AccountingDailySummary" class="Naz.Hastane.Data.Entities.StoredProcedure.AccountingDailySummary, Naz.Hastane.Data">
       <return-property name="RowNumber" column="RowNumber"></return-property>
       <return-property name="OdemeSekli" column="OdemeSekli"></return-property>
-      <return-property name="Tarih" column="Tarih"></return-property>
+      <return-property name="Tarih" column="FTARIH"></return-property>
       <return-property name="TCKIMLIKNO" column="TCKIMLIKNO"></return-property>
       <return-property name="HesapKodu" column="HesapKodu"></return-property>
       <return-property name="Aciklama" column="Aciklama"></return-property>
