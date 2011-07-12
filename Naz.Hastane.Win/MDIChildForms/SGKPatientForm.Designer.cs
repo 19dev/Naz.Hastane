@@ -158,17 +158,6 @@
             this.teHomeAddress = new DevExpress.XtraEditors.MemoEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tbcHastaBilgileri = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.lcgAnamnesis = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgHastaBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIDNO = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDDate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -228,6 +217,17 @@
             this.lcimedulaFollowUpQueryControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgBorcAlacak = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientBalanceControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgAnamnesis = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -352,17 +352,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgAnamnesis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).BeginInit();
@@ -422,6 +411,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgBorcAlacak)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientBalanceControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgAnamnesis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
@@ -1123,6 +1123,11 @@
             // 
             // sbVoucher
             // 
+            this.sbVoucher.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sbVoucher.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.sbVoucher.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sbVoucher.Appearance.Options.UseBackColor = true;
+            this.sbVoucher.Appearance.Options.UseForeColor = true;
             this.sbVoucher.Location = new System.Drawing.Point(928, 351);
             this.sbVoucher.Name = "sbVoucher";
             this.sbVoucher.Size = new System.Drawing.Size(119, 22);
@@ -1245,6 +1250,13 @@
             // 
             // sbInvoice
             // 
+            this.sbInvoice.Appearance.BackColor = System.Drawing.Color.YellowGreen;
+            this.sbInvoice.Appearance.BackColor2 = System.Drawing.Color.PaleGreen;
+            this.sbInvoice.Appearance.BorderColor = System.Drawing.Color.White;
+            this.sbInvoice.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.sbInvoice.Appearance.Options.UseBackColor = true;
+            this.sbInvoice.Appearance.Options.UseBorderColor = true;
+            this.sbInvoice.Appearance.Options.UseForeColor = true;
             this.sbInvoice.Location = new System.Drawing.Point(928, 285);
             this.sbInvoice.Name = "sbInvoice";
             this.sbInvoice.Size = new System.Drawing.Size(119, 22);
@@ -1784,125 +1796,6 @@
             this.layoutControlGroup2,
             this.layoutControlGroup5});
             this.tbcHastaBilgileri.Text = "Hasta Bilgileri";
-            // 
-            // lcgAnamnesis
-            // 
-            this.lcgAnamnesis.CustomizationFormText = "Anamnez";
-            this.lcgAnamnesis.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
-            this.layoutControlItem9,
-            this.layoutControlItem10,
-            this.layoutControlItem11,
-            this.layoutControlItem12,
-            this.layoutControlItem13,
-            this.layoutControlItem14,
-            this.layoutControlItem15});
-            this.lcgAnamnesis.Location = new System.Drawing.Point(0, 0);
-            this.lcgAnamnesis.Name = "lcgAnamnesis";
-            this.lcgAnamnesis.Size = new System.Drawing.Size(887, 376);
-            this.lcgAnamnesis.Text = "Anamnez";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.memoEdit1;
-            this.layoutControlItem6.CustomizationFormText = "Öz ve Soy &Geçmiş";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 85);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(323, 80);
-            this.layoutControlItem6.Text = "Öz ve Soy &Geçmiş";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.memoEdit2;
-            this.layoutControlItem7.CustomizationFormText = "Ön Ta&nı";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 240);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(323, 67);
-            this.layoutControlItem7.Text = "Ön Ta&nı";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.memoEdit4;
-            this.layoutControlItem8.CustomizationFormText = "Öykü";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 165);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(323, 75);
-            this.layoutControlItem8.Text = "Öykü";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.memoEdit5;
-            this.layoutControlItem9.CustomizationFormText = "Teşhis ve Te&davi";
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 307);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(323, 45);
-            this.layoutControlItem9.Text = "Teşhis ve Te&davi";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.memoEdit6;
-            this.layoutControlItem10.CustomizationFormText = "Sistem S&orguları/Yakınma";
-            this.layoutControlItem10.Location = new System.Drawing.Point(323, 85);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(564, 80);
-            this.layoutControlItem10.Text = "Sistem S&orguları/Yakınma";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.memoEdit7;
-            this.layoutControlItem11.CustomizationFormText = "Muayene &Bulguları";
-            this.layoutControlItem11.Location = new System.Drawing.Point(323, 165);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(564, 75);
-            this.layoutControlItem11.Text = "Muayene &Bulguları";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.memoEdit8;
-            this.layoutControlItem12.CustomizationFormText = "Önceki Teşhis ve Te&davi";
-            this.layoutControlItem12.Location = new System.Drawing.Point(323, 240);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(564, 67);
-            this.layoutControlItem12.Text = "Önceki Teşhis ve Te&davi";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.memoEdit9;
-            this.layoutControlItem13.CustomizationFormText = "Seçili &Teşhisler";
-            this.layoutControlItem13.Location = new System.Drawing.Point(323, 307);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(564, 69);
-            this.layoutControlItem13.Text = "Seçili &Teşhisler";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.textEdit2;
-            this.layoutControlItem14.CustomizationFormText = "Protokol No";
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 352);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(323, 24);
-            this.layoutControlItem14.Text = "Protokol No";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(119, 13);
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.gcVisitRecords;
-            this.layoutControlItem15.CustomizationFormText = "Ziyaretler";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(887, 85);
-            this.layoutControlItem15.Text = "Ziyaretler";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(119, 13);
             // 
             // lcgHastaBilgileri
             // 
@@ -2631,6 +2524,125 @@
             this.lciPatientBalanceControl.TextToControlDistance = 0;
             this.lciPatientBalanceControl.TextVisible = false;
             // 
+            // lcgAnamnesis
+            // 
+            this.lcgAnamnesis.CustomizationFormText = "Anamnez";
+            this.lcgAnamnesis.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem13,
+            this.layoutControlItem14,
+            this.layoutControlItem15});
+            this.lcgAnamnesis.Location = new System.Drawing.Point(0, 0);
+            this.lcgAnamnesis.Name = "lcgAnamnesis";
+            this.lcgAnamnesis.Size = new System.Drawing.Size(887, 376);
+            this.lcgAnamnesis.Text = "Anamnez";
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.memoEdit1;
+            this.layoutControlItem6.CustomizationFormText = "Öz ve Soy &Geçmiş";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 85);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(323, 80);
+            this.layoutControlItem6.Text = "Öz ve Soy &Geçmiş";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.memoEdit2;
+            this.layoutControlItem7.CustomizationFormText = "Ön Ta&nı";
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 240);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(323, 67);
+            this.layoutControlItem7.Text = "Ön Ta&nı";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.memoEdit4;
+            this.layoutControlItem8.CustomizationFormText = "Öykü";
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 165);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(323, 75);
+            this.layoutControlItem8.Text = "Öykü";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.memoEdit5;
+            this.layoutControlItem9.CustomizationFormText = "Teşhis ve Te&davi";
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 307);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(323, 45);
+            this.layoutControlItem9.Text = "Teşhis ve Te&davi";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.memoEdit6;
+            this.layoutControlItem10.CustomizationFormText = "Sistem S&orguları/Yakınma";
+            this.layoutControlItem10.Location = new System.Drawing.Point(323, 85);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(564, 80);
+            this.layoutControlItem10.Text = "Sistem S&orguları/Yakınma";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.memoEdit7;
+            this.layoutControlItem11.CustomizationFormText = "Muayene &Bulguları";
+            this.layoutControlItem11.Location = new System.Drawing.Point(323, 165);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(564, 75);
+            this.layoutControlItem11.Text = "Muayene &Bulguları";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.memoEdit8;
+            this.layoutControlItem12.CustomizationFormText = "Önceki Teşhis ve Te&davi";
+            this.layoutControlItem12.Location = new System.Drawing.Point(323, 240);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(564, 67);
+            this.layoutControlItem12.Text = "Önceki Teşhis ve Te&davi";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.memoEdit9;
+            this.layoutControlItem13.CustomizationFormText = "Seçili &Teşhisler";
+            this.layoutControlItem13.Location = new System.Drawing.Point(323, 307);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(564, 69);
+            this.layoutControlItem13.Text = "Seçili &Teşhisler";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.textEdit2;
+            this.layoutControlItem14.CustomizationFormText = "Protokol No";
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 352);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(323, 24);
+            this.layoutControlItem14.Text = "Protokol No";
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.gcVisitRecords;
+            this.layoutControlItem15.CustomizationFormText = "Ziyaretler";
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(887, 85);
+            this.layoutControlItem15.Text = "Ziyaretler";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(119, 13);
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.CustomizationFormText = "Girilmiş Tıbbi Bilgiler";
@@ -3256,17 +3268,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgAnamnesis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).EndInit();
@@ -3326,6 +3327,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcimedulaFollowUpQueryControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgBorcAlacak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientBalanceControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgAnamnesis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();

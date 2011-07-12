@@ -382,7 +382,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (String.IsNullOrWhiteSpace(this.medulaSorgu.teRelatedFollowUpNo.Text))
                 this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
 
-            this.medulaSorgu.CallMedula(this.teTCID.Text);
+            this.medulaSorgu.CallMedula(this.teTCID.Text, currentPatientVisit.VisitDate);
 
         }
 
@@ -876,11 +876,13 @@ namespace Naz.Hastane.Win.MDIChildForms
         /// <param name="e"></param>
         private void sbAddTreatmentCard_Click(object sender, EventArgs e)
         {
-            SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
-            frm.ShowDialog();
-            if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
+            //SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
+            //frm.ShowDialog();
+            PatientVisit pv = GetRelatedPTPatientVisit();
+
+            if (pv != null)
             {
-                _Doctor = frm.Doctor;
+                _Doctor = pv.Doctor;
                 currentPatientVisit = PatientServices.AddNewPatientVisit(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, _Doctor.Service.Code, 0);
                 PatientVisitRecord pvr = PatientServices.AddNewPatientVisitRecord(Session, UIUtilities.CurrentUser, currentPatientVisit);
                 RefreshGrid();
@@ -888,11 +890,28 @@ namespace Naz.Hastane.Win.MDIChildForms
                 currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
                 AddPatientVisitDetail();
                 this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.PhysicalTherapy;
-
+                this.medulaSorgu.teRelatedFollowUpNo.Text = pv.TAKIPNO;
                 CallMedulaProvision();
             }
+            else
+                XtraMessageBox.Show("10 Gün İçinde Yapılmış Fizik Tedavi Polikliniği Bulunamadı!", "Fizik Tedavi İşlemleri");
+
 
         }
+        private PatientVisit GetRelatedPTPatientVisit()
+        {
+            DateTime endDate = DateTime.Today.AddDays(-12);
+
+            for (int i = 0; i <= this.PatientVisitControl.gvPatientVisit.RowCount; i++)
+            {
+                PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetRow(i) as PatientVisit;
+                if (pv != null && pv.VisitDate.Date >= endDate && pv.Servis == "23")
+                    //if (pv != null && pv.VisitDate.Date >= endDate && pv.Servis == "5018")
+                    return pv;
+            }
+            return null;
+        }
+
 
     }
 }

@@ -74,6 +74,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.prmDoctor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -144,6 +149,10 @@ namespace Naz.Hastane.Reports
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel36,
+            this.xrLabel35,
+            this.xrLabel34,
+            this.xrLabel33,
             this.xrLabel27,
             this.xrLabel28,
             this.xrLabel25,
@@ -583,6 +592,62 @@ namespace Naz.Hastane.Reports
             this.PageFooter.HeightF = 0F;
             this.PageFooter.Name = "PageFooter";
             // 
+            // prmDoctor
+            // 
+            this.prmDoctor.Name = "prmDoctor";
+            // 
+            // xrLabel33
+            // 
+            this.xrLabel33.Dpi = 254F;
+            this.xrLabel33.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(158.75F, 918.1042F);
+            this.xrLabel33.Name = "xrLabel33";
+            this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel33.SizeF = new System.Drawing.SizeF(190F, 40F);
+            this.xrLabel33.StylePriority.UseFont = false;
+            this.xrLabel33.Text = "Hekim:";
+            // 
+            // xrLabel34
+            // 
+            this.xrLabel34.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDoctor, "Text", "")});
+            this.xrLabel34.Dpi = 254F;
+            this.xrLabel34.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(349.25F, 918.1042F);
+            this.xrLabel34.Name = "xrLabel34";
+            this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel34.SizeF = new System.Drawing.SizeF(700F, 40F);
+            this.xrLabel34.StylePriority.UseFont = false;
+            this.xrLabel34.StylePriority.UseTextAlignment = false;
+            this.xrLabel34.Text = "xrLabel7";
+            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrLabel35
+            // 
+            this.xrLabel35.Dpi = 254F;
+            this.xrLabel35.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(158.75F, 2389.188F);
+            this.xrLabel35.Name = "xrLabel35";
+            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel35.SizeF = new System.Drawing.SizeF(190F, 40F);
+            this.xrLabel35.StylePriority.UseFont = false;
+            this.xrLabel35.Text = "Hekim:";
+            // 
+            // xrLabel36
+            // 
+            this.xrLabel36.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmDoctor, "Text", "")});
+            this.xrLabel36.Dpi = 254F;
+            this.xrLabel36.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(349.25F, 2389.188F);
+            this.xrLabel36.Name = "xrLabel36";
+            this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel36.SizeF = new System.Drawing.SizeF(700F, 40F);
+            this.xrLabel36.StylePriority.UseFont = false;
+            this.xrLabel36.StylePriority.UseTextAlignment = false;
+            this.xrLabel36.Text = "xrLabel7";
+            this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
             // VoucherSGK
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -605,12 +670,13 @@ namespace Naz.Hastane.Reports
             this.prmTotal,
             this.prmPatientName,
             this.prmTCID,
-            this.prmTotalText});
+            this.prmTotalText,
+            this.prmDoctor});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.RequestParameters = false;
             this.ShowPrintMarginsWarning = false;
             this.SnapGridSize = 31.75F;
-            this.Version = "10.2";
+            this.Version = "11.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -663,5 +729,10 @@ namespace Naz.Hastane.Reports
         public DevExpress.XtraReports.Parameters.Parameter prmPatientName;
         public DevExpress.XtraReports.Parameters.Parameter prmTotalText;
         public DevExpress.XtraReports.Parameters.Parameter prmTCID;
+        public DevExpress.XtraReports.Parameters.Parameter prmDoctor;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel36;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel35;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel34;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel33;
     }
 }

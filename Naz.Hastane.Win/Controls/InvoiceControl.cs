@@ -76,10 +76,26 @@ namespace Naz.Hastane.Win.Controls
         {
             _Session = session;
             _Patient = patient;
+            QueryPatientVisits();
+        }
 
+        private void QueryPatientVisits()
+        {
             selectionVisit.ClearSelection();
-            this.gcPatientVisits.DataSource = PatientServices.GetPatientVisitsForInvoice(session, patient);
-            if (patient != null)
+
+            gvPatientVisits.BeginDataUpdate();
+            this.gcPatientVisits.DataSource = PatientServices.GetPatientVisitsForInvoice(_Session, _Patient);
+            try
+            {
+                gvPatientVisits.ClearSorting();
+                gvPatientVisits.Columns["VisitNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            }
+            finally
+            {
+                gvPatientVisits.EndDataUpdate();
+            }
+
+            if (_Patient != null)
             {
                 PatientVisit pv = null;
                 if (this.gvPatientVisits.RowCount > 0)
@@ -89,7 +105,7 @@ namespace Naz.Hastane.Win.Controls
                 else
                     this.deCardDate.DateTime = DateTime.Today;
 
-                this.meInvoiceAddress.Text = patient.HomeInvoiceAddress;
+                this.meInvoiceAddress.Text = _Patient.HomeInvoiceAddress;
             }
             this.deInvoiceDate.DateTime = DateTime.Today;
             this.deExitDate.DateTime = DateTime.Today;
@@ -104,6 +120,7 @@ namespace Naz.Hastane.Win.Controls
             this.luePaymentType.EditValue = VAT.DefaultValue;
             this.lueVAT.EditValue = PaymentType.DefaultValue;
         }
+
         public void QueryPatientVisitDetails()
         {
             IList<PatientVisit> pvs = new List<PatientVisit>();
@@ -147,6 +164,16 @@ namespace Naz.Hastane.Win.Controls
         }
         void selectionVisitDetail_OnSelectionChanged(object o, EventArgs e)
         {
+            selectionVisit.WillRaiseSelectionEvent = false;
+            for (int i = 0; i < this.gvPatientVisitDetails.RowCount; i++)
+            {
+                PatientVisitDetail pvd = (PatientVisitDetail)this.gvPatientVisitDetails.GetRow(i);
+                if (pvd != null && selectionVisitDetail.IsRowSelected(i))
+                    if (pvd.KDV != VATPercent)
+                        selectionVisitDetail.InvertRowSelection(i);
+            }
+            selectionVisit.WillRaiseSelectionEvent = true;
+
             CalculatePatientVisitDetailTotal();
         }
 
@@ -231,8 +258,23 @@ namespace Naz.Hastane.Win.Controls
             GrandTotal = Math.Round(Payment + AdvancePaymentUsed, 2);
             RemainingTotal = Math.Round(InvoiceTotal - GrandTotal, 2);
 
-            this.sbInvoice.Enabled = (InvoiceTotal > 0 && RemainingTotal == 0);
-
+            if (InvoiceTotal > 0 && RemainingTotal == 0)
+                if (VATPercent == 0)
+                {
+                    sbVoucher.Enabled = true;
+                    sbInvoice.Enabled = false;
+                }
+                else
+                {
+                    sbVoucher.Enabled = false;
+                    sbInvoice.Enabled = true;
+                }
+            else
+            {
+                sbVoucher.Enabled = false;
+                sbInvoice.Enabled = false;
+            }
+         
             this.tePatientVisitDetailTotal.EditValue = ProductTotal;
  
             this.teProductTotal.EditValue = ProductTotal;
@@ -247,8 +289,11 @@ namespace Naz.Hastane.Win.Controls
 
         private void cePayment_CheckedChanged(object sender, EventArgs e)
         {
+            if (cePayment.Checked)
+                tePayment.EditValue = Math.Round(InvoiceTotal - AdvancePaymentUsed, 2);
             CalculateTotals();
         }
+
         private void ceAdvancePayment_CheckedChanged(object sender, EventArgs e)
         {
             CalculateTotals();
@@ -298,7 +343,7 @@ namespace Naz.Hastane.Win.Controls
                     NewTellerInvoiceNo,
                     true
                     );
-                this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+                QueryPatientVisits();
             }
         }
 
@@ -307,6 +352,9 @@ namespace Naz.Hastane.Win.Controls
             string NewTellerVoucherNo = this.teVoucherNo.Text;
             string paymentType = this.luePaymentType.EditValue.ToString();
             string POSType = "";
+
+            if (VATPercent != 0)
+                return;
 
             if (this.luePOS.EditValue != null)
                 POSType = this.luePOS.EditValue.ToString();
@@ -320,8 +368,13 @@ namespace Naz.Hastane.Win.Controls
                     NewTellerVoucherNo,
                     true
                     );
-                this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+                QueryPatientVisits();
             }
+        }
+
+        private void sbRefresh_Click(object sender, EventArgs e)
+        {
+            QueryPatientVisits();
         }
 
     }

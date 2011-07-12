@@ -236,7 +236,6 @@
             this.deEndDate.Size = new System.Drawing.Size(99, 20);
             this.deEndDate.StyleController = this.layoutControl1;
             this.deEndDate.TabIndex = 13;
-            this.deEndDate.EditValueChanged += new System.EventHandler(this.deStartDate_EditValueChanged);
             // 
             // deStartDate
             // 
@@ -250,7 +249,6 @@
             this.deStartDate.Size = new System.Drawing.Size(99, 20);
             this.deStartDate.StyleController = this.layoutControl1;
             this.deStartDate.TabIndex = 12;
-            this.deStartDate.EditValueChanged += new System.EventHandler(this.deStartDate_EditValueChanged);
             // 
             // invoiceControl
             // 

@@ -65,6 +65,7 @@
             this.colDetailComment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailPatientTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVAT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gcPatientVisits = new DevExpress.XtraGrid.GridControl();
             this.gvPatientVisits = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -576,7 +577,8 @@
             this.colDetailDate,
             this.colDetailComment,
             this.colDetailCount,
-            this.colDetailPatientTotal});
+            this.colDetailPatientTotal,
+            this.colVAT});
             this.gvPatientVisitDetails.GridControl = this.gcPatientVisitDetails;
             this.gvPatientVisitDetails.Name = "gvPatientVisitDetails";
             this.gvPatientVisitDetails.OptionsView.ShowGroupPanel = false;
@@ -588,7 +590,7 @@
             this.colPatientVisitDetailVisitNo.Name = "colPatientVisitDetailVisitNo";
             this.colPatientVisitDetailVisitNo.Visible = true;
             this.colPatientVisitDetailVisitNo.VisibleIndex = 0;
-            this.colPatientVisitDetailVisitNo.Width = 50;
+            this.colPatientVisitDetailVisitNo.Width = 41;
             // 
             // colDetailNo
             // 
@@ -598,7 +600,7 @@
             this.colDetailNo.OptionsColumn.AllowEdit = false;
             this.colDetailNo.Visible = true;
             this.colDetailNo.VisibleIndex = 1;
-            this.colDetailNo.Width = 54;
+            this.colDetailNo.Width = 44;
             // 
             // colDetailDate
             // 
@@ -608,7 +610,7 @@
             this.colDetailDate.OptionsColumn.AllowEdit = false;
             this.colDetailDate.Visible = true;
             this.colDetailDate.VisibleIndex = 2;
-            this.colDetailDate.Width = 61;
+            this.colDetailDate.Width = 50;
             // 
             // colDetailComment
             // 
@@ -618,7 +620,7 @@
             this.colDetailComment.OptionsColumn.AllowEdit = false;
             this.colDetailComment.Visible = true;
             this.colDetailComment.VisibleIndex = 3;
-            this.colDetailComment.Width = 110;
+            this.colDetailComment.Width = 113;
             // 
             // colDetailCount
             // 
@@ -628,7 +630,7 @@
             this.colDetailCount.OptionsColumn.AllowEdit = false;
             this.colDetailCount.Visible = true;
             this.colDetailCount.VisibleIndex = 4;
-            this.colDetailCount.Width = 36;
+            this.colDetailCount.Width = 38;
             // 
             // colDetailPatientTotal
             // 
@@ -640,6 +642,16 @@
             this.colDetailPatientTotal.OptionsColumn.AllowEdit = false;
             this.colDetailPatientTotal.Visible = true;
             this.colDetailPatientTotal.VisibleIndex = 5;
+            this.colDetailPatientTotal.Width = 61;
+            // 
+            // colVAT
+            // 
+            this.colVAT.Caption = "KDV";
+            this.colVAT.FieldName = "KDV";
+            this.colVAT.Name = "colVAT";
+            this.colVAT.Visible = true;
+            this.colVAT.VisibleIndex = 6;
+            this.colVAT.Width = 36;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -717,6 +729,9 @@
             // 
             // sbVoucher
             // 
+            this.sbVoucher.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sbVoucher.Appearance.Options.UseForeColor = true;
+            this.sbVoucher.Enabled = false;
             this.sbVoucher.Location = new System.Drawing.Point(771, 384);
             this.sbVoucher.Name = "sbVoucher";
             this.sbVoucher.Size = new System.Drawing.Size(179, 22);
@@ -733,9 +748,13 @@
             this.sbRefresh.StyleController = this.layoutControl1;
             this.sbRefresh.TabIndex = 8;
             this.sbRefresh.Text = "Yenile";
+            this.sbRefresh.Click += new System.EventHandler(this.sbRefresh_Click);
             // 
             // sbInvoice
             // 
+            this.sbInvoice.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.sbInvoice.Appearance.Options.UseForeColor = true;
+            this.sbInvoice.Enabled = false;
             this.sbInvoice.Location = new System.Drawing.Point(773, 226);
             this.sbInvoice.Name = "sbInvoice";
             this.sbInvoice.Size = new System.Drawing.Size(165, 22);
@@ -1426,5 +1445,6 @@
         private DevExpress.XtraEditors.TextEdit teVoucherNo;
         private DevExpress.XtraLayout.LayoutControlItem lciVoucherNo;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
+        private DevExpress.XtraGrid.Columns.GridColumn colVAT;
     }
 }

@@ -119,20 +119,23 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (_InsuranceCompany == newInsuranceCompany) return;
 
             _InsuranceCompany = newInsuranceCompany;
-            this.tePatientNo.Text = "";
-            QueryPatients();
+            ReQueryPatients();
         }
                 #endregion
 
         private void sbClear_Click(object sender, EventArgs e)
         {
-            this.tePatientNo.Text = "";
+            ReQueryPatients();
         }
 
-        private void deStartDate_EditValueChanged(object sender, EventArgs e)
+        private void ReQueryPatients()
         {
             this.tePatientNo.Text = "";
             QueryPatients();
+        }
+        private void deStartDate_EditValueChanged(object sender, EventArgs e)
+        {
+            ReQueryPatients();
         }
 
     }

@@ -54,17 +54,31 @@ namespace Naz.Hastane.Win.Forms
                     XtraMessageBox.Show("Eski Şifreniz Doğru Değil, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
                     return;
                 }
+                else if (String.IsNullOrWhiteSpace(this.teNewPassword.Text))
+                {
+                    XtraMessageBox.Show("Yeni Şifre Boş Olamaz, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
+                    return;
+                }
                 else if (this.teNewPassword.Text != this.teRepeatNewPassword.Text)
                 {
                     XtraMessageBox.Show("Yeni Şifre Tekrarı Tutmuyor, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
                     return;
                 }
                 User.USER_PASS = encrypter.Encrypt(this.teNewPassword.Text);
+
                 try
                 {
+                    User.USER_PASS = encrypter.Encrypt(this.teNewPassword.Text);
+                    User.DATE_UPDATED = DateTime.Now;
+                    User.DATE_CREATED = User.TARIH;
                     session.Save(User);
+                    session.Flush();
                     transaction.Commit();
                     _IsOK = true;
+                }
+                catch (Exception excpt)
+                {
+                    XtraMessageBox.Show("Şifre Değiştirme İşlemi Başarısız Oldu!", "Şifre Değiştirme Uyarısı");
                 }
                 finally
                 { 

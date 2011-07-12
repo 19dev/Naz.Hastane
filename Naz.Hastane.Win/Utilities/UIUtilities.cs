@@ -216,6 +216,7 @@ namespace Naz.Hastane.Win
                 rpt.prmDate.Value = DateTime.Now;
                 rpt.prmPatientName.Value = patient.FullName;
                 rpt.prmPatientNo.Value = patient.PatientNo;
+                rpt.prmDoctor.Value = String.Format("({0}) {1}", pvds[0].PatientVisit.Doctor.Code, pvds[0].PatientVisit.Doctor.Value);
                 rpt.prmTCID.Value = patient.TCId;
                 rpt.prmTime.Value = DateTime.Now;
                 rpt.prmTotal.Value = paymentTotal;

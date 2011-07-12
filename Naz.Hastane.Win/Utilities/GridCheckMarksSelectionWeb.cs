@@ -16,6 +16,7 @@ namespace Naz.Hastane.Win.Utilities
 
     public class GridCheckMarksSelectionWeb 
     {
+
         public event System.EventHandler<EventArgs> OnSelectionChanged;
         public bool WillRaiseSelectionEvent { get; set; }
 
