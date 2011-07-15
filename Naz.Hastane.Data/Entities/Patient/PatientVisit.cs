@@ -6,6 +6,10 @@ namespace Naz.Hastane.Data.Entities
 {
     public class PatientVisit
     {
+        public static readonly string Polyclinic = "P";
+        public static readonly string Emergency = "A";
+        public static readonly string Hospitalized = "Y";
+
         public virtual Patient Patient { get; set; } //KNR
         /// <summary>
         /// SNR
@@ -19,10 +23,6 @@ namespace Naz.Hastane.Data.Entities
         /// AMBU
         /// </summary>
         public virtual string VisitType { get; set; } //AMBU A, Y, P Kart Tipi
-        public virtual bool IsPolyclinicVisit()
-        {
-            return VisitType == "P";
-        }
         /// <summary>
         /// CIKTAR
         /// </summary>

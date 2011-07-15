@@ -22,7 +22,6 @@ namespace Naz.Hastane.Win.Controls
                 if (value != _Patient)
                 {
                     _Patient = value;
-                    RefreshView();
                 }
             }
         }

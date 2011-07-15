@@ -164,7 +164,7 @@ namespace Naz.Hastane.Win
             {
                 PatientVisit pv = pvds[0].PatientVisit;
 
-                PatientServices.AddNewInvoice(session, UIUtilities.CurrentUser, patient, pvds,
+                PatientServices.AddNewInvoice(session, GetInvoiceUser(), patient, pvds,
                     paymentType, POSType,
                     productTotal, VATTotal, invoiceTotal, discountTotal, VATPercent,
                     cashPayment, advancePaymentUsed, tellerInvoiceNo);
@@ -197,6 +197,17 @@ namespace Naz.Hastane.Win
                 XtraMessageBox.Show("Fatura Yazma Hatası: " + e.Message);
             }
         }
+
+        public static User GetInvoiceUser()
+        {
+            string userName = ConfigurationSource.Configs["User"].Get("InvoiceUser", "");
+            User user = LookUpServices.GetByID<User>(userName);
+            if (user == null)
+                return CurrentUser;
+            else
+                return user;
+        }
+
         public static void PrintVoucher(ISession session, Patient patient, IList<PatientVisitDetail> pvds,
             string paymentType, string POSType,
             double paymentTotal, string tellerVoucherNo, bool directPrint)
@@ -206,7 +217,7 @@ namespace Naz.Hastane.Win
 
             try
             {
-                PatientServices.AddNewVoucher(session, UIUtilities.CurrentUser, pvds,
+                PatientServices.AddNewVoucher(session, GetVoucherUser(), pvds,
                     paymentType, POSType,
                     paymentTotal,
                     tellerVoucherNo
@@ -234,6 +245,17 @@ namespace Naz.Hastane.Win
                 XtraMessageBox.Show("Makbuz Yazma Hatası: " + e.Message);
             }
         }
+
+        public static User GetVoucherUser()
+        {
+            string userName = ConfigurationSource.Configs["User"].Get("VoucherUser", "");
+            User user = LookUpServices.GetByID<User>(userName);
+            if (user == null)
+                return CurrentUser;
+            else
+                return user;
+        }
+
 
         public static void PrintTaahhutname(Patient patient, bool directPrint)
         {

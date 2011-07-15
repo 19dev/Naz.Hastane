@@ -352,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\NHibernateCode.txt" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneToplamStok.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaParasiPesin.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaUcretsiz.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaEczanedenTahsilEdilmeyen.hbm.xml" />

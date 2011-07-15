@@ -33,19 +33,37 @@ namespace Naz.Hastane.Reports.Classes
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.bsParasiGeriDonecek = new System.Windows.Forms.BindingSource();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrPageBreak3 = new DevExpress.XtraReports.UI.XRPageBreak();
+            this.xrPageBreak2 = new DevExpress.XtraReports.UI.XRPageBreak();
+            this.xrPageBreak1 = new DevExpress.XtraReports.UI.XRPageBreak();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.srptParasiGeriDonmeyenOzet = new DevExpress.XtraReports.UI.XRSubreport();
+            this.keyValueReport5 = new Naz.Hastane.Reports.Classes.KeyValueReport();
+            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.srptParasiGeriDonecekOzet = new DevExpress.XtraReports.UI.XRSubreport();
+            this.keyValueReport4 = new Naz.Hastane.Reports.Classes.KeyValueReport();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.prmHeader = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblStok = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblToplamStok = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblMeccanilerCiktiktanSonraKalan = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEczanedenCikan = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblMeccaniler = new DevExpress.XtraReports.UI.XRLabel();
+            this.srptUcretsizler = new DevExpress.XtraReports.UI.XRSubreport();
+            this.keyValueReport3 = new Naz.Hastane.Reports.Classes.KeyValueReport();
+            this.srptToplamSatis = new DevExpress.XtraReports.UI.XRSubreport();
+            this.keyValueReport2 = new Naz.Hastane.Reports.Classes.KeyValueReport();
+            this.srptSiparisFaturalari = new DevExpress.XtraReports.UI.XRSubreport();
+            this.keyValueReport1 = new Naz.Hastane.Reports.Classes.KeyValueReport();
             this.pgParasiGeriDonmeyen = new DevExpress.XtraReports.UI.XRPivotGrid();
             this.xrPivotGridField7 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.xrPivotGridField8 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
@@ -55,31 +73,13 @@ namespace Naz.Hastane.Reports.Classes
             this.xrPivotGridField2 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.xrPivotGridField3 = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             this.bsParasiGeriDonmeyen = new System.Windows.Forms.BindingSource();
-            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.prmHeader = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPageBreak1 = new DevExpress.XtraReports.UI.XRPageBreak();
-            this.xrPageBreak2 = new DevExpress.XtraReports.UI.XRPageBreak();
-            this.xrPageBreak3 = new DevExpress.XtraReports.UI.XRPageBreak();
-            this.srptParasiGeriDonmeyenOzet = new DevExpress.XtraReports.UI.XRSubreport();
-            this.keyValueReport5 = new Naz.Hastane.Reports.Classes.KeyValueReport();
-            this.srptParasiGeriDonecekOzet = new DevExpress.XtraReports.UI.XRSubreport();
-            this.keyValueReport4 = new Naz.Hastane.Reports.Classes.KeyValueReport();
-            this.srptUcretsizler = new DevExpress.XtraReports.UI.XRSubreport();
-            this.keyValueReport3 = new Naz.Hastane.Reports.Classes.KeyValueReport();
-            this.srptToplamSatis = new DevExpress.XtraReports.UI.XRSubreport();
-            this.keyValueReport2 = new Naz.Hastane.Reports.Classes.KeyValueReport();
-            this.srptSiparisFaturalari = new DevExpress.XtraReports.UI.XRSubreport();
-            this.keyValueReport1 = new Naz.Hastane.Reports.Classes.KeyValueReport();
             ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonecek)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonmeyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonmeyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -125,7 +125,7 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel4,
             this.xrLabel1,
             this.xrLabel7,
-            this.lblStok,
+            this.lblToplamStok,
             this.xrLabel5,
             this.lblMeccanilerCiktiktanSonraKalan,
             this.xrLabel3,
@@ -139,6 +139,85 @@ namespace Naz.Hastane.Reports.Classes
             this.pgParasiGeriDonecek});
             this.ReportHeader.HeightF = 932.375F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrPageBreak3
+            // 
+            this.xrPageBreak3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 577.0834F);
+            this.xrPageBreak3.Name = "xrPageBreak3";
+            // 
+            // xrPageBreak2
+            // 
+            this.xrPageBreak2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 388.625F);
+            this.xrPageBreak2.Name = "xrPageBreak2";
+            // 
+            // xrPageBreak1
+            // 
+            this.xrPageBreak1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 244.9167F);
+            this.xrPageBreak1.Name = "xrPageBreak1";
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(0F, 711.4583F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(240.625F, 23F);
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.Text = "Parasý Geri Dönmeyen Özet";
+            // 
+            // srptParasiGeriDonmeyenOzet
+            // 
+            this.srptParasiGeriDonmeyenOzet.LocationFloat = new DevExpress.Utils.PointFloat(0F, 736.4583F);
+            this.srptParasiGeriDonmeyenOzet.Name = "srptParasiGeriDonmeyenOzet";
+            this.srptParasiGeriDonmeyenOzet.ReportSource = this.keyValueReport5;
+            this.srptParasiGeriDonmeyenOzet.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 398.9583F);
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(240.625F, 23F);
+            this.xrLabel12.StylePriority.UseFont = false;
+            this.xrLabel12.Text = "Parsý Geri Dönecek Özet";
+            // 
+            // srptParasiGeriDonecekOzet
+            // 
+            this.srptParasiGeriDonecekOzet.LocationFloat = new DevExpress.Utils.PointFloat(0F, 423.9583F);
+            this.srptParasiGeriDonecekOzet.Name = "srptParasiGeriDonecekOzet";
+            this.srptParasiGeriDonecekOzet.ReportSource = this.keyValueReport4;
+            this.srptParasiGeriDonecekOzet.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
+            // 
+            // xrLabel11
+            // 
+            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.prmHeader, "Text", "")});
+            this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(150F, 33F);
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(423.9583F, 23F);
+            this.xrLabel11.StylePriority.UseFont = false;
+            this.xrLabel11.StylePriority.UseTextAlignment = false;
+            this.xrLabel11.Text = "xrLabel11";
+            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // prmHeader
+            // 
+            this.prmHeader.Name = "prmHeader";
+            // 
+            // xrLabel10
+            // 
+            this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(241.6667F, 9.999998F);
+            this.xrLabel10.Name = "xrLabel10";
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(240.625F, 23F);
+            this.xrLabel10.StylePriority.UseFont = false;
+            this.xrLabel10.StylePriority.UseTextAlignment = false;
+            this.xrLabel10.Text = "Eczane Durum Raporu";
+            this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel9
             // 
@@ -200,16 +279,16 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "Stok";
             // 
-            // lblStok
+            // lblToplamStok
             // 
-            this.lblStok.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lblStok.LocationFloat = new DevExpress.Utils.PointFloat(321.2499F, 909.3749F);
-            this.lblStok.Name = "lblStok";
-            this.lblStok.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblStok.SizeF = new System.Drawing.SizeF(130.2083F, 23F);
-            this.lblStok.StylePriority.UseFont = false;
-            this.lblStok.StylePriority.UseTextAlignment = false;
-            this.lblStok.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.lblToplamStok.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblToplamStok.LocationFloat = new DevExpress.Utils.PointFloat(321.2499F, 909.3749F);
+            this.lblToplamStok.Name = "lblToplamStok";
+            this.lblToplamStok.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblToplamStok.SizeF = new System.Drawing.SizeF(130.2083F, 23F);
+            this.lblToplamStok.StylePriority.UseFont = false;
+            this.lblToplamStok.StylePriority.UseTextAlignment = false;
+            this.lblToplamStok.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel5
             // 
@@ -276,6 +355,27 @@ namespace Naz.Hastane.Reports.Classes
             this.lblMeccaniler.StylePriority.UseTextAlignment = false;
             this.lblMeccaniler.Text = "lblMeccaniler";
             this.lblMeccaniler.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // srptUcretsizler
+            // 
+            this.srptUcretsizler.LocationFloat = new DevExpress.Utils.PointFloat(0F, 509.2917F);
+            this.srptUcretsizler.Name = "srptUcretsizler";
+            this.srptUcretsizler.ReportSource = this.keyValueReport3;
+            this.srptUcretsizler.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
+            // 
+            // srptToplamSatis
+            // 
+            this.srptToplamSatis.LocationFloat = new DevExpress.Utils.PointFloat(0F, 177.2084F);
+            this.srptToplamSatis.Name = "srptToplamSatis";
+            this.srptToplamSatis.ReportSource = this.keyValueReport2;
+            this.srptToplamSatis.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
+            // 
+            // srptSiparisFaturalari
+            // 
+            this.srptSiparisFaturalari.LocationFloat = new DevExpress.Utils.PointFloat(0F, 87.58332F);
+            this.srptSiparisFaturalari.Name = "srptSiparisFaturalari";
+            this.srptSiparisFaturalari.ReportSource = this.keyValueReport1;
+            this.srptSiparisFaturalari.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
             // 
             // pgParasiGeriDonmeyen
             // 
@@ -385,106 +485,6 @@ namespace Naz.Hastane.Reports.Classes
             // 
             this.bsParasiGeriDonmeyen.DataSource = typeof(Naz.Hastane.Data.Entities.StoredProcedure.Key1Key2ValueRecord);
             // 
-            // xrLabel10
-            // 
-            this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(241.6667F, 9.999998F);
-            this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(240.625F, 23F);
-            this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.StylePriority.UseTextAlignment = false;
-            this.xrLabel10.Text = "Eczane Durum Raporu";
-            this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.prmHeader, "Text", "")});
-            this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(150F, 33F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(423.9583F, 23F);
-            this.xrLabel11.StylePriority.UseFont = false;
-            this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "xrLabel11";
-            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // prmHeader
-            // 
-            this.prmHeader.Name = "prmHeader";
-            // 
-            // xrLabel12
-            // 
-            this.xrLabel12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 398.9583F);
-            this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(240.625F, 23F);
-            this.xrLabel12.StylePriority.UseFont = false;
-            this.xrLabel12.Text = "Parsý Geri Dönecek Özet";
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(0F, 711.4583F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(240.625F, 23F);
-            this.xrLabel13.StylePriority.UseFont = false;
-            this.xrLabel13.Text = "Parasý Geri Dönmeyen Özet";
-            // 
-            // xrPageBreak1
-            // 
-            this.xrPageBreak1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 244.9167F);
-            this.xrPageBreak1.Name = "xrPageBreak1";
-            // 
-            // xrPageBreak2
-            // 
-            this.xrPageBreak2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 388.625F);
-            this.xrPageBreak2.Name = "xrPageBreak2";
-            // 
-            // xrPageBreak3
-            // 
-            this.xrPageBreak3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 577.0834F);
-            this.xrPageBreak3.Name = "xrPageBreak3";
-            // 
-            // srptParasiGeriDonmeyenOzet
-            // 
-            this.srptParasiGeriDonmeyenOzet.LocationFloat = new DevExpress.Utils.PointFloat(0F, 736.4583F);
-            this.srptParasiGeriDonmeyenOzet.Name = "srptParasiGeriDonmeyenOzet";
-            this.srptParasiGeriDonmeyenOzet.ReportSource = this.keyValueReport5;
-            this.srptParasiGeriDonmeyenOzet.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
-            // 
-            // srptParasiGeriDonecekOzet
-            // 
-            this.srptParasiGeriDonecekOzet.LocationFloat = new DevExpress.Utils.PointFloat(0F, 423.9583F);
-            this.srptParasiGeriDonecekOzet.Name = "srptParasiGeriDonecekOzet";
-            this.srptParasiGeriDonecekOzet.ReportSource = this.keyValueReport4;
-            this.srptParasiGeriDonecekOzet.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
-            // 
-            // srptUcretsizler
-            // 
-            this.srptUcretsizler.LocationFloat = new DevExpress.Utils.PointFloat(0F, 509.2917F);
-            this.srptUcretsizler.Name = "srptUcretsizler";
-            this.srptUcretsizler.ReportSource = this.keyValueReport3;
-            this.srptUcretsizler.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
-            // 
-            // srptToplamSatis
-            // 
-            this.srptToplamSatis.LocationFloat = new DevExpress.Utils.PointFloat(0F, 177.2084F);
-            this.srptToplamSatis.Name = "srptToplamSatis";
-            this.srptToplamSatis.ReportSource = this.keyValueReport2;
-            this.srptToplamSatis.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
-            // 
-            // srptSiparisFaturalari
-            // 
-            this.srptSiparisFaturalari.LocationFloat = new DevExpress.Utils.PointFloat(0F, 87.58332F);
-            this.srptSiparisFaturalari.Name = "srptSiparisFaturalari";
-            this.srptSiparisFaturalari.ReportSource = this.keyValueReport1;
-            this.srptSiparisFaturalari.SizeF = new System.Drawing.SizeF(384.7916F, 53.20834F);
-            // 
             // EczaneReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -498,12 +498,12 @@ namespace Naz.Hastane.Reports.Classes
             this.RequestParameters = false;
             this.Version = "11.1";
             ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonecek)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonmeyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValueReport1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsParasiGeriDonmeyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -525,7 +525,7 @@ namespace Naz.Hastane.Reports.Classes
         public System.Windows.Forms.BindingSource bsParasiGeriDonecek;
         private System.Windows.Forms.BindingSource bsParasiGeriDonmeyen;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        public DevExpress.XtraReports.UI.XRLabel lblStok;
+        public DevExpress.XtraReports.UI.XRLabel lblToplamStok;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         public DevExpress.XtraReports.UI.XRLabel lblMeccanilerCiktiktanSonraKalan;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;

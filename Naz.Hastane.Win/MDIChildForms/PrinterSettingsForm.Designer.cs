@@ -53,6 +53,16 @@
             this.lciNormalPrinterTray = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNormalPrinter = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.teInvoiceUser = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.teInvoicePassword = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.teVoucherUser = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.teVoucherPassword = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueNormalPrinterTray.Properties)).BeginInit();
@@ -77,10 +87,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNormalPrinterTray)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNormalPrinter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInvoiceUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInvoicePassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teVoucherUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teVoucherPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.teVoucherPassword);
+            this.layoutControl1.Controls.Add(this.teVoucherUser);
+            this.layoutControl1.Controls.Add(this.teInvoicePassword);
+            this.layoutControl1.Controls.Add(this.teInvoiceUser);
             this.layoutControl1.Controls.Add(this.lueNormalPrinterTray);
             this.layoutControl1.Controls.Add(this.lueNormalPrinter);
             this.layoutControl1.Controls.Add(this.sbSave);
@@ -93,7 +117,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(460, 347);
+            this.layoutControl1.Size = new System.Drawing.Size(651, 422);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -103,7 +127,7 @@
             this.lueNormalPrinterTray.Name = "lueNormalPrinterTray";
             this.lueNormalPrinterTray.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueNormalPrinterTray.Size = new System.Drawing.Size(219, 20);
+            this.lueNormalPrinterTray.Size = new System.Drawing.Size(411, 20);
             this.lueNormalPrinterTray.StyleController = this.layoutControl1;
             this.lueNormalPrinterTray.TabIndex = 11;
             // 
@@ -113,16 +137,16 @@
             this.lueNormalPrinter.Name = "lueNormalPrinter";
             this.lueNormalPrinter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueNormalPrinter.Size = new System.Drawing.Size(219, 20);
+            this.lueNormalPrinter.Size = new System.Drawing.Size(411, 20);
             this.lueNormalPrinter.StyleController = this.layoutControl1;
             this.lueNormalPrinter.TabIndex = 10;
             this.lueNormalPrinter.EditValueChanged += new System.EventHandler(this.lueNormalPrinter_EditValueChanged);
             // 
             // sbSave
             // 
-            this.sbSave.Location = new System.Drawing.Point(370, 90);
+            this.sbSave.Location = new System.Drawing.Point(562, 90);
             this.sbSave.Name = "sbSave";
-            this.sbSave.Size = new System.Drawing.Size(78, 22);
+            this.sbSave.Size = new System.Drawing.Size(77, 22);
             this.sbSave.StyleController = this.layoutControl1;
             this.sbSave.TabIndex = 8;
             this.sbSave.Text = "Sakla";
@@ -134,7 +158,7 @@
             this.lueVoucherPrinterTray.Name = "lueVoucherPrinterTray";
             this.lueVoucherPrinterTray.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueVoucherPrinterTray.Size = new System.Drawing.Size(219, 20);
+            this.lueVoucherPrinterTray.Size = new System.Drawing.Size(155, 20);
             this.lueVoucherPrinterTray.StyleController = this.layoutControl1;
             this.lueVoucherPrinterTray.TabIndex = 7;
             // 
@@ -144,7 +168,7 @@
             this.lueVoucherPrinter.Name = "lueVoucherPrinter";
             this.lueVoucherPrinter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueVoucherPrinter.Size = new System.Drawing.Size(219, 20);
+            this.lueVoucherPrinter.Size = new System.Drawing.Size(155, 20);
             this.lueVoucherPrinter.StyleController = this.layoutControl1;
             this.lueVoucherPrinter.TabIndex = 6;
             this.lueVoucherPrinter.EditValueChanged += new System.EventHandler(this.lueVoucherPrinter_EditValueChanged);
@@ -155,15 +179,15 @@
             this.lueInvoicePrinterTray.Name = "lueInvoicePrinterTray";
             this.lueInvoicePrinterTray.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueInvoicePrinterTray.Size = new System.Drawing.Size(219, 20);
+            this.lueInvoicePrinterTray.Size = new System.Drawing.Size(155, 20);
             this.lueInvoicePrinterTray.StyleController = this.layoutControl1;
             this.lueInvoicePrinterTray.TabIndex = 5;
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(370, 196);
+            this.sbClose.Location = new System.Drawing.Point(562, 196);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(78, 22);
+            this.sbClose.Size = new System.Drawing.Size(77, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 9;
             this.sbClose.Text = "Kapat";
@@ -175,7 +199,7 @@
             this.lueInvoicePrinter.Name = "lueInvoicePrinter";
             this.lueInvoicePrinter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueInvoicePrinter.Size = new System.Drawing.Size(219, 20);
+            this.lueInvoicePrinter.Size = new System.Drawing.Size(155, 20);
             this.lueInvoicePrinter.StyleController = this.layoutControl1;
             this.lueInvoicePrinter.TabIndex = 4;
             this.lueInvoicePrinter.EditValueChanged += new System.EventHandler(this.lueInvoicePrinter_EditValueChanged);
@@ -194,10 +218,12 @@
             this.layoutControlGroup2,
             this.layoutControlGroup3,
             this.layoutControlGroup4,
-            this.emptySpaceItem4});
+            this.emptySpaceItem4,
+            this.layoutControlGroup5,
+            this.layoutControlGroup6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(460, 347);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(651, 422);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -205,9 +231,9 @@
             // 
             this.layoutControlItem1.Control = this.sbSave;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(358, 78);
+            this.layoutControlItem1.Location = new System.Drawing.Point(550, 78);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(82, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(81, 26);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -215,10 +241,11 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(358, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(550, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(82, 78);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(81, 78);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -226,9 +253,9 @@
             // 
             this.layoutControlItem2.Control = this.sbClose;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(358, 184);
+            this.layoutControlItem2.Location = new System.Drawing.Point(550, 184);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(82, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(81, 26);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -236,19 +263,21 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(358, 210);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(550, 210);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(82, 117);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(81, 192);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(358, 104);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(550, 104);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(82, 80);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(81, 80);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -260,7 +289,7 @@
             this.lciInvoicePrinter});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(358, 92);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(294, 92);
             this.layoutControlGroup2.Text = "Fatura Yazıcısı";
             // 
             // lciInvoicePrinterTray
@@ -269,7 +298,7 @@
             this.lciInvoicePrinterTray.CustomizationFormText = "Fatura Yazıcısı Tepsisi";
             this.lciInvoicePrinterTray.Location = new System.Drawing.Point(0, 24);
             this.lciInvoicePrinterTray.Name = "lciInvoicePrinterTray";
-            this.lciInvoicePrinterTray.Size = new System.Drawing.Size(334, 24);
+            this.lciInvoicePrinterTray.Size = new System.Drawing.Size(270, 24);
             this.lciInvoicePrinterTray.Text = "Fatura Yazıcısı Tepsisi";
             this.lciInvoicePrinterTray.TextSize = new System.Drawing.Size(107, 13);
             // 
@@ -279,7 +308,7 @@
             this.lciInvoicePrinter.CustomizationFormText = "Fatura Yazıcısı";
             this.lciInvoicePrinter.Location = new System.Drawing.Point(0, 0);
             this.lciInvoicePrinter.Name = "lciInvoicePrinter";
-            this.lciInvoicePrinter.Size = new System.Drawing.Size(334, 24);
+            this.lciInvoicePrinter.Size = new System.Drawing.Size(270, 24);
             this.lciInvoicePrinter.Text = "Fatura Yazıcısı";
             this.lciInvoicePrinter.TextSize = new System.Drawing.Size(107, 13);
             // 
@@ -291,7 +320,7 @@
             this.lciVoucherPrinter});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 92);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(358, 92);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(294, 92);
             this.layoutControlGroup3.Text = "Makbuz Yazıcısı";
             // 
             // lciVoucherPrinterTray
@@ -300,7 +329,7 @@
             this.lciVoucherPrinterTray.CustomizationFormText = "Makbuz Yazıcısı Tepsisi";
             this.lciVoucherPrinterTray.Location = new System.Drawing.Point(0, 24);
             this.lciVoucherPrinterTray.Name = "lciVoucherPrinterTray";
-            this.lciVoucherPrinterTray.Size = new System.Drawing.Size(334, 24);
+            this.lciVoucherPrinterTray.Size = new System.Drawing.Size(270, 24);
             this.lciVoucherPrinterTray.Text = "Makbuz Yazıcısı Tepsisi";
             this.lciVoucherPrinterTray.TextSize = new System.Drawing.Size(107, 13);
             // 
@@ -310,7 +339,7 @@
             this.lciVoucherPrinter.CustomizationFormText = "Makbuz Yazıcısı";
             this.lciVoucherPrinter.Location = new System.Drawing.Point(0, 0);
             this.lciVoucherPrinter.Name = "lciVoucherPrinter";
-            this.lciVoucherPrinter.Size = new System.Drawing.Size(334, 24);
+            this.lciVoucherPrinter.Size = new System.Drawing.Size(270, 24);
             this.lciVoucherPrinter.Text = "Makbuz Yazıcısı";
             this.lciVoucherPrinter.TextSize = new System.Drawing.Size(107, 13);
             // 
@@ -322,7 +351,7 @@
             this.lciNormalPrinter});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 184);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(358, 92);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(550, 92);
             this.layoutControlGroup4.Text = "Normal Yazıcı";
             // 
             // lciNormalPrinterTray
@@ -331,7 +360,7 @@
             this.lciNormalPrinterTray.CustomizationFormText = "Normal Yazıcı Tepsisi";
             this.lciNormalPrinterTray.Location = new System.Drawing.Point(0, 24);
             this.lciNormalPrinterTray.Name = "lciNormalPrinterTray";
-            this.lciNormalPrinterTray.Size = new System.Drawing.Size(334, 24);
+            this.lciNormalPrinterTray.Size = new System.Drawing.Size(526, 24);
             this.lciNormalPrinterTray.Text = "Normal Yazıcı Tepsisi";
             this.lciNormalPrinterTray.TextSize = new System.Drawing.Size(107, 13);
             // 
@@ -341,24 +370,121 @@
             this.lciNormalPrinter.CustomizationFormText = "Normal Yazıcı";
             this.lciNormalPrinter.Location = new System.Drawing.Point(0, 0);
             this.lciNormalPrinter.Name = "lciNormalPrinter";
-            this.lciNormalPrinter.Size = new System.Drawing.Size(334, 24);
+            this.lciNormalPrinter.Size = new System.Drawing.Size(526, 24);
             this.lciNormalPrinter.Text = "Normal Yazıcı";
             this.lciNormalPrinter.TextSize = new System.Drawing.Size(107, 13);
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 276);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(358, 51);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(550, 126);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // teInvoiceUser
+            // 
+            this.teInvoiceUser.Location = new System.Drawing.Point(429, 44);
+            this.teInvoiceUser.Name = "teInvoiceUser";
+            this.teInvoiceUser.Size = new System.Drawing.Size(117, 20);
+            this.teInvoiceUser.StyleController = this.layoutControl1;
+            this.teInvoiceUser.TabIndex = 12;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.teInvoiceUser;
+            this.layoutControlItem3.CustomizationFormText = "Kullanıcı Adı";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(232, 24);
+            this.layoutControlItem3.Text = "Kullanıcı Adı";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 13);
+            // 
+            // teInvoicePassword
+            // 
+            this.teInvoicePassword.Location = new System.Drawing.Point(429, 68);
+            this.teInvoicePassword.Name = "teInvoicePassword";
+            this.teInvoicePassword.Properties.PasswordChar = '*';
+            this.teInvoicePassword.Size = new System.Drawing.Size(117, 20);
+            this.teInvoicePassword.StyleController = this.layoutControl1;
+            this.teInvoicePassword.TabIndex = 13;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.teInvoicePassword;
+            this.layoutControlItem4.CustomizationFormText = "Şifre";
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(232, 24);
+            this.layoutControlItem4.Text = "Şifre";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(107, 13);
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.CustomizationFormText = "Fatura Kullanıcısı";
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem4,
+            this.layoutControlItem3});
+            this.layoutControlGroup5.Location = new System.Drawing.Point(294, 0);
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(256, 92);
+            this.layoutControlGroup5.Text = "Fatura Kullanıcısı";
+            // 
+            // teVoucherUser
+            // 
+            this.teVoucherUser.Location = new System.Drawing.Point(429, 136);
+            this.teVoucherUser.Name = "teVoucherUser";
+            this.teVoucherUser.Size = new System.Drawing.Size(117, 20);
+            this.teVoucherUser.StyleController = this.layoutControl1;
+            this.teVoucherUser.TabIndex = 14;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.teVoucherUser;
+            this.layoutControlItem5.CustomizationFormText = "Kullanıcı Adı";
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(232, 24);
+            this.layoutControlItem5.Text = "Kullanıcı Adı";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 13);
+            // 
+            // teVoucherPassword
+            // 
+            this.teVoucherPassword.Location = new System.Drawing.Point(429, 160);
+            this.teVoucherPassword.Name = "teVoucherPassword";
+            this.teVoucherPassword.Properties.PasswordChar = '*';
+            this.teVoucherPassword.Size = new System.Drawing.Size(117, 20);
+            this.teVoucherPassword.StyleController = this.layoutControl1;
+            this.teVoucherPassword.TabIndex = 15;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.teVoucherPassword;
+            this.layoutControlItem6.CustomizationFormText = "Şifre";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(232, 24);
+            this.layoutControlItem6.Text = "Şifre";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(107, 13);
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.CustomizationFormText = "Makbuz Kullanıcısı";
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem6,
+            this.layoutControlItem5});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(294, 92);
+            this.layoutControlGroup6.Name = "layoutControlGroup6";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(256, 92);
+            this.layoutControlGroup6.Text = "Makbuz Kullanıcısı";
             // 
             // PrinterSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 347);
+            this.ClientSize = new System.Drawing.Size(651, 422);
             this.Controls.Add(this.layoutControl1);
             this.Name = "PrinterSettingsForm";
             this.Text = "PrinterSettingsForm";
@@ -386,6 +512,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNormalPrinterTray)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNormalPrinter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInvoiceUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInvoicePassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teVoucherUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teVoucherPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,5 +553,15 @@
         private DevExpress.XtraLayout.LayoutControlItem lciNormalPrinterTray;
         private DevExpress.XtraLayout.LayoutControlItem lciNormalPrinter;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraEditors.TextEdit teVoucherPassword;
+        private DevExpress.XtraEditors.TextEdit teVoucherUser;
+        private DevExpress.XtraEditors.TextEdit teInvoicePassword;
+        private DevExpress.XtraEditors.TextEdit teInvoiceUser;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

@@ -20,6 +20,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private double parasiGeriDonecekToplam = 0;
         private double ucretsizlerToplam = 0;
         private double parasiGeriDonmeyenToplam = 0;
+        private double toplamStok = 0;
 
         public EczaneReportForm()
         {
@@ -101,6 +102,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                                                   .ToList();
                 gcParasiGeriDönmeyenOzet.DataSource = ParasiGeriDonmeyenOzetRecords;
 
+                toplamStok = LookUpServices.GetTotal(LookUpServices.GetEczaneToplamStok());
             }
             finally
             {
@@ -126,6 +128,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             report.lblMeccaniler.Text = (ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
             report.lblEczanedenCikan.Text = (toplamSatisToplam + parasiGeriDonecekToplam + ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
             report.lblMeccanilerCiktiktanSonraKalan.Text = (toplamSatisToplam + parasiGeriDonecekToplam).ToString("n2");
+            report.lblToplamStok.Text = (toplamStok).ToString("n2");
 
             report.prmHeader.Value = String.Format("{0:dd.MM.yyyy}-{1:dd.MM.yyyy}", deStartDate.DateTime.Date, deEndDate.DateTime.Date);
 

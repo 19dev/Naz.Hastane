@@ -320,7 +320,13 @@ namespace Naz.Hastane.Win.Controls
             string NewTellerInvoiceNo = this.teInvoiceNo.Text;
             string paymentType = this.luePaymentType.EditValue.ToString();
             string POSType = "";
-            
+
+            if (String.IsNullOrWhiteSpace(NewTellerInvoiceNo))
+            {
+                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                return;
+            }
+
             if (this.luePOS.EditValue != null)
                 POSType = this.luePOS.EditValue.ToString();
 
@@ -353,7 +359,19 @@ namespace Naz.Hastane.Win.Controls
             string paymentType = this.luePaymentType.EditValue.ToString();
             string POSType = "";
 
+            if (String.IsNullOrWhiteSpace(NewTellerVoucherNo))
+            {
+                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                return;
+            }
+
             if (VATPercent != 0)
+                return;
+
+            if (!cePayment.Checked)
+                cePayment.Checked = true;
+
+            if (Payment == 0)
                 return;
 
             if (this.luePOS.EditValue != null)

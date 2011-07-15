@@ -48,7 +48,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             gvPatientVisitDetails.BeginDataUpdate();
             try
             {
-                PatientVisitDetailWithProducts = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany.YFIYLIST);
+                PatientVisitDetailWithProducts = PatientServices.GetPatientVisitDetailsForInsuranceCompanyChange(_Session, GetSelectedVisits(), _InsuranceCompany);
                 this.gcPatientVisitDetails.DataSource = PatientVisitDetailWithProducts;
 
                 gvPatientVisitDetails.ClearSorting();

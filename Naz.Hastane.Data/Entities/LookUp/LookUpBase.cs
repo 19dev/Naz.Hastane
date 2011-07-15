@@ -6,15 +6,15 @@ using System.ComponentModel;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
-    public enum PatientCardType
-    {
-        [Description("A")]
-        Emergency,
-        [Description("Y")]
-        Hospitalized,
-        [Description("P")]
-        Polyclinic,
-    }
+    //public enum PatientCardType
+    //{
+    //    [Description("A")]
+    //    Emergency,
+    //    [Description("Y")]
+    //    Hospitalized,
+    //    [Description("P")]
+    //    Polyclinic,
+    //}
 
     public class LookUpBase
     {
