@@ -2,6 +2,7 @@
 
 namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    /// <remarks>tlkpvSubFunctionGroup</remarks>
     [Description("Alt İşlem Grubu")]
     public class SubFunctionGroup : OldLookUpBase
     {

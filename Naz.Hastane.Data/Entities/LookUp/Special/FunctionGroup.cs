@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    /// <remarks>tlkpvFunctionGroup</remarks>
     [Description("İşlem Grubu")]
     public class FunctionGroup : OldLookUpBase
     {

@@ -1,5 +1,4 @@
-﻿
-namespace Naz.Hastane.Data.Entities.Medula
+﻿namespace Naz.Hastane.Data.Entities.Medula
 {
     public class MedulaProvisionResult
     {

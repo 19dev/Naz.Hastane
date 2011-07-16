@@ -1,13 +1,7 @@
-using System.Collections.Generic; 
-using System.Text; 
-using System; 
-
-namespace Naz.Hastane.Data.Entities {
-    
+namespace Naz.Hastane.Data.Entities 
+{
     public class PatientAnamnesisDetail
     {
-        public PatientAnamnesisDetail() { }
-
         /// <summary>
         /// KNR, SNR, GELIS_TARIHI (BEHAND_DETAY, TET_ANAMNEZ)
         /// </summary>

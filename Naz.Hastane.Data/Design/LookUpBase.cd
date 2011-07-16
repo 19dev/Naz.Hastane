@@ -1,111 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.City" Collapsed="true">
-    <Position X="1" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\City.cs</FileName>
-    </TypeIdentifier>
-  </Class>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="ID	Value	Code&#xD;&#xA;1	0 RH +	0&#xD;&#xA;2	0 RH -	1&#xD;&#xA;3	A RH +	2&#xD;&#xA;4	A RH -	3&#xD;&#xA;5	B RH +	4&#xD;&#xA;6	B RH -	5&#xD;&#xA;7	AB RH +	6&#xD;&#xA;8	AB RH -	7&#xD;&#xA;9	Bilinmiyor	8">
+    <Position X="0.5" Y="3.385" Height="1.708" Width="1.794" />
+  </Comment>
+  <Comment CommentText="ID	Value	Code&#xD;&#xA;1	Nüfus Cüzdanı	1&#xD;&#xA;2	Ehliyet	2&#xD;&#xA;3	Pasaport	3">
+    <Position X="2.625" Y="3.448" Height="0.812" Width="1.825" />
+  </Comment>
+  <Comment CommentText="ID	Value	Code&#xD;&#xA;1	Nakit	N&#xD;&#xA;2	Kredi Kartı	K&#xD;&#xA;3	Çek	C&#xD;&#xA;4	Senet	S&#xD;&#xA;5	Banka Havalesi	B&#xD;&#xA;6	Açık Fatura	A">
+    <Position X="4.781" Y="3.854" Height="1.312" Width="2.002" />
+  </Comment>
+  <Comment CommentText="ID	Value	Code&#xD;&#xA;1	Evet	E&#xD;&#xA;2	Hayır	H">
+    <Position X="7.188" Y="3.427" Height="0.75" Width="1.7" />
+  </Comment>
   <Class Name="Naz.Hastane.Data.Entities.LookUp.LookUpBase">
-    <Position X="5.5" Y="0.5" Width="2" />
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Entities\LookUp\LookUpBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Doctor">
-    <Position X="2.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Doctor.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Nationality" Collapsed="true">
-    <Position X="4.5" Y="3.5" Width="1.5" />
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.BloodType" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Nationality.cs</FileName>
+      <FileName>Entities\LookUp\General\BloodType.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.PatientRelation" Collapsed="true">
-    <Position X="4.5" Y="4.5" Width="1.5" />
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.IDType" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\PatientRelation.cs</FileName>
+      <FileName>Entities\LookUp\General\IDType.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Depository" Collapsed="true">
-    <Position X="1" Y="4.5" Width="1.5" />
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.PaymentType">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\General\PaymentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.YesNo" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Depository.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.FunctionGroup">
-    <Position X="2.75" Y="5.5" Width="3.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
-      <FileName>Entities\LookUp\FunctionGroup.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="FunctionGroupType" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Service">
-    <Position X="6.5" Y="3.5" Width="3.75" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAEgAAAAAAAAAAAAAAAAgQAABQAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Service.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.VAT" Collapsed="true">
-    <Position X="10.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\VAT.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Warehouse" Collapsed="true">
-    <Position X="10.5" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Warehouse.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.SystemSetting" Collapsed="true">
-    <Position X="10.5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\SystemSetting.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.BloodType">
-    <Position X="1" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\BloodType.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.FunctionGroupType">
-    <Position X="3.5" Y="7.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\FunctionGroupType.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.IDType">
-    <Position X="1" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\IDType.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.Room">
-    <Position X="6.5" Y="6.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAUAAEAAAAAAACAAAAAAAgAAAgIAAAAAEAACAAAAA=</HashCode>
-      <FileName>Entities\LookUp\Room.cs</FileName>
+      <FileName>Entities\LookUp\General\YesNo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

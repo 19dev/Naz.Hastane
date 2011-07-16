@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace Naz.Hastane.Data.Entities.LookUp
 {
+    /// <remarks>KEYDAT</remarks>
     public class OldLookUpBase
     {
         public virtual string ID0 { get; set; }

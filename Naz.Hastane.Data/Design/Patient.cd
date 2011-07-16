@@ -3,7 +3,7 @@
   <Class Name="Naz.Hastane.Data.Entities.Patient">
     <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>IKAGQVCEBCC5BAAAALAgUQ+IgA5hBAgOIKXiBQSQCFg=</HashCode>
+      <HashCode>oKAGQVCEBCC5RIAAALAgUQ+IgA5hBAgOIKXiBSSQCFg=</HashCode>
       <FileName>Entities\Patient\Patient.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -13,7 +13,7 @@
   <Class Name="Naz.Hastane.Data.Entities.PatientVisit">
     <Position X="3" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>SZKAQYE8TAQnAwYAoCDgAAwJqoKDYISAAUgUHAABCIA=</HashCode>
+      <HashCode>SZaAYYE8TAQnAwYhoKDhAAwI6oKCYISIAUA0HQADCIE=</HashCode>
       <FileName>Entities\Patient\PatientVisit.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -23,14 +23,14 @@
   <Class Name="Naz.Hastane.Data.Entities.PatientVisitDetail">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>SQgASBAEIIAQcADCmSIACBAYiAiAdIWCCQICASACAAk=</HashCode>
+      <HashCode>SQgASBAEIIAwMAHCnaIACBAYiAiAdIWCCQICASAAAAk=</HashCode>
       <FileName>Entities\Patient\PatientVisitDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PatientVisitRecord">
     <Position X="7.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CACAQAAMBERAlAAggCEIIAApgAAhIYAGIAgAHQBCAAg=</HashCode>
+      <HashCode>CASAQAAMBEVQkgAggCEIIAAI6AAAQIQMIAACGQBCAAA=</HashCode>
       <FileName>Entities\Patient\PatientVisitRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -53,6 +53,23 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAQAAAAAIAgIAAAAAAAAAAAiAA=</HashCode>
       <FileName>Entities\Patient\PatientDiscountDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientAnamnesis">
+    <Position X="11.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAgwEBAAEAAYAAAkCAAAAAogAAQAYCAAAAAAASCAAA=</HashCode>
+      <FileName>Entities\Patient\PatientAnamnesis.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PatientAnamnesisDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.PatientAnamnesisDetail">
+    <Position X="13.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAwAAAACiAAAABAAAIABAIAAAAAAAAAAAAg=</HashCode>
+      <FileName>Entities\Patient\PatientAnamnesisDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

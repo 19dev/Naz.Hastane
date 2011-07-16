@@ -1,13 +1,7 @@
-using System.Collections.Generic; 
-using System.Text; 
-using System; 
-
-
-namespace Naz.Hastane.Data.Entities {
-    
-    public class AdvancePaymentRebate {
-        public AdvancePaymentRebate() { }
-
+namespace Naz.Hastane.Data.Entities 
+{
+    public class AdvancePaymentRebate 
+    {
         public virtual AdvancePayment AdvancePayment { get; set; }
 //        public virtual double AV_ID { get; set; }
         

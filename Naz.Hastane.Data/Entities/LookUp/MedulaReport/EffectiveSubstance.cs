@@ -1,13 +1,10 @@
 using System.ComponentModel;
 
-namespace Naz.Hastane.Data.Entities {
-    
+namespace Naz.Hastane.Data.Entities
+{
     [Description("Etken Madde Bilgisi")]
     public class EffectiveSubstance 
     {
-        
-        public EffectiveSubstance() { }
-
         [Description("Kod")]
         public virtual string Code { get; set; }
         [Description("Açýklama")]

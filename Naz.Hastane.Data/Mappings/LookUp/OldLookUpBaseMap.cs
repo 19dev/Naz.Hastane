@@ -9,8 +9,8 @@ namespace Naz.Hastane.Data.Mappings.LookUp
     public enum LookUpDiscriminators
     {
         [Description("00")]
-        SystemSettings,
-        [Description("01")] // tlkpAnaIslem
+        SystemSetting,
+        [Description("01")]
         FunctionGroup,
         [Description("02")]
         VAT,
@@ -33,7 +33,9 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         [Description("37")]
         City,
         [Description("51")]
-        Nationality
+        Nationality,
+        [Description("53")]
+        POS
     }
 
     public class OldLookUpBaseMap : ClassMap<OldLookUpBase>
@@ -43,7 +45,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp
             Table("KEYDAT");
             DiscriminateSubClassesOnColumn("SLK");
 
-            Id(x => x.Code)       .Column("SLB")  .Length(10);
+            Id(x => x.Code)     .Column("SLB")  .Length(10);
 
             Map(x => x.ID0)     .Column("SLK")  .Length(2);
             Map(x => x.Value)   .Column("SLT")  .Length(150);

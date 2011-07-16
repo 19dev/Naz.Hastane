@@ -337,10 +337,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="Design\Accounting.cd" />
     <None Include="Design\Doctor.cd" />
     <None Include="Design\InsuranceCompany.cd" />
     <None Include="Design\Invoice.cd" />
     <None Include="Design\LookUpBase.cd" />
+    <None Include="Design\MedulaDiabet.cd" />
+    <None Include="Design\MedulaProvision.cd" />
+    <None Include="Design\MedulaReport.cd" />
+    <None Include="Design\OldLookUpBase.cd" />
     <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
     <None Include="Design\Product.cd" />
