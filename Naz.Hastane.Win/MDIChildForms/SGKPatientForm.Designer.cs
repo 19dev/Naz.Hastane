@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.sbAddTreatmentCard = new DevExpress.XtraEditors.SimpleButton();
+            //this.sbAddTreatmentCard = new DevExpress.XtraEditors.SimpleButton();
             this.sbAcil = new DevExpress.XtraEditors.SimpleButton();
             this.sbYatis = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
@@ -468,7 +468,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.sbAddTreatmentCard);
+            //this.layoutControl1.Controls.Add(this.sbAddTreatmentCard);
             this.layoutControl1.Controls.Add(this.sbAcil);
             this.layoutControl1.Controls.Add(this.sbYatis);
             this.layoutControl1.Controls.Add(this.gridControl3);
@@ -569,16 +569,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(1064, 710);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // sbAddTreatmentCard
-            // 
-            this.sbAddTreatmentCard.Location = new System.Drawing.Point(928, 141);
-            this.sbAddTreatmentCard.Name = "sbAddTreatmentCard";
-            this.sbAddTreatmentCard.Size = new System.Drawing.Size(119, 22);
-            this.sbAddTreatmentCard.StyleController = this.layoutControl1;
-            this.sbAddTreatmentCard.TabIndex = 146;
-            this.sbAddTreatmentCard.Text = "Tedavi Kartı Ekle";
-            this.sbAddTreatmentCard.Click += new System.EventHandler(this.sbAddTreatmentCard_Click);
+            //// 
+            //// sbAddTreatmentCard
+            //// 
+            //this.sbAddTreatmentCard.Location = new System.Drawing.Point(928, 141);
+            //this.sbAddTreatmentCard.Name = "sbAddTreatmentCard";
+            //this.sbAddTreatmentCard.Size = new System.Drawing.Size(119, 22);
+            //this.sbAddTreatmentCard.StyleController = this.layoutControl1;
+            //this.sbAddTreatmentCard.TabIndex = 146;
+            //this.sbAddTreatmentCard.Text = "Tedavi Kartı Ekle";
+            //this.sbAddTreatmentCard.Click += new System.EventHandler(this.sbAddTreatmentCard_Click);
             // 
             // sbAcil
             // 
@@ -3001,7 +3001,7 @@
             // 
             // lciAddTreatmentCard
             // 
-            this.lciAddTreatmentCard.Control = this.sbAddTreatmentCard;
+            //this.lciAddTreatmentCard.Control = this.sbAddTreatmentCard;
             this.lciAddTreatmentCard.CustomizationFormText = "layoutControlItem28";
             this.lciAddTreatmentCard.Location = new System.Drawing.Point(0, 124);
             this.lciAddTreatmentCard.Name = "lciAddTreatmentCard";
