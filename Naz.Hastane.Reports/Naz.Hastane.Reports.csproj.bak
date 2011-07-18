@@ -248,6 +248,7 @@
     <EmbeddedResource Include="Classes\VoucherSGKReport.resx">
       <DependentUpon>VoucherSGKReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naz.Hastane.Data\Naz.Hastane.Data.csproj">

@@ -782,7 +782,7 @@ namespace Naz.Hastane.Win {
             iSGKHastaAra.ItemClick += (o, args) => OpenFindPatientForm();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
-            iSGKInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<SGKInvoiceVoucherForm>();
+            iInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<InvoiceVoucherForm>();
             iDiabetReports.ItemClick += (o, args) => ShowNewDocument<MedulaDiabetReportForm>();
             iMedulaMedicationReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
             iTreatmentReports.ItemClick += (o, args) => ShowNewDocument<MedulaMedicationReportForm>();
@@ -967,7 +967,10 @@ namespace Naz.Hastane.Win {
             LoginForm form = new LoginForm();
             form.ShowDialog();
             if (form.IsOK)
+            {
                 UIUtilities.CurrentUser = form.User;
+                this.Text = String.Format("SurpMed v. {0} ({1})", Application.ProductVersion, UIUtilities.CurrentUser.USER_ID);
+            }
             EnableRibbonButtons(form.IsOK);
         }
 

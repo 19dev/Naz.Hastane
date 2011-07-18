@@ -11,6 +11,7 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
 
     }
 
+    /// <remarks>tlkpvService</remarks>
     [Description("Servis Tanımları")]
     public class Service : OldLookUpBase
     {

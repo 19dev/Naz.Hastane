@@ -62,7 +62,7 @@ namespace Naz.Hastane.Win.Controls
             this.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
         }
 
-        public void CallMedula(string TCID)
+        public void CallMedula(string TCID, DateTime date)
         {
             if (IsWorking) return;
 
@@ -82,7 +82,7 @@ namespace Naz.Hastane.Win.Controls
             pgd.devredilenKurum = lueTransferorInstitution.EditValue.ToString();
             pgd.donorTCKimlikNo = "";
             pgd.hastaTCKimlikNo = TCID;
-            pgd.provizyonTarihi = DateTime.Now.ToString("dd/MM/yyyy");
+            pgd.provizyonTarihi = date.ToString("dd/MM/yyyy");
             pgd.provizyonTipi = lueProvisionType.EditValue.ToString();
             pgd.saglikTesisKodu = 10343154;
             pgd.sigortaliTuru = lueInsuranceType.EditValue.ToString();

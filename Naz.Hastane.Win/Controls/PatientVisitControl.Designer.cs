@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvPatientVisitDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPVDDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,6 +79,7 @@
             this.colPatientAppNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTakipNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIMPF2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKar_No = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSevkTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProvisionNo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -90,7 +91,6 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).BeginInit();
@@ -135,7 +135,7 @@
             this.gvPatientVisitDetail.OptionsView.ColumnAutoWidth = false;
             this.gvPatientVisitDetail.OptionsView.ShowGroupPanel = false;
             this.gvPatientVisitDetail.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSiraNo, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSiraNo, DevExpress.Data.ColumnSortOrder.Descending)});
             this.gvPatientVisitDetail.Click += new System.EventHandler(this.gvPatientVisitDetail_Click);
             // 
             // colPVDDate
@@ -344,13 +344,13 @@
             // gcPatientVisit
             // 
             this.gcPatientVisit.DataMember = null;
-            gridLevelNode1.LevelTemplate = this.gvPatientVisitDetail;
-            gridLevelNode1.RelationName = "PatientVisitDetails";
-            gridLevelNode2.LevelTemplate = this.gvPatientVisitRecord;
-            gridLevelNode2.RelationName = "PatientVisitRecords";
+            gridLevelNode3.LevelTemplate = this.gvPatientVisitDetail;
+            gridLevelNode3.RelationName = "PatientVisitDetails";
+            gridLevelNode4.LevelTemplate = this.gvPatientVisitRecord;
+            gridLevelNode4.RelationName = "PatientVisitRecords";
             this.gcPatientVisit.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2});
+            gridLevelNode3,
+            gridLevelNode4});
             this.gcPatientVisit.Location = new System.Drawing.Point(4, 4);
             this.gcPatientVisit.MainView = this.gvPatientVisit;
             this.gcPatientVisit.Name = "gcPatientVisit";
@@ -599,6 +599,14 @@
             this.colIMPF2.Visible = true;
             this.colIMPF2.VisibleIndex = 16;
             // 
+            // colUserId
+            // 
+            this.colUserId.Caption = "Kullanıcı";
+            this.colUserId.FieldName = "USER_ID";
+            this.colUserId.Name = "colUserId";
+            this.colUserId.Visible = true;
+            this.colUserId.VisibleIndex = 13;
+            // 
             // colKar_No
             // 
             this.colKar_No.Caption = "Kar.No";
@@ -703,14 +711,6 @@
             this.lciPatientVisitControl.TextSize = new System.Drawing.Size(0, 0);
             this.lciPatientVisitControl.TextToControlDistance = 0;
             this.lciPatientVisitControl.TextVisible = false;
-            // 
-            // colUserId
-            // 
-            this.colUserId.Caption = "Kullanıcı";
-            this.colUserId.FieldName = "USER_ID";
-            this.colUserId.Name = "colUserId";
-            this.colUserId.Visible = true;
-            this.colUserId.VisibleIndex = 13;
             // 
             // PatientVisitControl
             // 

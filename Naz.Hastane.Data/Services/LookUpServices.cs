@@ -520,6 +520,14 @@ namespace Naz.Hastane.Data.Services
                     .List<T>();
             }
         }
+        public static IList<T> GetQuery<T>(string queryName)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery(queryName)
+                    .List<T>();
+            }
+        }
 
         public static IList<Key1Key2ValueRecord> GetEczaneParasiGeriDonecek(DateTime startDate, DateTime endDate)
         {
@@ -557,6 +565,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<Key1ValueRecord> GetEczaneYatanHastaUcretsiz(DateTime startDate, DateTime endDate)
         {
             return GetQuery<Key1ValueRecord>("sp_GetEczaneYatanHastaUcretsiz", startDate, endDate);
+        }
+        public static IList<Key1ValueRecord> GetEczaneToplamStok()
+        {
+            return GetQuery<Key1ValueRecord>("sp_GetEczaneToplamStok");
         }
 
         public static double GetTotal<T>(IList<T> records) where T: Key1ValueRecord
@@ -598,6 +610,9 @@ namespace Naz.Hastane.Data.Services
                                     where systemSetting.ID0 == "00" && systemSetting.Code == key
                                     select systemSetting
                                     ).SingleOrDefault<SystemSetting>();
+
+                if (ss == null)
+                    return String.Empty;
 
                 for (int i = ss.Value.Length - 1; i >= 0; i--)
                 {

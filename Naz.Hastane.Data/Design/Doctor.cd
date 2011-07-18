@@ -17,7 +17,7 @@
   <Class Name="Naz.Hastane.Data.Entities.DoctorInvoiceDetail">
     <Position X="5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AACADAAAIARAAAAACCgADAAAkCAgQAACIAAEAAAgABQ=</HashCode>
+      <HashCode>ACDADAAAIARCAAAACCgADAAAsAAgQAAAAAAEAAAgABQ=</HashCode>
       <FileName>Entities\Doctor\DoctorInvoiceDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,6 +40,13 @@
     <TypeIdentifier>
       <HashCode>AACACAAAIAAAAAAAACgADAAAkCAgQAACIAAEAAAgABQ=</HashCode>
       <FileName>Entities\Doctor\DoctorVoucherDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.DoctorProductPercent">
+    <Position X="9" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAIAAAAAAggAAACAAAAAACAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Doctor\DoctorProductPercent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

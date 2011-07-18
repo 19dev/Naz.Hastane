@@ -1,11 +1,9 @@
 using System.Collections.Generic;
 
-namespace Naz.Hastane.Data.Entities {
-    
-    public class AdvancePayment {
-
-        public AdvancePayment() { }
-        
+namespace Naz.Hastane.Data.Entities 
+{
+    public class AdvancePayment
+    {
         public virtual double AV_ID { get; set; }
 
         public virtual PatientVisit PatientVisit { get; set; }

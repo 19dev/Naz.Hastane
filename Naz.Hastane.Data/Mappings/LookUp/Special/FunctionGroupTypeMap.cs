@@ -7,10 +7,10 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
     {
         public FunctionGroupTypeMap()
         {
-            Table("tlkpAnaIslemTipi");
+            Table("tlkpFunctionGroupType");
 
             Id(x => x.ID);
-            Map(x => x.Value).Column("strName").Length(255);
+            Map(x => x.Value).Column("Value").Length(255);
         }
     }
 }

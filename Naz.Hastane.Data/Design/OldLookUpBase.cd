@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="KEYDAT Tablosunda bulunan Değerler&#xD;&#xA;SLK -&gt; ID0&#xD;&#xA;SLB -&gt; Code&#xD;&#xA;SLT -&gt; Value&#xD;&#xA;&#xD;&#xA;">
+    <Position X="7.677" Y="0.5" Height="1.229" Width="1.585" />
+  </Comment>
+  <Comment CommentText="tlkpAnaIslem       -&gt; tlkpvFunctionGroup&#xD;&#xA;&#xD;&#xA;tlkpAYP&#xD;&#xA;tlkpAnaIslemTipi -&gt; tlkpFunctionGroupType&#xD;&#xA;tlkpServisTipi       -&gt; tlkpServiceType&#xD;&#xA;tlkpKurumTipi&#xD;&#xA;">
+    <Position X="0.802" Y="0.5" Height="1.229" Width="2.846" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;04	10	GENEL HASTANE AMBARI&#xD;&#xA;04	11	ELEKTRİK MALZEME DEP&#xD;&#xA;04	12	SIHHİ MALZEME DEPOSU&#xD;&#xA;">
+    <Position X="0.521" Y="6.146" Height="0.833" Width="2.731" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;03	00	ANA ANBAR&#xD;&#xA;03	01	ACİL ARB. ASTARCİYAN&#xD;&#xA;03	02	ACİL ÇNT MANUKYAN&#xD;&#xA;03	03	ACİL ARB.HİNTLİYAN&#xD;&#xA;03	04	ACİL CNT BİLEK&#xD;&#xA;03	09	DAHİLİYE ACİL ECZ.D.&#xD;&#xA;">
+    <Position X="3.104" Y="6.156" Height="1.281" Width="2.533" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;37	001	ADANA&#xD;&#xA;37	002	ADIYAMAN&#xD;&#xA;37	003	AFYON&#xD;&#xA;37	004	AĞRI">
+    <Position X="0.5" Y="4.06" Height="0.906" Width="1.981" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;51	AZE	AZERBAIJAN&#xD;&#xA;51	FRA	FRANCE&#xD;&#xA;51	IRQ	IRAQ&#xD;&#xA;">
+    <Position X="3.208" Y="4.031" Height="1.073" Width="1.992" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;10	1	KENDİSİ&#xD;&#xA;10	2	EŞİ&#xD;&#xA;10	3	ÇOCUĞU&#xD;&#xA;10	4	ANNE-BABA&#xD;&#xA;10	5	DİĞER">
+    <Position X="5.76" Y="4.021" Height="1.042" Width="2.21" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;02	0	8&#xD;&#xA;02	1	18&#xD;&#xA;02	2	15&#xD;&#xA;02	3	0&#xD;&#xA;02	4	1&#xD;&#xA;02	5	0">
+    <Position X="8.281" Y="4.552" Height="1.219" Width="1.627" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;00	ACILSERVIS	 &#xD;&#xA;00	ADETSOR	1&#xD;&#xA;00	ADRESZRALN	0&#xD;&#xA;00	ALT_F1	NOT: Direkt coombs ">
+    <Position X="5.969" Y="6.135" Height="1.01" Width="2.388" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;53	01	YAPI KREDI POS&#xD;&#xA;53	02	GARANTI POS&#xD;&#xA;53	03	AKBANK POS">
+    <Position X="8.719" Y="7.062" Height="0.802" Width="2.179" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;07	0000	BİLİNMİYOR&#xD;&#xA;07	0001	DR. ARMAN ÇAKIROĞLU&#xD;&#xA;07	0002	DR. KİRKOR YANIK&#xD;&#xA;07	0003	DR. AVEDİS DEMİR&#xD;&#xA;07	0004	DR. MELİKON BALCI&#xD;&#xA;">
+    <Position X="0.5" Y="10.083" Height="1.125" Width="2.773" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;17	--	ICD 10 TEŞHİSLERİ&#xD;&#xA;17	00	BİLİNMİYOR&#xD;&#xA;17	01	DAHİLİYE - 1&#xD;&#xA;17	02	DAHİLİYE - 2&#xD;&#xA;">
+    <Position X="3.521" Y="11.646" Height="1.031" Width="2.481" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;01	00	MUAYENELER&#xD;&#xA;01	01	YATAK ÜCRETİ&#xD;&#xA;01	02	AMELİYAT&#xD;&#xA;01	03	ANESTEZİ&#xD;&#xA;01	04	KADIN DOĞUM&#xD;&#xA;">
+    <Position X="6.021" Y="10.479" Height="1.208" Width="2.398" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT			TANIMCODE	GRUPCODE&#xD;&#xA;30	00001	POLİKILİNİKLER		00		001&#xD;&#xA;30	00002	AYAKTAN TEDAVİ VAKA BAŞI	00		002&#xD;&#xA;30	00003	SEVKLİ KAMU ÇALIŞANI	00		003&#xD;&#xA;30	00004	SEVKSİZ EMS		00		004&#xD;&#xA;30	00005	KONSÜLT. SEVKLİ KAMU CAL	00		005&#xD;&#xA;">
+    <Position X="9.365" Y="9.677" Height="1.219" Width="4.554" />
+  </Comment>
+  <Comment CommentText="SLK	SLB	SLT&#xD;&#xA;15	00	RESMİ GAZETE FİYATLARI&#xD;&#xA;15	01	TTB FİYAT LİSTESİ&#xD;&#xA;15	02	HASTANE FİYAT LİSTESİ&#xD;&#xA;15	03	KUNARD FİYAT LİSTESİ&#xD;&#xA;">
+    <Position X="0.5" Y="12.385" Height="1" Width="2.825" />
+  </Comment>
+  <Comment CommentText="ID	Value&#xD;&#xA;1	Muayene ve Müdahale&#xD;&#xA;2	Patoloji&#xD;&#xA;3	Alçılar&#xD;&#xA;4	Diğer Hizmetler&#xD;&#xA;">
+    <Position X="9.427" Y="11.99" Height="1.042" Width="2.075" />
+  </Comment>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.City" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\General\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.OldLookUpBase">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAgAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\OldLookUpBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.Nationality" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\General\Nationality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.PatientRelation" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\General\PatientRelation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.General.VAT">
+    <Position X="8.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\General\VAT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.Depository" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\Depository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.Doctor">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAAAAAAABAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.FunctionGroup">
+    <Position X="6" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAACAAAAAggAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\FunctionGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FunctionGroupType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SubFunctionGroups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.POS" Collapsed="true">
+    <Position X="8.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\POS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.PriceList" Collapsed="true">
+    <Position X="1.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\PriceList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.Service">
+    <Position X="3.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAEgEAAAAQAAAAAAAAAAgQAABQAAAAACAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.SubFunctionGroup">
+    <Position X="9.25" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\SubFunctionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.SystemSetting" Collapsed="true">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\SystemSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.Warehouse" Collapsed="true">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\Warehouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.Special.FunctionGroupType" Collapsed="true">
+    <Position X="9.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Entities\LookUp\Special\FunctionGroupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

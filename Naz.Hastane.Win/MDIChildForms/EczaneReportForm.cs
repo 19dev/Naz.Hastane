@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private double parasiGeriDonecekToplam = 0;
         private double ucretsizlerToplam = 0;
         private double parasiGeriDonmeyenToplam = 0;
+        private double toplamStok = 0;
 
         public EczaneReportForm()
         {
@@ -84,6 +86,23 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.pgcParasiGeriDonmeyen.DataSource = EczaneParasiGeriDonmeyenRecords;
                 parasiGeriDonecekToplam = LookUpServices.GetTotal(EczaneParasiGeriDonecekRecords);
                 parasiGeriDonmeyenToplam = LookUpServices.GetTotal(EczaneParasiGeriDonmeyenRecords);
+
+                var ParasiGeriDonecekOzetRecords = (from p in EczaneParasiGeriDonecekRecords
+                                                  group p by p.Key2 into g
+                                                  orderby g.Key
+                                                  select new Key1ValueRecord { Key1 = g.Key, Value = g.Sum(p => p.Value) })
+                                                  .ToList();
+
+                gcParasiGeriDonecekOzet.DataSource = ParasiGeriDonecekOzetRecords;
+
+                var ParasiGeriDonmeyenOzetRecords = (from p in EczaneParasiGeriDonmeyenRecords
+                                                  group p by p.Key2 into g
+                                                  orderby g.Key
+                                                  select new Key1ValueRecord { Key1 = g.Key, Value = g.Sum(p => p.Value) })
+                                                  .ToList();
+                gcParasiGeriDönmeyenOzet.DataSource = ParasiGeriDonmeyenOzetRecords;
+
+                toplamStok = LookUpServices.GetTotal(LookUpServices.GetEczaneToplamStok());
             }
             finally
             {
@@ -101,13 +120,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             report.srptSiparisFaturalari.ReportSource.DataSource = this.gcSiparisFaturalari.DataSource;
             report.srptToplamSatis.ReportSource.DataSource = this.gcToplamSatis.DataSource;
             report.pgParasiGeriDonecek.DataSource = this.pgcParasiGeriDonecek.DataSource;
+            report.srptParasiGeriDonecekOzet.ReportSource.DataSource = this.gcParasiGeriDonecekOzet.DataSource;
             report.srptUcretsizler.ReportSource.DataSource = this.gcUcretsizler.DataSource;
             report.pgParasiGeriDonmeyen.DataSource = this.pgcParasiGeriDonmeyen.DataSource;
+            report.srptParasiGeriDonmeyenOzet.ReportSource.DataSource = this.gcParasiGeriDönmeyenOzet.DataSource;
 
             report.lblMeccaniler.Text = (ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
             report.lblEczanedenCikan.Text = (toplamSatisToplam + parasiGeriDonecekToplam + ucretsizlerToplam + parasiGeriDonmeyenToplam).ToString("n2");
             report.lblMeccanilerCiktiktanSonraKalan.Text = (toplamSatisToplam + parasiGeriDonecekToplam).ToString("n2");
-            
+            report.lblToplamStok.Text = (toplamStok).ToString("n2");
+
+            report.prmHeader.Value = String.Format("{0:dd.MM.yyyy}-{1:dd.MM.yyyy}", deStartDate.DateTime.Date, deEndDate.DateTime.Date);
+
             newForm.ShowReport(report);
         }
 

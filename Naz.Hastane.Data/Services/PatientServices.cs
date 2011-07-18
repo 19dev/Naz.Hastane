@@ -221,7 +221,10 @@ namespace Naz.Hastane.Data.Services
 
             float doctorQueueNo = LookUpServices.GetNewDoctorQueueNo(session, doctor);
 
-            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, doctorQueueNo);
+            patient.InsuranceCompany.SIRAID += 1;
+            session.Save(patient.InsuranceCompany);
+
+            PatientVisit pv = AddNewPatientVisit(session, user, patient, doctor, doctor.Service.Code, doctorQueueNo);
 
             PatientVisitRecord pvr = AddNewPatientVisitRecord(session, user, pv);
 
@@ -274,22 +277,19 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor, float queueNo)
+        public static PatientVisit AddNewPatientVisit(ISession session, User user, Patient patient, Doctor doctor, string serviceCode, float queueNo)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                patient.InsuranceCompany.SIRAID += 1;
-                session.Save(patient.InsuranceCompany);
-
                 PatientVisit pv = new PatientVisit();
                 pv.VisitNo = GetNewPatientVisitNo(session, patient);
                 pv.VisitDate = DateTime.Now.Date;
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
                 pv.Doctor = doctor;
-                pv.Servis = doctor.Service.Code;
+                pv.Servis = serviceCode;
                 pv.QueueNo = String.Format("{0:00000}",queueNo);
-                pv.VisitType = PatientCardType.Polyclinic.GetDescription();
+                pv.VisitType = PatientVisit.Polyclinic;
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
                 pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
                 pv.ProvisionNo = "";
@@ -303,11 +303,18 @@ namespace Naz.Hastane.Data.Services
                 pv.TABKODU = "02";
                 pv.Status = '1';
 
-                patient.AddPatientVisit(pv);
+                pv.Patient = patient;
+
                 session.Save(pv);
                 session.Flush();
                 transaction.Commit();
-                return pv;
+
+                PatientVisit pvNew = (from p in session.Query<PatientVisit>()
+                                             where p.Patient == pv.Patient && p.VisitNo == pv.VisitNo
+                                             select p).First();
+
+                patient.AddPatientVisit(pvNew);
+                return pvNew;
             }
         }
         public static PatientVisitRecord AddNewPatientVisitRecord(ISession session, User user, PatientVisit pv)
@@ -349,22 +356,23 @@ namespace Naz.Hastane.Data.Services
                 pvd.PatientVisit  = pv;
                 pvd.DetailNo      = GetNewPatientVisitDetailNo(session, pv);
 
-                string priceListCode;
-                if (pv.IsPolyclinicVisit())
-                    priceListCode = patient.InsuranceCompany.PFIYLIST;
-                else
-                    priceListCode = patient.InsuranceCompany.YFIYLIST;
+                string priceListCode = patient.InsuranceCompany.GetPriceList(pv.VisitType);
 
                 pvd.PatientPrice = product.GetPatientPrice(priceListCode);
                 pvd.CompanyPrice = product.GetCompanyPrice(priceListCode);
                 pvd.USER_ID       = user.USER_ID;
                 pvd.DATE_CREATE   = DateTime.Now;
 
-                pv.AddPatientVisitDetail(pvd);
                 session.Save(pvd);
                 session.Flush();
                 transaction.Commit();
-                return pvd;
+
+                PatientVisitDetail pvdNew = (from p in session.Query<PatientVisitDetail>()
+                                             where p.PatientVisit == pvd.PatientVisit && p.DetailNo == pvd.DetailNo
+                                             select p).First();
+
+                pv.AddPatientVisitDetail(pvdNew);
+                return pvdNew;
             }
 
         }
@@ -381,11 +389,16 @@ namespace Naz.Hastane.Data.Services
                     pvd.USER_ID = user.USER_ID;
                     pvd.DATE_CREATE = DateTime.Now;
 
-                    pv.AddPatientVisitDetail(pvd);
                     session.Save(pvd);
+                    session.Flush();
+                    transaction.Commit();
+
+                    PatientVisitDetail pvdNew = (from p in session.Query<PatientVisitDetail>()
+                           where p.PatientVisit == pvd.PatientVisit && p.DetailNo == pvd.DetailNo
+                           select p).First();
+
+                    pv.AddPatientVisitDetail(pvdNew);
                 }
-                session.Flush();
-                transaction.Commit();
                 UpdatePatientVisitFromDetails(session, user, pv);
                 return;
             }
@@ -631,7 +644,7 @@ namespace Naz.Hastane.Data.Services
         #endregion
 
         #region Invoice
-        public static IList<Patient> GetPatientsForInvoice(ISession session)
+        public static IList<Patient> GetPatientsForInvoice(ISession session, InsuranceCompany insuranceCompany, DateTime startDate, DateTime endDate)
         {
             IList<Patient> result = (from p in session.Query<Patient>()
                             join pv in session.Query<PatientVisit>() on p equals pv.Patient
@@ -639,9 +652,26 @@ namespace Naz.Hastane.Data.Services
                             where  pvd.MAKNO == null && pvd.AMAKNO == null
                             && pvd.ADET != 0
                             && pvd.PatientPrice != 0
-                            && pvd.TARIH >= new DateTime(2011, 3, 1)
+                            && pvd.TARIH >= startDate && pvd.TARIH <= endDate
+                            && ((insuranceCompany == null) || (p.InsuranceCompany == insuranceCompany))
                             orderby p.FirstName ascending, p.LastName ascending
                             select p
+                            )
+                .Distinct<Patient>().ToList<Patient>();
+            return result;
+        }
+
+        public static IList<Patient> GetPatientsForInvoice(ISession session, string patientNo)
+        {
+            IList<Patient> result = (from p in session.Query<Patient>()
+                                     join pv in session.Query<PatientVisit>() on p equals pv.Patient
+                                     join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                                     where pvd.MAKNO == null && pvd.AMAKNO == null
+                                     && pvd.ADET != 0
+                                     && pvd.PatientPrice != 0
+                                     && p.PatientNo == patientNo
+                                     orderby p.FirstName ascending, p.LastName ascending
+                                     select p
                             )
                 .Distinct<Patient>().ToList<Patient>();
             return result;
@@ -1092,7 +1122,7 @@ namespace Naz.Hastane.Data.Services
             return result;
         }
 
-        public static IList<PatientVisitDetailWithProduct> GetPatientVisitDetailsForInsuranceCompanyChange(ISession session, IList<PatientVisit> pvs, string priceListCode)
+        public static IList<PatientVisitDetailWithProduct> GetPatientVisitDetailsForInsuranceCompanyChange(ISession session, IList<PatientVisit> pvs, InsuranceCompany insuranceCompany)
         {
             IList<PatientVisitDetailWithProduct> pvdwps = new List<PatientVisitDetailWithProduct>();
             if (pvs.Count == 0)
@@ -1105,7 +1135,7 @@ namespace Naz.Hastane.Data.Services
                     pvdwps.Add(new PatientVisitDetailWithProduct
                     {
                         PatientVisitDetail = pvd,
-                        Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, priceListCode),
+                        Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, insuranceCompany.GetPriceList(pv.VisitType)),
                         Discount = 0
                     });
                 }

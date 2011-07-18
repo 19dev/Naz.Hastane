@@ -2,6 +2,7 @@
 
 namespace Naz.Hastane.Data.Entities.LookUp.General
 {
+    /// <remarks>tlkpvVAT</remarks>
     [Description("KDV")]
     public class VAT : OldLookUpBase
     {

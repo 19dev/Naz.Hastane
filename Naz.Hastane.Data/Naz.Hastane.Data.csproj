@@ -337,12 +337,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="Design\Accounting.cd" />
     <None Include="Design\Doctor.cd" />
     <None Include="Design\InsuranceCompany.cd" />
     <None Include="Design\Invoice.cd" />
     <None Include="Design\LookUpBase.cd" />
+    <None Include="Design\MedulaDiabet.cd" />
+    <None Include="Design\MedulaProvision.cd" />
+    <None Include="Design\MedulaReport.cd" />
+    <None Include="Design\OldLookUpBase.cd" />
     <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
+    <None Include="Design\Personel.cd" />
     <None Include="Design\Product.cd" />
     <None Include="Docs\TipdataTables.xlsx" />
     <None Include="Properties\Settings.settings">
@@ -352,6 +358,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\NHibernateCode.txt" />
+    <EmbeddedResource Include="Mappings\StoredProcedure\EczaneToplamStok.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaParasiPesin.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczanePoliklinikHastaUcretsiz.hbm.xml" />
     <EmbeddedResource Include="Mappings\StoredProcedure\EczaneYatanHastaEczanedenTahsilEdilmeyen.hbm.xml" />

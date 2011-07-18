@@ -1,14 +1,7 @@
-using System.Collections.Generic; 
-using System.Text; 
-using System; 
-
-
-namespace Naz.Hastane.Data.Entities {
-    
-    public class AdvancePaymentUsed {
-
-        public AdvancePaymentUsed() { }
-
+namespace Naz.Hastane.Data.Entities 
+{
+    public class AdvancePaymentUsed 
+    {
         public virtual AdvancePayment AdvancePayment { get; set; }
         //public virtual double AV_ID { get; set; }
         public virtual string FATURANO { get; set; }

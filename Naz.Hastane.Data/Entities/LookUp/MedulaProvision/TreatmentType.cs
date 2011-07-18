@@ -8,5 +8,6 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
     public class TreatmentType : LookUpBase
     {
         public static readonly string DefaultValue = "0";
+        public static readonly string PhysicalTherapy = "2";
     }
 }

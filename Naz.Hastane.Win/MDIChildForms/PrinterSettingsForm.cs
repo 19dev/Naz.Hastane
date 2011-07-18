@@ -34,6 +34,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lueNormalPrinter.EditValue = cs.Configs["Printer"].Get("NormalPrinter", "");
             this.lueNormalPrinterTray.Properties.DataSource = UIUtilities.GetPrinterTrays(lueVoucherPrinter.EditValue.ToString());
             this.lueNormalPrinterTray.EditValue = cs.Configs["Printer"].Get("NormalPrinterTray", "");
+
+            this.teInvoiceUser.Text = cs.Configs["User"].Get("InvoiceUser", "");
+            this.teInvoicePassword.Text = cs.Configs["User"].Get("InvoicePassword", "");
+            this.teVoucherUser.Text = cs.Configs["User"].Get("VoucherUser", "");
+            this.teVoucherPassword.Text = cs.Configs["User"].Get("VoucherPassword", "");
         }
 
         private void sbSave_Click(object sender, EventArgs e)
@@ -48,6 +53,12 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             cs.Configs["Printer"].Set("NormalPrinter", this.lueNormalPrinter.Text);
             cs.Configs["Printer"].Set("NormalPrinterTray", this.lueNormalPrinterTray.Text);
+
+            cs.Configs["User"].Set("InvoiceUser", this.teInvoiceUser.Text);
+            cs.Configs["User"].Set("InvoicePassword", this.teInvoicePassword.Text);
+
+            cs.Configs["User"].Set("VoucherUser", this.teVoucherUser.Text);
+            cs.Configs["User"].Set("VoucherPassword", this.teVoucherPassword.Text);
 
             cs.Save();
         }

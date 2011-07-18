@@ -65,6 +65,7 @@
             this.colDetailComment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetailPatientTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVAT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gcPatientVisits = new DevExpress.XtraGrid.GridControl();
             this.gvPatientVisits = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -79,7 +80,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -119,6 +119,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciVoucherNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teVoucherNo.Properties)).BeginInit();
@@ -159,7 +160,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -199,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciVoucherNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -252,6 +253,7 @@
             // 
             // luePOS
             // 
+            this.luePOS.EditValue = "";
             this.luePOS.Location = new System.Drawing.Point(504, 348);
             this.luePOS.Name = "luePOS";
             this.luePOS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -405,6 +407,7 @@
             // 
             // luePaymentType
             // 
+            this.luePaymentType.EditValue = "";
             this.luePaymentType.Location = new System.Drawing.Point(506, 324);
             this.luePaymentType.Name = "luePaymentType";
             this.luePaymentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -513,10 +516,10 @@
             // 
             // gcAdvancePayments
             // 
-            this.gcAdvancePayments.Location = new System.Drawing.Point(266, 22);
+            this.gcAdvancePayments.Location = new System.Drawing.Point(411, 426);
             this.gcAdvancePayments.MainView = this.gvAdvancePayments;
             this.gcAdvancePayments.Name = "gcAdvancePayments";
-            this.gcAdvancePayments.Size = new System.Drawing.Size(141, 153);
+            this.gcAdvancePayments.Size = new System.Drawing.Size(203, 113);
             this.gcAdvancePayments.TabIndex = 11;
             this.gcAdvancePayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvAdvancePayments});
@@ -574,7 +577,8 @@
             this.colDetailDate,
             this.colDetailComment,
             this.colDetailCount,
-            this.colDetailPatientTotal});
+            this.colDetailPatientTotal,
+            this.colVAT});
             this.gvPatientVisitDetails.GridControl = this.gcPatientVisitDetails;
             this.gvPatientVisitDetails.Name = "gvPatientVisitDetails";
             this.gvPatientVisitDetails.OptionsView.ShowGroupPanel = false;
@@ -586,6 +590,7 @@
             this.colPatientVisitDetailVisitNo.Name = "colPatientVisitDetailVisitNo";
             this.colPatientVisitDetailVisitNo.Visible = true;
             this.colPatientVisitDetailVisitNo.VisibleIndex = 0;
+            this.colPatientVisitDetailVisitNo.Width = 41;
             // 
             // colDetailNo
             // 
@@ -595,6 +600,7 @@
             this.colDetailNo.OptionsColumn.AllowEdit = false;
             this.colDetailNo.Visible = true;
             this.colDetailNo.VisibleIndex = 1;
+            this.colDetailNo.Width = 44;
             // 
             // colDetailDate
             // 
@@ -604,6 +610,7 @@
             this.colDetailDate.OptionsColumn.AllowEdit = false;
             this.colDetailDate.Visible = true;
             this.colDetailDate.VisibleIndex = 2;
+            this.colDetailDate.Width = 50;
             // 
             // colDetailComment
             // 
@@ -613,6 +620,7 @@
             this.colDetailComment.OptionsColumn.AllowEdit = false;
             this.colDetailComment.Visible = true;
             this.colDetailComment.VisibleIndex = 3;
+            this.colDetailComment.Width = 113;
             // 
             // colDetailCount
             // 
@@ -622,17 +630,28 @@
             this.colDetailCount.OptionsColumn.AllowEdit = false;
             this.colDetailCount.Visible = true;
             this.colDetailCount.VisibleIndex = 4;
+            this.colDetailCount.Width = 38;
             // 
             // colDetailPatientTotal
             // 
             this.colDetailPatientTotal.Caption = "Hasta Tutarı";
             this.colDetailPatientTotal.DisplayFormat.FormatString = "{0:#,##0.00}";
             this.colDetailPatientTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colDetailPatientTotal.FieldName = "SATISF";
+            this.colDetailPatientTotal.FieldName = "PatientPrice";
             this.colDetailPatientTotal.Name = "colDetailPatientTotal";
             this.colDetailPatientTotal.OptionsColumn.AllowEdit = false;
             this.colDetailPatientTotal.Visible = true;
             this.colDetailPatientTotal.VisibleIndex = 5;
+            this.colDetailPatientTotal.Width = 61;
+            // 
+            // colVAT
+            // 
+            this.colVAT.Caption = "KDV";
+            this.colVAT.FieldName = "KDV";
+            this.colVAT.Name = "colVAT";
+            this.colVAT.Visible = true;
+            this.colVAT.VisibleIndex = 6;
+            this.colVAT.Width = 36;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -646,7 +665,7 @@
             this.gcPatientVisits.Name = "gcPatientVisits";
             this.gcPatientVisits.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gcPatientVisits.Size = new System.Drawing.Size(256, 153);
+            this.gcPatientVisits.Size = new System.Drawing.Size(401, 153);
             this.gcPatientVisits.TabIndex = 4;
             this.gcPatientVisits.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisits});
@@ -670,6 +689,7 @@
             this.colVisitNo.OptionsColumn.AllowEdit = false;
             this.colVisitNo.Visible = true;
             this.colVisitNo.VisibleIndex = 0;
+            this.colVisitNo.Width = 48;
             // 
             // colDate
             // 
@@ -679,6 +699,7 @@
             this.colDate.OptionsColumn.AllowEdit = false;
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 1;
+            this.colDate.Width = 67;
             // 
             // colExitDate
             // 
@@ -688,6 +709,7 @@
             this.colExitDate.OptionsColumn.AllowEdit = false;
             this.colExitDate.Visible = true;
             this.colExitDate.VisibleIndex = 2;
+            this.colExitDate.Width = 67;
             // 
             // colPatientTotal
             // 
@@ -707,6 +729,9 @@
             // 
             // sbVoucher
             // 
+            this.sbVoucher.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sbVoucher.Appearance.Options.UseForeColor = true;
+            this.sbVoucher.Enabled = false;
             this.sbVoucher.Location = new System.Drawing.Point(771, 384);
             this.sbVoucher.Name = "sbVoucher";
             this.sbVoucher.Size = new System.Drawing.Size(179, 22);
@@ -723,9 +748,13 @@
             this.sbRefresh.StyleController = this.layoutControl1;
             this.sbRefresh.TabIndex = 8;
             this.sbRefresh.Text = "Yenile";
+            this.sbRefresh.Click += new System.EventHandler(this.sbRefresh_Click);
             // 
             // sbInvoice
             // 
+            this.sbInvoice.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.sbInvoice.Appearance.Options.UseForeColor = true;
+            this.sbInvoice.Enabled = false;
             this.sbInvoice.Location = new System.Drawing.Point(773, 226);
             this.sbInvoice.Name = "sbInvoice";
             this.sbInvoice.Size = new System.Drawing.Size(165, 22);
@@ -742,7 +771,6 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem4,
             this.layoutControlItem1,
-            this.layoutControlItem8,
             this.layoutControlItem6,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
@@ -757,21 +785,22 @@
             this.emptySpaceItem8,
             this.layoutControlItem2,
             this.lciVoucherNo,
-            this.emptySpaceItem9});
+            this.emptySpaceItem9,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4);
             this.layoutControlGroup1.Size = new System.Drawing.Size(956, 595);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(405, 404);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(612, 404);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(543, 133);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(336, 133);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -781,21 +810,10 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(260, 173);
+            this.layoutControlItem1.Size = new System.Drawing.Size(405, 173);
             this.layoutControlItem1.Text = "Kartlar";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(77, 13);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.gcAdvancePayments;
-            this.layoutControlItem8.CustomizationFormText = "Avanslar";
-            this.layoutControlItem8.Location = new System.Drawing.Point(260, 0);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(145, 173);
-            this.layoutControlItem8.Text = "Avanslar";
-            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(77, 13);
             // 
             // layoutControlItem6
             // 
@@ -810,6 +828,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 561);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -819,6 +838,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(62, 561);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -828,6 +848,7 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(233, 561);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -849,6 +870,7 @@
             // 
             // emptySpaceItem5
             // 
+            this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
             this.emptySpaceItem5.Location = new System.Drawing.Point(457, 561);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
@@ -1059,6 +1081,7 @@
             // 
             // emptySpaceItem10
             // 
+            this.emptySpaceItem10.AllowHotTrack = false;
             this.emptySpaceItem10.CustomizationFormText = "emptySpaceItem10";
             this.emptySpaceItem10.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
@@ -1090,6 +1113,7 @@
             // 
             // emptySpaceItem6
             // 
+            this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
             this.emptySpaceItem6.Location = new System.Drawing.Point(350, 122);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
@@ -1143,6 +1167,7 @@
             // 
             // emptySpaceItem7
             // 
+            this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
             this.emptySpaceItem7.Location = new System.Drawing.Point(350, 0);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
@@ -1184,6 +1209,7 @@
             // 
             // emptySpaceItem8
             // 
+            this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
             this.emptySpaceItem8.Location = new System.Drawing.Point(410, 537);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
@@ -1215,12 +1241,24 @@
             // 
             // emptySpaceItem9
             // 
+            this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
             this.emptySpaceItem9.Location = new System.Drawing.Point(405, 378);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
             this.emptySpaceItem9.Size = new System.Drawing.Size(179, 26);
             this.emptySpaceItem9.Text = "emptySpaceItem9";
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.gcAdvancePayments;
+            this.layoutControlItem8.CustomizationFormText = "Avanslar";
+            this.layoutControlItem8.Location = new System.Drawing.Point(405, 404);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(207, 133);
+            this.layoutControlItem8.Text = "Avanslar";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(77, 13);
             // 
             // InvoiceControl
             // 
@@ -1270,7 +1308,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -1310,6 +1347,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciVoucherNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1407,5 +1445,6 @@
         private DevExpress.XtraEditors.TextEdit teVoucherNo;
         private DevExpress.XtraLayout.LayoutControlItem lciVoucherNo;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
+        private DevExpress.XtraGrid.Columns.GridColumn colVAT;
     }
 }

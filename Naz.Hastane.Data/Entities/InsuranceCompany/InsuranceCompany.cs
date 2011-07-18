@@ -86,5 +86,13 @@ namespace Naz.Hastane.Data.Entities
         public virtual string VERNO { get; set; } // VERNO; length(20); 1
         public virtual string YETKILI { get; set; } // YETKILI; length(28); 1
         public virtual string YFIYLIST { get; set; } // YFIYLIST; length(2); 1
+
+        public virtual string GetPriceList(string patientVisitType)
+        {
+            if (patientVisitType == PatientVisit.Hospitalized)
+                return YFIYLIST;
+            else
+                return PFIYLIST;
+        }
     }
 }

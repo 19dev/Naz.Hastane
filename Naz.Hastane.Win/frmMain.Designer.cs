@@ -78,7 +78,7 @@ namespace Naz.Hastane.Win {
             this.iYeniSGKHastasi = new DevExpress.XtraBars.BarButtonItem();
             this.iSGKHastaAra = new DevExpress.XtraBars.BarButtonItem();
             this.iHastaAra = new DevExpress.XtraBars.BarButtonItem();
-            this.iSGKInvoiceVoucher = new DevExpress.XtraBars.BarButtonItem();
+            this.iInvoiceVoucher = new DevExpress.XtraBars.BarButtonItem();
             this.iBloodType = new DevExpress.XtraBars.BarButtonItem();
             this.iCity = new DevExpress.XtraBars.BarButtonItem();
             this.iDoctor = new DevExpress.XtraBars.BarButtonItem();
@@ -422,7 +422,7 @@ namespace Naz.Hastane.Win {
             this.iYeniSGKHastasi,
             this.iSGKHastaAra,
             this.iHastaAra,
-            this.iSGKInvoiceVoucher,
+            this.iInvoiceVoucher,
             this.iBloodType,
             this.iCity,
             this.iDoctor,
@@ -502,7 +502,7 @@ namespace Naz.Hastane.Win {
             this.iYeniPersonel});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 304;
+            this.rcMain.MaxItemId = 305;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -525,7 +525,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rbPersonel;
+            this.rcMain.SelectedPage = this.rpSGKPatients;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1068,12 +1068,12 @@ namespace Naz.Hastane.Win {
             this.iHastaAra.LargeImageIndex = 4;
             this.iHastaAra.Name = "iHastaAra";
             // 
-            // iSGKInvoiceVoucher
+            // iInvoiceVoucher
             // 
-            this.iSGKInvoiceVoucher.Caption = "SGK Fatura Makbuz";
-            this.iSGKInvoiceVoucher.CategoryGuid = new System.Guid("0d511733-cea9-49de-8348-66c767e5e503");
-            this.iSGKInvoiceVoucher.Id = 150;
-            this.iSGKInvoiceVoucher.Name = "iSGKInvoiceVoucher";
+            this.iInvoiceVoucher.Caption = "Fatura Makbuz Basýmý";
+            this.iInvoiceVoucher.CategoryGuid = new System.Guid("0d511733-cea9-49de-8348-66c767e5e503");
+            this.iInvoiceVoucher.Id = 150;
+            this.iInvoiceVoucher.Name = "iInvoiceVoucher";
             // 
             // iBloodType
             // 
@@ -1638,7 +1638,7 @@ namespace Naz.Hastane.Win {
             // 
             this.rpgSGK.ItemLinks.Add(this.iSGKHastaAra);
             this.rpgSGK.ItemLinks.Add(this.iYeniSGKHastasi);
-            this.rpgSGK.ItemLinks.Add(this.iSGKInvoiceVoucher);
+            this.rpgSGK.ItemLinks.Add(this.iInvoiceVoucher);
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
             this.rpgSGK.ItemLinks.Add(this.iDailyTellerReport);
             this.rpgSGK.Name = "rpgSGK";
@@ -2131,7 +2131,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iSGKHastaAra;
         private DevExpress.XtraBars.BarButtonItem iHastaAra;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDosya;
-        private DevExpress.XtraBars.BarButtonItem iSGKInvoiceVoucher;
+        private DevExpress.XtraBars.BarButtonItem iInvoiceVoucher;
         private DevExpress.XtraBars.BarButtonItem iBloodType;
         private DevExpress.XtraBars.BarButtonItem iCity;
         private DevExpress.XtraBars.BarButtonItem iDoctor;

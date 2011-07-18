@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.teRepeatNewPassword = new DevExpress.XtraEditors.TextEdit();
+            this.teNewPassword = new DevExpress.XtraEditors.TextEdit();
             this.sbCancel = new DevExpress.XtraEditors.SimpleButton();
             this.sbOK = new DevExpress.XtraEditors.SimpleButton();
             this.teUserPassword = new DevExpress.XtraEditors.TextEdit();
@@ -38,14 +40,14 @@
             this.lciUserPassword = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.teNewPassword = new DevExpress.XtraEditors.TextEdit();
             this.lciNewPassword = new DevExpress.XtraLayout.LayoutControlItem();
-            this.teRepeatNewPassword = new DevExpress.XtraEditors.TextEdit();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciRepeatNewPassword = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teRepeatNewPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teNewPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -53,11 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciUserPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teNewPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNewPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teRepeatNewPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRepeatNewPassword)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,13 +77,34 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // teRepeatNewPassword
+            // 
+            this.teRepeatNewPassword.Location = new System.Drawing.Point(74, 84);
+            this.teRepeatNewPassword.Name = "teRepeatNewPassword";
+            this.teRepeatNewPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.teRepeatNewPassword.Properties.PasswordChar = '*';
+            this.teRepeatNewPassword.Size = new System.Drawing.Size(218, 20);
+            this.teRepeatNewPassword.StyleController = this.layoutControl1;
+            this.teRepeatNewPassword.TabIndex = 7;
+            // 
+            // teNewPassword
+            // 
+            this.teNewPassword.EnterMoveNextControl = true;
+            this.teNewPassword.Location = new System.Drawing.Point(74, 60);
+            this.teNewPassword.Name = "teNewPassword";
+            this.teNewPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.teNewPassword.Properties.PasswordChar = '*';
+            this.teNewPassword.Size = new System.Drawing.Size(218, 20);
+            this.teNewPassword.StyleController = this.layoutControl1;
+            this.teNewPassword.TabIndex = 6;
+            // 
             // sbCancel
             // 
             this.sbCancel.Location = new System.Drawing.Point(154, 120);
             this.sbCancel.Name = "sbCancel";
             this.sbCancel.Size = new System.Drawing.Size(138, 22);
             this.sbCancel.StyleController = this.layoutControl1;
-            this.sbCancel.TabIndex = 7;
+            this.sbCancel.TabIndex = 9;
             this.sbCancel.Text = "İptal";
             this.sbCancel.Click += new System.EventHandler(this.sbCancel_Click);
             // 
@@ -93,14 +114,16 @@
             this.sbOK.Name = "sbOK";
             this.sbOK.Size = new System.Drawing.Size(138, 22);
             this.sbOK.StyleController = this.layoutControl1;
-            this.sbOK.TabIndex = 6;
+            this.sbOK.TabIndex = 8;
             this.sbOK.Text = "Tamam";
             this.sbOK.Click += new System.EventHandler(this.sbOK_Click);
             // 
             // teUserPassword
             // 
+            this.teUserPassword.EnterMoveNextControl = true;
             this.teUserPassword.Location = new System.Drawing.Point(74, 36);
             this.teUserPassword.Name = "teUserPassword";
+            this.teUserPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.teUserPassword.Properties.PasswordChar = '*';
             this.teUserPassword.Size = new System.Drawing.Size(218, 20);
             this.teUserPassword.StyleController = this.layoutControl1;
@@ -108,8 +131,10 @@
             // 
             // teUserName
             // 
+            this.teUserName.EnterMoveNextControl = true;
             this.teUserName.Location = new System.Drawing.Point(74, 12);
             this.teUserName.Name = "teUserName";
+            this.teUserName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.teUserName.Size = new System.Drawing.Size(218, 20);
             this.teUserName.StyleController = this.layoutControl1;
             this.teUserName.TabIndex = 4;
@@ -131,7 +156,6 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(304, 172);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -179,32 +203,15 @@
             this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(284, 12);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 134);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(284, 18);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // teNewPassword
-            // 
-            this.teNewPassword.Location = new System.Drawing.Point(74, 60);
-            this.teNewPassword.Name = "teNewPassword";
-            this.teNewPassword.Properties.PasswordChar = '*';
-            this.teNewPassword.Size = new System.Drawing.Size(218, 20);
-            this.teNewPassword.StyleController = this.layoutControl1;
-            this.teNewPassword.TabIndex = 8;
             // 
             // lciNewPassword
             // 
@@ -216,14 +223,15 @@
             this.lciNewPassword.Text = "Yeni Şifresi";
             this.lciNewPassword.TextSize = new System.Drawing.Size(58, 13);
             // 
-            // teRepeatNewPassword
+            // emptySpaceItem1
             // 
-            this.teRepeatNewPassword.Location = new System.Drawing.Point(74, 84);
-            this.teRepeatNewPassword.Name = "teRepeatNewPassword";
-            this.teRepeatNewPassword.Properties.PasswordChar = '*';
-            this.teRepeatNewPassword.Size = new System.Drawing.Size(218, 20);
-            this.teRepeatNewPassword.StyleController = this.layoutControl1;
-            this.teRepeatNewPassword.TabIndex = 9;
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(284, 12);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciRepeatNewPassword
             // 
@@ -237,6 +245,7 @@
             // 
             // PasswordChangeForm
             // 
+            this.AcceptButton = this.sbOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 172);
@@ -245,6 +254,8 @@
             this.Text = "Şifre Değiştirme Ekranı";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.teRepeatNewPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teNewPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -252,11 +263,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciUserPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teNewPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNewPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teRepeatNewPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRepeatNewPassword)).EndInit();
             this.ResumeLayout(false);
 

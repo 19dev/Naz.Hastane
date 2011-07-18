@@ -42,10 +42,16 @@ namespace Naz.Hastane.Data.Entities
         {
             get
             {
-                if (Doctor == null)
-                    return "";
-                else
-                    return Doctor.Value;
+                string result = "";
+                try
+                {
+                    result = Doctor.Value;
+                }
+                catch
+                {
+                    result = "";
+                }
+                return result;
             }
         }
         /// <summary>
@@ -56,10 +62,16 @@ namespace Naz.Hastane.Data.Entities
         {
             get
             {
-                if (Doctor2 == null)
-                    return "";
-                else
-                    return Doctor2.Value;
+                string result = "";
+                try
+                {
+                    result = Doctor2.Value;
+                }
+                catch
+                {
+                    result = "";
+                }
+                return result;
             }
         }
 

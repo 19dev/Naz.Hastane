@@ -2,6 +2,7 @@
 
 namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    /// <remarks>tlkpvDoctor</remarks>
     [Description("Doktor Tanımları")]
     public class Doctor : OldLookUpBase
     {

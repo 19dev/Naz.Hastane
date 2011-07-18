@@ -14,7 +14,7 @@ namespace Naz.Hastane.Data.Mappings.StoredProcedure
             Id(x => x.RowNumber).Column("RowNumber");
 
             Map(x => x.OdemeSekli).Column("OdemeSekli");
-            Map(x => x.Tarih).Column("Tarih");
+            Map(x => x.Tarih).Column("FTARIH");
             Map(x => x.TCKIMLIKNO).Column("TCKIMLIKNO");
             Map(x => x.HesapKodu).Column("HesapKodu");
             Map(x => x.Aciklama).Column("Aciklama");

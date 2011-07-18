@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
+    /// <remarks>tlkpFunctionGroupType</remarks>
     [Description("İşlem Grubu Tipi")]
     public class FunctionGroupType
     {

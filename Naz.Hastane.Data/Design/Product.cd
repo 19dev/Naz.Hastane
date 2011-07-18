@@ -3,7 +3,7 @@
   <Class Name="Naz.Hastane.Data.Entities.Product">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CPT//w8ALgb8//8jhmP/r/8NyYEBAYAAARQAApX4HxA=</HashCode>
+      <HashCode>CPT//48ALgb8//8nhmP/r/8NyYEBAYAAARQAApX4HxA=</HashCode>
       <FileName>Entities\Product\Product.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.ProductOtherCode">
-    <Position X="9" Y="3.25" Width="1.75" />
+    <Position X="11" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAACAAAIAAAAAAAgAAACAAEgAAAEIAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Product\ProductOtherCode.cs</FileName>
@@ -42,5 +42,33 @@
       <FileName>Entities\Product\ProductOtherName.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Naz.Hastane.Data.Entities.SGKAutoExamination" Collapsed="true">
+    <Position X="9" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product\SGKAutoExamination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.SGKAutoExaminationBase" Collapsed="true">
+    <Position X="9" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product\SGKAutoExaminationBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naz.Hastane.Data.Entities.SGKAutoExaminationSameDay" Collapsed="true">
+    <Position X="11.25" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product\SGKAutoExaminationSameDay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Naz.Hastane.Data.Entities.PatientContributionValues">
+    <Position X="11.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product\SGKAutoExaminationBase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

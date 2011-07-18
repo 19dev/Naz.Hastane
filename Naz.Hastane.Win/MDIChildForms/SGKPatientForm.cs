@@ -27,7 +27,23 @@ namespace Naz.Hastane.Win.MDIChildForms
     {
         private Patient _Patient = null;
         private frmMain _MainForm;
- 
+
+        private void RefreshPatientBalance()
+        {
+            this.patientBalanceControl.RefreshView();
+            if (this.patientBalanceControl.Balance < 0)
+            {
+                this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Red;
+                this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Red;
+                this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Red;
+            }
+            else
+            {
+                this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Black;
+                this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Black;
+                this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Black;
+            }
+        }
         public Patient Patient
         {
             get { return _Patient; }
@@ -37,18 +53,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     _Patient = value;
                     this.patientBalanceControl.Patient = _Patient;
-                    if (this.patientBalanceControl.Balance < 0)
-                    {
-                        this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Red;
-                        this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Red;
-                        this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Red;
-                    }
-                    else
-                    {
-                        this.lcgBorcAlacak.AppearanceTabPage.Header.ForeColor = Color.Black;
-                        this.lcgBorcAlacak.AppearanceTabPage.HeaderActive.ForeColor = Color.Black;
-                        this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Black;
-                    }
+                    RefreshPatientBalance();
                 }
             }
         }
@@ -82,8 +87,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
             this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
-            this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
-            this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
+            //this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue; // Hasta'dan alıyor
+            //this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue; // Hasta'dan alıyor
             this.medulaSorgu.lueBranchCode.EditValue = BranchCode.DefaultValue;
             this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
             this.medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
@@ -300,9 +305,9 @@ namespace Naz.Hastane.Win.MDIChildForms
                 _Doctor = frm.Doctor;
                 currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
                 RefreshGrid();
-                //XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CallMedulaProvision();
             }
+            SavePatient();
         }
 
         private bool IsNewPolyclinicOK(Doctor doctor)
@@ -345,7 +350,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             if (currentPatientVisit == null)
             {
-                XtraMessageBox.Show("Lütfen Bir Ziytaret Kartı Seçiniz!", "Medula İşlemleri");
+                XtraMessageBox.Show("Lütfen Bir Ziyaret Kartı Seçiniz!", "Medula İşlemleri");
                 return;
             }
             if (!String.IsNullOrWhiteSpace(this.currentPatientVisit.TAKIPNO))
@@ -383,7 +388,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (String.IsNullOrWhiteSpace(this.medulaSorgu.teRelatedFollowUpNo.Text))
                 this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
 
-            this.medulaSorgu.CallMedula(this.teTCID.Text);
+            this.medulaSorgu.CallMedula(this.teTCID.Text, currentPatientVisit.VisitDate);
 
         }
 
@@ -420,6 +425,10 @@ namespace Naz.Hastane.Win.MDIChildForms
                         {
                             PatientServices.UpdatePatientRecordsFromMedula(Session, UIUtilities.CurrentUser, this.Patient, currentPatientVisit, e.Result);
                             RefreshGrid();
+
+                            // Reset the values to normal
+                            this.medulaSorgu.teRelatedFollowUpNo.Text = "";
+                            this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
                         }
                     }
                     else if (e.Result.SonucKodu == "1163")
@@ -503,6 +512,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             double VATPercent = 0;
             double Payment = 0;
 
+            if (String.IsNullOrWhiteSpace(NewTellerInvoiceNo))
+            {
+                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                return;
+            }
+
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
             PatientVisitDetail pvd = invoicePVD;
             if (pvd != null)
@@ -528,6 +543,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     );
                 invoicePVD = null;
                 this.teInvoiceNo.Text = "";
+                RefreshPatientBalance();
             }
         }
         private void sbInvoice_Click(object sender, EventArgs e)
@@ -542,6 +558,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             string POSType = null;
 
             double ProductTotal = 0;
+
+            if (String.IsNullOrWhiteSpace(NewTellerVoucherNo))
+            {
+                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                return;
+            }
 
             IList<PatientVisitDetail> pvds = new List<PatientVisitDetail>();
             PatientVisitDetail pvd = voucherPVD;
@@ -558,6 +580,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     );
                 voucherPVD = null;
                 this.teVoucherNo.Text = "";
+                RefreshPatientBalance();
             }
         }
         private void sbVoucher_Click(object sender, EventArgs e)
@@ -646,6 +669,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
             this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
             this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
+            RefreshPatientBalance();
         }
 
         private void gvPatientVisitDetail_Click(object sender, EventArgs e)
@@ -745,6 +769,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbAddPatientVisitDetail_Click(object sender, EventArgs e)
         {
             AddPatientVisitDetail();
+            SavePatient();
         }
 
         private void AddPatientVisitDetail()
@@ -754,7 +779,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 SelectFunctionForm frm = new SelectFunctionForm();
                 frm.PatientVisit = currentPatientVisit;
-                frm.PriceListCode = Patient.InsuranceCompany.YFIYLIST;
+                frm.PriceListCode = Patient.InsuranceCompany.GetPriceList(currentPatientVisit.VisitType);
                 frm.ShowDialog();
 
                 if (frm.IsSelected)
@@ -865,6 +890,50 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void AddEmergencyRecord()
         {
         }
+
+        /// <summary>
+        /// TODO Add generalized therapy parameters
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sbAddTreatmentCard_Click(object sender, EventArgs e)
+        {
+            //SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
+            //frm.ShowDialog();
+            PatientVisit pv = GetRelatedPTPatientVisit();
+
+            if (pv != null)
+            {
+                _Doctor = pv.Doctor;
+                currentPatientVisit = PatientServices.AddNewPatientVisit(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, _Doctor.Service.Code, 0);
+                PatientVisitRecord pvr = PatientServices.AddNewPatientVisitRecord(Session, UIUtilities.CurrentUser, currentPatientVisit);
+                RefreshGrid();
+                this.PatientVisitControl.gvPatientVisit.FocusedRowHandle = 0;
+                currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+                AddPatientVisitDetail();
+                this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.PhysicalTherapy;
+                this.medulaSorgu.teRelatedFollowUpNo.Text = pv.TAKIPNO;
+                CallMedulaProvision();
+            }
+            else
+                XtraMessageBox.Show("10 Gün İçinde Yapılmış Fizik Tedavi Polikliniği Bulunamadı!", "Fizik Tedavi İşlemleri");
+
+
+        }
+        private PatientVisit GetRelatedPTPatientVisit()
+        {
+            DateTime endDate = DateTime.Today.AddDays(-12);
+
+            for (int i = 0; i <= this.PatientVisitControl.gvPatientVisit.RowCount; i++)
+            {
+                PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetRow(i) as PatientVisit;
+                if (pv != null && pv.VisitDate.Date >= endDate && pv.Servis == "23")
+                    //if (pv != null && pv.VisitDate.Date >= endDate && pv.Servis == "5018")
+                    return pv;
+            }
+            return null;
+        }
+
 
     }
 }
