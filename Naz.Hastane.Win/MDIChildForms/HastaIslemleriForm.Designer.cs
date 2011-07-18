@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvIslemler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAKOD = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -629,10 +629,10 @@
             // 
             // gcIslemler
             // 
-            gridLevelNode2.LevelTemplate = this.gvIslemler;
-            gridLevelNode2.RelationName = "HastaZiyaretIslemlers";
+            gridLevelNode1.LevelTemplate = this.gvIslemler;
+            gridLevelNode1.RelationName = "HastaZiyaretIslemlers";
             this.gcIslemler.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcIslemler.Location = new System.Drawing.Point(12, 380);
             this.gcIslemler.MainView = this.gvZiyaret;
             this.gcIslemler.Name = "gcIslemler";
@@ -2115,8 +2115,8 @@
             this.tbcHastaBilgileri.CustomizationFormText = "Patient Bilgileri";
             this.tbcHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.tbcHastaBilgileri.Name = "tbcHastaBilgileri";
-            this.tbcHastaBilgileri.SelectedTabPage = this.lcgHastaBilgileri;
-            this.tbcHastaBilgileri.SelectedTabPageIndex = 0;
+            this.tbcHastaBilgileri.SelectedTabPage = this.lcgKritikTibbiBilgiler;
+            this.tbcHastaBilgileri.SelectedTabPageIndex = 3;
             this.tbcHastaBilgileri.Size = new System.Drawing.Size(944, 352);
             this.tbcHastaBilgileri.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgHastaBilgileri,
@@ -3025,6 +3025,7 @@
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 75);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
@@ -3057,6 +3058,7 @@
             // 
             // emptySpaceItem5
             // 
+            this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 23);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
@@ -3066,6 +3068,7 @@
             // 
             // emptySpaceItem6
             // 
+            this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
             this.emptySpaceItem6.Location = new System.Drawing.Point(0, 196);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
@@ -3158,6 +3161,7 @@
             // 
             // emptySpaceItem7
             // 
+            this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
             this.emptySpaceItem7.Location = new System.Drawing.Point(415, 0);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
@@ -3250,6 +3254,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 54);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -3331,6 +3336,7 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 292);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -3340,6 +3346,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 147);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -3349,6 +3356,7 @@
             // 
             // emptySpaceItem8
             // 
+            this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
@@ -3505,6 +3513,7 @@
             // 
             // emptySpaceItem9
             // 
+            this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
             this.emptySpaceItem9.Location = new System.Drawing.Point(0, 288);
             this.emptySpaceItem9.Name = "emptySpaceItem9";

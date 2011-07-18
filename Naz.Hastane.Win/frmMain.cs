@@ -753,12 +753,12 @@ namespace Naz.Hastane.Win {
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenPersonnel(int aPersonnelNo)
+        public void OpenPersonnel(int aPersonnelID)
         {
-            Personel personnel = PersonnelServices.GetPersonnelByID(aPersonnelNo);
+            Personel personnel = PersonnelServices.GetPersonnelByID(aPersonnelID);
             if (personnel != null)
             {
-                PersonelForm newForm = new PersonelForm(aPersonnelNo);
+                PersonelForm newForm = new PersonelForm(aPersonnelID);
                 string name = personnel.Ad + " " + personnel.Soyad;
                 newForm.Text = name;
                 ShowNewDocument(newForm);

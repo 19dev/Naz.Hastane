@@ -556,7 +556,7 @@
             this.lciHastaAdeti.TextToControlDistance = 0;
             this.lciHastaAdeti.TextVisible = false;
             // 
-            // SGKFindPatientForm
+            // FindPatientForm
             // 
             this.AcceptButton = this.sbSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,7 +564,7 @@
             this.CancelButton = this.sbClose;
             this.ClientSize = new System.Drawing.Size(954, 638);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "SGKFindPatientForm";
+            this.Name = "FindPatientForm";
             this.Text = "Hasta Arama Ekranı";
             this.Shown += new System.EventHandler(this.SGKFindPatientForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

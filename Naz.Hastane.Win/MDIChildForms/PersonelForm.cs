@@ -78,13 +78,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitBindings();            
         }
 
-        public static Personel GetPersonnelByID(string aPersonnelNo, ISession session)
-        {
-            if (String.IsNullOrWhiteSpace(aPersonnelNo))
-                return null;
+        //public static Personel GetPersonnelByID(string aPersonnelNo, ISession session)
+        //{
+        //    if (String.IsNullOrWhiteSpace(aPersonnelNo))
+        //        return null;
 
-            return session.Get<Personel>(aPersonnelNo);
-        }
+        //    return session.Get<Personel>(aPersonnelNo);
+        //}
         
         private void InitBindings()
         {
@@ -109,7 +109,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void LoadLookUps()
         {            
             UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Value");
-            UIUtilities.BindLookUpEdit(this.lueBloodType, LookUpServices.BloodTypes, displayMember: "Value", valueMember: "Value"); 
+            UIUtilities.BindLookUpEdit(this.lueBloodType, LookUpServices.BloodTypes); //, displayMember: "Value", valueMember: "Value"); 
         }
 
         private void sbSavePersonnel_Click(object sender, EventArgs e)
@@ -140,6 +140,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 else
                 {
                     PersonnelServices.SavePersonnel(Session, Personnel);
+                    XtraMessageBox.Show("Personel Kayıt Edilmiştir", "Personel Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception error)

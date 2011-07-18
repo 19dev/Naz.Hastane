@@ -80,6 +80,8 @@ namespace Naz.Hastane.Data.Services
 
         public static Personel GetPersonnelByID(int aPersonnelNo, ISession session)
         {
+            if (aPersonnelNo == 0)
+                return null;
             //if (String.IsNullOrWhiteSpace(aPersonnelNo))
             //    return null;
 
@@ -145,7 +147,7 @@ namespace Naz.Hastane.Data.Services
             personnel.Ad = "";
             personnel.Soyad = "";
             personnel.TCID = "";
-            personnel.Cinsiyet = 1; //CINSIYETI 1:Male, 2:Female
+            personnel.Cinsiyet = "1"; //CINSIYETI 1:Male, 2:Female
             personnel.KanGrubu = 8; //KANGRUBU
             personnel.EvAdresi = "";
             personnel.Mahalle = "";

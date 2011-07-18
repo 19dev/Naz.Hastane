@@ -30,27 +30,27 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void bntSelect_Click(object sender, EventArgs e)
         {
-            //OpenDetail();
+            OpenDetail();
         }
 
-        //private void OpenDetail()
-        //{
-        //    if (gridView1.GetFocusedRow() != null)
-        //    {
-        //        Cursor.Current = Cursors.WaitCursor;
+        private void OpenDetail()
+        {
+            if (gridView1.GetFocusedRow() != null)
+            {
+                Cursor.Current = Cursors.WaitCursor;
 
-        //        try
-        //        {
-        //            string patientNo;
-        //            patientNo = gridView1.GetFocusedRowCellDisplayText("PatientNo");
-        //            (this.MdiParent as frmMain).OpenSGKPatient(patientNo);
-        //        }
-        //        finally
-        //        {
-        //            Cursor.Current = Cursors.Default;
-        //        }
-        //    }
-        //}
+                try
+                {
+                    string personnelID;
+                    personnelID = gridView1.GetFocusedRowCellDisplayText("ID");
+                    (this.MdiParent as frmMain).OpenPersonnel(Convert.ToInt32(personnelID));
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+            }
+        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -77,7 +77,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     IList<Personel> personnels = PersonnelServices.GetByWhere(criteriaString);
                     //this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                    //this.gridHastaArama.DataSource = patients;
+                    this.gridPersonelArama.DataSource = personnels;
                     if (personnels.Count == 1)
                     {
                         (this.MdiParent as frmMain).OpenPersonnel(personnels[0].ID);
@@ -86,7 +86,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     {
                         if (XtraMessageBox.Show("Bu Kriterlerle Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            //(this.MdiParent as frmMain).OpenNewPersonnel();
+                            (this.MdiParent as frmMain).OpenNewPersonnel();
                         }
                     }
                 }
@@ -185,6 +185,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridPersonelArama_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            OpenDetail();
         }
 
         //private void SGKFindPatientForm_Shown(object sender, EventArgs e)

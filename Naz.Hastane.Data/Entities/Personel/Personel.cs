@@ -13,7 +13,8 @@ namespace Naz.Hastane.Data.Entities
         public virtual string Ad { get; set; }
         public virtual string Soyad { get; set; }
         public virtual string TCID { get; set; }
-        public virtual long Cinsiyet { get; set; }
+        //public virtual long Cinsiyet { get; set; }
+        public virtual string Cinsiyet { get; set; }
         public virtual int KanGrubu { get; set; }
         public virtual string EvAdresi { get; set; }
         public virtual string Mahalle { get; set; }

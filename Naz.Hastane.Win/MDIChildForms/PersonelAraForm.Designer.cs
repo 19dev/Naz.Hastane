@@ -36,17 +36,13 @@
             this.teLastName = new DevExpress.XtraEditors.TextEdit();
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.gridHastaArama = new DevExpress.XtraGrid.GridControl();
+            this.gridPersonelArama = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKNR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBabaAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTCKimlikNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDogumYeri = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDogumTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tePersonnelNo = new DevExpress.XtraEditors.TextEdit();
             this.teTCId = new DevExpress.XtraEditors.TextEdit();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
@@ -70,7 +66,7 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHastaArama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).BeginInit();
@@ -101,7 +97,7 @@
             this.layoutControl1.Controls.Add(this.teLastName);
             this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Controls.Add(this.sbSearch);
-            this.layoutControl1.Controls.Add(this.gridHastaArama);
+            this.layoutControl1.Controls.Add(this.gridPersonelArama);
             this.layoutControl1.Controls.Add(this.tePersonnelNo);
             this.layoutControl1.Controls.Add(this.teTCId);
             this.layoutControl1.Controls.Add(this.sbSelect);
@@ -184,38 +180,40 @@
             this.sbSearch.Text = "Ara";
             this.sbSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // gridHastaArama
+            // gridPersonelArama
             // 
-            this.gridHastaArama.Location = new System.Drawing.Point(12, 130);
-            this.gridHastaArama.MainView = this.gridView1;
-            this.gridHastaArama.Name = "gridHastaArama";
-            this.gridHastaArama.Size = new System.Drawing.Size(930, 479);
-            this.gridHastaArama.TabIndex = 11;
-            this.gridHastaArama.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridPersonelArama.Location = new System.Drawing.Point(12, 130);
+            this.gridPersonelArama.MainView = this.gridView1;
+            this.gridPersonelArama.Name = "gridPersonelArama";
+            this.gridPersonelArama.Size = new System.Drawing.Size(930, 479);
+            this.gridPersonelArama.TabIndex = 11;
+            this.gridPersonelArama.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            //this.gridHastaArama.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridHastaArama_MouseDoubleClick);
+            this.gridPersonelArama.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridPersonelArama_MouseDoubleClick);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
             this.colKNR,
             this.colSoyadi,
             this.colAdi,
-            this.colBabaAdi,
-            this.colTCKimlikNo,
-            this.colDogumYeri,
-            this.colDogumTarihi,
-            this.colDurum,
-            this.colKT});
-            this.gridView1.GridControl = this.gridHastaArama;
+            this.colTCKimlikNo});
+            this.gridView1.GridControl = this.gridPersonelArama;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "ID";
+            this.gridColumn1.FieldName = "ID";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
             // colKNR
             // 
-            this.colKNR.Caption = "Hasta No";
-            this.colKNR.FieldName = "PatientNo";
+            this.colKNR.Caption = "Personel No";
+            this.colKNR.FieldName = "PersonelNo";
             this.colKNR.Name = "colKNR";
             this.colKNR.Visible = true;
             this.colKNR.VisibleIndex = 0;
@@ -223,7 +221,7 @@
             // colSoyadi
             // 
             this.colSoyadi.Caption = "Soyadı";
-            this.colSoyadi.FieldName = "LastName";
+            this.colSoyadi.FieldName = "Soyad";
             this.colSoyadi.Name = "colSoyadi";
             this.colSoyadi.Visible = true;
             this.colSoyadi.VisibleIndex = 1;
@@ -231,57 +229,18 @@
             // colAdi
             // 
             this.colAdi.Caption = "Adı";
-            this.colAdi.FieldName = "FirstName";
+            this.colAdi.FieldName = "Ad";
             this.colAdi.Name = "colAdi";
             this.colAdi.Visible = true;
             this.colAdi.VisibleIndex = 2;
             // 
-            // colBabaAdi
-            // 
-            this.colBabaAdi.Caption = "Baba Adı";
-            this.colBabaAdi.FieldName = "FatherName";
-            this.colBabaAdi.Name = "colBabaAdi";
-            this.colBabaAdi.Visible = true;
-            this.colBabaAdi.VisibleIndex = 3;
-            // 
             // colTCKimlikNo
             // 
             this.colTCKimlikNo.Caption = "T.C. Kimlik No";
-            this.colTCKimlikNo.FieldName = "TCId";
+            this.colTCKimlikNo.FieldName = "TCID";
             this.colTCKimlikNo.Name = "colTCKimlikNo";
             this.colTCKimlikNo.Visible = true;
-            this.colTCKimlikNo.VisibleIndex = 4;
-            // 
-            // colDogumYeri
-            // 
-            this.colDogumYeri.Caption = "Doğum Yeri";
-            this.colDogumYeri.FieldName = "BirthPlace";
-            this.colDogumYeri.Name = "colDogumYeri";
-            this.colDogumYeri.Visible = true;
-            this.colDogumYeri.VisibleIndex = 5;
-            // 
-            // colDogumTarihi
-            // 
-            this.colDogumTarihi.Caption = "Doğum Tarihi";
-            this.colDogumTarihi.FieldName = "BirthDate";
-            this.colDogumTarihi.Name = "colDogumTarihi";
-            this.colDogumTarihi.Visible = true;
-            this.colDogumTarihi.VisibleIndex = 6;
-            // 
-            // colDurum
-            // 
-            this.colDurum.Caption = "Durum";
-            this.colDurum.FieldName = "Status";
-            this.colDurum.Name = "colDurum";
-            this.colDurum.Visible = true;
-            this.colDurum.VisibleIndex = 7;
-            // 
-            // colKT
-            // 
-            this.colKT.Caption = "K.T.";
-            this.colKT.Name = "colKT";
-            this.colKT.Visible = true;
-            this.colKT.VisibleIndex = 8;
+            this.colTCKimlikNo.VisibleIndex = 3;
             // 
             // tePersonnelNo
             // 
@@ -331,7 +290,7 @@
             // 
             // lciBulunanHastalar
             // 
-            this.lciBulunanHastalar.Control = this.gridHastaArama;
+            this.lciBulunanHastalar.Control = this.gridPersonelArama;
             this.lciBulunanHastalar.CustomizationFormText = "Bulunan Personels";
             this.lciBulunanHastalar.Location = new System.Drawing.Point(0, 102);
             this.lciBulunanHastalar.Name = "lciBulunanHastalar";
@@ -514,12 +473,11 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "PersonelAraForm";
             this.Text = "Personel Arama Ekranı";
-            //this.Shown += new System.EventHandler(this.SGKFindPatientForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHastaArama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).EndInit();
@@ -546,7 +504,7 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridHastaArama;
+        private DevExpress.XtraGrid.GridControl gridPersonelArama;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton sbSearch;
         private DevExpress.XtraEditors.TextEdit tePersonnelNo;
@@ -572,16 +530,12 @@
         private DevExpress.XtraLayout.LayoutControlItem lciClean;
         private DevExpress.XtraGrid.Columns.GridColumn colSoyadi;
         private DevExpress.XtraGrid.Columns.GridColumn colAdi;
-        private DevExpress.XtraGrid.Columns.GridColumn colBabaAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colTCKimlikNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colDogumYeri;
-        private DevExpress.XtraGrid.Columns.GridColumn colDogumTarihi;
-        private DevExpress.XtraGrid.Columns.GridColumn colDurum;
-        private DevExpress.XtraGrid.Columns.GridColumn colKT;
         private DevExpress.XtraEditors.LabelControl lcHastaAdeti;
         private DevExpress.XtraLayout.LayoutControlItem lciHastaAdeti;
         private DevExpress.XtraEditors.SimpleButton sbNew;
         private DevExpress.XtraLayout.LayoutControlItem lciNew;
         private DevExpress.XtraGrid.Columns.GridColumn colKNR;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }
