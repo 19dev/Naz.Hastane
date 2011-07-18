@@ -348,6 +348,7 @@
     <None Include="Design\OldLookUpBase.cd" />
     <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
+    <None Include="Design\Personel.cd" />
     <None Include="Design\Product.cd" />
     <None Include="Docs\TipdataTables.xlsx" />
     <None Include="Properties\Settings.settings">
