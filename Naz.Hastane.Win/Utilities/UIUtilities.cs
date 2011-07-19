@@ -96,6 +96,11 @@ namespace Naz.Hastane.Win
                     string appPath = Application.StartupPath;
                     appPath = Path.Combine(appPath, "Naz.Hastane.ini");
                     _Configuration = new IniConfigSource(appPath);
+                    if (_Configuration.Configs["User"] == null)
+                    {
+                        _Configuration.AddConfig("User");
+                        _Configuration.Save();
+                    }
                     
                 }
                 return _Configuration;
@@ -232,7 +237,7 @@ namespace Naz.Hastane.Win
                 rpt.prmTime.Value = DateTime.Now;
                 rpt.prmTotal.Value = paymentTotal;
                 rpt.prmTotalText.Value = Helpers.GetMoneyToTrString(paymentTotal.ToString());
-                rpt.prmUserID.Value = UIUtilities.CurrentUser.USER_ID;
+                rpt.prmUserID.Value = GetVoucherUser().USER_ID;
                 rpt.prmVoucherNo.Value = tellerVoucherNo;
 
                 CurrentPrinter = ConfigurationSource.Configs["Printer"].Get("VoucherPrinter", "");
