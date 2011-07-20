@@ -213,6 +213,17 @@ namespace Naz.Hastane.Win
                 return user;
         }
 
+        /// <summary>
+        /// Fatura Basımı
+        /// </summary>
+        /// <param name="session"></param>
+        /// <param name="patient"></param>
+        /// <param name="pvds"></param>
+        /// <param name="paymentType"></param>
+        /// <param name="POSType"></param>
+        /// <param name="paymentTotal"></param>
+        /// <param name="tellerVoucherNo"></param>
+        /// <param name="directPrint"></param>
         public static void PrintVoucher(ISession session, Patient patient, IList<PatientVisitDetail> pvds,
             string paymentType, string POSType,
             double paymentTotal, string tellerVoucherNo, bool directPrint)
