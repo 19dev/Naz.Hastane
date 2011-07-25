@@ -16,6 +16,7 @@ using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using System.Drawing;
 using NHibernate;
 using Naz.Hastane.Data.DTO;
+using DevExpress.LookAndFeel;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -26,7 +27,6 @@ namespace Naz.Hastane.Win.MDIChildForms
     public partial class SGKPatientForm : MDIChildForm
     {
         private Patient _Patient = null;
-        private frmMain _MainForm;
 
         private void RefreshPatientBalance()
         {
@@ -68,7 +68,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         private SGKPatientForm()
         {
             InitializeComponent();
-            _MainForm = this.MdiParent as frmMain;
         }
 
         public SGKPatientForm(string aPatientNo) : this()
@@ -190,7 +189,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 XtraMessageBox.Show("Lütfen Hastanın Soyadını Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (Patient.BirthDate == null)
+            if (Patient.BirthDate == null || Patient.BirthDate < new DateTime(1800,1,1))
             {
                 XtraMessageBox.Show("Lütfen Hastanın Doğum Tarihini Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -223,7 +222,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void OpenNewForm()
         {
-            _MainForm.OpenSGKPatient(Patient.PatientNo);
+            (this.MdiParent as frmMain).OpenSGKPatient(Patient.PatientNo);
             this.Close();
         }
         #region Mernis
@@ -267,7 +266,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                     Patient.Sex = "1";
                 else
                     Patient.Sex = "2";
-                Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
+
+                if (this.mernisSorgu.NufusCuzdani.DogumTarih.Yil == 0)
+                    XtraMessageBox.Show("Lütfen Doğum Tarihini Kpntrol Ediniz", "Doğum Tarihi Uyarısı");
+
+                Patient.BirthDate = new DateTime(Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,1900),
                     Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Ay, 1),
                     Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Gun, 1));
                 Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
@@ -346,7 +349,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void CallMedulaProvision()
         {
-            if (!(Patient.InsuranceCompany.IsSGK() || Patient.InsuranceCompany.IsSGKAcil())) return;
+            if (LookUpServices.IsNotSGK(Patient.InsuranceCompany.Code)) return;
 
             if (currentPatientVisit == null)
             {
@@ -378,9 +381,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             EnableForMedula(false);
 
-            if (this.Patient.InsuranceCompany.IsSGK())
+            if (LookUpServices.IsSGK(this.Patient.InsuranceCompany.Code))
                 this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.NormalValue;
-            else if (this.Patient.InsuranceCompany.IsSGKAcil())
+            else if (LookUpServices.IsSGKAcil(this.Patient.InsuranceCompany.Code))
                 this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.EmergencyValue;
 
             this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
@@ -401,17 +404,17 @@ namespace Naz.Hastane.Win.MDIChildForms
                 PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetRow(i) as PatientVisit;
                 if (pv != null && pv.VisitDate.Date == DateTime.Today)
                 {
-                    if (!String.IsNullOrWhiteSpace(pv.TAKIPNO))
+                    if (!LookUpServices.IsNotSGK(pv.PSG) && !String.IsNullOrWhiteSpace(pv.TAKIPNO))
                         result = this.Patient.PatientVisits[i].TAKIPNO;
                 }
-                else
-                    break;
             }
             return result;
         }
 
         private void medulaSorgu_OnMedulaHastaKabulCompleted(object sender, MedulaProvisionCompletedEventArgs e)
         {
+            //UserLookAndFeel ulaf = new UserLookAndFeel();
+
             try
             {
                 if (this.medulaSorgu.IsOK)
@@ -510,7 +513,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             double VATTotal = 0;
             double InvoiceTotal = 0;
             double VATPercent = 0;
-            double Payment = 0;
+            //double Payment = 0;
 
             if (String.IsNullOrWhiteSpace(NewTellerInvoiceNo))
             {
@@ -870,7 +873,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SearchPatient()
         {
-            _MainForm.OpenFindPatientForm();
+            (this.MdiParent as frmMain).OpenFindPatientForm();
         }
 
         private void sbYatis_Click(object sender, EventArgs e)
@@ -934,6 +937,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             return null;
         }
 
-
+        private void PatientVisitControl_PatientVisitClick(object sender, EventArgs e)
+        {
+            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (currentPatientVisit != null && currentPatientVisit.Doctor != null && currentPatientVisit.Doctor.Service != null)
+                this.medulaSorgu.lueBranchCode.EditValue = currentPatientVisit.Doctor.Service.BranchCode;
+        }
     }
 }

@@ -31,21 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -57,91 +57,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\AccountingDailySummaryReport.cs" />
+    <Compile Include="Classes\AccountingDailySummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\AccountingDailySummaryReport.Designer.cs">
       <DependentUpon>AccountingDailySummaryReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DailyTellerReport.cs" />
+    <Compile Include="Classes\DailyTellerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\DailyTellerReport.Designer.cs">
       <DependentUpon>DailyTellerReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\EczaneReport.cs" />
+    <Compile Include="Classes\EczaneReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\EczaneReport.Designer.cs">
       <DependentUpon>EczaneReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\KeyValueReport.cs" />
+    <Compile Include="Classes\KeyValueReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\KeyValueReport.Designer.cs">
       <DependentUpon>KeyValueReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAnaIslemAyXTab.cs" />
+    <Compile Include="Classes\OzetReports\OZETAnaIslemAyXTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemAyXTab.designer.cs">
       <DependentUpon>OZETAnaIslemAyXTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAnaIslemReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETAnaIslemReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemReport.designer.cs">
       <DependentUpon>OZETAnaIslemReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab.cs" />
+    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab.Designer.cs">
       <DependentUpon>OZETAnaIslemServisXTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab3.cs" />
+    <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab3.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAnaIslemServisXTab3.Designer.cs">
       <DependentUpon>OZETAnaIslemServisXTab3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAYPAnaIslemReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETAYPAnaIslemReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAYPAnaIslemReport.designer.cs">
       <DependentUpon>OZETAYPAnaIslemReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAYPReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETAYPReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAYPReport.Designer.cs">
       <DependentUpon>OZETAYPReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\InvoiceSGKReport.cs" />
+    <Compile Include="Classes\InvoiceSGKReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\InvoiceSGKReport.Designer.cs">
       <DependentUpon>InvoiceSGKReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETAYPKurumReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETAYPKurumReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETAYPKurumReport.Designer.cs">
       <DependentUpon>OZETAYPKurumReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETDoktorAnaIslemReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETDoktorAnaIslemReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETDoktorAnaIslemReport.designer.cs">
       <DependentUpon>OZETDoktorAnaIslemReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETDoktorReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETDoktorReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETDoktorReport.designer.cs">
       <DependentUpon>OZETDoktorReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETDoktorServisReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETDoktorServisReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETDoktorServisReport.designer.cs">
       <DependentUpon>OZETDoktorServisReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETKurumAnaIslemReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETKurumAnaIslemReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETKurumAnaIslemReport.designer.cs">
       <DependentUpon>OZETKurumAnaIslemReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETKurumAYPReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETKurumAYPReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETKurumAYPReport.designer.cs">
       <DependentUpon>OZETKurumAYPReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETKurumReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETKurumReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETKurumReport.Designer.cs">
       <DependentUpon>OZETKurumReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETServisAnaIslemReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETServisAnaIslemReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETServisAnaIslemReport.designer.cs">
       <DependentUpon>OZETServisAnaIslemReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETServisReport.cs" />
+    <Compile Include="Classes\OzetReports\OZETServisReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETServisReport.designer.cs">
       <DependentUpon>OZETServisReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\OzetReports\OZETYatakServisAyXTab.cs" />
+    <Compile Include="Classes\OzetReports\OZETYatakServisAyXTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETYatakServisAyXTab.designer.cs">
       <DependentUpon>OZETYatakServisAyXTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\SGKTaahhutnameReport.cs" />
+    <Compile Include="Classes\SGKTaahhutnameReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\SGKTaahhutnameReport.Designer.cs">
       <DependentUpon>SGKTaahhutnameReport.cs</DependentUpon>
     </Compile>
@@ -173,7 +217,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TIPDATADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Classes\VoucherSGKReport.cs" />
+    <Compile Include="Classes\VoucherSGKReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\VoucherSGKReport.Designer.cs">
       <DependentUpon>VoucherSGKReport.cs</DependentUpon>
     </Compile>

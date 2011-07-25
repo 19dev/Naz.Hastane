@@ -327,6 +327,9 @@
             this.tePatientNo.Location = new System.Drawing.Point(102, 60);
             this.tePatientNo.Name = "tePatientNo";
             this.tePatientNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tePatientNo.Properties.Mask.EditMask = "######";
+            this.tePatientNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.tePatientNo.Properties.Mask.ShowPlaceHolders = false;
             this.tePatientNo.Size = new System.Drawing.Size(260, 20);
             this.tePatientNo.StyleController = this.layoutControl1;
             this.tePatientNo.TabIndex = 2;
@@ -337,6 +340,12 @@
             this.teTCId.Location = new System.Drawing.Point(102, 36);
             this.teTCId.Name = "teTCId";
             this.teTCId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.teTCId.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.teTCId.Properties.Mask.EditMask = "###########";
+            this.teTCId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.teTCId.Properties.Mask.ShowPlaceHolders = false;
+            this.teTCId.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.teTCId.Properties.MaxLength = 11;
             this.teTCId.Size = new System.Drawing.Size(260, 20);
             this.teTCId.StyleController = this.layoutControl1;
             this.teTCId.TabIndex = 1;

@@ -24,6 +24,8 @@ namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
+        LastVisitedPatientsForm lastVisitedPatientForm = null;
+
         #region Splash Screen
         //const int kSplashUpdateInterval_ms = 200;
         //const int kMinAmountOfSplashTime_ms = 8000;
@@ -100,15 +102,15 @@ namespace Naz.Hastane.Win {
             //// Close the splash screen
             //CloseSplash();
 
-            try
-            {
-                IList<Key1Key2ValueRecord> records0 = LookUpServices.GetEczaneParasiGeriDonecek(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
-                IList<Key1Key2ValueRecord> records = LookUpServices.GetEczaneParasiGeriDonmeyen(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
-            }
-            catch (Exception e1)
-            {
+            //try
+            //{
+            //    IList<Key1Key2ValueRecord> records0 = LookUpServices.GetEczaneParasiGeriDonecek(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+            //    IList<Key1Key2ValueRecord> records = LookUpServices.GetEczaneParasiGeriDonmeyen(new DateTime(2011, 4, 1), new DateTime(2011, 5, 1));
+            //}
+            //catch (Exception e1)
+            //{
 
-            }
+            //}
             EnableRibbonButtons(false);
             ShowLoginForm();
 
@@ -149,13 +151,17 @@ namespace Naz.Hastane.Win {
             newForm.Show();
         }
 
-        public void ShowNewDocument<T>() where T:MDIChildForm, new()
+        public T ShowNewDocument<T>() where T:MDIChildForm, new()
         {
-            ShowNewDocument(new T());
+            T newForm = new T();
+            ShowNewDocument(newForm);
+            return newForm;
         }
 
         void Pad_Closed(object sender, EventArgs e)
         {
+            if (sender == lastVisitedPatientForm)
+                lastVisitedPatientForm = null;
             CloseFind();
         }
         void Pad_ShowPopupMenu(object sender, EventArgs e) {
@@ -737,7 +743,13 @@ namespace Naz.Hastane.Win {
                 newForm.Text = name;
                 ShowNewDocument(newForm);
                 AddToMostRecentFiles(name, arMRUList);
+                AddUserPatientVisit(patient);
             }
+        }
+
+        public void AddUserPatientVisit(Patient patient)
+        {
+            LookUpServices.AddUserPatientVisit(UIUtilities.CurrentUser, patient);
         }
         #endregion
 
@@ -778,7 +790,6 @@ namespace Naz.Hastane.Win {
         #region MDIChildForms
         private void AttachMDIChildButtons()
         {
-            iHastaAra.ItemClick += (o, args) => ShowNewDocument<HastaAraForm>();
             iSGKHastaAra.ItemClick += (o, args) => OpenFindPatientForm();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
@@ -789,8 +800,17 @@ namespace Naz.Hastane.Win {
             iDatabaseTest.ItemClick += (o, args) => ShowNewDocument<DBTestForm>();
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
+            iUserPatientVisits.ItemClick += (o, args) => OpenLastVisitedPatientsForm();
 
             iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
+        }
+
+        private void OpenLastVisitedPatientsForm()
+        {
+            if (lastVisitedPatientForm == null)
+                lastVisitedPatientForm = ShowNewDocument<LastVisitedPatientsForm>();
+            lastVisitedPatientForm.Focus();
+            //lastVisitedPatientForm.Refresh();
         }
 
         public void OpenFindPatientForm()
@@ -992,7 +1012,7 @@ namespace Naz.Hastane.Win {
             }
             this.rpUser.Visible = true;
             this.rpgUserFunctions.Visible = true;
-            this.rcMain.SelectedPage = rpSGKPatients;
+            this.rcMain.SelectedPage = rpPatients;
         }
         #endregion
 

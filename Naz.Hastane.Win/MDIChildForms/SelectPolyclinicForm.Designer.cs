@@ -62,10 +62,10 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.ceSameDay);
             this.layoutControl1.Controls.Add(this.sbClose);
             this.layoutControl1.Controls.Add(this.gcView);
             this.layoutControl1.Controls.Add(this.sbSelect);
+            this.layoutControl1.Controls.Add(this.ceSameDay);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -82,6 +82,7 @@
             this.ceSameDay.Size = new System.Drawing.Size(127, 19);
             this.ceSameDay.StyleController = this.layoutControl1;
             this.ceSameDay.TabIndex = 8;
+            this.ceSameDay.Visible = false;
             this.ceSameDay.CheckedChanged += new System.EventHandler(this.ceSameDay_CheckedChanged);
             // 
             // sbClose
@@ -250,6 +251,7 @@
             this.lciSameDay.TextSize = new System.Drawing.Size(0, 0);
             this.lciSameDay.TextToControlDistance = 0;
             this.lciSameDay.TextVisible = false;
+            this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // SelectPolyclinicForm
             // 

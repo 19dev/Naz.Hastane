@@ -252,14 +252,14 @@ namespace Naz.Hastane.Data.Services
 
         public static bool IsSGKSameDay(Patient patient)
         {
-            return ((patient.InsuranceCompany.IsSGK() || patient.InsuranceCompany.IsSGKAcil()) && 
+            return (!LookUpServices.IsNotSGK(patient.InsuranceCompany.Code) && 
                 patient.PatientVisits.Count >= 1 && 
                 patient.PatientVisits[0].VisitDate.Date == DateTime.Today);
         }
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
         {
-            if (patient.InsuranceCompany.IsSGK())
+            if (LookUpServices.IsSGK(patient.InsuranceCompany.Code))
             {
                 if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
                 // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
@@ -943,7 +943,7 @@ namespace Naz.Hastane.Data.Services
                 KDVTUTARI    = VATTotal, 
                 YUVARLAMA    = 0, 
                 FATURATUTARI = invoiceTotal,
-                KDVORANI     = VATPercent.ToString(),
+                KDVORANI     = LookUpServices.GetCodeForValue(LookUpServices.VATs, VATPercent.ToString()),
                 NAME         = patient.FullName, 
                 FATURATIPI   = "H", 
                 FAK          = "K", 

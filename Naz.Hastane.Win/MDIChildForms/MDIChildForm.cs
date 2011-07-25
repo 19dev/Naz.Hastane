@@ -71,7 +71,10 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         public virtual void MyDispose()
         {
             if (session != null)
+            {
+                session.Clear();
                 session.Dispose();
+            }
             if (statelessSession != null)
                 statelessSession.Dispose();
             //View.Close();

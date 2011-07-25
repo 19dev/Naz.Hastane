@@ -756,5 +756,67 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        public static IList<Object> GetAllUserPatientVisits(User user)
+        {
+            IList<Object> userPatientVisits = null;
+
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            {
+                userPatientVisits = (from upv in session.Query<UserPatientVisit>()
+                                     join p in session.Query<Patient>()
+                                        on upv.PatientID equals p.PatientNo
+
+                                     where upv.UserID == user.USER_ID && upv.VisitDate >= DateTime.Today && upv.VisitDate < DateTime.Today.Date.AddDays(1)
+
+                                     group upv by new { upv.PatientID, p.FirstName, p.LastName } into upvs
+
+                                     select new { VisitDate = upvs.Max(x => x.VisitDate), PatientNo = upvs.Key.PatientID, PatientName = String.Format("{0} {1}", upvs.Key.FirstName, upvs.Key.LastName) }
+                              )
+                              .ToList<Object>();
+            }
+
+            return userPatientVisits;
+        }
+
+        public static void AddUserPatientVisit(User user, Patient patient)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                UserPatientVisit upv = new UserPatientVisit() { UserID = user.USER_ID, PatientID = patient.PatientNo, VisitDate = DateTime.Now };
+
+                try
+                {
+                    session.Save(upv);
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                }
+            }
+        }
+        public static bool IsSGK(string insuranceCompanyCode)
+        {
+            return (insuranceCompanyCode == InsuranceCompany.SGKCode);
+        }
+        public static bool IsSGKAcil(string insuranceCompanyCode)
+        {
+            return (insuranceCompanyCode == InsuranceCompany.SGKAcilCode);
+        }
+        public static bool IsNotSGK(string insuranceCompanyCode)
+        {
+            return (insuranceCompanyCode != InsuranceCompany.SGKCode && insuranceCompanyCode != InsuranceCompany.SGKAcilCode);
+        }
+
+        public static string GetCodeForValue<T>(IList<T> list, string value) where T: OldLookUpBase
+        {
+            foreach(T t in list)
+            {
+                if (t.Value == value)
+                    return t.Code;
+            }
+            return String.Empty;
+        }
     }
 }

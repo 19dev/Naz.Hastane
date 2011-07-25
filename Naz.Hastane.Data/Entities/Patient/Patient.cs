@@ -3,15 +3,24 @@ using System.Collections.Generic;
 
 namespace Naz.Hastane.Data.Entities
 {
+    /// <summary>
+    /// ADRES
+    /// </summary>
     public class Patient
     {
-        public virtual string PatientNo { get; set; } // KNR
+        /// <summary>
+        /// KNR
+        /// </summary>
+        public virtual string PatientNo { get; set; } 
 
         public virtual string FirstName { get; set; } //HASTAADI
         public virtual string LastName { get; set; } //HASTASOYADI
         public virtual string TCId { get; set; } //TCKIMLIKNO
         public virtual string FatherName { get; set; } //BABAADI
         public virtual string MotherName { get; set; } //ANAADI
+        /// <summary>
+        /// CINSIYETI 1:Male, 2:Female
+        /// </summary>
         public virtual string Sex { get; set; } //CINSIYETI 1:Male, 2:Female
         public virtual string MaritalStatus { get; set; } //MEDENI B:Single, E:Married
         public virtual string BirthPlace { get; set; } //DOGUMYERI

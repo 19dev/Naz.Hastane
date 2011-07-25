@@ -36,7 +36,6 @@ namespace Naz.Hastane.Win {
             this.pccBottom = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.sbExit = new DevExpress.XtraEditors.SimpleButton();
             this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
-            this.iYeni = new DevExpress.XtraBars.BarButtonItem();
             this.sbiSave = new DevExpress.XtraBars.BarSubItem();
             this.iSakla = new DevExpress.XtraBars.BarButtonItem();
             this.iSaveAs = new DevExpress.XtraBars.BarButtonItem();
@@ -66,7 +65,6 @@ namespace Naz.Hastane.Win {
             this.bgBullets = new DevExpress.XtraBars.BarButtonGroup();
             this.sbiFind = new DevExpress.XtraBars.BarSubItem();
             this.iPasteSpecial = new DevExpress.XtraBars.BarButtonItem();
-            this.iYeniHasta = new DevExpress.XtraBars.BarButtonItem();
             this.iLargeUndo = new DevExpress.XtraBars.BarLargeButtonItem();
             this.iTemplate = new DevExpress.XtraBars.BarButtonItem();
             this.iPaintStyle = new DevExpress.XtraBars.BarButtonItem();
@@ -77,7 +75,6 @@ namespace Naz.Hastane.Win {
             this.riicStyle = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.iYeniSGKHastasi = new DevExpress.XtraBars.BarButtonItem();
             this.iSGKHastaAra = new DevExpress.XtraBars.BarButtonItem();
-            this.iHastaAra = new DevExpress.XtraBars.BarButtonItem();
             this.iInvoiceVoucher = new DevExpress.XtraBars.BarButtonItem();
             this.iBloodType = new DevExpress.XtraBars.BarButtonItem();
             this.iCity = new DevExpress.XtraBars.BarButtonItem();
@@ -156,12 +153,13 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem3Pivot = new DevExpress.XtraBars.BarButtonItem();
             this.iPersonelAra = new DevExpress.XtraBars.BarButtonItem();
             this.iYeniPersonel = new DevExpress.XtraBars.BarButtonItem();
+            this.iUserPatientVisits = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpSGKPatients = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpPatients = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgSGK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgMedulaReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -382,7 +380,6 @@ namespace Naz.Hastane.Win {
             this.rcMain.ExpandCollapseItem,
             this.iSakla,
             this.iReplace,
-            this.iYeni,
             this.iKapat,
             this.iSaveAs,
             this.iPrint,
@@ -409,7 +406,6 @@ namespace Naz.Hastane.Win {
             this.sbiSave,
             this.sbiFind,
             this.iPasteSpecial,
-            this.iYeniHasta,
             this.iLargeUndo,
             this.iTemplate,
             this.iPaintStyle,
@@ -421,7 +417,6 @@ namespace Naz.Hastane.Win {
             this.biStyle,
             this.iYeniSGKHastasi,
             this.iSGKHastaAra,
-            this.iHastaAra,
             this.iInvoiceVoucher,
             this.iBloodType,
             this.iCity,
@@ -499,10 +494,11 @@ namespace Naz.Hastane.Win {
             this.iHarcamaRaporu,
             this.iOzetServisAnaIslem3Pivot,
             this.iPersonelAra,
-            this.iYeniPersonel});
+            this.iYeniPersonel,
+            this.iUserPatientVisits});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 305;
+            this.rcMain.MaxItemId = 320;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -510,7 +506,7 @@ namespace Naz.Hastane.Win {
             this.rcMain.PageHeaderItemLinks.Add(this.biStyle);
             this.rcMain.PageHeaderItemLinks.Add(this.iHakkinda);
             this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rpSGKPatients,
+            this.rpPatients,
             this.rpMedulaReports,
             this.rbMedulaDefinitions,
             this.rpAccounting,
@@ -525,7 +521,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpSGKPatients;
+            this.rcMain.SelectedPage = this.rpPatients;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -537,7 +533,6 @@ namespace Naz.Hastane.Win {
             // pmAppMain
             // 
             this.pmAppMain.BottomPaneControlContainer = this.pccBottom;
-            this.pmAppMain.ItemLinks.Add(this.iYeni);
             this.pmAppMain.ItemLinks.Add(this.sbiSave, true);
             this.pmAppMain.ItemLinks.Add(this.iPrint);
             this.pmAppMain.ItemLinks.Add(this.iKapat, true);
@@ -574,18 +569,6 @@ namespace Naz.Hastane.Win {
             // imageCollection2
             // 
             this.imageCollection2.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection2.ImageStream")));
-            // 
-            // iYeni
-            // 
-            this.iYeni.Caption = "&Yeni Hasta";
-            this.iYeni.CategoryGuid = new System.Guid("5d682bf3-85ee-4554-8f26-c1e9757c1f0c");
-            this.iYeni.Description = "Yeni Hasta Kayýdý";
-            this.iYeni.Hint = "Yeni Hasta Kayýdý";
-            this.iYeni.Id = 0;
-            this.iYeni.ImageIndex = 6;
-            this.iYeni.LargeImageIndex = 0;
-            this.iYeni.Name = "iYeni";
-            this.iYeni.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYeniHasta_ItemClick);
             // 
             // sbiSave
             // 
@@ -930,18 +913,6 @@ namespace Naz.Hastane.Win {
             this.iPasteSpecial.ImageIndex = 8;
             this.iPasteSpecial.Name = "iPasteSpecial";
             // 
-            // iYeniHasta
-            // 
-            this.iYeniHasta.Caption = "&Yeni Hasta";
-            this.iYeniHasta.CategoryGuid = new System.Guid("5d682bf3-85ee-4554-8f26-c1e9757c1f0c");
-            this.iYeniHasta.Description = "Yeni Hasta Dosyasý Yaratýr";
-            this.iYeniHasta.Hint = "Creates a new, blank file";
-            this.iYeniHasta.Id = 0;
-            this.iYeniHasta.ImageIndex = 6;
-            this.iYeniHasta.LargeImageIndex = 0;
-            this.iYeniHasta.Name = "iYeniHasta";
-            this.iYeniHasta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYeniHasta_ItemClick);
-            // 
             // iLargeUndo
             // 
             this.iLargeUndo.Caption = "&Undo";
@@ -1039,9 +1010,9 @@ namespace Naz.Hastane.Win {
             // 
             // iYeniSGKHastasi
             // 
-            this.iYeniSGKHastasi.Caption = "Yeni &SGK Hastasý";
+            this.iYeniSGKHastasi.Caption = "Yeni Hasta";
             this.iYeniSGKHastasi.CategoryGuid = new System.Guid("5d682bf3-85ee-4554-8f26-c1e9757c1f0c");
-            this.iYeniSGKHastasi.Description = "Yeni SGK Hastasý Dosyasý Yaratýr";
+            this.iYeniSGKHastasi.Description = "Yeni Hasta Dosyasý Yaratýr";
             this.iYeniSGKHastasi.Id = 138;
             this.iYeniSGKHastasi.ImageIndex = 6;
             this.iYeniSGKHastasi.LargeImageIndex = 0;
@@ -1050,23 +1021,13 @@ namespace Naz.Hastane.Win {
             // 
             // iSGKHastaAra
             // 
-            this.iSGKHastaAra.Caption = "SGK Hastasý Ara";
+            this.iSGKHastaAra.Caption = "Hasta Ara";
             this.iSGKHastaAra.CategoryGuid = new System.Guid("5d682bf3-85ee-4554-8f26-c1e9757c1f0c");
-            this.iSGKHastaAra.Description = "SGK Hastasý Arama Ekraný";
+            this.iSGKHastaAra.Description = "Hasta Arama Ekraný";
             this.iSGKHastaAra.Id = 146;
             this.iSGKHastaAra.ImageIndex = 3;
             this.iSGKHastaAra.LargeImageIndex = 4;
             this.iSGKHastaAra.Name = "iSGKHastaAra";
-            // 
-            // iHastaAra
-            // 
-            this.iHastaAra.Caption = "Hasta Ara";
-            this.iHastaAra.CategoryGuid = new System.Guid("5d682bf3-85ee-4554-8f26-c1e9757c1f0c");
-            this.iHastaAra.Description = "Hasta Arama Ekraný";
-            this.iHastaAra.Id = 147;
-            this.iHastaAra.ImageIndex = 3;
-            this.iHastaAra.LargeImageIndex = 4;
-            this.iHastaAra.Name = "iHastaAra";
             // 
             // iInvoiceVoucher
             // 
@@ -1592,6 +1553,12 @@ namespace Naz.Hastane.Win {
             this.iYeniPersonel.Name = "iYeniPersonel";
             this.iYeniPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iYeniPersonel_ItemClick);
             // 
+            // iUserPatientVisits
+            // 
+            this.iUserPatientVisits.Caption = "Son Bakýlan Hastalar";
+            this.iUserPatientVisits.Id = 310;
+            this.iUserPatientVisits.Name = "iUserPatientVisits";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1627,12 +1594,12 @@ namespace Naz.Hastane.Win {
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Format";
             // 
-            // rpSGKPatients
+            // rpPatients
             // 
-            this.rpSGKPatients.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpPatients.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgSGK});
-            this.rpSGKPatients.Name = "rpSGKPatients";
-            this.rpSGKPatients.Text = "SGK Hastalarý";
+            this.rpPatients.Name = "rpPatients";
+            this.rpPatients.Text = "Hasta Ýþlemleri";
             // 
             // rpgSGK
             // 
@@ -1641,6 +1608,7 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iInvoiceVoucher);
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
             this.rpgSGK.ItemLinks.Add(this.iDailyTellerReport);
+            this.rpgSGK.ItemLinks.Add(this.iUserPatientVisits);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
             // 
@@ -1865,8 +1833,6 @@ namespace Naz.Hastane.Win {
             // rpgAra
             // 
             this.rpgAra.ImageIndex = 3;
-            this.rpgAra.ItemLinks.Add(this.iHastaAra);
-            this.rpgAra.ItemLinks.Add(this.iYeniHasta);
             this.rpgAra.Name = "rpgAra";
             this.rpgAra.ShowCaptionButton = false;
             this.rpgAra.Text = "Hasta Ýþlemleri";
@@ -1976,7 +1942,6 @@ namespace Naz.Hastane.Win {
             // 
             // pmNew
             // 
-            this.pmNew.ItemLinks.Add(this.iYeniHasta);
             this.pmNew.ItemLinks.Add(this.iTemplate);
             this.pmNew.Name = "pmNew";
             this.pmNew.Ribbon = this.rcMain;
@@ -2055,7 +2020,6 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iKapat;
         private DevExpress.XtraBars.BarButtonItem iSakla;
         private DevExpress.XtraBars.BarButtonItem iSaveAs;
-        private DevExpress.XtraBars.BarButtonItem iYeni;
         private DevExpress.XtraBars.BarButtonItem iCik;
         private DevExpress.XtraBars.BarButtonItem iPrint;
         private DevExpress.XtraBars.BarButtonItem iPaste;
@@ -2091,7 +2055,6 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarSubItem sbiSave;
         private DevExpress.XtraBars.BarSubItem sbiFind;
         private DevExpress.XtraBars.BarButtonItem iPasteSpecial;
-        private DevExpress.XtraBars.BarButtonItem iYeniHasta;
         private DevExpress.XtraBars.BarLargeButtonItem iLargeUndo;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem iTemplate;
@@ -2129,7 +2092,6 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraEditors.SimpleButton sbExit;
         private DevExpress.XtraBars.BarButtonItem iYeniSGKHastasi;
         private DevExpress.XtraBars.BarButtonItem iSGKHastaAra;
-        private DevExpress.XtraBars.BarButtonItem iHastaAra;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDosya;
         private DevExpress.XtraBars.BarButtonItem iInvoiceVoucher;
         private DevExpress.XtraBars.BarButtonItem iBloodType;
@@ -2217,7 +2179,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iExportToPDF;
         private DevExpress.XtraBars.BarButtonItem iExportToXSLX;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgExportReports;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpSGKPatients;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpPatients;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpMedulaReports;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpAccounting;
         private DevExpress.XtraBars.BarButtonItem iSubFunctionGroup;
@@ -2233,6 +2195,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbPersonel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPersonel;
+        private DevExpress.XtraBars.BarButtonItem iUserPatientVisits;
 
     }
 }

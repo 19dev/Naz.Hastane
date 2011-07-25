@@ -78,7 +78,7 @@ namespace Naz.Hastane.Win.Forms
                 }
                 catch (Exception excpt)
                 {
-                    XtraMessageBox.Show("Şifre Değiştirme İşlemi Başarısız Oldu!", "Şifre Değiştirme Uyarısı");
+                    XtraMessageBox.Show("Şifre Değiştirme İşlemi Başarısız Oldu!\r\n" + excpt.ToString(), "Şifre Değiştirme Uyarısı");
                 }
                 finally
                 { 
