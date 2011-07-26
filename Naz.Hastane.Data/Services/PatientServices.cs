@@ -252,9 +252,16 @@ namespace Naz.Hastane.Data.Services
 
         public static bool IsSGKSameDay(Patient patient)
         {
-            return (!LookUpServices.IsNotSGK(patient.InsuranceCompany.Code) && 
-                patient.PatientVisits.Count >= 1 && 
-                patient.PatientVisits[0].VisitDate.Date == DateTime.Today);
+            if (LookUpServices.IsNotSGK(patient.InsuranceCompany.Code))
+                return false;
+            foreach (PatientVisit pv in patient.PatientVisits)
+            {
+                if (pv.VisitDate.Date != DateTime.Today)
+                    return false;
+                if (!LookUpServices.IsNotSGK(pv.PSG))
+                    return true;
+            }
+            return false;
         }
 
         public static bool IsAutoExamItemValid(Patient patient, SGKAutoExaminationBase sae)
@@ -309,14 +316,11 @@ namespace Naz.Hastane.Data.Services
                 session.Flush();
                 transaction.Commit();
 
-                PatientVisit pvNew = (from p in session.Query<PatientVisit>()
-                                             where p.Patient == pv.Patient && p.VisitNo == pv.VisitNo
-                                             select p).First();
-
-                patient.AddPatientVisit(pvNew);
-                return pvNew;
+                patient.AddPatientVisit(pv);
+                return pv;
             }
         }
+
         public static PatientVisitRecord AddNewPatientVisitRecord(ISession session, User user, PatientVisit pv)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -346,6 +350,7 @@ namespace Naz.Hastane.Data.Services
             }
 
         }
+
         public static PatientVisitDetail AddNewPatientVisitDetail(ISession session, User user, Patient patient, PatientVisit pv, Product product)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -367,12 +372,8 @@ namespace Naz.Hastane.Data.Services
                 session.Flush();
                 transaction.Commit();
 
-                PatientVisitDetail pvdNew = (from p in session.Query<PatientVisitDetail>()
-                                             where p.PatientVisit == pvd.PatientVisit && p.DetailNo == pvd.DetailNo
-                                             select p).First();
-
-                pv.AddPatientVisitDetail(pvdNew);
-                return pvdNew;
+                pv.AddPatientVisitDetail(pvd);
+                return pvd;
             }
 
         }
@@ -393,17 +394,14 @@ namespace Naz.Hastane.Data.Services
                     session.Flush();
                     transaction.Commit();
 
-                    PatientVisitDetail pvdNew = (from p in session.Query<PatientVisitDetail>()
-                           where p.PatientVisit == pvd.PatientVisit && p.DetailNo == pvd.DetailNo
-                           select p).First();
-
-                    pv.AddPatientVisitDetail(pvdNew);
+                    pv.AddPatientVisitDetail(pvd);
                 }
                 UpdatePatientVisitFromDetails(session, user, pv);
                 return;
             }
 
         }
+
         public static PatientVisitDetail GetNewPatientVisitDetailFromProduct(PatientVisit pv, Product product)
         {
             PatientVisitDetail pvd = new PatientVisitDetail();
@@ -652,7 +650,7 @@ namespace Naz.Hastane.Data.Services
                             where  pvd.MAKNO == null && pvd.AMAKNO == null
                             && pvd.ADET != 0
                             && pvd.PatientPrice != 0
-                            && pvd.TARIH >= startDate && pvd.TARIH <= endDate
+                            && pvd.TARIH >= startDate && pvd.TARIH <= endDate.AddDays(1)
                             && ((insuranceCompany == null) || (p.InsuranceCompany == insuranceCompany))
                             orderby p.FirstName ascending, p.LastName ascending
                             select p
@@ -1132,12 +1130,14 @@ namespace Naz.Hastane.Data.Services
             foreach (PatientVisit pv in pvs)
                 foreach (PatientVisitDetail pvd in pv.PatientVisitDetails)
                 {
-                    pvdwps.Add(new PatientVisitDetailWithProduct
-                    {
-                        PatientVisitDetail = pvd,
-                        Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, insuranceCompany.GetPriceList(pv.VisitType)),
-                        Discount = 0
-                    });
+                    Product p = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE, insuranceCompany.GetPriceList(pv.VisitType));
+                    if (p != null)
+                        pvdwps.Add(new PatientVisitDetailWithProduct
+                        {
+                            PatientVisitDetail = pvd,
+                            Product = p,
+                            Discount = 0
+                        });
                 }
 
             return pvdwps;

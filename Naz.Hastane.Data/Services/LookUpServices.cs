@@ -467,7 +467,8 @@ namespace Naz.Hastane.Data.Services
                         select p
                             )
                             .SingleOrDefault<Product>();
-            product.SetPriceList(priceList);
+            if (product != null)
+                product.SetPriceList(priceList);
             return product;
         }
 

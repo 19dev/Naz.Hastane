@@ -171,6 +171,8 @@
             // colPatientPrice
             // 
             this.colPatientPrice.Caption = "Hasta Fiyatı";
+            this.colPatientPrice.DisplayFormat.FormatString = "#,##0.00";
+            this.colPatientPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPatientPrice.FieldName = "PatientPrice";
             this.colPatientPrice.Name = "colPatientPrice";
             this.colPatientPrice.Visible = true;
@@ -180,6 +182,8 @@
             // colCompanyPrice
             // 
             this.colCompanyPrice.Caption = "Kurum Fiyatı";
+            this.colCompanyPrice.DisplayFormat.FormatString = "#,##0.00";
+            this.colCompanyPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colCompanyPrice.FieldName = "CompanyPrice";
             this.colCompanyPrice.Name = "colCompanyPrice";
             this.colCompanyPrice.Visible = true;
@@ -289,6 +293,8 @@
             // colSelectedPatientPrice
             // 
             this.colSelectedPatientPrice.Caption = "Hasta Fiyatı";
+            this.colSelectedPatientPrice.DisplayFormat.FormatString = "#,##0.00";
+            this.colSelectedPatientPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSelectedPatientPrice.FieldName = "PatientPrice";
             this.colSelectedPatientPrice.Name = "colSelectedPatientPrice";
             this.colSelectedPatientPrice.Visible = true;
@@ -297,6 +303,8 @@
             // colSelectedCompanyPrice
             // 
             this.colSelectedCompanyPrice.Caption = "Kurum Fiyatı";
+            this.colSelectedCompanyPrice.DisplayFormat.FormatString = "#,##0.00";
+            this.colSelectedCompanyPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSelectedCompanyPrice.FieldName = "CompanyPrice";
             this.colSelectedCompanyPrice.Name = "colSelectedCompanyPrice";
             this.colSelectedCompanyPrice.Visible = true;

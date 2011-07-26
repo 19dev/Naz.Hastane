@@ -212,9 +212,9 @@ namespace Naz.Hastane.Win.Utilities
         void view_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e) {
             if (e.Column == CheckMarkColumn) {
                 if (e.IsGetData)
-                    e.Value = IsRowSelected(e.ListSourceRowIndex);
+                    e.Value = IsRowSelected(e.RowHandle);
                 else
-                    SelectRow(e.ListSourceRowIndex, (bool)e.Value);
+                    SelectRow(e.RowHandle, (bool)e.Value);
             }
         }
         void view_KeyDown(object sender, KeyEventArgs e) {

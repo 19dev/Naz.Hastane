@@ -68,6 +68,13 @@ namespace Naz.Hastane.Win.MDIChildForms
 You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAfterError.");
         }
 
+        public void ReOpenSession()
+        {
+            session.Clear();
+            session.Dispose();
+            session = SessionFactory.OpenSession();
+        }
+
         public virtual void MyDispose()
         {
             if (session != null)

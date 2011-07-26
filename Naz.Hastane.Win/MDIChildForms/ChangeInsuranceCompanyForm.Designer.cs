@@ -126,6 +126,8 @@
             this.gvPatientVisits.GridControl = this.gcPatientVisits;
             this.gvPatientVisits.Name = "gvPatientVisits";
             this.gvPatientVisits.OptionsView.ShowGroupPanel = false;
+            this.gvPatientVisits.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colVisitNo, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colVisitNo
             // 
@@ -208,6 +210,9 @@
             this.gvPatientVisitDetails.GridControl = this.gcPatientVisitDetails;
             this.gvPatientVisitDetails.Name = "gvPatientVisitDetails";
             this.gvPatientVisitDetails.OptionsView.ShowGroupPanel = false;
+            this.gvPatientVisitDetails.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colPatientVisitDetailVisitNo, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDetailNo, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colPatientVisitDetailVisitNo
             // 
@@ -367,6 +372,7 @@
             // 
             // emptySpaceItem8
             // 
+            this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
             this.emptySpaceItem8.Location = new System.Drawing.Point(99, 591);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
@@ -376,6 +382,7 @@
             // 
             // emptySpaceItem9
             // 
+            this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
             this.emptySpaceItem9.Location = new System.Drawing.Point(727, 26);
             this.emptySpaceItem9.Name = "emptySpaceItem9";

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lbStatus = new DevExpress.XtraEditors.LabelControl();
+            this.sbMonthly = new DevExpress.XtraEditors.SimpleButton();
             this.deDate = new DevExpress.XtraEditors.DateEdit();
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -53,10 +55,8 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sbMonthly = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lbStatus = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -92,6 +92,24 @@
             this.layoutControl1.Size = new System.Drawing.Size(1006, 729);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.Location = new System.Drawing.Point(910, 235);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(84, 13);
+            this.lbStatus.StyleController = this.layoutControl1;
+            this.lbStatus.TabIndex = 9;
+            // 
+            // sbMonthly
+            // 
+            this.sbMonthly.Location = new System.Drawing.Point(910, 209);
+            this.sbMonthly.Name = "sbMonthly";
+            this.sbMonthly.Size = new System.Drawing.Size(84, 22);
+            this.sbMonthly.StyleController = this.layoutControl1;
+            this.sbMonthly.TabIndex = 8;
+            this.sbMonthly.Text = "Aylık";
+            this.sbMonthly.Click += new System.EventHandler(this.sbMonthly_Click);
             // 
             // deDate
             // 
@@ -220,15 +238,15 @@
             this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAmount.FieldName = "Tutar";
             this.colAmount.Name = "colAmount";
-            this.colAmount.SummaryItem.DisplayFormat = "{0:#,###.00}";
-            this.colAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", "{0:#,###.00}")});
             this.colAmount.Visible = true;
             this.colAmount.VisibleIndex = 6;
             // 
             // colInvoiceAmount
             // 
             this.colInvoiceAmount.Caption = "Fatura Tutarı";
-            this.colInvoiceAmount.DisplayFormat.FormatString = "#,###.00";
+            this.colInvoiceAmount.DisplayFormat.FormatString = "#,##0.00";
             this.colInvoiceAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colInvoiceAmount.FieldName = "HizmetTutari";
             this.colInvoiceAmount.Name = "colInvoiceAmount";
@@ -270,7 +288,6 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1006, 729);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -312,6 +329,7 @@
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(898, 240);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -321,6 +339,7 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(898, 24);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -330,6 +349,7 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(898, 350);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -349,16 +369,6 @@
             this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
             // 
-            // sbMonthly
-            // 
-            this.sbMonthly.Location = new System.Drawing.Point(910, 209);
-            this.sbMonthly.Name = "sbMonthly";
-            this.sbMonthly.Size = new System.Drawing.Size(84, 22);
-            this.sbMonthly.StyleController = this.layoutControl1;
-            this.sbMonthly.TabIndex = 8;
-            this.sbMonthly.Text = "Aylık";
-            this.sbMonthly.Click += new System.EventHandler(this.sbMonthly_Click);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.sbMonthly;
@@ -373,20 +383,13 @@
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(898, 146);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(88, 51);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.Location = new System.Drawing.Point(910, 235);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(84, 13);
-            this.lbStatus.StyleController = this.layoutControl1;
-            this.lbStatus.TabIndex = 9;
             // 
             // layoutControlItem6
             // 

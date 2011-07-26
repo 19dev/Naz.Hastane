@@ -26,8 +26,6 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class SGKPatientForm : MDIChildForm
     {
-        private Patient _Patient = null;
-
         private void RefreshPatientBalance()
         {
             this.patientBalanceControl.RefreshView();
@@ -44,19 +42,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.lcgBorcAlacak.AppearanceTabPage.HeaderHotTracked.ForeColor = Color.Black;
             }
         }
-        public Patient Patient
-        {
-            get { return _Patient; }
-            set
-            {
-                if (_Patient != value)
-                {
-                    _Patient = value;
-                    this.patientBalanceControl.Patient = _Patient;
-                    RefreshPatientBalance();
-                }
-            }
-        }
+
         private Doctor _Doctor = null;
         private PatientVisit currentPatientVisit = null;
         private bool _IsWaitingForMedulaProvision = false;
@@ -68,23 +54,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         private SGKPatientForm()
         {
             InitializeComponent();
-        }
 
-        public SGKPatientForm(string aPatientNo) : this()
-        {
-            Patient = PatientServices.GetPatientByID(aPatientNo, Session);
-            if (Patient == null)
-            {
-                Patient = PatientServices.GetNewSGKPatient(Session);
-                //this.teTCID.Enabled = true;
-            }
-            else
-            {
-                //this.teTCID.Enabled = false;
-            }
-            InitBindings();
+            LoadLookUps();
 
-            this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
             this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
             //this.medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue; // Hasta'dan alıyor
             //this.medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue; // Hasta'dan alıyor
@@ -93,8 +65,49 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
             this.medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
             this.medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
+        }
 
-            this.medulaFollowUpQueryControl.TCId = Patient.TCId;
+        public SGKPatientForm(string aPatientNo) : this()
+        {
+            Patient patient = PatientServices.GetPatientByID(aPatientNo, Session);
+            if (patient == null)
+            {
+                patient = PatientServices.GetNewSGKPatient(Session);
+                //this.teTCID.Enabled = true;
+            }
+            else
+            {
+                //this.teTCID.Enabled = false;
+            }
+
+            Patient = patient;
+
+        }
+
+        private Patient _Patient = null;
+
+        public Patient Patient
+        {
+            get { return _Patient; }
+            set
+            {
+                if (_Patient != value)
+                {
+                    _Patient = value;
+                    
+                    InitPatientBindings();
+                    RefreshPatientBalance();
+                }
+            }
+        }
+
+        private void ReOpenPatient()
+        {
+            string patientNo = Patient.PatientNo;
+            _Patient = null;
+
+            ReOpenSession();
+            Patient = PatientServices.GetPatientByID(patientNo, Session);
         }
 
         public void SetNewTCID(string TCID)
@@ -104,13 +117,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             CallMernis();
         }
 
-        private void InitBindings()
+        private void InitPatientBindings()
         {
-            LoadLookUps();
             this.tePatientNo.DataBindings.Add("EditValue", Patient, "PatientNo");
             //this.teInsuranceCompany.DataBindings.Add("EditValue", Patient, "InsuranceCompany.Name");
             if (this.Patient.InsuranceCompany != null)
-                this.teInsuranceCompany.Text = this.Patient.InsuranceCompany.Code;
+                this.teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
 
             this.teTCID.DataBindings.Add("EditValue", Patient, "TCId");
             this.teFirstName.DataBindings.Add("EditValue", Patient, "FirstName");
@@ -161,6 +173,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teJobPhone2.DataBindings.Add("EditValue", Patient, "JobPhone2");
             this.teJobFax.DataBindings.Add("EditValue", Patient, "JobFax");
             this.teEmail.DataBindings.Add("EditValue", Patient, "Email");
+
+            this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
+            this.medulaFollowUpQueryControl.TCId = Patient.TCId;
+            this.patientBalanceControl.Patient = Patient;
         }
 
         private void LoadLookUps()
@@ -258,35 +274,54 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (this.mernisSorgu.IsOK)
             {
                 Patient.TCId = this.mernisSorgu.NufusCuzdani.TCKimlikNo.ToString();
-                Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
-                Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
-                Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
-                Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.Ad))
+                    Patient.FirstName = this.mernisSorgu.NufusCuzdani.Ad;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.Soyad))
+                    Patient.LastName = this.mernisSorgu.NufusCuzdani.Soyad;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.AnaAd))
+                    Patient.MotherName = this.mernisSorgu.NufusCuzdani.AnaAd;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.BabaAd))
+                    Patient.FatherName = this.mernisSorgu.NufusCuzdani.BabaAd;
                 if (this.mernisSorgu.KisiBilgisi.TemelBilgisi.Cinsiyet == CinsiyetTipi.Erkek)
                     Patient.Sex = "1";
                 else
                     Patient.Sex = "2";
 
-                if (this.mernisSorgu.NufusCuzdani.DogumTarih.Yil == 0)
-                    XtraMessageBox.Show("Lütfen Doğum Tarihini Kpntrol Ediniz", "Doğum Tarihi Uyarısı");
+                if (this.mernisSorgu.NufusCuzdani.DogumTarih.Yil != 0)
+                {
+                    Patient.BirthDate = new DateTime(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,
+                        Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Ay, 1),
+                        Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Gun, 1));
+                }
+                else
+                    XtraMessageBox.Show("Mernis'ten Geçerli Bir Doğum Tarihi Gelmedi, \r\nLütfen Doğum Tarihini Kontrol Ediniz", "Doğum Tarihi Uyarısı");
 
-                Patient.BirthDate = new DateTime(Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Yil,1900),
-                    Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Ay, 1),
-                    Math.Max(this.mernisSorgu.NufusCuzdani.DogumTarih.Gun, 1));
-                Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.DogumYer))
+                    Patient.BirthPlace = this.mernisSorgu.NufusCuzdani.DogumYer;
 
                 if (this.mernisSorgu.KisiBilgisi.DurumBilgisi.MedeniHal == MedeniHalTipi.Evli)
                     Patient.MaritalStatus = "E";
                 else
                     Patient.MaritalStatus = "B";
 
-                Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
-                Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
-                Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
-                Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
-                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
-                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
-                Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.TCKimlikResponse.IlAd))
+                    Patient.RegisteredCity = this.mernisSorgu.TCKimlikResponse.IlAd;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.TCKimlikResponse.IlceAd))
+                    Patient.RegisteredTown = this.mernisSorgu.TCKimlikResponse.IlceAd;
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.VerildigiIlceAd))
+                    Patient.IDPlace = this.mernisSorgu.NufusCuzdani.VerildigiIlceAd;
+
+                if (this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil != 0 &&
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay != 0 &&
+                    this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun != 0)
+                {
+                    Patient.IDDate = new DateTime(this.mernisSorgu.NufusCuzdani.VerilmeTarih.Yil,
+                       this.mernisSorgu.NufusCuzdani.VerilmeTarih.Ay,
+                       this.mernisSorgu.NufusCuzdani.VerilmeTarih.Gun).ToString();
+                }
+
+                if (!String.IsNullOrWhiteSpace(this.mernisSorgu.NufusCuzdani.CuzdanSeri) && this.mernisSorgu.NufusCuzdani.CuzdanNo != 0)
+                    Patient.IDNO = this.mernisSorgu.NufusCuzdani.CuzdanSeri + "-" + this.mernisSorgu.NufusCuzdani.CuzdanNo;
 
                 SavePatient(); 
             }
@@ -306,8 +341,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
             {
                 _Doctor = frm.Doctor;
-                currentPatientVisit = PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
-                RefreshGrid();
+                PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
+                ReOpenPatient();
+                currentPatientVisit = Patient.PatientVisits[0];
                 CallMedulaProvision();
             }
             SavePatient();
@@ -772,7 +808,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbAddPatientVisitDetail_Click(object sender, EventArgs e)
         {
             AddPatientVisitDetail();
-            SavePatient();
+            //SavePatient();
         }
 
         private void AddPatientVisitDetail()
@@ -788,7 +824,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (frm.IsSelected)
                 {
                     PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, Patient, currentPatientVisit, frm.SelectedProducts);
-                    RefreshGrid();
+                    ReOpenPatient();
                 }
             }
         }
@@ -847,7 +883,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, pvs, pvdwps, newInsuranceCompany);
                     XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    OpenNewForm();
+                    ReOpenPatient();
                 }
                 catch (Exception e)
                 {
@@ -910,7 +946,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 _Doctor = pv.Doctor;
                 currentPatientVisit = PatientServices.AddNewPatientVisit(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, _Doctor.Service.Code, 0);
                 PatientVisitRecord pvr = PatientServices.AddNewPatientVisitRecord(Session, UIUtilities.CurrentUser, currentPatientVisit);
-                RefreshGrid();
+                ReOpenPatient();
                 this.PatientVisitControl.gvPatientVisit.FocusedRowHandle = 0;
                 currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
                 AddPatientVisitDetail();

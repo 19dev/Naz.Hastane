@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.gvPatientVisitDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPVDDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSiraNo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -214,6 +214,8 @@
             // colSATISF
             // 
             this.colSATISF.Caption = "Hasta Fiyatı";
+            this.colSATISF.DisplayFormat.FormatString = "#,##0.00";
+            this.colSATISF.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSATISF.FieldName = "PatientPrice";
             this.colSATISF.Name = "colSATISF";
             this.colSATISF.Visible = true;
@@ -223,6 +225,8 @@
             // colKSATISF
             // 
             this.colKSATISF.Caption = "Kurum Fiyatı";
+            this.colKSATISF.DisplayFormat.FormatString = "#,##0.00";
+            this.colKSATISF.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colKSATISF.FieldName = "CompanyPrice";
             this.colKSATISF.Name = "colKSATISF";
             this.colKSATISF.Visible = true;
@@ -344,13 +348,13 @@
             // gcPatientVisit
             // 
             this.gcPatientVisit.DataMember = null;
-            gridLevelNode3.LevelTemplate = this.gvPatientVisitDetail;
-            gridLevelNode3.RelationName = "PatientVisitDetails";
-            gridLevelNode4.LevelTemplate = this.gvPatientVisitRecord;
-            gridLevelNode4.RelationName = "PatientVisitRecords";
+            gridLevelNode1.LevelTemplate = this.gvPatientVisitDetail;
+            gridLevelNode1.RelationName = "PatientVisitDetails";
+            gridLevelNode2.LevelTemplate = this.gvPatientVisitRecord;
+            gridLevelNode2.RelationName = "PatientVisitRecords";
             this.gcPatientVisit.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3,
-            gridLevelNode4});
+            gridLevelNode1,
+            gridLevelNode2});
             this.gcPatientVisit.Location = new System.Drawing.Point(4, 4);
             this.gcPatientVisit.MainView = this.gvPatientVisit;
             this.gcPatientVisit.Name = "gcPatientVisit";
@@ -538,6 +542,8 @@
             // colPatientTotal
             // 
             this.colPatientTotal.Caption = "Hasta Tutarı";
+            this.colPatientTotal.DisplayFormat.FormatString = "#,##0.00";
+            this.colPatientTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPatientTotal.FieldName = "PatientTotal";
             this.colPatientTotal.Name = "colPatientTotal";
             this.colPatientTotal.Visible = true;
@@ -546,6 +552,8 @@
             // colInsuranceTotal
             // 
             this.colInsuranceTotal.Caption = "Kurum Tutarı";
+            this.colInsuranceTotal.DisplayFormat.FormatString = "#,##0.00";
+            this.colInsuranceTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colInsuranceTotal.FieldName = "InsuranceTotal";
             this.colInsuranceTotal.Name = "colInsuranceTotal";
             this.colInsuranceTotal.Visible = true;
