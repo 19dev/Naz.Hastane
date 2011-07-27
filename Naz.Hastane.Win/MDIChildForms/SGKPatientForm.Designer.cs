@@ -158,6 +158,9 @@
             this.teHomeAddress = new DevExpress.XtraEditors.MemoEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tbcHastaBilgileri = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.lcgRadiologyResults = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciRadiologyResultsMemo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciRadiologyResults = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgHastaBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIDNO = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDDate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -188,6 +191,8 @@
             this.lciMernisSorgu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMernis = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMedula = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lcgDigerBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lcgEkBilgiler = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciSigortaliKartNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -211,6 +216,17 @@
             this.lciJobPhone2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciJobFax = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciEMail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lcgPatientVisits = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeletePatientVisit = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeletePatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciDetayDok = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciChangeInsuranceCompany = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBelgeBas = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciKurumCarisineIsle = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciKurumCaridenSil = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgKurumOzelNot = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciKurumOzelNot = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgmedulaFollowUpQueryControl = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -238,9 +254,6 @@
             this.lciRaporuTextOlarakOlustur = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSelectAll = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTumLaboratuvarlariGoster = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgRadiologyResults = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciRadiologyResultsMemo = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciRadiologyResults = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAra = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHastaFatura = new DevExpress.XtraLayout.LayoutControlItem();
@@ -258,21 +271,9 @@
             this.lciAddPatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTaahutname = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciAddTreatmentCard = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciKurumCarisineIsle = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciKurumCaridenSil = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciBelgeBas = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciDeletePatientVisit = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciDetayDok = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciDeletePatientVisitDetail = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciChangeInsuranceCompany = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciPatientVisitControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
-            this.lcgPatientVisits = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcRadiologyResults)).BeginInit();
@@ -354,6 +355,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgRadiologyResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResultsMemo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).BeginInit();
@@ -384,6 +388,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMernisSorgu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMernis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMedula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).BeginInit();
@@ -407,6 +413,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciJobPhone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciJobFax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciEMail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientVisits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBelgeBas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgKurumOzelNot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumOzelNot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgmedulaFollowUpQueryControl)).BeginInit();
@@ -434,9 +451,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciRaporuTextOlarakOlustur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelectAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTumLaboratuvarlariGoster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgRadiologyResults)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResultsMemo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).BeginInit();
@@ -454,20 +468,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddTreatmentCard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBelgeBas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientVisits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -505,11 +507,11 @@
             this.layoutControl1.Controls.Add(this.sbVoucher);
             this.layoutControl1.Controls.Add(this.sbMedula);
             this.layoutControl1.Controls.Add(this.medulaSorgu);
-            this.layoutControl1.Controls.Add(this.sbDetayDok);
             this.layoutControl1.Controls.Add(this.sbDeletePatientVisit);
             this.layoutControl1.Controls.Add(this.sbBelgeBas);
             this.layoutControl1.Controls.Add(this.sbMernis);
             this.layoutControl1.Controls.Add(this.mernisSorgu);
+            this.layoutControl1.Controls.Add(this.sbDetayDok);
             this.layoutControl1.Controls.Add(this.sbKurumCarisineIsle);
             this.layoutControl1.Controls.Add(this.sbKurumCaridenSil);
             this.layoutControl1.Controls.Add(this.meKurumOzelNot);
@@ -1058,7 +1060,7 @@
             this.ddbChangeInsuranceCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ddbChangeInsuranceCompany.DropDownControl = this.popupMenu1;
-            this.ddbChangeInsuranceCompany.Location = new System.Drawing.Point(303, 671);
+            this.ddbChangeInsuranceCompany.Location = new System.Drawing.Point(280, 671);
             this.ddbChangeInsuranceCompany.MaximumSize = new System.Drawing.Size(110, 0);
             this.ddbChangeInsuranceCompany.Name = "ddbChangeInsuranceCompany";
             this.ddbChangeInsuranceCompany.Size = new System.Drawing.Size(110, 22);
@@ -1164,9 +1166,9 @@
             // sbDetayDok
             // 
             this.sbDetayDok.AutoWidthInLayoutControl = true;
-            this.sbDetayDok.Location = new System.Drawing.Point(417, 671);
+            this.sbDetayDok.Location = new System.Drawing.Point(442, 671);
             this.sbDetayDok.Name = "sbDetayDok";
-            this.sbDetayDok.Size = new System.Drawing.Size(103, 22);
+            this.sbDetayDok.Size = new System.Drawing.Size(61, 22);
             this.sbDetayDok.StyleController = this.layoutControl1;
             this.sbDetayDok.TabIndex = 107;
             this.sbDetayDok.Text = "Detay Dök";
@@ -1187,9 +1189,9 @@
             // sbBelgeBas
             // 
             this.sbBelgeBas.AutoWidthInLayoutControl = true;
-            this.sbBelgeBas.Location = new System.Drawing.Point(524, 671);
+            this.sbBelgeBas.Location = new System.Drawing.Point(531, 671);
             this.sbBelgeBas.Name = "sbBelgeBas";
-            this.sbBelgeBas.Size = new System.Drawing.Size(136, 22);
+            this.sbBelgeBas.Size = new System.Drawing.Size(80, 22);
             this.sbBelgeBas.StyleController = this.layoutControl1;
             this.sbBelgeBas.TabIndex = 104;
             this.sbBelgeBas.Text = "Belge Bas (F4)";
@@ -1216,9 +1218,9 @@
             // sbKurumCarisineIsle
             // 
             this.sbKurumCarisineIsle.AutoWidthInLayoutControl = true;
-            this.sbKurumCarisineIsle.Location = new System.Drawing.Point(664, 671);
+            this.sbKurumCarisineIsle.Location = new System.Drawing.Point(668, 671);
             this.sbKurumCarisineIsle.Name = "sbKurumCarisineIsle";
-            this.sbKurumCarisineIsle.Size = new System.Drawing.Size(115, 22);
+            this.sbKurumCarisineIsle.Size = new System.Drawing.Size(102, 22);
             this.sbKurumCarisineIsle.StyleController = this.layoutControl1;
             this.sbKurumCarisineIsle.TabIndex = 95;
             this.sbKurumCarisineIsle.Text = "Kurum Carisine İşle";
@@ -1227,9 +1229,9 @@
             // sbKurumCaridenSil
             // 
             this.sbKurumCaridenSil.AutoWidthInLayoutControl = true;
-            this.sbKurumCaridenSil.Location = new System.Drawing.Point(783, 671);
+            this.sbKurumCaridenSil.Location = new System.Drawing.Point(785, 671);
             this.sbKurumCaridenSil.Name = "sbKurumCaridenSil";
-            this.sbKurumCaridenSil.Size = new System.Drawing.Size(106, 22);
+            this.sbKurumCaridenSil.Size = new System.Drawing.Size(94, 22);
             this.sbKurumCaridenSil.StyleController = this.layoutControl1;
             this.sbKurumCaridenSil.TabIndex = 98;
             this.sbKurumCaridenSil.Text = "Kurum Cariden Sil";
@@ -1788,8 +1790,8 @@
             this.tbcHastaBilgileri.CustomizationFormText = "Patient Bilgileri";
             this.tbcHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.tbcHastaBilgileri.Name = "tbcHastaBilgileri";
-            this.tbcHastaBilgileri.SelectedTabPage = this.lcgRadiologyResults;
-            this.tbcHastaBilgileri.SelectedTabPageIndex = 9;
+            this.tbcHastaBilgileri.SelectedTabPage = this.lcgPatientVisits;
+            this.tbcHastaBilgileri.SelectedTabPageIndex = 2;
             this.tbcHastaBilgileri.Size = new System.Drawing.Size(911, 704);
             this.tbcHastaBilgileri.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgHastaBilgileri,
@@ -1803,6 +1805,41 @@
             this.lcgLabResults,
             this.lcgRadiologyResults});
             this.tbcHastaBilgileri.Text = "Hasta Bilgileri";
+            // 
+            // lcgRadiologyResults
+            // 
+            this.lcgRadiologyResults.CustomizationFormText = "Radyoloji Raporları";
+            this.lcgRadiologyResults.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciRadiologyResultsMemo,
+            this.lciRadiologyResults});
+            this.lcgRadiologyResults.Location = new System.Drawing.Point(0, 0);
+            this.lcgRadiologyResults.Name = "lcgRadiologyResults";
+            this.lcgRadiologyResults.Size = new System.Drawing.Size(887, 660);
+            this.lcgRadiologyResults.Text = "Radyoloji Raporları";
+            // 
+            // lciRadiologyResultsMemo
+            // 
+            this.lciRadiologyResultsMemo.Control = this.meRadiologyResults;
+            this.lciRadiologyResultsMemo.CustomizationFormText = "layoutControlItem19";
+            this.lciRadiologyResultsMemo.Location = new System.Drawing.Point(0, 389);
+            this.lciRadiologyResultsMemo.Name = "lciRadiologyResultsMemo";
+            this.lciRadiologyResultsMemo.Size = new System.Drawing.Size(887, 271);
+            this.lciRadiologyResultsMemo.Text = "lciRadiologyResultsMemo";
+            this.lciRadiologyResultsMemo.TextSize = new System.Drawing.Size(0, 0);
+            this.lciRadiologyResultsMemo.TextToControlDistance = 0;
+            this.lciRadiologyResultsMemo.TextVisible = false;
+            // 
+            // lciRadiologyResults
+            // 
+            this.lciRadiologyResults.Control = this.gcRadiologyResults;
+            this.lciRadiologyResults.CustomizationFormText = "layoutControlItem26";
+            this.lciRadiologyResults.Location = new System.Drawing.Point(0, 0);
+            this.lciRadiologyResults.Name = "lciRadiologyResults";
+            this.lciRadiologyResults.Size = new System.Drawing.Size(887, 389);
+            this.lciRadiologyResults.Text = "lciRadiologyResults";
+            this.lciRadiologyResults.TextSize = new System.Drawing.Size(0, 0);
+            this.lciRadiologyResults.TextToControlDistance = 0;
+            this.lciRadiologyResults.TextVisible = false;
             // 
             // lcgHastaBilgileri
             // 
@@ -2199,6 +2236,26 @@
             this.lciMedula.TextToControlDistance = 0;
             this.lciMedula.TextVisible = false;
             // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 378);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(246, 282);
+            this.emptySpaceItem4.Text = "emptySpaceItem4";
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
+            this.emptySpaceItem6.Location = new System.Drawing.Point(246, 378);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(282, 282);
+            this.emptySpaceItem6.Text = "emptySpaceItem6";
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // lcgDigerBilgiler
             // 
             this.lcgDigerBilgiler.CustomizationFormText = "Diğer Bilgileri";
@@ -2448,6 +2505,154 @@
             this.lciEMail.Size = new System.Drawing.Size(601, 24);
             this.lciEMail.Text = "Email";
             this.lciEMail.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
+            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 262);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(601, 354);
+            this.emptySpaceItem7.Text = "emptySpaceItem7";
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lcgPatientVisits
+            // 
+            this.lcgPatientVisits.CustomizationFormText = "İşlemler";
+            this.lcgPatientVisits.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciPatientVisitControl,
+            this.lciDeletePatientVisit,
+            this.lciDeletePatientVisitDetail,
+            this.emptySpaceItem1,
+            this.lciDetayDok,
+            this.lciChangeInsuranceCompany,
+            this.lciBelgeBas,
+            this.lciKurumCarisineIsle,
+            this.lciKurumCaridenSil,
+            this.emptySpaceItem8});
+            this.lcgPatientVisits.Location = new System.Drawing.Point(0, 0);
+            this.lcgPatientVisits.Name = "lcgPatientVisits";
+            this.lcgPatientVisits.Size = new System.Drawing.Size(887, 660);
+            this.lcgPatientVisits.Text = "İşlemler";
+            // 
+            // lciPatientVisitControl
+            // 
+            this.lciPatientVisitControl.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lciPatientVisitControl.AppearanceItemCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lciPatientVisitControl.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciPatientVisitControl.Control = this.PatientVisitControl;
+            this.lciPatientVisitControl.CustomizationFormText = "Ziyaretler";
+            this.lciPatientVisitControl.Location = new System.Drawing.Point(0, 0);
+            this.lciPatientVisitControl.Name = "lciPatientVisitControl";
+            this.lciPatientVisitControl.Size = new System.Drawing.Size(887, 634);
+            this.lciPatientVisitControl.Text = "Ziyaretler";
+            this.lciPatientVisitControl.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciPatientVisitControl.TextSize = new System.Drawing.Size(119, 13);
+            // 
+            // lciDeletePatientVisit
+            // 
+            this.lciDeletePatientVisit.Control = this.sbDeletePatientVisit;
+            this.lciDeletePatientVisit.CustomizationFormText = "İşlem Detay";
+            this.lciDeletePatientVisit.Location = new System.Drawing.Point(121, 634);
+            this.lciDeletePatientVisit.Name = "lciDeletePatientVisit";
+            this.lciDeletePatientVisit.Size = new System.Drawing.Size(142, 26);
+            this.lciDeletePatientVisit.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciDeletePatientVisit.Text = "Ziyaret Kartı Sil";
+            this.lciDeletePatientVisit.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeletePatientVisit.TextToControlDistance = 0;
+            this.lciDeletePatientVisit.TextVisible = false;
+            // 
+            // lciDeletePatientVisitDetail
+            // 
+            this.lciDeletePatientVisitDetail.Control = this.sbDeletePatientVisitDetail;
+            this.lciDeletePatientVisitDetail.CustomizationFormText = "İşlem Kartı Sil";
+            this.lciDeletePatientVisitDetail.Location = new System.Drawing.Point(0, 634);
+            this.lciDeletePatientVisitDetail.Name = "lciDeletePatientVisitDetail";
+            this.lciDeletePatientVisitDetail.Size = new System.Drawing.Size(121, 26);
+            this.lciDeletePatientVisitDetail.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciDeletePatientVisitDetail.Text = "İşlem Kartı Sil";
+            this.lciDeletePatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeletePatientVisitDetail.TextToControlDistance = 0;
+            this.lciDeletePatientVisitDetail.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(876, 634);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(11, 26);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciDetayDok
+            // 
+            this.lciDetayDok.Control = this.sbDetayDok;
+            this.lciDetayDok.CustomizationFormText = "Detay Dök";
+            this.lciDetayDok.Location = new System.Drawing.Point(425, 634);
+            this.lciDetayDok.Name = "lciDetayDok";
+            this.lciDetayDok.Size = new System.Drawing.Size(89, 26);
+            this.lciDetayDok.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciDetayDok.Text = "Detay Dök";
+            this.lciDetayDok.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDetayDok.TextToControlDistance = 0;
+            this.lciDetayDok.TextVisible = false;
+            this.lciDetayDok.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
+            // 
+            // lciChangeInsuranceCompany
+            // 
+            this.lciChangeInsuranceCompany.Control = this.ddbChangeInsuranceCompany;
+            this.lciChangeInsuranceCompany.CustomizationFormText = "layoutControlItem6";
+            this.lciChangeInsuranceCompany.Location = new System.Drawing.Point(263, 634);
+            this.lciChangeInsuranceCompany.Name = "lciChangeInsuranceCompany";
+            this.lciChangeInsuranceCompany.Size = new System.Drawing.Size(114, 26);
+            this.lciChangeInsuranceCompany.Text = "Kurum Değiştir";
+            this.lciChangeInsuranceCompany.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangeInsuranceCompany.TextToControlDistance = 0;
+            this.lciChangeInsuranceCompany.TextVisible = false;
+            this.lciChangeInsuranceCompany.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
+            // 
+            // lciBelgeBas
+            // 
+            this.lciBelgeBas.Control = this.sbBelgeBas;
+            this.lciBelgeBas.CustomizationFormText = "Belge Bas";
+            this.lciBelgeBas.Location = new System.Drawing.Point(514, 634);
+            this.lciBelgeBas.Name = "lciBelgeBas";
+            this.lciBelgeBas.Size = new System.Drawing.Size(137, 26);
+            this.lciBelgeBas.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciBelgeBas.Text = "Belge Bas";
+            this.lciBelgeBas.TextSize = new System.Drawing.Size(0, 0);
+            this.lciBelgeBas.TextToControlDistance = 0;
+            this.lciBelgeBas.TextVisible = false;
+            this.lciBelgeBas.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
+            // 
+            // lciKurumCarisineIsle
+            // 
+            this.lciKurumCarisineIsle.Control = this.sbKurumCarisineIsle;
+            this.lciKurumCarisineIsle.CustomizationFormText = "Kurum Carisine İşle";
+            this.lciKurumCarisineIsle.Location = new System.Drawing.Point(651, 634);
+            this.lciKurumCarisineIsle.Name = "lciKurumCarisineIsle";
+            this.lciKurumCarisineIsle.Size = new System.Drawing.Size(117, 26);
+            this.lciKurumCarisineIsle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciKurumCarisineIsle.Text = "Kurum Carisine İşle";
+            this.lciKurumCarisineIsle.TextSize = new System.Drawing.Size(0, 0);
+            this.lciKurumCarisineIsle.TextToControlDistance = 0;
+            this.lciKurumCarisineIsle.TextVisible = false;
+            this.lciKurumCarisineIsle.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
+            // 
+            // lciKurumCaridenSil
+            // 
+            this.lciKurumCaridenSil.Control = this.sbKurumCaridenSil;
+            this.lciKurumCaridenSil.CustomizationFormText = "Kurum Cariden Sil";
+            this.lciKurumCaridenSil.Location = new System.Drawing.Point(768, 634);
+            this.lciKurumCaridenSil.Name = "lciKurumCaridenSil";
+            this.lciKurumCaridenSil.Size = new System.Drawing.Size(108, 26);
+            this.lciKurumCaridenSil.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
+            this.lciKurumCaridenSil.Text = "Kurum Cariden Sil";
+            this.lciKurumCaridenSil.TextSize = new System.Drawing.Size(0, 0);
+            this.lciKurumCaridenSil.TextToControlDistance = 0;
+            this.lciKurumCaridenSil.TextVisible = false;
+            this.lciKurumCaridenSil.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
             // 
             // lcgKurumOzelNot
             // 
@@ -2775,41 +2980,6 @@
             this.lciTumLaboratuvarlariGoster.TextToControlDistance = 0;
             this.lciTumLaboratuvarlariGoster.TextVisible = false;
             // 
-            // lcgRadiologyResults
-            // 
-            this.lcgRadiologyResults.CustomizationFormText = "Radyoloji Raporları";
-            this.lcgRadiologyResults.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciRadiologyResultsMemo,
-            this.lciRadiologyResults});
-            this.lcgRadiologyResults.Location = new System.Drawing.Point(0, 0);
-            this.lcgRadiologyResults.Name = "lcgRadiologyResults";
-            this.lcgRadiologyResults.Size = new System.Drawing.Size(887, 660);
-            this.lcgRadiologyResults.Text = "Radyoloji Raporları";
-            // 
-            // lciRadiologyResultsMemo
-            // 
-            this.lciRadiologyResultsMemo.Control = this.meRadiologyResults;
-            this.lciRadiologyResultsMemo.CustomizationFormText = "layoutControlItem19";
-            this.lciRadiologyResultsMemo.Location = new System.Drawing.Point(0, 389);
-            this.lciRadiologyResultsMemo.Name = "lciRadiologyResultsMemo";
-            this.lciRadiologyResultsMemo.Size = new System.Drawing.Size(887, 271);
-            this.lciRadiologyResultsMemo.Text = "lciRadiologyResultsMemo";
-            this.lciRadiologyResultsMemo.TextSize = new System.Drawing.Size(0, 0);
-            this.lciRadiologyResultsMemo.TextToControlDistance = 0;
-            this.lciRadiologyResultsMemo.TextVisible = false;
-            // 
-            // lciRadiologyResults
-            // 
-            this.lciRadiologyResults.Control = this.gcRadiologyResults;
-            this.lciRadiologyResults.CustomizationFormText = "layoutControlItem26";
-            this.lciRadiologyResults.Location = new System.Drawing.Point(0, 0);
-            this.lciRadiologyResults.Name = "lciRadiologyResults";
-            this.lciRadiologyResults.Size = new System.Drawing.Size(887, 389);
-            this.lciRadiologyResults.Text = "lciRadiologyResults";
-            this.lciRadiologyResults.TextSize = new System.Drawing.Size(0, 0);
-            this.lciRadiologyResults.TextToControlDistance = 0;
-            this.lciRadiologyResults.TextVisible = false;
-            // 
             // lcgSagTuslar
             // 
             this.lcgSagTuslar.CustomizationFormText = "layoutControlGroup7";
@@ -3020,125 +3190,6 @@
             this.lciAddTreatmentCard.TextToControlDistance = 0;
             this.lciAddTreatmentCard.TextVisible = false;
             // 
-            // lciKurumCarisineIsle
-            // 
-            this.lciKurumCarisineIsle.Control = this.sbKurumCarisineIsle;
-            this.lciKurumCarisineIsle.CustomizationFormText = "Kurum Carisine İşle";
-            this.lciKurumCarisineIsle.Location = new System.Drawing.Point(647, 634);
-            this.lciKurumCarisineIsle.Name = "lciKurumCarisineIsle";
-            this.lciKurumCarisineIsle.Size = new System.Drawing.Size(119, 26);
-            this.lciKurumCarisineIsle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciKurumCarisineIsle.Text = "Kurum Carisine İşle";
-            this.lciKurumCarisineIsle.TextSize = new System.Drawing.Size(0, 0);
-            this.lciKurumCarisineIsle.TextToControlDistance = 0;
-            this.lciKurumCarisineIsle.TextVisible = false;
-            this.lciKurumCarisineIsle.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
-            // 
-            // lciKurumCaridenSil
-            // 
-            this.lciKurumCaridenSil.Control = this.sbKurumCaridenSil;
-            this.lciKurumCaridenSil.CustomizationFormText = "Kurum Cariden Sil";
-            this.lciKurumCaridenSil.Location = new System.Drawing.Point(766, 634);
-            this.lciKurumCaridenSil.Name = "lciKurumCaridenSil";
-            this.lciKurumCaridenSil.Size = new System.Drawing.Size(110, 26);
-            this.lciKurumCaridenSil.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciKurumCaridenSil.Text = "Kurum Cariden Sil";
-            this.lciKurumCaridenSil.TextSize = new System.Drawing.Size(0, 0);
-            this.lciKurumCaridenSil.TextToControlDistance = 0;
-            this.lciKurumCaridenSil.TextVisible = false;
-            this.lciKurumCaridenSil.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
-            // 
-            // lciBelgeBas
-            // 
-            this.lciBelgeBas.Control = this.sbBelgeBas;
-            this.lciBelgeBas.CustomizationFormText = "Belge Bas";
-            this.lciBelgeBas.Location = new System.Drawing.Point(507, 634);
-            this.lciBelgeBas.Name = "lciBelgeBas";
-            this.lciBelgeBas.Size = new System.Drawing.Size(140, 26);
-            this.lciBelgeBas.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciBelgeBas.Text = "Belge Bas";
-            this.lciBelgeBas.TextSize = new System.Drawing.Size(0, 0);
-            this.lciBelgeBas.TextToControlDistance = 0;
-            this.lciBelgeBas.TextVisible = false;
-            this.lciBelgeBas.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
-            // 
-            // lciDeletePatientVisit
-            // 
-            this.lciDeletePatientVisit.Control = this.sbDeletePatientVisit;
-            this.lciDeletePatientVisit.CustomizationFormText = "İşlem Detay";
-            this.lciDeletePatientVisit.Location = new System.Drawing.Point(121, 634);
-            this.lciDeletePatientVisit.Name = "lciDeletePatientVisit";
-            this.lciDeletePatientVisit.Size = new System.Drawing.Size(165, 26);
-            this.lciDeletePatientVisit.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciDeletePatientVisit.Text = "Ziyaret Kartı Sil";
-            this.lciDeletePatientVisit.TextSize = new System.Drawing.Size(0, 0);
-            this.lciDeletePatientVisit.TextToControlDistance = 0;
-            this.lciDeletePatientVisit.TextVisible = false;
-            // 
-            // lciDetayDok
-            // 
-            this.lciDetayDok.Control = this.sbDetayDok;
-            this.lciDetayDok.CustomizationFormText = "Detay Dök";
-            this.lciDetayDok.Location = new System.Drawing.Point(400, 634);
-            this.lciDetayDok.Name = "lciDetayDok";
-            this.lciDetayDok.Size = new System.Drawing.Size(107, 26);
-            this.lciDetayDok.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciDetayDok.Text = "Detay Dök";
-            this.lciDetayDok.TextSize = new System.Drawing.Size(0, 0);
-            this.lciDetayDok.TextToControlDistance = 0;
-            this.lciDetayDok.TextVisible = false;
-            this.lciDetayDok.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.OnlyInCustomization;
-            // 
-            // lciDeletePatientVisitDetail
-            // 
-            this.lciDeletePatientVisitDetail.Control = this.sbDeletePatientVisitDetail;
-            this.lciDeletePatientVisitDetail.CustomizationFormText = "İşlem Kartı Sil";
-            this.lciDeletePatientVisitDetail.Location = new System.Drawing.Point(0, 634);
-            this.lciDeletePatientVisitDetail.Name = "lciDeletePatientVisitDetail";
-            this.lciDeletePatientVisitDetail.Size = new System.Drawing.Size(121, 26);
-            this.lciDeletePatientVisitDetail.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
-            this.lciDeletePatientVisitDetail.Text = "İşlem Kartı Sil";
-            this.lciDeletePatientVisitDetail.TextSize = new System.Drawing.Size(0, 0);
-            this.lciDeletePatientVisitDetail.TextToControlDistance = 0;
-            this.lciDeletePatientVisitDetail.TextVisible = false;
-            // 
-            // lciChangeInsuranceCompany
-            // 
-            this.lciChangeInsuranceCompany.Control = this.ddbChangeInsuranceCompany;
-            this.lciChangeInsuranceCompany.CustomizationFormText = "layoutControlItem6";
-            this.lciChangeInsuranceCompany.Location = new System.Drawing.Point(286, 634);
-            this.lciChangeInsuranceCompany.Name = "lciChangeInsuranceCompany";
-            this.lciChangeInsuranceCompany.Size = new System.Drawing.Size(114, 26);
-            this.lciChangeInsuranceCompany.Text = "Kurum Değiştir";
-            this.lciChangeInsuranceCompany.TextSize = new System.Drawing.Size(0, 0);
-            this.lciChangeInsuranceCompany.TextToControlDistance = 0;
-            this.lciChangeInsuranceCompany.TextVisible = false;
-            this.lciChangeInsuranceCompany.Click += new System.EventHandler(this.ddbChangeInsuranceCompany_Click);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(876, 634);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(11, 26);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lciPatientVisitControl
-            // 
-            this.lciPatientVisitControl.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lciPatientVisitControl.AppearanceItemCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lciPatientVisitControl.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciPatientVisitControl.Control = this.PatientVisitControl;
-            this.lciPatientVisitControl.CustomizationFormText = "Ziyaretler";
-            this.lciPatientVisitControl.Location = new System.Drawing.Point(0, 0);
-            this.lciPatientVisitControl.Name = "lciPatientVisitControl";
-            this.lciPatientVisitControl.Size = new System.Drawing.Size(887, 634);
-            this.lciPatientVisitControl.Text = "Ziyaretler";
-            this.lciPatientVisitControl.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciPatientVisitControl.TextSize = new System.Drawing.Size(119, 13);
-            // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
@@ -3154,53 +3205,15 @@
             this.timerHastaKabulOku.Interval = 200;
             this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // lcgPatientVisits
+            // emptySpaceItem8
             // 
-            this.lcgPatientVisits.CustomizationFormText = "İşlemler";
-            this.lcgPatientVisits.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciPatientVisitControl,
-            this.lciDeletePatientVisit,
-            this.lciDeletePatientVisitDetail,
-            this.emptySpaceItem1,
-            this.lciDetayDok,
-            this.lciChangeInsuranceCompany,
-            this.lciBelgeBas,
-            this.lciKurumCarisineIsle,
-            this.lciKurumCaridenSil});
-            this.lcgPatientVisits.Location = new System.Drawing.Point(0, 0);
-            this.lcgPatientVisits.Name = "lcgPatientVisits";
-            this.lcgPatientVisits.Size = new System.Drawing.Size(887, 660);
-            this.lcgPatientVisits.Text = "İşlemler";
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 378);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(246, 282);
-            this.emptySpaceItem4.Text = "emptySpaceItem4";
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(246, 378);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(282, 282);
-            this.emptySpaceItem6.Text = "emptySpaceItem6";
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 262);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(601, 354);
-            this.emptySpaceItem7.Text = "emptySpaceItem7";
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem8.AllowHotTrack = false;
+            this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
+            this.emptySpaceItem8.Location = new System.Drawing.Point(377, 634);
+            this.emptySpaceItem8.Name = "emptySpaceItem8";
+            this.emptySpaceItem8.Size = new System.Drawing.Size(48, 26);
+            this.emptySpaceItem8.Text = "emptySpaceItem8";
+            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // SGKPatientForm
             // 
@@ -3297,6 +3310,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgRadiologyResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResultsMemo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).EndInit();
@@ -3327,6 +3343,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMernisSorgu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMernis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMedula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDigerBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgEkBilgiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSigortaliKartNo)).EndInit();
@@ -3350,6 +3368,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciJobPhone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciJobFax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciEMail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientVisits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBelgeBas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgKurumOzelNot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKurumOzelNot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgmedulaFollowUpQueryControl)).EndInit();
@@ -3377,9 +3406,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciRaporuTextOlarakOlustur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelectAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTumLaboratuvarlariGoster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgRadiologyResults)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResultsMemo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciRadiologyResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHastaFatura)).EndInit();
@@ -3397,20 +3423,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddPatientVisitDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTaahutname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddTreatmentCard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCarisineIsle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKurumCaridenSil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBelgeBas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDetayDok)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePatientVisitDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciChangeInsuranceCompany)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgPatientVisits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3661,5 +3675,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.LayoutControlGroup lcgPatientVisits;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
     }
 }

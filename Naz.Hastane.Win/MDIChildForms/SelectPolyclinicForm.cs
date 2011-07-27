@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.Data;
+using Naz.Hastane.Data.Entities;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -11,8 +12,35 @@ namespace Naz.Hastane.Win.MDIChildForms
         private Doctor _Doctor = null;
         public Doctor Doctor { get { return _Doctor; } }
 
+        private InsuranceCompany _InsuranceCompany = null;
+        public InsuranceCompany InsuranceCompany { 
+            get { return _InsuranceCompany; } 
+            set
+            {
+                if (_InsuranceCompany == value)
+                    return;
+                _InsuranceCompany = value;
+                lblOldInsuranceCompany.Text = _InsuranceCompany.Code;
+                NewInsuranceCompany = value;
+            }
+        }
+
+        private InsuranceCompany _NewInsuranceCompany = null;
+        public InsuranceCompany NewInsuranceCompany {
+            get { return _NewInsuranceCompany; }
+            set
+            {
+                if (_NewInsuranceCompany == value)
+                    return;
+                _NewInsuranceCompany = value;
+                lblNewInsuranceCompany.Text = _NewInsuranceCompany.Code;
+            }
+        }
+
         private bool _IsSelected = false;
-        public bool IsSelected { get { return _IsSelected; } }
+        public bool IsSelected { 
+            get { return _IsSelected; }
+        }
         public bool SameDay;
 
         public SelectPolyclinicForm()
@@ -67,5 +95,41 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             SameDay = this.ceSameDay.Checked;
         }
+
+        #region Change Insurance Company
+        private void ddbChangeInsuranceCompany_Click(object sender, EventArgs e)
+        {
+            SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm();
+            frm.ShowDialog();
+            if (frm.IsSelected)
+                ChangeInsuranceCompany(frm.InsuranceCompany);
+        }
+
+        private void iSGK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSGK(Session));
+        }
+
+        private void iSGKAcil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSGKAcil(Session));
+        }
+
+        private void iNormal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetNormalPatientCode(Session));
+        }
+
+        private void iOzelHasta_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChangeInsuranceCompany(LookUpServices.GetSpecialPatientCode(Session));
+        }
+
+        private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
+        {
+            NewInsuranceCompany = newInsuranceCompany;
+        }
+        #endregion
+
     }
 }

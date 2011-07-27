@@ -337,16 +337,21 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void ProcessNewPolyclinic()
         {
             SelectPolyclinicForm frm = new SelectPolyclinicForm(PatientServices.IsSGKSameDay(Patient));
+            frm.InsuranceCompany = Patient.InsuranceCompany;
+
             frm.ShowDialog();
             if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
             {
+                if (frm.NewInsuranceCompany != Patient.InsuranceCompany)
+                    PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, new List<PatientVisit>(), new List<PatientVisitDetailWithProduct>(), frm.NewInsuranceCompany);
+
                 _Doctor = frm.Doctor;
                 PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
                 ReOpenPatient();
                 currentPatientVisit = Patient.PatientVisits[0];
                 CallMedulaProvision();
             }
-            SavePatient();
+            //SavePatient();
         }
 
         private bool IsNewPolyclinicOK(Doctor doctor)
