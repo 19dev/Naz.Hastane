@@ -109,15 +109,6 @@ namespace Naz.Hastane.Data.Services
             using (ITransaction transaction = session.BeginTransaction())
             {
                 session.SaveOrUpdate(personnel);
-                //if (personnel.PersonelNo == null || personnel.PersonelNo == "")
-                //{
-                //    personnel.PersonelNo = GetNewPersonnelNo().ToString();
-                //    session.Save(personnel);
-                //}
-                //else
-                //{
-                //    session.Update(personnel);
-                //}
                 transaction.Commit();
             }
         }
@@ -147,8 +138,8 @@ namespace Naz.Hastane.Data.Services
             personnel.Ad = "";
             personnel.Soyad = "";
             personnel.TCID = "";
-            personnel.Cinsiyet = "1"; //CINSIYETI 1:Male, 2:Female
-            personnel.KanGrubu = 8; //KANGRUBU
+            personnel.Cinsiyeti = ""; 
+            personnel.KanGrubu = ""; 
             personnel.EvAdresi = "";
             personnel.Mahalle = "";
             personnel.Ilce = "";
@@ -161,28 +152,6 @@ namespace Naz.Hastane.Data.Services
         }                      
                                       
                        
-        //'select H.SNR, H.AKOD, H.TANIM, H.GRUP, H.CODE, H.TARIH, H.NAME1, H.ADET, H.SATISF, H.KSATISF, H.MAKNO, H.SIRANO, B.AMBU 
-        //from HIZIL H, BEHAND B 
-        //where H.KNR=B.KNR and H.SNR=B.SNR and H.KNR=''870366'' AND h.SNR in (''993'') and B.IMPF2 is NULL and B.CIKTAR is null  
-        //AND B.TAKIPSEND=''9'' order by H.TARIH'
-
-        //select isnull(sum(ESATISF),0) as ESKISATISF, isnull(sum(YSATISF),0) as YENISATISF from HASTAINDIRIMLER_DETAY 
-        //    where KNR='870366' and SNR='993' and SIRANO=1
-
-        //select KNR, PFIYLIST, YFIYLIST,  ILACODE, SARFODE, HASTAKATILIM from KURADR where PSG='SGK'
-
-        //select SATISF93 As SATISF, KSATISF93 As KSATISF from HIZMET where TANIM='00' and GRUP='011' and CODE='1700'
-
-        //'SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR=''01035'' AND TANIM=''00'' AND GRUP=''011''
-
-        // INSERT into LOGKURUM_DEGISTI (KD_ID, KNR, TARIH, EPSG, YPSG, OHASTATOP, EHASTATOP, EKURUMTOP, YHASTATOP, YKURUMTOP, USER_ID, DATE_CREATE) values (275977,'870366','09.05.2011 10:32:10','SGK - ','SGK',0,20.33
-
-        
-        // Hasta Borç Alacak
-
-        //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR
-        //select SNR, TARIH, TUTAR, MAKBUZTIPI, BORCALACAK from KASA where KATILIM is NULL AND KNR='870366' and ISIPTAL is null order by SNR
-        //select FATURATARIHI, INDIRIM, KDVTUTARI, YUVARLAMA from FATURA where KNR='870366' and ISIPTAL is null order by FATURATARIHI
     }
 
 }

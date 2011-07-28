@@ -71,7 +71,7 @@ namespace Naz.Hastane.Win {
             InitColorGallery();
             InitEditors();
             UserLookAndFeel.Default.SetSkinStyle("Office 2010 Blue");
-            this.Text = "SurpMed v. " + Application.ProductVersion;
+            this.Text = "Amira v. " + Application.ProductVersion;
             AttachMDIChildButtons();
             AttachLookUpButtons();
             AttachReportCommands();
@@ -175,7 +175,7 @@ namespace Naz.Hastane.Win {
         }
         #region Init
         public void UpdateText() {
-            rcMain.ApplicationCaption = "SurpMed V" + Application.ProductVersion;
+            rcMain.ApplicationCaption = "Amira V" + Application.ProductVersion;
             //ribbonControl1.ApplicationDocumentCaption = CurrentDocName + (CurrentModified ? "*" : "");
             //Text = string.Format("Ribbon Simple Pad ({0})", CurrentDocName);
             //siDocName.Caption = string.Format("  {0}", CurrentDocName);
@@ -486,7 +486,7 @@ namespace Naz.Hastane.Win {
         #endregion
 
         private void iHakkinda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
-            DevExpress.Utils.About.frmAbout dlg = new DevExpress.Utils.About.frmAbout("SurpMed v." + Application.ProductVersion);
+            DevExpress.Utils.About.frmAbout dlg = new DevExpress.Utils.About.frmAbout("Amira v." + Application.ProductVersion);
             dlg.ShowDialog();
         }
 
@@ -989,7 +989,7 @@ namespace Naz.Hastane.Win {
             if (form.IsOK)
             {
                 UIUtilities.CurrentUser = form.User;
-                this.Text = String.Format("SurpMed v. {0} ({1})", Application.ProductVersion, UIUtilities.CurrentUser.USER_ID);
+                this.Text = String.Format("Amira v. {0} ({1})", Application.ProductVersion, UIUtilities.CurrentUser.USER_ID);
             }
             EnableRibbonButtons(form.IsOK);
         }

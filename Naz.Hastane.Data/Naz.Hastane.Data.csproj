@@ -156,10 +156,10 @@
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
     <Compile Include="Entities\Patient\UserPatientVisit.cs" />
+    <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
-    <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\PersonelEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelHastaneBolumu.cs" />
     <Compile Include="Entities\Personel\PersonelHizmetIciEgitim.cs" />

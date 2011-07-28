@@ -51,7 +51,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.Email)           .Column("EMAIL")        .Length(50);
             Map(x => x.Profession)      .Column("MESLEK")       .Length(20);
 
-            References(x => x.InsuranceCompany).Column("PSG").LazyLoad();    //      .Length(6)  .Not.Nullable();
+            References(x => x.InsuranceCompany).Column("PSG").LazyLoad().Cascade.None();    //      .Length(6)  .Not.Nullable();
             Map(x => x.ProtocolNo)      .Column("PROTNO")       .Length(20);
             Map(x => x.PatientContribution).Column("HASTAKATILIM").Length(1).Not.Nullable();
             Map(x => x.PatientLimit)    .Column("HASTALIMIT")               .Not.Nullable();

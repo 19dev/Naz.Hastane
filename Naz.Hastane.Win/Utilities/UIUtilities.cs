@@ -80,7 +80,7 @@ namespace Naz.Hastane.Win
             {
                 if (_Configuration == null)
                 {
-                    //string appPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SurpMed");
+                    //string appPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Amira");
                     //if (!Directory.Exists(appPath))
                     //{
                     //    Directory.CreateDirectory(appPath);

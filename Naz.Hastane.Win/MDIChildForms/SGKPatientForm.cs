@@ -119,59 +119,105 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void InitPatientBindings()
         {
+            this.tePatientNo.DataBindings.Clear();
             this.tePatientNo.DataBindings.Add("EditValue", Patient, "PatientNo");
             //this.teInsuranceCompany.DataBindings.Add("EditValue", Patient, "InsuranceCompany.Name");
             if (this.Patient.InsuranceCompany != null)
                 this.teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
 
+            this.teTCID.DataBindings.Clear();
             this.teTCID.DataBindings.Add("EditValue", Patient, "TCId");
+            this.teFirstName.DataBindings.Clear();
             this.teFirstName.DataBindings.Add("EditValue", Patient, "FirstName");
+            this.teLastName.DataBindings.Clear();
             this.teLastName.DataBindings.Add("EditValue", Patient, "LastName");
+            this.rgSex.DataBindings.Clear();
             this.rgSex.DataBindings.Add("EditValue", Patient, "Sex");
+            this.rgMaritalStatus.DataBindings.Clear();
             this.rgMaritalStatus.DataBindings.Add("EditValue", Patient, "MaritalStatus");
+            this.teFatherName.DataBindings.Clear();
             this.teFatherName.DataBindings.Add("EditValue", Patient, "FatherName");
+            this.teMotherName.DataBindings.Clear();
             this.teMotherName.DataBindings.Add("EditValue", Patient, "MotherName");
+            this.teBirthPlace.DataBindings.Clear();
             this.teBirthPlace.DataBindings.Add("EditValue", Patient, "BirthPlace");
+            this.deBirthDate.DataBindings.Clear();
             this.deBirthDate.DataBindings.Add("EditValue", Patient, "BirthDate");
+            this.lueStatus.DataBindings.Clear();
             this.lueStatus.DataBindings.Add("EditValue", Patient, "Status");
+            this.lueInsuranceType.DataBindings.Clear();
             this.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
+            this.medulaSorgu.lueInsuranceType.DataBindings.Clear();
             this.medulaSorgu.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
+            this.teHomePhone2.DataBindings.Clear();
             this.teHomePhone2.DataBindings.Add("EditValue", Patient, "HomePhone2");
+            this.teHomePhone1.DataBindings.Clear();
             this.teHomePhone1.DataBindings.Add("EditValue", Patient, "HomePhone1");
 
+            this.medulaSorgu.lueTransferorInstitution.DataBindings.Clear();
             this.medulaSorgu.lueTransferorInstitution.DataBindings.Add("EditValue", Patient, "TransferorInstitution");
-            
+
+            this.rgIDType.DataBindings.Clear();
             this.rgIDType.DataBindings.Add("EditValue", Patient, "IDType");
+            this.teIDNO.DataBindings.Clear();
             this.teIDNO.DataBindings.Add("EditValue", Patient, "IDNO");
+            this.deIDDate.DataBindings.Clear();
             this.deIDDate.DataBindings.Add("EditValue", Patient, "IDDate");
+            this.teIDPlace.DataBindings.Clear();
             this.teIDPlace.DataBindings.Add("EditValue", Patient, "IDPlace");
+            this.lueNationality.DataBindings.Clear();
             this.lueNationality.DataBindings.Add("EditValue", Patient, "Nationality");
+            this.teHomeAddress.DataBindings.Clear();
             this.teHomeAddress.DataBindings.Add("EditValue", Patient, "HomeAddress");
+            this.teHomeDistrict.DataBindings.Clear();
             this.teHomeDistrict.DataBindings.Add("EditValue", Patient, "HomeDistrict");
+            this.teHomeTown.DataBindings.Clear();
             this.teHomeTown.DataBindings.Add("EditValue", Patient, "HomeTown");
+            this.teHomePostCode.DataBindings.Clear();
             this.teHomePostCode.DataBindings.Add("EditValue", Patient, "HomePostCode");
+            this.lueHomeCity.DataBindings.Clear();
             this.lueHomeCity.DataBindings.Add("EditValue", Patient, "HomeCity");
 
+            this.teOfficer.DataBindings.Clear();
             this.teOfficer.DataBindings.Add("EditValue", Patient, "Officer");
+            this.teProfession.DataBindings.Clear();
             this.teProfession.DataBindings.Add("EditValue", Patient, "Profession");
+            this.teEMSNo.DataBindings.Clear();
             this.teEMSNo.DataBindings.Add("EditValue", Patient, "EMSNO");
+            this.teProtocolNo.DataBindings.Clear();
             this.teProtocolNo.DataBindings.Add("EditValue", Patient, "ProtocolNo");
+            this.teBAGNO.DataBindings.Clear();
             this.teBAGNO.DataBindings.Add("EditValue", Patient, "BAGNO");
+            this.teSSKSicilNo.DataBindings.Clear();
             this.teSSKSicilNo.DataBindings.Add("EditValue", Patient, "YKARTNO");
+            this.teSevkEdilenYer.DataBindings.Clear();
             this.teSevkEdilenYer.DataBindings.Add("EditValue", Patient, "GELHAST");
+            this.lueSigortaMudurlugu.DataBindings.Clear();
             this.lueSigortaMudurlugu.DataBindings.Add("EditValue", Patient, "SIGMUD");
+            this.teNufusaKayitliIl.DataBindings.Clear();
             this.teNufusaKayitliIl.DataBindings.Add("EditValue", Patient, "RegisteredCity");
+            this.teNufusaKayitliIlce.DataBindings.Clear();
             this.teNufusaKayitliIlce.DataBindings.Add("EditValue", Patient, "RegisteredTown");
+            this.teSigortaliKartNo.DataBindings.Clear();
             this.teSigortaliKartNo.DataBindings.Add("EditValue", Patient, "SIGORTALIKARTNO");
 
+            this.teJobName.DataBindings.Clear();
             this.teJobName.DataBindings.Add("EditValue", Patient, "JobName");
+            this.teJobNo.DataBindings.Clear();
             this.teJobNo.DataBindings.Add("EditValue", Patient, "JobNo");
+            this.meJobAddress.DataBindings.Clear();
             this.meJobAddress.DataBindings.Add("EditValue", Patient, "JobAddress");
+            this.lueJobCity.DataBindings.Clear();
             this.lueJobCity.DataBindings.Add("EditValue", Patient, "JobCity");
+            this.teJobPostCode.DataBindings.Clear();
             this.teJobPostCode.DataBindings.Add("EditValue", Patient, "JobPostCode");
+            this.teJobPhone1.DataBindings.Clear();
             this.teJobPhone1.DataBindings.Add("EditValue", Patient, "JobPhone1");
+            this.teJobPhone2.DataBindings.Clear();
             this.teJobPhone2.DataBindings.Add("EditValue", Patient, "JobPhone2");
+            this.teJobFax.DataBindings.Clear();
             this.teJobFax.DataBindings.Add("EditValue", Patient, "JobFax");
+            this.teEmail.DataBindings.Clear();
             this.teEmail.DataBindings.Add("EditValue", Patient, "Email");
 
             this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
@@ -343,11 +389,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
             {
                 if (frm.NewInsuranceCompany != Patient.InsuranceCompany)
+                {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, new List<PatientVisit>(), new List<PatientVisitDetailWithProduct>(), frm.NewInsuranceCompany);
+                    ReOpenPatient();
+                }
 
                 _Doctor = frm.Doctor;
                 PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
                 ReOpenPatient();
+                
                 currentPatientVisit = Patient.PatientVisits[0];
                 CallMedulaProvision();
             }

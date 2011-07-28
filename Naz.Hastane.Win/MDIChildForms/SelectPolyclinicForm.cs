@@ -20,7 +20,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (_InsuranceCompany == value)
                     return;
                 _InsuranceCompany = value;
-                lblOldInsuranceCompany.Text = _InsuranceCompany.Code;
+                lblOldInsuranceCompany.Text = "Eski Kurum: " + _InsuranceCompany.Code;
                 NewInsuranceCompany = value;
             }
         }
@@ -33,7 +33,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (_NewInsuranceCompany == value)
                     return;
                 _NewInsuranceCompany = value;
-                lblNewInsuranceCompany.Text = _NewInsuranceCompany.Code;
+                lblNewInsuranceCompany.Text = "Yeni Kurum: " + _NewInsuranceCompany.Code;
             }
         }
 
@@ -51,12 +51,12 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
 
             //this.AcceptButton = this.sbSelect;
-            if (sameDay)
-                this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            else
-                this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            this.ceSameDay.Visible = sameDay;
-            this.ceSameDay.Checked = sameDay;
+            //if (sameDay)
+            //    this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            //else
+            //    this.lciSameDay.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            //this.ceSameDay.Visible = sameDay;
+            //this.ceSameDay.Checked = sameDay;
             SameDay = sameDay;
 
             var doctors = LookUpServices.GetSGKDoctors(Session);

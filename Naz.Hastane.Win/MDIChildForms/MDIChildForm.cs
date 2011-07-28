@@ -71,6 +71,7 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         public void ReOpenSession()
         {
             session.Clear();
+            session.Close();
             session.Dispose();
             session = SessionFactory.OpenSession();
         }

@@ -127,10 +127,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.iSGK),
             new DevExpress.XtraBars.LinkPersistInfo(this.iSGKAcil),
             new DevExpress.XtraBars.LinkPersistInfo(this.iNormal),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iOzelHasta),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iSGK),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iSGKAcil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.iNormal),
             new DevExpress.XtraBars.LinkPersistInfo(this.iOzelHasta)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
@@ -140,24 +136,28 @@
             this.iSGK.Caption = "SGK";
             this.iSGK.Id = 0;
             this.iSGK.Name = "iSGK";
+            this.iSGK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGK_ItemClick);
             // 
             // iSGKAcil
             // 
             this.iSGKAcil.Caption = "SGK Acil";
             this.iSGKAcil.Id = 1;
             this.iSGKAcil.Name = "iSGKAcil";
+            this.iSGKAcil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSGKAcil_ItemClick);
             // 
             // iNormal
             // 
             this.iNormal.Caption = "KRM000 - Normal";
             this.iNormal.Id = 2;
             this.iNormal.Name = "iNormal";
+            this.iNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNormal_ItemClick);
             // 
             // iOzelHasta
             // 
             this.iOzelHasta.Caption = "KRM008 - Özel Hasta";
             this.iOzelHasta.Id = 3;
             this.iOzelHasta.Name = "iOzelHasta";
+            this.iOzelHasta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOzelHasta_ItemClick);
             // 
             // barManager1
             // 

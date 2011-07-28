@@ -92,7 +92,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     session.Update(patient);
                 }
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
         }
@@ -111,7 +111,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     session.Update(pv);
                 }
-                session.Flush(); 
+                //session.Flush(); 
                 transaction.Commit();
             }
         }
@@ -313,7 +313,7 @@ namespace Naz.Hastane.Data.Services
                 pv.Patient = patient;
 
                 session.Save(pv);
-                session.Flush();
+                ////session.Flush();
                 transaction.Commit();
 
                 patient.AddPatientVisit(pv);
@@ -344,7 +344,7 @@ namespace Naz.Hastane.Data.Services
 
                 pv.AddPatientVisitRecord(pvr);
                 session.Save(pvr);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
                 return pvr;
             }
@@ -369,7 +369,7 @@ namespace Naz.Hastane.Data.Services
                 pvd.DATE_CREATE   = DateTime.Now;
 
                 session.Save(pvd);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
 
                 pv.AddPatientVisitDetail(pvd);
@@ -391,7 +391,7 @@ namespace Naz.Hastane.Data.Services
                     pvd.DATE_CREATE = DateTime.Now;
 
                     session.Save(pvd);
-                    session.Flush();
+                    //session.Flush();
                     transaction.Commit();
 
                     pv.AddPatientVisitDetail(pvd);
@@ -442,7 +442,7 @@ namespace Naz.Hastane.Data.Services
                 UpdatePatientVisitFromDetails(user, pv);
 
                 session.Update(pv);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
 
@@ -476,7 +476,7 @@ namespace Naz.Hastane.Data.Services
                     session.Delete(pvr);
 
                 session.Delete(pv);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
                 return true;
             }
@@ -488,7 +488,7 @@ namespace Naz.Hastane.Data.Services
             {
                 pvd.PatientVisit.RemovePatientVisitDetail(pvd);
                 session.Delete(pvd);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
 
@@ -507,7 +507,7 @@ namespace Naz.Hastane.Data.Services
                 patient.DATE_UPDATE           = DateTime.Now;
 
                 session.Update(patient);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
             UpdatePatientVisitWithMedulaProvision(session, user, pv, mpr);
@@ -528,7 +528,7 @@ namespace Naz.Hastane.Data.Services
                 pv.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pv);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
         }
@@ -549,7 +549,7 @@ namespace Naz.Hastane.Data.Services
                 pvr.DATE_UPDATE       = DateTime.Now;
 
                 session.Update(pvr);
-                session.Flush();
+                //session.Flush();
                 transaction.Commit();
             }
         }
@@ -572,7 +572,7 @@ namespace Naz.Hastane.Data.Services
                         pv.DATE_UPDATE = DateTime.Now;
 
                         session.Update(pv);
-                        session.Flush();
+                        //session.Flush();
                         transaction.Commit();
                         return true;
                     }
@@ -806,7 +806,7 @@ namespace Naz.Hastane.Data.Services
 
                     InsertDoctorPercents(session, user, pvds, invoice);
 
-                    session.Flush();
+                    //session.Flush();
                     transaction.Commit();
 
                 }
@@ -1095,7 +1095,7 @@ namespace Naz.Hastane.Data.Services
                     UpdatePatientVisitDetails(session, user, pvds, cdr.MAKNO);
 
                     LookUpServices.UpdateTellerVoucherNo(user, tellerVoucherNo);
-                    session.Flush();
+                    //session.Flush();
                     transaction.Commit();
 
                 }
@@ -1197,7 +1197,7 @@ namespace Naz.Hastane.Data.Services
                     log.USER_ID = user.USER_ID;
                     log.DATE_CREATE = DateTime.Now;
                     session.Save(log);
-                    session.Flush();
+                    //session.Flush();
 
                     transaction.Commit();
                 }
