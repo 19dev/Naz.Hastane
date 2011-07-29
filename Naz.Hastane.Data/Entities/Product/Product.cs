@@ -23,22 +23,42 @@ namespace Naz.Hastane.Data.Entities
         {
             get {return GetPatientPrice(_PriceList);}
         }
+        public virtual double PatientPriceWithVAT
+        {
+            get { return GetPatientPriceWithVAT(_PriceList); }
+        }
         public virtual double GetPatientPrice(string priceList)
         {
             if (String.IsNullOrWhiteSpace(priceList))
                 return 0;
             return Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "SATISF" + priceList));
         }
+        public virtual double GetPatientPriceWithVAT(string priceList)
+        {
+            if (String.IsNullOrWhiteSpace(priceList))
+                return 0;
+            return Math.Round(Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "SATISF" + priceList)) * (1 + KDV / 100), 2); 
+        }
 
         public virtual double CompanyPrice
         {
             get{return GetCompanyPrice(_PriceList);}
+        }
+        public virtual double CompanyPriceWithVAT
+        {
+            get { return GetCompanyPriceWithVAT(_PriceList); }
         }
         public virtual double GetCompanyPrice(string priceList)
         {
             if (String.IsNullOrWhiteSpace(priceList))
                 return 0;
             return Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "KSATISF" + priceList));
+        }
+        public virtual double GetCompanyPriceWithVAT(string priceList)
+        {
+            if (String.IsNullOrWhiteSpace(priceList))
+                return 0;
+            return Math.Round(Convert.ToDouble(ReflectionUtilities.GetMemberValueByName(this, "KSATISF" + priceList)) * (1 + KDV / 100), 2);
         }
 
         public virtual string ANAHIZ { get; set; } // ANAHIZ; length(1); 1

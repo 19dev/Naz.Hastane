@@ -44,6 +44,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
         private Doctor _Doctor = null;
+        private string _BranchCode;
         private PatientVisit currentPatientVisit = null;
         private bool _IsWaitingForMedulaProvision = false;
         private PatientVisitDetail voucherPVD = null;
@@ -81,7 +82,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
             Patient = patient;
-
+            if (Patient != null && !String.IsNullOrWhiteSpace(Patient.CV))
+                tbcHastaBilgileri.SelectedTabPage = lcgHastaOzgecmis;
+            else
+                tbcHastaBilgileri.SelectedTabPage = lcgHastaBilgileri;
         }
 
         private Patient _Patient = null;
@@ -101,7 +105,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void ReOpenPatient()
+        private void ReLoadPatient()
         {
             string patientNo = Patient.PatientNo;
             _Patient = null;
@@ -119,108 +123,65 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void InitPatientBindings()
         {
-            this.tePatientNo.DataBindings.Clear();
-            this.tePatientNo.DataBindings.Add("EditValue", Patient, "PatientNo");
-            //this.teInsuranceCompany.DataBindings.Add("EditValue", Patient, "InsuranceCompany.Name");
+            //this.teInsuranceCompany.DataBindings.Add("EditValue", Patient, x => x."InsuranceCompany.Name");
             if (this.Patient.InsuranceCompany != null)
                 this.teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
 
-            this.teTCID.DataBindings.Clear();
-            this.teTCID.DataBindings.Add("EditValue", Patient, "TCId");
-            this.teFirstName.DataBindings.Clear();
-            this.teFirstName.DataBindings.Add("EditValue", Patient, "FirstName");
-            this.teLastName.DataBindings.Clear();
-            this.teLastName.DataBindings.Add("EditValue", Patient, "LastName");
-            this.rgSex.DataBindings.Clear();
-            this.rgSex.DataBindings.Add("EditValue", Patient, "Sex");
-            this.rgMaritalStatus.DataBindings.Clear();
-            this.rgMaritalStatus.DataBindings.Add("EditValue", Patient, "MaritalStatus");
-            this.teFatherName.DataBindings.Clear();
-            this.teFatherName.DataBindings.Add("EditValue", Patient, "FatherName");
-            this.teMotherName.DataBindings.Clear();
-            this.teMotherName.DataBindings.Add("EditValue", Patient, "MotherName");
-            this.teBirthPlace.DataBindings.Clear();
-            this.teBirthPlace.DataBindings.Add("EditValue", Patient, "BirthPlace");
-            this.deBirthDate.DataBindings.Clear();
-            this.deBirthDate.DataBindings.Add("EditValue", Patient, "BirthDate");
-            this.lueStatus.DataBindings.Clear();
-            this.lueStatus.DataBindings.Add("EditValue", Patient, "Status");
-            this.lueInsuranceType.DataBindings.Clear();
-            this.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
-            this.medulaSorgu.lueInsuranceType.DataBindings.Clear();
-            this.medulaSorgu.lueInsuranceType.DataBindings.Add("EditValue", Patient, "InsuranceType");
-            this.teHomePhone2.DataBindings.Clear();
-            this.teHomePhone2.DataBindings.Add("EditValue", Patient, "HomePhone2");
-            this.teHomePhone1.DataBindings.Clear();
-            this.teHomePhone1.DataBindings.Add("EditValue", Patient, "HomePhone1");
+            UIUtilities.BindControl(tePatientNo, Patient, x => x.PatientNo);
+            UIUtilities.BindControl(teTCID, Patient, x => x.TCId);
+            UIUtilities.BindControl(teFirstName, Patient, x => x.FirstName);
+            UIUtilities.BindControl(teLastName, Patient, x => x.LastName);
+            UIUtilities.BindControl(rgSex, Patient, x => x.Sex);
+            UIUtilities.BindControl(rgMaritalStatus, Patient, x => x.MaritalStatus);
+            UIUtilities.BindControl(teFatherName, Patient, x => x.FatherName);
+            UIUtilities.BindControl(teMotherName, Patient, x => x.MotherName);
+            UIUtilities.BindControl(teBirthPlace, Patient, x => x.BirthPlace);
+            UIUtilities.BindControl(deBirthDate, Patient, x => x.BirthDate);
+            UIUtilities.BindControl(lueStatus, Patient, x => x.Status);
+            UIUtilities.BindControl(lueInsuranceType, Patient, x => x.InsuranceType);
+            UIUtilities.BindControl(medulaSorgu.lueInsuranceType, Patient, x => x.InsuranceType);
+            UIUtilities.BindControl(teHomePhone2, Patient, x => x.HomePhone2);
+            UIUtilities.BindControl(teHomePhone1, Patient, x => x.HomePhone1);
 
-            this.medulaSorgu.lueTransferorInstitution.DataBindings.Clear();
-            this.medulaSorgu.lueTransferorInstitution.DataBindings.Add("EditValue", Patient, "TransferorInstitution");
+            UIUtilities.BindControl(medulaSorgu.lueTransferorInstitution, Patient, x => x.TransferorInstitution);
 
-            this.rgIDType.DataBindings.Clear();
-            this.rgIDType.DataBindings.Add("EditValue", Patient, "IDType");
-            this.teIDNO.DataBindings.Clear();
-            this.teIDNO.DataBindings.Add("EditValue", Patient, "IDNO");
-            this.deIDDate.DataBindings.Clear();
-            this.deIDDate.DataBindings.Add("EditValue", Patient, "IDDate");
-            this.teIDPlace.DataBindings.Clear();
-            this.teIDPlace.DataBindings.Add("EditValue", Patient, "IDPlace");
-            this.lueNationality.DataBindings.Clear();
-            this.lueNationality.DataBindings.Add("EditValue", Patient, "Nationality");
-            this.teHomeAddress.DataBindings.Clear();
-            this.teHomeAddress.DataBindings.Add("EditValue", Patient, "HomeAddress");
-            this.teHomeDistrict.DataBindings.Clear();
-            this.teHomeDistrict.DataBindings.Add("EditValue", Patient, "HomeDistrict");
-            this.teHomeTown.DataBindings.Clear();
-            this.teHomeTown.DataBindings.Add("EditValue", Patient, "HomeTown");
-            this.teHomePostCode.DataBindings.Clear();
-            this.teHomePostCode.DataBindings.Add("EditValue", Patient, "HomePostCode");
-            this.lueHomeCity.DataBindings.Clear();
-            this.lueHomeCity.DataBindings.Add("EditValue", Patient, "HomeCity");
+            UIUtilities.BindControl(rgIDType, Patient, x => x.IDType);
+            UIUtilities.BindControl(teIDNO, Patient, x => x.IDNO);
+            UIUtilities.BindControl(deIDDate, Patient, x => x.IDDate);
+            UIUtilities.BindControl(teIDPlace, Patient, x => x.IDPlace);
+            UIUtilities.BindControl(lueNationality, Patient, x => x.Nationality);
+            UIUtilities.BindControl(teHomeAddress, Patient, x => x.HomeAddress);
+            UIUtilities.BindControl(teHomeDistrict, Patient, x => x.HomeDistrict);
+            UIUtilities.BindControl(teHomeTown, Patient, x => x.HomeTown);
+            UIUtilities.BindControl(teHomePostCode, Patient, x => x.HomePostCode);
+            UIUtilities.BindControl(lueHomeCity, Patient, x => x.HomeCity);
 
-            this.teOfficer.DataBindings.Clear();
-            this.teOfficer.DataBindings.Add("EditValue", Patient, "Officer");
-            this.teProfession.DataBindings.Clear();
-            this.teProfession.DataBindings.Add("EditValue", Patient, "Profession");
-            this.teEMSNo.DataBindings.Clear();
-            this.teEMSNo.DataBindings.Add("EditValue", Patient, "EMSNO");
-            this.teProtocolNo.DataBindings.Clear();
-            this.teProtocolNo.DataBindings.Add("EditValue", Patient, "ProtocolNo");
-            this.teBAGNO.DataBindings.Clear();
-            this.teBAGNO.DataBindings.Add("EditValue", Patient, "BAGNO");
-            this.teSSKSicilNo.DataBindings.Clear();
-            this.teSSKSicilNo.DataBindings.Add("EditValue", Patient, "YKARTNO");
-            this.teSevkEdilenYer.DataBindings.Clear();
-            this.teSevkEdilenYer.DataBindings.Add("EditValue", Patient, "GELHAST");
-            this.lueSigortaMudurlugu.DataBindings.Clear();
-            this.lueSigortaMudurlugu.DataBindings.Add("EditValue", Patient, "SIGMUD");
-            this.teNufusaKayitliIl.DataBindings.Clear();
-            this.teNufusaKayitliIl.DataBindings.Add("EditValue", Patient, "RegisteredCity");
-            this.teNufusaKayitliIlce.DataBindings.Clear();
-            this.teNufusaKayitliIlce.DataBindings.Add("EditValue", Patient, "RegisteredTown");
-            this.teSigortaliKartNo.DataBindings.Clear();
-            this.teSigortaliKartNo.DataBindings.Add("EditValue", Patient, "SIGORTALIKARTNO");
+            UIUtilities.BindControl(teOfficer, Patient, x => x.Officer);
+            UIUtilities.BindControl(teProfession, Patient, x => x.Profession);
+            UIUtilities.BindControl(teEMSNo, Patient, x => x.EMSNO);
+            UIUtilities.BindControl(teProtocolNo, Patient, x => x.ProtocolNo);
+            UIUtilities.BindControl(teBAGNO, Patient, x => x.BAGNO);
+            UIUtilities.BindControl(teSSKSicilNo, Patient, x => x.YKARTNO);
+            UIUtilities.BindControl(teSevkEdilenYer, Patient, x => x.GELHAST);
+            UIUtilities.BindControl(lueSigortaMudurlugu, Patient, x => x.SIGMUD);
+            UIUtilities.BindControl(teNufusaKayitliIl, Patient, x => x.RegisteredCity);
+            UIUtilities.BindControl(teNufusaKayitliIlce, Patient, x => x.RegisteredTown);
+            UIUtilities.BindControl(teSigortaliKartNo, Patient, x => x.SIGORTALIKARTNO);
 
-            this.teJobName.DataBindings.Clear();
-            this.teJobName.DataBindings.Add("EditValue", Patient, "JobName");
-            this.teJobNo.DataBindings.Clear();
-            this.teJobNo.DataBindings.Add("EditValue", Patient, "JobNo");
-            this.meJobAddress.DataBindings.Clear();
-            this.meJobAddress.DataBindings.Add("EditValue", Patient, "JobAddress");
-            this.lueJobCity.DataBindings.Clear();
-            this.lueJobCity.DataBindings.Add("EditValue", Patient, "JobCity");
-            this.teJobPostCode.DataBindings.Clear();
-            this.teJobPostCode.DataBindings.Add("EditValue", Patient, "JobPostCode");
-            this.teJobPhone1.DataBindings.Clear();
-            this.teJobPhone1.DataBindings.Add("EditValue", Patient, "JobPhone1");
-            this.teJobPhone2.DataBindings.Clear();
-            this.teJobPhone2.DataBindings.Add("EditValue", Patient, "JobPhone2");
-            this.teJobFax.DataBindings.Clear();
-            this.teJobFax.DataBindings.Add("EditValue", Patient, "JobFax");
-            this.teEmail.DataBindings.Clear();
-            this.teEmail.DataBindings.Add("EditValue", Patient, "Email");
+            UIUtilities.BindControl(teJobName, Patient, x => x.JobName);
+            UIUtilities.BindControl(teJobNo, Patient, x => x.JobNo);
+            UIUtilities.BindControl(meJobAddress, Patient, x => x.JobAddress);
+            UIUtilities.BindControl(lueJobCity, Patient, x => x.JobCity);
+            UIUtilities.BindControl(teJobPostCode, Patient, x => x.JobPostCode);
+            UIUtilities.BindControl(teJobPhone1, Patient, x => x.JobPhone1);
+            UIUtilities.BindControl(teJobPhone2, Patient, x => x.JobPhone2);
+            UIUtilities.BindControl(teJobFax, Patient, x => x.JobFax);
+            UIUtilities.BindControl(teEmail, Patient, x => x.Email);
+
+            UIUtilities.BindControl(meHastaOzgecmis, Patient, x => x.CV);
 
             this.PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
+            this.PatientVisitControl1.gcPatientVisit.DataSource = Patient.PatientVisits;
             this.medulaFollowUpQueryControl.TCId = Patient.TCId;
             this.patientBalanceControl.Patient = Patient;
         }
@@ -388,15 +349,16 @@ namespace Naz.Hastane.Win.MDIChildForms
             frm.ShowDialog();
             if (frm.IsSelected && frm.Doctor != null && IsNewPolyclinicOK(frm.Doctor))
             {
+                _BranchCode = frm.BranchCode;
                 if (frm.NewInsuranceCompany != Patient.InsuranceCompany)
                 {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, new List<PatientVisit>(), new List<PatientVisitDetailWithProduct>(), frm.NewInsuranceCompany);
-                    ReOpenPatient();
+                    ReLoadPatient();
                 }
 
                 _Doctor = frm.Doctor;
                 PatientServices.AddSGKPolyclinic(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, frm.SameDay);
-                ReOpenPatient();
+                ReLoadPatient();
                 
                 currentPatientVisit = Patient.PatientVisits[0];
                 CallMedulaProvision();
@@ -422,7 +384,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
         private void sbMedula_Click(object sender, EventArgs e)
         {
-            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            currentPatientVisit = this.PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
             CallMedulaProvision();
         }
 
@@ -435,6 +397,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbPoliklinik.Enabled = enable;
             this.sbInvoice.Enabled = enable;
             this.sbVoucher.Enabled = enable;
+            this.PatientVisitControl1.gcPatientVisit.Enabled = enable;
             this.PatientVisitControl.gcPatientVisit.Enabled = enable;
         }
 
@@ -477,7 +440,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             else if (LookUpServices.IsSGKAcil(this.Patient.InsuranceCompany.Code))
                 this.medulaSorgu.lueProvisionType.EditValue = ProvisionType.EmergencyValue;
 
-            this.medulaSorgu.lueBranchCode.EditValue = _Doctor.Service.BranchCode;
+            this.medulaSorgu.lueBranchCode.EditValue = _BranchCode;
             
             if (String.IsNullOrWhiteSpace(this.medulaSorgu.teRelatedFollowUpNo.Text))
                 this.medulaSorgu.teRelatedFollowUpNo.Text = GetRelatedFollowUpNo();
@@ -490,9 +453,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             string result = "";
             
-            for (int i = 0; i <= this.PatientVisitControl.gvPatientVisit.RowCount; i++)
+            for (int i = 0; i <= this.PatientVisitControl1.gvPatientVisit.RowCount; i++)
             {
-                PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetRow(i) as PatientVisit;
+                PatientVisit pv = this.PatientVisitControl1.gvPatientVisit.GetRow(i) as PatientVisit;
                 if (pv != null && pv.VisitDate.Date == DateTime.Today)
                 {
                     if (!LookUpServices.IsNotSGK(pv.PSG) && !String.IsNullOrWhiteSpace(pv.TAKIPNO))
@@ -724,7 +687,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbDeletePatientVisit_Click(object sender, EventArgs e)
         {
-            PatientVisit pv = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            PatientVisit pv = this.PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (pv == null)
                 return;
             if (!pv.IsOKForDelete())
@@ -763,6 +726,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.PatientVisitControl.gcPatientVisit.RefreshDataSource();
             this.PatientVisitControl.gvPatientVisit.CollapseAllDetails();
             this.PatientVisitControl.gvPatientVisit.EndDataUpdate();
+            this.PatientVisitControl1.gvPatientVisit.BeginDataUpdate();
+            this.PatientVisitControl1.gcPatientVisit.RefreshDataSource();
+            this.PatientVisitControl1.gvPatientVisit.CollapseAllDetails();
+            this.PatientVisitControl1.gvPatientVisit.EndDataUpdate();
             RefreshPatientBalance();
         }
 
@@ -868,7 +835,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void AddPatientVisitDetail()
         {
-            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            currentPatientVisit = this.PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (Patient != null && Patient.InsuranceCompany != null && currentPatientVisit != null)
             {
                 SelectFunctionForm frm = new SelectFunctionForm();
@@ -879,7 +846,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (frm.IsSelected)
                 {
                     PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, Patient, currentPatientVisit, frm.SelectedProducts);
-                    ReOpenPatient();
+                    ReLoadPatient();
                 }
             }
         }
@@ -938,7 +905,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, pvs, pvdwps, newInsuranceCompany);
                     XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ReOpenPatient();
+                    ReLoadPatient();
                 }
                 catch (Exception e)
                 {
@@ -999,11 +966,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (pv != null)
             {
                 _Doctor = pv.Doctor;
+                _BranchCode = _Doctor.Service.BranchCode;
                 currentPatientVisit = PatientServices.AddNewPatientVisit(Session, UIUtilities.CurrentUser, this.Patient, _Doctor, _Doctor.Service.Code, 0);
                 PatientVisitRecord pvr = PatientServices.AddNewPatientVisitRecord(Session, UIUtilities.CurrentUser, currentPatientVisit);
-                ReOpenPatient();
-                this.PatientVisitControl.gvPatientVisit.FocusedRowHandle = 0;
-                currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+                ReLoadPatient();
+                this.PatientVisitControl1.gvPatientVisit.FocusedRowHandle = 0;
+                currentPatientVisit = this.PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
                 AddPatientVisitDetail();
                 this.medulaSorgu.lueTreatmentType.EditValue = TreatmentType.PhysicalTherapy;
                 this.medulaSorgu.teRelatedFollowUpNo.Text = pv.TAKIPNO;
@@ -1028,11 +996,16 @@ namespace Naz.Hastane.Win.MDIChildForms
             return null;
         }
 
-        private void PatientVisitControl_PatientVisitClick(object sender, EventArgs e)
+        private void PatientVisitControl1_PatientVisitClick(object sender, EventArgs e)
         {
-            currentPatientVisit = this.PatientVisitControl.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            currentPatientVisit = this.PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
             if (currentPatientVisit != null && currentPatientVisit.Doctor != null && currentPatientVisit.Doctor.Service != null)
                 this.medulaSorgu.lueBranchCode.EditValue = currentPatientVisit.Doctor.Service.BranchCode;
+        }
+
+        private void lciRefresh_Click(object sender, EventArgs e)
+        {
+            ReLoadPatient();
         }
     }
 }

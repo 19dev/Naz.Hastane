@@ -37,8 +37,17 @@ namespace Naz.Hastane.Data.Entities
             }
         }
         public virtual int BloodType { get; set; } //KANGRUBU
+        /// <summary>
+        /// KANVEREBILIR
+        /// </summary>
         public virtual char CanBeBloodDonour { get; set; } //KANVEREBILIR
+        /// <summary>
+        /// ILACKONTROL
+        /// </summary>
         public virtual char MedControl { get; set; } //ILACKONTROL
+        /// <summary>
+        /// OZGECMIS
+        /// </summary>
         public virtual string CV { get; set; } //OZGECMIS
 
         public virtual string HomeAddress { get; set; } //EV_ADRES

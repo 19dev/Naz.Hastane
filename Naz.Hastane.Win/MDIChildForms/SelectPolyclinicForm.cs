@@ -12,6 +12,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         private Doctor _Doctor = null;
         public Doctor Doctor { get { return _Doctor; } }
 
+        public string BranchCode { get; set; }
+
         private InsuranceCompany _InsuranceCompany = null;
         public InsuranceCompany InsuranceCompany { 
             get { return _InsuranceCompany; } 
@@ -82,7 +84,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 _Doctor = (Doctor)this.gvPolyclinics.GetFocusedRow();
                 _IsSelected = (_Doctor != null);
-                if (_IsSelected) this.Close();
+                if (_IsSelected)
+                {
+                    BranchCode = _Doctor.Service.BranchCode;
+                    this.Close();
+                }
+                else
+                    BranchCode = "";
             }
         }
 
