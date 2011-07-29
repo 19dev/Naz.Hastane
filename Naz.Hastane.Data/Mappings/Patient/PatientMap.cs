@@ -86,8 +86,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.USER_ID_UPDATE)  .Column("USER_ID_UPDATE").Length(20);
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE");
 
-            HasMany(x => x.PatientVisits).KeyColumn("KNR")
-                .Inverse();
+            HasMany(x => x.PatientVisits).KeyColumn("KNR")  .Inverse();
         }
     }
 }

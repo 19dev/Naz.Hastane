@@ -123,7 +123,6 @@ namespace Naz.Hastane.Data.Entities
             this.PatientVisits.Insert(0, pv);
         }
 
-
         public virtual void RemovePatientVisit(PatientVisit pv)
         {
             _PatientVisits.Remove(pv);

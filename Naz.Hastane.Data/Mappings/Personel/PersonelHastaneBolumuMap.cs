@@ -11,8 +11,8 @@ namespace Naz.Hastane.Data.Mappings
 			Table("PersonelHastaneBolumu");
 			LazyLoad();
 			Id(x => x.ID).GeneratedBy.Identity().Column("ID");
-			Map(x => x.PersonelID).Column("PersonelID").Not.Nullable();
-			Map(x => x.HastaneBolumuID).Column("HastaneBolumuID").Not.Nullable();
+            References(x => x.Personel).Column("PersonelID").Not.Nullable();
+            Map(x => x.HastaneBolumuID).Column("HastaneBolumuID").Not.Nullable();
 			Map(x => x.BaslangicTarihi).Column("BaslangicTarihi").Not.Nullable();
 			Map(x => x.Aciklama).Column("Aciklama");
         }
