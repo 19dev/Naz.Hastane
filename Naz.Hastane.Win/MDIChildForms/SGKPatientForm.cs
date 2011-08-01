@@ -745,7 +745,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     if (String.IsNullOrWhiteSpace(pvd.MAKNO))
                     {
                         voucherPVD = pvd;
-                        this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+                        this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.GetVoucherUser(), false);
                     }
                     else
                     {
@@ -758,7 +758,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     if (String.IsNullOrWhiteSpace(pvd.MAKNO))
                     {
                         invoicePVD = pvd;
-                        this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
+                        this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.GetInvoiceUser(), false);
                     }
                     else
                     {

@@ -112,8 +112,8 @@ namespace Naz.Hastane.Win.Controls
 
             this.teTaxNo.Text = "";
             this.teTaxOffice.Text = "";
-            this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.CurrentUser, false);
-            this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.CurrentUser, false);
+            this.teInvoiceNo.Text = LookUpServices.GetNewTellerInvoiceNo(UIUtilities.GetInvoiceUser(), false);
+            this.teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.GetVoucherUser(), false);
 
             this.ceAdvancePayment.Checked = false;
             this.cePayment.Checked = false;
