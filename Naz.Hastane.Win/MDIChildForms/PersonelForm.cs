@@ -90,20 +90,46 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             LoadLookUps();
             this.tePersonnelNo.DataBindings.Add("EditValue", Personnel, "PersonelNo");
-            this.teTCID.DataBindings.Add("EditValue", Personnel, "TCID");
             this.teFirstName.DataBindings.Add("EditValue", Personnel, "Ad");
             this.teSurname.DataBindings.Add("EditValue", Personnel, "Soyad");
-            this.rgSex.DataBindings.Add("EditValue", Personnel, "Cinsiyet");
+            this.teTCID.DataBindings.Add("EditValue", Personnel, "TCID");
+            this.lueNationality.DataBindings.Add("EditValue", Personnel, "Uyrugu");
+            this.rgSex.DataBindings.Add("EditValue", Personnel, "Cinsiyeti");
+            this.rgMaritalStatus.DataBindings.Add("EditValue", Personnel, "MedeniHali");
+            this.teUnvani.DataBindings.Add("EditValue", Personnel, "Unvani");
+            this.teDepartment.DataBindings.Add("EditValue", Personnel, "Bolumu");
+            this.tePhone.DataBindings.Add("EditValue", Personnel, "Telefon");
             this.teHomePhone1.DataBindings.Add("EditValue", Personnel, "EvTelefonu");
             this.teMobilePhone.DataBindings.Add("EditValue", Personnel, "CepTelefonu");
+            this.lueBloodType.DataBindings.Add("EditValue", Personnel, "KanGrubu");
+            this.deEntryDate.DataBindings.Add("EditValue", Personnel, "IseGirisTarihi");
+            this.deExitDate.DataBindings.Add("EditValue", Personnel, "AyrilisTarihi");
+            this.teInsuranceNo.DataBindings.Add("EditValue", Personnel, "SigortaNo");
+            this.teTaxNo.DataBindings.Add("EditValue", Personnel, "VergiNo");
             this.teEmail.DataBindings.Add("EditValue", Personnel, "Email");
-            this.deEntryDate.DataBindings.Add("EditValue", Personnel, "GirisTarihi");
-            this.deExitDate.DataBindings.Add("EditValue", Personnel, "CikisTarihi");
+
+
+
+            this.rgIDType.DataBindings.Add("EditValue", Personnel, "KimlikTuru");
+            this.teIDNo.DataBindings.Add("EditValue", Personnel, "KimlikNo");
+            this.teFatherName.DataBindings.Add("EditValue", Personnel, "BabaAdi");
+            this.teMotherName.DataBindings.Add("EditValue", Personnel, "AnaAdi");
+            this.teBirthPlace.DataBindings.Add("EditValue", Personnel, "DogumYeri");
+            this.deBirthDate.DataBindings.Add("EditValue", Personnel, "DogumTarihi");
+            this.lueBirthCity.DataBindings.Add("EditValue", Personnel, "DogumIli");
+            this.teBirthTown.DataBindings.Add("EditValue", Personnel, "DogumIlcesi");
+            this.teBirthDistrict.DataBindings.Add("EditValue", Personnel, "DogumMahalleKoy");
+            this.teCilt.DataBindings.Add("EditValue", Personnel, "DogumCilt");
+            this.teAileSiraNo.DataBindings.Add("EditValue", Personnel, "DogumAileSiraNo");
+            this.teSiraNo.DataBindings.Add("EditValue", Personnel, "DogumSiraNo");
+
+
             this.teHomeAddress.DataBindings.Add("EditValue", Personnel, "EvAdresi");
             this.teHomeDistrict.DataBindings.Add("EditValue", Personnel, "Mahalle");
             this.teHomeTown.DataBindings.Add("EditValue", Personnel, "Ilce");
             this.lueHomeCity.DataBindings.Add("EditValue", Personnel, "Il");
-            this.lueBloodType.DataBindings.Add("EditValue", Personnel, "KanGrubu");
+            this.meExplanation.DataBindings.Add("EditValue", Personnel, "Aciklama");
+            
         }
 
         private void LoadLookUps()

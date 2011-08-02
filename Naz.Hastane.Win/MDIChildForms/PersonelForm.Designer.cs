@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.lueBloodType = new DevExpress.XtraEditors.LookUpEdit();
+            this.meExplanation = new DevExpress.XtraEditors.MemoEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -40,6 +40,26 @@
             this.iSGKAcil = new DevExpress.XtraBars.BarButtonItem();
             this.iNormal = new DevExpress.XtraBars.BarButtonItem();
             this.iOzelHasta = new DevExpress.XtraBars.BarButtonItem();
+            this.teTaxNo = new DevExpress.XtraEditors.TextEdit();
+            this.teInsuranceNo = new DevExpress.XtraEditors.TextEdit();
+            this.tePhone = new DevExpress.XtraEditors.TextEdit();
+            this.teDepartment = new DevExpress.XtraEditors.TextEdit();
+            this.teUnvani = new DevExpress.XtraEditors.TextEdit();
+            this.rgMaritalStatus = new DevExpress.XtraEditors.RadioGroup();
+            this.teSiraNo = new DevExpress.XtraEditors.TextEdit();
+            this.teAileSiraNo = new DevExpress.XtraEditors.TextEdit();
+            this.teCilt = new DevExpress.XtraEditors.TextEdit();
+            this.teBirthDistrict = new DevExpress.XtraEditors.TextEdit();
+            this.teBirthTown = new DevExpress.XtraEditors.TextEdit();
+            this.lueBirthCity = new DevExpress.XtraEditors.LookUpEdit();
+            this.teIDNo = new DevExpress.XtraEditors.TextEdit();
+            this.lueNationality = new DevExpress.XtraEditors.LookUpEdit();
+            this.deBirthDate = new DevExpress.XtraEditors.DateEdit();
+            this.teBirthPlace = new DevExpress.XtraEditors.TextEdit();
+            this.teMotherName = new DevExpress.XtraEditors.TextEdit();
+            this.teFatherName = new DevExpress.XtraEditors.TextEdit();
+            this.rgIDType = new DevExpress.XtraEditors.RadioGroup();
+            this.lueBloodType = new DevExpress.XtraEditors.LookUpEdit();
             this.simpleButton21 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton19 = new DevExpress.XtraEditors.SimpleButton();
@@ -111,11 +131,11 @@
             this.teHomePhone1 = new DevExpress.XtraEditors.TextEdit();
             this.rgSex = new DevExpress.XtraEditors.RadioGroup();
             this.teSurname = new DevExpress.XtraEditors.TextEdit();
-            this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.tePersonnelNo = new DevExpress.XtraEditors.TextEdit();
             this.teHomeTown = new DevExpress.XtraEditors.TextEdit();
             this.teHomeAddress = new DevExpress.XtraEditors.MemoEdit();
             this.teHomeDistrict = new DevExpress.XtraEditors.TextEdit();
+            this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.lgcEducation = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -154,21 +174,44 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgPersonelBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPersonnelNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTCID = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciMobilePhone = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomeCity = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomeTown = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomeDistrict = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomeAddress = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSurname = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSex = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMobilePhone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciBloodType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciUnvani = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDepartment = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPhone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciInsuranceNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTaxNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciHomeAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciExplanation = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomeDistrict = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomeCity = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomeTown = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciIDType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciFatherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMotherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthPlace = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciNationality = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciIDNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthCity = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthTown = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBirthDistrict = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCilt = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAileSiraNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSiraNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgSagTuslar = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciSavePersonnel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciClose = new DevExpress.XtraLayout.LayoutControlItem();
@@ -176,12 +219,31 @@
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.lciKanGrubu = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueBloodType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meExplanation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTaxNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInsuranceNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDepartment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teUnvani.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgMaritalStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSiraNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teAileSiraNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCilt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthDistrict.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthTown.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBirthCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teIDNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBirthDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBirthDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthPlace.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMotherName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFatherName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgIDType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBloodType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).BeginInit();
@@ -207,11 +269,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teSurname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeTown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeDistrict.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgcEducation)).BeginInit();
@@ -250,21 +312,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPersonelBilgileri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonnelNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSurname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBloodType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciUnvani)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDepartment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTaxNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciExplanation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIDType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciNationality)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIDNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthTown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDistrict)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCilt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAileSiraNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSiraNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePersonnel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).BeginInit();
@@ -272,12 +357,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKanGrubu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.meExplanation);
+            this.layoutControl1.Controls.Add(this.teTaxNo);
+            this.layoutControl1.Controls.Add(this.teInsuranceNo);
+            this.layoutControl1.Controls.Add(this.tePhone);
+            this.layoutControl1.Controls.Add(this.teDepartment);
+            this.layoutControl1.Controls.Add(this.teUnvani);
+            this.layoutControl1.Controls.Add(this.rgMaritalStatus);
+            this.layoutControl1.Controls.Add(this.teSiraNo);
+            this.layoutControl1.Controls.Add(this.teAileSiraNo);
+            this.layoutControl1.Controls.Add(this.teCilt);
+            this.layoutControl1.Controls.Add(this.teBirthDistrict);
+            this.layoutControl1.Controls.Add(this.teBirthTown);
+            this.layoutControl1.Controls.Add(this.lueBirthCity);
+            this.layoutControl1.Controls.Add(this.teIDNo);
+            this.layoutControl1.Controls.Add(this.lueNationality);
+            this.layoutControl1.Controls.Add(this.deBirthDate);
+            this.layoutControl1.Controls.Add(this.teBirthPlace);
+            this.layoutControl1.Controls.Add(this.teMotherName);
+            this.layoutControl1.Controls.Add(this.teFatherName);
+            this.layoutControl1.Controls.Add(this.rgIDType);
             this.layoutControl1.Controls.Add(this.lueBloodType);
             this.layoutControl1.Controls.Add(this.simpleButton21);
             this.layoutControl1.Controls.Add(this.simpleButton20);
@@ -318,32 +421,28 @@
             this.layoutControl1.Controls.Add(this.teHomePhone1);
             this.layoutControl1.Controls.Add(this.rgSex);
             this.layoutControl1.Controls.Add(this.teSurname);
-            this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Controls.Add(this.tePersonnelNo);
             this.layoutControl1.Controls.Add(this.teHomeTown);
             this.layoutControl1.Controls.Add(this.teHomeAddress);
             this.layoutControl1.Controls.Add(this.teHomeDistrict);
+            this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1788, -18, 429, 646);
             this.layoutControl1.Root = this.lcgHastaIslemleri;
-            this.layoutControl1.Size = new System.Drawing.Size(1088, 757);
+            this.layoutControl1.Size = new System.Drawing.Size(1251, 766);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // lueBloodType
+            // meExplanation
             // 
-            this.lueBloodType.Location = new System.Drawing.Point(98, 270);
-            this.lueBloodType.MenuManager = this.barManager1;
-            this.lueBloodType.Name = "lueBloodType";
-            this.lueBloodType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueBloodType.Properties.DisplayMember = "Value";
-            this.lueBloodType.Properties.ValueMember = "ID";
-            this.lueBloodType.Size = new System.Drawing.Size(360, 20);
-            this.lueBloodType.StyleController = this.layoutControl1;
-            this.lueBloodType.TabIndex = 12;
+            this.meExplanation.Location = new System.Drawing.Point(745, 270);
+            this.meExplanation.MenuManager = this.barManager1;
+            this.meExplanation.Name = "meExplanation";
+            this.meExplanation.Size = new System.Drawing.Size(304, 136);
+            this.meExplanation.StyleController = this.layoutControl1;
+            this.meExplanation.TabIndex = 178;
             // 
             // barManager1
             // 
@@ -364,28 +463,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1088, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1251, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 757);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1088, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 766);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1251, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 757);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 766);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1088, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 757);
+            this.barDockControlRight.Location = new System.Drawing.Point(1251, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 766);
             // 
             // iSGK
             // 
@@ -411,148 +510,348 @@
             this.iOzelHasta.Id = 3;
             this.iOzelHasta.Name = "iOzelHasta";
             // 
+            // teTaxNo
+            // 
+            this.teTaxNo.Location = new System.Drawing.Point(98, 149);
+            this.teTaxNo.MenuManager = this.barManager1;
+            this.teTaxNo.Name = "teTaxNo";
+            this.teTaxNo.Size = new System.Drawing.Size(248, 20);
+            this.teTaxNo.StyleController = this.layoutControl1;
+            this.teTaxNo.TabIndex = 177;
+            // 
+            // teInsuranceNo
+            // 
+            this.teInsuranceNo.Location = new System.Drawing.Point(98, 125);
+            this.teInsuranceNo.MenuManager = this.barManager1;
+            this.teInsuranceNo.Name = "teInsuranceNo";
+            this.teInsuranceNo.Size = new System.Drawing.Size(248, 20);
+            this.teInsuranceNo.StyleController = this.layoutControl1;
+            this.teInsuranceNo.TabIndex = 176;
+            // 
+            // tePhone
+            // 
+            this.tePhone.Location = new System.Drawing.Point(98, 242);
+            this.tePhone.MenuManager = this.barManager1;
+            this.tePhone.Name = "tePhone";
+            this.tePhone.Size = new System.Drawing.Size(248, 20);
+            this.tePhone.StyleController = this.layoutControl1;
+            this.tePhone.TabIndex = 175;
+            // 
+            // teDepartment
+            // 
+            this.teDepartment.Location = new System.Drawing.Point(98, 386);
+            this.teDepartment.MenuManager = this.barManager1;
+            this.teDepartment.Name = "teDepartment";
+            this.teDepartment.Size = new System.Drawing.Size(248, 20);
+            this.teDepartment.StyleController = this.layoutControl1;
+            this.teDepartment.TabIndex = 174;
+            // 
+            // teUnvani
+            // 
+            this.teUnvani.Location = new System.Drawing.Point(98, 362);
+            this.teUnvani.MenuManager = this.barManager1;
+            this.teUnvani.Name = "teUnvani";
+            this.teUnvani.Size = new System.Drawing.Size(248, 20);
+            this.teUnvani.StyleController = this.layoutControl1;
+            this.teUnvani.TabIndex = 173;
+            // 
+            // rgMaritalStatus
+            // 
+            this.rgMaritalStatus.Location = new System.Drawing.Point(182, 189);
+            this.rgMaritalStatus.MenuManager = this.barManager1;
+            this.rgMaritalStatus.Name = "rgMaritalStatus";
+            this.rgMaritalStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("E", "Evli"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("B", "Bekar")});
+            this.rgMaritalStatus.Size = new System.Drawing.Size(164, 25);
+            this.rgMaritalStatus.StyleController = this.layoutControl1;
+            this.rgMaritalStatus.TabIndex = 172;
+            // 
+            // teSiraNo
+            // 
+            this.teSiraNo.Location = new System.Drawing.Point(443, 386);
+            this.teSiraNo.MenuManager = this.barManager1;
+            this.teSiraNo.Name = "teSiraNo";
+            this.teSiraNo.Size = new System.Drawing.Size(274, 20);
+            this.teSiraNo.StyleController = this.layoutControl1;
+            this.teSiraNo.TabIndex = 171;
+            // 
+            // teAileSiraNo
+            // 
+            this.teAileSiraNo.Location = new System.Drawing.Point(443, 362);
+            this.teAileSiraNo.MenuManager = this.barManager1;
+            this.teAileSiraNo.Name = "teAileSiraNo";
+            this.teAileSiraNo.Size = new System.Drawing.Size(274, 20);
+            this.teAileSiraNo.StyleController = this.layoutControl1;
+            this.teAileSiraNo.TabIndex = 170;
+            // 
+            // teCilt
+            // 
+            this.teCilt.Location = new System.Drawing.Point(443, 338);
+            this.teCilt.MenuManager = this.barManager1;
+            this.teCilt.Name = "teCilt";
+            this.teCilt.Size = new System.Drawing.Size(274, 20);
+            this.teCilt.StyleController = this.layoutControl1;
+            this.teCilt.TabIndex = 169;
+            // 
+            // teBirthDistrict
+            // 
+            this.teBirthDistrict.Location = new System.Drawing.Point(443, 314);
+            this.teBirthDistrict.MenuManager = this.barManager1;
+            this.teBirthDistrict.Name = "teBirthDistrict";
+            this.teBirthDistrict.Size = new System.Drawing.Size(274, 20);
+            this.teBirthDistrict.StyleController = this.layoutControl1;
+            this.teBirthDistrict.TabIndex = 168;
+            // 
+            // teBirthTown
+            // 
+            this.teBirthTown.Location = new System.Drawing.Point(443, 290);
+            this.teBirthTown.MenuManager = this.barManager1;
+            this.teBirthTown.Name = "teBirthTown";
+            this.teBirthTown.Size = new System.Drawing.Size(274, 20);
+            this.teBirthTown.StyleController = this.layoutControl1;
+            this.teBirthTown.TabIndex = 167;
+            // 
+            // lueBirthCity
+            // 
+            this.lueBirthCity.Location = new System.Drawing.Point(443, 266);
+            this.lueBirthCity.MenuManager = this.barManager1;
+            this.lueBirthCity.Name = "lueBirthCity";
+            this.lueBirthCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueBirthCity.Size = new System.Drawing.Size(274, 20);
+            this.lueBirthCity.StyleController = this.layoutControl1;
+            this.lueBirthCity.TabIndex = 166;
+            // 
+            // teIDNo
+            // 
+            this.teIDNo.Location = new System.Drawing.Point(443, 242);
+            this.teIDNo.MenuManager = this.barManager1;
+            this.teIDNo.Name = "teIDNo";
+            this.teIDNo.Size = new System.Drawing.Size(274, 20);
+            this.teIDNo.StyleController = this.layoutControl1;
+            this.teIDNo.TabIndex = 165;
+            // 
+            // lueNationality
+            // 
+            this.lueNationality.Location = new System.Drawing.Point(443, 218);
+            this.lueNationality.MenuManager = this.barManager1;
+            this.lueNationality.Name = "lueNationality";
+            this.lueNationality.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueNationality.Size = new System.Drawing.Size(274, 20);
+            this.lueNationality.StyleController = this.layoutControl1;
+            this.lueNationality.TabIndex = 164;
+            // 
+            // deBirthDate
+            // 
+            this.deBirthDate.EditValue = null;
+            this.deBirthDate.Location = new System.Drawing.Point(443, 194);
+            this.deBirthDate.MenuManager = this.barManager1;
+            this.deBirthDate.Name = "deBirthDate";
+            this.deBirthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deBirthDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.deBirthDate.Size = new System.Drawing.Size(274, 20);
+            this.deBirthDate.StyleController = this.layoutControl1;
+            this.deBirthDate.TabIndex = 163;
+            // 
+            // teBirthPlace
+            // 
+            this.teBirthPlace.Location = new System.Drawing.Point(443, 170);
+            this.teBirthPlace.MenuManager = this.barManager1;
+            this.teBirthPlace.Name = "teBirthPlace";
+            this.teBirthPlace.Size = new System.Drawing.Size(274, 20);
+            this.teBirthPlace.StyleController = this.layoutControl1;
+            this.teBirthPlace.TabIndex = 162;
+            // 
+            // teMotherName
+            // 
+            this.teMotherName.Location = new System.Drawing.Point(443, 146);
+            this.teMotherName.MenuManager = this.barManager1;
+            this.teMotherName.Name = "teMotherName";
+            this.teMotherName.Size = new System.Drawing.Size(274, 20);
+            this.teMotherName.StyleController = this.layoutControl1;
+            this.teMotherName.TabIndex = 161;
+            // 
+            // teFatherName
+            // 
+            this.teFatherName.Location = new System.Drawing.Point(443, 122);
+            this.teFatherName.MenuManager = this.barManager1;
+            this.teFatherName.Name = "teFatherName";
+            this.teFatherName.Size = new System.Drawing.Size(274, 20);
+            this.teFatherName.StyleController = this.layoutControl1;
+            this.teFatherName.TabIndex = 160;
+            // 
+            // rgIDType
+            // 
+            this.rgIDType.Location = new System.Drawing.Point(443, 29);
+            this.rgIDType.MenuManager = this.barManager1;
+            this.rgIDType.Name = "rgIDType";
+            this.rgIDType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "Nüfus Cüzdanı"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("E", "Ehliyet"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("P", "Pasaport")});
+            this.rgIDType.Size = new System.Drawing.Size(274, 89);
+            this.rgIDType.StyleController = this.layoutControl1;
+            this.rgIDType.TabIndex = 159;
+            // 
+            // lueBloodType
+            // 
+            this.lueBloodType.Location = new System.Drawing.Point(98, 338);
+            this.lueBloodType.MenuManager = this.barManager1;
+            this.lueBloodType.Name = "lueBloodType";
+            this.lueBloodType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueBloodType.Properties.DisplayMember = "Value";
+            this.lueBloodType.Properties.ValueMember = "ID";
+            this.lueBloodType.Size = new System.Drawing.Size(248, 20);
+            this.lueBloodType.StyleController = this.layoutControl1;
+            this.lueBloodType.TabIndex = 12;
+            // 
             // simpleButton21
             // 
-            this.simpleButton21.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton21.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton21.Name = "simpleButton21";
-            this.simpleButton21.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton21.Size = new System.Drawing.Size(152, 22);
             this.simpleButton21.StyleController = this.layoutControl1;
             this.simpleButton21.TabIndex = 158;
             this.simpleButton21.Text = "Sil";
             // 
             // simpleButton20
             // 
-            this.simpleButton20.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton20.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton20.Name = "simpleButton20";
-            this.simpleButton20.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton20.Size = new System.Drawing.Size(152, 22);
             this.simpleButton20.StyleController = this.layoutControl1;
             this.simpleButton20.TabIndex = 157;
             this.simpleButton20.Text = "Değiştir";
             // 
             // simpleButton19
             // 
-            this.simpleButton19.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton19.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton19.Name = "simpleButton19";
-            this.simpleButton19.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton19.Size = new System.Drawing.Size(152, 22);
             this.simpleButton19.StyleController = this.layoutControl1;
             this.simpleButton19.TabIndex = 156;
             this.simpleButton19.Text = "Ekle";
             // 
             // simpleButton18
             // 
-            this.simpleButton18.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton18.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton18.Name = "simpleButton18";
-            this.simpleButton18.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton18.Size = new System.Drawing.Size(152, 22);
             this.simpleButton18.StyleController = this.layoutControl1;
             this.simpleButton18.TabIndex = 155;
             this.simpleButton18.Text = "Sil";
             // 
             // simpleButton17
             // 
-            this.simpleButton17.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton17.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton17.Name = "simpleButton17";
-            this.simpleButton17.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton17.Size = new System.Drawing.Size(152, 22);
             this.simpleButton17.StyleController = this.layoutControl1;
             this.simpleButton17.TabIndex = 154;
             this.simpleButton17.Text = "Değiştir";
             // 
             // simpleButton16
             // 
-            this.simpleButton16.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton16.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton16.Name = "simpleButton16";
-            this.simpleButton16.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton16.Size = new System.Drawing.Size(152, 22);
             this.simpleButton16.StyleController = this.layoutControl1;
             this.simpleButton16.TabIndex = 153;
             this.simpleButton16.Text = "Ekle";
             // 
             // simpleButton15
             // 
-            this.simpleButton15.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton15.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton15.Name = "simpleButton15";
-            this.simpleButton15.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton15.Size = new System.Drawing.Size(152, 22);
             this.simpleButton15.StyleController = this.layoutControl1;
             this.simpleButton15.TabIndex = 152;
             this.simpleButton15.Text = "Sil";
             // 
             // simpleButton14
             // 
-            this.simpleButton14.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton14.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton14.Name = "simpleButton14";
-            this.simpleButton14.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton14.Size = new System.Drawing.Size(152, 22);
             this.simpleButton14.StyleController = this.layoutControl1;
             this.simpleButton14.TabIndex = 151;
             this.simpleButton14.Text = "Değiştir";
             // 
             // simpleButton13
             // 
-            this.simpleButton13.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton13.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton13.Name = "simpleButton13";
-            this.simpleButton13.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton13.Size = new System.Drawing.Size(152, 22);
             this.simpleButton13.StyleController = this.layoutControl1;
             this.simpleButton13.TabIndex = 150;
             this.simpleButton13.Text = "Ekle";
             // 
             // simpleButton12
             // 
-            this.simpleButton12.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton12.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton12.Name = "simpleButton12";
-            this.simpleButton12.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton12.Size = new System.Drawing.Size(152, 22);
             this.simpleButton12.StyleController = this.layoutControl1;
             this.simpleButton12.TabIndex = 149;
             this.simpleButton12.Text = "Sil";
             // 
             // simpleButton11
             // 
-            this.simpleButton11.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton11.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton11.Size = new System.Drawing.Size(152, 22);
             this.simpleButton11.StyleController = this.layoutControl1;
             this.simpleButton11.TabIndex = 148;
             this.simpleButton11.Text = "Değiştir";
             // 
             // simpleButton10
             // 
-            this.simpleButton10.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton10.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton10.Size = new System.Drawing.Size(152, 22);
             this.simpleButton10.StyleController = this.layoutControl1;
             this.simpleButton10.TabIndex = 147;
             this.simpleButton10.Text = "Ekle";
             // 
             // simpleButton9
             // 
-            this.simpleButton9.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton9.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton9.Size = new System.Drawing.Size(152, 22);
             this.simpleButton9.StyleController = this.layoutControl1;
             this.simpleButton9.TabIndex = 146;
             this.simpleButton9.Text = "Sil";
             // 
             // simpleButton8
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton8.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton8.Size = new System.Drawing.Size(152, 22);
             this.simpleButton8.StyleController = this.layoutControl1;
             this.simpleButton8.TabIndex = 145;
             this.simpleButton8.Text = "Değiştir";
             // 
             // simpleButton7
             // 
-            this.simpleButton7.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton7.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton7.Size = new System.Drawing.Size(152, 22);
             this.simpleButton7.StyleController = this.layoutControl1;
             this.simpleButton7.TabIndex = 144;
             this.simpleButton7.Text = "Ekle";
             // 
             // gridControl7
             // 
-            this.gridControl7.Location = new System.Drawing.Point(17, 350);
+            this.gridControl7.Location = new System.Drawing.Point(17, 466);
             this.gridControl7.MainView = this.gridView7;
             this.gridControl7.MenuManager = this.barManager1;
             this.gridControl7.Name = "gridControl7";
-            this.gridControl7.Size = new System.Drawing.Size(919, 390);
+            this.gridControl7.Size = new System.Drawing.Size(1061, 283);
             this.gridControl7.TabIndex = 143;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -598,11 +897,11 @@
             // 
             // gridControl6
             // 
-            this.gridControl6.Location = new System.Drawing.Point(17, 350);
+            this.gridControl6.Location = new System.Drawing.Point(17, 466);
             this.gridControl6.MainView = this.gridView6;
             this.gridControl6.MenuManager = this.barManager1;
             this.gridControl6.Name = "gridControl6";
-            this.gridControl6.Size = new System.Drawing.Size(919, 390);
+            this.gridControl6.Size = new System.Drawing.Size(1061, 283);
             this.gridControl6.TabIndex = 142;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -640,11 +939,11 @@
             // 
             // gridControl5
             // 
-            this.gridControl5.Location = new System.Drawing.Point(17, 350);
+            this.gridControl5.Location = new System.Drawing.Point(17, 466);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.MenuManager = this.barManager1;
             this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(919, 390);
+            this.gridControl5.Size = new System.Drawing.Size(1061, 283);
             this.gridControl5.TabIndex = 141;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -682,11 +981,11 @@
             // 
             // gridControl4
             // 
-            this.gridControl4.Location = new System.Drawing.Point(17, 350);
+            this.gridControl4.Location = new System.Drawing.Point(17, 466);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.MenuManager = this.barManager1;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(919, 390);
+            this.gridControl4.Size = new System.Drawing.Size(1061, 283);
             this.gridControl4.TabIndex = 140;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -724,11 +1023,11 @@
             // 
             // gridControl3
             // 
-            this.gridControl3.Location = new System.Drawing.Point(17, 350);
+            this.gridControl3.Location = new System.Drawing.Point(17, 466);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.MenuManager = this.barManager1;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(919, 390);
+            this.gridControl3.Size = new System.Drawing.Size(1061, 283);
             this.gridControl3.TabIndex = 139;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -766,47 +1065,47 @@
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton6.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton6.Size = new System.Drawing.Size(152, 22);
             this.simpleButton6.StyleController = this.layoutControl1;
             this.simpleButton6.TabIndex = 138;
             this.simpleButton6.Text = "Sil";
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(940, 402);
+            this.simpleButton5.Location = new System.Drawing.Point(1082, 518);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton5.Size = new System.Drawing.Size(152, 22);
             this.simpleButton5.StyleController = this.layoutControl1;
             this.simpleButton5.TabIndex = 137;
             this.simpleButton5.Text = "Sil";
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton4.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton4.Size = new System.Drawing.Size(152, 22);
             this.simpleButton4.StyleController = this.layoutControl1;
             this.simpleButton4.TabIndex = 136;
             this.simpleButton4.Text = "Ekle";
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton3.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton3.Size = new System.Drawing.Size(152, 22);
             this.simpleButton3.StyleController = this.layoutControl1;
             this.simpleButton3.TabIndex = 135;
             this.simpleButton3.Text = "Değiştir";
             // 
             // gridControl2
             // 
-            this.gridControl2.Location = new System.Drawing.Point(17, 350);
+            this.gridControl2.Location = new System.Drawing.Point(17, 466);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.MenuManager = this.barManager1;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(919, 390);
+            this.gridControl2.Size = new System.Drawing.Size(1061, 283);
             this.gridControl2.TabIndex = 134;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -852,29 +1151,29 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(940, 350);
+            this.simpleButton2.Location = new System.Drawing.Point(1082, 466);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton2.Size = new System.Drawing.Size(152, 22);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 133;
             this.simpleButton2.Text = "Ekle";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(940, 376);
+            this.simpleButton1.Location = new System.Drawing.Point(1082, 492);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(131, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(152, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 132;
             this.simpleButton1.Text = "Değiştir";
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(17, 350);
+            this.gridControl1.Location = new System.Drawing.Point(17, 466);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(919, 390);
+            this.gridControl1.Size = new System.Drawing.Size(1061, 283);
             this.gridControl1.TabIndex = 131;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -929,46 +1228,46 @@
             // deExitDate
             // 
             this.deExitDate.EditValue = null;
-            this.deExitDate.Location = new System.Drawing.Point(256, 198);
+            this.deExitDate.Location = new System.Drawing.Point(266, 218);
             this.deExitDate.MenuManager = this.barManager1;
             this.deExitDate.Name = "deExitDate";
             this.deExitDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deExitDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deExitDate.Size = new System.Drawing.Size(202, 20);
+            this.deExitDate.Size = new System.Drawing.Size(80, 20);
             this.deExitDate.StyleController = this.layoutControl1;
             this.deExitDate.TabIndex = 14;
             // 
             // deEntryDate
             // 
             this.deEntryDate.EditValue = null;
-            this.deEntryDate.Location = new System.Drawing.Point(98, 198);
+            this.deEntryDate.Location = new System.Drawing.Point(98, 218);
             this.deEntryDate.MenuManager = this.barManager1;
             this.deEntryDate.Name = "deEntryDate";
             this.deEntryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deEntryDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deEntryDate.Size = new System.Drawing.Size(85, 20);
+            this.deEntryDate.Size = new System.Drawing.Size(95, 20);
             this.deEntryDate.StyleController = this.layoutControl1;
             this.deEntryDate.TabIndex = 13;
             // 
             // teEmail
             // 
             this.teEmail.EditValue = "";
-            this.teEmail.Location = new System.Drawing.Point(98, 246);
+            this.teEmail.Location = new System.Drawing.Point(98, 314);
             this.teEmail.MenuManager = this.barManager1;
             this.teEmail.Name = "teEmail";
-            this.teEmail.Size = new System.Drawing.Size(360, 20);
+            this.teEmail.Size = new System.Drawing.Size(248, 20);
             this.teEmail.StyleController = this.layoutControl1;
             this.teEmail.TabIndex = 11;
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(949, 43);
+            this.sbClose.Location = new System.Drawing.Point(1089, 43);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(122, 22);
+            this.sbClose.Size = new System.Drawing.Size(145, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 20;
             this.sbClose.Text = "Kapat(F3)";
@@ -976,9 +1275,9 @@
             // 
             // sbSavePersonnel
             // 
-            this.sbSavePersonnel.Location = new System.Drawing.Point(949, 17);
+            this.sbSavePersonnel.Location = new System.Drawing.Point(1089, 17);
             this.sbSavePersonnel.Name = "sbSavePersonnel";
-            this.sbSavePersonnel.Size = new System.Drawing.Size(122, 22);
+            this.sbSavePersonnel.Size = new System.Drawing.Size(145, 22);
             this.sbSavePersonnel.StyleController = this.layoutControl1;
             this.sbSavePersonnel.TabIndex = 19;
             this.sbSavePersonnel.Text = "Kaydet(F5)";
@@ -986,15 +1285,15 @@
             // 
             // teTCID
             // 
-            this.teTCID.Location = new System.Drawing.Point(98, 73);
+            this.teTCID.Location = new System.Drawing.Point(98, 53);
             this.teTCID.Name = "teTCID";
-            this.teTCID.Size = new System.Drawing.Size(360, 20);
+            this.teTCID.Size = new System.Drawing.Size(248, 20);
             this.teTCID.StyleController = this.layoutControl1;
             this.teTCID.TabIndex = 5;
             // 
             // lueHomeCity
             // 
-            this.lueHomeCity.Location = new System.Drawing.Point(555, 270);
+            this.lueHomeCity.Location = new System.Drawing.Point(814, 230);
             this.lueHomeCity.Name = "lueHomeCity";
             this.lueHomeCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1003,93 +1302,93 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "İl")});
             this.lueHomeCity.Properties.DisplayMember = "Value";
             this.lueHomeCity.Properties.ValueMember = "Value";
-            this.lueHomeCity.Size = new System.Drawing.Size(354, 20);
+            this.lueHomeCity.Size = new System.Drawing.Size(235, 20);
             this.lueHomeCity.StyleController = this.layoutControl1;
             this.lueHomeCity.TabIndex = 18;
             // 
             // teMobilePhone
             // 
-            this.teMobilePhone.Location = new System.Drawing.Point(98, 222);
+            this.teMobilePhone.Location = new System.Drawing.Point(98, 290);
             this.teMobilePhone.Name = "teMobilePhone";
-            this.teMobilePhone.Size = new System.Drawing.Size(360, 20);
+            this.teMobilePhone.Size = new System.Drawing.Size(248, 20);
             this.teMobilePhone.StyleController = this.layoutControl1;
             this.teMobilePhone.TabIndex = 10;
             // 
             // teHomePhone1
             // 
-            this.teHomePhone1.Location = new System.Drawing.Point(98, 174);
+            this.teHomePhone1.Location = new System.Drawing.Point(98, 266);
             this.teHomePhone1.Name = "teHomePhone1";
-            this.teHomePhone1.Size = new System.Drawing.Size(360, 20);
+            this.teHomePhone1.Size = new System.Drawing.Size(248, 20);
             this.teHomePhone1.StyleController = this.layoutControl1;
             this.teHomePhone1.TabIndex = 9;
             // 
             // rgSex
             // 
-            this.rgSex.Location = new System.Drawing.Point(98, 145);
+            this.rgSex.Location = new System.Drawing.Point(29, 189);
             this.rgSex.Name = "rgSex";
             this.rgSex.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "Bay"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "Bayan")});
-            this.rgSex.Size = new System.Drawing.Size(360, 25);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("E", "Bay"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("K", "Bayan")});
+            this.rgSex.Size = new System.Drawing.Size(149, 25);
             this.rgSex.StyleController = this.layoutControl1;
             this.rgSex.TabIndex = 8;
             // 
             // teSurname
             // 
-            this.teSurname.Location = new System.Drawing.Point(98, 121);
+            this.teSurname.Location = new System.Drawing.Point(98, 101);
             this.teSurname.Name = "teSurname";
             this.teSurname.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.teSurname.Size = new System.Drawing.Size(360, 20);
+            this.teSurname.Size = new System.Drawing.Size(248, 20);
             this.teSurname.StyleController = this.layoutControl1;
             this.teSurname.TabIndex = 7;
             // 
-            // teFirstName
-            // 
-            this.teFirstName.Location = new System.Drawing.Point(98, 97);
-            this.teFirstName.Name = "teFirstName";
-            this.teFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.teFirstName.Size = new System.Drawing.Size(360, 20);
-            this.teFirstName.StyleController = this.layoutControl1;
-            this.teFirstName.TabIndex = 6;
-            // 
             // tePersonnelNo
             // 
-            this.tePersonnelNo.Location = new System.Drawing.Point(98, 49);
+            this.tePersonnelNo.Location = new System.Drawing.Point(98, 29);
             this.tePersonnelNo.Name = "tePersonnelNo";
             this.tePersonnelNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tePersonnelNo.Size = new System.Drawing.Size(360, 20);
+            this.tePersonnelNo.Size = new System.Drawing.Size(248, 20);
             this.tePersonnelNo.StyleController = this.layoutControl1;
             this.tePersonnelNo.TabIndex = 4;
             // 
             // teHomeTown
             // 
             this.teHomeTown.EditValue = "";
-            this.teHomeTown.Location = new System.Drawing.Point(555, 246);
+            this.teHomeTown.Location = new System.Drawing.Point(814, 206);
             this.teHomeTown.Name = "teHomeTown";
             this.teHomeTown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.teHomeTown.Properties.NullText = "[EditValue is null]";
-            this.teHomeTown.Size = new System.Drawing.Size(354, 20);
+            this.teHomeTown.Size = new System.Drawing.Size(235, 20);
             this.teHomeTown.StyleController = this.layoutControl1;
             this.teHomeTown.TabIndex = 17;
             // 
             // teHomeAddress
             // 
-            this.teHomeAddress.Location = new System.Drawing.Point(486, 65);
+            this.teHomeAddress.Location = new System.Drawing.Point(745, 45);
             this.teHomeAddress.Name = "teHomeAddress";
-            this.teHomeAddress.Size = new System.Drawing.Size(423, 153);
+            this.teHomeAddress.Size = new System.Drawing.Size(304, 133);
             this.teHomeAddress.StyleController = this.layoutControl1;
             this.teHomeAddress.TabIndex = 15;
             // 
             // teHomeDistrict
             // 
             this.teHomeDistrict.EditValue = "";
-            this.teHomeDistrict.Location = new System.Drawing.Point(555, 222);
+            this.teHomeDistrict.Location = new System.Drawing.Point(814, 182);
             this.teHomeDistrict.Name = "teHomeDistrict";
             this.teHomeDistrict.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.teHomeDistrict.Properties.NullText = "[EditValue is null]";
-            this.teHomeDistrict.Size = new System.Drawing.Size(354, 20);
+            this.teHomeDistrict.Size = new System.Drawing.Size(235, 20);
             this.teHomeDistrict.StyleController = this.layoutControl1;
             this.teHomeDistrict.TabIndex = 16;
+            // 
+            // teFirstName
+            // 
+            this.teFirstName.Location = new System.Drawing.Point(98, 77);
+            this.teFirstName.Name = "teFirstName";
+            this.teFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.teFirstName.Size = new System.Drawing.Size(248, 20);
+            this.teFirstName.StyleController = this.layoutControl1;
+            this.teFirstName.TabIndex = 6;
             // 
             // lcgHastaIslemleri
             // 
@@ -1103,18 +1402,18 @@
             this.lcgHastaIslemleri.Location = new System.Drawing.Point(0, 0);
             this.lcgHastaIslemleri.Name = "Root";
             this.lcgHastaIslemleri.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.lcgHastaIslemleri.Size = new System.Drawing.Size(1088, 757);
+            this.lcgHastaIslemleri.Size = new System.Drawing.Size(1251, 766);
             this.lcgHastaIslemleri.Text = "Patient İşlemleri";
             this.lcgHastaIslemleri.TextVisible = false;
             // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 313);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 429);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.lgcEducation;
             this.tabbedControlGroup1.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1082, 438);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1245, 331);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lgcEducation,
             this.lcgDepartment,
@@ -1135,7 +1434,7 @@
             this.layoutControlItem10});
             this.lgcEducation.Location = new System.Drawing.Point(0, 0);
             this.lgcEducation.Name = "lgcEducation";
-            this.lgcEducation.Size = new System.Drawing.Size(1058, 394);
+            this.lgcEducation.Size = new System.Drawing.Size(1221, 287);
             this.lgcEducation.Text = "Eğitim";
             // 
             // layoutControlItem4
@@ -1144,7 +1443,7 @@
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -1155,9 +1454,9 @@
             // 
             this.layoutControlItem5.Control = this.simpleButton1;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem5.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
@@ -1167,9 +1466,9 @@
             // 
             this.layoutControlItem6.Control = this.simpleButton2;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem6.Text = "layoutControlItem6";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
@@ -1179,9 +1478,9 @@
             // 
             this.layoutControlItem10.Control = this.simpleButton5;
             this.layoutControlItem10.CustomizationFormText = "layoutControlItem10";
-            this.layoutControlItem10.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem10.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem10.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem10.Text = "layoutControlItem10";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
@@ -1197,7 +1496,7 @@
             this.layoutControlItem11});
             this.lcgDepartment.Location = new System.Drawing.Point(0, 0);
             this.lcgDepartment.Name = "lcgDepartment";
-            this.lcgDepartment.Size = new System.Drawing.Size(1058, 394);
+            this.lcgDepartment.Size = new System.Drawing.Size(1221, 287);
             this.lcgDepartment.Text = "Bölüm";
             // 
             // layoutControlItem7
@@ -1206,7 +1505,7 @@
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem7.Text = "layoutControlItem7";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -1217,9 +1516,9 @@
             // 
             this.layoutControlItem8.Control = this.simpleButton3;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
-            this.layoutControlItem8.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem8.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem8.Text = "layoutControlItem8";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
@@ -1229,9 +1528,9 @@
             // 
             this.layoutControlItem9.Control = this.simpleButton4;
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem9";
-            this.layoutControlItem9.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem9.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem9.Text = "layoutControlItem9";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextToControlDistance = 0;
@@ -1241,9 +1540,9 @@
             // 
             this.layoutControlItem11.Control = this.simpleButton6;
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem11";
-            this.layoutControlItem11.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem11.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem11.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem11.Text = "layoutControlItem11";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 0;
@@ -1259,7 +1558,7 @@
             this.layoutControlItem19});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1058, 394);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1221, 287);
             this.layoutControlGroup1.Text = "Hizmet İçi Eğitim";
             // 
             // layoutControlItem12
@@ -1268,7 +1567,7 @@
             this.layoutControlItem12.CustomizationFormText = "layoutControlItem12";
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem12.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem12.Text = "layoutControlItem12";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextToControlDistance = 0;
@@ -1278,9 +1577,9 @@
             // 
             this.layoutControlItem17.Control = this.simpleButton7;
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
-            this.layoutControlItem17.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem17.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem17.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem17.Text = "layoutControlItem17";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
@@ -1290,9 +1589,9 @@
             // 
             this.layoutControlItem18.Control = this.simpleButton8;
             this.layoutControlItem18.CustomizationFormText = "layoutControlItem18";
-            this.layoutControlItem18.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem18.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem18.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem18.Text = "layoutControlItem18";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
@@ -1302,9 +1601,9 @@
             // 
             this.layoutControlItem19.Control = this.simpleButton9;
             this.layoutControlItem19.CustomizationFormText = "layoutControlItem19";
-            this.layoutControlItem19.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem19.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem19.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem19.Text = "layoutControlItem19";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextToControlDistance = 0;
@@ -1320,7 +1619,7 @@
             this.layoutControlItem22});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1058, 394);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1221, 287);
             this.layoutControlGroup2.Text = "İzinler";
             // 
             // layoutControlItem13
@@ -1329,7 +1628,7 @@
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem13";
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem13.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem13.Text = "layoutControlItem13";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextToControlDistance = 0;
@@ -1339,9 +1638,9 @@
             // 
             this.layoutControlItem20.Control = this.simpleButton10;
             this.layoutControlItem20.CustomizationFormText = "layoutControlItem20";
-            this.layoutControlItem20.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem20.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem20.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem20.Text = "layoutControlItem20";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextToControlDistance = 0;
@@ -1351,9 +1650,9 @@
             // 
             this.layoutControlItem21.Control = this.simpleButton11;
             this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
-            this.layoutControlItem21.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem21.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem21.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem21.Text = "layoutControlItem21";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextToControlDistance = 0;
@@ -1363,9 +1662,9 @@
             // 
             this.layoutControlItem22.Control = this.simpleButton12;
             this.layoutControlItem22.CustomizationFormText = "layoutControlItem22";
-            this.layoutControlItem22.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem22.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem22.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem22.Text = "layoutControlItem22";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextToControlDistance = 0;
@@ -1381,7 +1680,7 @@
             this.layoutControlItem25});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1058, 394);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1221, 287);
             this.layoutControlGroup3.Text = "Raporlar";
             // 
             // layoutControlItem14
@@ -1390,7 +1689,7 @@
             this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem14.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem14.Text = "layoutControlItem14";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextToControlDistance = 0;
@@ -1400,9 +1699,9 @@
             // 
             this.layoutControlItem23.Control = this.simpleButton13;
             this.layoutControlItem23.CustomizationFormText = "layoutControlItem23";
-            this.layoutControlItem23.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem23.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem23.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem23.Text = "layoutControlItem23";
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextToControlDistance = 0;
@@ -1412,9 +1711,9 @@
             // 
             this.layoutControlItem24.Control = this.simpleButton14;
             this.layoutControlItem24.CustomizationFormText = "layoutControlItem24";
-            this.layoutControlItem24.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem24.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem24.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem24.Text = "layoutControlItem24";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextToControlDistance = 0;
@@ -1424,9 +1723,9 @@
             // 
             this.layoutControlItem25.Control = this.simpleButton15;
             this.layoutControlItem25.CustomizationFormText = "layoutControlItem25";
-            this.layoutControlItem25.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem25.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem25.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem25.Text = "layoutControlItem25";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextToControlDistance = 0;
@@ -1442,7 +1741,7 @@
             this.layoutControlItem28});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1058, 394);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1221, 287);
             this.layoutControlGroup4.Text = "Sertifikalar";
             // 
             // layoutControlItem15
@@ -1451,7 +1750,7 @@
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem15.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem15.Text = "layoutControlItem15";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextToControlDistance = 0;
@@ -1461,9 +1760,9 @@
             // 
             this.layoutControlItem26.Control = this.simpleButton16;
             this.layoutControlItem26.CustomizationFormText = "layoutControlItem26";
-            this.layoutControlItem26.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem26.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem26.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem26.Text = "layoutControlItem26";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem26.TextToControlDistance = 0;
@@ -1473,9 +1772,9 @@
             // 
             this.layoutControlItem27.Control = this.simpleButton17;
             this.layoutControlItem27.CustomizationFormText = "layoutControlItem27";
-            this.layoutControlItem27.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem27.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem27.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem27.Text = "layoutControlItem27";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem27.TextToControlDistance = 0;
@@ -1485,9 +1784,9 @@
             // 
             this.layoutControlItem28.Control = this.simpleButton18;
             this.layoutControlItem28.CustomizationFormText = "layoutControlItem28";
-            this.layoutControlItem28.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem28.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem28.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem28.Text = "layoutControlItem28";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextToControlDistance = 0;
@@ -1503,7 +1802,7 @@
             this.layoutControlItem31});
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(1058, 394);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(1221, 287);
             this.layoutControlGroup5.Text = "Yabancı Dil";
             // 
             // layoutControlItem16
@@ -1512,7 +1811,7 @@
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(923, 394);
+            this.layoutControlItem16.Size = new System.Drawing.Size(1065, 287);
             this.layoutControlItem16.Text = "layoutControlItem16";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextToControlDistance = 0;
@@ -1522,9 +1821,9 @@
             // 
             this.layoutControlItem29.Control = this.simpleButton19;
             this.layoutControlItem29.CustomizationFormText = "layoutControlItem29";
-            this.layoutControlItem29.Location = new System.Drawing.Point(923, 0);
+            this.layoutControlItem29.Location = new System.Drawing.Point(1065, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem29.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem29.Text = "layoutControlItem29";
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem29.TextToControlDistance = 0;
@@ -1534,9 +1833,9 @@
             // 
             this.layoutControlItem30.Control = this.simpleButton20;
             this.layoutControlItem30.CustomizationFormText = "layoutControlItem30";
-            this.layoutControlItem30.Location = new System.Drawing.Point(923, 26);
+            this.layoutControlItem30.Location = new System.Drawing.Point(1065, 26);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem30.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem30.Text = "layoutControlItem30";
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextToControlDistance = 0;
@@ -1546,9 +1845,9 @@
             // 
             this.layoutControlItem31.Control = this.simpleButton21;
             this.layoutControlItem31.CustomizationFormText = "layoutControlItem31";
-            this.layoutControlItem31.Location = new System.Drawing.Point(923, 52);
+            this.layoutControlItem31.Location = new System.Drawing.Point(1065, 52);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(135, 342);
+            this.layoutControlItem31.Size = new System.Drawing.Size(156, 235);
             this.layoutControlItem31.Text = "layoutControlItem31";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextToControlDistance = 0;
@@ -1559,12 +1858,40 @@
             this.lcgPersonelBilgileri.CustomizationFormText = "Personel Bilgileri";
             this.lcgPersonelBilgileri.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup6,
-            this.layoutControlGroup7});
+            this.layoutControlGroup7,
+            this.layoutControlGroup8});
             this.lcgPersonelBilgileri.Location = new System.Drawing.Point(0, 0);
             this.lcgPersonelBilgileri.Name = "lcgPersonelBilgileri";
-            this.lcgPersonelBilgileri.Size = new System.Drawing.Size(932, 313);
+            this.lcgPersonelBilgileri.Size = new System.Drawing.Size(1072, 429);
             this.lcgPersonelBilgileri.Text = "Personel Bilgileri";
             this.lcgPersonelBilgileri.TextVisible = false;
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.CustomizationFormText = "layoutControlGroup6";
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciPersonnelNo,
+            this.lciTCID,
+            this.lciName,
+            this.lciSurname,
+            this.lciSex,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.lciMobilePhone,
+            this.layoutControlItem1,
+            this.lciBloodType,
+            this.lciMaritalStatus,
+            this.lciUnvani,
+            this.lciDepartment,
+            this.lciHomePhone1,
+            this.lciPhone,
+            this.lciInsuranceNo,
+            this.lciTaxNo});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup6.Name = "layoutControlGroup6";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(345, 405);
+            this.layoutControlGroup6.Text = "layoutControlGroup6";
+            this.layoutControlGroup6.TextVisible = false;
             // 
             // lciPersonnelNo
             // 
@@ -1574,7 +1901,7 @@
             this.lciPersonnelNo.CustomizationFormText = "Personel No";
             this.lciPersonnelNo.Location = new System.Drawing.Point(0, 0);
             this.lciPersonnelNo.Name = "lciPersonnelNo";
-            this.lciPersonnelNo.Size = new System.Drawing.Size(433, 24);
+            this.lciPersonnelNo.Size = new System.Drawing.Size(321, 24);
             this.lciPersonnelNo.Text = "Personel No";
             this.lciPersonnelNo.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -1586,106 +1913,9 @@
             this.lciTCID.CustomizationFormText = "T.C. Kimlik No";
             this.lciTCID.Location = new System.Drawing.Point(0, 24);
             this.lciTCID.Name = "lciTCID";
-            this.lciTCID.Size = new System.Drawing.Size(433, 24);
+            this.lciTCID.Size = new System.Drawing.Size(321, 24);
             this.lciTCID.Text = "T.C. Kimlik No";
             this.lciTCID.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // lciMobilePhone
-            // 
-            this.lciMobilePhone.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lciMobilePhone.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciMobilePhone.Control = this.teMobilePhone;
-            this.lciMobilePhone.CustomizationFormText = "Cep Telefonu";
-            this.lciMobilePhone.Location = new System.Drawing.Point(0, 173);
-            this.lciMobilePhone.Name = "lciMobilePhone";
-            this.lciMobilePhone.Size = new System.Drawing.Size(433, 24);
-            this.lciMobilePhone.Text = "Cep Telefonu";
-            this.lciMobilePhone.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseBackColor = true;
-            this.layoutControlItem2.Control = this.deEntryDate;
-            this.layoutControlItem2.CustomizationFormText = "Giriş Tarihi";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 149);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(158, 24);
-            this.layoutControlItem2.Text = "Giriş Tarihi";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.layoutControlItem3.AppearanceItemCaption.Options.UseBackColor = true;
-            this.layoutControlItem3.Control = this.deExitDate;
-            this.layoutControlItem3.CustomizationFormText = "Çıkış Tarihi";
-            this.layoutControlItem3.Location = new System.Drawing.Point(158, 149);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(275, 24);
-            this.layoutControlItem3.Text = "Çıkış Tarihi";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseBackColor = true;
-            this.layoutControlItem1.Control = this.teEmail;
-            this.layoutControlItem1.CustomizationFormText = "E-Mail";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 197);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(433, 24);
-            this.layoutControlItem1.Text = "E-Mail";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // lciHomeCity
-            // 
-            this.lciHomeCity.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lciHomeCity.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomeCity.Control = this.lueHomeCity;
-            this.lciHomeCity.CustomizationFormText = "İl";
-            this.lciHomeCity.Location = new System.Drawing.Point(0, 221);
-            this.lciHomeCity.Name = "lciHomeCity";
-            this.lciHomeCity.Size = new System.Drawing.Size(427, 24);
-            this.lciHomeCity.Text = "İl";
-            this.lciHomeCity.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // lciHomeTown
-            // 
-            this.lciHomeTown.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lciHomeTown.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomeTown.Control = this.teHomeTown;
-            this.lciHomeTown.CustomizationFormText = "İlçe";
-            this.lciHomeTown.Location = new System.Drawing.Point(0, 197);
-            this.lciHomeTown.Name = "lciHomeTown";
-            this.lciHomeTown.Size = new System.Drawing.Size(427, 24);
-            this.lciHomeTown.Text = "İlçe";
-            this.lciHomeTown.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // lciHomeDistrict
-            // 
-            this.lciHomeDistrict.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lciHomeDistrict.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomeDistrict.Control = this.teHomeDistrict;
-            this.lciHomeDistrict.CustomizationFormText = "Mahalle";
-            this.lciHomeDistrict.Location = new System.Drawing.Point(0, 173);
-            this.lciHomeDistrict.Name = "lciHomeDistrict";
-            this.lciHomeDistrict.Size = new System.Drawing.Size(427, 24);
-            this.lciHomeDistrict.Text = "Mahalle";
-            this.lciHomeDistrict.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // lciHomeAddress
-            // 
-            this.lciHomeAddress.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lciHomeAddress.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomeAddress.Control = this.teHomeAddress;
-            this.lciHomeAddress.CustomizationFormText = "Ev Adresi";
-            this.lciHomeAddress.Location = new System.Drawing.Point(0, 0);
-            this.lciHomeAddress.Name = "lciHomeAddress";
-            this.lciHomeAddress.Size = new System.Drawing.Size(427, 173);
-            this.lciHomeAddress.Text = "Ev Adresi";
-            this.lciHomeAddress.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciHomeAddress.TextSize = new System.Drawing.Size(65, 13);
             // 
             // lciName
             // 
@@ -1695,7 +1925,7 @@
             this.lciName.CustomizationFormText = "Adı";
             this.lciName.Location = new System.Drawing.Point(0, 48);
             this.lciName.Name = "lciName";
-            this.lciName.Size = new System.Drawing.Size(433, 24);
+            this.lciName.Size = new System.Drawing.Size(321, 24);
             this.lciName.Text = "Adı";
             this.lciName.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -1707,7 +1937,7 @@
             this.lciSurname.CustomizationFormText = "Soyadı";
             this.lciSurname.Location = new System.Drawing.Point(0, 72);
             this.lciSurname.Name = "lciSurname";
-            this.lciSurname.Size = new System.Drawing.Size(433, 24);
+            this.lciSurname.Size = new System.Drawing.Size(321, 24);
             this.lciSurname.Text = "Soyadı";
             this.lciSurname.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -1717,23 +1947,60 @@
             this.lciSex.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciSex.Control = this.rgSex;
             this.lciSex.CustomizationFormText = "Cinsiyet";
-            this.lciSex.Location = new System.Drawing.Point(0, 96);
+            this.lciSex.Location = new System.Drawing.Point(0, 144);
             this.lciSex.Name = "lciSex";
-            this.lciSex.Size = new System.Drawing.Size(433, 29);
+            this.lciSex.Size = new System.Drawing.Size(153, 45);
             this.lciSex.Text = "Cinsiyet";
+            this.lciSex.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciSex.TextSize = new System.Drawing.Size(65, 13);
             // 
-            // lciHomePhone1
+            // layoutControlItem2
             // 
-            this.lciHomePhone1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lciHomePhone1.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomePhone1.Control = this.teHomePhone1;
-            this.lciHomePhone1.CustomizationFormText = "Ev Tlf";
-            this.lciHomePhone1.Location = new System.Drawing.Point(0, 125);
-            this.lciHomePhone1.Name = "lciHomePhone1";
-            this.lciHomePhone1.Size = new System.Drawing.Size(433, 24);
-            this.lciHomePhone1.Text = "Ev Tlf";
-            this.lciHomePhone1.TextSize = new System.Drawing.Size(65, 13);
+            this.layoutControlItem2.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem2.Control = this.deEntryDate;
+            this.layoutControlItem2.CustomizationFormText = "Giriş Tarihi";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 189);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(168, 24);
+            this.layoutControlItem2.Text = "Giriş Tarihi";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem3.Control = this.deExitDate;
+            this.layoutControlItem3.CustomizationFormText = "Çıkış Tarihi";
+            this.layoutControlItem3.Location = new System.Drawing.Point(168, 189);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(153, 24);
+            this.layoutControlItem3.Text = "Çıkış Tarihi";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciMobilePhone
+            // 
+            this.lciMobilePhone.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciMobilePhone.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciMobilePhone.Control = this.teMobilePhone;
+            this.lciMobilePhone.CustomizationFormText = "Cep Telefonu";
+            this.lciMobilePhone.Location = new System.Drawing.Point(0, 261);
+            this.lciMobilePhone.Name = "lciMobilePhone";
+            this.lciMobilePhone.Size = new System.Drawing.Size(321, 24);
+            this.lciMobilePhone.Text = "Cep Telefonu";
+            this.lciMobilePhone.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem1.Control = this.teEmail;
+            this.layoutControlItem1.CustomizationFormText = "E-Mail";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 285);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(321, 24);
+            this.layoutControlItem1.Text = "E-Mail";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 13);
             // 
             // lciBloodType
             // 
@@ -1741,11 +2008,352 @@
             this.lciBloodType.AppearanceItemCaption.Options.UseBackColor = true;
             this.lciBloodType.Control = this.lueBloodType;
             this.lciBloodType.CustomizationFormText = "layoutControlItem32";
-            this.lciBloodType.Location = new System.Drawing.Point(0, 221);
+            this.lciBloodType.Location = new System.Drawing.Point(0, 309);
             this.lciBloodType.Name = "lciBloodType";
-            this.lciBloodType.Size = new System.Drawing.Size(433, 24);
+            this.lciBloodType.Size = new System.Drawing.Size(321, 24);
             this.lciBloodType.Text = "Kan Grubu";
             this.lciBloodType.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciMaritalStatus
+            // 
+            this.lciMaritalStatus.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciMaritalStatus.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciMaritalStatus.Control = this.rgMaritalStatus;
+            this.lciMaritalStatus.CustomizationFormText = "Medeni Hali";
+            this.lciMaritalStatus.Location = new System.Drawing.Point(153, 144);
+            this.lciMaritalStatus.Name = "lciMaritalStatus";
+            this.lciMaritalStatus.Size = new System.Drawing.Size(168, 45);
+            this.lciMaritalStatus.Text = "Medeni Hali";
+            this.lciMaritalStatus.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciMaritalStatus.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciUnvani
+            // 
+            this.lciUnvani.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciUnvani.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciUnvani.Control = this.teUnvani;
+            this.lciUnvani.CustomizationFormText = "Ünvanı";
+            this.lciUnvani.Location = new System.Drawing.Point(0, 333);
+            this.lciUnvani.Name = "lciUnvani";
+            this.lciUnvani.Size = new System.Drawing.Size(321, 24);
+            this.lciUnvani.Text = "Ünvanı";
+            this.lciUnvani.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciDepartment
+            // 
+            this.lciDepartment.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciDepartment.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciDepartment.Control = this.teDepartment;
+            this.lciDepartment.CustomizationFormText = "Bölümü";
+            this.lciDepartment.Location = new System.Drawing.Point(0, 357);
+            this.lciDepartment.Name = "lciDepartment";
+            this.lciDepartment.Size = new System.Drawing.Size(321, 24);
+            this.lciDepartment.Text = "Bölümü";
+            this.lciDepartment.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciHomePhone1
+            // 
+            this.lciHomePhone1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciHomePhone1.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomePhone1.Control = this.teHomePhone1;
+            this.lciHomePhone1.CustomizationFormText = "Ev Tlf";
+            this.lciHomePhone1.Location = new System.Drawing.Point(0, 237);
+            this.lciHomePhone1.Name = "lciHomePhone1";
+            this.lciHomePhone1.Size = new System.Drawing.Size(321, 24);
+            this.lciHomePhone1.Text = "Ev Telefonu";
+            this.lciHomePhone1.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciPhone
+            // 
+            this.lciPhone.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciPhone.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciPhone.Control = this.tePhone;
+            this.lciPhone.CustomizationFormText = "Telefon";
+            this.lciPhone.Location = new System.Drawing.Point(0, 213);
+            this.lciPhone.Name = "lciPhone";
+            this.lciPhone.Size = new System.Drawing.Size(321, 24);
+            this.lciPhone.Text = "Telefon";
+            this.lciPhone.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciInsuranceNo
+            // 
+            this.lciInsuranceNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciInsuranceNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciInsuranceNo.Control = this.teInsuranceNo;
+            this.lciInsuranceNo.CustomizationFormText = "Sigorta No";
+            this.lciInsuranceNo.Location = new System.Drawing.Point(0, 96);
+            this.lciInsuranceNo.Name = "lciInsuranceNo";
+            this.lciInsuranceNo.Size = new System.Drawing.Size(321, 24);
+            this.lciInsuranceNo.Text = "Sigorta No";
+            this.lciInsuranceNo.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciTaxNo
+            // 
+            this.lciTaxNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciTaxNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciTaxNo.Control = this.teTaxNo;
+            this.lciTaxNo.CustomizationFormText = "Vergi No";
+            this.lciTaxNo.Location = new System.Drawing.Point(0, 120);
+            this.lciTaxNo.Name = "lciTaxNo";
+            this.lciTaxNo.Size = new System.Drawing.Size(321, 24);
+            this.lciTaxNo.Text = "Vergi No";
+            this.lciTaxNo.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // layoutControlGroup7
+            // 
+            this.layoutControlGroup7.CustomizationFormText = "layoutControlGroup7";
+            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciHomeAddress,
+            this.lciExplanation,
+            this.lciHomeDistrict,
+            this.lciHomeCity,
+            this.lciHomeTown});
+            this.layoutControlGroup7.Location = new System.Drawing.Point(716, 0);
+            this.layoutControlGroup7.Name = "layoutControlGroup7";
+            this.layoutControlGroup7.Size = new System.Drawing.Size(332, 405);
+            this.layoutControlGroup7.Text = "layoutControlGroup7";
+            this.layoutControlGroup7.TextVisible = false;
+            // 
+            // lciHomeAddress
+            // 
+            this.lciHomeAddress.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeAddress.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomeAddress.Control = this.teHomeAddress;
+            this.lciHomeAddress.CustomizationFormText = "Ev Adresi";
+            this.lciHomeAddress.Location = new System.Drawing.Point(0, 0);
+            this.lciHomeAddress.Name = "lciHomeAddress";
+            this.lciHomeAddress.Size = new System.Drawing.Size(308, 153);
+            this.lciHomeAddress.Text = "Ev Adresi";
+            this.lciHomeAddress.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciHomeAddress.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciExplanation
+            // 
+            this.lciExplanation.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciExplanation.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciExplanation.Control = this.meExplanation;
+            this.lciExplanation.CustomizationFormText = "Açıklama";
+            this.lciExplanation.Location = new System.Drawing.Point(0, 225);
+            this.lciExplanation.Name = "lciExplanation";
+            this.lciExplanation.Size = new System.Drawing.Size(308, 156);
+            this.lciExplanation.Text = "Açıklama";
+            this.lciExplanation.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciExplanation.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciHomeDistrict
+            // 
+            this.lciHomeDistrict.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeDistrict.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomeDistrict.Control = this.teHomeDistrict;
+            this.lciHomeDistrict.CustomizationFormText = "Mahalle";
+            this.lciHomeDistrict.Location = new System.Drawing.Point(0, 153);
+            this.lciHomeDistrict.Name = "lciHomeDistrict";
+            this.lciHomeDistrict.Size = new System.Drawing.Size(308, 24);
+            this.lciHomeDistrict.Text = "Mahalle";
+            this.lciHomeDistrict.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciHomeCity
+            // 
+            this.lciHomeCity.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeCity.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomeCity.Control = this.lueHomeCity;
+            this.lciHomeCity.CustomizationFormText = "İl";
+            this.lciHomeCity.Location = new System.Drawing.Point(0, 201);
+            this.lciHomeCity.Name = "lciHomeCity";
+            this.lciHomeCity.Size = new System.Drawing.Size(308, 24);
+            this.lciHomeCity.Text = "İl";
+            this.lciHomeCity.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciHomeTown
+            // 
+            this.lciHomeTown.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lciHomeTown.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomeTown.Control = this.teHomeTown;
+            this.lciHomeTown.CustomizationFormText = "İlçe";
+            this.lciHomeTown.Location = new System.Drawing.Point(0, 177);
+            this.lciHomeTown.Name = "lciHomeTown";
+            this.lciHomeTown.Size = new System.Drawing.Size(308, 24);
+            this.lciHomeTown.Text = "İlçe";
+            this.lciHomeTown.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // layoutControlGroup8
+            // 
+            this.layoutControlGroup8.CustomizationFormText = "layoutControlGroup8";
+            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciIDType,
+            this.lciFatherName,
+            this.lciMotherName,
+            this.lciBirthPlace,
+            this.lciBirthDate,
+            this.lciNationality,
+            this.lciIDNo,
+            this.lciBirthCity,
+            this.lciBirthTown,
+            this.lciBirthDistrict,
+            this.lciCilt,
+            this.lciAileSiraNo,
+            this.lciSiraNo});
+            this.layoutControlGroup8.Location = new System.Drawing.Point(345, 0);
+            this.layoutControlGroup8.Name = "layoutControlGroup8";
+            this.layoutControlGroup8.Size = new System.Drawing.Size(371, 405);
+            this.layoutControlGroup8.Text = "layoutControlGroup8";
+            this.layoutControlGroup8.TextVisible = false;
+            // 
+            // lciIDType
+            // 
+            this.lciIDType.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciIDType.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciIDType.Control = this.rgIDType;
+            this.lciIDType.CustomizationFormText = "Kimlik Türü";
+            this.lciIDType.Location = new System.Drawing.Point(0, 0);
+            this.lciIDType.Name = "lciIDType";
+            this.lciIDType.Size = new System.Drawing.Size(347, 93);
+            this.lciIDType.Text = "Kimlik Türü";
+            this.lciIDType.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciFatherName
+            // 
+            this.lciFatherName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciFatherName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciFatherName.Control = this.teFatherName;
+            this.lciFatherName.CustomizationFormText = "Baba Adı";
+            this.lciFatherName.Location = new System.Drawing.Point(0, 93);
+            this.lciFatherName.Name = "lciFatherName";
+            this.lciFatherName.Size = new System.Drawing.Size(347, 24);
+            this.lciFatherName.Text = "Baba Adı";
+            this.lciFatherName.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciMotherName
+            // 
+            this.lciMotherName.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciMotherName.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciMotherName.Control = this.teMotherName;
+            this.lciMotherName.CustomizationFormText = "Ana Adı";
+            this.lciMotherName.Location = new System.Drawing.Point(0, 117);
+            this.lciMotherName.Name = "lciMotherName";
+            this.lciMotherName.Size = new System.Drawing.Size(347, 24);
+            this.lciMotherName.Text = "Ana Adı";
+            this.lciMotherName.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciBirthPlace
+            // 
+            this.lciBirthPlace.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciBirthPlace.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthPlace.Control = this.teBirthPlace;
+            this.lciBirthPlace.CustomizationFormText = "Doğum Yeri";
+            this.lciBirthPlace.Location = new System.Drawing.Point(0, 141);
+            this.lciBirthPlace.Name = "lciBirthPlace";
+            this.lciBirthPlace.Size = new System.Drawing.Size(347, 24);
+            this.lciBirthPlace.Text = "Doğum Yeri";
+            this.lciBirthPlace.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciBirthDate
+            // 
+            this.lciBirthDate.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciBirthDate.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthDate.Control = this.deBirthDate;
+            this.lciBirthDate.CustomizationFormText = "Doğum Tarihi";
+            this.lciBirthDate.Location = new System.Drawing.Point(0, 165);
+            this.lciBirthDate.Name = "lciBirthDate";
+            this.lciBirthDate.Size = new System.Drawing.Size(347, 24);
+            this.lciBirthDate.Text = "Doğum Tarihi";
+            this.lciBirthDate.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciNationality
+            // 
+            this.lciNationality.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciNationality.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciNationality.Control = this.lueNationality;
+            this.lciNationality.CustomizationFormText = "Uyruğu";
+            this.lciNationality.Location = new System.Drawing.Point(0, 189);
+            this.lciNationality.Name = "lciNationality";
+            this.lciNationality.Size = new System.Drawing.Size(347, 24);
+            this.lciNationality.Text = "Uyruğu";
+            this.lciNationality.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciIDNo
+            // 
+            this.lciIDNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciIDNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciIDNo.Control = this.teIDNo;
+            this.lciIDNo.CustomizationFormText = "Kimlik No";
+            this.lciIDNo.Location = new System.Drawing.Point(0, 213);
+            this.lciIDNo.Name = "lciIDNo";
+            this.lciIDNo.Size = new System.Drawing.Size(347, 24);
+            this.lciIDNo.Text = "Kimlik No";
+            this.lciIDNo.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciBirthCity
+            // 
+            this.lciBirthCity.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciBirthCity.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthCity.Control = this.lueBirthCity;
+            this.lciBirthCity.CustomizationFormText = "İl";
+            this.lciBirthCity.Location = new System.Drawing.Point(0, 237);
+            this.lciBirthCity.Name = "lciBirthCity";
+            this.lciBirthCity.Size = new System.Drawing.Size(347, 24);
+            this.lciBirthCity.Text = "İl";
+            this.lciBirthCity.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciBirthTown
+            // 
+            this.lciBirthTown.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciBirthTown.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthTown.Control = this.teBirthTown;
+            this.lciBirthTown.CustomizationFormText = "İlçe";
+            this.lciBirthTown.Location = new System.Drawing.Point(0, 261);
+            this.lciBirthTown.Name = "lciBirthTown";
+            this.lciBirthTown.Size = new System.Drawing.Size(347, 24);
+            this.lciBirthTown.Text = "İlçe";
+            this.lciBirthTown.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciBirthDistrict
+            // 
+            this.lciBirthDistrict.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciBirthDistrict.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciBirthDistrict.Control = this.teBirthDistrict;
+            this.lciBirthDistrict.CustomizationFormText = "Mahalle/Köy";
+            this.lciBirthDistrict.Location = new System.Drawing.Point(0, 285);
+            this.lciBirthDistrict.Name = "lciBirthDistrict";
+            this.lciBirthDistrict.Size = new System.Drawing.Size(347, 24);
+            this.lciBirthDistrict.Text = "Mahalle/Köy";
+            this.lciBirthDistrict.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciCilt
+            // 
+            this.lciCilt.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciCilt.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciCilt.Control = this.teCilt;
+            this.lciCilt.CustomizationFormText = "Cilt";
+            this.lciCilt.Location = new System.Drawing.Point(0, 309);
+            this.lciCilt.Name = "lciCilt";
+            this.lciCilt.Size = new System.Drawing.Size(347, 24);
+            this.lciCilt.Text = "Cilt";
+            this.lciCilt.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciAileSiraNo
+            // 
+            this.lciAileSiraNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciAileSiraNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciAileSiraNo.Control = this.teAileSiraNo;
+            this.lciAileSiraNo.CustomizationFormText = "Aile Sıra No";
+            this.lciAileSiraNo.Location = new System.Drawing.Point(0, 333);
+            this.lciAileSiraNo.Name = "lciAileSiraNo";
+            this.lciAileSiraNo.Size = new System.Drawing.Size(347, 24);
+            this.lciAileSiraNo.Text = "Aile Sıra No";
+            this.lciAileSiraNo.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // lciSiraNo
+            // 
+            this.lciSiraNo.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lciSiraNo.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciSiraNo.Control = this.teSiraNo;
+            this.lciSiraNo.CustomizationFormText = "Sıra No";
+            this.lciSiraNo.Location = new System.Drawing.Point(0, 357);
+            this.lciSiraNo.Name = "lciSiraNo";
+            this.lciSiraNo.Size = new System.Drawing.Size(347, 24);
+            this.lciSiraNo.Text = "Sıra No";
+            this.lciSiraNo.TextSize = new System.Drawing.Size(65, 13);
             // 
             // lcgSagTuslar
             // 
@@ -1753,9 +2361,9 @@
             this.lcgSagTuslar.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciSavePersonnel,
             this.lciClose});
-            this.lcgSagTuslar.Location = new System.Drawing.Point(932, 0);
+            this.lcgSagTuslar.Location = new System.Drawing.Point(1072, 0);
             this.lcgSagTuslar.Name = "lcgSagTuslar";
-            this.lcgSagTuslar.Size = new System.Drawing.Size(150, 313);
+            this.lcgSagTuslar.Size = new System.Drawing.Size(173, 429);
             this.lcgSagTuslar.Text = "lcgSagTuslar";
             this.lcgSagTuslar.TextVisible = false;
             // 
@@ -1765,7 +2373,7 @@
             this.lciSavePersonnel.CustomizationFormText = "Kaydet";
             this.lciSavePersonnel.Location = new System.Drawing.Point(0, 0);
             this.lciSavePersonnel.Name = "lciSavePersonnel";
-            this.lciSavePersonnel.Size = new System.Drawing.Size(126, 26);
+            this.lciSavePersonnel.Size = new System.Drawing.Size(149, 26);
             this.lciSavePersonnel.Text = "Kaydet";
             this.lciSavePersonnel.TextSize = new System.Drawing.Size(0, 0);
             this.lciSavePersonnel.TextToControlDistance = 0;
@@ -1777,7 +2385,7 @@
             this.lciClose.CustomizationFormText = "Kapat";
             this.lciClose.Location = new System.Drawing.Point(0, 26);
             this.lciClose.Name = "lciClose";
-            this.lciClose.Size = new System.Drawing.Size(126, 263);
+            this.lciClose.Size = new System.Drawing.Size(149, 379);
             this.lciClose.Text = "Kapat";
             this.lciClose.TextSize = new System.Drawing.Size(0, 0);
             this.lciClose.TextToControlDistance = 0;
@@ -1823,44 +2431,11 @@
             this.lciKanGrubu.TextSize = new System.Drawing.Size(87, 13);
             this.lciKanGrubu.TextToControlDistance = 5;
             // 
-            // layoutControlGroup6
-            // 
-            this.layoutControlGroup6.CustomizationFormText = "layoutControlGroup6";
-            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciPersonnelNo,
-            this.lciTCID,
-            this.lciName,
-            this.lciSurname,
-            this.lciSex,
-            this.lciHomePhone1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.lciMobilePhone,
-            this.layoutControlItem1,
-            this.lciBloodType});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(457, 289);
-            this.layoutControlGroup6.Text = "layoutControlGroup6";
-            // 
-            // layoutControlGroup7
-            // 
-            this.layoutControlGroup7.CustomizationFormText = "layoutControlGroup7";
-            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciHomeAddress,
-            this.lciHomeDistrict,
-            this.lciHomeTown,
-            this.lciHomeCity});
-            this.layoutControlGroup7.Location = new System.Drawing.Point(457, 0);
-            this.layoutControlGroup7.Name = "layoutControlGroup7";
-            this.layoutControlGroup7.Size = new System.Drawing.Size(451, 289);
-            this.layoutControlGroup7.Text = "layoutControlGroup7";
-            // 
             // PersonelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 757);
+            this.ClientSize = new System.Drawing.Size(1251, 766);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -1872,8 +2447,29 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PersonelForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lueBloodType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meExplanation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTaxNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teInsuranceNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDepartment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teUnvani.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgMaritalStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSiraNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teAileSiraNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCilt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthDistrict.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthTown.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBirthCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teIDNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueNationality.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBirthDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBirthDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teBirthPlace.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMotherName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFatherName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgIDType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBloodType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).EndInit();
@@ -1899,11 +2495,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teSurname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeTown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHomeDistrict.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgcEducation)).EndInit();
@@ -1942,21 +2538,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPersonelBilgileri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonnelNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTCID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomeAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSurname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSex)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBloodType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciUnvani)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDepartment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTaxNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciExplanation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeDistrict)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomeTown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIDType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFatherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMotherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthPlace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciNationality)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIDNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthTown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBirthDistrict)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCilt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAileSiraNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSiraNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSagTuslar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSavePersonnel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciClose)).EndInit();
@@ -1964,8 +2583,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciKanGrubu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2121,5 +2738,46 @@
         private DevExpress.XtraLayout.LayoutControlItem lciBloodType;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
+        private DevExpress.XtraEditors.TextEdit teFatherName;
+        private DevExpress.XtraEditors.RadioGroup rgIDType;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
+        private DevExpress.XtraLayout.LayoutControlItem lciIDType;
+        private DevExpress.XtraLayout.LayoutControlItem lciFatherName;
+        private DevExpress.XtraEditors.TextEdit teMotherName;
+        private DevExpress.XtraLayout.LayoutControlItem lciMotherName;
+        private DevExpress.XtraEditors.DateEdit deBirthDate;
+        private DevExpress.XtraEditors.TextEdit teBirthPlace;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthPlace;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthDate;
+        private DevExpress.XtraEditors.LookUpEdit lueNationality;
+        private DevExpress.XtraLayout.LayoutControlItem lciNationality;
+        private DevExpress.XtraEditors.TextEdit teIDNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciIDNo;
+        private DevExpress.XtraEditors.LookUpEdit lueBirthCity;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthCity;
+        private DevExpress.XtraEditors.TextEdit teBirthTown;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthTown;
+        private DevExpress.XtraEditors.TextEdit teBirthDistrict;
+        private DevExpress.XtraLayout.LayoutControlItem lciBirthDistrict;
+        private DevExpress.XtraEditors.TextEdit teSiraNo;
+        private DevExpress.XtraEditors.TextEdit teAileSiraNo;
+        private DevExpress.XtraEditors.TextEdit teCilt;
+        private DevExpress.XtraLayout.LayoutControlItem lciCilt;
+        private DevExpress.XtraLayout.LayoutControlItem lciAileSiraNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciSiraNo;
+        private DevExpress.XtraEditors.RadioGroup rgMaritalStatus;
+        private DevExpress.XtraLayout.LayoutControlItem lciMaritalStatus;
+        private DevExpress.XtraEditors.TextEdit teUnvani;
+        private DevExpress.XtraLayout.LayoutControlItem lciUnvani;
+        private DevExpress.XtraEditors.TextEdit teDepartment;
+        private DevExpress.XtraLayout.LayoutControlItem lciDepartment;
+        private DevExpress.XtraEditors.TextEdit tePhone;
+        private DevExpress.XtraLayout.LayoutControlItem lciPhone;
+        private DevExpress.XtraEditors.TextEdit teTaxNo;
+        private DevExpress.XtraEditors.TextEdit teInsuranceNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciInsuranceNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciTaxNo;
+        private DevExpress.XtraEditors.MemoEdit meExplanation;
+        private DevExpress.XtraLayout.LayoutControlItem lciExplanation;
     }
 }
