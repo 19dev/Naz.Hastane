@@ -37,10 +37,10 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -156,10 +156,10 @@
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
     <Compile Include="Entities\Patient\UserPatientVisit.cs" />
+    <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
-    <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\PersonelEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelHastaneBolumu.cs" />
     <Compile Include="Entities\Personel\PersonelHizmetIciEgitim.cs" />
