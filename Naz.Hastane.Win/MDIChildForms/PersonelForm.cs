@@ -93,6 +93,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teFirstName.DataBindings.Add("EditValue", Personnel, "Ad");
             this.teSurname.DataBindings.Add("EditValue", Personnel, "Soyad");
             this.teTCID.DataBindings.Add("EditValue", Personnel, "TCID");
+            this.ceEmekli.DataBindings.Add("EditValue", Personnel, "Emekli");
+            this.ceSendikali.DataBindings.Add("EditValue", Personnel, "Sendikali");
             this.lueNationality.DataBindings.Add("EditValue", Personnel, "Uyrugu");
             this.rgSex.DataBindings.Add("EditValue", Personnel, "Cinsiyeti");
             this.rgMaritalStatus.DataBindings.Add("EditValue", Personnel, "MedeniHali");
@@ -135,7 +137,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void LoadLookUps()
         {            
             UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Value");
-            UIUtilities.BindLookUpEdit(this.lueBloodType, LookUpServices.BloodTypes); //, displayMember: "Value", valueMember: "Value"); 
+            UIUtilities.BindLookUpEdit(this.lueBirthCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Value");
+            UIUtilities.BindLookUpEdit(this.lueBloodType, LookUpServices.BloodTypes); //, displayMember: "Value", valueMember: "Value");
+            UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
         }
 
         private void sbSavePersonnel_Click(object sender, EventArgs e)
