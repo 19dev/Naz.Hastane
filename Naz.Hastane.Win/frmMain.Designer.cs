@@ -154,6 +154,7 @@ namespace Naz.Hastane.Win {
             this.iPersonelAra = new DevExpress.XtraBars.BarButtonItem();
             this.iYeniPersonel = new DevExpress.XtraBars.BarButtonItem();
             this.iUserPatientVisits = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiStatus = new DevExpress.XtraBars.BarStaticItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -495,10 +496,11 @@ namespace Naz.Hastane.Win {
             this.iOzetServisAnaIslem3Pivot,
             this.iPersonelAra,
             this.iYeniPersonel,
-            this.iUserPatientVisits});
+            this.iUserPatientVisits,
+            this.bsiStatus});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 320;
+            this.rcMain.MaxItemId = 324;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -845,6 +847,7 @@ namespace Naz.Hastane.Win {
             this.siModified.Id = 1;
             this.siModified.ImageIndex = 27;
             this.siModified.Name = "siModified";
+            this.siModified.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.siModified_ItemClick);
             // 
             // siDocName
             // 
@@ -1559,6 +1562,13 @@ namespace Naz.Hastane.Win {
             this.iUserPatientVisits.Id = 310;
             this.iUserPatientVisits.Name = "iUserPatientVisits";
             // 
+            // bsiStatus
+            // 
+            this.bsiStatus.Caption = "barStaticItem1";
+            this.bsiStatus.Id = 321;
+            this.bsiStatus.Name = "bsiStatus";
+            this.bsiStatus.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1935,6 +1945,7 @@ namespace Naz.Hastane.Win {
             this.ribbonStatusBar1.ItemLinks.Add(this.siPosition);
             this.ribbonStatusBar1.ItemLinks.Add(this.siModified, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.siDocName, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.bsiStatus);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 754);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.rcMain;
@@ -2196,6 +2207,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPage rbPersonel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPersonel;
         private DevExpress.XtraBars.BarButtonItem iUserPatientVisits;
+        private DevExpress.XtraBars.BarStaticItem bsiStatus;
 
     }
 }

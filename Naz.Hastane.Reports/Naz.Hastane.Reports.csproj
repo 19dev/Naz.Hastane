@@ -147,6 +147,12 @@
     <Compile Include="Classes\OzetReports\OZETDoktorServisReport.designer.cs">
       <DependentUpon>OZETDoktorServisReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\OzetReports\OzetKey1Key2Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OzetReports\OzetKey1Key2Report.Designer.cs">
+      <DependentUpon>OzetKey1Key2Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\OzetReports\OZETKurumAnaIslemReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -270,6 +276,9 @@
     <EmbeddedResource Include="Classes\OzetReports\OZETDoktorServisReport.resx">
       <DependentUpon>OZETDoktorServisReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\OzetReports\OzetKey1Key2Report.resx">
+      <DependentUpon>OzetKey1Key2Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\OzetReports\OZETKurumAnaIslemReport.resx">
       <DependentUpon>OZETKurumAnaIslemReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +328,7 @@
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.DailyTellerReport.datasource" />
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1Key2ValueRecord.datasource" />
     <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.StoredProcedure.Key1ValueRecord.datasource" />
+    <None Include="Properties\DataSources\Naz.Hastane.Data.Entities.SummaryReports.SummaryReportKey1Key2Item.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

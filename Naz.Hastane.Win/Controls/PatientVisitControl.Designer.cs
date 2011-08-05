@@ -358,7 +358,7 @@
             this.gcPatientVisit.Location = new System.Drawing.Point(4, 4);
             this.gcPatientVisit.MainView = this.gvPatientVisit;
             this.gcPatientVisit.Name = "gcPatientVisit";
-            this.gcPatientVisit.Size = new System.Drawing.Size(749, 497);
+            this.gcPatientVisit.Size = new System.Drawing.Size(968, 605);
             this.gcPatientVisit.TabIndex = 24;
             this.gcPatientVisit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPatientVisitRecord,
@@ -522,6 +522,7 @@
             this.colVisitNo.Name = "colVisitNo";
             this.colVisitNo.Visible = true;
             this.colVisitNo.VisibleIndex = 0;
+            this.colVisitNo.Width = 48;
             // 
             // colVisitDate
             // 
@@ -530,6 +531,7 @@
             this.colVisitDate.Name = "colVisitDate";
             this.colVisitDate.Visible = true;
             this.colVisitDate.VisibleIndex = 1;
+            this.colVisitDate.Width = 70;
             // 
             // colExitDate
             // 
@@ -538,6 +540,7 @@
             this.colExitDate.Name = "colExitDate";
             this.colExitDate.Visible = true;
             this.colExitDate.VisibleIndex = 2;
+            this.colExitDate.Width = 67;
             // 
             // colPatientTotal
             // 
@@ -548,6 +551,7 @@
             this.colPatientTotal.Name = "colPatientTotal";
             this.colPatientTotal.Visible = true;
             this.colPatientTotal.VisibleIndex = 3;
+            this.colPatientTotal.Width = 66;
             // 
             // colInsuranceTotal
             // 
@@ -558,6 +562,7 @@
             this.colInsuranceTotal.Name = "colInsuranceTotal";
             this.colInsuranceTotal.Visible = true;
             this.colInsuranceTotal.VisibleIndex = 4;
+            this.colInsuranceTotal.Width = 69;
             // 
             // colInvoiceNo
             // 
@@ -566,6 +571,7 @@
             this.colInvoiceNo.Name = "colInvoiceNo";
             this.colInvoiceNo.Visible = true;
             this.colInvoiceNo.VisibleIndex = 7;
+            this.colInvoiceNo.Width = 68;
             // 
             // colInvoiceDate
             // 
@@ -574,6 +580,7 @@
             this.colInvoiceDate.Name = "colInvoiceDate";
             this.colInvoiceDate.Visible = true;
             this.colInvoiceDate.VisibleIndex = 8;
+            this.colInvoiceDate.Width = 72;
             // 
             // colVisitType
             // 
@@ -582,6 +589,7 @@
             this.colVisitType.Name = "colVisitType";
             this.colVisitType.Visible = true;
             this.colVisitType.VisibleIndex = 9;
+            this.colVisitType.Width = 48;
             // 
             // colPatientAppNo
             // 
@@ -590,6 +598,7 @@
             this.colPatientAppNo.Name = "colPatientAppNo";
             this.colPatientAppNo.Visible = true;
             this.colPatientAppNo.VisibleIndex = 10;
+            this.colPatientAppNo.Width = 65;
             // 
             // colTakipNo
             // 
@@ -598,6 +607,7 @@
             this.colTakipNo.Name = "colTakipNo";
             this.colTakipNo.Visible = true;
             this.colTakipNo.VisibleIndex = 11;
+            this.colTakipNo.Width = 64;
             // 
             // colIMPF2
             // 
@@ -606,6 +616,7 @@
             this.colIMPF2.Name = "colIMPF2";
             this.colIMPF2.Visible = true;
             this.colIMPF2.VisibleIndex = 16;
+            this.colIMPF2.Width = 52;
             // 
             // colUserId
             // 
@@ -660,6 +671,7 @@
             this.colIliskiliTakipNo.Name = "colIliskiliTakipNo";
             this.colIliskiliTakipNo.Visible = true;
             this.colIliskiliTakipNo.VisibleIndex = 12;
+            this.colIliskiliTakipNo.Width = 63;
             // 
             // colDoctor
             // 
@@ -677,7 +689,7 @@
             this.colPSG.Name = "colPSG";
             this.colPSG.Visible = true;
             this.colPSG.VisibleIndex = 5;
-            this.colPSG.Width = 44;
+            this.colPSG.Width = 56;
             // 
             // layoutControl1
             // 
@@ -686,7 +698,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(757, 505);
+            this.layoutControl1.Size = new System.Drawing.Size(976, 613);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -700,7 +712,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(757, 505);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(976, 613);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -713,7 +725,7 @@
             this.lciPatientVisitControl.CustomizationFormText = "layoutControlItem1";
             this.lciPatientVisitControl.Location = new System.Drawing.Point(0, 0);
             this.lciPatientVisitControl.Name = "lciPatientVisitControl";
-            this.lciPatientVisitControl.Size = new System.Drawing.Size(753, 501);
+            this.lciPatientVisitControl.Size = new System.Drawing.Size(972, 609);
             this.lciPatientVisitControl.Text = "Ziyaretler";
             this.lciPatientVisitControl.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciPatientVisitControl.TextSize = new System.Drawing.Size(0, 0);
@@ -726,7 +738,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "PatientVisitControl";
-            this.Size = new System.Drawing.Size(757, 505);
+            this.Size = new System.Drawing.Size(976, 613);
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPatientVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPatientVisitRecord)).EndInit();

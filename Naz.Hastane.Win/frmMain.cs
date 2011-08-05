@@ -19,11 +19,22 @@ using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Win.Forms;
 using Naz.Hastane.Win.MDIChildForms;
 using Naz.Hastane.Data.Entities.StoredProcedure;
+using Multicast;
+using System.Net;
+using System.Text;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        MulticastSettings testSettings = new MulticastSettings()
+        {
+            Address = IPAddress.Parse("239.1.2.3"),
+            Port = 40404,
+            TimeToLive = 0
+        };
 
+        IMulticastListener receiver;
+        
         LastVisitedPatientsForm lastVisitedPatientForm = null;
 
         #region Splash Screen
@@ -75,6 +86,9 @@ namespace Naz.Hastane.Win {
             AttachMDIChildButtons();
             AttachLookUpButtons();
             AttachReportCommands();
+
+            receiver = new MulticastListener(testSettings);
+            receiver.StartListening(ReceiveCallback);
         }
 
         /// <summary>
@@ -926,7 +940,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "OCAK-TEMMUZ 2011";
+            report.Parameters[0].Value = "TEMMUZ 2011";
             report.ExportToPdf(path + aPath + ".pdf");
         }
 
@@ -952,7 +966,7 @@ namespace Naz.Hastane.Win {
         {
             const string path = @"D:\SurpPirgic\Tipdata\AccessRapor\DevxReports\";
             T report = new T();
-            report.Parameters[0].Value = "OCAK-TEMMUZ 2011";
+            report.Parameters[0].Value = "TEMMUZ 2011";
             report.ExportToXlsx(path + aPath + ".xlsx");
         }
 
@@ -1015,6 +1029,24 @@ namespace Naz.Hastane.Win {
             this.rcMain.SelectedPage = rpPatients;
         }
         #endregion
+
+        private void siModified_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string message = DateTime.Now.ToLongTimeString();
+            byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+
+            using (IMulticastBroadcaster broadcaster = new MulticastBroadcaster(testSettings))
+            {
+                broadcaster.Broadcast(messageBytes);
+            }
+
+        }
+        public void ReceiveCallback(byte[] data)
+        {
+            string s = Encoding.UTF8.GetString(data);
+            bsiStatus.Caption = s;
+            //CallbackData = data;
+        }
 
     }
 }
