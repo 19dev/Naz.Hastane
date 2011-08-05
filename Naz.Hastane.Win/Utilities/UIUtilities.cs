@@ -10,6 +10,7 @@ using DevExpress.XtraReports.UI;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Services;
+using Naz.Hastane.Data;
 using Naz.Hastane.Reports;
 using Naz.Hastane.Reports.Classes;
 using Naz.Utilities.Classes;
@@ -17,6 +18,7 @@ using NHibernate;
 using Nini.Config;
 using System.IO;
 using System.Windows.Forms;
+using System.Linq.Expressions;
 
 namespace Naz.Hastane.Win
 {
@@ -71,6 +73,12 @@ namespace Naz.Hastane.Win
                 column.Visible = true;
             }
             view.GridControl.DataSource = dataSourceList;
+        }
+
+        public static void BindControl<T>(Control control, T t, Expression<Func<T, object>> memberExpression)
+        {
+            control.DataBindings.Clear();
+            control.DataBindings.Add("EditValue", t, DataUtilities.GetMemberName<T>(memberExpression));
         }
 
         private static IConfigSource _Configuration = null;

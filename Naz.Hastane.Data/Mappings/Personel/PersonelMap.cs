@@ -50,6 +50,15 @@ namespace Naz.Hastane.Data.Entities
 			Map(x => x.Mahalle).Column("Mahalle").Length(50);
 			Map(x => x.Ilce).Column("Ilce").Length(50);
 			Map(x => x.Il).Column("Il").Length(50);
+
+			HasMany(x => x.PersonelEgitims).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelHastaneBolumus).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelHizmetIciEgitims).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelIzins).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelRapors).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelSertifikas).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelYabanciDils).KeyColumn("PersonelID").Inverse();
+
 		}
 	}
 }

@@ -16,7 +16,7 @@ using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using System.Drawing;
 using NHibernate;
 using Naz.Hastane.Data.DTO;
-
+using Naz.Hastane.Win.Utilities;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -89,9 +89,9 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void InitBindings()
         {
             LoadLookUps();
-            this.tePersonnelNo.DataBindings.Add("EditValue", Personnel, "PersonelNo");
-            this.teFirstName.DataBindings.Add("EditValue", Personnel, "Ad");
-            this.teSurname.DataBindings.Add("EditValue", Personnel, "Soyad");
+            
+            UIUtilities.BindControl(teTCID, Personnel, x => x.TCID);
+            UIUtilities.BindControl(teFirstName, Personnel, x => x.Ad);
             this.teTCID.DataBindings.Add("EditValue", Personnel, "TCID");
             this.ceEmekli.DataBindings.Add("EditValue", Personnel, "Emekli");
             this.ceSendikali.DataBindings.Add("EditValue", Personnel, "Sendikali");
@@ -101,14 +101,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teUnvani.DataBindings.Add("EditValue", Personnel, "Unvani");
             this.teDepartment.DataBindings.Add("EditValue", Personnel, "Bolumu");
             this.tePhone.DataBindings.Add("EditValue", Personnel, "Telefon");
-            this.teHomePhone1.DataBindings.Add("EditValue", Personnel, "EvTelefonu");
-            this.teMobilePhone.DataBindings.Add("EditValue", Personnel, "CepTelefonu");
+            UIUtilities.BindControl(teHomeTown, Personnel, x => x.Ilce);
+            UIUtilities.BindControl(lueHomeCity, Personnel, x => x.Il);
             this.lueBloodType.DataBindings.Add("EditValue", Personnel, "KanGrubu");
             this.deEntryDate.DataBindings.Add("EditValue", Personnel, "IseGirisTarihi");
             this.deExitDate.DataBindings.Add("EditValue", Personnel, "AyrilisTarihi");
             this.teInsuranceNo.DataBindings.Add("EditValue", Personnel, "SigortaNo");
             this.teTaxNo.DataBindings.Add("EditValue", Personnel, "VergiNo");
-            this.teEmail.DataBindings.Add("EditValue", Personnel, "Email");
 
 
 
@@ -126,10 +125,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teSiraNo.DataBindings.Add("EditValue", Personnel, "DogumSiraNo");
 
 
-            this.teHomeAddress.DataBindings.Add("EditValue", Personnel, "EvAdresi");
-            this.teHomeDistrict.DataBindings.Add("EditValue", Personnel, "Mahalle");
-            this.teHomeTown.DataBindings.Add("EditValue", Personnel, "Ilce");
-            this.lueHomeCity.DataBindings.Add("EditValue", Personnel, "Il");
             this.meExplanation.DataBindings.Add("EditValue", Personnel, "Aciklama");
             
         }

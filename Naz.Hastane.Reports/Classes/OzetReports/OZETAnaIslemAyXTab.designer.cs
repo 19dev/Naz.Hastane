@@ -42,6 +42,7 @@ namespace Naz.Hastane.Reports.Classes
             this.prmPeriod = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.fieldToplamP = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -62,7 +63,8 @@ namespace Naz.Hastane.Reports.Classes
             this.xrPivotGrid1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
             this.fieldKey21,
             this.fieldKey1,
-            this.fieldToplamC});
+            this.fieldToplamC,
+            this.fieldToplamP});
             this.xrPivotGrid1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10F);
             this.xrPivotGrid1.Name = "xrPivotGrid1";
             this.xrPivotGrid1.OptionsChartDataSource.UpdateDelay = 300;
@@ -189,6 +191,24 @@ namespace Naz.Hastane.Reports.Classes
             this.xrLabel1.Text = "AYLARA GÖRE ÝÞLEM GELÝRÝ RAPORU";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
+            // fieldToplamP
+            // 
+            this.fieldToplamP.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldToplamP.AreaIndex = 1;
+            this.fieldToplamP.Caption = "Önceki Yýl";
+            this.fieldToplamP.CellFormat.FormatString = "{0:#,#}";
+            this.fieldToplamP.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.fieldToplamP.FieldName = "ToplamP";
+            this.fieldToplamP.GrandTotalCellFormat.FormatString = "{0:#,#}";
+            this.fieldToplamP.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.fieldToplamP.Name = "fieldToplamP";
+            this.fieldToplamP.TotalCellFormat.FormatString = "{0:#,#}";
+            this.fieldToplamP.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.fieldToplamP.TotalValueFormat.FormatString = "{0:#,#}";
+            this.fieldToplamP.TotalValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.fieldToplamP.ValueFormat.FormatString = "{0:#,#}";
+            this.fieldToplamP.ValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            // 
             // OZETAnaIslemAyXTab
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -205,7 +225,7 @@ namespace Naz.Hastane.Reports.Classes
             this.RequestParameters = false;
             this.ShowPrintMarginsWarning = false;
             this.ShowPrintStatusDialog = false;
-            this.Version = "10.2";
+            this.Version = "11.1";
             this.VerticalContentSplitting = DevExpress.XtraPrinting.VerticalContentSplitting.Smart;
             ((System.ComponentModel.ISupportInitialize)(this.tipdataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -228,5 +248,6 @@ namespace Naz.Hastane.Reports.Classes
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         public DevExpress.XtraReports.Parameters.Parameter prmPeriod;
+        private DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField fieldToplamP;
     }
 }

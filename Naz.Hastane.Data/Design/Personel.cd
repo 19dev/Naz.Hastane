@@ -1,58 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Naz.Hastane.Data.Entities.Personel">
-    <Position X="0.75" Y="1" Width="1.5" />
+    <Position X="4.25" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAIAAAAEACAAgAAAQAAAAAAAEIJABAAAiAAACGAgAAA=</HashCode>
+      <HashCode>AEsAABAQkOAEgCFAcCCQhQCCFYJkBhVAilw4COApAAE=</HashCode>
       <FileName>Entities\Personel\Personel.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonelEgitims" />
+      <Property Name="PersonelHastaneBolumus" />
+      <Property Name="PersonelHizmetIciEgitims" />
+      <Property Name="PersonelRapors" />
+      <Property Name="PersonelSertifikas" />
+      <Property Name="PersonelYabanciDils" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelEgitim">
-    <Position X="2.75" Y="1" Width="1.5" />
+    <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAQEAAAAACAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelEgitim.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelHastaneBolumu">
-    <Position X="6.25" Y="1" Width="1.5" />
+    <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAQAAAAAAAAAEAAAAAAAIAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAQAAAAAAAAQEAAAAAAAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelHastaneBolumu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelHizmetIciEgitim">
-    <Position X="4.5" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAIAAQAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAQEAAAAAAAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelHizmetIciEgitim.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelIzin">
-    <Position X="2.75" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAIAAQAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAQEAAAAAAAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelIzin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelRapor">
-    <Position X="6.25" Y="3.75" Width="1.5" />
+    <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAIAAQAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAQEAAAAAAAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelRapor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelSertifika">
-    <Position X="8" Y="1" Width="1.5" />
+    <Position X="7.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAIAAQAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAQEAAAAAAAIAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelSertifika.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.PersonelYabanciDil">
-    <Position X="4.5" Y="1" Width="1.5" />
+    <Position X="0.5" Y="8.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAACAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Personel\PersonelYabanciDil.cs</FileName>
     </TypeIdentifier>
   </Class>

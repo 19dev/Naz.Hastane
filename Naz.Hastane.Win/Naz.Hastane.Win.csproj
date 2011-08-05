@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\Amira\</InstallUrl>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -430,6 +430,11 @@
     <Compile Include="MDIChildForms\PersonelForm.Designer.cs">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Networking\IMulticastBroadcaster.cs" />
+    <Compile Include="Networking\IMulticastListener.cs" />
+    <Compile Include="Networking\MulticastBroadcaster.cs" />
+    <Compile Include="Networking\MulticastListener.cs" />
+    <Compile Include="Networking\MulticastSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

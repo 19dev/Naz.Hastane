@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.General;
 using Naz.Hastane.Data.Entities.LookUp.MedulaDiabet;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.LookUp.MedulaReport;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Entities.StoredProcedure;
+using Naz.Hastane.Data.Entities.SummaryReports;
 using NHibernate;
 using NHibernate.Linq;
-using NHibernate.Transform;
-using Naz.Hastane.Data.Entities.Reports;
-using Naz.Hastane.Data.Entities.LookUp;
 
 namespace Naz.Hastane.Data.Services
 {
