@@ -11,12 +11,12 @@ namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
         [Description("2")]
         Retired,
         [Description("3")]
-        SSKPersonnel,
+        SSKPersonel,
         [Description("4")]
         Other
     }
     [Description("Sigorta Tipi")]
-    public class InsuranceType : LookUpBase
+    public class InsuranceType : LookUpIdValueCode
     {
         public static readonly string DefaultValue = "1";
     }

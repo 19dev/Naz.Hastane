@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
 {
     [Description("Takip Tipi")]
-    public class FollowUpType : LookUpBase
+    public class FollowUpType : LookUpIdValueCode
     {
         public static readonly string DefaultValue = "N";
     }

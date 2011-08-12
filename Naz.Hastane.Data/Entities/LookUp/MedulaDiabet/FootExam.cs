@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Ayak Muayenesi")]
-    public class FootExam : LookUpBase
+    public class FootExam : LookUpIdValueCode
     {
     }
 }

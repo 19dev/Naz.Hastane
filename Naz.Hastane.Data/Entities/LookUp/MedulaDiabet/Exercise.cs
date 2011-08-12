@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Ekzersiz Durumu")]
-    public class Exercise : LookUpBase
+    public class Exercise : LookUpIdValueCode
     {
     }
 }

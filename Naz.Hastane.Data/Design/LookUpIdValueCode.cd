@@ -12,11 +12,11 @@
   <Comment CommentText="ID	Value	Code&#xD;&#xA;1	Evet	E&#xD;&#xA;2	Hayır	H">
     <Position X="7.188" Y="3.427" Height="0.75" Width="1.7" />
   </Comment>
-  <Class Name="Naz.Hastane.Data.Entities.LookUp.LookUpBase">
+  <Class Name="Naz.Hastane.Data.Entities.LookUp.LookUpIdValueCode">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Entities\LookUp\LookUpBase.cs</FileName>
+      <FileName>Entities\LookUp\LookUpIdValueCode.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Naz.Hastane.Data.Entities.LookUp.General.BloodType" Collapsed="true">

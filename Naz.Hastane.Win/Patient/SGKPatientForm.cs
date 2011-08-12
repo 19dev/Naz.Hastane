@@ -421,7 +421,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return;
             }
             string TCID = teTCID.Text;
-            if (!PatientServices.IsValidTCID(TCID))
+            if (!LookUpServices.IsValidTCID(TCID))
             {
                 XtraMessageBox.Show("T.C. Kimlik No Geçerli Değil!", "Medula İşlemleri");
                 return;

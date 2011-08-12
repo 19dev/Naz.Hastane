@@ -4,7 +4,7 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
 {
     /// <remarks>tlkpvDoctor</remarks>
     [Description("Doktor Tanımları")]
-    public class Doctor : OldLookUpBase
+    public class Doctor : OldLookUp
     {
         [Description("Servis")]
         public virtual Service Service { get; set; } // SLXX

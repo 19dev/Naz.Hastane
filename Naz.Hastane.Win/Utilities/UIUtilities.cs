@@ -48,7 +48,16 @@ namespace Naz.Hastane.Win
             //if (dataSourceList.Count > 0)
             //    lue.ItemIndex = 0;
         }
-        
+
+        public static void BindComboBox<T>(System.Windows.Forms.ComboBox comboBox, IList<T> dataSourceList,
+            string displayMember = "Value", string valueMember = "Code") where T : new()
+        {
+            comboBox.DisplayMember = displayMember;
+            //comboBox.ValueMember = valueMember;
+            comboBox.DataSource = new BindingSource() { DataSource = dataSourceList };
+            //if (dataSourceList.Count > 0)
+            //    lue.ItemIndex = 0;
+        }
         public static void BindLookUpEditAllColumns<T>(LookUpEdit lue, IList<T> dataSourceList) where T : new()
         {
             lue.Properties.Columns.Clear();
@@ -75,10 +84,10 @@ namespace Naz.Hastane.Win
             view.GridControl.DataSource = dataSourceList;
         }
 
-        public static void BindControl<T>(Control control, T t, Expression<Func<T, object>> memberExpression)
+        public static void BindControl<T>(Control control, T t, Expression<Func<T, object>> memberExpression, string propertyName = "EditValue")
         {
             control.DataBindings.Clear();
-            control.DataBindings.Add("EditValue", t, DataUtilities.GetMemberName<T>(memberExpression));
+            control.DataBindings.Add(propertyName, t, DataUtilities.GetMemberName<T>(memberExpression));
         }
 
         private static IConfigSource _Configuration = null;

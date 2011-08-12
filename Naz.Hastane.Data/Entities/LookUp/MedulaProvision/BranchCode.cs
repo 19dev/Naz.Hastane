@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
 {
     [Description("Branş Kodu")]
-    public class BranchCode : LookUpBase
+    public class BranchCode : LookUpIdValueCode
     {
         public static readonly string DefaultValue = "N";
     }

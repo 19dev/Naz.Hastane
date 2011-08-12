@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Hastalık Kodu")]
-    public class DiseaseCode : LookUpBase
+    public class DiseaseCode : LookUpIdValueCode
     {
     }
 }

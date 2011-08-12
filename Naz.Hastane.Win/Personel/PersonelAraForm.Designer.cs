@@ -43,7 +43,7 @@
             this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTCKimlikNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tePersonnelNo = new DevExpress.XtraEditors.TextEdit();
+            this.tePersonelNo = new DevExpress.XtraEditors.TextEdit();
             this.teTCId = new DevExpress.XtraEditors.TextEdit();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
             this.lcgSayfa = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).BeginInit();
@@ -98,7 +98,7 @@
             this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Controls.Add(this.sbSearch);
             this.layoutControl1.Controls.Add(this.gridPersonelArama);
-            this.layoutControl1.Controls.Add(this.tePersonnelNo);
+            this.layoutControl1.Controls.Add(this.tePersonelNo);
             this.layoutControl1.Controls.Add(this.teTCId);
             this.layoutControl1.Controls.Add(this.sbSelect);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -242,15 +242,15 @@
             this.colTCKimlikNo.Visible = true;
             this.colTCKimlikNo.VisibleIndex = 3;
             // 
-            // tePersonnelNo
+            // tePersonelNo
             // 
-            this.tePersonnelNo.Location = new System.Drawing.Point(121, 60);
-            this.tePersonnelNo.Name = "tePersonnelNo";
-            this.tePersonnelNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tePersonnelNo.Size = new System.Drawing.Size(241, 20);
-            this.tePersonnelNo.StyleController = this.layoutControl1;
-            this.tePersonnelNo.TabIndex = 2;
-            this.tePersonnelNo.Tag = "KNR";
+            this.tePersonelNo.Location = new System.Drawing.Point(121, 60);
+            this.tePersonelNo.Name = "tePersonelNo";
+            this.tePersonelNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tePersonelNo.Size = new System.Drawing.Size(241, 20);
+            this.tePersonelNo.StyleController = this.layoutControl1;
+            this.tePersonelNo.TabIndex = 2;
+            this.tePersonelNo.Tag = "KNR";
             // 
             // teTCId
             // 
@@ -325,7 +325,7 @@
             // 
             // lciPatientNo
             // 
-            this.lciPatientNo.Control = this.tePersonnelNo;
+            this.lciPatientNo.Control = this.tePersonelNo;
             this.lciPatientNo.CustomizationFormText = "Hasta No";
             this.lciPatientNo.Location = new System.Drawing.Point(0, 24);
             this.lciPatientNo.Name = "lciPatientNo";
@@ -479,7 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tePersonnelNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).EndInit();
@@ -507,7 +507,7 @@
         private DevExpress.XtraGrid.GridControl gridPersonelArama;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton sbSearch;
-        private DevExpress.XtraEditors.TextEdit tePersonnelNo;
+        private DevExpress.XtraEditors.TextEdit tePersonelNo;
         private DevExpress.XtraEditors.TextEdit teTCId;
         private DevExpress.XtraLayout.LayoutControlGroup lcgSayfa;
         private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;

@@ -38,7 +38,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp
         POS
     }
 
-    public class OldLookUpBaseMap : ClassMap<OldLookUpBase>
+    public class OldLookUpBaseMap : ClassMap<OldLookUp>
     {
         public OldLookUpBaseMap()
         {

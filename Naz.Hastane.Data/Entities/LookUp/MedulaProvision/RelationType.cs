@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
 {
     [Description("Hasta Akrabalık Durumu")]
-    public class RelationType : LookUpBase
+    public class RelationType : LookUpIdValueCode
     {
         public static readonly string DefaultValue = "0";
     }

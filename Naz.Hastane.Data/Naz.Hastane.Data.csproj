@@ -37,10 +37,10 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -98,6 +98,7 @@
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
+    <Compile Include="Entities\LookUp\LookUpIdValue.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyType.cs" />
@@ -106,7 +107,7 @@
     <Compile Include="Entities\LookUp\Special\Doctor.cs" />
     <Compile Include="Entities\LookUp\General\City.cs" />
     <Compile Include="Entities\LookUp\General\IDType.cs" />
-    <Compile Include="Entities\LookUp\LookUpBase.cs" />
+    <Compile Include="Entities\LookUp\LookUpIdValueCode.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\AcuteComplication.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\ApplicationReason.cs" />
     <Compile Include="Entities\LookUp\MedulaDiabet\DiseaseCode.cs" />
@@ -132,7 +133,7 @@
     <Compile Include="Entities\LookUp\MedulaReport\FTRBodyPart.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\MedulaReportTreatmentType.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\MedulaReportType.cs" />
-    <Compile Include="Entities\LookUp\OldLookUpBase.cs" />
+    <Compile Include="Entities\LookUp\OldLookUp.cs" />
     <Compile Include="Entities\LookUp\General\Nationality.cs" />
     <Compile Include="Entities\LookUp\General\PatientRelation.cs" />
     <Compile Include="Entities\LookUp\MedulaProvision\ProvisionType.cs" />
@@ -156,13 +157,18 @@
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
     <Compile Include="Entities\Patient\UserPatientVisit.cs" />
+    <Compile Include="Entities\Personel\HastaneBolumu.cs" />
+    <Compile Include="Entities\Personel\PersonelUnvani.cs" />
+    <Compile Include="Entities\Personel\YabanciDil.cs" />
     <Compile Include="Entities\Personel\Personel.cs" />
+    <Compile Include="Entities\Personel\OkulTipi.cs" />
     <Compile Include="Entities\SummaryReports\OzetAYP.cs" />
     <Compile Include="Entities\SummaryReports\OzetAnaIslem.cs" />
     <Compile Include="Entities\SummaryReports\OzetDoktor.cs" />
     <Compile Include="Entities\SummaryReports\OzetKurum.cs" />
     <Compile Include="Entities\SummaryReports\OzetServis.cs" />
     <Compile Include="Entities\SummaryReports\SummaryReportKey1Item.cs" />
+    <Compile Include="Entities\YNType.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />
@@ -282,6 +288,9 @@
     <Compile Include="Mappings\Medula\MEDRAPORETKENMADDEMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORTESHISMap.cs" />
     <Compile Include="Mappings\Patient\UserPatientVisitMap.cs" />
+    <Compile Include="Mappings\Personel\HastaneBolumuMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelUnvaniMap.cs" />
+    <Compile Include="Mappings\Personel\YabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\PersonelEgitimMap.cs" />
     <Compile Include="Mappings\Personel\PersonelHastaneBolumuMap.cs" />
     <Compile Include="Mappings\Personel\PersonelHizmetIciEgitimMap.cs" />
@@ -290,6 +299,7 @@
     <Compile Include="Mappings\Personel\PersonelRaporMap.cs" />
     <Compile Include="Mappings\Personel\PersonelSertifikaMap.cs" />
     <Compile Include="Mappings\Personel\PersonelYabanciDilMap.cs" />
+    <Compile Include="Mappings\Personel\OkulTipiMap.cs" />
     <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
     <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
     <Compile Include="Mappings\Product\ProductMap.cs" />
@@ -345,7 +355,7 @@
     <Compile Include="Services\LookUpServices.cs" />
     <Compile Include="Services\MedulaReportServices.cs" />
     <Compile Include="Services\PatientServices.cs" />
-    <Compile Include="Services\PersonnelServices.cs" />
+    <Compile Include="Services\PersonelServices.cs" />
     <Compile Include="Services\SafeDataBindingList.cs" />
     <Compile Include="Services\SafeDataBindingSet.cs" />
   </ItemGroup>
@@ -355,11 +365,11 @@
     <None Include="Design\Doctor.cd" />
     <None Include="Design\InsuranceCompany.cd" />
     <None Include="Design\Invoice.cd" />
-    <None Include="Design\LookUpBase.cd" />
+    <None Include="Design\LookUpIdValueCode.cd" />
     <None Include="Design\MedulaDiabet.cd" />
     <None Include="Design\MedulaProvision.cd" />
     <None Include="Design\MedulaReport.cd" />
-    <None Include="Design\OldLookUpBase.cd" />
+    <None Include="Design\OldLookUp.cd" />
     <None Include="Design\Medula.cd" />
     <None Include="Design\Patient.cd" />
     <None Include="Design\Personel.cd" />

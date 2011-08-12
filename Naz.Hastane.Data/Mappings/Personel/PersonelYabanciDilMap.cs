@@ -13,7 +13,7 @@ namespace Naz.Hastane.Data.Mappings
             LazyLoad();
             Id(x => x.ID).GeneratedBy.Identity().Column("ID");
             References(x => x.Personel).Column("PersonelID").Not.Nullable();
-            Map(x => x.YabanciDilID).Column("YabanciDilID").Not.Nullable();
+            References(x => x.YabanciDil).Column("YabanciDilID").Not.Nullable();
         }
     }
 }

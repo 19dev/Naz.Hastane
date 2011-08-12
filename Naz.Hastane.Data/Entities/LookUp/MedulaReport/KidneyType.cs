@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaReport
 {
     [Description("Böbrek Tipi")]
-    public class KidneyType : LookUpBase
+    public class KidneyType : LookUpIdValueCode
     {
     }
 }

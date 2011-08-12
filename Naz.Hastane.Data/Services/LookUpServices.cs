@@ -18,7 +18,43 @@ namespace Naz.Hastane.Data.Services
     public static class LookUpServices
     {
 
+        public static bool IsValidTCID(string aTCID)
+        {
+            return IsValidNumeric(aTCID, 11);
+        }
+
+        public static bool IsValidNumeric(string aString, int length)
+        {
+            return (aString.Length == length && IsValidNumeric(aString));
+        }
+
+        public static bool IsValidNumeric(string aString)
+        {
+            if (String.IsNullOrWhiteSpace(aString))
+                return false;
+            foreach (char c in aString)
+                if (!Char.IsNumber(c))
+                    return false;
+            return true;
+        }
+
+        public static T GetByID<T>(ISession session, string aID)
+        {
+            return session.Get<T>(aID);
+        }
+
+        public static T GetByID<T>(ISession session, int aID)
+        {
+            return session.Get<T>(aID);
+        }
+
         public static T GetByID<T>(string aID)
+        {
+            using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+                return session.Get<T>(aID);
+        }
+
+        public static T GetByID<T>(int aID)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
                 return session.Get<T>(aID);
@@ -41,7 +77,7 @@ namespace Naz.Hastane.Data.Services
             return theObject;
         }
 
-        public static IList<T> LookUpTable<T>(ref IList<T> theObject, string discriminatorValue) where T : OldLookUpBase
+        public static IList<T> LookUpTable<T>(ref IList<T> theObject, string discriminatorValue) where T : OldLookUp
         {
             if (theObject == null)
             {
@@ -91,6 +127,10 @@ namespace Naz.Hastane.Data.Services
         private static IList<YesNo> _YesNos;
         public static IList<YesNo> YesNos
         { get { return LookUpTable(ref _YesNos); } }
+
+        private static IList<OkulTipi> _OkulTipis;
+        public static IList<OkulTipi> OkulTipis
+        { get { return LookUpTable(ref _OkulTipis); } }
 
         #endregion
 
@@ -291,6 +331,14 @@ namespace Naz.Hastane.Data.Services
         public static IList<Warehouse> Warehouses
         { get { return LookUpTable(ref _Warehouses); } }
 
+        private static IList<HastaneBolumu> _HastaneBolumus;
+        public static IList<HastaneBolumu> HastaneBolumus
+        { get { return LookUpTable(ref _HastaneBolumus); } }
+
+        private static IList<PersonelUnvani> _PersonelUnvanis;
+        public static IList<PersonelUnvani> PersonelUnvanis
+        { get { return LookUpTable(ref _PersonelUnvanis); } }
+
         #endregion
 
         #region AdminReports
@@ -321,6 +369,7 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        #region SGK
         public static InsuranceCompany GetSGK(ISession session)
         {
             return session.Get<InsuranceCompany>(InsuranceCompany.SGKCode);
@@ -339,16 +388,16 @@ namespace Naz.Hastane.Data.Services
         }
 
         public static IList<Doctor> GetSGKDoctors(ISession session)
-        { 
+        {
             IList<Doctor> result = (from doctor in session.Query<Doctor>()
-                            where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic 
-                                && doctor.Service.SGKAutoExaminations.Count > 0
-                                && doctor.OnLeave == 0
-                            join service in session.Query<Service>() on doctor.Service.Code equals service.Code
-                            join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
-                            join product in session.Query<Product>() on sae.Product equals product
-                            orderby doctor.Value
-                            select doctor
+                                    where doctor.Service.Type == ServiceTypes.ServiceTypePolyclinic
+                                        && doctor.Service.SGKAutoExaminations.Count > 0
+                                        && doctor.OnLeave == 0
+                                    join service in session.Query<Service>() on doctor.Service.Code equals service.Code
+                                    join sae in session.Query<SGKAutoExamination>() on service equals sae.Service
+                                    join product in session.Query<Product>() on sae.Product equals product
+                                    orderby doctor.Value
+                                    select doctor
                             )
                             .Distinct<Doctor>()
                             .ToList<Doctor>();
@@ -361,8 +410,8 @@ namespace Naz.Hastane.Data.Services
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 result = (from sae in session.Query<SGKAutoExamination>()
-                        where sae.Service == service
-                        select sae
+                          where sae.Service == service
+                          select sae
                         )
                         .ToList<SGKAutoExamination>();
             }
@@ -381,6 +430,17 @@ namespace Naz.Hastane.Data.Services
                         .ToList<SGKAutoExaminationSameDay>();
             }
             return result;
+        }
+
+        public static IList<SGKAutoExamination> SGKAutoExaminations(string servisCode)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return (from sae in session.Query<SGKAutoExamination>()
+                        where sae.Service.Code == servisCode
+                        select sae
+                        ).ToList<SGKAutoExamination>();
+            }
         }
 
         private static IList<Doctor> _SGKLicensedDoctors;
@@ -423,6 +483,7 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        #endregion
         public static IList<Product> GetProducts(string tanim, string grup, string priceList)
         {
             IList<Product> products = null;
@@ -472,17 +533,6 @@ namespace Naz.Hastane.Data.Services
         }
 
         #endregion
-
-        public static IList<SGKAutoExamination> SGKAutoExaminations(string servisCode)
-        {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                return (from sae in session.Query<SGKAutoExamination>()
-                        where sae.Service.Code == servisCode
-                        select sae
-                        ).ToList<SGKAutoExamination>();
-            }
-        }
 
         public static IList<AccountingDailySummary> GetAccountingDailySummary(DateTime date)
         {
@@ -581,19 +631,6 @@ namespace Naz.Hastane.Data.Services
             return total;
         }
         #endregion
-
-        public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)
-        {
-            if (patient == null) return new List<PatientBalanceRecord>();
-
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
-            {
-                return session.GetNamedQuery("sp_GetPatientBalance")
-                    .SetString("PatientNo", patient.PatientNo)
-                    .List<PatientBalanceRecord>();
-            }
-
-        }
 
         #region ID Generators
         public static string GetNewSystemSettingNo(string key, bool updateDB = true)
@@ -756,6 +793,11 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        /// <summary>
+        /// Kullanıcının songün açtığı hasta hesapları
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static IList<Object> GetAllUserPatientVisits(User user)
         {
             IList<Object> userPatientVisits = null;
@@ -796,6 +838,7 @@ namespace Naz.Hastane.Data.Services
                 }
             }
         }
+
         public static bool IsSGK(string insuranceCompanyCode)
         {
             return (insuranceCompanyCode == InsuranceCompany.SGKCode);
@@ -809,7 +852,7 @@ namespace Naz.Hastane.Data.Services
             return (insuranceCompanyCode != InsuranceCompany.SGKCode && insuranceCompanyCode != InsuranceCompany.SGKAcilCode);
         }
 
-        public static string GetCodeForValue<T>(IList<T> list, string value) where T: OldLookUpBase
+        public static string GetCodeForValue<T>(IList<T> list, string value) where T: OldLookUp
         {
             foreach(T t in list)
             {

@@ -107,7 +107,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private bool SearchByTCID()
         {
             string TCID = this.teTCId.Text;
-            if (PatientServices.IsValidTCID(TCID))
+            if (LookUpServices.IsValidTCID(TCID))
             {
                 IList<Patient> result = PatientServices.GetByTCId(TCID);
                 if (result.Count == 0)

@@ -33,7 +33,7 @@ namespace Naz.Hastane.Win.Controls
 
         public void RefreshView()
         {
-            var records = LookUpServices.GetPatientBalanceRecordData(Patient);
+            var records = PatientServices.GetPatientBalanceRecordData(Patient);
             Balance = 0;
             foreach (var record in records)
             {

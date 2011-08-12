@@ -767,31 +767,31 @@ namespace Naz.Hastane.Win {
         }
         #endregion
 
-        #region Personnel Forms
+        #region Personel Forms
         private void iYeniPersonel_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenNewPersonnel();
+            OpenNewPersonel();
         }
-        public void OpenNewPersonnel()
+        public void OpenNewPersonel()
         {
             string name = "Yeni Personel";
             PersonelForm newForm = new PersonelForm(0);
             newForm.Text = name;
             ShowNewDocument(newForm);
         }
-        public void OpenPersonnel(int aPersonnelID)
+        public void OpenPersonel(int aPersonelID)
         {
-            Personel personnel = PersonnelServices.GetPersonnelByID(aPersonnelID);
-            if (personnel != null)
+            Personel Personel = PersonelServices.GetPersonelByID(aPersonelID);
+            if (Personel != null)
             {
-                PersonelForm newForm = new PersonelForm(aPersonnelID);
-                string name = personnel.Ad + " " + personnel.Soyad;
+                PersonelForm newForm = new PersonelForm(aPersonelID);
+                string name = Personel.Ad + " " + Personel.Soyad;
                 newForm.Text = name;
                 ShowNewDocument(newForm);
                 AddToMostRecentFiles(name, arMRUList);
             }
         }
-        public void OpenNewPersonnelWithTCID(string newTCID)
+        public void OpenNewPersonelWithTCID(string newTCID)
         {
             string name = "Yeni Personel";
             PersonelForm newForm = new PersonelForm(0);

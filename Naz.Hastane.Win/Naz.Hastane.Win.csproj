@@ -133,46 +133,46 @@
       <Name>DevExpress.XtraEditors.v11.1</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v11.1.Design, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
     <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
@@ -280,10 +280,10 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\AccountingDailySummaryForm.cs">
+    <Compile Include="Accounting\AccountingDailySummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\AccountingDailySummaryForm.Designer.cs">
+    <Compile Include="Accounting\AccountingDailySummaryForm.Designer.cs">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\DailyTellerReportForm.cs">
@@ -292,10 +292,10 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\EczaneReportForm.cs">
+    <Compile Include="Pharmacy\EczaneReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\EczaneReportForm.Designer.cs">
+    <Compile Include="Pharmacy\EczaneReportForm.Designer.cs">
       <DependentUpon>EczaneReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\DBTestForm.cs">
@@ -304,10 +304,10 @@
     <Compile Include="MDIChildForms\DBTestForm.Designer.cs">
       <DependentUpon>DBTestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.cs">
+    <Compile Include="Patient\ChangeInsuranceCompanyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\ChangeInsuranceCompanyForm.Designer.cs">
+    <Compile Include="Patient\ChangeInsuranceCompanyForm.Designer.cs">
       <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\LastVisitedPatientsForm.cs">
@@ -316,22 +316,22 @@
     <Compile Include="MDIChildForms\LastVisitedPatientsForm.Designer.cs">
       <DependentUpon>LastVisitedPatientsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\MedulaDiabetReportForm.cs">
+    <Compile Include="Medula\MedulaDiabetReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\MedulaDiabetReportForm.Designer.cs">
+    <Compile Include="Medula\MedulaDiabetReportForm.Designer.cs">
       <DependentUpon>MedulaDiabetReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\MedulaMedicationReportForm.cs">
+    <Compile Include="Medula\MedulaMedicationReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\MedulaMedicationReportForm.Designer.cs">
+    <Compile Include="Medula\MedulaMedicationReportForm.Designer.cs">
       <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelEgitimForm.cs">
+    <Compile Include="Personel\PersonelEgitimForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelEgitimForm.Designer.cs">
+    <Compile Include="Personel\PersonelEgitimForm.Designer.cs">
       <DependentUpon>PersonelEgitimForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\PrintPreviewForm.cs">
@@ -340,34 +340,34 @@
     <Compile Include="MDIChildForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SelectFunctionForm.cs">
+    <Compile Include="Patient\SelectFunctionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SelectFunctionForm.Designer.cs">
+    <Compile Include="Patient\SelectFunctionForm.Designer.cs">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.cs">
+    <Compile Include="Patient\SelectInsuranceCompanyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SelectInsuranceCompanyForm.Designer.cs">
+    <Compile Include="Patient\SelectInsuranceCompanyForm.Designer.cs">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\FindPatientForm.cs">
+    <Compile Include="Patient\FindPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\FindPatientForm.Designer.cs">
+    <Compile Include="Patient\FindPatientForm.Designer.cs">
       <DependentUpon>FindPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelAraForm.cs">
+    <Compile Include="Personel\PersonelAraForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelAraForm.Designer.cs">
+    <Compile Include="Personel\PersonelAraForm.Designer.cs">
       <DependentUpon>PersonelAraForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SGKPatientForm.cs">
+    <Compile Include="Patient\SGKPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SGKPatientForm.Designer.cs">
+    <Compile Include="Patient\SGKPatientForm.Designer.cs">
       <DependentUpon>SGKPatientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\LookUpForm.cs">
@@ -388,16 +388,16 @@
     <Compile Include="Forms\frmReplace.Designer.cs">
       <DependentUpon>frmReplace.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\HastaAraForm.cs">
+    <Compile Include="Patient\HastaAraForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\HastaAraForm.Designer.cs">
+    <Compile Include="Patient\HastaAraForm.Designer.cs">
       <DependentUpon>HastaAraForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\HastaIslemleriForm.cs">
+    <Compile Include="Patient\HastaIslemleriForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\HastaIslemleriForm.Designer.cs">
+    <Compile Include="Patient\HastaIslemleriForm.Designer.cs">
       <DependentUpon>HastaIslemleriForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MernisSorgu.cs">
@@ -412,22 +412,22 @@
     <Compile Include="MDIChildForms\PrinterSettingsForm.Designer.cs">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\InvoiceVoucherForm.cs">
+    <Compile Include="Patient\InvoiceVoucherForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\InvoiceVoucherForm.Designer.cs">
+    <Compile Include="Patient\InvoiceVoucherForm.Designer.cs">
       <DependentUpon>InvoiceVoucherForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\SelectPolyclinicForm.cs">
+    <Compile Include="Patient\SelectPolyclinicForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\SelectPolyclinicForm.Designer.cs">
+    <Compile Include="Patient\SelectPolyclinicForm.Designer.cs">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelForm.cs">
+    <Compile Include="Personel\PersonelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIChildForms\PersonelForm.Designer.cs">
+    <Compile Include="Personel\PersonelForm.Designer.cs">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Networking\IMulticastBroadcaster.cs" />
@@ -474,31 +474,31 @@
     <EmbeddedResource Include="Forms\PasswordChangeForm.resx">
       <DependentUpon>PasswordChangeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\AccountingDailySummaryForm.resx">
+    <EmbeddedResource Include="Accounting\AccountingDailySummaryForm.resx">
       <DependentUpon>AccountingDailySummaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\EczaneReportForm.resx">
+    <EmbeddedResource Include="Pharmacy\EczaneReportForm.resx">
       <DependentUpon>EczaneReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DBTestForm.resx">
       <DependentUpon>DBTestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\ChangeInsuranceCompanyForm.resx">
+    <EmbeddedResource Include="Patient\ChangeInsuranceCompanyForm.resx">
       <DependentUpon>ChangeInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\LastVisitedPatientsForm.resx">
       <DependentUpon>LastVisitedPatientsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\MedulaDiabetReportForm.resx">
+    <EmbeddedResource Include="Medula\MedulaDiabetReportForm.resx">
       <DependentUpon>MedulaDiabetReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\MedulaMedicationReportForm.resx">
+    <EmbeddedResource Include="Medula\MedulaMedicationReportForm.resx">
       <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\PersonelEgitimForm.resx">
+    <EmbeddedResource Include="Personel\PersonelEgitimForm.resx">
       <DependentUpon>PersonelEgitimForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\PrinterSettingsForm.resx">
@@ -507,22 +507,22 @@
     <EmbeddedResource Include="MDIChildForms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SelectFunctionForm.resx">
+    <EmbeddedResource Include="Patient\SelectFunctionForm.resx">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SelectInsuranceCompanyForm.resx">
+    <EmbeddedResource Include="Patient\SelectInsuranceCompanyForm.resx">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\PersonelAraForm.resx">
+    <EmbeddedResource Include="Personel\PersonelAraForm.resx">
       <DependentUpon>PersonelAraForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\InvoiceVoucherForm.resx">
+    <EmbeddedResource Include="Patient\InvoiceVoucherForm.resx">
       <DependentUpon>InvoiceVoucherForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SelectPolyclinicForm.resx">
+    <EmbeddedResource Include="Patient\SelectPolyclinicForm.resx">
       <DependentUpon>SelectPolyclinicForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\PersonelForm.resx">
+    <EmbeddedResource Include="Personel\PersonelForm.resx">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -546,10 +546,10 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\FindPatientForm.resx">
+    <EmbeddedResource Include="Patient\FindPatientForm.resx">
       <DependentUpon>FindPatientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\SGKPatientForm.resx">
+    <EmbeddedResource Include="Patient\SGKPatientForm.resx">
       <DependentUpon>SGKPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\LookUpForm.resx">
@@ -563,11 +563,11 @@
       <DependentUpon>frmReplace.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\HastaAraForm.resx">
+    <EmbeddedResource Include="Patient\HastaAraForm.resx">
       <DependentUpon>HastaAraForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIChildForms\HastaIslemleriForm.resx">
+    <EmbeddedResource Include="Patient\HastaIslemleriForm.resx">
       <DependentUpon>HastaIslemleriForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\online.gif" />
@@ -616,6 +616,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Docs\Enums.txt" />
     <Content Include="Docs\PrinterCodes.txt" />
     <Content Include="Docs\Testler.txt" />
   </ItemGroup>

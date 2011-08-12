@@ -4,6 +4,6 @@ namespace Naz.Hastane.Data.Entities
     {
         public virtual int ID { get; set; }
         public virtual Personel Personel { get; set; }
-        public virtual int YabanciDilID { get; set; }
+        public virtual YabanciDil YabanciDil { get; set; }
     }
 }

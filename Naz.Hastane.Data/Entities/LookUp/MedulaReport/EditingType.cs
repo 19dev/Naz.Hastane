@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaReport
 {
     [Description("Düzenleme Türü")]
-    public class EditingType : LookUpBase
+    public class EditingType : LookUpIdValueCode
     {
     }
 }

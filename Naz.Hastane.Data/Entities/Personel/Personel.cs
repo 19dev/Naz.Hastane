@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+using Naz.Hastane.Data.Entities.LookUp.General;
 namespace Naz.Hastane.Data.Entities 
 {
     public class Personel 
@@ -12,7 +14,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string BabaAdi { get; set; }
         public virtual string AnaAdi { get; set; }
         public virtual string DogumYeri { get; set; }
-        public virtual string DogumTarihi { get; set; }
+        public virtual DateTime? DogumTarihi { get; set; }
         public virtual string Uyrugu { get; set; }
         public virtual string KimlikTuru { get; set; }
         public virtual string KimlikNo { get; set; }
@@ -20,24 +22,23 @@ namespace Naz.Hastane.Data.Entities
         public virtual string DogumIlcesi { get; set; }
         public virtual string DogumMahalleKoy { get; set; }
         public virtual string DogumCilt { get; set; }
-        public virtual System.Nullable<int> DogumAileSiraNo { get; set; }
+        public virtual int DogumAileSiraNo { get; set; }
         public virtual string DogumSiraNo { get; set; }
         public virtual string Cinsiyeti { get; set; }
         public virtual string MedeniHali { get; set; }
-        public virtual string Unvani { get; set; }
-        public virtual string Bolumu { get; set; }
+        public virtual PersonelUnvani PersonelUnvani { get; set; }
+        public virtual HastaneBolumu HastaneBolumu { get; set; }
         public virtual string EvAdresi { get; set; }
         public virtual string Telefon { get; set; }
         public virtual string EvTelefonu { get; set; }
         public virtual string CepTelefonu { get; set; }
-        public virtual string Emekli { get; set; }
-        public virtual string Sendikali { get; set; }
-        public virtual string KanGrubu { get; set; }
-        public virtual string IseGirisTarihi { get; set; }
+        public virtual string IsRetired { get; set; }
+        public virtual string HasUnion { get; set; }
+        public virtual BloodType KanGrubu { get; set; }
+        public virtual DateTime? IseGirisTarihi { get; set; }
         public virtual string SigortaNo { get; set; }
         public virtual string VergiNo { get; set; }
-        public virtual string AyrilisTarihi { get; set; }
-        public virtual string CalistigiBolum { get; set; }
+        public virtual DateTime? AyrilisTarihi { get; set; }
         public virtual string Aciklama { get; set; }
         public virtual string Email { get; set; }
         public virtual string Mahalle { get; set; }
@@ -186,5 +187,14 @@ namespace Naz.Hastane.Data.Entities
         }
         #endregion
 
+        //public override bool Equals(object obj)
+        //{
+        //    if (obj == null)
+        //        return false;
+        //    Personel p = obj as Personel;
+        //    if (p == null)
+        //        return false;
+        //    return (this.ID == p.ID);
+        //}
     }
 }

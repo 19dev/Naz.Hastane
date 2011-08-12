@@ -89,9 +89,10 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void InitBindings()
         {
             LoadLookUps();
-            
-            UIUtilities.BindControl(teTCID, Personnel, x => x.TCID);
-            UIUtilities.BindControl(teFirstName, Personnel, x => x.Ad);
+<<<<<<< HEAD
+            this.tePersonnelNo.DataBindings.Add("EditValue", Personnel, "PersonelNo");
+            this.teFirstName.DataBindings.Add("EditValue", Personnel, "Ad");
+            this.teSurname.DataBindings.Add("EditValue", Personnel, "Soyad");
             this.teTCID.DataBindings.Add("EditValue", Personnel, "TCID");
             this.ceEmekli.DataBindings.Add("EditValue", Personnel, "Emekli");
             this.ceSendikali.DataBindings.Add("EditValue", Personnel, "Sendikali");
@@ -101,13 +102,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teUnvani.DataBindings.Add("EditValue", Personnel, "Unvani");
             this.teDepartment.DataBindings.Add("EditValue", Personnel, "Bolumu");
             this.tePhone.DataBindings.Add("EditValue", Personnel, "Telefon");
-            UIUtilities.BindControl(teHomeTown, Personnel, x => x.Ilce);
-            UIUtilities.BindControl(lueHomeCity, Personnel, x => x.Il);
+            this.teHomePhone1.DataBindings.Add("EditValue", Personnel, "EvTelefonu");
+            this.teMobilePhone.DataBindings.Add("EditValue", Personnel, "CepTelefonu");
             this.lueBloodType.DataBindings.Add("EditValue", Personnel, "KanGrubu");
             this.deEntryDate.DataBindings.Add("EditValue", Personnel, "IseGirisTarihi");
             this.deExitDate.DataBindings.Add("EditValue", Personnel, "AyrilisTarihi");
             this.teInsuranceNo.DataBindings.Add("EditValue", Personnel, "SigortaNo");
             this.teTaxNo.DataBindings.Add("EditValue", Personnel, "VergiNo");
+            this.teEmail.DataBindings.Add("EditValue", Personnel, "Email");
 
 
 
@@ -125,8 +127,31 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teSiraNo.DataBindings.Add("EditValue", Personnel, "DogumSiraNo");
 
 
+            this.teHomeAddress.DataBindings.Add("EditValue", Personnel, "EvAdresi");
+            this.teHomeDistrict.DataBindings.Add("EditValue", Personnel, "Mahalle");
+            this.teHomeTown.DataBindings.Add("EditValue", Personnel, "Ilce");
+            this.lueHomeCity.DataBindings.Add("EditValue", Personnel, "Il");
             this.meExplanation.DataBindings.Add("EditValue", Personnel, "Aciklama");
             
+=======
+            
+            UIUtilities.BindControl(tePersonnelNo, Personnel, x => x.PersonelNo);
+            UIUtilities.BindControl(teTCID, Personnel, x => x.TCID);
+            UIUtilities.BindControl(teFirstName, Personnel, x => x.Ad);
+            UIUtilities.BindControl(teSurname, Personnel, x => x.Soyad);
+            UIUtilities.BindControl(rgSex, Personnel, x => x.Cinsiyeti);
+            UIUtilities.BindControl(teHomePhone1, Personnel, x => x.EvTelefonu);
+            UIUtilities.BindControl(teMobilePhone, Personnel, x => x.CepTelefonu);
+            UIUtilities.BindControl(teEmail, Personnel, x => x.Email);
+            UIUtilities.BindControl(deEntryDate, Personnel, x => x.IseGirisTarihi);
+            UIUtilities.BindControl(deExitDate, Personnel, x => x.AyrilisTarihi);
+            UIUtilities.BindControl(teHomeAddress, Personnel, x => x.EvAdresi);
+            UIUtilities.BindControl(teHomeDistrict, Personnel, x => x.Mahalle);
+            UIUtilities.BindControl(teHomeTown, Personnel, x => x.Ilce);
+            UIUtilities.BindControl(lueHomeCity, Personnel, x => x.Il);
+            UIUtilities.BindControl(lueBloodType, Personnel, x => x.KanGrubu);
+
+>>>>>>> Aydin
         }
 
         private void LoadLookUps()

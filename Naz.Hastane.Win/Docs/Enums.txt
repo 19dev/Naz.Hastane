@@ -1,0 +1,24 @@
+﻿You could do as Tom suggests, but there's at least one easy way to do it without changing Person.FavoriteColor to a string.
+
+Add a property to Person called FavoriteColorString:
+
+public class Person 
+{
+    [...]
+    public colorEnum FavoriteColor { get; set; }
+    public string FavoriteColorString
+    {
+        get { return FavoriteColor.ToString(); }
+        set { FavoriteColor = (colorEnum)Enum.Parse(typeof(colorEnum), value);  }
+    }
+}
+Recompile so the new property shows up in the bindingsource.
+
+Now bind comboBoxFavoriteColor.SelectedItem to FavoriteColorString.
+
+And at runtime, do as Tom said:
+
+comboBoxFavoriteColor.DataSource = Enum.GetNames(typeof(colorEnum));
+Voila! It should now work the way you want.
+
+When you persist the settings objects, just don't persist the FavoriteColorString property.

@@ -13,7 +13,7 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
 
     /// <remarks>tlkpvService</remarks>
     [Description("Servis Tanımları")]
-    public class Service : OldLookUpBase
+    public class Service : OldLookUp
     {
         [Description("Sorgu Türü")]
         public virtual float SorguTuru { get; set; } // SLY Sorgu Turu Medula ??

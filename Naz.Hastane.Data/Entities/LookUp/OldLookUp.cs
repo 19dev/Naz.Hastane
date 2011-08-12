@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp
 {
     /// <remarks>KEYDAT</remarks>
-    public class OldLookUpBase
+    public class OldLookUp
     {
         public virtual string ID0 { get; set; }
         [Description("Kod")]
@@ -16,7 +16,7 @@ namespace Naz.Hastane.Data.Entities.LookUp
         {
             if (obj == null)
                 return false;
-            OldLookUpBase lb = obj as OldLookUpBase;
+            OldLookUp lb = obj as OldLookUp;
             if (lb == null)
                 return false;
             if (this.ID0 == lb.ID0 && this.Code == lb.Code)

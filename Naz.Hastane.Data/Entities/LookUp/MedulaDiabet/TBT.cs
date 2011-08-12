@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Tıbbi Beslenme Tedavisi")]
-    public class TBT : LookUpBase
+    public class TBT : LookUpIdValueCode
     {
     }
 }

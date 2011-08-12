@@ -16,38 +16,8 @@ using NHibernate.Linq;
 
 namespace Naz.Hastane.Data.Services
 {
-    public static class PersonnelServices
+    public static class PersonelServices
     {
-        public static bool IsValidTCID(string aTCID)
-        {
-            return IsValidNumeric(aTCID, 11);
-        }
-
-        //public static bool IsValidPatientNo(string aPatientNo)
-        //{
-        //    return IsValidNumeric(aPatientNo, 6);
-        //}
-
-        public static bool IsValidNumeric(string aString)
-        {
-            if (String.IsNullOrWhiteSpace(aString))
-                return false;
-            foreach (char c in aString)
-                if (!Char.IsNumber(c))
-                    return false;
-            return true;
-        }
-        
-        public static bool IsValidNumeric(string aString, int length)
-        {
-            if (String.IsNullOrWhiteSpace(aString) || aString.Length != length)
-                return false;
-            foreach (char c in aString)
-                if (!Char.IsNumber(c))
-                    return false;
-            return true;
-        }        
-
         public static IList<Personel> GetByTCId(string aTCID)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
@@ -60,32 +30,30 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static IList<Personel> GetPersonnelByPersonnelNo(string aPersonnelNo)
+        public static IList<Personel> GetPersonelByPersonelNo(string aPersonelNo)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 IList<Personel> result = session
                     .CreateCriteria(typeof(Personel))
-                    .Add(Restrictions.Eq("PersonelNo", aPersonnelNo))
+                    .Add(Restrictions.Eq("PersonelNo", aPersonelNo))
                     .List<Personel>();
                 return result;
             }
         }
 
-        public static Personel GetPersonnelByID(int aPersonnelNo)
+        public static Personel GetPersonelByID(int aPersonelNo)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                return GetPersonnelByID(aPersonnelNo, session);
+                return GetPersonelByID(aPersonelNo, session);
         }
 
-        public static Personel GetPersonnelByID(int aPersonnelNo, ISession session)
+        public static Personel GetPersonelByID(int aPersonelNo, ISession session)
         {
-            if (aPersonnelNo == 0)
+            if (aPersonelNo == 0)
                 return null;
-            //if (String.IsNullOrWhiteSpace(aPersonnelNo))
-            //    return null;
 
-            return session.Get<Personel>(aPersonnelNo);
+            return session.Get<Personel>(aPersonelNo);
         }
 
         public static IList<Personel> GetByWhere(string aWhere)
@@ -98,28 +66,22 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static Personel GetNewPersonnel()
-        {
-            Personel personnel = CreateNewPersonnel();
-            return personnel;
-        }
-
-        public static void SavePersonnel(ISession session, Personel personnel)
+        public static void SavePersonel(ISession session, Personel Personel)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                session.SaveOrUpdate(personnel);
+                session.SaveOrUpdate(Personel);
                 transaction.Commit();
             }
         }
 
-        public static double GetNewPersonnelNo()
+        public static double GetNewPersonelNo()
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
-                return GetNewPersonnelNo(session);
+                return GetNewPersonelNo(session);
         }
 
-        public static double GetNewPersonnelNo(ISession session)
+        public static double GetNewPersonelNo(ISession session)
         {
             double? a = session.QueryOver<Personel>()
                 .Select(
@@ -131,26 +93,32 @@ namespace Naz.Hastane.Data.Services
             return a.GetValueOrDefault() + 1;
         }
         
-        public static Personel CreateNewPersonnel()
+        public static Personel CreateNewPersonel()
         {
-            Personel personnel = DataBindingFactory.Create<Personel>();
+            Personel personel = DataBindingFactory.Create<Personel>();
 
-            personnel.Ad = "";
-            personnel.Soyad = "";
-            personnel.TCID = "";
-            personnel.Cinsiyeti = ""; 
-            personnel.KanGrubu = ""; 
-            personnel.EvAdresi = "";
-            personnel.Mahalle = "";
-            personnel.Ilce = "";
-            personnel.Il = "";
-            personnel.EvTelefonu = "";
-            personnel.CepTelefonu = "";
-            personnel.Email = "";
+            personel.Ad = "";
+            personel.Soyad = "";
+            personel.TCID = "";
+            personel.Cinsiyeti = ""; 
+            //Personel.KanGrubu = 9; 
+            personel.EvAdresi = "";
+            personel.Mahalle = "";
+            personel.Ilce = "";
+            personel.Il = "";
+            personel.EvTelefonu = "";
+            personel.CepTelefonu = "";
+            personel.Email = "";
 
-            return personnel;
+            return personel;
         }                      
-                                      
+         
+        public static PersonelEgitim CreateNewPersonelEgitim()
+        {
+            PersonelEgitim personelEgitim = DataBindingFactory.Create<PersonelEgitim>();
+
+            return personelEgitim;
+        }         
                        
     }
 

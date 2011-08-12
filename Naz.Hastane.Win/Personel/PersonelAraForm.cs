@@ -41,9 +41,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 try
                 {
-                    string personnelID;
-                    personnelID = gridView1.GetFocusedRowCellDisplayText("ID");
-                    (this.MdiParent as frmMain).OpenPersonnel(Convert.ToInt32(personnelID));
+                    string PersonelID;
+                    PersonelID = gridView1.GetFocusedRowCellDisplayText("ID");
+                    (this.MdiParent as frmMain).OpenPersonel(Convert.ToInt32(PersonelID));
                 }
                 finally
                 {
@@ -64,29 +64,29 @@ namespace Naz.Hastane.Win.MDIChildForms
             try
             {
                 if (SearchByTCID()) return;
-                if (SearchByPersonnelNo()) return;
+                if (SearchByPersonelNo()) return;
 
                 string criteriaString = "";
 
                 //GetCriteria(this.teTCId, ref criteriaString, "TCID");
-                //GetCriteria(this.tePersonnelNo, ref criteriaString, "PersonelNo");
+                //GetCriteria(this.tePersonelNo, ref criteriaString, "PersonelNo");
                 GetCriteria(this.teFirstName, ref criteriaString, "Ad");
                 GetCriteria(this.teLastName, ref criteriaString, "Soyad");
 
                 if (criteriaString.Length > 0)
                 {
-                    IList<Personel> personnels = PersonnelServices.GetByWhere(criteriaString);
+                    IList<Personel> Personels = PersonelServices.GetByWhere(criteriaString);
                     //this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                    this.gridPersonelArama.DataSource = personnels;
-                    if (personnels.Count == 1)
+                    this.gridPersonelArama.DataSource = Personels;
+                    if (Personels.Count == 1)
                     {
-                        (this.MdiParent as frmMain).OpenPersonnel(personnels[0].ID);
+                        (this.MdiParent as frmMain).OpenPersonel(Personels[0].ID);
                     }
-                    else if (personnels.Count == 0)
+                    else if (Personels.Count == 0)
                     {
                         if (XtraMessageBox.Show("Bu Kriterlerle Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            (this.MdiParent as frmMain).OpenNewPersonnel();
+                            (this.MdiParent as frmMain).OpenNewPersonel();
                         }
                     }
                 }
@@ -101,42 +101,42 @@ namespace Naz.Hastane.Win.MDIChildForms
         private bool SearchByTCID()
         {
             string TCID = this.teTCId.Text;
-            if (PersonnelServices.IsValidTCID(TCID))
+            if (LookUpServices.IsValidTCID(TCID))
             {
-                IList<Personel> result = PersonnelServices.GetByTCId(TCID);
+                IList<Personel> result = PersonelServices.GetByTCId(TCID);
                 if (result.Count == 0)
                 {
                     if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        (this.MdiParent as frmMain).OpenNewPersonnelWithTCID(TCID);
+                        (this.MdiParent as frmMain).OpenNewPersonelWithTCID(TCID);
                         return true;
                     }
                 }
                 else if (result.Count == 1)
                 {
-                    (this.MdiParent as frmMain).OpenPersonnel(result[0].ID);
+                    (this.MdiParent as frmMain).OpenPersonel(result[0].ID);
                     return true;
                 }
             }
             return false;
         }
 
-        private bool SearchByPersonnelNo()
+        private bool SearchByPersonelNo()
         {
-            string personnelNo = this.tePersonnelNo.Text.Trim();
-            if (PersonnelServices.IsValidNumeric(personnelNo))
+            string PersonelNo = this.tePersonelNo.Text.Trim();
+            if (LookUpServices.IsValidNumeric(PersonelNo))
             {
-                IList<Personel> result = PersonnelServices.GetPersonnelByPersonnelNo(personnelNo);
+                IList<Personel> result = PersonelServices.GetPersonelByPersonelNo(PersonelNo);
                 if (result.Count == 0)
                 {
                     if (XtraMessageBox.Show("Bu Personel Numaralı Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        (this.MdiParent as frmMain).OpenNewPersonnel();
+                        (this.MdiParent as frmMain).OpenNewPersonel();
                     }
                 }
                 else if(result.Count == 1)
                 {
-                    (this.MdiParent as frmMain).OpenPersonnel(result[0].ID);
+                    (this.MdiParent as frmMain).OpenPersonel(result[0].ID);
                 }
                 return true;
             }
@@ -163,7 +163,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void btnClean_Click(object sender, EventArgs e)
         {
             this.teTCId.Text = "";
-            this.tePersonnelNo.Text = "";
+            this.tePersonelNo.Text = "";
             this.teFirstName.Text = "";
             this.teLastName.Text = "";
 
@@ -179,7 +179,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbNew_Click(object sender, EventArgs e)
         {
-            (this.MdiParent as frmMain).OpenNewPersonnel();
+            (this.MdiParent as frmMain).OpenNewPersonel();
         }
 
         private void sbClose_Click(object sender, EventArgs e)

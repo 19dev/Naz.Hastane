@@ -18,6 +18,7 @@ namespace Naz.Hastane.Data.Entities
 			Map(x => x.TCID).Column("TCID").Length(15);
 			Map(x => x.BabaAdi).Column("BabaAdi").Length(50);
 			Map(x => x.AnaAdi).Column("AnaAdi").Length(50);
+			
 			Map(x => x.DogumYeri).Column("DogumYeri").Length(50);
 			Map(x => x.DogumTarihi).Column("DogumTarihi");
 			Map(x => x.Uyrugu).Column("Uyrugu").Length(50);
@@ -29,22 +30,25 @@ namespace Naz.Hastane.Data.Entities
 			Map(x => x.DogumCilt).Column("DogumCilt").Length(50);
 			Map(x => x.DogumAileSiraNo).Column("DogumAileSiraNo");
 			Map(x => x.DogumSiraNo).Column("DogumSiraNo").Length(50);
+
 			Map(x => x.Cinsiyeti).Column("Cinsiyeti").Length(50);
 			Map(x => x.MedeniHali).Column("MedeniHali").Length(50);
-			Map(x => x.Unvani).Column("Unvani").Length(50);
-			Map(x => x.Bolumu).Column("Bolumu").Length(50);
+
 			Map(x => x.EvAdresi).Column("EvAdresi").Length(255);
 			Map(x => x.Telefon).Column("Telefon").Length(50);
 			Map(x => x.EvTelefonu).Column("EvTelefonu").Length(50);
 			Map(x => x.CepTelefonu).Column("CepTelefonu").Length(50);
-			Map(x => x.Emekli).Column("Emekli").Length(50);
-			Map(x => x.Sendikali).Column("Sendikali").Length(50);
-			Map(x => x.KanGrubu).Column("KanGrubu").Length(50);
+
+			References(x => x.PersonelUnvani).Column("PersonelUnvaniID");
+			References(x => x.HastaneBolumu).Column("HastaneBolumuID");
+
+			Map(x => x.IsRetired).Column("IsRetired").Length(1);
+			Map(x => x.HasUnion).Column("HasUnion").Length(1);
+			References(x => x.KanGrubu).Column("KanGrubu");
 			Map(x => x.IseGirisTarihi).Column("IseGirisTarihi");
 			Map(x => x.SigortaNo).Column("SigortaNo").Length(50);
 			Map(x => x.VergiNo).Column("VergiNo").Length(50);
 			Map(x => x.AyrilisTarihi).Column("AyrilisTarihi");
-			Map(x => x.CalistigiBolum).Column("CalistigiBolum").Length(50);
 			Map(x => x.Aciklama).Column("Aciklama").Length(50);
 			Map(x => x.Email).Column("Email").Length(50);
 			Map(x => x.Mahalle).Column("Mahalle").Length(50);

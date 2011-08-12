@@ -4,9 +4,7 @@ using System.Linq;
 using Naz.Hastane.Data.DTO;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Entities.Accounting;
-using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities.Logs;
-using Naz.Hastane.Data.Entities.LookUp;
 using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
 using Naz.Hastane.Data.Entities.LookUp.Special;
 using Naz.Hastane.Data.Entities.Medula;
@@ -14,29 +12,16 @@ using Naz.Utilities.Classes;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using Naz.Hastane.Data.Entities.StoredProcedure;
 
 namespace Naz.Hastane.Data.Services
 {
     public static class PatientServices
     {
-        public static bool IsValidTCID(string aTCID)
-        {
-            return IsValidNumeric(aTCID, 11);
-        }
-
+        #region Patient
         public static bool IsValidPatientNo(string aPatientNo)
         {
-            return IsValidNumeric(aPatientNo, 6);
-        }
-
-        public static bool IsValidNumeric(string aString, int length)
-        {
-            if (String.IsNullOrWhiteSpace(aString) || aString.Length != length)
-                return false;
-            foreach (char c in aString)
-                if (!Char.IsNumber(c))
-                    return false;
-            return true;
+            return LookUpServices.IsValidNumeric(aPatientNo, 6);
         }
 
         public static Patient GetPatientByID(string aPatientNo)
@@ -207,6 +192,22 @@ namespace Naz.Hastane.Data.Services
             return patient;
         }
 
+        public static IList<PatientBalanceRecord> GetPatientBalanceRecordData(Patient patient)
+        {
+            if (patient == null) return new List<PatientBalanceRecord>();
+
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                return session.GetNamedQuery("sp_GetPatientBalance")
+                    .SetString("PatientNo", patient.PatientNo)
+                    .List<PatientBalanceRecord>();
+            }
+
+        }
+
+        #endregion
+
+        #region PatientVisit
         /// <summary>
         /// SGK Poliklinik İşlemleri ekler
         /// </summary>
@@ -269,7 +270,7 @@ namespace Naz.Hastane.Data.Services
             if (LookUpServices.IsSGK(patient.InsuranceCompany.Code))
             {
                 if (sae.Contribution == PatientContributionValues.NoContribution.GetDescription())
-                // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
+                    // SGKKATILIM olmayan maddelerde Medula'ya gönderilecekleri seç
                     return (sae.Product.MEDGONDER == "1");
                 else
                     // SGKKATILIM olanda "Çalışan"lar için katılım ekle seç
@@ -295,7 +296,7 @@ namespace Naz.Hastane.Data.Services
                 pv.TransferValidityPeriod = (short)patient.InsuranceCompany.SEVKGECSURE;
                 pv.Doctor = doctor;
                 pv.Servis = serviceCode;
-                pv.QueueNo = String.Format("{0:00000}",queueNo);
+                pv.QueueNo = String.Format("{0:00000}", queueNo);
                 pv.VisitType = PatientVisit.Polyclinic;
                 pv.SIRAID = patient.InsuranceCompany.SIRAID;
                 pv.HZLNO = 1; /// TODO HZLNO nerede artıyor?
@@ -358,15 +359,15 @@ namespace Naz.Hastane.Data.Services
             {
                 PatientVisitDetail pvd = GetNewPatientVisitDetailFromProduct(pv, product);
 
-                pvd.PatientVisit  = pv;
-                pvd.DetailNo      = GetNewPatientVisitDetailNo(session, pv);
+                pvd.PatientVisit = pv;
+                pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
 
                 string priceListCode = patient.InsuranceCompany.GetPriceList(pv.VisitType);
 
                 pvd.PatientPrice = product.GetPatientPrice(priceListCode);
                 pvd.CompanyPrice = product.GetCompanyPrice(priceListCode);
-                pvd.USER_ID       = user.USER_ID;
-                pvd.DATE_CREATE   = DateTime.Now;
+                pvd.USER_ID = user.USER_ID;
+                pvd.DATE_CREATE = DateTime.Now;
 
                 session.Save(pvd);
                 //session.Flush();
@@ -501,10 +502,10 @@ namespace Naz.Hastane.Data.Services
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                patient.InsuranceType         = mpr.SigortaliTuru;
+                patient.InsuranceType = mpr.SigortaliTuru;
                 patient.TransferorInstitution = mpr.TransferorInstitution;
-                patient.USER_ID_UPDATE        = user.USER_ID;
-                patient.DATE_UPDATE           = DateTime.Now;
+                patient.USER_ID_UPDATE = user.USER_ID;
+                patient.DATE_UPDATE = DateTime.Now;
 
                 session.Update(patient);
                 //session.Flush();
@@ -519,13 +520,13 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                pv.TAKIPNO           = mpr.TakipNo;
-                pv.HASTABASNO        = mpr.HastaBasvuruNo;
+                pv.TAKIPNO = mpr.TakipNo;
+                pv.HASTABASNO = mpr.HastaBasvuruNo;
                 pv.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
-                pv.TreatmentStyle    = mpr.TreatmentStyle;
-                pv.ProvisionType     = mpr.ProvisionType;
-                pv.USER_ID_UPDATE    = user.USER_ID;
-                pv.DATE_UPDATE       = DateTime.Now;
+                pv.TreatmentStyle = mpr.TreatmentStyle;
+                pv.ProvisionType = mpr.ProvisionType;
+                pv.USER_ID_UPDATE = user.USER_ID;
+                pv.DATE_UPDATE = DateTime.Now;
 
                 session.Update(pv);
                 //session.Flush();
@@ -537,16 +538,16 @@ namespace Naz.Hastane.Data.Services
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                pvr.BranchCode        = mpr.BranchCode;
-                pvr.HASTABASNO        = mpr.HastaBasvuruNo;
+                pvr.BranchCode = mpr.BranchCode;
+                pvr.HASTABASNO = mpr.HastaBasvuruNo;
                 pvr.RelatedFollowUpNo = mpr.RelatedFollowUpNo;
-                pvr.TreatmentType     = mpr.TreatmentType;
-                pvr.FollowUpType      = mpr.FollowUpType;
-                pvr.TreatmentStyle    = mpr.TreatmentStyle;
-                pvr.SEVKTAKIPNO       = mpr.TakipNo;
-                pvr.ProvisionType     = mpr.ProvisionType;
-                pvr.USER_ID_UPDATE    = user.USER_ID;
-                pvr.DATE_UPDATE       = DateTime.Now;
+                pvr.TreatmentType = mpr.TreatmentType;
+                pvr.FollowUpType = mpr.FollowUpType;
+                pvr.TreatmentStyle = mpr.TreatmentStyle;
+                pvr.SEVKTAKIPNO = mpr.TakipNo;
+                pvr.ProvisionType = mpr.ProvisionType;
+                pvr.USER_ID_UPDATE = user.USER_ID;
+                pvr.DATE_UPDATE = DateTime.Now;
 
                 session.Update(pvr);
                 //session.Flush();
@@ -579,6 +580,7 @@ namespace Naz.Hastane.Data.Services
             }
             return false;
         }
+        #endregion
 
         #region New Key Generators
         public static string GetNewPatientNo()
@@ -1069,7 +1071,6 @@ namespace Naz.Hastane.Data.Services
 
             session.Save(did);
         }
-        #endregion
 
         public static void AddNewVoucher(ISession session, User user, IList<PatientVisitDetail> pvds,
         string paymentType, string POSType,
@@ -1106,6 +1107,8 @@ namespace Naz.Hastane.Data.Services
                 }
             }
         }
+        
+        #endregion
 
         #region Insurance Company Change
         public static IList<PatientVisit> GetPatientVisitsForInsuranceCompanyChange(ISession session, Patient patient)
@@ -1211,24 +1214,6 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
         
-        //'select H.SNR, H.AKOD, H.TANIM, H.GRUP, H.CODE, H.TARIH, H.NAME1, H.ADET, H.SATISF, H.KSATISF, H.MAKNO, H.SIRANO, B.AMBU 
-        //from HIZIL H, BEHAND B 
-        //where H.KNR=B.KNR and H.SNR=B.SNR and H.KNR=''870366'' AND h.SNR in (''993'') and B.IMPF2 is NULL and B.CIKTAR is null  
-        //AND B.TAKIPSEND=''9'' order by H.TARIH'
-
-        //select isnull(sum(ESATISF),0) as ESKISATISF, isnull(sum(YSATISF),0) as YENISATISF from HASTAINDIRIMLER_DETAY 
-        //    where KNR='870366' and SNR='993' and SIRANO=1
-
-        //select KNR, PFIYLIST, YFIYLIST,  ILACODE, SARFODE, HASTAKATILIM from KURADR where PSG='SGK'
-
-        //select SATISF93 As SATISF, KSATISF93 As KSATISF from HIZMET where TANIM='00' and GRUP='011' and CODE='1700'
-
-        //'SELECT INDIRIMORANI FROM KURUMINDIRIMORANLARI WHERE KNR=''01035'' AND TANIM=''00'' AND GRUP=''011''
-
-        // INSERT into LOGKURUM_DEGISTI (KD_ID, KNR, TARIH, EPSG, YPSG, OHASTATOP, EHASTATOP, EKURUMTOP, YHASTATOP, YKURUMTOP, USER_ID, DATE_CREATE) values (275977,'870366','09.05.2011 10:32:10','SGK - ','SGK',0,20.33
-
-
-
         // Hasta Borç Alacak
 
         //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR

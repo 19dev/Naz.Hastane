@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaReport
 {
     [Description("Medula Rapor Tipi")]
-    public class MedulaReportType : LookUpBase
+    public class MedulaReportType : LookUpIdValueCode
     {
     }
 }

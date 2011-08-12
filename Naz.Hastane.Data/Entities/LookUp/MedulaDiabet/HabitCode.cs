@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Alışkanlıklar")]
-    public class HabitCode : LookUpBase
+    public class HabitCode : LookUpIdValueCode
     {
     }
 }

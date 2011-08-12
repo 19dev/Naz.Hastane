@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaProvision
 {
     [Description("Provizyon Tipi")]
-    public class ProvisionType : LookUpBase
+    public class ProvisionType : LookUpIdValueCode
     {
         public static readonly string DefaultValue = "N";
         public static readonly string NormalValue = "N";

@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Naz.Hastane.Data.Entities.LookUp.MedulaDiabet
 {
     [Description("Pozitif Negatif Tanımı")]
-    public class PositiveNegative : LookUpBase
+    public class PositiveNegative : LookUpIdValueCode
     {
     }
 }

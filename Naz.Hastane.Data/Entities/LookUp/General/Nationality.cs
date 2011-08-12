@@ -4,7 +4,7 @@ namespace Naz.Hastane.Data.Entities.LookUp.General
 {
     /// <remarks>tlkpvNationality</remarks>
     [Description("Ülke İsimleri")]
-    public class Nationality : OldLookUpBase
+    public class Nationality : OldLookUp
     {
     }
 }
