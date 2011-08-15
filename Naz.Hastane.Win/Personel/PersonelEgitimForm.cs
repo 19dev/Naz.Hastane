@@ -1,48 +1,56 @@
 ﻿using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
+using DevExpress.XtraEditors;
+using System;
+using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class PersonelEgitimForm : MDIChildForm
     {
-        public PersonelEgitim PersonelEgitim { get; set; }
-
         public bool IsOK { get; set; }
-
         private Personel _Personel;
+
+        private PersonelEgitim _PersonelEgitim = null;
+
+        public PersonelEgitim PersonelEgitim
+        {
+            get { return _PersonelEgitim; }
+            set
+            {
+                if (_PersonelEgitim != value)
+                {
+                    _PersonelEgitim = value;
+                    InitPersonelEgitimBindings();
+                }
+            }
+        }
 
         private PersonelEgitimForm()
         {
             InitializeComponent();
+            LoadLookUps();
         }
 
         public PersonelEgitimForm(Personel personel, int personelEgitimID) : this()
         {
+            IsOK = false;
             if (personel == null)
-            {
-                IsOK = false;
                 Close();
-            }
+
             _Personel = personel;
 
-            LoadLookUps();
-            LoadRecord(personelEgitimID);
-        }
-
-        private void LoadRecord(int recordID)
-        {
-            if (recordID == 0)
+            PersonelEgitim personelEgitim = LookUpServices.GetByID<PersonelEgitim>(Session, personelEgitimID);
+            if (personelEgitim == null)
             {
-                PersonelEgitim = PersonelServices.CreateNewPersonelEgitim();
-                PersonelEgitim.Personel = _Personel;
+                personelEgitim = PersonelServices.CreateNewPersonelEgitim();
+                personelEgitim.Personel = _Personel;
             }
-            else
-                PersonelEgitim = LookUpServices.GetByID<PersonelEgitim>(Session, recordID);
 
-            InitBindings();
+            PersonelEgitim = personelEgitim;
         }
 
-        private void InitBindings()
+        private void InitPersonelEgitimBindings()
         {
             UIUtilities.BindControl(cmbOkulTipi, PersonelEgitim, x => x.OkulTipi, propertyName: "SelectedItem");
             UIUtilities.BindControl(teOkulAdi, PersonelEgitim, x => x.OkulAdi);
@@ -56,8 +64,29 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindComboBox(cmbOkulTipi, LookUpServices.OkulTipis, displayMember: "Value", valueMember: "ID");
         }
 
-        private void Save()
+        private bool Save()
         {
+            if (String.IsNullOrWhiteSpace(PersonelEgitim.OkulAdi))
+            {
+                XtraMessageBox.Show("Lütfen Okul Adını Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (PersonelEgitim.BaslangicTarihi == null || PersonelEgitim.BitisTarihi == null || PersonelEgitim.BaslangicTarihi >= PersonelEgitim.BitisTarihi )
+            {
+                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            try
+            {
+                LookUpServices.SaveOrUpdate(Session, PersonelEgitim);
+                XtraMessageBox.Show("Personel Eğitimi Kayıt Edilmiştir", "Personel Eğitimi Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (Exception error)
+            {
+                XtraMessageBox.Show("Personel Eğitimi Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
         }
 
@@ -65,6 +94,27 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             IsOK = false;
             Close();
+        }
+
+        private void sbSaveAndClose_Click(object sender, EventArgs e)
+        {
+            if (Save())
+            {
+                IsOK = true;
+                Close();
+            }
+        }
+
+        private void sbSaveAndNew_Click(object sender, EventArgs e)
+        {
+            if (Save())
+            {
+                IsOK = true;
+                PersonelEgitim personelEgitim = PersonelServices.CreateNewPersonelEgitim();
+                personelEgitim.Personel = _Personel;
+
+                PersonelEgitim = personelEgitim;
+            }
         }
 
     }

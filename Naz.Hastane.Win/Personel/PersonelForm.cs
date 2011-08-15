@@ -22,6 +22,22 @@ namespace Naz.Hastane.Win.MDIChildForms
 {
     public partial class PersonelForm : MDIChildForm
     {
+        private PersonelForm()
+        {
+            InitializeComponent();
+            LoadLookUps();
+        }
+
+        public PersonelForm(int ID) : this()
+        {
+            Personel personel = PersonelServices.GetPersonelByID(ID, Session);
+            if (personel == null)
+                personel = PersonelServices.CreateNewPersonel();
+
+            Personel = personel;
+        }
+
+        #region Personel
         private Personel _Personel = null;
 
         public Personel Personel
@@ -29,31 +45,25 @@ namespace Naz.Hastane.Win.MDIChildForms
             get { return _Personel; }
             set
             {
-                if (_Personel != value) 
+                if (_Personel != value)
                 {
                     _Personel = value;
-                    //LoadSubLists();
+                    InitPersonelBindings();
                 }
             }
         }
 
-        private PersonelForm()
+        private void ReLoadPersonel()
         {
-            InitializeComponent();
+            int id = Personel.ID;
+            _Personel = null;
+
+            ReOpenSession();
+            Personel = PersonelServices.GetPersonelByID(id, Session);
         }
 
-        public PersonelForm(int ID) : this()
+        private void InitPersonelBindings()
         {
-            Personel = PersonelServices.GetPersonelByID(ID, Session);
-            if (Personel == null)
-                Personel = PersonelServices.CreateNewPersonel();
-            InitBindings();            
-        }
-
-        private void InitBindings()
-        {
-            LoadLookUps();
-
             UIUtilities.BindControl(tePersonelNo, Personel, x => x.PersonelNo);
             UIUtilities.BindControl(teTCID, Personel, x => x.TCID);
             UIUtilities.BindControl(teFirstName, Personel, x => x.Ad);
@@ -67,16 +77,16 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindControl(teHomeTown, Personel, x => x.Ilce);
             UIUtilities.BindControl(lueHomeCity, Personel, x => x.Il);
             //UIUtilities.BindControl(lueBloodType, Personel, x => x.KanGrubu);
-            
+
             UIUtilities.BindControl(cmbBloodType, Personel, x => x.KanGrubu, propertyName: "SelectedItem");
             UIUtilities.BindControl(cmbHastaneBolumu, Personel, x => x.HastaneBolumu, propertyName: "SelectedItem");
             UIUtilities.BindControl(cmbPersonelUnvani, Personel, x => x.PersonelUnvani, propertyName: "SelectedItem");
-            
+
             UIUtilities.BindControl(deEntryDate, Personel, x => x.IseGirisTarihi);
             UIUtilities.BindControl(deExitDate, Personel, x => x.AyrilisTarihi);
             UIUtilities.BindControl(teInsuranceNo, Personel, x => x.SigortaNo);
             UIUtilities.BindControl(teTaxNo, Personel, x => x.VergiNo);
-            
+
             UIUtilities.BindControl(rgIDType, Personel, x => x.KimlikTuru);
             UIUtilities.BindControl(teIDNo, Personel, x => x.KimlikNo);
             UIUtilities.BindControl(teFatherName, Personel, x => x.BabaAdi);
@@ -91,11 +101,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindControl(teSiraNo, Personel, x => x.DogumSiraNo);
 
             UIUtilities.BindControl(meExplanation, Personel, x => x.Aciklama);
-            
+
         }
 
         private void LoadLookUps()
-        {            
+        {
             UIUtilities.BindLookUpEdit(this.lueHomeCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Code");
             UIUtilities.BindLookUpEdit(this.lueBirthCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Code");
             UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
@@ -103,7 +113,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindComboBox(cmbBloodType, LookUpServices.BloodTypes, displayMember: "Value", valueMember: "ID");
             UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, displayMember: "Value", valueMember: "ID");
             UIUtilities.BindComboBox(cmbPersonelUnvani, LookUpServices.PersonelUnvanis, displayMember: "Value", valueMember: "ID");
-            //UIUtilities.BindComboBox(this.comboBox1, LookUpServices.BloodTypes, displayMember: "Value", valueMember: "ID");
+        }
+
+        public void SetNewTCID(string TCID)
+        {
+            this.teTCID.Text = TCID;
         }
 
         private void sbSavePersonel_Click(object sender, EventArgs e)
@@ -123,12 +137,13 @@ namespace Naz.Hastane.Win.MDIChildForms
                 XtraMessageBox.Show("Lütfen Personelin Soyadını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             try
             {
                 Personel.IsRetired = ceEmekli.EditValue.ToString();
                 Personel.HasUnion = ceSendikali.EditValue.ToString();
-                PersonelServices.SavePersonel(Session, Personel);
+                LookUpServices.SaveOrUpdate(Session, Personel);
+                ReLoadPersonel();
                 XtraMessageBox.Show("Personel Kayıt Edilmiştir", "Personel Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
@@ -137,11 +152,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void OpenNewForm()
-        {
-            //(this.MdiParent as frmMain).OpenPersonel(Personel.PersonelNo);
-            this.Close();
-        }      
+        #endregion
 
         private void sbClose_Click(object sender, EventArgs e)
         {
@@ -150,7 +161,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void CloseForm()
         {
-            this.Close();
+            Close();
         }                  
 
         private void PersonelForm_KeyDown(object sender, KeyEventArgs e)
@@ -161,10 +172,38 @@ namespace Naz.Hastane.Win.MDIChildForms
                 SavePersonel();
         }
 
-        public void SetNewTCID(string TCID)
+        #region HastaneBolumu
+        private void sbAddHastaneBolumu_Click(object sender, EventArgs e)
         {
-            this.teTCID.Text = TCID;
         }
+
+        private void sbChangeHastaneBolumu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbDeleteHastaneBolumu_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region PersonelEgitim
+        private void sbAddPersonelEgitim_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbChangePersonelEgitim_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbDeletePersonelEgitim_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
 
     }
 }

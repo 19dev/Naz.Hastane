@@ -598,6 +598,7 @@
             this.sbRefresh.StyleController = this.layoutControl1;
             this.sbRefresh.TabIndex = 147;
             this.sbRefresh.Text = "Güncelle";
+            this.sbRefresh.Click += new System.EventHandler(this.sbRefresh_Click);
             // 
             // sbAddTreatmentCard
             // 

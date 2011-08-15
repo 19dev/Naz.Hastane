@@ -48,20 +48,27 @@ namespace Naz.Hastane.Win.MDIChildForms
         private PatientVisitDetail currentPVD;
         private string _OldProvisionCode;
 
+        private Patient _Patient;
+
+        public Patient Patient
+        {
+            get { return _Patient; }
+            set
+            {
+                if (_Patient != value)
+                {
+                    _Patient = value;
+
+                    InitPatientBindings();
+                    RefreshPatientBalance();
+                }
+            }
+        }
+
         private SGKPatientForm()
         {
             InitializeComponent();
-
             LoadLookUps();
-
-            medulaSorgu.lueProvisionType.EditValue = ProvisionType.DefaultValue;
-            //medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue; // Hasta'dan alıyor
-            //medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue; // Hasta'dan alıyor
-            medulaSorgu.lueBranchCode.EditValue = BranchCode.DefaultValue;
-            medulaSorgu.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
-            medulaSorgu.lueRelationType.EditValue = RelationType.DefaultValue;
-            medulaSorgu.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
-            medulaSorgu.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
         }
 
         public SGKPatientForm(string aPatientNo) : this()
@@ -84,23 +91,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 tbcHastaBilgileri.SelectedTabPage = lcgHastaBilgileri;
         }
 
-        private Patient _Patient;
-
-        public Patient Patient
-        {
-            get { return _Patient; }
-            set
-            {
-                if (_Patient != value)
-                {
-                    _Patient = value;
-                    
-                    InitPatientBindings();
-                    RefreshPatientBalance();
-                }
-            }
-        }
-
         private void ReLoadPatient()
         {
             string patientNo = Patient.PatientNo;
@@ -119,7 +109,6 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void InitPatientBindings()
         {
-            //teInsuranceCompany.DataBindings.Add("EditValue", Patient, x => x."InsuranceCompany.Name");
             if (Patient.InsuranceCompany != null)
                 teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
 
@@ -992,7 +981,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 medulaSorgu.lueBranchCode.EditValue = currentPatientVisit.Doctor.Service.BranchCode;
         }
 
-        private void lciRefresh_Click(object sender, EventArgs e)
+        private void sbRefresh_Click(object sender, EventArgs e)
         {
             ReLoadPatient();
         }

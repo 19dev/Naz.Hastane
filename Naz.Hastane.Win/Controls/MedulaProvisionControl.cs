@@ -36,30 +36,24 @@ namespace Naz.Hastane.Win.Controls
         private void MedulaProvisionControl_Load(object sender, EventArgs e)
         {
             if (!DesignMode) LoadLookUps();
-            this.teFollowUpNo.Text = "";
-            this.tePatientApplicationNo.Text = "";
-            this.teRelatedFollowUpNo.Text = "";
+            teFollowUpNo.Text = "";
+            tePatientApplicationNo.Text = "";
+            teRelatedFollowUpNo.Text = "";
         }
 
         private void LoadLookUps()
         {
-            UIUtilities.BindLookUpEdit(this.lueBranchCode, LookUpServices.BranchCodes);
-            UIUtilities.BindLookUpEdit(this.lueFollowUpType, LookUpServices.FollowUpTypes);
-            UIUtilities.BindLookUpEdit(this.lueInsuranceType, LookUpServices.InsuranceTypes);
-            UIUtilities.BindLookUpEdit(this.lueProvisionType, LookUpServices.ProvisionTypes);
-            UIUtilities.BindLookUpEdit(this.lueRelationType, LookUpServices.RelationTypes);
-            UIUtilities.BindLookUpEdit(this.lueTransferorInstitution, LookUpServices.TransferorInstitutions);
-            UIUtilities.BindLookUpEdit(this.lueTreatmentStyle, LookUpServices.TreatmentStyles);
-            UIUtilities.BindLookUpEdit(this.lueTreatmentType, LookUpServices.TreatmentTypes);
+            UIUtilities.BindLookUpEdit(lueBranchCode, LookUpServices.BranchCodes, initialValue: BranchCode.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueFollowUpType, LookUpServices.FollowUpTypes, initialValue: FollowUpType.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueInsuranceType, LookUpServices.InsuranceTypes, initialValue: InsuranceType.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueProvisionType, LookUpServices.ProvisionTypes, initialValue: ProvisionType.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueRelationType, LookUpServices.RelationTypes, initialValue: RelationType.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueTransferorInstitution, LookUpServices.TransferorInstitutions, initialValue: TransferorInstitution.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueTreatmentStyle, LookUpServices.TreatmentStyles, initialValue: TreatmentStyle.DefaultValue);
+            UIUtilities.BindLookUpEdit(lueTreatmentType, LookUpServices.TreatmentTypes, initialValue: TreatmentType.DefaultValue);
 
-            this.lueBranchCode.ItemIndex = -1;
-            this.lueFollowUpType.EditValue = FollowUpType.DefaultValue;
-            this.lueInsuranceType.EditValue = InsuranceType.DefaultValue;
-            this.lueProvisionType.EditValue = ProvisionType.DefaultValue;
-            this.lueRelationType.EditValue = RelationType.DefaultValue;
-            this.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue;
-            this.lueTreatmentStyle.EditValue = TreatmentStyle.DefaultValue;
-            this.lueTreatmentType.EditValue = TreatmentType.DefaultValue;
+            //medulaSorgu.lueInsuranceType.EditValue = InsuranceType.DefaultValue; // Hasta'dan alıyor
+            //medulaSorgu.lueTransferorInstitution.EditValue = TransferorInstitution.DefaultValue; // Hasta'dan alıyor
         }
 
         public void CallMedula(string TCID, DateTime date)
@@ -86,14 +80,14 @@ namespace Naz.Hastane.Win.Controls
             pgd.provizyonTipi = lueProvisionType.EditValue.ToString();
             pgd.saglikTesisKodu = 10343154;
             pgd.sigortaliTuru = lueInsuranceType.EditValue.ToString();
-            pgd.takipNo = this.teRelatedFollowUpNo.Text;
+            pgd.takipNo = teRelatedFollowUpNo.Text;
             pgd.takipTipi = lueFollowUpType.EditValue.ToString();
             pgd.tedaviTipi = lueTreatmentType.EditValue.ToString();
             pgd.tedaviTuru = lueTreatmentStyle.EditValue.ToString();
             pgd.yakinlikKodu = lueRelationType.EditValue.ToString();
             pgd.yatisBitisTarihi = "";
 
-            this.lblStatus.Text = "Medula Sorgusu Yapılıyor...";
+            lblStatus.Text = "Medula Sorgusu Yapılıyor...";
             IsOK = false;
 
             hki.hastaKabulAsync(pgd);
@@ -102,7 +96,7 @@ namespace Naz.Hastane.Win.Controls
 
         private void EnableControls(bool enable)
         {
-            foreach (Control c in this.layoutControl1.Controls)
+            foreach (Control c in layoutControl1.Controls)
                 c.Enabled = enable;
         }
 
@@ -114,7 +108,7 @@ namespace Naz.Hastane.Win.Controls
             mprs[0] = mpr;
             try
             {
-                this.lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
+                lblStatus.Text = e.Result.sonucKodu + ": " + e.Result.sonucMesaji;
                 mpr.SonucKodu = e.Result.sonucKodu;
                 mpr.SonucMesaji = e.Result.sonucMesaji;
 
@@ -126,22 +120,22 @@ namespace Naz.Hastane.Win.Controls
                     mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
                     mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
                     mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
-                    this.lueInsuranceType.EditValue = e.Result.hastaBilgileri.sigortaliTuru;
+                    lueInsuranceType.EditValue = e.Result.hastaBilgileri.sigortaliTuru;
 
                     mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
                     mpr.TakipNo = e.Result.takipNo;
 
-                    mpr.BranchCode = this.lueBranchCode.EditValue.ToString();
-                    mpr.RelatedFollowUpNo = this.teRelatedFollowUpNo.Text;
-                    mpr.FollowUpType = this.lueFollowUpType.EditValue.ToString();
-                    mpr.ProvisionType = this.lueProvisionType.EditValue.ToString();
-                    mpr.TreatmentType = this.lueTreatmentType.EditValue.ToString();
-                    mpr.TreatmentStyle = this.lueTreatmentStyle.EditValue.ToString();
+                    mpr.BranchCode = lueBranchCode.EditValue.ToString();
+                    mpr.RelatedFollowUpNo = teRelatedFollowUpNo.Text;
+                    mpr.FollowUpType = lueFollowUpType.EditValue.ToString();
+                    mpr.ProvisionType = lueProvisionType.EditValue.ToString();
+                    mpr.TreatmentType = lueTreatmentType.EditValue.ToString();
+                    mpr.TreatmentStyle = lueTreatmentStyle.EditValue.ToString();
 
                     mpr.TransferorInstitution = lueTransferorInstitution.EditValue.ToString();
 
-                    this.teFollowUpNo.Text = e.Result.takipNo;
-                    this.tePatientApplicationNo.Text = e.Result.hastaBasvuruNo;
+                    teFollowUpNo.Text = e.Result.takipNo;
+                    tePatientApplicationNo.Text = e.Result.hastaBasvuruNo;
                 }
                 IsOK = true;
             }
@@ -169,7 +163,7 @@ namespace Naz.Hastane.Win.Controls
         public MedulaProvisionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
             base(exception, cancelled, userState)
         {
-            this.results = results;
+            results = results;
         }
 
         public MedulaProvisionResult Result
@@ -177,7 +171,7 @@ namespace Naz.Hastane.Win.Controls
             get
             {
                 base.RaiseExceptionIfNecessary();
-                return ((MedulaProvisionResult)(this.results[0]));
+                return ((MedulaProvisionResult)(results[0]));
             }
         }
     }

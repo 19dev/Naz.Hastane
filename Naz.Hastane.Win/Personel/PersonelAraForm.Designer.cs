@@ -36,8 +36,8 @@
             this.teLastName = new DevExpress.XtraEditors.TextEdit();
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.gridPersonelArama = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcPersonel = new DevExpress.XtraGrid.GridControl();
+            this.gvPersonel = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKNR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,8 +66,8 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).BeginInit();
@@ -97,7 +97,7 @@
             this.layoutControl1.Controls.Add(this.teLastName);
             this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Controls.Add(this.sbSearch);
-            this.layoutControl1.Controls.Add(this.gridPersonelArama);
+            this.layoutControl1.Controls.Add(this.gcPersonel);
             this.layoutControl1.Controls.Add(this.tePersonelNo);
             this.layoutControl1.Controls.Add(this.teTCId);
             this.layoutControl1.Controls.Add(this.sbSelect);
@@ -180,29 +180,29 @@
             this.sbSearch.Text = "Ara";
             this.sbSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // gridPersonelArama
+            // gcPersonel
             // 
-            this.gridPersonelArama.Location = new System.Drawing.Point(12, 130);
-            this.gridPersonelArama.MainView = this.gridView1;
-            this.gridPersonelArama.Name = "gridPersonelArama";
-            this.gridPersonelArama.Size = new System.Drawing.Size(930, 479);
-            this.gridPersonelArama.TabIndex = 11;
-            this.gridPersonelArama.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridPersonelArama.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridPersonelArama_MouseDoubleClick);
+            this.gcPersonel.Location = new System.Drawing.Point(12, 130);
+            this.gcPersonel.MainView = this.gvPersonel;
+            this.gcPersonel.Name = "gcPersonel";
+            this.gcPersonel.Size = new System.Drawing.Size(930, 479);
+            this.gcPersonel.TabIndex = 11;
+            this.gcPersonel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPersonel});
+            this.gcPersonel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridPersonelArama_MouseDoubleClick);
             // 
-            // gridView1
+            // gvPersonel
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvPersonel.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.colKNR,
             this.colSoyadi,
             this.colAdi,
             this.colTCKimlikNo});
-            this.gridView1.GridControl = this.gridPersonelArama;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gvPersonel.GridControl = this.gcPersonel;
+            this.gvPersonel.Name = "gvPersonel";
+            this.gvPersonel.OptionsBehavior.Editable = false;
+            this.gvPersonel.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
@@ -290,7 +290,7 @@
             // 
             // lciBulunanHastalar
             // 
-            this.lciBulunanHastalar.Control = this.gridPersonelArama;
+            this.lciBulunanHastalar.Control = this.gcPersonel;
             this.lciBulunanHastalar.CustomizationFormText = "Bulunan Personels";
             this.lciBulunanHastalar.Location = new System.Drawing.Point(0, 102);
             this.lciBulunanHastalar.Name = "lciBulunanHastalar";
@@ -473,12 +473,13 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "PersonelAraForm";
             this.Text = "Personel Arama Ekranı";
+            this.Shown += new System.EventHandler(this.PersonelAraForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPersonelArama)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).EndInit();
@@ -504,8 +505,8 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridPersonelArama;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcPersonel;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPersonel;
         private DevExpress.XtraEditors.SimpleButton sbSearch;
         private DevExpress.XtraEditors.TextEdit tePersonelNo;
         private DevExpress.XtraEditors.TextEdit teTCId;

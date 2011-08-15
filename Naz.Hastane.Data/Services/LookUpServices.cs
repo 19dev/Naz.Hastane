@@ -68,6 +68,23 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static void SaveOrUpdate<T>(ISession session, T t)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    session.SaveOrUpdate(t);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
         #region LookUpLists
 
         public static IList<T> LookUpTable<T>(ref IList<T> theObject) where T : class

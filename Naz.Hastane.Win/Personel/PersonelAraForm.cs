@@ -35,14 +35,14 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void OpenDetail()
         {
-            if (gridView1.GetFocusedRow() != null)
+            if (gvPersonel.GetFocusedRow() != null)
             {
                 Cursor.Current = Cursors.WaitCursor;
 
                 try
                 {
                     string PersonelID;
-                    PersonelID = gridView1.GetFocusedRowCellDisplayText("ID");
+                    PersonelID = gvPersonel.GetFocusedRowCellDisplayText("ID");
                     (this.MdiParent as frmMain).OpenPersonel(Convert.ToInt32(PersonelID));
                 }
                 finally
@@ -77,7 +77,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     IList<Personel> Personels = PersonelServices.GetByWhere(criteriaString);
                     //this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                    this.gridPersonelArama.DataSource = Personels;
+                    this.gcPersonel.DataSource = Personels;
                     if (Personels.Count == 1)
                     {
                         (this.MdiParent as frmMain).OpenPersonel(Personels[0].ID);
@@ -172,11 +172,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.AcceptButton = this.sbSearch;
         }
 
-        //private void gridHastaArama_MouseDoubleClick(object sender, MouseEventArgs e)
-        //{
-        //    OpenDetail();
-        //}
-
         private void sbNew_Click(object sender, EventArgs e)
         {
             (this.MdiParent as frmMain).OpenNewPersonel();
@@ -192,9 +187,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             OpenDetail();
         }
 
-        //private void SGKFindPatientForm_Shown(object sender, EventArgs e)
-        //{
-        //    this.teTCId.Focus();
-        //}
+        private void PersonelAraForm_Shown(object sender, EventArgs e)
+        {
+            teTCId.Focus();
+        }
+
     }
 }

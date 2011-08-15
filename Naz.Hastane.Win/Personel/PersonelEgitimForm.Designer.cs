@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbSaveAndNew = new DevExpress.XtraEditors.SimpleButton();
             this.deBitisTarihi = new DevExpress.XtraEditors.DateEdit();
             this.deBaslangicTarihi = new DevExpress.XtraEditors.DateEdit();
             this.cmbOkulTipi = new System.Windows.Forms.ComboBox();
@@ -38,7 +39,6 @@
             this.meAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAciklama = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSaveAndClose = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -47,7 +47,7 @@
             this.lciBaslangicTarihi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciBitisTarihi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciOkulunAdi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sbSaveAndNew = new DevExpress.XtraEditors.SimpleButton();
+            this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSaveAndNew = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -59,7 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -68,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBitisTarihi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciOkulunAdi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +88,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(395, 233);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // sbSaveAndNew
+            // 
+            this.sbSaveAndNew.Location = new System.Drawing.Point(241, 53);
+            this.sbSaveAndNew.Name = "sbSaveAndNew";
+            this.sbSaveAndNew.Size = new System.Drawing.Size(142, 22);
+            this.sbSaveAndNew.StyleController = this.layoutControl1;
+            this.sbSaveAndNew.TabIndex = 13;
+            this.sbSaveAndNew.Text = "Sakla ve Yeni Kayıt";
+            this.sbSaveAndNew.Click += new System.EventHandler(this.sbSaveAndNew_Click);
             // 
             // deBitisTarihi
             // 
@@ -131,6 +141,7 @@
             this.sbSaveAndClose.StyleController = this.layoutControl1;
             this.sbSaveAndClose.TabIndex = 9;
             this.sbSaveAndClose.Text = "Sakla ve Kapat";
+            this.sbSaveAndClose.Click += new System.EventHandler(this.sbSaveAndClose_Click);
             // 
             // teOkulAdi
             // 
@@ -190,18 +201,6 @@
             this.lciAciklama.Size = new System.Drawing.Size(229, 116);
             this.lciAciklama.Text = "Açıklama";
             this.lciAciklama.TextSize = new System.Drawing.Size(73, 13);
-            // 
-            // lciCancel
-            // 
-            this.lciCancel.Control = this.sbCancel;
-            this.lciCancel.CustomizationFormText = "layoutControlItem3";
-            this.lciCancel.Location = new System.Drawing.Point(229, 187);
-            this.lciCancel.Name = "lciCancel";
-            this.lciCancel.Size = new System.Drawing.Size(146, 26);
-            this.lciCancel.Text = "lciCancel";
-            this.lciCancel.TextSize = new System.Drawing.Size(0, 0);
-            this.lciCancel.TextToControlDistance = 0;
-            this.lciCancel.TextVisible = false;
             // 
             // lciSaveAndClose
             // 
@@ -285,14 +284,17 @@
             this.lciOkulunAdi.Text = "Okulun Adı";
             this.lciOkulunAdi.TextSize = new System.Drawing.Size(73, 13);
             // 
-            // sbSaveAndNew
+            // lciCancel
             // 
-            this.sbSaveAndNew.Location = new System.Drawing.Point(241, 53);
-            this.sbSaveAndNew.Name = "sbSaveAndNew";
-            this.sbSaveAndNew.Size = new System.Drawing.Size(142, 22);
-            this.sbSaveAndNew.StyleController = this.layoutControl1;
-            this.sbSaveAndNew.TabIndex = 13;
-            this.sbSaveAndNew.Text = "Sakla ve Yeni Kayıt";
+            this.lciCancel.Control = this.sbCancel;
+            this.lciCancel.CustomizationFormText = "layoutControlItem3";
+            this.lciCancel.Location = new System.Drawing.Point(229, 187);
+            this.lciCancel.Name = "lciCancel";
+            this.lciCancel.Size = new System.Drawing.Size(146, 26);
+            this.lciCancel.Text = "lciCancel";
+            this.lciCancel.TextSize = new System.Drawing.Size(0, 0);
+            this.lciCancel.TextToControlDistance = 0;
+            this.lciCancel.TextVisible = false;
             // 
             // lciSaveAndNew
             // 
@@ -324,7 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -333,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBitisTarihi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciOkulunAdi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).EndInit();
             this.ResumeLayout(false);
 

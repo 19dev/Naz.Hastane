@@ -66,15 +66,6 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void SavePersonel(ISession session, Personel Personel)
-        {
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                session.SaveOrUpdate(Personel);
-                transaction.Commit();
-            }
-        }
-
         public static double GetNewPersonelNo()
         {
             using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -118,8 +109,8 @@ namespace Naz.Hastane.Data.Services
             PersonelEgitim personelEgitim = DataBindingFactory.Create<PersonelEgitim>();
 
             return personelEgitim;
-        }         
-                       
+        }
+
     }
 
 }

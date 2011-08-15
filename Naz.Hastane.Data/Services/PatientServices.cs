@@ -63,22 +63,30 @@ namespace Naz.Hastane.Data.Services
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                patient.USER_ID_UPDATE = user.USER_ID;
-                patient.DATE_UPDATE = DateTime.Now;
+                try
+                {
+                    if (patient.PatientNo == null || patient.PatientNo == "")
+                    {
+                        patient.PatientNo = GetNewPatientNo();
+                        patient.USER_ID = user.USER_ID;
+                        patient.DATE_CREATE = DateTime.Now;
+                        session.Save(patient);
+                    }
+                    else
+                    {
+                        patient.USER_ID_UPDATE = user.USER_ID;
+                        patient.DATE_UPDATE = DateTime.Now;
 
-                if (patient.PatientNo == null || patient.PatientNo == "")
-                {
-                    patient.PatientNo = GetNewPatientNo();
-                    patient.USER_ID = user.USER_ID;
-                    patient.DATE_CREATE = DateTime.Now;
-                    session.Save(patient);
+                        session.Update(patient);
+                    }
+                    //session.Flush();
+                    transaction.Commit();
                 }
-                else
+                catch (Exception ex)
                 {
-                    session.Update(patient);
+                    transaction.Rollback();
+                    throw ex;                    
                 }
-                //session.Flush();
-                transaction.Commit();
             }
         }
 
