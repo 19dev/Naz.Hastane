@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelYabanciDilForm : PersonelDetailForm<PersonelYabanciDil>
+    public partial class PersonelYabanciDilEditForm : PersonelDetailEditForm<PersonelYabanciDil>
     {
-        public PersonelYabanciDilForm()
+        public PersonelYabanciDilEditForm()
         {
             InitializeComponent();
             LoadLookUps();
@@ -51,4 +51,5 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
     }
+    public class PersonelDetailYabanciDilForm : PersonelDetailEditForm<PersonelYabanciDil> { }
 }

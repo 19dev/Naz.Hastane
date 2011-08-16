@@ -815,6 +815,7 @@ namespace Naz.Hastane.Win {
             iDailyTellerReport.ItemClick += (o, args) => ShowNewDocument<DailyTellerReportForm>();
             iHarcamaRaporu.ItemClick += (o, args) => ShowNewDocument<EczaneReportForm>();
             iUserPatientVisits.ItemClick += (o, args) => OpenLastVisitedPatientsForm();
+            iHizmetIciEgitimler.ItemClick += (o, args) => ShowNewDocument<HizmetIciEgitimForm>();
 
             iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
         }

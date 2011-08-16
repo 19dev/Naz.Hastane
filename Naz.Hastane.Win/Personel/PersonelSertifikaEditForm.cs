@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelRaporForm : PersonelDetailForm<PersonelRapor>
+    public partial class PersonelSertifikaEditForm : PersonelDetailEditForm<PersonelSertifika>
     {
-        public PersonelRaporForm()
+        public PersonelSertifikaEditForm()
         {
             InitializeComponent();
             LoadLookUps();
@@ -28,21 +28,23 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi >= TheObject.BitisTarihi)
             {
-                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Raporu Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Raporu Kayıt Edilmiştir", "Personel Raporu Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilmiştir", "Personel Sertifikası Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Raporu Kayıt Edilemedi:" + error.Message, "Personel Raporu Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilemedi:" + error.Message, "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
         }
+
     }
+    public class PersonelDetailSertifikaForm : PersonelDetailEditForm<PersonelSertifika> { }
 }

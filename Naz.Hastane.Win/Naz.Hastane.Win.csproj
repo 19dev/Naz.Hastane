@@ -292,11 +292,17 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelDetailForm.cs">
+    <Compile Include="MDIChildForms\DetailEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelDetailForm.Designer.cs">
-      <DependentUpon>PersonelDetailForm.cs</DependentUpon>
+    <Compile Include="MDIChildForms\DetailEditForm.Designer.cs">
+      <DependentUpon>DetailEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelDetailEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDetailEditForm.Designer.cs">
+      <DependentUpon>PersonelDetailEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Personel\HizmetIciEgitimForm.cs">
       <SubType>Form</SubType>
@@ -304,35 +310,47 @@
     <Compile Include="Personel\HizmetIciEgitimForm.Designer.cs">
       <DependentUpon>HizmetIciEgitimForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelSertifikaForm.cs">
+    <Compile Include="Personel\HizmetIciEgitimEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelSertifikaForm.Designer.cs">
-      <DependentUpon>PersonelSertifikaForm.cs</DependentUpon>
+    <Compile Include="Personel\HizmetIciEgitimEditForm.designer.cs">
+      <DependentUpon>HizmetIciEgitimEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelYabanciDilForm.cs">
+    <Compile Include="Personel\HizmetIciEgitimPersonelEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelYabanciDilForm.Designer.cs">
-      <DependentUpon>PersonelYabanciDilForm.cs</DependentUpon>
+    <Compile Include="Personel\HizmetIciEgitimPersonelEditForm.designer.cs">
+      <DependentUpon>HizmetIciEgitimPersonelEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelHastaneBolumuForm.cs">
+    <Compile Include="Personel\PersonelSertifikaEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelHastaneBolumuForm.Designer.cs">
-      <DependentUpon>PersonelHastaneBolumuForm.cs</DependentUpon>
+    <Compile Include="Personel\PersonelSertifikaEditForm.Designer.cs">
+      <DependentUpon>PersonelSertifikaEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelIzinForm.cs">
+    <Compile Include="Personel\PersonelYabanciDilEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelIzinForm.Designer.cs">
-      <DependentUpon>PersonelIzinForm.cs</DependentUpon>
+    <Compile Include="Personel\PersonelYabanciDilEditForm.Designer.cs">
+      <DependentUpon>PersonelYabanciDilEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelRaporForm.cs">
+    <Compile Include="Personel\PersonelHastaneBolumuEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelRaporForm.Designer.cs">
-      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    <Compile Include="Personel\PersonelHastaneBolumuEditForm.Designer.cs">
+      <DependentUpon>PersonelHastaneBolumuEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelIzinEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelIzinEditForm.Designer.cs">
+      <DependentUpon>PersonelIzinEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelRaporEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelRaporEditForm.Designer.cs">
+      <DependentUpon>PersonelRaporEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Pharmacy\EczaneReportForm.cs">
       <SubType>Form</SubType>
@@ -370,11 +388,11 @@
     <Compile Include="Medula\MedulaMedicationReportForm.Designer.cs">
       <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelEgitimForm.cs">
+    <Compile Include="Personel\PersonelEgitimEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelEgitimForm.Designer.cs">
-      <DependentUpon>PersonelEgitimForm.cs</DependentUpon>
+    <Compile Include="Personel\PersonelEgitimEditForm.Designer.cs">
+      <DependentUpon>PersonelEgitimEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIChildForms\PrintPreviewForm.cs">
       <SubType>Form</SubType>
@@ -522,26 +540,35 @@
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelDetailForm.resx">
-      <DependentUpon>PersonelDetailForm.cs</DependentUpon>
+    <EmbeddedResource Include="MDIChildForms\DetailEditForm.resx">
+      <DependentUpon>DetailEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDetailEditForm.resx">
+      <DependentUpon>PersonelDetailEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\HizmetIciEgitimForm.resx">
       <DependentUpon>HizmetIciEgitimForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelSertifikaForm.resx">
-      <DependentUpon>PersonelSertifikaForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\HizmetIciEgitimEditForm.resx">
+      <DependentUpon>HizmetIciEgitimEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelYabanciDilForm.resx">
-      <DependentUpon>PersonelYabanciDilForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\HizmetIciEgitimPersonelEditForm.resx">
+      <DependentUpon>HizmetIciEgitimPersonelEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelHastaneBolumuForm.resx">
-      <DependentUpon>PersonelHastaneBolumuForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\PersonelSertifikaEditForm.resx">
+      <DependentUpon>PersonelSertifikaEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelIzinForm.resx">
-      <DependentUpon>PersonelIzinForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\PersonelYabanciDilEditForm.resx">
+      <DependentUpon>PersonelYabanciDilEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelRaporForm.resx">
-      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\PersonelHastaneBolumuEditForm.resx">
+      <DependentUpon>PersonelHastaneBolumuEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelIzinEditForm.resx">
+      <DependentUpon>PersonelIzinEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelRaporEditForm.resx">
+      <DependentUpon>PersonelRaporEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pharmacy\EczaneReportForm.resx">
       <DependentUpon>EczaneReportForm.cs</DependentUpon>
@@ -561,8 +588,8 @@
     <EmbeddedResource Include="Medula\MedulaMedicationReportForm.resx">
       <DependentUpon>MedulaMedicationReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelEgitimForm.resx">
-      <DependentUpon>PersonelEgitimForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\PersonelEgitimEditForm.resx">
+      <DependentUpon>PersonelEgitimEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\PrinterSettingsForm.resx">
       <DependentUpon>PrinterSettingsForm.cs</DependentUpon>

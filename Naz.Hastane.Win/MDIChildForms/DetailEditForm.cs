@@ -1,15 +1,19 @@
-﻿using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Services;
-using DevExpress.XtraEditors;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelDetailForm<T> : MDIChildForm where T : PersonelDetail, new()
+    public partial class DetailEditForm<T> : MDIChildForm where T : IDBase, new()
     {
         public bool IsOK { get; set; }
-        protected Personel _Personel;
 
         private T _T = default(T);
 
@@ -26,18 +30,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        public PersonelDetailForm()
+        public DetailEditForm()
         {
             InitializeComponent();
         }
 
-        public virtual void PersonelDetailFormParams(Personel personel, int detailID)
+        public virtual void DetailFormParams(int detailID)
         {
             IsOK = false;
-            if (personel == null)
-                Close();
-
-            _Personel = personel;
 
             T t = LookUpServices.GetByID<T>(Session, detailID);
             if (t == null)
@@ -52,10 +52,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected virtual bool Save(){return false;}
 
-        private T CreateNewObject()
+        protected virtual T CreateNewObject()
         {
             T t = DataBindingFactory.Create<T>();
-            t.Personel = _Personel;
             return t;
         }
 
@@ -83,11 +82,4 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
     }
-
-    public class PersonelDetailEgitimForm: PersonelDetailForm<PersonelEgitim>{}
-    public class PersonelDetailHastaneBolumuForm : PersonelDetailForm<PersonelHastaneBolumu> { }
-    public class PersonelDetailIzinForm : PersonelDetailForm<PersonelIzin> { }
-    public class PersonelDetailRaporForm : PersonelDetailForm<PersonelRapor> { }
-    public class PersonelDetailSertifikaForm : PersonelDetailForm<PersonelSertifika> { }
-    public class PersonelDetailYabanciDilForm : PersonelDetailForm<PersonelYabanciDil> { }
 }

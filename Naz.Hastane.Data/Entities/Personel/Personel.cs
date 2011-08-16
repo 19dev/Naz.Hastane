@@ -9,6 +9,10 @@ namespace Naz.Hastane.Data.Entities
         public virtual string PersonelNo { get; set; }
         public virtual string Ad { get; set; }
         public virtual string Soyad { get; set; }
+        public virtual string FullName
+        {
+            get { return Ad + " " + Soyad; }
+        }
         public virtual string AdiSoyadi { get; set; }
         public virtual string TCID { get; set; }
         public virtual string BabaAdi { get; set; }

@@ -1,6 +1,7 @@
-﻿namespace Naz.Hastane.Win.MDIChildForms
+﻿using Naz.Hastane.Data.Entities;
+namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class PersonelYabanciDilForm
+    partial class PersonelHastaneBolumuEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +31,8 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbSaveAndNew = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbYabanciDil = new System.Windows.Forms.ComboBox();
+            this.deBaslangicTarihi = new DevExpress.XtraEditors.DateEdit();
+            this.cmbHastaneBolumu = new System.Windows.Forms.ComboBox();
             this.sbSaveAndClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbCancel = new DevExpress.XtraEditors.SimpleButton();
             this.meAciklama = new DevExpress.XtraEditors.MemoEdit();
@@ -40,17 +42,14 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciYabanciDil = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBaslangicTarihi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSaveAndNew = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbOkumaDerecesi = new System.Windows.Forms.ComboBox();
-            this.lciOkumaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbYazmaDerecesi = new System.Windows.Forms.ComboBox();
-            this.lciYazmaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbKonusmaDerecesi = new System.Windows.Forms.ComboBox();
-            this.lciKonusmaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).BeginInit();
@@ -58,21 +57,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciYabanciDil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHastaneBolumu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkumaDerecesi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciYazmaDerecesi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKonusmaDerecesi)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.cmbKonusmaDerecesi);
-            this.layoutControl1.Controls.Add(this.cmbYazmaDerecesi);
-            this.layoutControl1.Controls.Add(this.cmbOkumaDerecesi);
             this.layoutControl1.Controls.Add(this.sbSaveAndNew);
-            this.layoutControl1.Controls.Add(this.cmbYabanciDil);
+            this.layoutControl1.Controls.Add(this.deBaslangicTarihi);
+            this.layoutControl1.Controls.Add(this.cmbHastaneBolumu);
             this.layoutControl1.Controls.Add(this.sbSaveAndClose);
             this.layoutControl1.Controls.Add(this.sbCancel);
             this.layoutControl1.Controls.Add(this.meAciklama);
@@ -93,13 +88,26 @@
             this.sbSaveAndNew.TabIndex = 13;
             this.sbSaveAndNew.Text = "Sakla ve Yeni Kayıt";
             // 
-            // cmbYabanciDil
+            // deBaslangicTarihi
             // 
-            this.cmbYabanciDil.FormattingEnabled = true;
-            this.cmbYabanciDil.Location = new System.Drawing.Point(103, 12);
-            this.cmbYabanciDil.Name = "cmbYabanciDil";
-            this.cmbYabanciDil.Size = new System.Drawing.Size(134, 21);
-            this.cmbYabanciDil.TabIndex = 10;
+            this.deBaslangicTarihi.EditValue = null;
+            this.deBaslangicTarihi.Location = new System.Drawing.Point(93, 37);
+            this.deBaslangicTarihi.Name = "deBaslangicTarihi";
+            this.deBaslangicTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deBaslangicTarihi.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.deBaslangicTarihi.Size = new System.Drawing.Size(144, 20);
+            this.deBaslangicTarihi.StyleController = this.layoutControl1;
+            this.deBaslangicTarihi.TabIndex = 11;
+            // 
+            // cmbHastaneBolumu
+            // 
+            this.cmbHastaneBolumu.FormattingEnabled = true;
+            this.cmbHastaneBolumu.Location = new System.Drawing.Point(93, 12);
+            this.cmbHastaneBolumu.Name = "cmbHastaneBolumu";
+            this.cmbHastaneBolumu.Size = new System.Drawing.Size(144, 21);
+            this.cmbHastaneBolumu.TabIndex = 10;
             // 
             // sbSaveAndClose
             // 
@@ -121,9 +129,9 @@
             // 
             // meAciklama
             // 
-            this.meAciklama.Location = new System.Drawing.Point(103, 112);
+            this.meAciklama.Location = new System.Drawing.Point(93, 61);
             this.meAciklama.Name = "meAciklama";
-            this.meAciklama.Size = new System.Drawing.Size(134, 109);
+            this.meAciklama.Size = new System.Drawing.Size(144, 160);
             this.meAciklama.StyleController = this.layoutControl1;
             this.meAciklama.TabIndex = 4;
             // 
@@ -138,12 +146,10 @@
             this.emptySpaceItem1,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.lciYabanciDil,
+            this.lciHastaneBolumu,
+            this.lciBaslangicTarihi,
             this.lciCancel,
-            this.lciSaveAndNew,
-            this.lciOkumaDerecesi,
-            this.lciYazmaDerecesi,
-            this.lciKonusmaDerecesi});
+            this.lciSaveAndNew});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(395, 233);
@@ -154,11 +160,11 @@
             // 
             this.lciAciklama.Control = this.meAciklama;
             this.lciAciklama.CustomizationFormText = "Açıklama";
-            this.lciAciklama.Location = new System.Drawing.Point(0, 100);
+            this.lciAciklama.Location = new System.Drawing.Point(0, 49);
             this.lciAciklama.Name = "lciAciklama";
-            this.lciAciklama.Size = new System.Drawing.Size(229, 113);
+            this.lciAciklama.Size = new System.Drawing.Size(229, 164);
             this.lciAciklama.Text = "Açıklama";
-            this.lciAciklama.TextSize = new System.Drawing.Size(87, 13);
+            this.lciAciklama.TextSize = new System.Drawing.Size(77, 13);
             // 
             // lciSaveAndClose
             // 
@@ -202,15 +208,25 @@
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lciYabanciDil
+            // lciHastaneBolumu
             // 
-            this.lciYabanciDil.Control = this.cmbYabanciDil;
-            this.lciYabanciDil.CustomizationFormText = "Okul Tipi";
-            this.lciYabanciDil.Location = new System.Drawing.Point(0, 0);
-            this.lciYabanciDil.Name = "lciYabanciDil";
-            this.lciYabanciDil.Size = new System.Drawing.Size(229, 25);
-            this.lciYabanciDil.Text = "Okul Tipi";
-            this.lciYabanciDil.TextSize = new System.Drawing.Size(87, 13);
+            this.lciHastaneBolumu.Control = this.cmbHastaneBolumu;
+            this.lciHastaneBolumu.CustomizationFormText = "Hastane Bölümü";
+            this.lciHastaneBolumu.Location = new System.Drawing.Point(0, 0);
+            this.lciHastaneBolumu.Name = "lciHastaneBolumu";
+            this.lciHastaneBolumu.Size = new System.Drawing.Size(229, 25);
+            this.lciHastaneBolumu.Text = "Hastane Bölümü";
+            this.lciHastaneBolumu.TextSize = new System.Drawing.Size(77, 13);
+            // 
+            // lciBaslangicTarihi
+            // 
+            this.lciBaslangicTarihi.Control = this.deBaslangicTarihi;
+            this.lciBaslangicTarihi.CustomizationFormText = "Başlangıç Tarihi";
+            this.lciBaslangicTarihi.Location = new System.Drawing.Point(0, 25);
+            this.lciBaslangicTarihi.Name = "lciBaslangicTarihi";
+            this.lciBaslangicTarihi.Size = new System.Drawing.Size(229, 24);
+            this.lciBaslangicTarihi.Text = "Başlangıç Tarihi";
+            this.lciBaslangicTarihi.TextSize = new System.Drawing.Size(77, 13);
             // 
             // lciCancel
             // 
@@ -236,69 +252,18 @@
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // cmbOkumaDerecesi
-            // 
-            this.cmbOkumaDerecesi.FormattingEnabled = true;
-            this.cmbOkumaDerecesi.Location = new System.Drawing.Point(103, 37);
-            this.cmbOkumaDerecesi.Name = "cmbOkumaDerecesi";
-            this.cmbOkumaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbOkumaDerecesi.TabIndex = 14;
-            // 
-            // lciOkumaDerecesi
-            // 
-            this.lciOkumaDerecesi.Control = this.cmbOkumaDerecesi;
-            this.lciOkumaDerecesi.CustomizationFormText = "Okuma Derecesi";
-            this.lciOkumaDerecesi.Location = new System.Drawing.Point(0, 25);
-            this.lciOkumaDerecesi.Name = "lciOkumaDerecesi";
-            this.lciOkumaDerecesi.Size = new System.Drawing.Size(229, 25);
-            this.lciOkumaDerecesi.Text = "Okuma Derecesi";
-            this.lciOkumaDerecesi.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // cmbYazmaDerecesi
-            // 
-            this.cmbYazmaDerecesi.FormattingEnabled = true;
-            this.cmbYazmaDerecesi.Location = new System.Drawing.Point(103, 62);
-            this.cmbYazmaDerecesi.Name = "cmbYazmaDerecesi";
-            this.cmbYazmaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbYazmaDerecesi.TabIndex = 15;
-            // 
-            // lciYazmaDerecesi
-            // 
-            this.lciYazmaDerecesi.Control = this.cmbYazmaDerecesi;
-            this.lciYazmaDerecesi.CustomizationFormText = "Yazma Derecesi";
-            this.lciYazmaDerecesi.Location = new System.Drawing.Point(0, 50);
-            this.lciYazmaDerecesi.Name = "lciYazmaDerecesi";
-            this.lciYazmaDerecesi.Size = new System.Drawing.Size(229, 25);
-            this.lciYazmaDerecesi.Text = "Yazma Derecesi";
-            this.lciYazmaDerecesi.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // cmbKonusmaDerecesi
-            // 
-            this.cmbKonusmaDerecesi.FormattingEnabled = true;
-            this.cmbKonusmaDerecesi.Location = new System.Drawing.Point(103, 87);
-            this.cmbKonusmaDerecesi.Name = "cmbKonusmaDerecesi";
-            this.cmbKonusmaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbKonusmaDerecesi.TabIndex = 16;
-            // 
-            // lciKonusmaDerecesi
-            // 
-            this.lciKonusmaDerecesi.Control = this.cmbKonusmaDerecesi;
-            this.lciKonusmaDerecesi.CustomizationFormText = "Konuşma Derecesi";
-            this.lciKonusmaDerecesi.Location = new System.Drawing.Point(0, 75);
-            this.lciKonusmaDerecesi.Name = "lciKonusmaDerecesi";
-            this.lciKonusmaDerecesi.Size = new System.Drawing.Size(229, 25);
-            this.lciKonusmaDerecesi.Text = "Konuşma Derecesi";
-            this.lciKonusmaDerecesi.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // PersonelYabanciDilForm
+            // PersonelHastaneBolumuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelYabanciDilForm";
+            this.Name = "PersonelHastaneBolumuForm";
+            this.Text = "Personel Hsatane Bölümü Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).EndInit();
@@ -306,12 +271,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciYabanciDil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHastaneBolumu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkumaDerecesi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciYazmaDerecesi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciKonusmaDerecesi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,16 +291,12 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private System.Windows.Forms.ComboBox cmbYabanciDil;
-        private DevExpress.XtraLayout.LayoutControlItem lciYabanciDil;
+        private DevExpress.XtraEditors.DateEdit deBaslangicTarihi;
+        private System.Windows.Forms.ComboBox cmbHastaneBolumu;
+        private DevExpress.XtraLayout.LayoutControlItem lciHastaneBolumu;
+        private DevExpress.XtraLayout.LayoutControlItem lciBaslangicTarihi;
         private DevExpress.XtraEditors.MemoEdit meAciklama;
         private DevExpress.XtraEditors.SimpleButton sbSaveAndNew;
         private DevExpress.XtraLayout.LayoutControlItem lciSaveAndNew;
-        private System.Windows.Forms.ComboBox cmbKonusmaDerecesi;
-        private System.Windows.Forms.ComboBox cmbYazmaDerecesi;
-        private System.Windows.Forms.ComboBox cmbOkumaDerecesi;
-        private DevExpress.XtraLayout.LayoutControlItem lciOkumaDerecesi;
-        private DevExpress.XtraLayout.LayoutControlItem lciYazmaDerecesi;
-        private DevExpress.XtraLayout.LayoutControlItem lciKonusmaDerecesi;
     }
 }

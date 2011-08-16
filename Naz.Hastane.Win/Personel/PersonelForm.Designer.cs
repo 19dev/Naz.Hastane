@@ -141,11 +141,6 @@
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.lcgSertifikalar = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDepartment = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciGridHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciChangeHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
@@ -176,6 +171,11 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgSertifikalar = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgPersonelBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPersonelNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -280,11 +280,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgSertifikalar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridHastaneBolumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeHastaneBolumu)).BeginInit();
@@ -315,6 +310,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgSertifikalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPersonelBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonelNo)).BeginInit();
@@ -779,6 +779,7 @@
             this.sbDeletePersonelSertifika.StyleController = this.layoutControl1;
             this.sbDeletePersonelSertifika.TabIndex = 155;
             this.sbDeletePersonelSertifika.Text = "Sil";
+            this.sbDeletePersonelSertifika.Click += new System.EventHandler(this.sbDeletePersonelSertifika_Click);
             // 
             // sbChangePersonelSertifika
             // 
@@ -788,6 +789,7 @@
             this.sbChangePersonelSertifika.StyleController = this.layoutControl1;
             this.sbChangePersonelSertifika.TabIndex = 154;
             this.sbChangePersonelSertifika.Text = "Değiştir";
+            this.sbChangePersonelSertifika.Click += new System.EventHandler(this.sbChangePersonelSertifika_Click);
             // 
             // sbAddPersonelSertifika
             // 
@@ -797,6 +799,7 @@
             this.sbAddPersonelSertifika.StyleController = this.layoutControl1;
             this.sbAddPersonelSertifika.TabIndex = 153;
             this.sbAddPersonelSertifika.Text = "Ekle";
+            this.sbAddPersonelSertifika.Click += new System.EventHandler(this.sbAddPersonelSertifika_Click);
             // 
             // sbDeletePersonelRapor
             // 
@@ -1510,67 +1513,6 @@
             this.lcgSertifikalar});
             this.tabbedControlGroup1.Text = "Sertifikalar";
             // 
-            // lcgSertifikalar
-            // 
-            this.lcgSertifikalar.CustomizationFormText = "Sertifikalar";
-            this.lcgSertifikalar.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem15,
-            this.layoutControlItem26,
-            this.layoutControlItem27,
-            this.layoutControlItem28});
-            this.lcgSertifikalar.Location = new System.Drawing.Point(0, 0);
-            this.lcgSertifikalar.Name = "lcgSertifikalar";
-            this.lcgSertifikalar.Size = new System.Drawing.Size(1221, 237);
-            this.lcgSertifikalar.Text = "Sertifikalar";
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.gcSertifikalar;
-            this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(1065, 237);
-            this.layoutControlItem15.Text = "layoutControlItem15";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem15.TextToControlDistance = 0;
-            this.layoutControlItem15.TextVisible = false;
-            // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.sbAddPersonelSertifika;
-            this.layoutControlItem26.CustomizationFormText = "layoutControlItem26";
-            this.layoutControlItem26.Location = new System.Drawing.Point(1065, 0);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(156, 26);
-            this.layoutControlItem26.Text = "layoutControlItem26";
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem26.TextToControlDistance = 0;
-            this.layoutControlItem26.TextVisible = false;
-            // 
-            // layoutControlItem27
-            // 
-            this.layoutControlItem27.Control = this.sbChangePersonelSertifika;
-            this.layoutControlItem27.CustomizationFormText = "layoutControlItem27";
-            this.layoutControlItem27.Location = new System.Drawing.Point(1065, 26);
-            this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(156, 26);
-            this.layoutControlItem27.Text = "layoutControlItem27";
-            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem27.TextToControlDistance = 0;
-            this.layoutControlItem27.TextVisible = false;
-            // 
-            // layoutControlItem28
-            // 
-            this.layoutControlItem28.Control = this.sbDeletePersonelSertifika;
-            this.layoutControlItem28.CustomizationFormText = "layoutControlItem28";
-            this.layoutControlItem28.Location = new System.Drawing.Point(1065, 52);
-            this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(156, 185);
-            this.layoutControlItem28.Text = "layoutControlItem28";
-            this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem28.TextToControlDistance = 0;
-            this.layoutControlItem28.TextVisible = false;
-            // 
             // lcgDepartment
             // 
             this.lcgDepartment.CustomizationFormText = "layoutControlGroup3";
@@ -1938,6 +1880,67 @@
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextToControlDistance = 0;
             this.layoutControlItem31.TextVisible = false;
+            // 
+            // lcgSertifikalar
+            // 
+            this.lcgSertifikalar.CustomizationFormText = "Sertifikalar";
+            this.lcgSertifikalar.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem15,
+            this.layoutControlItem26,
+            this.layoutControlItem27,
+            this.layoutControlItem28});
+            this.lcgSertifikalar.Location = new System.Drawing.Point(0, 0);
+            this.lcgSertifikalar.Name = "lcgSertifikalar";
+            this.lcgSertifikalar.Size = new System.Drawing.Size(1221, 237);
+            this.lcgSertifikalar.Text = "Sertifikalar";
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.gcSertifikalar;
+            this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(1065, 237);
+            this.layoutControlItem15.Text = "layoutControlItem15";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextToControlDistance = 0;
+            this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.sbAddPersonelSertifika;
+            this.layoutControlItem26.CustomizationFormText = "layoutControlItem26";
+            this.layoutControlItem26.Location = new System.Drawing.Point(1065, 0);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(156, 26);
+            this.layoutControlItem26.Text = "layoutControlItem26";
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextToControlDistance = 0;
+            this.layoutControlItem26.TextVisible = false;
+            // 
+            // layoutControlItem27
+            // 
+            this.layoutControlItem27.Control = this.sbChangePersonelSertifika;
+            this.layoutControlItem27.CustomizationFormText = "layoutControlItem27";
+            this.layoutControlItem27.Location = new System.Drawing.Point(1065, 26);
+            this.layoutControlItem27.Name = "layoutControlItem27";
+            this.layoutControlItem27.Size = new System.Drawing.Size(156, 26);
+            this.layoutControlItem27.Text = "layoutControlItem27";
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem27.TextToControlDistance = 0;
+            this.layoutControlItem27.TextVisible = false;
+            // 
+            // layoutControlItem28
+            // 
+            this.layoutControlItem28.Control = this.sbDeletePersonelSertifika;
+            this.layoutControlItem28.CustomizationFormText = "layoutControlItem28";
+            this.layoutControlItem28.Location = new System.Drawing.Point(1065, 52);
+            this.layoutControlItem28.Name = "layoutControlItem28";
+            this.layoutControlItem28.Size = new System.Drawing.Size(156, 185);
+            this.layoutControlItem28.Text = "layoutControlItem28";
+            this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem28.TextToControlDistance = 0;
+            this.layoutControlItem28.TextVisible = false;
             // 
             // lcgPersonelBilgileri
             // 
@@ -2613,11 +2616,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgSertifikalar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDepartment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridHastaneBolumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeHastaneBolumu)).EndInit();
@@ -2648,6 +2646,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgSertifikalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgPersonelBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonelNo)).EndInit();

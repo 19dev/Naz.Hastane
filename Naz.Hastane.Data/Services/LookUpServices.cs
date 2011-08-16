@@ -62,10 +62,15 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<T> GetAll<T>() where T : class
         {
-            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
                 return session.CreateCriteria<T>().List<T>();
             }
+        }
+
+        public static IList<T> GetAll<T>(ISession session) where T : class
+        {
+            return session.CreateCriteria<T>().List<T>();
         }
 
         public static void SaveOrUpdate<T>(ISession session, T t)

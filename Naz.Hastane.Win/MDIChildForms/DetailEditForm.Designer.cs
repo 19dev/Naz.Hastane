@@ -1,6 +1,6 @@
 ﻿namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class PersonelDetailForm<T>
+    partial class DetailEditForm<T>
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // PersonelDetailForm
+            // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 233);
-            this.Name = "PersonelDetailForm";
-            this.Text = "Personel Ayrıntı Formu";
+            this.ClientSize = new System.Drawing.Size(491, 309);
+            this.Name = "DetailForm";
+            this.Text = "DetailForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Naz.Hastane.Data.Entities;
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class PersonelRaporForm : PersonelDetailForm<PersonelRapor>
+    partial class PersonelSertifikaEditForm : PersonelDetailEditForm<PersonelSertifika>
     {
         /// <summary>
         /// Required designer variable.
@@ -259,14 +259,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // PersonelRaporForm
+            // PersonelSertifikaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelRaporForm";
-            this.Text = "Personel Rapor Formu";
+            this.Name = "PersonelSertifikaForm";
+            this.Text = "Personel Sertifika Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deBitisTarihi.Properties.VistaTimeProperties)).EndInit();

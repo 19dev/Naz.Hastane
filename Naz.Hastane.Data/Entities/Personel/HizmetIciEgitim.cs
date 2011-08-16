@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System;
 namespace Naz.Hastane.Data.Entities
 {
     public class HizmetIciEgitim : IDBase
     {
         public virtual HizmetIciEgitimTipi HizmetIciEgitimTipi { get; set; }
-        public virtual string BaslangicTarihi { get; set; }
-        public virtual string BitisTarihi { get; set; }
+        public virtual DateTime BaslangicTarihi { get; set; }
+        public virtual DateTime BitisTarihi { get; set; }
         public virtual string Aciklama { get; set; }
 
         #region PersonelHizmetIciEgitim

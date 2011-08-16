@@ -29,54 +29,56 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.gcHizmetIciEgitim = new DevExpress.XtraGrid.GridControl();
-            this.gvHizmetIciEgitim = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lciHizmetIciEgitim = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sbChangePersonel = new DevExpress.XtraEditors.SimpleButton();
+            this.sbAddPersonel = new DevExpress.XtraEditors.SimpleButton();
+            this.sbDeletePersonel = new DevExpress.XtraEditors.SimpleButton();
+            this.sbChangeHizmetIciEgitim = new DevExpress.XtraEditors.SimpleButton();
+            this.sbAddHizmetIciEgitim = new DevExpress.XtraEditors.SimpleButton();
+            this.sbDeleteHizmetIciEgitim = new DevExpress.XtraEditors.SimpleButton();
             this.gcPersonel = new DevExpress.XtraGrid.GridControl();
             this.gvPersonel = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lciPersonel = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcHizmetIciEgitim = new DevExpress.XtraGrid.GridControl();
+            this.gvHizmetIciEgitim = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciHizmetIciEgitim = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPersonel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeleteHizmetIciEgitim = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddHizmetIciEgitim = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciChangeHizmetIciEgitim = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeletePersonel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddPersonel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciChangePersonel = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHizmetIciEgitim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHizmetIciEgitim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHizmetIciEgitim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPersonel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPersonel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHizmetIciEgitim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHizmetIciEgitim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHizmetIciEgitim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteHizmetIciEgitim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddHizmetIciEgitim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeHizmetIciEgitim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePersonel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPersonel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangePersonel)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.simpleButton6);
-            this.layoutControl1.Controls.Add(this.simpleButton5);
-            this.layoutControl1.Controls.Add(this.simpleButton4);
-            this.layoutControl1.Controls.Add(this.simpleButton3);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.sbChangePersonel);
+            this.layoutControl1.Controls.Add(this.sbAddPersonel);
+            this.layoutControl1.Controls.Add(this.sbDeletePersonel);
+            this.layoutControl1.Controls.Add(this.sbChangeHizmetIciEgitim);
+            this.layoutControl1.Controls.Add(this.sbAddHizmetIciEgitim);
+            this.layoutControl1.Controls.Add(this.sbDeleteHizmetIciEgitim);
             this.layoutControl1.Controls.Add(this.gcPersonel);
             this.layoutControl1.Controls.Add(this.gcHizmetIciEgitim);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,25 +89,102 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
+            // sbChangePersonel
             // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciHizmetIciEgitim,
-            this.lciPersonel,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(882, 472);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
+            this.sbChangePersonel.Location = new System.Drawing.Point(792, 38);
+            this.sbChangePersonel.Name = "sbChangePersonel";
+            this.sbChangePersonel.Size = new System.Drawing.Size(78, 22);
+            this.sbChangePersonel.StyleController = this.layoutControl1;
+            this.sbChangePersonel.TabIndex = 11;
+            this.sbChangePersonel.Text = "Değiştir";
+            this.sbChangePersonel.Click += new System.EventHandler(this.sbChangePersonel_Click);
+            // 
+            // sbAddPersonel
+            // 
+            this.sbAddPersonel.Location = new System.Drawing.Point(792, 12);
+            this.sbAddPersonel.Name = "sbAddPersonel";
+            this.sbAddPersonel.Size = new System.Drawing.Size(78, 22);
+            this.sbAddPersonel.StyleController = this.layoutControl1;
+            this.sbAddPersonel.TabIndex = 10;
+            this.sbAddPersonel.Text = "Ekle";
+            this.sbAddPersonel.Click += new System.EventHandler(this.sbAddPersonel_Click);
+            // 
+            // sbDeletePersonel
+            // 
+            this.sbDeletePersonel.Location = new System.Drawing.Point(792, 64);
+            this.sbDeletePersonel.Name = "sbDeletePersonel";
+            this.sbDeletePersonel.Size = new System.Drawing.Size(78, 22);
+            this.sbDeletePersonel.StyleController = this.layoutControl1;
+            this.sbDeletePersonel.TabIndex = 9;
+            this.sbDeletePersonel.Text = "Sil";
+            this.sbDeletePersonel.Click += new System.EventHandler(this.sbDeletePersonel_Click);
+            // 
+            // sbChangeHizmetIciEgitim
+            // 
+            this.sbChangeHizmetIciEgitim.Location = new System.Drawing.Point(12, 38);
+            this.sbChangeHizmetIciEgitim.Name = "sbChangeHizmetIciEgitim";
+            this.sbChangeHizmetIciEgitim.Size = new System.Drawing.Size(89, 22);
+            this.sbChangeHizmetIciEgitim.StyleController = this.layoutControl1;
+            this.sbChangeHizmetIciEgitim.TabIndex = 8;
+            this.sbChangeHizmetIciEgitim.Text = "Değiştir";
+            this.sbChangeHizmetIciEgitim.Click += new System.EventHandler(this.sbChangeHizmetIciEgitim_Click);
+            // 
+            // sbAddHizmetIciEgitim
+            // 
+            this.sbAddHizmetIciEgitim.Location = new System.Drawing.Point(12, 12);
+            this.sbAddHizmetIciEgitim.Name = "sbAddHizmetIciEgitim";
+            this.sbAddHizmetIciEgitim.Size = new System.Drawing.Size(89, 22);
+            this.sbAddHizmetIciEgitim.StyleController = this.layoutControl1;
+            this.sbAddHizmetIciEgitim.TabIndex = 7;
+            this.sbAddHizmetIciEgitim.Text = "Ekle";
+            this.sbAddHizmetIciEgitim.Click += new System.EventHandler(this.sbAddHizmetIciEgitim_Click);
+            // 
+            // sbDeleteHizmetIciEgitim
+            // 
+            this.sbDeleteHizmetIciEgitim.Location = new System.Drawing.Point(12, 64);
+            this.sbDeleteHizmetIciEgitim.Name = "sbDeleteHizmetIciEgitim";
+            this.sbDeleteHizmetIciEgitim.Size = new System.Drawing.Size(89, 22);
+            this.sbDeleteHizmetIciEgitim.StyleController = this.layoutControl1;
+            this.sbDeleteHizmetIciEgitim.TabIndex = 6;
+            this.sbDeleteHizmetIciEgitim.Text = "Sil";
+            this.sbDeleteHizmetIciEgitim.Click += new System.EventHandler(this.sbDeleteHizmetIciEgitim_Click);
+            // 
+            // gcPersonel
+            // 
+            this.gcPersonel.Location = new System.Drawing.Point(449, 28);
+            this.gcPersonel.MainView = this.gvPersonel;
+            this.gcPersonel.Name = "gcPersonel";
+            this.gcPersonel.Size = new System.Drawing.Size(339, 432);
+            this.gcPersonel.TabIndex = 5;
+            this.gcPersonel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPersonel});
+            // 
+            // gvPersonel
+            // 
+            this.gvPersonel.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn5,
+            this.gridColumn6});
+            this.gvPersonel.GridControl = this.gcPersonel;
+            this.gvPersonel.Name = "gvPersonel";
+            this.gvPersonel.OptionsBehavior.Editable = false;
+            this.gvPersonel.OptionsView.ShowGroupPanel = false;
+            this.gvPersonel.DoubleClick += new System.EventHandler(this.gvPersonel_DoubleClick);
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Personel";
+            this.gridColumn5.FieldName = "Personel.FullName";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 0;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Açıklama";
+            this.gridColumn6.FieldName = "Aciklama";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 1;
             // 
             // gcHizmetIciEgitim
             // 
@@ -126,169 +205,10 @@
             this.gridColumn4});
             this.gvHizmetIciEgitim.GridControl = this.gcHizmetIciEgitim;
             this.gvHizmetIciEgitim.Name = "gvHizmetIciEgitim";
-            // 
-            // lciHizmetIciEgitim
-            // 
-            this.lciHizmetIciEgitim.Control = this.gcHizmetIciEgitim;
-            this.lciHizmetIciEgitim.CustomizationFormText = "Eğitimler";
-            this.lciHizmetIciEgitim.Location = new System.Drawing.Point(93, 0);
-            this.lciHizmetIciEgitim.Name = "lciHizmetIciEgitim";
-            this.lciHizmetIciEgitim.Size = new System.Drawing.Size(344, 452);
-            this.lciHizmetIciEgitim.Text = "Eğitimler";
-            this.lciHizmetIciEgitim.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciHizmetIciEgitim.TextSize = new System.Drawing.Size(76, 13);
-            // 
-            // gcPersonel
-            // 
-            this.gcPersonel.Location = new System.Drawing.Point(449, 28);
-            this.gcPersonel.MainView = this.gvPersonel;
-            this.gcPersonel.Name = "gcPersonel";
-            this.gcPersonel.Size = new System.Drawing.Size(339, 432);
-            this.gcPersonel.TabIndex = 5;
-            this.gcPersonel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPersonel});
-            // 
-            // gvPersonel
-            // 
-            this.gvPersonel.GridControl = this.gcPersonel;
-            this.gvPersonel.Name = "gvPersonel";
-            // 
-            // lciPersonel
-            // 
-            this.lciPersonel.Control = this.gcPersonel;
-            this.lciPersonel.CustomizationFormText = "Katılan Personel";
-            this.lciPersonel.Location = new System.Drawing.Point(437, 0);
-            this.lciPersonel.Name = "lciPersonel";
-            this.lciPersonel.Size = new System.Drawing.Size(343, 452);
-            this.lciPersonel.Text = "Katılan Personel";
-            this.lciPersonel.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciPersonel.TextSize = new System.Drawing.Size(76, 13);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 64);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(89, 22);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Sil";
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.simpleButton1;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 52);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(93, 400);
-            this.layoutControlItem3.Text = "layoutControlItem3";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextToControlDistance = 0;
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(12, 12);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(89, 22);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "Ekle";
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.simpleButton2;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(93, 26);
-            this.layoutControlItem4.Text = "layoutControlItem4";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextToControlDistance = 0;
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Location = new System.Drawing.Point(12, 38);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(89, 22);
-            this.simpleButton3.StyleController = this.layoutControl1;
-            this.simpleButton3.TabIndex = 8;
-            this.simpleButton3.Text = "Değiştir";
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.simpleButton3;
-            this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(93, 26);
-            this.layoutControlItem5.Text = "layoutControlItem5";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextToControlDistance = 0;
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Location = new System.Drawing.Point(792, 64);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(78, 22);
-            this.simpleButton4.StyleController = this.layoutControl1;
-            this.simpleButton4.TabIndex = 9;
-            this.simpleButton4.Text = "Sil";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.simpleButton4;
-            this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(780, 52);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(82, 400);
-            this.layoutControlItem6.Text = "layoutControlItem6";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextToControlDistance = 0;
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Location = new System.Drawing.Point(792, 12);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(78, 22);
-            this.simpleButton5.StyleController = this.layoutControl1;
-            this.simpleButton5.TabIndex = 10;
-            this.simpleButton5.Text = "Ekle";
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.simpleButton5;
-            this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
-            this.layoutControlItem7.Location = new System.Drawing.Point(780, 0);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(82, 26);
-            this.layoutControlItem7.Text = "layoutControlItem7";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextToControlDistance = 0;
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Location = new System.Drawing.Point(792, 38);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(78, 22);
-            this.simpleButton6.StyleController = this.layoutControl1;
-            this.simpleButton6.TabIndex = 11;
-            this.simpleButton6.Text = "Değiştir";
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.simpleButton6;
-            this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
-            this.layoutControlItem8.Location = new System.Drawing.Point(780, 26);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(82, 26);
-            this.layoutControlItem8.Text = "layoutControlItem8";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextToControlDistance = 0;
-            this.layoutControlItem8.TextVisible = false;
+            this.gvHizmetIciEgitim.OptionsBehavior.Editable = false;
+            this.gvHizmetIciEgitim.OptionsView.ShowGroupPanel = false;
+            this.gvHizmetIciEgitim.Click += new System.EventHandler(this.gvHizmetIciEgitim_Click);
+            this.gvHizmetIciEgitim.DoubleClick += new System.EventHandler(this.gvHizmetIciEgitim_DoubleClick);
             // 
             // gridColumn1
             // 
@@ -322,6 +242,120 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciHizmetIciEgitim,
+            this.lciPersonel,
+            this.lciDeleteHizmetIciEgitim,
+            this.lciAddHizmetIciEgitim,
+            this.lciChangeHizmetIciEgitim,
+            this.lciDeletePersonel,
+            this.lciAddPersonel,
+            this.lciChangePersonel});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(882, 472);
+            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // lciHizmetIciEgitim
+            // 
+            this.lciHizmetIciEgitim.Control = this.gcHizmetIciEgitim;
+            this.lciHizmetIciEgitim.CustomizationFormText = "Eğitimler";
+            this.lciHizmetIciEgitim.Location = new System.Drawing.Point(93, 0);
+            this.lciHizmetIciEgitim.Name = "lciHizmetIciEgitim";
+            this.lciHizmetIciEgitim.Size = new System.Drawing.Size(344, 452);
+            this.lciHizmetIciEgitim.Text = "Eğitimler";
+            this.lciHizmetIciEgitim.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciHizmetIciEgitim.TextSize = new System.Drawing.Size(76, 13);
+            // 
+            // lciPersonel
+            // 
+            this.lciPersonel.Control = this.gcPersonel;
+            this.lciPersonel.CustomizationFormText = "Katılan Personel";
+            this.lciPersonel.Location = new System.Drawing.Point(437, 0);
+            this.lciPersonel.Name = "lciPersonel";
+            this.lciPersonel.Size = new System.Drawing.Size(343, 452);
+            this.lciPersonel.Text = "Katılan Personel";
+            this.lciPersonel.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciPersonel.TextSize = new System.Drawing.Size(76, 13);
+            // 
+            // lciDeleteHizmetIciEgitim
+            // 
+            this.lciDeleteHizmetIciEgitim.Control = this.sbDeleteHizmetIciEgitim;
+            this.lciDeleteHizmetIciEgitim.CustomizationFormText = "layoutControlItem3";
+            this.lciDeleteHizmetIciEgitim.Location = new System.Drawing.Point(0, 52);
+            this.lciDeleteHizmetIciEgitim.Name = "lciDeleteHizmetIciEgitim";
+            this.lciDeleteHizmetIciEgitim.Size = new System.Drawing.Size(93, 400);
+            this.lciDeleteHizmetIciEgitim.Text = "lciDeleteHizmetIciEgitim";
+            this.lciDeleteHizmetIciEgitim.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeleteHizmetIciEgitim.TextToControlDistance = 0;
+            this.lciDeleteHizmetIciEgitim.TextVisible = false;
+            // 
+            // lciAddHizmetIciEgitim
+            // 
+            this.lciAddHizmetIciEgitim.Control = this.sbAddHizmetIciEgitim;
+            this.lciAddHizmetIciEgitim.CustomizationFormText = "layoutControlItem4";
+            this.lciAddHizmetIciEgitim.Location = new System.Drawing.Point(0, 0);
+            this.lciAddHizmetIciEgitim.Name = "lciAddHizmetIciEgitim";
+            this.lciAddHizmetIciEgitim.Size = new System.Drawing.Size(93, 26);
+            this.lciAddHizmetIciEgitim.Text = "lciAddHizmetIciEgitim";
+            this.lciAddHizmetIciEgitim.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddHizmetIciEgitim.TextToControlDistance = 0;
+            this.lciAddHizmetIciEgitim.TextVisible = false;
+            // 
+            // lciChangeHizmetIciEgitim
+            // 
+            this.lciChangeHizmetIciEgitim.Control = this.sbChangeHizmetIciEgitim;
+            this.lciChangeHizmetIciEgitim.CustomizationFormText = "layoutControlItem5";
+            this.lciChangeHizmetIciEgitim.Location = new System.Drawing.Point(0, 26);
+            this.lciChangeHizmetIciEgitim.Name = "lciChangeHizmetIciEgitim";
+            this.lciChangeHizmetIciEgitim.Size = new System.Drawing.Size(93, 26);
+            this.lciChangeHizmetIciEgitim.Text = "lciChangeHizmetIciEgitim";
+            this.lciChangeHizmetIciEgitim.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangeHizmetIciEgitim.TextToControlDistance = 0;
+            this.lciChangeHizmetIciEgitim.TextVisible = false;
+            // 
+            // lciDeletePersonel
+            // 
+            this.lciDeletePersonel.Control = this.sbDeletePersonel;
+            this.lciDeletePersonel.CustomizationFormText = "layoutControlItem6";
+            this.lciDeletePersonel.Location = new System.Drawing.Point(780, 52);
+            this.lciDeletePersonel.Name = "lciDeletePersonel";
+            this.lciDeletePersonel.Size = new System.Drawing.Size(82, 400);
+            this.lciDeletePersonel.Text = "lciDeletePersonel";
+            this.lciDeletePersonel.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeletePersonel.TextToControlDistance = 0;
+            this.lciDeletePersonel.TextVisible = false;
+            // 
+            // lciAddPersonel
+            // 
+            this.lciAddPersonel.Control = this.sbAddPersonel;
+            this.lciAddPersonel.CustomizationFormText = "layoutControlItem7";
+            this.lciAddPersonel.Location = new System.Drawing.Point(780, 0);
+            this.lciAddPersonel.Name = "lciAddPersonel";
+            this.lciAddPersonel.Size = new System.Drawing.Size(82, 26);
+            this.lciAddPersonel.Text = "lciAddPersonel";
+            this.lciAddPersonel.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddPersonel.TextToControlDistance = 0;
+            this.lciAddPersonel.TextVisible = false;
+            // 
+            // lciChangePersonel
+            // 
+            this.lciChangePersonel.Control = this.sbChangePersonel;
+            this.lciChangePersonel.CustomizationFormText = "layoutControlItem8";
+            this.lciChangePersonel.Location = new System.Drawing.Point(780, 26);
+            this.lciChangePersonel.Name = "lciChangePersonel";
+            this.lciChangePersonel.Size = new System.Drawing.Size(82, 26);
+            this.lciChangePersonel.Text = "lciChangePersonel";
+            this.lciChangePersonel.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangePersonel.TextToControlDistance = 0;
+            this.lciChangePersonel.TextVisible = false;
+            // 
             // HizmetIciEgitimForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,22 +364,22 @@
             this.Controls.Add(this.layoutControl1);
             this.KeyPreview = true;
             this.Name = "HizmetIciEgitimForm";
-            this.Text = "Personel Islemleri";
+            this.Text = "Hizmetiçi Eğitim İşlemleri";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHizmetIciEgitim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHizmetIciEgitim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHizmetIciEgitim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPersonel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHizmetIciEgitim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHizmetIciEgitim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHizmetIciEgitim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPersonel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteHizmetIciEgitim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddHizmetIciEgitim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeHizmetIciEgitim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeletePersonel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddPersonel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangePersonel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,12 +387,12 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton sbChangePersonel;
+        private DevExpress.XtraEditors.SimpleButton sbAddPersonel;
+        private DevExpress.XtraEditors.SimpleButton sbDeletePersonel;
+        private DevExpress.XtraEditors.SimpleButton sbChangeHizmetIciEgitim;
+        private DevExpress.XtraEditors.SimpleButton sbAddHizmetIciEgitim;
+        private DevExpress.XtraEditors.SimpleButton sbDeleteHizmetIciEgitim;
         private DevExpress.XtraGrid.GridControl gcPersonel;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPersonel;
         private DevExpress.XtraGrid.GridControl gcHizmetIciEgitim;
@@ -366,16 +400,18 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem lciHizmetIciEgitim;
         private DevExpress.XtraLayout.LayoutControlItem lciPersonel;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem lciDeleteHizmetIciEgitim;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddHizmetIciEgitim;
+        private DevExpress.XtraLayout.LayoutControlItem lciChangeHizmetIciEgitim;
+        private DevExpress.XtraLayout.LayoutControlItem lciDeletePersonel;
+        private DevExpress.XtraLayout.LayoutControlItem lciAddPersonel;
+        private DevExpress.XtraLayout.LayoutControlItem lciChangePersonel;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
 
     }
 }

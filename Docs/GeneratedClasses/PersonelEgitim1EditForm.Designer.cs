@@ -1,7 +1,7 @@
 ﻿using Naz.Hastane.Data.Entities;
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class PersonelEgitimForm
+    partial class PersonelEgitimEditForm
     {
         /// <summary>
         /// Required designer variable.

@@ -201,6 +201,7 @@ namespace Naz.Hastane.Win {
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.iHizmetIciEgitimler = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -497,10 +498,11 @@ namespace Naz.Hastane.Win {
             this.iPersonelAra,
             this.iYeniPersonel,
             this.iUserPatientVisits,
-            this.bsiStatus});
+            this.bsiStatus,
+            this.iHizmetIciEgitimler});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 324;
+            this.rcMain.MaxItemId = 326;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -523,7 +525,7 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpPatients;
+            this.rcMain.SelectedPage = this.rbPersonel;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1930,6 +1932,7 @@ namespace Naz.Hastane.Win {
             // 
             this.rpgPersonel.ItemLinks.Add(this.iPersonelAra);
             this.rpgPersonel.ItemLinks.Add(this.iYeniPersonel);
+            this.rpgPersonel.ItemLinks.Add(this.iHizmetIciEgitimler);
             this.rpgPersonel.Name = "rpgPersonel";
             this.rpgPersonel.Text = "Personel";
             // 
@@ -1983,6 +1986,12 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1.View = this.tabbedView1;
             this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
+            // 
+            // iHizmetIciEgitimler
+            // 
+            this.iHizmetIciEgitimler.Caption = "Hizmetiçi Eðitimler";
+            this.iHizmetIciEgitimler.Id = 325;
+            this.iHizmetIciEgitimler.Name = "iHizmetIciEgitimler";
             // 
             // frmMain
             // 
@@ -2208,6 +2217,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPersonel;
         private DevExpress.XtraBars.BarButtonItem iUserPatientVisits;
         private DevExpress.XtraBars.BarStaticItem bsiStatus;
+        private DevExpress.XtraBars.BarButtonItem iHizmetIciEgitimler;
 
     }
 }
