@@ -292,6 +292,48 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\PersonelDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDetailForm.Designer.cs">
+      <DependentUpon>PersonelDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\HizmetIciEgitimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\HizmetIciEgitimForm.Designer.cs">
+      <DependentUpon>HizmetIciEgitimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelSertifikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelSertifikaForm.Designer.cs">
+      <DependentUpon>PersonelSertifikaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelYabanciDilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelYabanciDilForm.Designer.cs">
+      <DependentUpon>PersonelYabanciDilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelHastaneBolumuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelHastaneBolumuForm.Designer.cs">
+      <DependentUpon>PersonelHastaneBolumuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelIzinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelIzinForm.Designer.cs">
+      <DependentUpon>PersonelIzinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelRaporForm.Designer.cs">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pharmacy\EczaneReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -479,6 +521,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDetailForm.resx">
+      <DependentUpon>PersonelDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\HizmetIciEgitimForm.resx">
+      <DependentUpon>HizmetIciEgitimForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelSertifikaForm.resx">
+      <DependentUpon>PersonelSertifikaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelYabanciDilForm.resx">
+      <DependentUpon>PersonelYabanciDilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelHastaneBolumuForm.resx">
+      <DependentUpon>PersonelHastaneBolumuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelIzinForm.resx">
+      <DependentUpon>PersonelIzinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelRaporForm.resx">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pharmacy\EczaneReportForm.resx">
       <DependentUpon>EczaneReportForm.cs</DependentUpon>

@@ -85,6 +85,23 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static void Delete<T>(ISession session, T t)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    session.Delete(t);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
         #region LookUpLists
 
         public static IList<T> LookUpTable<T>(ref IList<T> theObject) where T : class
@@ -148,6 +165,18 @@ namespace Naz.Hastane.Data.Services
         private static IList<OkulTipi> _OkulTipis;
         public static IList<OkulTipi> OkulTipis
         { get { return LookUpTable(ref _OkulTipis); } }
+
+        private static IList<YabanciDil> _YabanciDils;
+        public static IList<YabanciDil> YabanciDils
+        { get { return LookUpTable(ref _YabanciDils); } }
+
+        private static IList<YabanciDilDerecesi> _YabanciDilDerecesis;
+        public static IList<YabanciDilDerecesi> YabanciDilDerecesis
+        { get { return LookUpTable(ref _YabanciDilDerecesis); } }
+
+        private static IList<HizmetIciEgitimTipi> _HizmetIciEgitimTipis;
+        public static IList<HizmetIciEgitimTipi> HizmetIciEgitimTipis
+        { get { return LookUpTable(ref _HizmetIciEgitimTipis); } }
 
         #endregion
 

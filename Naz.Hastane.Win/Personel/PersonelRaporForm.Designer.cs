@@ -1,7 +1,7 @@
 ﻿using Naz.Hastane.Data.Entities;
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class PersonelEgitimForm
+    partial class PersonelRaporForm : PersonelDetailForm<PersonelRapor>
     {
         /// <summary>
         /// Required designer variable.
@@ -33,9 +33,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbSaveAndNew = new DevExpress.XtraEditors.SimpleButton();
             this.deBitisTarihi = new DevExpress.XtraEditors.DateEdit();
             this.deBaslangicTarihi = new DevExpress.XtraEditors.DateEdit();
-            this.cmbOkulTipi = new System.Windows.Forms.ComboBox();
             this.sbSaveAndClose = new DevExpress.XtraEditors.SimpleButton();
-            this.teOkulAdi = new DevExpress.XtraEditors.TextEdit();
             this.sbCancel = new DevExpress.XtraEditors.SimpleButton();
             this.meAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -44,10 +42,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciOkulTipi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciBaslangicTarihi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciBitisTarihi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciOkulunAdi = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSaveAndNew = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -56,7 +52,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.deBitisTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teOkulAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).BeginInit();
@@ -64,10 +59,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkulTipi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBitisTarihi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkulunAdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).BeginInit();
             this.SuspendLayout();
@@ -77,9 +70,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl1.Controls.Add(this.sbSaveAndNew);
             this.layoutControl1.Controls.Add(this.deBitisTarihi);
             this.layoutControl1.Controls.Add(this.deBaslangicTarihi);
-            this.layoutControl1.Controls.Add(this.cmbOkulTipi);
             this.layoutControl1.Controls.Add(this.sbSaveAndClose);
-            this.layoutControl1.Controls.Add(this.teOkulAdi);
             this.layoutControl1.Controls.Add(this.sbCancel);
             this.layoutControl1.Controls.Add(this.meAciklama);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,7 +93,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // deBitisTarihi
             // 
             this.deBitisTarihi.EditValue = null;
-            this.deBitisTarihi.Location = new System.Drawing.Point(89, 85);
+            this.deBitisTarihi.Location = new System.Drawing.Point(89, 36);
             this.deBitisTarihi.Name = "deBitisTarihi";
             this.deBitisTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -115,7 +106,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // deBaslangicTarihi
             // 
             this.deBaslangicTarihi.EditValue = null;
-            this.deBaslangicTarihi.Location = new System.Drawing.Point(89, 61);
+            this.deBaslangicTarihi.Location = new System.Drawing.Point(89, 12);
             this.deBaslangicTarihi.Name = "deBaslangicTarihi";
             this.deBaslangicTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -125,14 +116,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.deBaslangicTarihi.StyleController = this.layoutControl1;
             this.deBaslangicTarihi.TabIndex = 11;
             // 
-            // cmbOkulTipi
-            // 
-            this.cmbOkulTipi.FormattingEnabled = true;
-            this.cmbOkulTipi.Location = new System.Drawing.Point(89, 12);
-            this.cmbOkulTipi.Name = "cmbOkulTipi";
-            this.cmbOkulTipi.Size = new System.Drawing.Size(148, 21);
-            this.cmbOkulTipi.TabIndex = 10;
-            // 
             // sbSaveAndClose
             // 
             this.sbSaveAndClose.Location = new System.Drawing.Point(241, 99);
@@ -141,14 +124,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbSaveAndClose.StyleController = this.layoutControl1;
             this.sbSaveAndClose.TabIndex = 9;
             this.sbSaveAndClose.Text = "Sakla ve Kapat";
-            // 
-            // teOkulAdi
-            // 
-            this.teOkulAdi.Location = new System.Drawing.Point(89, 37);
-            this.teOkulAdi.Name = "teOkulAdi";
-            this.teOkulAdi.Size = new System.Drawing.Size(148, 20);
-            this.teOkulAdi.StyleController = this.layoutControl1;
-            this.teOkulAdi.TabIndex = 5;
             // 
             // sbCancel
             // 
@@ -161,9 +136,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // meAciklama
             // 
-            this.meAciklama.Location = new System.Drawing.Point(89, 109);
+            this.meAciklama.Location = new System.Drawing.Point(89, 60);
             this.meAciklama.Name = "meAciklama";
-            this.meAciklama.Size = new System.Drawing.Size(148, 112);
+            this.meAciklama.Size = new System.Drawing.Size(148, 161);
             this.meAciklama.StyleController = this.layoutControl1;
             this.meAciklama.TabIndex = 4;
             // 
@@ -178,10 +153,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem1,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.lciOkulTipi,
             this.lciBaslangicTarihi,
             this.lciBitisTarihi,
-            this.lciOkulunAdi,
             this.lciCancel,
             this.lciSaveAndNew});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
@@ -194,9 +167,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.lciAciklama.Control = this.meAciklama;
             this.lciAciklama.CustomizationFormText = "Açıklama";
-            this.lciAciklama.Location = new System.Drawing.Point(0, 97);
+            this.lciAciklama.Location = new System.Drawing.Point(0, 48);
             this.lciAciklama.Name = "lciAciklama";
-            this.lciAciklama.Size = new System.Drawing.Size(229, 116);
+            this.lciAciklama.Size = new System.Drawing.Size(229, 165);
             this.lciAciklama.Text = "Açıklama";
             this.lciAciklama.TextSize = new System.Drawing.Size(73, 13);
             // 
@@ -242,21 +215,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lciOkulTipi
-            // 
-            this.lciOkulTipi.Control = this.cmbOkulTipi;
-            this.lciOkulTipi.CustomizationFormText = "Okul Tipi";
-            this.lciOkulTipi.Location = new System.Drawing.Point(0, 0);
-            this.lciOkulTipi.Name = "lciOkulTipi";
-            this.lciOkulTipi.Size = new System.Drawing.Size(229, 25);
-            this.lciOkulTipi.Text = "Okul Tipi";
-            this.lciOkulTipi.TextSize = new System.Drawing.Size(73, 13);
-            // 
             // lciBaslangicTarihi
             // 
             this.lciBaslangicTarihi.Control = this.deBaslangicTarihi;
             this.lciBaslangicTarihi.CustomizationFormText = "Başlangıç Tarihi";
-            this.lciBaslangicTarihi.Location = new System.Drawing.Point(0, 49);
+            this.lciBaslangicTarihi.Location = new System.Drawing.Point(0, 0);
             this.lciBaslangicTarihi.Name = "lciBaslangicTarihi";
             this.lciBaslangicTarihi.Size = new System.Drawing.Size(229, 24);
             this.lciBaslangicTarihi.Text = "Başlangıç Tarihi";
@@ -266,21 +229,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.lciBitisTarihi.Control = this.deBitisTarihi;
             this.lciBitisTarihi.CustomizationFormText = "Bitiş Tarihi";
-            this.lciBitisTarihi.Location = new System.Drawing.Point(0, 73);
+            this.lciBitisTarihi.Location = new System.Drawing.Point(0, 24);
             this.lciBitisTarihi.Name = "lciBitisTarihi";
             this.lciBitisTarihi.Size = new System.Drawing.Size(229, 24);
             this.lciBitisTarihi.Text = "Bitiş Tarihi";
             this.lciBitisTarihi.TextSize = new System.Drawing.Size(73, 13);
-            // 
-            // lciOkulunAdi
-            // 
-            this.lciOkulunAdi.Control = this.teOkulAdi;
-            this.lciOkulunAdi.CustomizationFormText = "Okulun Adı";
-            this.lciOkulunAdi.Location = new System.Drawing.Point(0, 25);
-            this.lciOkulunAdi.Name = "lciOkulunAdi";
-            this.lciOkulunAdi.Size = new System.Drawing.Size(229, 24);
-            this.lciOkulunAdi.Text = "Okulun Adı";
-            this.lciOkulunAdi.TextSize = new System.Drawing.Size(73, 13);
             // 
             // lciCancel
             // 
@@ -306,21 +259,20 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // PersonelEgitimForm
+            // PersonelRaporForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelEgitimForm";
-            this.Text = "Personel Eğitim Formu";
+            this.Name = "PersonelRaporForm";
+            this.Text = "Personel Rapor Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deBitisTarihi.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBitisTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teOkulAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAciklama)).EndInit();
@@ -328,10 +280,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkulTipi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBaslangicTarihi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBitisTarihi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciOkulunAdi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSaveAndNew)).EndInit();
             this.ResumeLayout(false);
@@ -343,10 +293,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.SimpleButton sbSaveAndClose;
-        private DevExpress.XtraEditors.TextEdit teOkulAdi;
         private DevExpress.XtraEditors.SimpleButton sbCancel;
         private DevExpress.XtraLayout.LayoutControlItem lciAciklama;
-        private DevExpress.XtraLayout.LayoutControlItem lciOkulunAdi;
         private DevExpress.XtraLayout.LayoutControlItem lciCancel;
         private DevExpress.XtraLayout.LayoutControlItem lciSaveAndClose;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
@@ -354,8 +302,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraEditors.DateEdit deBitisTarihi;
         private DevExpress.XtraEditors.DateEdit deBaslangicTarihi;
-        private System.Windows.Forms.ComboBox cmbOkulTipi;
-        private DevExpress.XtraLayout.LayoutControlItem lciOkulTipi;
         private DevExpress.XtraLayout.LayoutControlItem lciBaslangicTarihi;
         private DevExpress.XtraLayout.LayoutControlItem lciBitisTarihi;
         private DevExpress.XtraEditors.MemoEdit meAciklama;

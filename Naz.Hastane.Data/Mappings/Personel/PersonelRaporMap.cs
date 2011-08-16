@@ -9,7 +9,7 @@ namespace Naz.Hastane.Data.Mappings
         
         public PersonelRaporMap() 
         {
-			Table("PersonelRapor");
+			Table("tblPersonelRapor");
 			LazyLoad();
 			Id(x => x.ID).GeneratedBy.Identity().Column("ID");
             References(x => x.Personel).Column("PersonelID").Not.Nullable();

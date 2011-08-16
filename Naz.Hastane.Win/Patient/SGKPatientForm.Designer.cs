@@ -3130,7 +3130,6 @@
             this.lciRefresh.TextSize = new System.Drawing.Size(0, 0);
             this.lciRefresh.TextToControlDistance = 0;
             this.lciRefresh.TextVisible = false;
-            this.lciRefresh.Click += new System.EventHandler(this.lciRefresh_Click);
             // 
             // emptySpaceItem13
             // 

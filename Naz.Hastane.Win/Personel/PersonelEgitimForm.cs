@@ -6,79 +6,46 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelEgitimForm : MDIChildForm
+    public partial class PersonelEgitimForm : PersonelDetailEgitimForm
     {
-        public bool IsOK { get; set; }
-        private Personel _Personel;
-
-        private PersonelEgitim _PersonelEgitim = null;
-
-        public PersonelEgitim PersonelEgitim
-        {
-            get { return _PersonelEgitim; }
-            set
-            {
-                if (_PersonelEgitim != value)
-                {
-                    _PersonelEgitim = value;
-                    InitPersonelEgitimBindings();
-                }
-            }
-        }
-
-        private PersonelEgitimForm()
+        public PersonelEgitimForm()
         {
             InitializeComponent();
             LoadLookUps();
+            this.sbSaveAndNew.Click += new System.EventHandler(base.sbSaveAndNew_Click);
+            this.sbSaveAndClose.Click += new System.EventHandler(base.sbSaveAndClose_Click);
+            this.sbCancel.Click += new System.EventHandler(base.sbCancel_Click);
         }
 
-        public PersonelEgitimForm(Personel personel, int personelEgitimID) : this()
+        protected override void InitBindings()
         {
-            IsOK = false;
-            if (personel == null)
-                Close();
-
-            _Personel = personel;
-
-            PersonelEgitim personelEgitim = LookUpServices.GetByID<PersonelEgitim>(Session, personelEgitimID);
-            if (personelEgitim == null)
-            {
-                personelEgitim = PersonelServices.CreateNewPersonelEgitim();
-                personelEgitim.Personel = _Personel;
-            }
-
-            PersonelEgitim = personelEgitim;
+            UIUtilities.BindControl(cmbOkulTipi, TheObject, x => x.OkulTipi, propertyName: "SelectedItem");
+            UIUtilities.BindControl(teOkulAdi, TheObject, x => x.OkulAdi);
+            UIUtilities.BindControl(deBaslangicTarihi, TheObject, x => x.BaslangicTarihi);
+            UIUtilities.BindControl(deBitisTarihi, TheObject, x => x.BitisTarihi);
+            UIUtilities.BindControl(meAciklama, TheObject, x => x.Aciklama);
         }
 
-        private void InitPersonelEgitimBindings()
-        {
-            UIUtilities.BindControl(cmbOkulTipi, PersonelEgitim, x => x.OkulTipi, propertyName: "SelectedItem");
-            UIUtilities.BindControl(teOkulAdi, PersonelEgitim, x => x.OkulAdi);
-            UIUtilities.BindControl(deBaslangicTarihi, PersonelEgitim, x => x.BaslangicTarihi);
-            UIUtilities.BindControl(deBitisTarihi, PersonelEgitim, x => x.BitisTarihi);
-            UIUtilities.BindControl(meAciklama, PersonelEgitim, x => x.Aciklama);
-        }
-
-        private void LoadLookUps()
+        protected override void LoadLookUps()
         {
             UIUtilities.BindComboBox(cmbOkulTipi, LookUpServices.OkulTipis, displayMember: "Value", valueMember: "ID");
         }
 
-        private bool Save()
+        protected override bool Save()
         {
-            if (String.IsNullOrWhiteSpace(PersonelEgitim.OkulAdi))
+            if (String.IsNullOrWhiteSpace(TheObject.OkulAdi))
             {
                 XtraMessageBox.Show("Lütfen Okul Adını Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (PersonelEgitim.BaslangicTarihi == null || PersonelEgitim.BitisTarihi == null || PersonelEgitim.BaslangicTarihi >= PersonelEgitim.BitisTarihi )
+            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi >= TheObject.BitisTarihi )
             {
                 XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             try
             {
-                LookUpServices.SaveOrUpdate(Session, PersonelEgitim);
+                LookUpServices.SaveOrUpdate(Session, TheObject);
                 XtraMessageBox.Show("Personel Eğitimi Kayıt Edilmiştir", "Personel Eğitimi Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
@@ -88,33 +55,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return false;
             }
 
-        }
-
-        private void sbCancel_Click(object sender, System.EventArgs e)
-        {
-            IsOK = false;
-            Close();
-        }
-
-        private void sbSaveAndClose_Click(object sender, EventArgs e)
-        {
-            if (Save())
-            {
-                IsOK = true;
-                Close();
-            }
-        }
-
-        private void sbSaveAndNew_Click(object sender, EventArgs e)
-        {
-            if (Save())
-            {
-                IsOK = true;
-                PersonelEgitim personelEgitim = PersonelServices.CreateNewPersonelEgitim();
-                personelEgitim.Personel = _Personel;
-
-                PersonelEgitim = personelEgitim;
-            }
         }
 
     }

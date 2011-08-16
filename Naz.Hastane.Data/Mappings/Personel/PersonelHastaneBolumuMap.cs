@@ -8,12 +8,12 @@ namespace Naz.Hastane.Data.Mappings
     {
         
         public PersonelHastaneBolumuMap() {
-			Table("PersonelHastaneBolumu");
+			Table("tblPersonelHastaneBolumu");
 			LazyLoad();
 			Id(x => x.ID).GeneratedBy.Identity().Column("ID");
             References(x => x.Personel).Column("PersonelID").Not.Nullable();
-            References(x => x.HastaneBolumu).Column("HastaneBolumuID").Not.Nullable();
-			Map(x => x.BaslangicTarihi).Column("BaslangicTarihi").Not.Nullable();
+            References(x => x.HastaneBolumu).Column("HastaneBolumuID");
+			Map(x => x.BaslangicTarihi).Column("BaslangicTarihi");
 			Map(x => x.Aciklama).Column("Aciklama");
         }
     }

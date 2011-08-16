@@ -95,6 +95,7 @@
     <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
     <Compile Include="Entities\Logs\LOGKURUM_DEGISTI.cs" />
     <Compile Include="Entities\Logs\LOGTCKIMLIKNOSORGU.cs" />
+    <Compile Include="Entities\IDBase.cs" />
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
@@ -158,6 +159,10 @@
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
     <Compile Include="Entities\Patient\UserPatientVisit.cs" />
     <Compile Include="Entities\Personel\HastaneBolumu.cs" />
+    <Compile Include="Entities\Personel\HizmetIciEgitimTipi.cs" />
+    <Compile Include="Entities\Personel\PersonelDetail.cs" />
+    <Compile Include="Entities\Personel\HizmetIciEgitim.cs" />
+    <Compile Include="Entities\Personel\YabanciDilDerecesi.cs" />
     <Compile Include="Entities\Personel\PersonelUnvani.cs" />
     <Compile Include="Entities\Personel\YabanciDil.cs" />
     <Compile Include="Entities\Personel\Personel.cs" />
@@ -289,6 +294,9 @@
     <Compile Include="Mappings\Medula\MEDRAPORTESHISMap.cs" />
     <Compile Include="Mappings\Patient\UserPatientVisitMap.cs" />
     <Compile Include="Mappings\Personel\HastaneBolumuMap.cs" />
+    <Compile Include="Mappings\Personel\HizmetIciEgitimTipiMap.cs" />
+    <Compile Include="Mappings\Personel\HizmetIciEgitimMap.cs" />
+    <Compile Include="Mappings\Personel\YabanciDilDerecesiMap.cs" />
     <Compile Include="Mappings\Personel\PersonelUnvaniMap.cs" />
     <Compile Include="Mappings\Personel\YabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\PersonelEgitimMap.cs" />

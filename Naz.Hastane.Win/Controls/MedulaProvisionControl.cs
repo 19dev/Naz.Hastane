@@ -158,12 +158,12 @@ namespace Naz.Hastane.Win.Controls
     public class MedulaProvisionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
 
-        private object[] results;
+        private object[] _results;
 
         public MedulaProvisionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
             base(exception, cancelled, userState)
         {
-            results = results;
+            _results = results;
         }
 
         public MedulaProvisionResult Result
@@ -171,7 +171,7 @@ namespace Naz.Hastane.Win.Controls
             get
             {
                 base.RaiseExceptionIfNecessary();
-                return ((MedulaProvisionResult)(results[0]));
+                return ((MedulaProvisionResult)(_results[0]));
             }
         }
     }

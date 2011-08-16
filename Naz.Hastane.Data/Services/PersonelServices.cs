@@ -104,11 +104,33 @@ namespace Naz.Hastane.Data.Services
             return personel;
         }                      
          
+        public static PersonelHastaneBolumu CreateNewPersonelHastaneBolumu()
+        {
+            return DataBindingFactory.Create<PersonelHastaneBolumu>();
+        }
+
         public static PersonelEgitim CreateNewPersonelEgitim()
         {
-            PersonelEgitim personelEgitim = DataBindingFactory.Create<PersonelEgitim>();
+            return DataBindingFactory.Create<PersonelEgitim>();
+        }
 
-            return personelEgitim;
+        public static PersonelRapor CreateNewPersonelRapor()
+        {
+            return DataBindingFactory.Create<PersonelRapor>();
+        }
+
+        public static PersonelIzin CreateNewPersonelIzin()
+        {
+            return DataBindingFactory.Create<PersonelIzin>();
+        }
+
+        public static PersonelYabanciDil CreateNewPersonelYabanciDil()
+        {
+            return DataBindingFactory.Create<PersonelYabanciDil>();
+        }
+        public static PersonelSertifika CreateNewPersonelSertifika()
+        {
+            return DataBindingFactory.Create<PersonelSertifika>();
         }
 
     }

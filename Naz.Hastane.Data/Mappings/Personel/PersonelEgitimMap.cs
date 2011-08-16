@@ -7,7 +7,7 @@ namespace Naz.Hastane.Data.Mappings
     {
         public PersonelEgitimMap() 
         {
-			Table("PersonelEgitim");
+			Table("tblPersonelEgitim");
 			LazyLoad();
 			Id(x => x.ID).GeneratedBy.Identity().Column("ID");
 			References(x => x.Personel).Column("PersonelID").Not.Nullable();

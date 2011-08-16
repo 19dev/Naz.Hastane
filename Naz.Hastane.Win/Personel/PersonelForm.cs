@@ -102,6 +102,13 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             UIUtilities.BindControl(meExplanation, Personel, x => x.Aciklama);
 
+            gcPersonelEgitim.DataSource = Personel.PersonelEgitims;
+            gcHastaneBolumu.DataSource = Personel.PersonelHastaneBolumus;
+            gcIzinler.DataSource = Personel.PersonelIzins;
+            gcRaporlar.DataSource = Personel.PersonelRapors;
+            gcSertifikalar.DataSource = Personel.PersonelSertifikas;
+            gcYabanciDil.DataSource = Personel.PersonelYabanciDils;
+            
         }
 
         private void LoadLookUps()
@@ -175,35 +182,142 @@ namespace Naz.Hastane.Win.MDIChildForms
         #region HastaneBolumu
         private void sbAddHastaneBolumu_Click(object sender, EventArgs e)
         {
+            Add<PersonelHastaneBolumuForm, PersonelHastaneBolumu>();
         }
 
         private void sbChangeHastaneBolumu_Click(object sender, EventArgs e)
         {
-
+            Change<PersonelHastaneBolumuForm, PersonelHastaneBolumu>(gvHastaneBolumu);
         }
 
         private void sbDeleteHastaneBolumu_Click(object sender, EventArgs e)
         {
-
+            Delete<PersonelHastaneBolumu>(gvHastaneBolumu, "Personel Hastane Bölümü Kaydı Silinmiştir.", 
+                "Personel Hastane Bölümü Kaydı Silinemedi:", "Personel Hastane Bölümü Kaydı Silme İşlemi");
         }
         #endregion
 
         #region PersonelEgitim
         private void sbAddPersonelEgitim_Click(object sender, EventArgs e)
         {
-
+            Add<PersonelEgitimForm, PersonelEgitim>();
         }
 
         private void sbChangePersonelEgitim_Click(object sender, EventArgs e)
         {
-
+            Change<PersonelEgitimForm, PersonelEgitim>(gvPersonelEgitim);
         }
 
         private void sbDeletePersonelEgitim_Click(object sender, EventArgs e)
         {
+            Delete<PersonelEgitim>(gvPersonelEgitim, "Personel Eğitimi Silinmiştir.",
+                "Personel Eğitimi Silinemedi:", "Personel Eğitimi Silme İşlemi");
+        }
 
+        #endregion
+
+        #region PersonelRapor
+        private void sbAddPersonelRapor_Click(object sender, EventArgs e)
+        {
+            Add<PersonelRaporForm, PersonelRapor>();
+        }
+
+        private void sbChangePersonelRapor_Click(object sender, EventArgs e)
+        {
+            Change<PersonelRaporForm, PersonelRapor>(gvRaporlar);
+        }
+
+        private void sbDeletePersonelRapor_Click(object sender, EventArgs e)
+        {
+            Delete<PersonelRapor>(gvHastaneBolumu, "Personel Raporu Silinmiştir.",
+                "Personel Raporu Silinemedi:", "Personel Raporu Silme İşlemi");
         }
         #endregion
 
+        #region Personelİzin
+        private void sbAddPersonelIzin_Click(object sender, EventArgs e)
+        {
+            Add<PersonelIzinForm, PersonelIzin>();
+        }
+
+        private void sbChangePersonelIzin_Click(object sender, EventArgs e)
+        {
+            Change<PersonelIzinForm, PersonelIzin>(gvIzinler);
+        }
+
+        private void sbDeletePersonelIzin_Click(object sender, EventArgs e)
+        {
+            Delete<PersonelIzin>(gvIzinler, "Personel İzni Silinmiştir.",
+                "Personel İzni Silinemedi:", "Personel İzni Silme İşlemi");
+        }
+        #endregion
+
+        #region DetailTemplates
+        private void Add<TForm, T>() 
+            where TForm : PersonelDetailForm<T>, new()
+            where T : PersonelDetail, new()
+
+        {
+            using (TForm frm = new TForm())
+            {
+                frm.PersonelDetailFormParams(Personel, 0);
+                frm.ShowDialog();
+                if (frm.IsOK)
+                    ReLoadPersonel();
+            }
+        }
+
+        private void Change<TForm, T>(GridView gv)
+            where TForm : PersonelDetailForm<T>, new()
+            where T : PersonelDetail, new()
+        {
+            T o = gv.GetFocusedRow() as T;
+            if (o != null)
+                using (TForm frm = new TForm())
+                {
+                    frm.PersonelDetailFormParams(Personel, o.ID);
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                        ReLoadPersonel();
+                }
+        }
+
+        private void Delete<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
+        {
+            TObject o = gv.GetFocusedRow() as TObject;
+            if (o != null)
+            {
+                try
+                {
+                    LookUpServices.Delete(Session, o);
+                    ReLoadPersonel();
+                    XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception error)
+                {
+                    XtraMessageBox.Show(deleteFail + error.Message, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        #endregion
+
+        #region Yabancı Dil
+        private void sbAddPersonelYabanciDil_Click(object sender, EventArgs e)
+        {
+            Add<PersonelYabanciDilForm, PersonelYabanciDil>();
+        }
+
+        private void sbChangePersonelYabanciDil_Click(object sender, EventArgs e)
+        {
+            Change<PersonelYabanciDilForm, PersonelYabanciDil>(gvYabanciDil);
+        }
+
+        private void sbDeletePersonelYabanciDil_Click(object sender, EventArgs e)
+        {
+            Delete<PersonelYabanciDil>(gvYabanciDil, "Personel Yabancı Dil Kaydı Silinmiştir.",
+                "Personel Yabancı Dil Kaydı Silinemedi:", "Personel Yabancı Dil Kaydı Silme İşlemi");
+        }
+
+        #endregion
     }
 }
