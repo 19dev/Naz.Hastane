@@ -88,6 +88,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.cmbPersonel.Location = new System.Drawing.Point(57, 12);
             this.cmbPersonel.Name = "cmbPersonel";
             this.cmbPersonel.Size = new System.Drawing.Size(180, 21);
+            this.cmbPersonel.Sorted = true;
             this.cmbPersonel.TabIndex = 10;
             // 
             // sbSaveAndClose
@@ -229,7 +230,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
             this.Name = "HizmetIciEgitimPersonelEditForm";
-            this.Text = "Personel Eğitim Formu";
+            this.Text = "Hizmetiçi Eğitim Personel Giriş Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).EndInit();

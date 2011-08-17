@@ -107,6 +107,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.cmbHastaneBolumu.Location = new System.Drawing.Point(93, 12);
             this.cmbHastaneBolumu.Name = "cmbHastaneBolumu";
             this.cmbHastaneBolumu.Size = new System.Drawing.Size(144, 21);
+            this.cmbHastaneBolumu.Sorted = true;
             this.cmbHastaneBolumu.TabIndex = 10;
             // 
             // sbSaveAndClose
@@ -252,14 +253,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // PersonelHastaneBolumuForm
+            // PersonelHastaneBolumuEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelHastaneBolumuForm";
-            this.Text = "Personel Hsatane Bölümü Formu";
+            this.Name = "PersonelHastaneBolumuEditForm";
+            this.Text = "Personel Hastane Bölümü Giriş Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deBaslangicTarihi.Properties.VistaTimeProperties)).EndInit();

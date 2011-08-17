@@ -51,5 +51,4 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
     }
     public class PersonelDetailHastaneBolumuForm : PersonelDetailEditForm<PersonelHastaneBolumu> { }
-
 }

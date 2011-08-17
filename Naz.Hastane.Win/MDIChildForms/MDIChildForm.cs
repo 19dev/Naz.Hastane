@@ -4,14 +4,17 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using NHibernate;
+using Naz.Hastane.Data.Entities;
+using DevExpress.XtraGrid.Views.Grid;
+using Naz.Hastane.Data.Services;
+using DevExpress.XtraEditors;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    /// <summary>
-    /// Summary description for frmPad.
-    /// </summary>
-    public partial class MDIChildForm : DevExpress.XtraEditors.XtraForm {
-        public MDIChildForm() {
+    public partial class MDIChildForm : DevExpress.XtraEditors.XtraForm
+    {
+        public MDIChildForm()
+        {
             //
             // Required for Windows Form Designer support
             //
@@ -20,6 +23,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             // TODO: Add any constructor code after InitializeComponent call
             //
         }
+
+        #region Session
 
         private ISession session;
         private IStatelessSession statelessSession;
@@ -88,15 +93,18 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
             //View.Close();
             //Disposed();
         }
-
+        #endregion
 
         bool modified = false;
         bool newDocument = true;
 
-        public bool Modified {
+        public bool Modified
+        {
             get { return modified; }
-            set {
-                if(value != modified) {
+            set
+            {
+                if (value != modified)
+                {
                     modified = value;
                     //this.Text = DocName + (Modified ? "*" : "");
                     //if(MdiParent != null) ((frmMain)MdiParent).UpdateText();
@@ -105,7 +113,8 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         }
         public bool NewDocument { get { return this.newDocument; } }
 
-        bool SaveQuestion() {
+        bool SaveQuestion()
+        {
             //if(Modified) {
             //    switch(DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to save the changes you made to " + DocName + "?", "SimplePad Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)) {
             //        case DialogResult.Cancel:
@@ -118,14 +127,16 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
             return true;
         }
 
-        private void frmPad_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+        private void frmPad_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
             //e.Cancel = !SaveQuestion();
         }
 
         public event EventHandler ShowPopupMenu;
 
-        void RaiseShowPopupMenu() {
-            if(ShowPopupMenu != null)
+        void RaiseShowPopupMenu()
+        {
+            if (ShowPopupMenu != null)
                 ShowPopupMenu(null, EventArgs.Empty);
         }
 
@@ -133,5 +144,57 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         {
             MyDispose();
         }
+
+        protected virtual void ReLoadForm(){}
+
+        #region DetailTemplates
+        protected void AddDetail<TForm, T>()
+            where TForm : DetailEditForm<T>, new()
+            where T : IDBase, new()
+        {
+            using (TForm frm = new TForm())
+            {
+                frm.DetailFormParams(0);
+                frm.ShowDialog();
+                if (frm.IsOK)
+                    ReLoadForm();
+            }
+        }
+
+        protected void ChangeDetail<TForm, T>(GridView gv)
+            where TForm : DetailEditForm<T>, new()
+            where T : IDBase, new()
+        {
+            T o = gv.GetFocusedRow() as T;
+            if (o != null)
+                using (TForm frm = new TForm())
+                {
+                    frm.DetailFormParams(o.ID);
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                        ReLoadForm();
+                }
+        }
+
+        protected void DeleteDetail<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
+        {
+            TObject o = gv.GetFocusedRow() as TObject;
+            if (o != null)
+            {
+                try
+                {
+                    LookUpServices.Delete(Session, o);
+                    ReLoadForm();
+                    XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception error)
+                {
+                    XtraMessageBox.Show(deleteFail + error.Message, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        #endregion
+
     }
+
 }

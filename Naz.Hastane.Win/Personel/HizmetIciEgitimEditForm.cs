@@ -51,6 +51,11 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
+        private void sbEditHizmetIciEgitimTipi_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
     public class HizmetIciEgitimDetailForm : DetailEditForm<HizmetIciEgitim> { }
 }

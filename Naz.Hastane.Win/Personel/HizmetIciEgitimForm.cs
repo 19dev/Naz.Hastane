@@ -14,87 +14,41 @@ namespace Naz.Hastane.Win.MDIChildForms
         public HizmetIciEgitimForm()
         {
             InitializeComponent();
-            ReLoad();
+            ReLoadForm();
         }
 
-        private void ReLoad()
+        protected override void ReLoadForm()
         {
             gcHizmetIciEgitim.DataSource = LookUpServices.GetAll<HizmetIciEgitim>(Session);
             ShowPersonels();
         }
 
+        #region HizmetIciEgitim
         private void sbAddHizmetIciEgitim_Click(object sender, System.EventArgs e)
         {
-            Add<HizmetIciEgitimEditForm, HizmetIciEgitim>();
+            AddDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>();
         }
 
         private void sbChangeHizmetIciEgitim_Click(object sender, System.EventArgs e)
         {
-            Change<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
+            ChangeDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
         }
 
         private void sbDeleteHizmetIciEgitim_Click(object sender, System.EventArgs e)
         {
-            Delete<HizmetIciEgitim>(gvHizmetIciEgitim, "Hizmetiçi Eğitim Kaydı Silinmiştir.",
+            DeleteDetail<HizmetIciEgitim>(gvHizmetIciEgitim, "Hizmetiçi Eğitim Kaydı Silinmiştir.",
                 "Hizmetiçi Eğitim Kaydı Silinemedi:", "Hizmetiçi Eğitim Kaydı Silme İşlemi");
-        }
-
-        #region DetailTemplates
-        private void Add<TForm, T>()
-            where TForm : DetailEditForm<T>, new()
-            where T : IDBase, new()
-        {
-            using (TForm frm = new TForm())
-            {
-                frm.DetailFormParams( 0);
-                frm.ShowDialog();
-                if (frm.IsOK)
-                    ReLoad();
-            }
-        }
-
-        private void Change<TForm, T>(GridView gv)
-            where TForm : DetailEditForm<T>, new()
-            where T : IDBase, new()
-        {
-            T o = gv.GetFocusedRow() as T;
-            if (o != null)
-                using (TForm frm = new TForm())
-                {
-                    frm.DetailFormParams(o.ID);
-                    frm.ShowDialog();
-                    if (frm.IsOK)
-                        ReLoad();
-                }
-        }
-
-        private void Delete<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
-        {
-            TObject o = gv.GetFocusedRow() as TObject;
-            if (o != null)
-            {
-                try
-                {
-                    LookUpServices.Delete(Session, o);
-                    ReLoad();
-                    XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception error)
-                {
-                    XtraMessageBox.Show(deleteFail + error.Message, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
         #endregion
 
         private void gvHizmetIciEgitim_DoubleClick(object sender, EventArgs e)
         {
-            Change<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
+            ChangeDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
         }
 
         private void gvPersonel_DoubleClick(object sender, EventArgs e)
         {
-            Change<HizmetIciEgitimPersonelEditForm, PersonelHizmetIciEgitim>(gvPersonel);
+            ChangePersonel();
         }
 
         private void gvHizmetIciEgitim_Click(object sender, EventArgs e)
@@ -111,22 +65,47 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
+        private void AddPersonel()
+        {
+            if (CurrentHizmetIciEgitim != null)
+                using (HizmetIciEgitimPersonelEditForm frm = new HizmetIciEgitimPersonelEditForm())
+                {
+                    frm.DetailFormParams(CurrentHizmetIciEgitim, 0);
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                        ReLoadForm();
+                }
+        }
         private void sbAddPersonel_Click(object sender, EventArgs e)
         {
-            Add<HizmetIciEgitimPersonelEditForm, PersonelHizmetIciEgitim>();
+            AddPersonel();
         }
 
+        private void ChangePersonel()
+        {
+            if (CurrentHizmetIciEgitim != null)
+            {
+                PersonelHizmetIciEgitim o = gvPersonel.GetFocusedRow() as PersonelHizmetIciEgitim;
+                if (o != null)
+                    using (HizmetIciEgitimPersonelEditForm frm = new HizmetIciEgitimPersonelEditForm())
+                    {
+                        frm.DetailFormParams(CurrentHizmetIciEgitim, o.ID);
+                        frm.ShowDialog();
+                        if (frm.IsOK)
+                            ReLoadForm();
+                    }
+            }
+        }
         private void sbChangePersonel_Click(object sender, EventArgs e)
         {
-            Change<HizmetIciEgitimPersonelEditForm, PersonelHizmetIciEgitim>(gvPersonel);
+            ChangePersonel();
         }
 
         private void sbDeletePersonel_Click(object sender, EventArgs e)
         {
-            Delete<PersonelHizmetIciEgitim>(gvPersonel, "Hizmetiçi Eğitim Personel Kaydı Silinmiştir.",
+            DeleteDetail<PersonelHizmetIciEgitim>(gvPersonel, "Hizmetiçi Eğitim Personel Kaydı Silinmiştir.",
                 "Hizmetiçi Eğitim Personel Kaydı Silinemedi:", "Hizmetiçi Eğitim Personel Kaydı Silme İşlemi");
         }
-
         
     }
 }

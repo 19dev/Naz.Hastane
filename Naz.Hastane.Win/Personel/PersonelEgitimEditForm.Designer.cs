@@ -306,14 +306,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // PersonelEgitimForm
+            // PersonelEgitimEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelEgitimForm";
-            this.Text = "Personel Eğitim Formu";
+            this.Name = "PersonelEgitimEditForm";
+            this.Text = "Personel Eğitim Giriş Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deBitisTarihi.Properties.VistaTimeProperties)).EndInit();

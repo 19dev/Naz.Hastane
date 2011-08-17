@@ -162,8 +162,9 @@
     <Compile Include="Entities\Personel\HizmetIciEgitimTipi.cs" />
     <Compile Include="Entities\Personel\PersonelDetail.cs" />
     <Compile Include="Entities\Personel\HizmetIciEgitim.cs" />
+    <Compile Include="Entities\Personel\PersonelUnvan.cs" />
     <Compile Include="Entities\Personel\YabanciDilDerecesi.cs" />
-    <Compile Include="Entities\Personel\PersonelUnvani.cs" />
+    <Compile Include="Entities\Personel\Unvan.cs" />
     <Compile Include="Entities\Personel\YabanciDil.cs" />
     <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\OkulTipi.cs" />
@@ -296,8 +297,9 @@
     <Compile Include="Mappings\Personel\HastaneBolumuMap.cs" />
     <Compile Include="Mappings\Personel\HizmetIciEgitimTipiMap.cs" />
     <Compile Include="Mappings\Personel\HizmetIciEgitimMap.cs" />
+    <Compile Include="Mappings\Personel\PersonelUnvanMap.cs" />
     <Compile Include="Mappings\Personel\YabanciDilDerecesiMap.cs" />
-    <Compile Include="Mappings\Personel\PersonelUnvaniMap.cs" />
+    <Compile Include="Mappings\Personel\UnvanMap.cs" />
     <Compile Include="Mappings\Personel\YabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\PersonelEgitimMap.cs" />
     <Compile Include="Mappings\Personel\PersonelHastaneBolumuMap.cs" />

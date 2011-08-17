@@ -386,9 +386,9 @@ namespace Naz.Hastane.Data.Services
         public static IList<HastaneBolumu> HastaneBolumus
         { get { return LookUpTable(ref _HastaneBolumus); } }
 
-        private static IList<PersonelUnvani> _PersonelUnvanis;
-        public static IList<PersonelUnvani> PersonelUnvanis
-        { get { return LookUpTable(ref _PersonelUnvanis); } }
+        private static IList<Unvan> _Unvans;
+        public static IList<Unvan> Unvans
+        { get { return LookUpTable(ref _Unvans); } }
 
         #endregion
 

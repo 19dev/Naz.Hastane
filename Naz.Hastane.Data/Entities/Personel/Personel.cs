@@ -30,7 +30,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string DogumSiraNo { get; set; }
         public virtual string Cinsiyeti { get; set; }
         public virtual string MedeniHali { get; set; }
-        public virtual PersonelUnvani PersonelUnvani { get; set; }
+        public virtual Unvan PersonelUnvani { get; set; }
         public virtual HastaneBolumu HastaneBolumu { get; set; }
         public virtual string EvAdresi { get; set; }
         public virtual string Telefon { get; set; }
@@ -39,7 +39,7 @@ namespace Naz.Hastane.Data.Entities
         public virtual string IsRetired { get; set; }
         public virtual string HasUnion { get; set; }
         public virtual BloodType KanGrubu { get; set; }
-        public virtual DateTime? IseGirisTarihi { get; set; }
+        public virtual DateTime IseGirisTarihi { get; set; }
         public virtual string SigortaNo { get; set; }
         public virtual string VergiNo { get; set; }
         public virtual DateTime? AyrilisTarihi { get; set; }
@@ -168,6 +168,26 @@ namespace Naz.Hastane.Data.Entities
         public virtual void RemovePersonelSertifika(PersonelSertifika pv)
         {
             _PersonelSertifikas.Remove(pv);
+        }
+        #endregion
+        #region PersonelUnvan
+        private IList<PersonelUnvan> _PersonelUnvans = new List<PersonelUnvan>();
+
+        public virtual IList<PersonelUnvan> PersonelUnvans
+        {
+            get { return _PersonelUnvans; }
+            set { _PersonelUnvans = value; }
+        }
+
+        public virtual void AddPersonelUnvan(PersonelUnvan pv)
+        {
+            pv.Personel = this;
+            this.PersonelUnvans.Insert(0, pv);
+        }
+
+        public virtual void RemovePersonelUnvan(PersonelUnvan pv)
+        {
+            _PersonelUnvans.Remove(pv);
         }
         #endregion
         #region PersonelYabanciDil

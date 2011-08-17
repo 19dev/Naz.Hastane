@@ -26,6 +26,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
             LoadLookUps();
+            AttachEventHandlers();
         }
 
         public PersonelForm(int ID) : this()
@@ -53,7 +54,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private void ReLoadPersonel()
+        protected override void ReLoadForm()
         {
             int id = Personel.ID;
             _Personel = null;
@@ -102,12 +103,14 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             UIUtilities.BindControl(meExplanation, Personel, x => x.Aciklama);
 
-            gcPersonelEgitim.DataSource = Personel.PersonelEgitims;
             gcHastaneBolumu.DataSource = Personel.PersonelHastaneBolumus;
-            gcIzinler.DataSource = Personel.PersonelIzins;
+            gcUnvanlar.DataSource = Personel.PersonelUnvans;
+            gcPersonelEgitim.DataSource = Personel.PersonelEgitims;
+            gcHizmetIciEgitim.DataSource = Personel.PersonelHizmetIciEgitims;
             gcRaporlar.DataSource = Personel.PersonelRapors;
-            gcSertifikalar.DataSource = Personel.PersonelSertifikas;
+            gcIzinler.DataSource = Personel.PersonelIzins;
             gcYabanciDil.DataSource = Personel.PersonelYabanciDils;
+            gcSertifikalar.DataSource = Personel.PersonelSertifikas;
             
         }
 
@@ -119,7 +122,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             UIUtilities.BindComboBox(cmbBloodType, LookUpServices.BloodTypes, displayMember: "Value", valueMember: "ID");
             UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbPersonelUnvani, LookUpServices.PersonelUnvanis, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbPersonelUnvani, LookUpServices.Unvans, displayMember: "Value", valueMember: "ID");
         }
 
         public void SetNewTCID(string TCID)
@@ -150,7 +153,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 Personel.IsRetired = ceEmekli.EditValue.ToString();
                 Personel.HasUnion = ceSendikali.EditValue.ToString();
                 LookUpServices.SaveOrUpdate(Session, Personel);
-                ReLoadPersonel();
+                ReLoadForm();
                 XtraMessageBox.Show("Personel Kayıt Edilmiştir", "Personel Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
@@ -179,118 +182,52 @@ namespace Naz.Hastane.Win.MDIChildForms
                 SavePersonel();
         }
 
-        #region PersonelEgitim
-        private void sbAddPersonelEgitim_Click(object sender, EventArgs e)
+        private void AttachEventHandlers()
         {
-            Add<PersonelEgitimEditForm, PersonelEgitim>();
-        }
-
-        private void sbChangePersonelEgitim_Click(object sender, EventArgs e)
-        {
-            Change<PersonelEgitimEditForm, PersonelEgitim>(gvPersonelEgitim);
-        }
-
-        private void sbDeletePersonelEgitim_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelEgitim>(gvPersonelEgitim, "Personel Eğitimi Silinmiştir.",
-                "Personel Eğitimi Silinemedi:", "Personel Eğitimi Silme İşlemi");
-        }
-
-        #endregion
-
-        #region HastaneBolumu
-        private void sbAddHastaneBolumu_Click(object sender, EventArgs e)
-        {
-            Add<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>();
-        }
-
-        private void sbChangeHastaneBolumu_Click(object sender, EventArgs e)
-        {
-            Change<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>(gvHastaneBolumu);
-        }
-
-        private void sbDeleteHastaneBolumu_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelHastaneBolumu>(gvHastaneBolumu, "Personel Hastane Bölümü Kaydı Silinmiştir.", 
+            sbAddPersonelHastaneBolumu.Click += (o, args) => AddDetail<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>();
+            sbChangePersonelHastaneBolumu.Click += (o, args) => ChangeDetail<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>(gvHastaneBolumu);
+            sbDeletePersonelHastaneBolumu.Click += (o, args) => DeleteDetail<PersonelHastaneBolumu>(gvHastaneBolumu, "Personel Hastane Bölümü Kaydı Silinmiştir.", 
                 "Personel Hastane Bölümü Kaydı Silinemedi:", "Personel Hastane Bölümü Kaydı Silme İşlemi");
-        }
-        #endregion
 
-        #region Personelİzin
-        private void sbAddPersonelIzin_Click(object sender, EventArgs e)
-        {
-            Add<PersonelIzinEditForm, PersonelIzin>();
-        }
+            sbAddPersonelUnvan.Click += (o, args) => AddDetail<PersonelUnvanEditForm, PersonelUnvan>();
+            sbChangePersonelUnvan.Click += (o, args) => ChangeDetail<PersonelUnvanEditForm, PersonelUnvan>(gvUnvanlar);
+            sbDeletePersonelUnvan.Click += (o, args) => DeleteDetail<PersonelUnvan>(gvUnvanlar, "Personel Ünvan Kaydı Silinmiştir.",
+                "Personel Ünvan Kaydı Silinemedi:", "Personel Ünvan Kaydı Silme İşlemi");
 
-        private void sbChangePersonelIzin_Click(object sender, EventArgs e)
-        {
-            Change<PersonelIzinEditForm, PersonelIzin>(gvIzinler);
-        }
+            sbAddPersonelEgitim.Click += (o, args) => AddDetail<PersonelEgitimEditForm, PersonelEgitim>();
+            sbChangePersonelEgitim.Click += (o, args) => ChangeDetail<PersonelEgitimEditForm, PersonelEgitim>(gvPersonelEgitim);
+            sbDeletePersonelEgitim.Click += (o, args) => DeleteDetail<PersonelEgitim>(gvPersonelEgitim, "Personel Eğitimi Silinmiştir.",
+                "Personel Eğitimi Silinemedi:", "Personel Eğitimi Silme İşlemi");
 
-        private void sbDeletePersonelIzin_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelIzin>(gvIzinler, "Personel İzni Silinmiştir.",
-                "Personel İzni Silinemedi:", "Personel İzni Silme İşlemi");
-        }
-        #endregion
+            sbAddPersonelHizmetIciEgitim.Click += (o, args) => AddDetail<PersonelHizmetIciEgitimEditForm, PersonelHizmetIciEgitim>();
+            sbChangePersonelHizmetIciEgitim.Click += (o, args) => ChangeDetail<PersonelHizmetIciEgitimEditForm, PersonelHizmetIciEgitim>(gvHizmetIciEgitim);
+            sbDeletePersonelHizmetIciEgitim.Click += (o, args) => DeleteDetail<PersonelHizmetIciEgitim>(gvHizmetIciEgitim, "Personel Hizmet İçi Eğitim Kaydı Silinmiştir.",
+                "Personel Hizmet İçi Eğitim Kaydı Silinemedi:", "Personel Hizmet İçi Eğitim Kaydı Silme İşlemi");
 
-        #region PersonelRapor
-        private void sbAddPersonelRapor_Click(object sender, EventArgs e)
-        {
-            Add<PersonelRaporEditForm, PersonelRapor>();
-        }
+            sbAddPersonelRapor.Click += (o, args) => AddDetail<PersonelRaporEditForm, PersonelRapor>();
+            sbChangePersonelRapor.Click += (o, args) => ChangeDetail<PersonelRaporEditForm, PersonelRapor>(gvRaporlar);
+            sbDeletePersonelRapor.Click += (o, args) => DeleteDetail<PersonelRapor>(gvRaporlar, "Personel Rapor Kaydı Silinmiştir.",
+                "Personel Rapor Kaydı Silinemedi:", "Personel Rapor Kaydı Silme İşlemi");
 
-        private void sbChangePersonelRapor_Click(object sender, EventArgs e)
-        {
-            Change<PersonelRaporEditForm, PersonelRapor>(gvRaporlar);
-        }
+            sbAddPersonelIzin.Click += (o, args) => AddDetail<PersonelIzinEditForm, PersonelIzin>();
+            sbChangePersonelIzin.Click += (o, args) => ChangeDetail<PersonelIzinEditForm, PersonelIzin>(gvIzinler);
+            sbDeletePersonelIzin.Click += (o, args) => DeleteDetail<PersonelIzin>(gvIzinler, "Personel İzin Kaydı Silinmiştir.",
+                "Personel İzin Kaydı Silinemedi:", "Personel İzin Kaydı Silme İşlemi");
 
-        private void sbDeletePersonelRapor_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelRapor>(gvHastaneBolumu, "Personel Raporu Silinmiştir.",
-                "Personel Raporu Silinemedi:", "Personel Raporu Silme İşlemi");
-        }
-        #endregion
-
-        #region PersonelSertifika
-        private void sbAddPersonelSertifika_Click(object sender, EventArgs e)
-        {
-            Add<PersonelSertifikaEditForm, PersonelSertifika>();
-        }
-
-        private void sbChangePersonelSertifika_Click(object sender, EventArgs e)
-        {
-            Change<PersonelSertifikaEditForm, PersonelSertifika>(gvSertifikalar);
-        }
-
-        private void sbDeletePersonelSertifika_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelSertifika>(gvHastaneBolumu, "Personel Sertifika Kaydı Silinmiştir.",
-                "Personel Sertifika Kaydı Silinemedi:", "Personel Sertifika Kaydı Silme İşlemi");
-        }
-        #endregion
-
-        #region Yabancı Dil
-        private void sbAddPersonelYabanciDil_Click(object sender, EventArgs e)
-        {
-            Add<PersonelYabanciDilEditForm, PersonelYabanciDil>();
-        }
-
-        private void sbChangePersonelYabanciDil_Click(object sender, EventArgs e)
-        {
-            Change<PersonelYabanciDilEditForm, PersonelYabanciDil>(gvYabanciDil);
-        }
-
-        private void sbDeletePersonelYabanciDil_Click(object sender, EventArgs e)
-        {
-            Delete<PersonelYabanciDil>(gvYabanciDil, "Personel Yabancı Dil Kaydı Silinmiştir.",
+            sbAddPersonelYabanciDil.Click += (o, args) => AddDetail<PersonelYabanciDilEditForm, PersonelYabanciDil>();
+            sbChangePersonelYabanciDil.Click += (o, args) => ChangeDetail<PersonelYabanciDilEditForm, PersonelYabanciDil>(gvYabanciDil);
+            sbDeletePersonelYabanciDil.Click += (o, args) => DeleteDetail<PersonelYabanciDil>(gvYabanciDil, "Personel Yabancı Dil Kaydı Silinmiştir.",
                 "Personel Yabancı Dil Kaydı Silinemedi:", "Personel Yabancı Dil Kaydı Silme İşlemi");
-        }
 
-        #endregion
+            sbAddPersonelSertifika.Click += (o, args) => AddDetail<PersonelSertifikaEditForm, PersonelSertifika>();
+            sbChangePersonelSertifika.Click += (o, args) => ChangeDetail<PersonelSertifikaEditForm, PersonelSertifika>(gvSertifikalar);
+            sbDeletePersonelSertifika.Click += (o, args) => DeleteDetail<PersonelSertifika>(gvSertifikalar, "Personel Sertifika Kaydı Silinmiştir.",
+                "Personel Sertifika Kaydı Silinemedi:", "Personel Sertifika Kaydı Silme İşlemi");
+
+        }
 
         #region DetailTemplates
-        private void Add<TForm, T>()
+        private new void AddDetail<TForm, T>()
             where TForm : PersonelDetailEditForm<T>, new()
             where T : PersonelDetail, new()
         {
@@ -299,11 +236,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                 frm.DetailFormParams(Personel, 0);
                 frm.ShowDialog();
                 if (frm.IsOK)
-                    ReLoadPersonel();
+                    ReLoadForm();
             }
         }
 
-        private void Change<TForm, T>(GridView gv)
+        private new void ChangeDetail<TForm, T>(GridView gv)
             where TForm : PersonelDetailEditForm<T>, new()
             where T : PersonelDetail, new()
         {
@@ -314,11 +251,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                     frm.DetailFormParams(Personel, o.ID);
                     frm.ShowDialog();
                     if (frm.IsOK)
-                        ReLoadPersonel();
+                        ReLoadForm();
                 }
         }
 
-        private void Delete<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
+        private new void DeleteDetail<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
         {
             TObject o = gv.GetFocusedRow() as TObject;
             if (o != null)
@@ -326,7 +263,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 try
                 {
                     LookUpServices.Delete(Session, o);
-                    ReLoadPersonel();
+                    ReLoadForm();
                     XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception error)

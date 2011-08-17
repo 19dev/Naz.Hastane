@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelRaporEditForm : PersonelDetailEditForm<PersonelRapor>
+    public partial class PersonelRaporEditForm : PersonelDetailRaporForm
     {
         public PersonelRaporEditForm()
         {

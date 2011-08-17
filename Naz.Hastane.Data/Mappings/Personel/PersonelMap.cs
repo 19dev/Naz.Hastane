@@ -61,6 +61,7 @@ namespace Naz.Hastane.Data.Entities
 			HasMany(x => x.PersonelIzins).KeyColumn("PersonelID").Inverse();
 			HasMany(x => x.PersonelRapors).KeyColumn("PersonelID").Inverse();
 			HasMany(x => x.PersonelSertifikas).KeyColumn("PersonelID").Inverse();
+			HasMany(x => x.PersonelUnvans).KeyColumn("PersonelID").Inverse();
 			HasMany(x => x.PersonelYabanciDils).KeyColumn("PersonelID").Inverse();
 
 		}

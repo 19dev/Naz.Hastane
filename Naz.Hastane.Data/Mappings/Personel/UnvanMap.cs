@@ -3,11 +3,11 @@ using FluentNHibernate.Mapping;
 
 namespace Naz.Hastane.Data.Mappings
 {
-    public class PersonelUnvaniMap : ClassMap<PersonelUnvani>
+    public class UnvanMap : ClassMap<Unvan>
     {
-        public PersonelUnvaniMap()
+        public UnvanMap()
         {
-            Table("tlkpPersonelUnvani");
+            Table("tlkpUnvan");
 
             Id(x => x.ID).Column("ID");
 

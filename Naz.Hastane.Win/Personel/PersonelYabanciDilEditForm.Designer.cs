@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbKonusmaDerecesi = new System.Windows.Forms.ComboBox();
+            this.cmbYazmaDerecesi = new System.Windows.Forms.ComboBox();
+            this.cmbOkumaDerecesi = new System.Windows.Forms.ComboBox();
             this.sbSaveAndNew = new DevExpress.XtraEditors.SimpleButton();
             this.cmbYabanciDil = new System.Windows.Forms.ComboBox();
             this.sbSaveAndClose = new DevExpress.XtraEditors.SimpleButton();
@@ -43,11 +46,8 @@
             this.lciYabanciDil = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciCancel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSaveAndNew = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbOkumaDerecesi = new System.Windows.Forms.ComboBox();
             this.lciOkumaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbYazmaDerecesi = new System.Windows.Forms.ComboBox();
             this.lciYazmaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbKonusmaDerecesi = new System.Windows.Forms.ComboBox();
             this.lciKonusmaDerecesi = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -84,6 +84,30 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // cmbKonusmaDerecesi
+            // 
+            this.cmbKonusmaDerecesi.FormattingEnabled = true;
+            this.cmbKonusmaDerecesi.Location = new System.Drawing.Point(103, 87);
+            this.cmbKonusmaDerecesi.Name = "cmbKonusmaDerecesi";
+            this.cmbKonusmaDerecesi.Size = new System.Drawing.Size(134, 21);
+            this.cmbKonusmaDerecesi.TabIndex = 16;
+            // 
+            // cmbYazmaDerecesi
+            // 
+            this.cmbYazmaDerecesi.FormattingEnabled = true;
+            this.cmbYazmaDerecesi.Location = new System.Drawing.Point(103, 62);
+            this.cmbYazmaDerecesi.Name = "cmbYazmaDerecesi";
+            this.cmbYazmaDerecesi.Size = new System.Drawing.Size(134, 21);
+            this.cmbYazmaDerecesi.TabIndex = 15;
+            // 
+            // cmbOkumaDerecesi
+            // 
+            this.cmbOkumaDerecesi.FormattingEnabled = true;
+            this.cmbOkumaDerecesi.Location = new System.Drawing.Point(103, 37);
+            this.cmbOkumaDerecesi.Name = "cmbOkumaDerecesi";
+            this.cmbOkumaDerecesi.Size = new System.Drawing.Size(134, 21);
+            this.cmbOkumaDerecesi.TabIndex = 14;
+            // 
             // sbSaveAndNew
             // 
             this.sbSaveAndNew.Location = new System.Drawing.Point(241, 53);
@@ -99,6 +123,7 @@
             this.cmbYabanciDil.Location = new System.Drawing.Point(103, 12);
             this.cmbYabanciDil.Name = "cmbYabanciDil";
             this.cmbYabanciDil.Size = new System.Drawing.Size(134, 21);
+            this.cmbYabanciDil.Sorted = true;
             this.cmbYabanciDil.TabIndex = 10;
             // 
             // sbSaveAndClose
@@ -205,11 +230,11 @@
             // lciYabanciDil
             // 
             this.lciYabanciDil.Control = this.cmbYabanciDil;
-            this.lciYabanciDil.CustomizationFormText = "Okul Tipi";
+            this.lciYabanciDil.CustomizationFormText = "Yabancı Dil";
             this.lciYabanciDil.Location = new System.Drawing.Point(0, 0);
             this.lciYabanciDil.Name = "lciYabanciDil";
             this.lciYabanciDil.Size = new System.Drawing.Size(229, 25);
-            this.lciYabanciDil.Text = "Okul Tipi";
+            this.lciYabanciDil.Text = "Yabancı Dil";
             this.lciYabanciDil.TextSize = new System.Drawing.Size(87, 13);
             // 
             // lciCancel
@@ -236,14 +261,6 @@
             this.lciSaveAndNew.TextToControlDistance = 0;
             this.lciSaveAndNew.TextVisible = false;
             // 
-            // cmbOkumaDerecesi
-            // 
-            this.cmbOkumaDerecesi.FormattingEnabled = true;
-            this.cmbOkumaDerecesi.Location = new System.Drawing.Point(103, 37);
-            this.cmbOkumaDerecesi.Name = "cmbOkumaDerecesi";
-            this.cmbOkumaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbOkumaDerecesi.TabIndex = 14;
-            // 
             // lciOkumaDerecesi
             // 
             this.lciOkumaDerecesi.Control = this.cmbOkumaDerecesi;
@@ -253,14 +270,6 @@
             this.lciOkumaDerecesi.Size = new System.Drawing.Size(229, 25);
             this.lciOkumaDerecesi.Text = "Okuma Derecesi";
             this.lciOkumaDerecesi.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // cmbYazmaDerecesi
-            // 
-            this.cmbYazmaDerecesi.FormattingEnabled = true;
-            this.cmbYazmaDerecesi.Location = new System.Drawing.Point(103, 62);
-            this.cmbYazmaDerecesi.Name = "cmbYazmaDerecesi";
-            this.cmbYazmaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbYazmaDerecesi.TabIndex = 15;
             // 
             // lciYazmaDerecesi
             // 
@@ -272,14 +281,6 @@
             this.lciYazmaDerecesi.Text = "Yazma Derecesi";
             this.lciYazmaDerecesi.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // cmbKonusmaDerecesi
-            // 
-            this.cmbKonusmaDerecesi.FormattingEnabled = true;
-            this.cmbKonusmaDerecesi.Location = new System.Drawing.Point(103, 87);
-            this.cmbKonusmaDerecesi.Name = "cmbKonusmaDerecesi";
-            this.cmbKonusmaDerecesi.Size = new System.Drawing.Size(134, 21);
-            this.cmbKonusmaDerecesi.TabIndex = 16;
-            // 
             // lciKonusmaDerecesi
             // 
             this.lciKonusmaDerecesi.Control = this.cmbKonusmaDerecesi;
@@ -290,13 +291,14 @@
             this.lciKonusmaDerecesi.Text = "Konuşma Derecesi";
             this.lciKonusmaDerecesi.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // PersonelYabanciDilForm
+            // PersonelYabanciDilEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 233);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "PersonelYabanciDilForm";
+            this.Name = "PersonelYabanciDilEditForm";
+            this.Text = "Personel Yabancı Dil Giriş Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.meAciklama.Properties)).EndInit();

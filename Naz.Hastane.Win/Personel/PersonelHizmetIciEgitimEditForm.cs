@@ -6,11 +6,9 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class HizmetIciEgitimPersonelEditForm : HizmetIciEgitimPersonelDetailForm
+    public partial class PersonelHizmetIciEgitimEditForm : PersonelHizmetIciEgitimDetailForm
     {
-        protected HizmetIciEgitim _HizmetIciEgitim;
-
-        public HizmetIciEgitimPersonelEditForm()
+        public PersonelHizmetIciEgitimEditForm()
         {
             InitializeComponent();
             LoadLookUps();
@@ -19,33 +17,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbCancel.Click += new System.EventHandler(base.sbCancel_Click);
         }
 
-        public virtual void DetailFormParams(HizmetIciEgitim hizmetIciEgitim, int detailID)
-        {
-            if (hizmetIciEgitim == null)
-                Close();
-
-            _HizmetIciEgitim = hizmetIciEgitim;
-
-            base.DetailFormParams(detailID);
-
-        }
-
-        protected override PersonelHizmetIciEgitim CreateNewObject()
-        {
-            PersonelHizmetIciEgitim o = base.CreateNewObject();
-            o.HizmetIciEgitim = _HizmetIciEgitim;
-            return o;
-        }
-
         protected override void InitBindings()
         {
-            UIUtilities.BindControl(cmbPersonel, TheObject, x => x.Personel, propertyName: "SelectedItem");
+            UIUtilities.BindControl(cmbHizmetIciEgitim, TheObject, x => x.HizmetIciEgitim, propertyName: "SelectedItem");
             UIUtilities.BindControl(meAciklama, TheObject, x => x.Aciklama);
         }
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbPersonel, LookUpServices.GetAll<Personel>(Session), displayMember: "FullName", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbHizmetIciEgitim, LookUpServices.GetAll<HizmetIciEgitim>(Session), displayMember: "Value", valueMember: "ID");
         }
 
         protected override bool Save()
@@ -63,7 +43,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
         }
-
     }
-    public class HizmetIciEgitimPersonelDetailForm : DetailEditForm<PersonelHizmetIciEgitim> { }
+    public class PersonelHizmetIciEgitimDetailForm : PersonelDetailEditForm<PersonelHizmetIciEgitim> { }
 }

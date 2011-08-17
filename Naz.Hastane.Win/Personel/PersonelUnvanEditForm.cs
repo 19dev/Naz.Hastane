@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class PersonelSertifikaEditForm : PersonelDetailSertifikaForm
+    public partial class PersonelUnvanEditForm : PersonelDetailUnvanForm
     {
-        public PersonelSertifikaEditForm()
+        public PersonelUnvanEditForm()
         {
             InitializeComponent();
             LoadLookUps();
@@ -19,32 +19,36 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void InitBindings()
         {
+            UIUtilities.BindControl(cmbUnvan, TheObject, x => x.Unvan, propertyName: "SelectedItem");
             UIUtilities.BindControl(deBaslangicTarihi, TheObject, x => x.BaslangicTarihi);
-            UIUtilities.BindControl(deBitisTarihi, TheObject, x => x.BitisTarihi);
             UIUtilities.BindControl(meAciklama, TheObject, x => x.Aciklama);
+        }
+
+        protected override void LoadLookUps()
+        {
+            UIUtilities.BindComboBox(cmbUnvan, LookUpServices.Unvans, displayMember: "Value", valueMember: "ID");
         }
 
         protected override bool Save()
         {
-            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi >= TheObject.BitisTarihi)
+            if (TheObject.BaslangicTarihi == null)
             {
-                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Lütfen Başlangıç Tarihini Kontrol Ediniz", "Personel Hastane Bölümü Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilmiştir", "Personel Sertifikası Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Personel Hastane Bölümü Kayıt Edilmiştir", "Personel Hastane Bölümü Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilemedi:" + error.Message, "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Personel Hastane Bölümü Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
         }
-
     }
-    public class PersonelDetailSertifikaForm : PersonelDetailEditForm<PersonelSertifika> { }
+    public class PersonelDetailUnvanForm : PersonelDetailEditForm<PersonelUnvan> { }
 }

@@ -58,6 +58,7 @@ namespace Naz.Hastane.Win
             //if (dataSourceList.Count > 0)
             //    lue.ItemIndex = 0;
         }
+
         public static void BindLookUpEditAllColumns<T>(LookUpEdit lue, IList<T> dataSourceList) where T : new()
         {
             lue.Properties.Columns.Clear();
@@ -87,7 +88,7 @@ namespace Naz.Hastane.Win
         public static void BindControl<T>(Control control, T t, Expression<Func<T, object>> memberExpression, string propertyName = "EditValue")
         {
             control.DataBindings.Clear();
-            control.DataBindings.Add(propertyName, t, DataUtilities.GetMemberName<T>(memberExpression));
+            control.DataBindings.Add(propertyName, t, DataUtilities.GetMemberName<T>(memberExpression), true);
         }
 
         private static IConfigSource _Configuration = null;
