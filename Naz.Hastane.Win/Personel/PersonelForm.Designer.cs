@@ -105,6 +105,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcYabanciDil = new DevExpress.XtraGrid.GridControl();
             this.gvYabanciDil = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -139,7 +141,7 @@
             this.teTCID = new DevExpress.XtraEditors.TextEdit();
             this.lueHomeCity = new DevExpress.XtraEditors.LookUpEdit();
             this.teMobilePhone = new DevExpress.XtraEditors.TextEdit();
-            this.teHomePhone1 = new DevExpress.XtraEditors.TextEdit();
+            this.teHomePhone = new DevExpress.XtraEditors.TextEdit();
             this.rgSex = new DevExpress.XtraEditors.RadioGroup();
             this.teSurname = new DevExpress.XtraEditors.TextEdit();
             this.tePersonelNo = new DevExpress.XtraEditors.TextEdit();
@@ -149,16 +151,16 @@
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciGridUnvanlar = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciDeleteUnvan = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciAddUnvan = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciChangeUnvan = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgDepartment = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciGridHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciChangeHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciAddHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciDeleteHastaneBolumu = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciGridUnvanlar = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciDeleteUnvan = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAddUnvan = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciChangeUnvan = new DevExpress.XtraLayout.LayoutControlItem();
             this.lgcEducation = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciGridPersonelEgitim = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciChangePersonelEgitim = new DevExpress.XtraLayout.LayoutControlItem();
@@ -201,7 +203,7 @@
             this.lciMobilePhone = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHomePhone1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHomePhone = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPhone = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciInsuranceNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTaxNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -285,7 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMobilePhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teHomePhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).BeginInit();
@@ -295,16 +297,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridUnvanlar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteUnvan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddUnvan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciChangeUnvan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridHastaneBolumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeHastaneBolumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddHastaneBolumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeleteHastaneBolumu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridUnvanlar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteUnvan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddUnvan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeUnvan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgcEducation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridPersonelEgitim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangePersonelEgitim)).BeginInit();
@@ -347,7 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTaxNo)).BeginInit();
@@ -450,7 +452,7 @@
             this.layoutControl1.Controls.Add(this.teTCID);
             this.layoutControl1.Controls.Add(this.lueHomeCity);
             this.layoutControl1.Controls.Add(this.teMobilePhone);
-            this.layoutControl1.Controls.Add(this.teHomePhone1);
+            this.layoutControl1.Controls.Add(this.teHomePhone);
             this.layoutControl1.Controls.Add(this.rgSex);
             this.layoutControl1.Controls.Add(this.teSurname);
             this.layoutControl1.Controls.Add(this.tePersonelNo);
@@ -1001,23 +1003,29 @@
             // gridColumn19
             // 
             this.gridColumn19.Caption = "Başlangıç Tarihi";
+            this.gridColumn19.FieldName = "BaslangicTarihi";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 0;
+            this.gridColumn19.VisibleIndex = 1;
+            this.gridColumn19.Width = 119;
             // 
             // gridColumn20
             // 
             this.gridColumn20.Caption = "Bitiş Tarihi";
+            this.gridColumn20.FieldName = "BitisTarihi";
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 1;
+            this.gridColumn20.VisibleIndex = 2;
+            this.gridColumn20.Width = 117;
             // 
             // gridColumn21
             // 
             this.gridColumn21.Caption = "Açıklama";
+            this.gridColumn21.FieldName = "Aciklama";
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 2;
+            this.gridColumn21.VisibleIndex = 0;
+            this.gridColumn21.Width = 909;
             // 
             // gcRaporlar
             // 
@@ -1127,7 +1135,9 @@
             this.gvHizmetIciEgitim.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn10,
             this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn27,
+            this.gridColumn28});
             this.gvHizmetIciEgitim.GridControl = this.gcHizmetIciEgitim;
             this.gvHizmetIciEgitim.Name = "gvHizmetIciEgitim";
             this.gvHizmetIciEgitim.OptionsBehavior.Editable = false;
@@ -1136,23 +1146,47 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Başlangıç Tarihi";
+            this.gridColumn10.FieldName = "HizmetIciEgitim.BaslangicTarihi";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 0;
+            this.gridColumn10.VisibleIndex = 2;
+            this.gridColumn10.Width = 72;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Bitiş Tarihi";
+            this.gridColumn11.FieldName = "HizmetIciEgitim.BitisTarihi";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 1;
+            this.gridColumn11.VisibleIndex = 3;
+            this.gridColumn11.Width = 65;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "Açıklama";
+            this.gridColumn12.FieldName = "Aciklama";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 2;
+            this.gridColumn12.VisibleIndex = 4;
+            this.gridColumn12.Width = 706;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "Hizmet İçi Eğitim Açıklama";
+            this.gridColumn27.FieldName = "HizmetIciEgitim.Aciklama";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 1;
+            this.gridColumn27.Width = 188;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "Hizmet İçi Eğitim Tipi";
+            this.gridColumn28.FieldName = "HizmetIciEgitim.HizmetIciEgitimTipi.Value";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 0;
+            this.gridColumn28.Width = 114;
             // 
             // gcYabanciDil
             // 
@@ -1294,6 +1328,7 @@
             // colHastaneBolumuBaslangicTarihi
             // 
             this.colHastaneBolumuBaslangicTarihi.Caption = "Başlangıç Tarihi";
+            this.colHastaneBolumuBaslangicTarihi.FieldName = "BaslangicTarihi";
             this.colHastaneBolumuBaslangicTarihi.Name = "colHastaneBolumuBaslangicTarihi";
             this.colHastaneBolumuBaslangicTarihi.Visible = true;
             this.colHastaneBolumuBaslangicTarihi.VisibleIndex = 1;
@@ -1362,6 +1397,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 229;
             // 
             // gridColumn2
             // 
@@ -1370,6 +1406,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 229;
             // 
             // gridColumn3
             // 
@@ -1378,6 +1415,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 91;
             // 
             // gridColumn4
             // 
@@ -1386,6 +1424,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 84;
             // 
             // gridColumn5
             // 
@@ -1394,6 +1433,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 512;
             // 
             // deExitDate
             // 
@@ -1487,13 +1527,13 @@
             this.teMobilePhone.StyleController = this.layoutControl1;
             this.teMobilePhone.TabIndex = 10;
             // 
-            // teHomePhone1
+            // teHomePhone
             // 
-            this.teHomePhone1.Location = new System.Drawing.Point(110, 289);
-            this.teHomePhone1.Name = "teHomePhone1";
-            this.teHomePhone1.Size = new System.Drawing.Size(276, 20);
-            this.teHomePhone1.StyleController = this.layoutControl1;
-            this.teHomePhone1.TabIndex = 9;
+            this.teHomePhone.Location = new System.Drawing.Point(110, 289);
+            this.teHomePhone.Name = "teHomePhone";
+            this.teHomePhone.Size = new System.Drawing.Size(276, 20);
+            this.teHomePhone.StyleController = this.layoutControl1;
+            this.teHomePhone.TabIndex = 9;
             // 
             // rgSex
             // 
@@ -1582,8 +1622,8 @@
             this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 455);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.lcgDepartment;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
+            this.tabbedControlGroup1.SelectedTabPage = this.lcgHizmetIciEgitim;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 3;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1245, 281);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgDepartment,
@@ -1595,68 +1635,6 @@
             this.lcgYabanciDil,
             this.lcgSertifikalar});
             this.tabbedControlGroup1.Text = "Sertifikalar";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.CustomizationFormText = "Ünvan";
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciGridUnvanlar,
-            this.lciDeleteUnvan,
-            this.lciAddUnvan,
-            this.lciChangeUnvan});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1221, 237);
-            this.layoutControlGroup1.Text = "Ünvan";
-            // 
-            // lciGridUnvanlar
-            // 
-            this.lciGridUnvanlar.Control = this.gcUnvanlar;
-            this.lciGridUnvanlar.CustomizationFormText = "layoutControlItem4";
-            this.lciGridUnvanlar.Location = new System.Drawing.Point(0, 0);
-            this.lciGridUnvanlar.Name = "lciGridUnvanlar";
-            this.lciGridUnvanlar.Size = new System.Drawing.Size(1170, 237);
-            this.lciGridUnvanlar.Text = "lciGridUnvanlar";
-            this.lciGridUnvanlar.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciGridUnvanlar.TextSize = new System.Drawing.Size(0, 0);
-            this.lciGridUnvanlar.TextToControlDistance = 0;
-            this.lciGridUnvanlar.TextVisible = false;
-            // 
-            // lciDeleteUnvan
-            // 
-            this.lciDeleteUnvan.Control = this.sbDeletePersonelUnvan;
-            this.lciDeleteUnvan.CustomizationFormText = "lciDeleteUnvan";
-            this.lciDeleteUnvan.Location = new System.Drawing.Point(1170, 52);
-            this.lciDeleteUnvan.Name = "lciDeleteUnvan";
-            this.lciDeleteUnvan.Size = new System.Drawing.Size(51, 185);
-            this.lciDeleteUnvan.Text = "lciDeleteUnvan";
-            this.lciDeleteUnvan.TextSize = new System.Drawing.Size(0, 0);
-            this.lciDeleteUnvan.TextToControlDistance = 0;
-            this.lciDeleteUnvan.TextVisible = false;
-            // 
-            // lciAddUnvan
-            // 
-            this.lciAddUnvan.Control = this.sbAddPersonelUnvan;
-            this.lciAddUnvan.CustomizationFormText = "lciAddUnvan";
-            this.lciAddUnvan.Location = new System.Drawing.Point(1170, 0);
-            this.lciAddUnvan.Name = "lciAddUnvan";
-            this.lciAddUnvan.Size = new System.Drawing.Size(51, 26);
-            this.lciAddUnvan.Text = "lciAddUnvan";
-            this.lciAddUnvan.TextSize = new System.Drawing.Size(0, 0);
-            this.lciAddUnvan.TextToControlDistance = 0;
-            this.lciAddUnvan.TextVisible = false;
-            // 
-            // lciChangeUnvan
-            // 
-            this.lciChangeUnvan.Control = this.sbChangePersonelUnvan;
-            this.lciChangeUnvan.CustomizationFormText = "lciChangeUnvan";
-            this.lciChangeUnvan.Location = new System.Drawing.Point(1170, 26);
-            this.lciChangeUnvan.Name = "lciChangeUnvan";
-            this.lciChangeUnvan.Size = new System.Drawing.Size(51, 26);
-            this.lciChangeUnvan.Text = "lciChangeUnvan";
-            this.lciChangeUnvan.TextSize = new System.Drawing.Size(0, 0);
-            this.lciChangeUnvan.TextToControlDistance = 0;
-            this.lciChangeUnvan.TextVisible = false;
             // 
             // lcgDepartment
             // 
@@ -1719,6 +1697,68 @@
             this.lciDeleteHastaneBolumu.TextSize = new System.Drawing.Size(0, 0);
             this.lciDeleteHastaneBolumu.TextToControlDistance = 0;
             this.lciDeleteHastaneBolumu.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "Ünvan";
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciGridUnvanlar,
+            this.lciDeleteUnvan,
+            this.lciAddUnvan,
+            this.lciChangeUnvan});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1221, 237);
+            this.layoutControlGroup1.Text = "Ünvan";
+            // 
+            // lciGridUnvanlar
+            // 
+            this.lciGridUnvanlar.Control = this.gcUnvanlar;
+            this.lciGridUnvanlar.CustomizationFormText = "layoutControlItem4";
+            this.lciGridUnvanlar.Location = new System.Drawing.Point(0, 0);
+            this.lciGridUnvanlar.Name = "lciGridUnvanlar";
+            this.lciGridUnvanlar.Size = new System.Drawing.Size(1170, 237);
+            this.lciGridUnvanlar.Text = "lciGridUnvanlar";
+            this.lciGridUnvanlar.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciGridUnvanlar.TextSize = new System.Drawing.Size(0, 0);
+            this.lciGridUnvanlar.TextToControlDistance = 0;
+            this.lciGridUnvanlar.TextVisible = false;
+            // 
+            // lciDeleteUnvan
+            // 
+            this.lciDeleteUnvan.Control = this.sbDeletePersonelUnvan;
+            this.lciDeleteUnvan.CustomizationFormText = "lciDeleteUnvan";
+            this.lciDeleteUnvan.Location = new System.Drawing.Point(1170, 52);
+            this.lciDeleteUnvan.Name = "lciDeleteUnvan";
+            this.lciDeleteUnvan.Size = new System.Drawing.Size(51, 185);
+            this.lciDeleteUnvan.Text = "lciDeleteUnvan";
+            this.lciDeleteUnvan.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDeleteUnvan.TextToControlDistance = 0;
+            this.lciDeleteUnvan.TextVisible = false;
+            // 
+            // lciAddUnvan
+            // 
+            this.lciAddUnvan.Control = this.sbAddPersonelUnvan;
+            this.lciAddUnvan.CustomizationFormText = "lciAddUnvan";
+            this.lciAddUnvan.Location = new System.Drawing.Point(1170, 0);
+            this.lciAddUnvan.Name = "lciAddUnvan";
+            this.lciAddUnvan.Size = new System.Drawing.Size(51, 26);
+            this.lciAddUnvan.Text = "lciAddUnvan";
+            this.lciAddUnvan.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAddUnvan.TextToControlDistance = 0;
+            this.lciAddUnvan.TextVisible = false;
+            // 
+            // lciChangeUnvan
+            // 
+            this.lciChangeUnvan.Control = this.sbChangePersonelUnvan;
+            this.lciChangeUnvan.CustomizationFormText = "lciChangeUnvan";
+            this.lciChangeUnvan.Location = new System.Drawing.Point(1170, 26);
+            this.lciChangeUnvan.Name = "lciChangeUnvan";
+            this.lciChangeUnvan.Size = new System.Drawing.Size(51, 26);
+            this.lciChangeUnvan.Text = "lciChangeUnvan";
+            this.lciChangeUnvan.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangeUnvan.TextToControlDistance = 0;
+            this.lciChangeUnvan.TextVisible = false;
             // 
             // lgcEducation
             // 
@@ -2114,7 +2154,7 @@
             this.lciMobilePhone,
             this.layoutControlItem1,
             this.lciMaritalStatus,
-            this.lciHomePhone1,
+            this.lciHomePhone,
             this.lciPhone,
             this.lciInsuranceNo,
             this.lciTaxNo,
@@ -2251,17 +2291,17 @@
             this.lciMaritalStatus.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciMaritalStatus.TextSize = new System.Drawing.Size(77, 13);
             // 
-            // lciHomePhone1
+            // lciHomePhone
             // 
-            this.lciHomePhone1.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lciHomePhone1.AppearanceItemCaption.Options.UseBackColor = true;
-            this.lciHomePhone1.Control = this.teHomePhone1;
-            this.lciHomePhone1.CustomizationFormText = "Ev Tlf";
-            this.lciHomePhone1.Location = new System.Drawing.Point(0, 260);
-            this.lciHomePhone1.Name = "lciHomePhone1";
-            this.lciHomePhone1.Size = new System.Drawing.Size(361, 24);
-            this.lciHomePhone1.Text = "Ev Telefonu";
-            this.lciHomePhone1.TextSize = new System.Drawing.Size(77, 13);
+            this.lciHomePhone.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lciHomePhone.AppearanceItemCaption.Options.UseBackColor = true;
+            this.lciHomePhone.Control = this.teHomePhone;
+            this.lciHomePhone.CustomizationFormText = "Ev Tlf";
+            this.lciHomePhone.Location = new System.Drawing.Point(0, 260);
+            this.lciHomePhone.Name = "lciHomePhone";
+            this.lciHomePhone.Size = new System.Drawing.Size(361, 24);
+            this.lciHomePhone.Text = "Ev Telefonu";
+            this.lciHomePhone.TextSize = new System.Drawing.Size(77, 13);
             // 
             // lciPhone
             // 
@@ -2753,7 +2793,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTCID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueHomeCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMobilePhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHomePhone1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teHomePhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).EndInit();
@@ -2763,16 +2803,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciGridUnvanlar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteUnvan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciAddUnvan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciChangeUnvan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgDepartment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridHastaneBolumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeHastaneBolumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAddHastaneBolumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDeleteHastaneBolumu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciGridUnvanlar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDeleteUnvan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAddUnvan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeUnvan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgcEducation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGridPersonelEgitim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangePersonelEgitim)).EndInit();
@@ -2815,7 +2855,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMobilePhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMaritalStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHomePhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInsuranceNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTaxNo)).EndInit();
@@ -2861,7 +2901,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup lcgHastaIslemleri;
         private DevExpress.XtraEditors.TextEdit teFirstName;
         private DevExpress.XtraEditors.TextEdit tePersonelNo;
-        private DevExpress.XtraEditors.TextEdit teHomePhone1;
+        private DevExpress.XtraEditors.TextEdit teHomePhone;
         private DevExpress.XtraEditors.RadioGroup rgSex;
         private DevExpress.XtraEditors.TextEdit teSurname;
         private DevExpress.XtraEditors.SimpleButton sbClose;
@@ -2900,7 +2940,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciSurname;
         private DevExpress.XtraLayout.LayoutControlItem lciSex;
         private DevExpress.XtraLayout.LayoutControlItem lciMobilePhone;
-        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone1;
+        private DevExpress.XtraLayout.LayoutControlItem lciHomePhone;
         private DevExpress.XtraEditors.TextEdit teEmail;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.DateEdit deExitDate;
@@ -3065,5 +3105,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciDeleteUnvan;
         private DevExpress.XtraLayout.LayoutControlItem lciAddUnvan;
         private DevExpress.XtraLayout.LayoutControlItem lciChangeUnvan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
     }
 }

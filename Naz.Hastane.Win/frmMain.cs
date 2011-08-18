@@ -901,6 +901,8 @@ namespace Naz.Hastane.Win {
             iUser.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Users, args.Item.Caption);
             iWareHouse.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Warehouses, args.Item.Caption);
 
+            iHastaneBolumleri.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.HastaneBolumus, args.Item.Caption);
+            iUnvan.ItemClick += (o, args) => ShowNewLookUpForm(LookUpServices.Unvans, args.Item.Caption);
         }
 
         #endregion

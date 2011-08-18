@@ -75,9 +75,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindControl(rgSex, Personel, x => x.Cinsiyeti);
             UIUtilities.BindControl(rgMaritalStatus, Personel, x => x.MedeniHali);
             UIUtilities.BindControl(tePhone, Personel, x => x.Telefon);
+            UIUtilities.BindControl(teHomePhone, Personel, x => x.EvTelefonu);
+            UIUtilities.BindControl(teMobilePhone, Personel, x => x.CepTelefonu);
+            UIUtilities.BindControl(teHomeAddress, Personel, x => x.EvAdresi);
+            UIUtilities.BindControl(teHomeDistrict, Personel, x => x.Mahalle);
             UIUtilities.BindControl(teHomeTown, Personel, x => x.Ilce);
             UIUtilities.BindControl(lueHomeCity, Personel, x => x.Il);
-            //UIUtilities.BindControl(lueBloodType, Personel, x => x.KanGrubu);
+            UIUtilities.BindControl(teEmail, Personel, x => x.Email);
 
             UIUtilities.BindControl(cmbBloodType, Personel, x => x.KanGrubu, propertyName: "SelectedItem");
             UIUtilities.BindControl(cmbHastaneBolumu, Personel, x => x.HastaneBolumu, propertyName: "SelectedItem");
