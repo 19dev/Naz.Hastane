@@ -40,7 +40,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.0.9\setup\Amira\</InstallUrl>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -172,6 +172,8 @@
     <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
@@ -297,6 +299,24 @@
     </Compile>
     <Compile Include="MDIChildForms\DetailEditForm.Designer.cs">
       <DependentUpon>DetailEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\IDValueBaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\IDValueBaseEditForm.designer.cs">
+      <DependentUpon>IDValueBaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildForms\IDValueLookUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\IDValueLookUpForm.Designer.cs">
+      <DependentUpon>IDValueLookUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\DoctorPatientCallListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\DoctorPatientCallListForm.Designer.cs">
+      <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Personel\PersonelHizmetIciEgitimEditForm.cs">
       <SubType>Form</SubType>
@@ -502,11 +522,6 @@
     <Compile Include="Personel\PersonelForm.Designer.cs">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Networking\IMulticastBroadcaster.cs" />
-    <Compile Include="Networking\IMulticastListener.cs" />
-    <Compile Include="Networking\MulticastBroadcaster.cs" />
-    <Compile Include="Networking\MulticastListener.cs" />
-    <Compile Include="Networking\MulticastSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -554,6 +569,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DetailEditForm.resx">
       <DependentUpon>DetailEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\IDValueBaseEditForm.resx">
+      <DependentUpon>IDValueBaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\IDValueLookUpForm.resx">
+      <DependentUpon>IDValueLookUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\DoctorPatientCallListForm.resx">
+      <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\PersonelHizmetIciEgitimEditForm.resx">
       <DependentUpon>PersonelHizmetIciEgitimEditForm.cs</DependentUpon>

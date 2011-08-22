@@ -5,10 +5,24 @@ namespace Naz.Hastane.Data.Entities
     public class HizmetIciEgitim : IDBase
     {
         public virtual HizmetIciEgitimTipi HizmetIciEgitimTipi { get; set; }
+        public virtual string HizmetIciEgitimTipiValue
+        {
+            get
+            {
+                if (HizmetIciEgitimTipi == null)
+                    return String.Empty;
+                else
+                    return HizmetIciEgitimTipi.Value;
+            }
+        }
         public virtual DateTime? BaslangicTarihi { get; set; }
         public virtual DateTime? BitisTarihi { get; set; }
         public virtual string Aciklama { get; set; }
-
+        public virtual string FullName
+        {
+            get { return String.Format("{0}-{1} {3}-{4}", HizmetIciEgitimTipiValue, Aciklama, BaslangicTarihi, BitisTarihi); }
+            set {}
+        }
         #region PersonelHizmetIciEgitim
         private IList<PersonelHizmetIciEgitim> _PersonelHizmetIciEgitims = new List<PersonelHizmetIciEgitim>();
 

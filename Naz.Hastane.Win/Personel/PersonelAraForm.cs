@@ -68,21 +68,19 @@ namespace Naz.Hastane.Win.MDIChildForms
 
                 string criteriaString = "";
 
-                //GetCriteria(this.teTCId, ref criteriaString, "TCID");
-                //GetCriteria(this.tePersonelNo, ref criteriaString, "PersonelNo");
                 GetCriteria(this.teFirstName, ref criteriaString, "Ad");
                 GetCriteria(this.teLastName, ref criteriaString, "Soyad");
 
                 if (criteriaString.Length > 0)
                 {
-                    IList<Personel> Personels = PersonelServices.GetByWhere(criteriaString);
-                    //this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                    this.gcPersonel.DataSource = Personels;
-                    if (Personels.Count == 1)
+                    IList<Personel> personels = PersonelServices.GetByWhere(criteriaString);
+                    this.lcPersonelAdeti.Text = "Bulunan:" + personels.Count.ToString();
+                    this.gcPersonel.DataSource = personels;
+                    if (personels.Count == 1)
                     {
-                        (this.MdiParent as frmMain).OpenPersonel(Personels[0].ID);
+                        (this.MdiParent as frmMain).OpenPersonel(personels[0].ID);
                     }
-                    else if (Personels.Count == 0)
+                    else if (personels.Count == 0)
                     {
                         if (XtraMessageBox.Show("Bu Kriterlerle Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
@@ -103,8 +101,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             string TCID = this.teTCId.Text;
             if (LookUpServices.IsValidTCID(TCID))
             {
-                IList<Personel> result = PersonelServices.GetByTCId(TCID);
-                if (result.Count == 0)
+                IList<Personel> personels = PersonelServices.GetPersonelByTCId(TCID);
+                this.lcPersonelAdeti.Text = "Bulunan:" + personels.Count.ToString();
+                if (personels.Count == 0)
                 {
                     if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
@@ -112,9 +111,9 @@ namespace Naz.Hastane.Win.MDIChildForms
                         return true;
                     }
                 }
-                else if (result.Count == 1)
+                else if (personels.Count >= 1)
                 {
-                    (this.MdiParent as frmMain).OpenPersonel(result[0].ID);
+                    (this.MdiParent as frmMain).OpenPersonel(personels[0].ID);
                     return true;
                 }
             }
@@ -126,17 +125,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             string PersonelNo = this.tePersonelNo.Text.Trim();
             if (LookUpServices.IsValidNumeric(PersonelNo))
             {
-                IList<Personel> result = PersonelServices.GetPersonelByPersonelNo(PersonelNo);
-                if (result.Count == 0)
+                IList<Personel> personels = PersonelServices.GetPersonelByPersonelNo(PersonelNo);
+                this.lcPersonelAdeti.Text = "Bulunan:" + personels.Count.ToString();
+                if (personels.Count == 0)
                 {
                     if (XtraMessageBox.Show("Bu Personel Numaralı Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         (this.MdiParent as frmMain).OpenNewPersonel();
                     }
                 }
-                else if(result.Count == 1)
+                else if(personels.Count >= 1)
                 {
-                    (this.MdiParent as frmMain).OpenPersonel(result[0].ID);
+                    (this.MdiParent as frmMain).OpenPersonel(personels[0].ID);
                 }
                 return true;
             }

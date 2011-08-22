@@ -5,7 +5,7 @@ namespace Naz.Hastane.Data.Entities
 {
     /// <remarks>tlkpUnvani</remarks>
     [Description("Unvanı Tanımı")]
-    public class Unvan : LookUpIdValue
+    public class Unvan : IDValueBase
     {
     }
 }

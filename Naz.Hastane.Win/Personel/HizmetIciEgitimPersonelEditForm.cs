@@ -45,7 +45,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbPersonel, LookUpServices.GetAll<Personel>(Session), displayMember: "FullName", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbPersonel, LookUpServices.GetAll<Personel>(), x => x.FullName, x => x.ID);
         }
 
         protected override bool Save()

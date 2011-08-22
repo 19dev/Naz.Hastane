@@ -53,5 +53,25 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             this.Close();
         }
+
+        private void sbEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvLookUp_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

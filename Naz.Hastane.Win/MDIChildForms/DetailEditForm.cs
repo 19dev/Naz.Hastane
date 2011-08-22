@@ -11,7 +11,7 @@ using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    public partial class DetailEditForm<T> : MDIChildForm where T : IDBase, new()
+    public partial class DetailEditForm<T> : MDIChildForm where T: IDBase, new()
     {
         public bool IsOK { get; set; }
 

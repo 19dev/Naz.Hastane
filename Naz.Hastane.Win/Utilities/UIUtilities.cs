@@ -19,6 +19,7 @@ using Nini.Config;
 using System.IO;
 using System.Windows.Forms;
 using System.Linq.Expressions;
+using Naz.Classes;
 
 namespace Naz.Hastane.Win
 {
@@ -49,12 +50,25 @@ namespace Naz.Hastane.Win
                 lue.EditValue = initialValue;
         }
 
+        //public static void BindComboBox<T>(System.Windows.Forms.ComboBox comboBox, IList<T> dataSourceList,
+        //    string displayMember = "Value", string valueMember = "Code") where T : new()
+        //{
+        //    comboBox.DisplayMember = displayMember;
+        //    //comboBox.ValueMember = valueMember;
+        //    comboBox.DataSource = new BindingSource() { DataSource = new NullSafeBindingList<T>(dataSourceList, valueMember, displayMember)  };
+        //    //if (dataSourceList.Count > 0)
+        //    //    lue.ItemIndex = 0;
+        //}
+
         public static void BindComboBox<T>(System.Windows.Forms.ComboBox comboBox, IList<T> dataSourceList,
-            string displayMember = "Value", string valueMember = "Code") where T : new()
+            Expression<Func<T, object>> displayMember, Expression<Func<T, object>> valueMember) where T : new()
         {
-            comboBox.DisplayMember = displayMember;
+            comboBox.DisplayMember = DataUtilities.GetMemberName<T>(displayMember);
             //comboBox.ValueMember = valueMember;
-            comboBox.DataSource = new BindingSource() { DataSource = dataSourceList };
+            comboBox.DataSource = new BindingSource() 
+            {
+                DataSource = new NullSafeBindingList<T>(dataSourceList, DataUtilities.GetMemberName<T>(valueMember), DataUtilities.GetMemberName<T>(displayMember))
+            };
             //if (dataSourceList.Count > 0)
             //    lue.ItemIndex = 0;
         }

@@ -1,22 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using Naz.Hastane.Data.Entities;
-using Naz.Hastane.Data.Entities.LookUp.Special;
-using Naz.Hastane.Data.Services;
-using Naz.Hastane.Data.Entities.Medula;
-using Naz.Hastane.Win.Controls;
-using Naz.Hastane.Reports;
-using Naz.Utilities.Classes;
-using System.Collections.Generic;
-using Naz.Mernis.Service;
 using DevExpress.XtraGrid.Views.Grid;
-using Naz.Hastane.Reports.Classes;
-using Naz.Hastane.Data.Entities.LookUp.MedulaProvision;
-using System.Drawing;
-using NHibernate;
-using Naz.Hastane.Data.DTO;
-using Naz.Hastane.Win.Utilities;
+using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -124,14 +111,15 @@ namespace Naz.Hastane.Win.MDIChildForms
             UIUtilities.BindLookUpEdit(this.lueBirthCity, LookUpServices.Cities, displayMember: "Value", valueMember: "Code");
             UIUtilities.BindLookUpEdit(this.lueNationality, LookUpServices.Nationalities);
 
-            UIUtilities.BindComboBox(cmbBloodType, LookUpServices.BloodTypes, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbPersonelUnvani, LookUpServices.Unvans, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbBloodType, LookUpServices.BloodTypes, x => x.Value, x => x.ID);
+            UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, x => x.Value, x => x.ID);
+            UIUtilities.BindComboBox(cmbPersonelUnvani, LookUpServices.Unvans, x => x.Value, x => x.ID);
         }
 
         public void SetNewTCID(string TCID)
         {
-            this.teTCID.Text = TCID;
+            Personel.TCID = TCID;
+            //this.teTCID.Text = TCID;
         }
 
         private void sbSavePersonel_Click(object sender, EventArgs e)
@@ -141,6 +129,16 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SavePersonel()
         {
+            if (String.IsNullOrWhiteSpace(Personel.TCID))
+            {
+                XtraMessageBox.Show("Lütfen Personelin T.C. Kimlik Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Personel.PersonelNo))
+            {
+                XtraMessageBox.Show("Lütfen Personel Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (String.IsNullOrWhiteSpace(Personel.Ad))
             {
                 XtraMessageBox.Show("Lütfen Personelin Adını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -149,6 +147,31 @@ namespace Naz.Hastane.Win.MDIChildForms
             if (String.IsNullOrWhiteSpace(Personel.Soyad))
             {
                 XtraMessageBox.Show("Lütfen Personelin Soyadını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Personel.KanGrubu == null)
+            {
+                XtraMessageBox.Show("Lütfen Personelin Kan Grubunu Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Personel.HastaneBolumu == null)
+            {
+                XtraMessageBox.Show("Lütfen Personelin Çalıştığı Bölümü Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Personel.PersonelUnvani == null)
+            {
+                XtraMessageBox.Show("Lütfen Personelin Ünvanını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (PersonelServices.GetPersonelByPersonelNo(Personel.PersonelNo).Count > 0)
+            {
+                XtraMessageBox.Show("Bu Personel No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (PersonelServices.GetPersonelByTCId(Personel.TCID).Count > 0)
+            {
+                XtraMessageBox.Show("Bu TC Kimlik No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

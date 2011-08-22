@@ -27,7 +27,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbHizmetIciEgitimTipi, LookUpServices.HizmetIciEgitimTipis, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbHizmetIciEgitimTipi, LookUpServices.HizmetIciEgitimTipis, x => x.Value, x => x.ID);
         }
 
         protected override bool Save()

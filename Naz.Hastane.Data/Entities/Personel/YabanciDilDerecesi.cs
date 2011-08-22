@@ -5,7 +5,7 @@ namespace Naz.Hastane.Data.Entities
 {
     /// <remarks>tlkpYabanciDilDerecesi</remarks>
     [Description("Yabancı Dil Derecesi")]
-    public class YabanciDilDerecesi : LookUpIdValue
+    public class YabanciDilDerecesi : IDValueBase
     {
     }
 }

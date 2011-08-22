@@ -183,6 +183,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<HizmetIciEgitimTipi> HizmetIciEgitimTipis
         { get { return LookUpTable(ref _HizmetIciEgitimTipis); } }
 
+        private static IList<QueueStatusType> _QueueStatusTypes;
+        public static IList<QueueStatusType> QueueStatusTypes
+        { get { return LookUpTable(ref _QueueStatusTypes); } }
+
         #endregion
 
         #region MedulaDiabet
@@ -871,6 +875,21 @@ namespace Naz.Hastane.Data.Services
             return userPatientVisits;
         }
 
+        public static IList<Doctor> GetDoctorsInList(String[] doctorIDs)
+        {
+            IList<Doctor> result = null;
+
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                result = (from d in session.Query<Doctor>()
+                                where doctorIDs.Contains(d.Code)
+                                select d
+                            )
+                            .ToList<Doctor>();
+            }
+
+            return result;
+        }
         public static void AddUserPatientVisit(User user, Patient patient)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())

@@ -44,6 +44,9 @@
             this.lciNew = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.sbDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.lciDelete = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcLookUp)).BeginInit();
@@ -58,10 +61,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sbDelete);
             this.layoutControl1.Controls.Add(this.sbEdit);
             this.layoutControl1.Controls.Add(this.gcLookUp);
             this.layoutControl1.Controls.Add(this.sbClose);
@@ -77,12 +83,13 @@
             // 
             // sbEdit
             // 
-            this.sbEdit.Location = new System.Drawing.Point(406, 59);
+            this.sbEdit.Location = new System.Drawing.Point(406, 55);
             this.sbEdit.Name = "sbEdit";
             this.sbEdit.Size = new System.Drawing.Size(66, 22);
             this.sbEdit.StyleController = this.layoutControl1;
             this.sbEdit.TabIndex = 5;
             this.sbEdit.Text = "Değiştir";
+            this.sbEdit.Click += new System.EventHandler(this.sbEdit_Click);
             // 
             // gcLookUp
             // 
@@ -98,11 +105,13 @@
             // 
             this.gvLookUp.GridControl = this.gcLookUp;
             this.gvLookUp.Name = "gvLookUp";
+            this.gvLookUp.OptionsBehavior.Editable = false;
             this.gvLookUp.OptionsView.ShowGroupPanel = false;
+            this.gvLookUp.DoubleClick += new System.EventHandler(this.gvLookUp_DoubleClick);
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(406, 206);
+            this.sbClose.Location = new System.Drawing.Point(406, 191);
             this.sbClose.Name = "sbClose";
             this.sbClose.Size = new System.Drawing.Size(66, 22);
             this.sbClose.StyleController = this.layoutControl1;
@@ -112,12 +121,13 @@
             // 
             // sbNew
             // 
-            this.sbNew.Location = new System.Drawing.Point(406, 95);
+            this.sbNew.Location = new System.Drawing.Point(406, 91);
             this.sbNew.Name = "sbNew";
             this.sbNew.Size = new System.Drawing.Size(66, 22);
             this.sbNew.StyleController = this.layoutControl1;
             this.sbNew.TabIndex = 6;
             this.sbNew.Text = "Yeni";
+            this.sbNew.Click += new System.EventHandler(this.sbNew_Click);
             // 
             // layoutControlGroup1
             // 
@@ -130,7 +140,6 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(494, 275);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -156,7 +165,9 @@
             this.emptySpaceItem4,
             this.lciNew,
             this.emptySpaceItem3,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.lciDelete,
+            this.emptySpaceItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(384, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(90, 255);
@@ -166,10 +177,11 @@
             // 
             // emptySpaceItem2
             // 
+            this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 210);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 195);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(70, 25);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(70, 40);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -177,7 +189,7 @@
             // 
             this.lciClose.Control = this.sbClose;
             this.lciClose.CustomizationFormText = "lciClose";
-            this.lciClose.Location = new System.Drawing.Point(0, 184);
+            this.lciClose.Location = new System.Drawing.Point(0, 169);
             this.lciClose.Name = "lciClose";
             this.lciClose.Size = new System.Drawing.Size(70, 26);
             this.lciClose.Text = "lciClose";
@@ -189,7 +201,7 @@
             // 
             this.lciEdit.Control = this.sbEdit;
             this.lciEdit.CustomizationFormText = "lciEdit";
-            this.lciEdit.Location = new System.Drawing.Point(0, 37);
+            this.lciEdit.Location = new System.Drawing.Point(0, 33);
             this.lciEdit.Name = "lciEdit";
             this.lciEdit.Size = new System.Drawing.Size(70, 26);
             this.lciEdit.Text = "lciEdit";
@@ -199,8 +211,9 @@
             // 
             // emptySpaceItem4
             // 
+            this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 63);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 59);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(70, 10);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
@@ -210,7 +223,7 @@
             // 
             this.lciNew.Control = this.sbNew;
             this.lciNew.CustomizationFormText = "lciNew";
-            this.lciNew.Location = new System.Drawing.Point(0, 73);
+            this.lciNew.Location = new System.Drawing.Point(0, 69);
             this.lciNew.Name = "lciNew";
             this.lciNew.Size = new System.Drawing.Size(70, 26);
             this.lciNew.Text = "lciNew";
@@ -220,21 +233,55 @@
             // 
             // emptySpaceItem3
             // 
+            this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 99);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 136);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(70, 85);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(70, 33);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
             // 
+            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(70, 37);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(70, 33);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // sbDelete
+            // 
+            this.sbDelete.Location = new System.Drawing.Point(406, 132);
+            this.sbDelete.Name = "sbDelete";
+            this.sbDelete.Size = new System.Drawing.Size(66, 22);
+            this.sbDelete.StyleController = this.layoutControl1;
+            this.sbDelete.TabIndex = 8;
+            this.sbDelete.Text = "Sil";
+            this.sbDelete.Click += new System.EventHandler(this.sbDelete_Click);
+            // 
+            // lciDelete
+            // 
+            this.lciDelete.Control = this.sbDelete;
+            this.lciDelete.CustomizationFormText = "lciDelete";
+            this.lciDelete.Location = new System.Drawing.Point(0, 110);
+            this.lciDelete.Name = "lciDelete";
+            this.lciDelete.Size = new System.Drawing.Size(70, 26);
+            this.lciDelete.Text = "lciDelete";
+            this.lciDelete.TextSize = new System.Drawing.Size(0, 0);
+            this.lciDelete.TextToControlDistance = 0;
+            this.lciDelete.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 95);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(70, 15);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // LookUpForm
             // 
@@ -258,6 +305,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +329,8 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraEditors.SimpleButton sbDelete;
+        private DevExpress.XtraLayout.LayoutControlItem lciDelete;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
     }
 }

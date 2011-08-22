@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Threading;
+using System.Net;
+using System.Text;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 using DevExpress.Utils;
@@ -12,16 +13,12 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using Multicast;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
-using Naz.Hastane.Reports;
 using Naz.Hastane.Reports.Classes;
 using Naz.Hastane.Win.Forms;
 using Naz.Hastane.Win.MDIChildForms;
-using Naz.Hastane.Data.Entities.StoredProcedure;
-using Multicast;
-using System.Net;
-using System.Text;
 
 namespace Naz.Hastane.Win {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -784,7 +781,7 @@ namespace Naz.Hastane.Win {
             Personel Personel = PersonelServices.GetPersonelByID(aPersonelID);
             if (Personel != null)
             {
-                PersonelForm newForm = new PersonelForm(aPersonelID);
+                PersonelForm newForm = GetPersonelForm(aPersonelID);
                 string name = Personel.Ad + " " + Personel.Soyad;
                 newForm.Text = name;
                 ShowNewDocument(newForm);
@@ -800,6 +797,18 @@ namespace Naz.Hastane.Win {
             newForm.SetNewTCID(newTCID);
         }
         #endregion
+
+        private PersonelForm GetPersonelForm(int aPersonelID)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                PersonelForm pf = frm as PersonelForm;
+                if (pf != null && pf.Personel.ID == aPersonelID)
+                    return pf;
+
+            }
+            return new PersonelForm(aPersonelID);
+        }
 
         #region MDIChildForms
         private void AttachMDIChildButtons()
@@ -818,6 +827,7 @@ namespace Naz.Hastane.Win {
             iHizmetIciEgitimler.ItemClick += (o, args) => ShowNewDocument<HizmetIciEgitimForm>();
 
             iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
+            iDoctorPatientCallList.ItemClick += (o, args) => ShowNewDocument<DoctorPatientCallListForm>();
         }
 
         private void OpenLastVisitedPatientsForm()

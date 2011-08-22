@@ -18,15 +18,14 @@ namespace Naz.Hastane.Data.Services
 {
     public static class PersonelServices
     {
-        public static IList<Personel> GetByTCId(string aTCID)
+        public static IList<Personel> GetPersonelByTCId(string aTCID)
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
-                IList<Personel> result = session
-                    .CreateCriteria(typeof(Personel))
-                    .Add(Restrictions.Eq("TCID", aTCID))
-                    .List<Personel>();
-                return result;
+                return  (from p in session.Query<Personel>()
+                    where p.TCID == aTCID
+                    select p)
+                    .ToList<Personel>();
             }
         }
 
@@ -34,11 +33,10 @@ namespace Naz.Hastane.Data.Services
         {
             using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
             {
-                IList<Personel> result = session
-                    .CreateCriteria(typeof(Personel))
-                    .Add(Restrictions.Eq("PersonelNo", aPersonelNo))
-                    .List<Personel>();
-                return result;
+                return (from p in session.Query<Personel>()
+                        where p.PersonelNo == aPersonelNo
+                        select p)
+                    .ToList<Personel>();
             }
         }
 
@@ -91,15 +89,21 @@ namespace Naz.Hastane.Data.Services
             personel.Ad = "";
             personel.Soyad = "";
             personel.TCID = "";
-            personel.Cinsiyeti = ""; 
+            personel.Cinsiyeti = "E";
+            personel.MedeniHali = "B";
             //Personel.KanGrubu = 9; 
+            personel.KimlikTuru = "N";
             personel.EvAdresi = "";
             personel.Mahalle = "";
             personel.Ilce = "";
-            personel.Il = "";
+            personel.Il = "034";
             personel.EvTelefonu = "";
             personel.CepTelefonu = "";
             personel.Email = "";
+            personel.IsRetired = "N";
+            personel.HasUnion = "N";
+            personel.IseGirisTarihi = DateTime.Today;
+            personel.Uyrugu = "TC";
 
             return personel;
         }                      
@@ -108,22 +112,18 @@ namespace Naz.Hastane.Data.Services
         {
             return DataBindingFactory.Create<PersonelHastaneBolumu>();
         }
-
         public static PersonelEgitim CreateNewPersonelEgitim()
         {
             return DataBindingFactory.Create<PersonelEgitim>();
         }
-
         public static PersonelRapor CreateNewPersonelRapor()
         {
             return DataBindingFactory.Create<PersonelRapor>();
         }
-
         public static PersonelIzin CreateNewPersonelIzin()
         {
             return DataBindingFactory.Create<PersonelIzin>();
         }
-
         public static PersonelYabanciDil CreateNewPersonelYabanciDil()
         {
             return DataBindingFactory.Create<PersonelYabanciDil>();

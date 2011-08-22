@@ -30,7 +30,7 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbNew = new DevExpress.XtraEditors.SimpleButton();
-            this.lcHastaAdeti = new DevExpress.XtraEditors.LabelControl();
+            this.lcPersonelAdeti = new DevExpress.XtraEditors.LabelControl();
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbClean = new DevExpress.XtraEditors.SimpleButton();
             this.teLastName = new DevExpress.XtraEditors.TextEdit();
@@ -47,10 +47,10 @@
             this.teTCId = new DevExpress.XtraEditors.TextEdit();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
             this.lcgSayfa = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciBulunanHastalar = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPersonel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgAramaKriterleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.grpHastaNo = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciPatientNo = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPersonelNo = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTCId = new DevExpress.XtraLayout.LayoutControlItem();
             this.grpSNR = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciFirstName = new DevExpress.XtraLayout.LayoutControlItem();
@@ -61,7 +61,7 @@
             this.lciClean = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSearch = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNew = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHastaAdeti = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPersonelAdeti = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
@@ -71,10 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAramaKriterleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHastaNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonelNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTCId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpSNR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).BeginInit();
@@ -85,13 +85,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciClean)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHastaAdeti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonelAdeti)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.sbNew);
-            this.layoutControl1.Controls.Add(this.lcHastaAdeti);
+            this.layoutControl1.Controls.Add(this.lcPersonelAdeti);
             this.layoutControl1.Controls.Add(this.sbClose);
             this.layoutControl1.Controls.Add(this.sbClean);
             this.layoutControl1.Controls.Add(this.teLastName);
@@ -120,14 +120,14 @@
             this.sbNew.Text = "Yeni";
             this.sbNew.Click += new System.EventHandler(this.sbNew_Click);
             // 
-            // lcHastaAdeti
+            // lcPersonelAdeti
             // 
-            this.lcHastaAdeti.Location = new System.Drawing.Point(894, 613);
-            this.lcHastaAdeti.Name = "lcHastaAdeti";
-            this.lcHastaAdeti.Size = new System.Drawing.Size(48, 13);
-            this.lcHastaAdeti.StyleController = this.layoutControl1;
-            this.lcHastaAdeti.TabIndex = 21;
-            this.lcHastaAdeti.Text = "Bulunan:0";
+            this.lcPersonelAdeti.Location = new System.Drawing.Point(894, 613);
+            this.lcPersonelAdeti.Name = "lcPersonelAdeti";
+            this.lcPersonelAdeti.Size = new System.Drawing.Size(48, 13);
+            this.lcPersonelAdeti.StyleController = this.layoutControl1;
+            this.lcPersonelAdeti.TabIndex = 21;
+            this.lcPersonelAdeti.Text = "Bulunan:0";
             // 
             // sbClose
             // 
@@ -152,20 +152,20 @@
             // 
             // teLastName
             // 
-            this.teLastName.Location = new System.Drawing.Point(475, 60);
+            this.teLastName.Location = new System.Drawing.Point(476, 60);
             this.teLastName.Name = "teLastName";
             this.teLastName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.teLastName.Size = new System.Drawing.Size(216, 20);
+            this.teLastName.Size = new System.Drawing.Size(215, 20);
             this.teLastName.StyleController = this.layoutControl1;
             this.teLastName.TabIndex = 4;
             this.teLastName.Tag = "HASTASOYADI";
             // 
             // teFirstName
             // 
-            this.teFirstName.Location = new System.Drawing.Point(475, 36);
+            this.teFirstName.Location = new System.Drawing.Point(476, 36);
             this.teFirstName.Name = "teFirstName";
             this.teFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.teFirstName.Size = new System.Drawing.Size(216, 20);
+            this.teFirstName.Size = new System.Drawing.Size(215, 20);
             this.teFirstName.StyleController = this.layoutControl1;
             this.teFirstName.TabIndex = 3;
             this.teFirstName.Tag = "HASTAADI";
@@ -244,20 +244,20 @@
             // 
             // tePersonelNo
             // 
-            this.tePersonelNo.Location = new System.Drawing.Point(121, 60);
+            this.tePersonelNo.Location = new System.Drawing.Point(122, 60);
             this.tePersonelNo.Name = "tePersonelNo";
             this.tePersonelNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tePersonelNo.Size = new System.Drawing.Size(241, 20);
+            this.tePersonelNo.Size = new System.Drawing.Size(240, 20);
             this.tePersonelNo.StyleController = this.layoutControl1;
             this.tePersonelNo.TabIndex = 2;
             this.tePersonelNo.Tag = "KNR";
             // 
             // teTCId
             // 
-            this.teTCId.Location = new System.Drawing.Point(121, 36);
+            this.teTCId.Location = new System.Drawing.Point(122, 36);
             this.teTCId.Name = "teTCId";
             this.teTCId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.teTCId.Size = new System.Drawing.Size(241, 20);
+            this.teTCId.Size = new System.Drawing.Size(240, 20);
             this.teTCId.StyleController = this.layoutControl1;
             this.teTCId.TabIndex = 1;
             this.teTCId.Tag = "TCKIMLIKNO";
@@ -278,26 +278,26 @@
             this.lcgSayfa.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.lcgSayfa.GroupBordersVisible = false;
             this.lcgSayfa.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciBulunanHastalar,
+            this.lciPersonel,
             this.lcgAramaKriterleri,
             this.lcgTuslar,
-            this.lciHastaAdeti});
+            this.lciPersonelAdeti});
             this.lcgSayfa.Location = new System.Drawing.Point(0, 0);
             this.lcgSayfa.Name = "lcgSayfa";
             this.lcgSayfa.Size = new System.Drawing.Size(954, 638);
             this.lcgSayfa.Text = "Sayfa";
             this.lcgSayfa.TextVisible = false;
             // 
-            // lciBulunanHastalar
+            // lciPersonel
             // 
-            this.lciBulunanHastalar.Control = this.gcPersonel;
-            this.lciBulunanHastalar.CustomizationFormText = "Bulunan Personels";
-            this.lciBulunanHastalar.Location = new System.Drawing.Point(0, 102);
-            this.lciBulunanHastalar.Name = "lciBulunanHastalar";
-            this.lciBulunanHastalar.Size = new System.Drawing.Size(934, 499);
-            this.lciBulunanHastalar.Text = "Bulunan Hastalar";
-            this.lciBulunanHastalar.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciBulunanHastalar.TextSize = new System.Drawing.Size(81, 13);
+            this.lciPersonel.Control = this.gcPersonel;
+            this.lciPersonel.CustomizationFormText = "Bulunan Personel";
+            this.lciPersonel.Location = new System.Drawing.Point(0, 102);
+            this.lciPersonel.Name = "lciPersonel";
+            this.lciPersonel.Size = new System.Drawing.Size(934, 499);
+            this.lciPersonel.Text = "Bulunan Personel";
+            this.lciPersonel.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciPersonel.TextSize = new System.Drawing.Size(82, 13);
             // 
             // lcgAramaKriterleri
             // 
@@ -315,7 +315,7 @@
             // 
             this.grpHastaNo.CustomizationFormText = "Patient No";
             this.grpHastaNo.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciPatientNo,
+            this.lciPersonelNo,
             this.lciTCId});
             this.grpHastaNo.Location = new System.Drawing.Point(0, 0);
             this.grpHastaNo.Name = "grpHastaNo";
@@ -323,15 +323,15 @@
             this.grpHastaNo.Text = "Patient No";
             this.grpHastaNo.TextVisible = false;
             // 
-            // lciPatientNo
+            // lciPersonelNo
             // 
-            this.lciPatientNo.Control = this.tePersonelNo;
-            this.lciPatientNo.CustomizationFormText = "Hasta No";
-            this.lciPatientNo.Location = new System.Drawing.Point(0, 24);
-            this.lciPatientNo.Name = "lciPatientNo";
-            this.lciPatientNo.Size = new System.Drawing.Size(330, 30);
-            this.lciPatientNo.Text = "Personel No";
-            this.lciPatientNo.TextSize = new System.Drawing.Size(81, 13);
+            this.lciPersonelNo.Control = this.tePersonelNo;
+            this.lciPersonelNo.CustomizationFormText = "Personel No";
+            this.lciPersonelNo.Location = new System.Drawing.Point(0, 24);
+            this.lciPersonelNo.Name = "lciPersonelNo";
+            this.lciPersonelNo.Size = new System.Drawing.Size(330, 30);
+            this.lciPersonelNo.Text = "Personel No";
+            this.lciPersonelNo.TextSize = new System.Drawing.Size(82, 13);
             // 
             // lciTCId
             // 
@@ -341,7 +341,7 @@
             this.lciTCId.Name = "lciTCId";
             this.lciTCId.Size = new System.Drawing.Size(330, 24);
             this.lciTCId.Text = "T.C.Kimlik No";
-            this.lciTCId.TextSize = new System.Drawing.Size(81, 13);
+            this.lciTCId.TextSize = new System.Drawing.Size(82, 13);
             // 
             // grpSNR
             // 
@@ -363,7 +363,7 @@
             this.lciFirstName.Name = "lciFirstName";
             this.lciFirstName.Size = new System.Drawing.Size(305, 24);
             this.lciFirstName.Text = "Adı";
-            this.lciFirstName.TextSize = new System.Drawing.Size(81, 13);
+            this.lciFirstName.TextSize = new System.Drawing.Size(82, 13);
             // 
             // lciLastName
             // 
@@ -373,7 +373,7 @@
             this.lciLastName.Name = "lciLastName";
             this.lciLastName.Size = new System.Drawing.Size(305, 30);
             this.lciLastName.Text = "Soyadı";
-            this.lciLastName.TextSize = new System.Drawing.Size(81, 13);
+            this.lciLastName.TextSize = new System.Drawing.Size(82, 13);
             // 
             // lcgTuslar
             // 
@@ -450,18 +450,18 @@
             this.lciNew.TextToControlDistance = 0;
             this.lciNew.TextVisible = false;
             // 
-            // lciHastaAdeti
+            // lciPersonelAdeti
             // 
-            this.lciHastaAdeti.Control = this.lcHastaAdeti;
-            this.lciHastaAdeti.ControlAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lciHastaAdeti.CustomizationFormText = "Patient Adeti";
-            this.lciHastaAdeti.Location = new System.Drawing.Point(0, 601);
-            this.lciHastaAdeti.Name = "lciHastaAdeti";
-            this.lciHastaAdeti.Size = new System.Drawing.Size(934, 17);
-            this.lciHastaAdeti.Text = "Patient Adeti";
-            this.lciHastaAdeti.TextSize = new System.Drawing.Size(0, 0);
-            this.lciHastaAdeti.TextToControlDistance = 0;
-            this.lciHastaAdeti.TextVisible = false;
+            this.lciPersonelAdeti.Control = this.lcPersonelAdeti;
+            this.lciPersonelAdeti.ControlAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lciPersonelAdeti.CustomizationFormText = "Personel Adeti";
+            this.lciPersonelAdeti.Location = new System.Drawing.Point(0, 601);
+            this.lciPersonelAdeti.Name = "lciPersonelAdeti";
+            this.lciPersonelAdeti.Size = new System.Drawing.Size(934, 17);
+            this.lciPersonelAdeti.Text = "Personel Adeti";
+            this.lciPersonelAdeti.TextSize = new System.Drawing.Size(0, 0);
+            this.lciPersonelAdeti.TextToControlDistance = 0;
+            this.lciPersonelAdeti.TextVisible = false;
             // 
             // PersonelAraForm
             // 
@@ -483,10 +483,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tePersonelNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAramaKriterleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHastaNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonelNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTCId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpSNR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciFirstName)).EndInit();
@@ -497,7 +497,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciClean)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHastaAdeti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPersonelAdeti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -511,10 +511,10 @@
         private DevExpress.XtraEditors.TextEdit tePersonelNo;
         private DevExpress.XtraEditors.TextEdit teTCId;
         private DevExpress.XtraLayout.LayoutControlGroup lcgSayfa;
-        private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;
+        private DevExpress.XtraLayout.LayoutControlItem lciPersonelNo;
         private DevExpress.XtraLayout.LayoutControlItem lciTCId;
         private DevExpress.XtraLayout.LayoutControlItem lciSearch;
-        private DevExpress.XtraLayout.LayoutControlItem lciBulunanHastalar;
+        private DevExpress.XtraLayout.LayoutControlItem lciPersonel;
         private DevExpress.XtraEditors.TextEdit teLastName;
         private DevExpress.XtraEditors.TextEdit teFirstName;
         private DevExpress.XtraLayout.LayoutControlGroup grpHastaNo;
@@ -532,8 +532,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSoyadi;
         private DevExpress.XtraGrid.Columns.GridColumn colAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colTCKimlikNo;
-        private DevExpress.XtraEditors.LabelControl lcHastaAdeti;
-        private DevExpress.XtraLayout.LayoutControlItem lciHastaAdeti;
+        private DevExpress.XtraEditors.LabelControl lcPersonelAdeti;
+        private DevExpress.XtraLayout.LayoutControlItem lciPersonelAdeti;
         private DevExpress.XtraEditors.SimpleButton sbNew;
         private DevExpress.XtraLayout.LayoutControlItem lciNew;
         private DevExpress.XtraGrid.Columns.GridColumn colKNR;

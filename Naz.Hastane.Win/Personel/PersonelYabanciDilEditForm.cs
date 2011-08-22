@@ -28,10 +28,10 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbYabanciDil, LookUpServices.YabanciDils, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbKonusmaDerecesi, LookUpServices.YabanciDilDerecesis, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbOkumaDerecesi, LookUpServices.YabanciDilDerecesis, displayMember: "Value", valueMember: "ID");
-            UIUtilities.BindComboBox(cmbYazmaDerecesi, LookUpServices.YabanciDilDerecesis, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbYabanciDil, LookUpServices.YabanciDils, x => x.Value, x => x.ID);
+            UIUtilities.BindComboBox(cmbKonusmaDerecesi, LookUpServices.YabanciDilDerecesis, x => x.Value, x => x.ID);
+            UIUtilities.BindComboBox(cmbOkumaDerecesi, LookUpServices.YabanciDilDerecesis, x => x.Value, x => x.ID);
+            UIUtilities.BindComboBox(cmbYazmaDerecesi, LookUpServices.YabanciDilDerecesis, x => x.Value, x => x.ID);
         }
 
         protected override bool Save()

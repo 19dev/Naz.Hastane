@@ -26,7 +26,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override bool Save()
         {
-            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi >= TheObject.BitisTarihi)
+            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi > TheObject.BitisTarihi)
             {
                 XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

@@ -28,7 +28,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbOkulTipi, LookUpServices.OkulTipis, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbOkulTipi, LookUpServices.OkulTipis, x => x.Value, x => x.ID);
         }
 
         protected override bool Save()
@@ -38,7 +38,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 XtraMessageBox.Show("Lütfen Okul Adını Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi >= TheObject.BitisTarihi )
+            if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi > TheObject.BitisTarihi )
             {
                 XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

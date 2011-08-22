@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Classes;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -26,7 +27,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbHastaneBolumu, LookUpServices.HastaneBolumus, x => x.Value, x => x.ID);
         }
 
         protected override bool Save()

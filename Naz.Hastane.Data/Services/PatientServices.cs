@@ -213,6 +213,22 @@ namespace Naz.Hastane.Data.Services
 
         }
 
+        public static IList<PatientVisit> GetPatientVisitsForDoctor(ISession session, Doctor doctor, DateTime startDate, DateTime endDate)
+        {
+            IList<PatientVisit> result = (from pv in session.Query<PatientVisit>()
+                                     where 
+                                     //pvd.MAKNO == null && pvd.AMAKNO == null
+                                        pv.Doctor == doctor
+                                        && pv.VisitType == PatientVisit.Polyclinic
+                                        && pv.VisitDate >= startDate && pv.VisitDate <= endDate.AddDays(1)
+                                     orderby pv.SIRAID ascending
+                                     select pv
+                            )
+                .ToList<PatientVisit>();
+            return result;
+        }
+
+
         #endregion
 
         #region PatientVisit

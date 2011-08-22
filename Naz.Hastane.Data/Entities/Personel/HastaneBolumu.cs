@@ -5,7 +5,7 @@ namespace Naz.Hastane.Data.Entities
 {
     /// <remarks>tlkpHastaneBolumu</remarks>
     [Description("Hastane Bölümü Tanımı")]
-    public class HastaneBolumu : LookUpIdValue
+    public class HastaneBolumu : IDValueBase
     {
     }
 }

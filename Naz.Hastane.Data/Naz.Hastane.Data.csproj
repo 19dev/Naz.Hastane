@@ -99,7 +99,7 @@
     <Compile Include="Entities\LookUp\General\BloodType.cs" />
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
-    <Compile Include="Entities\LookUp\LookUpIdValue.cs" />
+    <Compile Include="Entities\IDValueBase.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyType.cs" />
@@ -163,6 +163,7 @@
     <Compile Include="Entities\Personel\PersonelDetail.cs" />
     <Compile Include="Entities\Personel\HizmetIciEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelUnvan.cs" />
+    <Compile Include="Entities\Patient\QueueStatusType.cs" />
     <Compile Include="Entities\Personel\YabanciDilDerecesi.cs" />
     <Compile Include="Entities\Personel\Unvan.cs" />
     <Compile Include="Entities\Personel\YabanciDil.cs" />
@@ -310,6 +311,7 @@
     <Compile Include="Mappings\Personel\PersonelSertifikaMap.cs" />
     <Compile Include="Mappings\Personel\PersonelYabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\OkulTipiMap.cs" />
+    <Compile Include="Mappings\Patient\QueueStatusTypeMap.cs" />
     <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
     <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
     <Compile Include="Mappings\Product\ProductMap.cs" />

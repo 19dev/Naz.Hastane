@@ -11,7 +11,7 @@ namespace Naz.Hastane.Data.Entities
 			Table("tblPersonel");
 			LazyLoad();
 			Id(x => x.ID).GeneratedBy.Identity().Column("ID");
-			Map(x => x.PersonelNo).Column("PersonelNo").Not.Nullable().Length(50);
+			Map(x => x.PersonelNo).Column("PersonelNo").Length(50);
 			Map(x => x.Ad).Column("Ad").Not.Nullable().Length(50);
 			Map(x => x.Soyad).Column("Soyad").Not.Nullable().Length(50);
 			Map(x => x.AdiSoyadi).Column("AdiSoyadi").Length(50);

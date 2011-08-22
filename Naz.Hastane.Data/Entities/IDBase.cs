@@ -14,5 +14,9 @@ namespace Naz.Hastane.Data.Entities
                 return false;
             return (this.ID == p.ID);
         }
+        public override int GetHashCode()
+        {
+            return ID.GetHashCode();
+        }
     }
 }

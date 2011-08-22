@@ -26,7 +26,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void LoadLookUps()
         {
-            UIUtilities.BindComboBox(cmbUnvan, LookUpServices.Unvans, displayMember: "Value", valueMember: "ID");
+            UIUtilities.BindComboBox(cmbUnvan, LookUpServices.Unvans, x => x.Value, x => x.ID);
         }
 
         protected override bool Save()
