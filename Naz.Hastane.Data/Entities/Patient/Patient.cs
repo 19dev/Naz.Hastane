@@ -36,6 +36,14 @@ namespace Naz.Hastane.Data.Entities
                 return String.Format("{0} {1}", FirstName, LastName);
             }
         }
+        public virtual string Initials
+        {
+            get
+            {
+                return String.Format("{0}.{1}.", FirstName.Substring(0, Math.Min(FirstName.Length,1)), LastName.Substring(0, Math.Min(LastName.Length, 1)));
+            }
+        }
+
         public virtual int BloodType { get; set; } //KANGRUBU
         /// <summary>
         /// KANVEREBILIR

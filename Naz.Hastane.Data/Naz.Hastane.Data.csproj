@@ -163,7 +163,7 @@
     <Compile Include="Entities\Personel\PersonelDetail.cs" />
     <Compile Include="Entities\Personel\HizmetIciEgitim.cs" />
     <Compile Include="Entities\Personel\PersonelUnvan.cs" />
-    <Compile Include="Entities\Patient\QueueStatusType.cs" />
+    <Compile Include="Entities\Patient\QueueStatus.cs" />
     <Compile Include="Entities\Personel\YabanciDilDerecesi.cs" />
     <Compile Include="Entities\Personel\Unvan.cs" />
     <Compile Include="Entities\Personel\YabanciDil.cs" />
@@ -311,7 +311,7 @@
     <Compile Include="Mappings\Personel\PersonelSertifikaMap.cs" />
     <Compile Include="Mappings\Personel\PersonelYabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\OkulTipiMap.cs" />
-    <Compile Include="Mappings\Patient\QueueStatusTypeMap.cs" />
+    <Compile Include="Mappings\Patient\QueueStatusMap.cs" />
     <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
     <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
     <Compile Include="Mappings\Product\ProductMap.cs" />

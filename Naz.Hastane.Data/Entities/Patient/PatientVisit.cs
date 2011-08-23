@@ -152,8 +152,33 @@ namespace Naz.Hastane.Data.Entities
         public virtual string ARACIKLAMA { get; set; } //ARACIKLAMA Armakom
         public virtual bool ARGONDERILDI { get; set; } //ARGONDERILDI
         public virtual string ARHATA { get; set; } //ARHATA
+        /// <summary>
+        /// DURUM
+        /// </summary>
+        public virtual QueueStatus QueueStatus { get; set; } //DURUM Cumhur Kapıönü
+        public virtual string QueueStatusValue
+        {
+            get
+            {
+                if (QueueStatus == null)
+                    return "";
+                else
+                    return QueueStatus.Value;
+            }
+            set{}
+        }
+        public virtual char QueueStatusCode
+        {
+            get
+            {
+                if (QueueStatus == null)
+                    return '0';
+                else
+                    return QueueStatus.Code;
+            }
+            set { }
+        }
 
-        public virtual char Status { get; set; } //DURUM Cumhur Kapıönü
         public virtual DateTime? KONTROLTAR { get; set; } //KONTROLTAR
         public virtual DateTime? KONTROLT { get; set; } //KONTROLT
         public virtual char KONTROL { get; set; } //KONTROL Cumhur Kapıönü

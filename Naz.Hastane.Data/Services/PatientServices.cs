@@ -333,7 +333,7 @@ namespace Naz.Hastane.Data.Services
                 pv.SEVKTAKIPNO = "";
                 pv.TAKIPSEND = "9";
                 pv.TABKODU = "02";
-                pv.Status = '1';
+                pv.QueueStatus = LookUpServices.GetQueueStatus(QueueStatus.Waiting);
 
                 pv.Patient = patient;
 

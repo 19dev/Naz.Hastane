@@ -27,6 +27,7 @@ namespace Naz.Hastane.Data.Mappings.LookUp.Special
             Map(x => x.USER_GRUP).Column("USER_GRUP").Length(2); //1
             Map(x => x.USER_PASS).Column("USER_PASS").Length(10); //0
             Map(x => x.VEZNE).Column("VEZNE").Length(2); //1
+            Map(x => x.Doctors).Column("Doctors").Length(255); //1
         }
     }
 }

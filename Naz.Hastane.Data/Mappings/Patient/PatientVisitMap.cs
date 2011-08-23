@@ -82,7 +82,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.ARACIKLAMA).Column("ARACIKLAMA");
             Map(x => x.ARGONDERILDI).Column("ARGONDERILDI");
             Map(x => x.ARHATA).Column("ARHATA");
-            Map(x => x.Status).Column("DURUM");
+            References(x => x.QueueStatus).Column("DURUM");
 
             Map(x => x.KONTROLTAR).Column("KONTROLTAR");
             Map(x => x.KONTROLT).Column("KONTROLT");

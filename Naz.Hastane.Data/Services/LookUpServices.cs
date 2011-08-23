@@ -183,9 +183,9 @@ namespace Naz.Hastane.Data.Services
         public static IList<HizmetIciEgitimTipi> HizmetIciEgitimTipis
         { get { return LookUpTable(ref _HizmetIciEgitimTipis); } }
 
-        private static IList<QueueStatusType> _QueueStatusTypes;
-        public static IList<QueueStatusType> QueueStatusTypes
-        { get { return LookUpTable(ref _QueueStatusTypes); } }
+        private static IList<QueueStatus> _QueueStatuss;
+        public static IList<QueueStatus> QueueStatuss
+        { get { return LookUpTable(ref _QueueStatuss); } }
 
         #endregion
 
@@ -930,6 +930,13 @@ namespace Naz.Hastane.Data.Services
                     return t.Code;
             }
             return String.Empty;
+        }
+
+        public static QueueStatus GetQueueStatus(char code)
+        {
+            return (from qs in QueueStatuss
+                    where qs.Code == code
+                    select qs).SingleOrDefault();
         }
     }
 }

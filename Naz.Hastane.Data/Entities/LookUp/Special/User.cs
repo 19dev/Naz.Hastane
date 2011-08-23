@@ -32,6 +32,8 @@ namespace Naz.Hastane.Data.Entities.LookUp.Special
 
         public virtual string TESTER { get; set; } // TESTER; length(1); 0 Hepsi F
         public virtual string INDIRIMYUZDE { get; set; } // INDIRIMYUZDE; length(5); 1 Boş
+
+        public virtual string Doctors { get; set; }
         public virtual DateTime? DATE_CREATED { get; set; } // DATE_CREATED; length(8); 1 Boş
         public virtual DateTime? DATE_UPDATED { get; set; } // DATE_UPDATED; length(8); 1 Boş
     }
