@@ -62,7 +62,7 @@ namespace Naz.Hastane.Data.Services
 
         public static IList<T> GetAll<T>() where T : class
         {
-            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             {
                 return session.CreateCriteria<T>().List<T>();
             }

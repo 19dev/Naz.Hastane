@@ -220,8 +220,8 @@ namespace Naz.Hastane.Data.Services
                                      //pvd.MAKNO == null && pvd.AMAKNO == null
                                         pv.Doctor == doctor
                                         && pv.VisitType == PatientVisit.Polyclinic
-                                        && pv.VisitDate >= startDate && pv.VisitDate <= endDate.AddDays(1)
-                                     orderby pv.SIRAID ascending
+                                        && pv.VisitDate >= startDate && pv.VisitDate < endDate.AddDays(1)
+                                          orderby pv.QueueNo ascending
                                      select pv
                             )
                 .ToList<PatientVisit>();

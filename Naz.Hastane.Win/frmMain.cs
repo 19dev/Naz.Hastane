@@ -813,7 +813,7 @@ namespace Naz.Hastane.Win {
         #region MDIChildForms
         private void AttachMDIChildButtons()
         {
-            iSGKHastaAra.ItemClick += (o, args) => OpenFindPatientForm();
+            iSGKHastaAra.ItemClick += (o, args) => OpenSearchPatientForm();
             iPrinterSettings.ItemClick += (o, args) => ShowNewDocument<PrinterSettingsForm>();
             iAccDailyReport.ItemClick += (o, args) => ShowNewDocument<AccountingDailySummaryForm>();
             iInvoiceVoucher.ItemClick += (o, args) => ShowNewDocument<InvoiceVoucherForm>();
@@ -826,7 +826,7 @@ namespace Naz.Hastane.Win {
             iUserPatientVisits.ItemClick += (o, args) => OpenLastVisitedPatientsForm();
             iHizmetIciEgitimler.ItemClick += (o, args) => ShowNewDocument<HizmetIciEgitimForm>();
 
-            iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
+            //iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
             iDoctorPatientCallList.ItemClick += (o, args) => ShowNewDocument<DoctorPatientCallListForm>();
         }
 
@@ -838,9 +838,9 @@ namespace Naz.Hastane.Win {
             //lastVisitedPatientForm.Refresh();
         }
 
-        public void OpenFindPatientForm()
+        public void OpenSearchPatientForm()
         {
-            ShowNewDocument<FindPatientForm>();
+            ShowNewDocument<SearchPatientForm>();
         }
         #endregion
 

@@ -50,6 +50,7 @@
     <Compile Include="Classes\Helpers.cs" />
     <Compile Include="Classes\NullSafeBindingList.cs" />
     <Compile Include="Classes\ReflectionUtilities.cs" />
+    <Compile Include="Classes\SerialPortFixer.cs" />
     <Compile Include="Networking\IMulticastBroadcaster.cs" />
     <Compile Include="Networking\IMulticastListener.cs" />
     <Compile Include="Networking\MulticastBroadcaster.cs" />

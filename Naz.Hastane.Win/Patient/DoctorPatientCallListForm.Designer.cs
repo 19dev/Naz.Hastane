@@ -35,6 +35,7 @@
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition5 = new DevExpress.XtraGrid.StyleFormatCondition();
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition6 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbCall = new DevExpress.XtraEditors.SimpleButton();
             this.sbRefresh = new DevExpress.XtraEditors.SimpleButton();
@@ -49,7 +50,6 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.lstDoctors = new DevExpress.XtraEditors.ListBoxControl();
@@ -95,6 +95,15 @@
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 4;
             this.colStatus.Width = 83;
+            // 
+            // colKurum
+            // 
+            this.colKurum.Caption = "Kurum";
+            this.colKurum.FieldName = "PSG";
+            this.colKurum.Name = "colKurum";
+            this.colKurum.Visible = true;
+            this.colKurum.VisibleIndex = 5;
+            this.colKurum.Width = 155;
             // 
             // layoutControl1
             // 
@@ -147,6 +156,7 @@
             this.deDate.Size = new System.Drawing.Size(111, 20);
             this.deDate.StyleController = this.layoutControl1;
             this.deDate.TabIndex = 12;
+            this.deDate.DateTimeChanged += new System.EventHandler(this.deDate_DateTimeChanged);
             // 
             // sbPatientAbsent
             // 
@@ -278,7 +288,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Protokol";
-            this.gridColumn6.FieldName = "PatientVisitNo";
+            this.gridColumn6.FieldName = "PatientVisit.Patient.PatientNo";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
@@ -301,15 +311,6 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 139;
-            // 
-            // colKurum
-            // 
-            this.colKurum.Caption = "Kurum";
-            this.colKurum.FieldName = "PSG";
-            this.colKurum.Name = "colKurum";
-            this.colKurum.Visible = true;
-            this.colKurum.VisibleIndex = 5;
-            this.colKurum.Width = 155;
             // 
             // repositoryItemComboBox1
             // 

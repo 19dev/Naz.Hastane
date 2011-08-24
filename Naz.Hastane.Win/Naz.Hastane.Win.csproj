@@ -294,6 +294,12 @@
     <Compile Include="MDIChildForms\DailyTellerReportForm.Designer.cs">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIChildForms\SerialCommForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildForms\SerialCommForm.Designer.cs">
+      <DependentUpon>SerialCommForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIChildForms\DetailEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,12 @@
     </Compile>
     <Compile Include="Patient\DoctorPatientCallListForm.Designer.cs">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\SelectMedicineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\SelectMedicineForm.Designer.cs">
+      <DependentUpon>SelectMedicineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Personel\PersonelHizmetIciEgitimEditForm.cs">
       <SubType>Form</SubType>
@@ -444,17 +456,17 @@
     <Compile Include="Patient\SelectInsuranceCompanyForm.Designer.cs">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient\FindPatientForm.cs">
+    <Compile Include="Patient\SearchPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient\FindPatientForm.Designer.cs">
-      <DependentUpon>FindPatientForm.cs</DependentUpon>
+    <Compile Include="Patient\SearchPatientForm.Designer.cs">
+      <DependentUpon>SearchPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\PersonelAraForm.cs">
+    <Compile Include="Personel\SearchPersonelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\PersonelAraForm.Designer.cs">
-      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    <Compile Include="Personel\SearchPersonelForm.Designer.cs">
+      <DependentUpon>SearchPersonelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\SGKPatientForm.cs">
       <SubType>Form</SubType>
@@ -479,12 +491,6 @@
     </Compile>
     <Compile Include="Forms\frmReplace.Designer.cs">
       <DependentUpon>frmReplace.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Patient\HastaAraForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Patient\HastaAraForm.Designer.cs">
-      <DependentUpon>HastaAraForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\HastaIslemleriForm.cs">
       <SubType>Form</SubType>
@@ -567,6 +573,9 @@
     <EmbeddedResource Include="MDIChildForms\DailyTellerReportForm.resx">
       <DependentUpon>DailyTellerReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildForms\SerialCommForm.resx">
+      <DependentUpon>SerialCommForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIChildForms\DetailEditForm.resx">
       <DependentUpon>DetailEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -578,6 +587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\DoctorPatientCallListForm.resx">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\SelectMedicineForm.resx">
+      <DependentUpon>SelectMedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\PersonelHizmetIciEgitimEditForm.resx">
       <DependentUpon>PersonelHizmetIciEgitimEditForm.cs</DependentUpon>
@@ -645,8 +657,8 @@
     <EmbeddedResource Include="Patient\SelectInsuranceCompanyForm.resx">
       <DependentUpon>SelectInsuranceCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\PersonelAraForm.resx">
-      <DependentUpon>PersonelAraForm.cs</DependentUpon>
+    <EmbeddedResource Include="Personel\SearchPersonelForm.resx">
+      <DependentUpon>SearchPersonelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\InvoiceVoucherForm.resx">
       <DependentUpon>InvoiceVoucherForm.cs</DependentUpon>
@@ -678,8 +690,8 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient\FindPatientForm.resx">
-      <DependentUpon>FindPatientForm.cs</DependentUpon>
+    <EmbeddedResource Include="Patient\SearchPatientForm.resx">
+      <DependentUpon>SearchPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\SGKPatientForm.resx">
       <DependentUpon>SGKPatientForm.cs</DependentUpon>
@@ -693,10 +705,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReplace.resx">
       <DependentUpon>frmReplace.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Patient\HastaAraForm.resx">
-      <DependentUpon>HastaAraForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\HastaIslemleriForm.resx">

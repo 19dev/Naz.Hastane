@@ -37,6 +37,7 @@ namespace Naz.Hastane.Win
         //    lue.Properties.ValueMember = valueMember;
         //    lue.Properties.DataSource = dataSourceList;
         //}
+
         public static void BindLookUpEdit<T>(LookUpEdit lue, IList<T> dataSourceList,
             string displayMember = "Value", string valueMember = "Code", string initialValue = "") where T : new()
         {
@@ -112,19 +113,6 @@ namespace Naz.Hastane.Win
             {
                 if (_Configuration == null)
                 {
-                    //string appPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Amira");
-                    //if (!Directory.Exists(appPath))
-                    //{
-                    //    Directory.CreateDirectory(appPath);
-                    //    StreamWriter SW;
-                    //    SW = File.CreateText(appPath + "\\Naz.Hastane.ini");
-                    //    SW.WriteLine("[Database]");
-                    //    SW.WriteLine();
-                    //    SW.WriteLine("[Printer]");
-                    //    SW.WriteLine();
-
-                    //    SW.Close();
-                    //}
                     string appPath = Application.StartupPath;
                     appPath = Path.Combine(appPath, "Naz.Hastane.ini");
                     _Configuration = new IniConfigSource(appPath);

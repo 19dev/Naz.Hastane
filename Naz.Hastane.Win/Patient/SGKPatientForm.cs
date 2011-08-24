@@ -69,6 +69,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
             LoadLookUps();
+            AttachMenuHandlers();
         }
 
         public SGKPatientForm(string aPatientNo) : this()
@@ -828,7 +829,22 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
         #region Change Insurance Company
-        private void ddbChangeInsuranceCompany_Click(object sender, EventArgs e)
+        private void AttachMenuHandlers()
+        {
+            iSGK.ItemClick += (o, args) => ChangeInsuranceCompany(LookUpServices.GetSGK(Session));
+            iSGKAcil.ItemClick += (o, args) => ChangeInsuranceCompany(LookUpServices.GetSGKAcil(Session));
+            iNormal.ItemClick += (o, args) => ChangeInsuranceCompany(LookUpServices.GetNormalPatientCode(Session));
+            iOzelHasta.ItemClick += (o, args) => ChangeInsuranceCompany(LookUpServices.GetSpecialPatientCode(Session));
+            ddbChangeInsuranceCompany.Click += (o, args) => SelectAndChangeInsuranceCompany();
+
+            iSGKFast.ItemClick += (o, args) => ChangeInsuranceCompanyFast(LookUpServices.GetSGK(Session));
+            iSGKAcilFast.ItemClick += (o, args) => ChangeInsuranceCompanyFast(LookUpServices.GetSGKAcil(Session));
+            iNormalFast.ItemClick += (o, args) => ChangeInsuranceCompanyFast(LookUpServices.GetNormalPatientCode(Session));
+            iOzelHastaFast.ItemClick += (o, args) => ChangeInsuranceCompanyFast(LookUpServices.GetSpecialPatientCode(Session));
+            ddbChangeInsCompFast.Click += (o, args) => SelectAndChangeInsuranceCompanyFast();
+        }
+
+        private void SelectAndChangeInsuranceCompany()
         {
             using (SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm())
             {
@@ -836,26 +852,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (frm.IsSelected)
                     ChangeInsuranceCompany(frm.InsuranceCompany);
             }
-        }
-
-        private void iSGK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ChangeInsuranceCompany(LookUpServices.GetSGK(Session));
-        }
-
-        private void iSGKAcil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ChangeInsuranceCompany(LookUpServices.GetSGKAcil(Session));
-        }
-
-        private void iNormal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ChangeInsuranceCompany(LookUpServices.GetNormalPatientCode(Session));
-        }
-
-        private void iOzelHasta_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ChangeInsuranceCompany(LookUpServices.GetSpecialPatientCode(Session));
         }
 
         private void ChangeInsuranceCompany(InsuranceCompany newInsuranceCompany)
@@ -892,7 +888,28 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
         }
-        #endregion
+
+        private void SelectAndChangeInsuranceCompanyFast()
+        {
+            using (SelectInsuranceCompanyForm frm = new SelectInsuranceCompanyForm())
+            {
+                frm.ShowDialog();
+                if (frm.IsSelected)
+                    ChangeInsuranceCompanyFast(frm.InsuranceCompany);
+            }
+        }
+
+        private void ChangeInsuranceCompanyFast(InsuranceCompany newInsuranceCompany)
+        {
+            if (Patient.InsuranceCompany != newInsuranceCompany)
+            {
+                Patient.InsuranceCompany = newInsuranceCompany;
+                teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
+                if (!String.IsNullOrWhiteSpace(Patient.PatientNo))
+                    SavePatient();
+            }
+        }
+#endregion
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -909,7 +926,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SearchPatient()
         {
-            (MdiParent as frmMain).OpenFindPatientForm();
+            (MdiParent as frmMain).OpenSearchPatientForm();
         }
 
         private void sbYatis_Click(object sender, EventArgs e)
@@ -984,6 +1001,20 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbRefresh_Click(object sender, EventArgs e)
         {
             ReLoadPatient();
+        }
+
+        private void sbAddMedicine_Click(object sender, EventArgs e)
+        {
+            currentPatientVisit = PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (Patient != null && Patient.InsuranceCompany != null && currentPatientVisit != null)
+            {
+                using (SelectMedicineForm frm = new SelectMedicineForm() { PatientVisit = currentPatientVisit, PriceListCode = Patient.InsuranceCompany.GetPriceList(currentPatientVisit.VisitType) })
+                {
+                    frm.ShowDialog();
+                    //if (frm.IsSelected)
+                    //    ChangeInsuranceCompany(frm.InsuranceCompany);
+                }
+            }
         }
     }
 }

@@ -22,5 +22,26 @@ namespace Naz.Hastane.QueueDisplay.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("UfukOzturk.jpg")]
+        public string ImageFileName {
+            get {
+                return ((string)(this["ImageFileName"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0137")]
+        public string DoctorID {
+            get {
+                return ((string)(this["DoctorID"]));
+            }
+            set {
+                this["DoctorID"] = value;
+            }
+        }
     }
 }

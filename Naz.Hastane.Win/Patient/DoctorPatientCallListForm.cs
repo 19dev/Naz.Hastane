@@ -31,29 +31,41 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitializeComponent();
 
             string doctorCodes = UIUtilities.CurrentUser.Doctors;
-            //String doctorCodes = UIUtilities.ConfigurationSource.Configs["User"].Get("Doktorlar", "");
             doctorCodeList = doctorCodes.Split(';');
-            deDate.DateTime = DateTime.Today;
-
             lstDoctors.DataSource = LookUpServices.GetDoctorsInList(doctorCodeList);
+
+            deDate.DateTime = DateTime.Today;
         }
 
         private void lstDoctors_Click(object sender, EventArgs e)
+        {
+            DisplayDoctorPatients();
+        }
+
+        private void DisplayDoctorPatients()
         {
             Doctor doctor = lstDoctors.SelectedItem as Doctor;
 
             if (doctor != null)
             {
-                _PatientVisits = PatientServices.GetPatientVisitsForDoctor(Session, doctor, deDate.DateTime.Date, deDate.DateTime.Date);
-                foreach (PatientVisit pv in _PatientVisits)
+                Cursor.Current = Cursors.WaitCursor;
+                try
                 {
-                    if (pv.QueueStatusCode == '0')
+                    _PatientVisits = PatientServices.GetPatientVisitsForDoctor(Session, doctor, deDate.DateTime.Date, deDate.DateTime.Date);
+                    foreach (PatientVisit pv in _PatientVisits)
                     {
-                        pv.QueueStatus = LookUpServices.GetQueueStatus(QueueStatus.Waiting);
-                        Session.Update(pv);
+                        if (pv.QueueStatusCode == '0')
+                        {
+                            pv.QueueStatus = LookUpServices.GetQueueStatus(QueueStatus.Waiting);
+                            Session.Update(pv);
+                        }
                     }
+                    gcPatients.DataSource = _PatientVisits;
                 }
-                gcPatients.DataSource = _PatientVisits;
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
             }
         }
 
@@ -154,6 +166,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void sbCall_Click(object sender, EventArgs e)
         {
             CallPatient();
+        }
+
+        private void deDate_DateTimeChanged(object sender, EventArgs e)
+        {
+            DisplayDoctorPatients();
         }
     }
 }
