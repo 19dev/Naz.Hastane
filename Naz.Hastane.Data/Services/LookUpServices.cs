@@ -18,6 +18,8 @@ namespace Naz.Hastane.Data.Services
     public static class LookUpServices
     {
 
+        #region General Gets vs
+
         public static bool IsValidTCID(string aTCID)
         {
             return IsValidNumeric(aTCID, 11);
@@ -106,6 +108,7 @@ namespace Naz.Hastane.Data.Services
                 }
             }
         }
+        #endregion
 
         #region LookUpLists
 
@@ -396,6 +399,73 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        #region Pharmacy
+        public static string GetMedicineTanim(ISession session)
+        {
+            return GetSystemSettingValue(session, "ILAC");
+        }
+
+        public static string GetConsumableTanim(ISession session)
+        {
+            return GetSystemSettingValue(session, "SARF");
+        }
+
+        private static IList<SubFunctionGroup> _MedicineCategorys;
+        public static IList<SubFunctionGroup> MedicineCategorys
+        {
+            get
+            {
+                if (_MedicineCategorys == null)
+                {
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    {
+
+                        _MedicineCategorys = (from sfg in session.Query<SubFunctionGroup>()
+                                              where sfg.TanimCode == GetMedicineTanim(session)
+                                              orderby sfg.Code ascending
+                                              select sfg
+                                              )
+                                              .ToList<SubFunctionGroup>();
+                    }
+                }
+                return _MedicineCategorys;
+            }
+        }
+
+        private static IList<SubFunctionGroup> _Consumables;
+        public static IList<SubFunctionGroup> Consumables
+        {
+            get
+            {
+                if (_Consumables == null)
+                {
+                    using (ISession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
+                    {
+                        _Consumables = (from sfg in session.Query<SubFunctionGroup>()
+                                        where sfg.TanimCode == GetConsumableTanim(session)
+                                        orderby sfg.Code ascending
+                                        select sfg
+                                      )
+                                      .ToList<SubFunctionGroup>();
+                    }
+                }
+                return _Consumables;
+            }
+        }
+
+        public static IList<Stock> GetStocks(ISession session, string akod, string tanim, string grup)
+        {
+            IList<Stock> stocks = (from s in session.Query<Stock>()
+                            where s.AKOD == akod && s.TANIM == tanim && s.GRUP == grup && s.APILACSARF == "1"
+                            orderby s.NAME1 ascending
+                            select s
+                            )
+                            .ToList<Stock>();
+            return stocks;
+        }
+
+        #endregion
+
         #region AdminReports
 
         private static IList<OzetAYPAnaIslem> _OzetAYPAnaIslems;
@@ -539,6 +609,7 @@ namespace Naz.Hastane.Data.Services
         }
 
         #endregion
+
         public static IList<Product> GetProducts(string tanim, string grup, string priceList)
         {
             IList<Product> products = null;
@@ -688,6 +759,24 @@ namespace Naz.Hastane.Data.Services
         #endregion
 
         #region ID Generators
+        private static SystemSetting GetSystemSetting(ISession session, string key)
+        {
+            return (from systemSetting in session.Query<SystemSetting>()
+                  where systemSetting.ID0 == "00" && systemSetting.Code == key
+                  select systemSetting
+                                                ).SingleOrDefault<SystemSetting>();
+
+        }
+
+        private static string GetSystemSettingValue(ISession session, string key)
+        {
+            SystemSetting ss = GetSystemSetting(session, key);
+            if (ss == null)
+                return String.Empty;
+            else
+                return ss.Value;
+        }
+
         public static string GetNewSystemSettingNo(string key, bool updateDB = true)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -697,12 +786,7 @@ namespace Naz.Hastane.Data.Services
                 int serialNo = 0;
                 int numLength = 0;
 
-                /// TODO Add control for no element
-                SystemSetting ss = (from systemSetting in session.Query<SystemSetting>()
-                                    where systemSetting.ID0 == "00" && systemSetting.Code == key
-                                    select systemSetting
-                                    ).SingleOrDefault<SystemSetting>();
-
+                SystemSetting ss = GetSystemSetting(session, key);
                 if (ss == null)
                     return String.Empty;
 
@@ -890,6 +974,7 @@ namespace Naz.Hastane.Data.Services
 
             return result;
         }
+
         public static void AddUserPatientVisit(User user, Patient patient)
         {
             using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -932,7 +1017,7 @@ namespace Naz.Hastane.Data.Services
             return String.Empty;
         }
 
-        public static QueueStatus GetQueueStatus(char code)
+        public static QueueStatus GetQueueStatus(int code)
         {
             return (from qs in QueueStatuss
                     where qs.Code == code

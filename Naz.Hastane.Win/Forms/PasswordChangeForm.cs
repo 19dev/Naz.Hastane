@@ -51,17 +51,17 @@ namespace Naz.Hastane.Win.Forms
                 }
                 if (User == null || User.USER_PASS != encrypter.Encrypt(this.teUserPassword.Text))
                 {
-                    XtraMessageBox.Show("Eski Şifreniz Doğru Değil, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
+                    SimpleMsgBoxForm.ShowMsgBox("Eski Şifreniz Doğru Değil, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı", true);
                     return;
                 }
                 else if (String.IsNullOrWhiteSpace(this.teNewPassword.Text))
                 {
-                    XtraMessageBox.Show("Yeni Şifre Boş Olamaz, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
+                    SimpleMsgBoxForm.ShowMsgBox("Yeni Şifre Boş Olamaz, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı", true);
                     return;
                 }
                 else if (this.teNewPassword.Text != this.teRepeatNewPassword.Text)
                 {
-                    XtraMessageBox.Show("Yeni Şifre Tekrarı Tutmuyor, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı");
+                    SimpleMsgBoxForm.ShowMsgBox("Yeni Şifre Tekrarı Tutmuyor, Lütfen Tekrar Deneyiniz.", "Şifre Değiştirme Uyarısı", true);
                     return;
                 }
                 User.USER_PASS = encrypter.Encrypt(this.teNewPassword.Text);
@@ -78,7 +78,7 @@ namespace Naz.Hastane.Win.Forms
                 }
                 catch (Exception excpt)
                 {
-                    XtraMessageBox.Show("Şifre Değiştirme İşlemi Başarısız Oldu!\r\n" + excpt.ToString(), "Şifre Değiştirme Uyarısı");
+                    SimpleMsgBoxForm.ShowMsgBox("Şifre Değiştirme İşlemi Başarısız Oldu!\r\n" + excpt.ToString(), "Şifre Değiştirme Uyarısı", true);
                 }
                 finally
                 { 

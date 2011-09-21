@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -39,12 +40,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Yabancı Dil Bilgisi Kayıt Edilmiştir", "Personel Yabancı Dil Bilgisi Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Yabancı Dil Bilgisi Kayıt Edilmiştir", "Personel Yabancı Dil Bilgisi Kayıt Onayı");
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Yabancı Dil Bilgisi Kayıt Edilemedi:" + error.Message, "Personel Yabancı Dil Bilgisi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Yabancı Dil Bilgisi Kayıt Edilemedi:" + error.Message, "Personel Yabancı Dil Bilgisi Kayıt Hatası", true);
                 return false;
             }
 

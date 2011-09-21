@@ -12,6 +12,8 @@ namespace Naz.Hastane.Data.Mappings
 
             Id(x => x.Code).Column("PSG").Length(6);
 
+            Map(x => x.KNR).Column("KNR").Length(5); //0
+
             Map(x => x.ACILKATILIM).Column("ACILKATILIM").Length(1); //0
             Map(x => x.Name).Column("ADI1").Length(200); //0
             Map(x => x.ADRZUS).Column("ADRZUS").Length(200); //1
@@ -39,7 +41,6 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.hesap_kodu).Column("hesap_kodu").Length(100); //1
             Map(x => x.ILACINDIRIM).Column("ILACINDIRIM").Length(1); //1
             Map(x => x.ILACODE).Column("ILACODE").Length(1); //0
-            Map(x => x.KNR).Column("KNR").Length(5); //0
             Map(x => x.KURUMTIPI).Column("KURUMTIPI").Length(4); //0
             Map(x => x.lngKurumTipiID).Column("lngKurumTipiID").Length(4); //1
             Map(x => x.MKURUM).Column("MKURUM").Length(50); //1

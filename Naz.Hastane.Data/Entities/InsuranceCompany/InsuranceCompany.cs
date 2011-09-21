@@ -16,6 +16,8 @@ namespace Naz.Hastane.Data.Entities
         /// PSG
         /// </summary>
         public virtual string Code { get; set; } // PSG; length(6); 0
+        public virtual string KNR { get; set; } // KNR; length(5); 0
+
         /// <summary>
         /// ADI1
         /// </summary>
@@ -47,7 +49,6 @@ namespace Naz.Hastane.Data.Entities
         public virtual string hesap_kodu { get; set; } // hesap_kodu; length(100); 1
         public virtual string ILACINDIRIM { get; set; } // ILACINDIRIM; length(1); 1
         public virtual string ILACODE { get; set; } // ILACODE; length(1); 0
-        public virtual string KNR { get; set; } // KNR; length(5); 0
         public virtual string KURUMTIPI { get; set; } // KURUMTIPI; length(4); 0
         public virtual int lngKurumTipiID { get; set; } // lngKurumTipiID; length(4); 1
         public virtual string MKURUM { get; set; } // MKURUM; length(50); 1

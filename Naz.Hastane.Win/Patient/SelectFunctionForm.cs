@@ -31,6 +31,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             CreateNodes(this.tlFunctionGroups, LookUpServices.FunctionGroups);
 
             this.gcSelectedProducts.DataSource = _SelectedProducts;
+            gcProducts.Focus();
         }
 
         private void CreateColumns(TreeList tl)
@@ -150,9 +151,9 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SelectFunctionForm_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            string key = e.KeyChar.ToString();
-            key = key.ToUpper();
-            FindNode(this.tlFunctionGroups.FocusedNode, key[0]);
+            //string key = e.KeyChar.ToString();
+            //key = key.ToUpper();
+            //FindNode(this.tlFunctionGroups.FocusedNode, key[0]);
         }
 
         private void FindNode(TreeListNode parentNode, char searchChar)

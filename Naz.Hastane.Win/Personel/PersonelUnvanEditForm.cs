@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -33,18 +34,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (TheObject.BaslangicTarihi == null)
             {
-                XtraMessageBox.Show("Lütfen Başlangıç Tarihini Kontrol Ediniz", "Personel Hastane Bölümü Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Başlangıç Tarihini Kontrol Ediniz", "Personel Hastane Bölümü Kayıt Hatası", true);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Hastane Bölümü Kayıt Edilmiştir", "Personel Hastane Bölümü Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Hastane Bölümü Kayıt Edilmiştir", "Personel Hastane Bölümü Kayıt Onayı");
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Hastane Bölümü Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Hastane Bölümü Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", true);
                 return false;
             }
 

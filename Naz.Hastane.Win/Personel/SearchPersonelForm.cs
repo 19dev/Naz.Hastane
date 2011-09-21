@@ -18,6 +18,7 @@ using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System.Linq.Expressions;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -82,7 +83,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     }
                     else if (personels.Count == 0)
                     {
-                        if (XtraMessageBox.Show("Bu Kriterlerle Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (SimpleMsgBoxForm.ShowYesNo("Bu Kriterlerle Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", true) == DialogResult.Yes)
                         {
                             (this.MdiParent as frmMain).OpenNewPersonel();
                         }
@@ -105,7 +106,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.lcPersonelAdeti.Text = "Bulunan:" + personels.Count.ToString();
                 if (personels.Count == 0)
                 {
-                    if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (SimpleMsgBoxForm.ShowYesNo("Bu TC Kimlik Numaralı Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", true) == DialogResult.Yes)
                     {
                         (this.MdiParent as frmMain).OpenNewPersonelWithTCID(TCID);
                         return true;
@@ -129,7 +130,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 this.lcPersonelAdeti.Text = "Bulunan:" + personels.Count.ToString();
                 if (personels.Count == 0)
                 {
-                    if (XtraMessageBox.Show("Bu Personel Numaralı Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (SimpleMsgBoxForm.ShowYesNo("Bu Personel Numaralı Bir Personel Kayıtlı Değil, Yeni Personel Kayıtı Yaratmak İster Misiniz?", "Personel Kayıtı Arama", true) == DialogResult.Yes)
                     {
                         (this.MdiParent as frmMain).OpenNewPersonel();
                     }

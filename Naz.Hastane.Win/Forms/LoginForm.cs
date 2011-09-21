@@ -51,7 +51,7 @@ namespace Naz.Hastane.Win.Forms
             }
             catch(Exception e)
             {
-                XtraMessageBox.Show("Veritabanı Hatası: " + e.Message);
+                SimpleMsgBoxForm.ShowMsgBox("Veritabanı Hatası: " + e.Message, "Uyarı", true);
             }
             finally
             {
@@ -59,7 +59,7 @@ namespace Naz.Hastane.Win.Forms
             }
             if (User == null || User.USER_PASS != encrypter.Encrypt(this.teUserPassword.Text))
             {
-                XtraMessageBox.Show("Bu Kullanıcı Geçerli Değil", "Kullanıcı Girişi Uyarısı");
+                SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcı Geçerli Değil", "Kullanıcı Girişi Uyarısı", true);
                 return false;
             }
             else

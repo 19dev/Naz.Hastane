@@ -29,12 +29,25 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.lbcUrunTipi = new DevExpress.XtraEditors.ListBoxControl();
+            this.lueDoktor = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueServis = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueDepo = new DevExpress.XtraEditors.LookUpEdit();
+            this.deDate = new DevExpress.XtraEditors.DateEdit();
+            this.rgSelection = new DevExpress.XtraEditors.RadioGroup();
             this.tePatientTotal = new DevExpress.XtraEditors.TextEdit();
             this.gcProducts = new DevExpress.XtraGrid.GridControl();
             this.gvProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPatientPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCompanyPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sbClose = new DevExpress.XtraEditors.SimpleButton();
             this.sbSelect = new DevExpress.XtraEditors.SimpleButton();
             this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
@@ -58,30 +71,24 @@
             this.lciPatientTotal = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.deDate = new DevExpress.XtraEditors.DateEdit();
             this.lciDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueDepo = new DevExpress.XtraEditors.LookUpEdit();
             this.lciDepo = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueServis = new DevExpress.XtraEditors.LookUpEdit();
             this.lciServis = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueDoktor = new DevExpress.XtraEditors.LookUpEdit();
             this.lciDoktor = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lbcUrunTipi = new DevExpress.XtraEditors.ListBoxControl();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.sbDelete = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbcUrunTipi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoktor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueServis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDepo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgSelection.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePatientTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
@@ -98,18 +105,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDepo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDepo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueServis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciServis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDoktor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDoktor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbcUrunTipi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
@@ -124,7 +124,7 @@
             this.layoutControl1.Controls.Add(this.lueServis);
             this.layoutControl1.Controls.Add(this.lueDepo);
             this.layoutControl1.Controls.Add(this.deDate);
-            this.layoutControl1.Controls.Add(this.radioGroup1);
+            this.layoutControl1.Controls.Add(this.rgSelection);
             this.layoutControl1.Controls.Add(this.tePatientTotal);
             this.layoutControl1.Controls.Add(this.gcProducts);
             this.layoutControl1.Controls.Add(this.sbClose);
@@ -137,6 +137,82 @@
             this.layoutControl1.Size = new System.Drawing.Size(1092, 748);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // sbDelete
+            // 
+            this.sbDelete.Location = new System.Drawing.Point(12, 714);
+            this.sbDelete.Name = "sbDelete";
+            this.sbDelete.Size = new System.Drawing.Size(93, 22);
+            this.sbDelete.StyleController = this.layoutControl1;
+            this.sbDelete.TabIndex = 18;
+            this.sbDelete.Text = "Sil(F8)";
+            // 
+            // lbcUrunTipi
+            // 
+            this.lbcUrunTipi.Location = new System.Drawing.Point(90, 89);
+            this.lbcUrunTipi.Name = "lbcUrunTipi";
+            this.lbcUrunTipi.Size = new System.Drawing.Size(366, 173);
+            this.lbcUrunTipi.StyleController = this.layoutControl1;
+            this.lbcUrunTipi.TabIndex = 17;
+            this.lbcUrunTipi.SelectedValueChanged += new System.EventHandler(this.lbcUrunTipi_SelectedValueChanged);
+            // 
+            // lueDoktor
+            // 
+            this.lueDoktor.EditValue = "";
+            this.lueDoktor.Location = new System.Drawing.Point(87, 290);
+            this.lueDoktor.Name = "lueDoktor";
+            this.lueDoktor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueDoktor.Size = new System.Drawing.Size(369, 20);
+            this.lueDoktor.StyleController = this.layoutControl1;
+            this.lueDoktor.TabIndex = 16;
+            // 
+            // lueServis
+            // 
+            this.lueServis.EditValue = "";
+            this.lueServis.Location = new System.Drawing.Point(87, 266);
+            this.lueServis.Name = "lueServis";
+            this.lueServis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueServis.Size = new System.Drawing.Size(369, 20);
+            this.lueServis.StyleController = this.layoutControl1;
+            this.lueServis.TabIndex = 15;
+            // 
+            // lueDepo
+            // 
+            this.lueDepo.EditValue = "";
+            this.lueDepo.Location = new System.Drawing.Point(87, 65);
+            this.lueDepo.Name = "lueDepo";
+            this.lueDepo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueDepo.Size = new System.Drawing.Size(369, 20);
+            this.lueDepo.StyleController = this.layoutControl1;
+            this.lueDepo.TabIndex = 14;
+            // 
+            // deDate
+            // 
+            this.deDate.EditValue = null;
+            this.deDate.Location = new System.Drawing.Point(87, 41);
+            this.deDate.Name = "deDate";
+            this.deDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.deDate.Size = new System.Drawing.Size(369, 20);
+            this.deDate.StyleController = this.layoutControl1;
+            this.deDate.TabIndex = 13;
+            // 
+            // rgSelection
+            // 
+            this.rgSelection.Location = new System.Drawing.Point(12, 12);
+            this.rgSelection.Name = "rgSelection";
+            this.rgSelection.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("İ", "İlaç"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "Sarf")});
+            this.rgSelection.Size = new System.Drawing.Size(444, 25);
+            this.rgSelection.StyleController = this.layoutControl1;
+            this.rgSelection.TabIndex = 12;
+            this.rgSelection.EditValueChanged += new System.EventHandler(this.rgSelection_EditValueChanged);
             // 
             // tePatientTotal
             // 
@@ -156,7 +232,7 @@
             this.gcProducts.Location = new System.Drawing.Point(460, 28);
             this.gcProducts.MainView = this.gvProducts;
             this.gcProducts.Name = "gcProducts";
-            this.gcProducts.Size = new System.Drawing.Size(522, 358);
+            this.gcProducts.Size = new System.Drawing.Size(522, 418);
             this.gcProducts.TabIndex = 9;
             this.gcProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProducts});
@@ -176,9 +252,19 @@
             this.gvProducts.GridControl = this.gcProducts;
             this.gvProducts.Name = "gvProducts";
             this.gvProducts.OptionsBehavior.Editable = false;
+            this.gvProducts.OptionsFind.AlwaysVisible = true;
             this.gvProducts.OptionsView.ColumnAutoWidth = false;
             this.gvProducts.OptionsView.ShowGroupPanel = false;
             this.gvProducts.DoubleClick += new System.EventHandler(this.gvProducts_DoubleClick);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Code";
+            this.gridColumn1.FieldName = "CODE";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 72;
             // 
             // colProductName
             // 
@@ -194,7 +280,7 @@
             this.colPatientPrice.Caption = "Fiyatı";
             this.colPatientPrice.DisplayFormat.FormatString = "#,##0.00";
             this.colPatientPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colPatientPrice.FieldName = "PatientPriceWithVAT";
+            this.colPatientPrice.FieldName = "SATISF";
             this.colPatientPrice.Name = "colPatientPrice";
             this.colPatientPrice.Visible = true;
             this.colPatientPrice.VisibleIndex = 2;
@@ -205,11 +291,56 @@
             this.colCompanyPrice.Caption = "Mevcut";
             this.colCompanyPrice.DisplayFormat.FormatString = "#,##0.00";
             this.colCompanyPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colCompanyPrice.FieldName = "CompanyPriceWithVAT";
+            this.colCompanyPrice.FieldName = "MEVCUT";
             this.colCompanyPrice.Name = "colCompanyPrice";
             this.colCompanyPrice.Visible = true;
             this.colCompanyPrice.VisibleIndex = 3;
             this.colCompanyPrice.Width = 43;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Minimum";
+            this.gridColumn2.FieldName = "MINIMUM";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 4;
+            this.gridColumn2.Width = 48;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "KDV";
+            this.gridColumn3.FieldName = "KDV";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 5;
+            this.gridColumn3.Width = 34;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Reuse";
+            this.gridColumn4.FieldName = "REUSE";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 6;
+            this.gridColumn4.Width = 38;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Son Kullanım Tarihi";
+            this.gridColumn5.FieldName = "SKDAT";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 7;
+            this.gridColumn5.Width = 97;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Kontrol Kodu";
+            this.gridColumn6.FieldName = "KONTROLKODU";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 8;
+            this.gridColumn6.Width = 70;
             // 
             // sbClose
             // 
@@ -233,10 +364,10 @@
             // 
             // gcSelectedProducts
             // 
-            this.gcSelectedProducts.Location = new System.Drawing.Point(12, 406);
+            this.gcSelectedProducts.Location = new System.Drawing.Point(12, 466);
             this.gcSelectedProducts.MainView = this.gvSelectedProducts;
             this.gcSelectedProducts.Name = "gcSelectedProducts";
-            this.gcSelectedProducts.Size = new System.Drawing.Size(1068, 304);
+            this.gcSelectedProducts.Size = new System.Drawing.Size(1068, 244);
             this.gcSelectedProducts.TabIndex = 10;
             this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSelectedProducts});
@@ -414,7 +545,7 @@
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(974, 260);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(98, 118);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(98, 178);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -424,7 +555,7 @@
             this.lciProducts.CustomizationFormText = "İşlemler";
             this.lciProducts.Location = new System.Drawing.Point(448, 0);
             this.lciProducts.Name = "lciProducts";
-            this.lciProducts.Size = new System.Drawing.Size(526, 378);
+            this.lciProducts.Size = new System.Drawing.Size(526, 438);
             this.lciProducts.Text = "Malzemeler";
             this.lciProducts.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciProducts.TextSize = new System.Drawing.Size(71, 13);
@@ -433,9 +564,9 @@
             // 
             this.lciSelectedProducts.Control = this.gcSelectedProducts;
             this.lciSelectedProducts.CustomizationFormText = "Seçili İşlemler";
-            this.lciSelectedProducts.Location = new System.Drawing.Point(0, 378);
+            this.lciSelectedProducts.Location = new System.Drawing.Point(0, 438);
             this.lciSelectedProducts.Name = "lciSelectedProducts";
-            this.lciSelectedProducts.Size = new System.Drawing.Size(1072, 324);
+            this.lciSelectedProducts.Size = new System.Drawing.Size(1072, 264);
             this.lciSelectedProducts.Text = "Seçili İşlemler";
             this.lciSelectedProducts.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciSelectedProducts.TextSize = new System.Drawing.Size(71, 13);
@@ -470,68 +601,9 @@
             this.emptySpaceItem5.Text = "emptySpaceItem5";
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Code";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 72;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Minimum";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 4;
-            this.gridColumn2.Width = 48;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "KDV";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 5;
-            this.gridColumn3.Width = 34;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Reuse";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 6;
-            this.gridColumn4.Width = 38;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Son Kullanım Tarihi";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 7;
-            this.gridColumn5.Width = 97;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Kontrol Kodu";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 8;
-            this.gridColumn6.Width = 70;
-            // 
-            // radioGroup1
-            // 
-            this.radioGroup1.Location = new System.Drawing.Point(12, 12);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("İ", "İlaç"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "Sarf")});
-            this.radioGroup1.Size = new System.Drawing.Size(444, 25);
-            this.radioGroup1.StyleController = this.layoutControl1;
-            this.radioGroup1.TabIndex = 12;
-            // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.radioGroup1;
+            this.layoutControlItem1.Control = this.rgSelection;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -540,19 +612,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // deDate
-            // 
-            this.deDate.EditValue = null;
-            this.deDate.Location = new System.Drawing.Point(87, 41);
-            this.deDate.Name = "deDate";
-            this.deDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deDate.Size = new System.Drawing.Size(369, 20);
-            this.deDate.StyleController = this.layoutControl1;
-            this.deDate.TabIndex = 13;
             // 
             // lciDate
             // 
@@ -564,16 +623,6 @@
             this.lciDate.Text = "Tarih";
             this.lciDate.TextSize = new System.Drawing.Size(71, 13);
             // 
-            // lueDepo
-            // 
-            this.lueDepo.Location = new System.Drawing.Point(87, 65);
-            this.lueDepo.Name = "lueDepo";
-            this.lueDepo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDepo.Size = new System.Drawing.Size(369, 20);
-            this.lueDepo.StyleController = this.layoutControl1;
-            this.lueDepo.TabIndex = 14;
-            // 
             // lciDepo
             // 
             this.lciDepo.Control = this.lueDepo;
@@ -584,53 +633,25 @@
             this.lciDepo.Text = "Depo";
             this.lciDepo.TextSize = new System.Drawing.Size(71, 13);
             // 
-            // lueServis
-            // 
-            this.lueServis.Location = new System.Drawing.Point(87, 193);
-            this.lueServis.Name = "lueServis";
-            this.lueServis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueServis.Size = new System.Drawing.Size(369, 20);
-            this.lueServis.StyleController = this.layoutControl1;
-            this.lueServis.TabIndex = 15;
-            // 
             // lciServis
             // 
             this.lciServis.Control = this.lueServis;
             this.lciServis.CustomizationFormText = "Servis";
-            this.lciServis.Location = new System.Drawing.Point(0, 181);
+            this.lciServis.Location = new System.Drawing.Point(0, 254);
             this.lciServis.Name = "lciServis";
             this.lciServis.Size = new System.Drawing.Size(448, 24);
             this.lciServis.Text = "Servis";
             this.lciServis.TextSize = new System.Drawing.Size(71, 13);
             // 
-            // lueDoktor
-            // 
-            this.lueDoktor.Location = new System.Drawing.Point(87, 217);
-            this.lueDoktor.Name = "lueDoktor";
-            this.lueDoktor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDoktor.Size = new System.Drawing.Size(369, 20);
-            this.lueDoktor.StyleController = this.layoutControl1;
-            this.lueDoktor.TabIndex = 16;
-            // 
             // lciDoktor
             // 
             this.lciDoktor.Control = this.lueDoktor;
             this.lciDoktor.CustomizationFormText = "Doktor";
-            this.lciDoktor.Location = new System.Drawing.Point(0, 205);
+            this.lciDoktor.Location = new System.Drawing.Point(0, 278);
             this.lciDoktor.Name = "lciDoktor";
             this.lciDoktor.Size = new System.Drawing.Size(448, 24);
             this.lciDoktor.Text = "Doktor";
             this.lciDoktor.TextSize = new System.Drawing.Size(71, 13);
-            // 
-            // lbcUrunTipi
-            // 
-            this.lbcUrunTipi.Location = new System.Drawing.Point(90, 89);
-            this.lbcUrunTipi.Name = "lbcUrunTipi";
-            this.lbcUrunTipi.Size = new System.Drawing.Size(366, 100);
-            this.lbcUrunTipi.StyleController = this.layoutControl1;
-            this.lbcUrunTipi.TabIndex = 17;
             // 
             // layoutControlItem8
             // 
@@ -638,7 +659,7 @@
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
             this.layoutControlItem8.Location = new System.Drawing.Point(78, 77);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(370, 104);
+            this.layoutControlItem8.Size = new System.Drawing.Size(370, 177);
             this.layoutControlItem8.Text = "layoutControlItem8";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
@@ -650,7 +671,7 @@
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
             this.emptySpaceItem7.Location = new System.Drawing.Point(0, 77);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(78, 104);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(78, 177);
             this.emptySpaceItem7.Text = "emptySpaceItem7";
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -658,20 +679,11 @@
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
-            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 229);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 302);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(448, 149);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(448, 136);
             this.emptySpaceItem8.Text = "emptySpaceItem8";
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // sbDelete
-            // 
-            this.sbDelete.Location = new System.Drawing.Point(12, 714);
-            this.sbDelete.Name = "sbDelete";
-            this.sbDelete.Size = new System.Drawing.Size(93, 22);
-            this.sbDelete.StyleController = this.layoutControl1;
-            this.sbDelete.TabIndex = 18;
-            this.sbDelete.Text = "Sil(F8)";
             // 
             // layoutControlItem2
             // 
@@ -693,10 +705,17 @@
             this.Controls.Add(this.layoutControl1);
             this.KeyPreview = true;
             this.Name = "SelectMedicineForm";
-            this.Text = "İşlem Seçim Formu";
+            this.Text = "İlaç/Sarf Malzemesi Seçim Formu";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectFunctionForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lbcUrunTipi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDoktor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueServis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDepo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgSelection.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePatientTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
@@ -713,18 +732,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDepo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDepo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueServis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciServis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueDoktor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciDoktor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbcUrunTipi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
@@ -776,7 +788,7 @@
         private DevExpress.XtraEditors.LookUpEdit lueServis;
         private DevExpress.XtraEditors.LookUpEdit lueDepo;
         private DevExpress.XtraEditors.DateEdit deDate;
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraEditors.RadioGroup rgSelection;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem lciDate;
         private DevExpress.XtraLayout.LayoutControlItem lciDepo;

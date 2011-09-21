@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -25,18 +26,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (String.IsNullOrWhiteSpace(TheObject.Value))
             {
-                XtraMessageBox.Show("Lütfen Girdiğiniz Kayıtı Ediniz", "Kayıt Giriş Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Girdiğiniz Kayıtı Ediniz", "Kayıt Giriş Hatası", true);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Kayıt Saklanmıştır Edilmiştir", "Kayıt Giriş Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Kayıt Saklanmıştır", "Kayıt Giriş Onayı", false);
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Kayıt Saklanamadı:" + error.Message, "Kayıt Giriş Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Kayıt Saklanamadı:" + error.Message, "Kayıt Giriş Hatası", true);
                 return false;
             }
 

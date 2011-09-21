@@ -8,6 +8,7 @@ using Naz.Hastane.Data.Entities;
 using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -116,7 +117,7 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         bool SaveQuestion()
         {
             //if(Modified) {
-            //    switch(DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to save the changes you made to " + DocName + "?", "SimplePad Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)) {
+            //    switch(DevExpress.XtraEditors.SimpleMsgBoxForm.ShowMsgBox("Do you want to save the changes you made to " + DocName + "?", "SimplePad Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)) {
             //        case DialogResult.Cancel:
             //            return false;
             //        case DialogResult.Yes:
@@ -185,11 +186,11 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
                 {
                     LookUpServices.Delete(Session, o);
                     ReLoadForm();
-                    XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SimpleMsgBoxForm.ShowMsgBox(deleteSuccesful, msgCaption, false);
                 }
                 catch (Exception error)
                 {
-                    XtraMessageBox.Show(deleteFail + error.Message, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SimpleMsgBoxForm.ShowMsgBox(deleteFail + error.Message, msgCaption);
                 }
             }
         }

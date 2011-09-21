@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using Naz.Hastane.Medula.YardimciIslemler;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Medula.HastaKabulIslemleri;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -220,7 +221,7 @@ namespace Naz.Hastane.Win.Controls
 
                 if (e.Result.sonucKodu == "0000")
                 {
-                    XtraMessageBox.Show(e.Result.takipNo + " Nolu Takip İptal Edildi!", "Hasta Kabul İptal");
+                    SimpleMsgBoxForm.ShowMsgBox(e.Result.takipNo + " Nolu Takip İptal Edildi!", "Hasta Kabul İptal", false);
                     IsOK = true;
                 }
             }
@@ -265,7 +266,7 @@ namespace Naz.Hastane.Win.Controls
             Naz.Hastane.Medula.YardimciIslemler.TakipDVO takipDVO = this.gvResult.GetFocusedRow() as Naz.Hastane.Medula.YardimciIslemler.TakipDVO;
             if (takipDVO == null) return;
 
-            if (XtraMessageBox.Show("Seçili Kayıdı Silmek İstiyor Musunuz", "Provizyon Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (SimpleMsgBoxForm.ShowYesNo("Seçili Kayıdı Silmek İstiyor Musunuz", "Provizyon Silme Uyarısı", true) == DialogResult.Yes)
                 CallMedulaHastaKabulIptal(takipDVO.takipNo);
         }
     

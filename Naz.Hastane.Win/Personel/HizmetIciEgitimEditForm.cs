@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -34,18 +35,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi > TheObject.BitisTarihi )
             {
-                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Hizmetiçi Eğitimi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Tarihleri Kontrol Ediniz", "Hizmetiçi Eğitimi Kayıt Hatası", true);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Hizmetiçi Eğitimi Kayıt Edilmiştir", "Hizmetiçi Eğitimi Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Hizmetiçi Eğitimi Kayıt Edilmiştir", "Hizmetiçi Eğitimi Kayıt Onayı");
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Hizmetiçi Eğitimi Kayıt Edilemedi:" + error.Message, "Hizmetiçi Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Hizmetiçi Eğitimi Kayıt Edilemedi:" + error.Message, "Hizmetiçi Kayıt Hatası", true);
                 return false;
             }
 

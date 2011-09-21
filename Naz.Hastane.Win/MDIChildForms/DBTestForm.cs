@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities;
+using DevExpress.LookAndFeel;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -19,12 +21,18 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.gridControl1.DataSource = LookUpServices.GetAll<MEDDIABETALISKANLIKLAR>();
+            //this.gridControl1.DataSource = LookUpServices.GetAll<MEDDIABETALISKANLIKLAR>();
+            using (SimpleMsgBoxForm frm = new SimpleMsgBoxForm("Normal Uyarı", "Bişiler var burada", false))
+            {
+            }
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            this.gridControl1.DataSource = LookUpServices.GetAll<MEDDIABETDOKTORLAR>();
+            using (SimpleMsgBoxForm frm = new SimpleMsgBoxForm("Normal Uyarı", "Bişiler var burada", true))
+            {
+            }
+            //this.gridControl1.DataSource = LookUpServices.GetAll<MEDDIABETDOKTORLAR>();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)

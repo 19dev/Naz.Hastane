@@ -20,7 +20,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             Address = IPAddress.Parse("239.1.2.3"),
             Port = 40404,
-            TimeToLive = 0
+            TimeToLive = 16
         };
 
         private IList<PatientVisit> _PatientVisits;

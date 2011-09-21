@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -28,18 +29,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi > TheObject.BitisTarihi)
             {
-                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Raporu Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Tarihleri Kontrol Ediniz", "Personel Raporu Kayıt Hatası", true);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Raporu Kayıt Edilmiştir", "Personel Raporu Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Raporu Kayıt Edilmiştir", "Personel Raporu Kayıt Onayı");
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Raporu Kayıt Edilemedi:" + error.Message, "Personel Raporu Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Raporu Kayıt Edilemedi:" + error.Message, "Personel Raporu Kayıt Hatası", true);
                 return false;
             }
 

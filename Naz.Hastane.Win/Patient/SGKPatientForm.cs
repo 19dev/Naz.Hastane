@@ -13,6 +13,7 @@ using Naz.Hastane.Data.Services;
 using Naz.Hastane.Win.Controls;
 using Naz.Mernis.Service;
 using Naz.Utilities.Classes;
+using Naz.Hastane.Win.Forms;
 
 ///Todo List
 ///Medula Provizyonsuz karta provizyon isteme ekle
@@ -114,6 +115,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 teInsuranceCompany.Text = Patient.InsuranceCompany.Code;
 
             UIUtilities.BindControl(tePatientNo, Patient, x => x.PatientNo);
+            UIUtilities.BindControl(teSNO, Patient, x => x.SIGORTANO);
             UIUtilities.BindControl(teTCID, Patient, x => x.TCId);
             UIUtilities.BindControl(teFirstName, Patient, x => x.FirstName);
             UIUtilities.BindControl(teLastName, Patient, x => x.LastName);
@@ -166,6 +168,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             UIUtilities.BindControl(meHastaOzgecmis, Patient, x => x.CV);
 
+            IList<PatientVisit> pvs = Patient.PatientVisits;
+
             PatientVisitControl.gcPatientVisit.DataSource = Patient.PatientVisits;
             PatientVisitControl1.gcPatientVisit.DataSource = Patient.PatientVisits;
             medulaFollowUpQueryControl.TCId = Patient.TCId;
@@ -190,17 +194,17 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (String.IsNullOrWhiteSpace(Patient.FirstName))
             {
-                XtraMessageBox.Show("Lütfen Hastanın Adını Kontrol Ediniz", "Hasta Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Hastanın Adını Kontrol Ediniz", "Hasta Kayıt Hatası", true);
                 return;
             }
             if (String.IsNullOrWhiteSpace(Patient.LastName))
             {
-                XtraMessageBox.Show("Lütfen Hastanın Soyadını Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Hastanın Soyadını Kontrol Ediniz", "Hasta Kayıt Hatası", true);
                 return;
             }
             if (Patient.BirthDate == null || Patient.BirthDate < new DateTime(1800,1,1))
             {
-                XtraMessageBox.Show("Lütfen Hastanın Doğum Tarihini Kontrol Ediniz", "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Hastanın Doğum Tarihini Kontrol Ediniz", "Hasta Kayıt Hatası", true);
                 return;
             }
 
@@ -225,7 +229,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Hasta Kayıt Edilemedi:" + error.Message, "Hasta Kayıt Hatası", true);
             }
         }
 
@@ -245,7 +249,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (mernisSorgu.IsWorking)
             {
-                XtraMessageBox.Show("Şu anda sürmekte olan Mernis işlemi var. Lütfen bekleyiniz.", "Mernis İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("Şu anda sürmekte olan Mernis işlemi var. Lütfen bekleyiniz.", "Mernis İşlemleri", true);
             }
             else if (!String.IsNullOrWhiteSpace(teTCID.Text))
             {
@@ -287,7 +291,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                         Math.Max(mernisSorgu.NufusCuzdani.DogumTarih.Gun, 1));
                 }
                 else
-                    XtraMessageBox.Show("Mernis'ten Geçerli Bir Doğum Tarihi Gelmedi, \r\nLütfen Doğum Tarihini Kontrol Ediniz", "Doğum Tarihi Uyarısı");
+                    SimpleMsgBoxForm.ShowMsgBox("Mernis'ten Geçerli Bir Doğum Tarihi Gelmedi, \r\nLütfen Doğum Tarihini Kontrol Ediniz", "Doğum Tarihi Uyarısı", true);
 
                 if (!String.IsNullOrWhiteSpace(mernisSorgu.NufusCuzdani.DogumYer))
                     Patient.BirthPlace = mernisSorgu.NufusCuzdani.DogumYer;
@@ -357,7 +361,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 if (pv.VisitDate.Date == DateTime.Today && pv.BranchCode == branchCode)
                 {
-                    if (XtraMessageBox.Show("Aynı Gün İçinde Bu Branştan Kart Açılmış, Yeni Kart Açmak İstiyor musunuz?", "Poliklinik Uyarısı", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    if (SimpleMsgBoxForm.ShowYesNo("Aynı Gün İçinde Bu Branştan Kart Açılmış, Yeni Kart Açmak İstiyor musunuz?", "Poliklinik Uyarısı", true) == System.Windows.Forms.DialogResult.Yes)
                         return true;
                     else
                         return false;
@@ -391,29 +395,29 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             if (currentPatientVisit == null)
             {
-                XtraMessageBox.Show("Lütfen Bir Ziyaret Kartı Seçiniz!", "Medula İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Bir Ziyaret Kartı Seçiniz!", "Medula İşlemleri", true);
                 return;
             }
             if (!String.IsNullOrWhiteSpace(currentPatientVisit.TAKIPNO))
             {
-                XtraMessageBox.Show("Seçili Kart İçin Provizyon Alınmış!", "Medula İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("Seçili Kart İçin Provizyon Alınmış!", "Medula İşlemleri", true);
                 return;
             }
             _Doctor = currentPatientVisit.Doctor;
             if (_Doctor == null)
             {
-                XtraMessageBox.Show("Seçili Kartta Geçerli Doktor Tanımı Yok!", "Medula İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("Seçili Kartta Geçerli Doktor Tanımı Yok!", "Medula İşlemleri", true);
                 return;
             }
             if (_IsWaitingForMedulaProvision)
             {
-                XtraMessageBox.Show("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Medula İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("Şu anda sürmekte olan Provizyon işlemi var. Lütfen bekleyiniz.", "Medula İşlemleri", true);
                 return;
             }
             string TCID = teTCID.Text;
             if (!LookUpServices.IsValidTCID(TCID))
             {
-                XtraMessageBox.Show("T.C. Kimlik No Geçerli Değil!", "Medula İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("T.C. Kimlik No Geçerli Değil!", "Medula İşlemleri", true);
                 return;
             }
 
@@ -457,7 +461,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 if (medulaSorgu.IsOK)
                 {
-                    XtraMessageBox.Show(String.Format("{0} için {1} Medula Sorgusu Sonucu:{2}: {3}", Patient.FullName, medulaSorgu.lueInsuranceType.Text, e.Result.SonucKodu, e.Result.SonucMesaji), "Medula Sorgu Sonucu");
+                    SimpleMsgBoxForm.ShowMsgBox(String.Format("{0} için {1} Medula Sorgusu Sonucu:{2}: {3}", Patient.FullName, medulaSorgu.lueInsuranceType.Text, e.Result.SonucKodu, e.Result.SonucMesaji), "Medula Sorgu Sonucu");
 
                     if (e.Result.SonucKodu == "0000" || e.Result.SonucKodu == "9000")
                     {
@@ -549,7 +553,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             if (String.IsNullOrWhiteSpace(NewTellerInvoiceNo))
             {
-                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı", true);
                 return;
             }
 
@@ -596,7 +600,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             if (String.IsNullOrWhiteSpace(NewTellerVoucherNo))
             {
-                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı", true);
                 return;
             }
 
@@ -639,26 +643,26 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return;
             if (!pvd.IsOKForDelete())
             {
-                XtraMessageBox.Show("Fatura veya Makbuz Kesilmiş Kayıtı Silemezsiniz", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                SimpleMsgBoxForm.ShowMsgBox("Fatura veya Makbuz Kesilmiş Kayıtı Silemezsiniz", "İşlem Silme Uyarısı", true);
                 return;
             }
-            if (XtraMessageBox.Show("Bu İşlem Kaydını Silmek İstiyor Musunuz?", "İşlem Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (SimpleMsgBoxForm.ShowYesNo("Bu İşlem Kaydını Silmek İstiyor Musunuz?", "İşlem Silme Uyarısı", true) == DialogResult.Yes)
             {
                 try
                 {
                     if (PatientServices.DeletePatientVisitDetail(Session, UIUtilities.CurrentUser, pvd))
                     {
-                        XtraMessageBox.Show("İşlem Kaydı Başarıyla Silindi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                        SimpleMsgBoxForm.ShowMsgBox("İşlem Kaydı Başarıyla Silindi", "İşlem Silme Uyarısı");
                         RefreshGrid();
                     }
                     else
                     {
-                        XtraMessageBox.Show("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                        SimpleMsgBoxForm.ShowMsgBox("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", true);
                     }
                 }
                 catch
                 {
-                    XtraMessageBox.Show("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", MessageBoxButtons.OK);
+                    SimpleMsgBoxForm.ShowMsgBox("İşlem Kaydı Silinemedi", "İşlem Silme Uyarısı", true);
                 }
             }
         }
@@ -670,30 +674,30 @@ namespace Naz.Hastane.Win.MDIChildForms
                 return;
             if (!pv.IsOKForDelete())
             {
-                XtraMessageBox.Show("Bu Ziyaret Kartını Silemezseniz", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Bu Ziyaret Kartını Silemezseniz", "Ziyaret Kartı Silme Uyarısı", true);
                 return;
             }
-            if (XtraMessageBox.Show("Bu Ziyaret Kartını Bütün İşlemleri İle Birlikte Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (SimpleMsgBoxForm.ShowYesNo("Bu Ziyaret Kartını Bütün İşlemleri İle Birlikte Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", true) == DialogResult.Yes)
             {
                 if (!String.IsNullOrWhiteSpace(pv.TAKIPNO))
-                    if (XtraMessageBox.Show("Bu Ziyaret Kartını Medula Takip Numarasını Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (SimpleMsgBoxForm.ShowYesNo("Bu Ziyaret Kartının Medula Takip Numarasını Silmek İstiyor Musunuz?", "Ziyaret Kartı Silme Uyarısı", true) == DialogResult.Yes)
                         medulaFollowUpQueryControl.CallMedulaHastaKabulIptal(pv.TAKIPNO);
 
                 try
                 {
                     if (PatientServices.DeletePatientVisit(Session, UIUtilities.CurrentUser, pv))
                     {
-                        XtraMessageBox.Show("Ziyaret Kartı Başarıyla Silindi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SimpleMsgBoxForm.ShowMsgBox("Ziyaret Kartı Başarıyla Silindi", "Ziyaret Kartı Silme Uyarısı");
                         RefreshGrid();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SimpleMsgBoxForm.ShowMsgBox("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", true);
                     }
                 }
                 catch
                 {
-                    XtraMessageBox.Show("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SimpleMsgBoxForm.ShowMsgBox("Ziyaret Kartı Silinemedi", "Ziyaret Kartı Silme Uyarısı", true);
                 }
             }
         }
@@ -878,12 +882,12 @@ namespace Naz.Hastane.Win.MDIChildForms
                 try
                 {
                     PatientServices.ChangeInsuranceCompany(Session, UIUtilities.CurrentUser, Patient, pvs, pvdwps, newInsuranceCompany);
-                    XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SimpleMsgBoxForm.ShowMsgBox("Kurum Değiştirme İşlemi Başarılı!", "Kurum Değiştirme İşlemi");
                     ReLoadPatient();
                 }
                 catch (Exception e)
                 {
-                    XtraMessageBox.Show("Kurum Değiştirme İşlemi Başarısız Oldu:" + e.Message, "Kurum Değiştirme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SimpleMsgBoxForm.ShowMsgBox("Kurum Değiştirme İşlemi Başarısız Oldu:" + e.Message, "Kurum Değiştirme İşlemi", true);
                 }
             }
 
@@ -973,7 +977,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 CallMedulaProvision();
             }
             else
-                XtraMessageBox.Show("10 Gün İçinde Yapılmış Fizik Tedavi Polikliniği Bulunamadı!", "Fizik Tedavi İşlemleri");
+                SimpleMsgBoxForm.ShowMsgBox("10 Gün İçinde Yapılmış Fizik Tedavi Polikliniği Bulunamadı!", "Fizik Tedavi İşlemleri", true);
 
 
         }
@@ -1010,6 +1014,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 using (SelectMedicineForm frm = new SelectMedicineForm() { PatientVisit = currentPatientVisit, PriceListCode = Patient.InsuranceCompany.GetPriceList(currentPatientVisit.VisitType) })
                 {
+                    frm.InitForm();
                     frm.ShowDialog();
                     //if (frm.IsSelected)
                     //    ChangeInsuranceCompany(frm.InsuranceCompany);

@@ -1,23 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using DevExpress.Skins;
-using DevExpress.XtraBars.Ribbon;
-using DevExpress.XtraBars.Ribbon.Gallery;
-using DevExpress.Utils.Drawing;
-using DevExpress.Utils;
-using DevExpress.Tutorials.Controls;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.LookAndFeel;
-using DevExpress.Data.Filtering;
+using DevExpress.XtraEditors;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
-using DevExpress.XtraEditors;
-using System.Linq.Expressions;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -89,7 +76,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     }
                     else if (patients.Count == 0)
                     {
-                        if (XtraMessageBox.Show("Bu Kriterlerle Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (AskForNewPatientRecord("Bu Kriterlerle Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?"))
                         {
                             (this.MdiParent as frmMain).OpenNewSGKPatient();
                         }
@@ -112,11 +99,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                 IList<Patient> result = PatientServices.GetByTCId(TCID);
                 if (result.Count == 0)
                 {
-                    if (XtraMessageBox.Show("Bu TC Kimlik Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (AskForNewPatientRecord("Bu TC Kimlik Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?"))
                     {
                         (this.MdiParent as frmMain).OpenNewSGKPatientWithTCID(TCID);
-                        return true;
                     }
+                    return true;
                 }
                 else if (result.Count == 1)
                 {
@@ -131,12 +118,15 @@ namespace Naz.Hastane.Win.MDIChildForms
         private bool SearchByPatientNo()
         {
             string patientNo = this.tePatientNo.Text;
+            if (patientNo.Length < 6)
+                patientNo = patientNo.PadLeft(6, '0');
+
             if (PatientServices.IsValidPatientNo(patientNo))
             {
                 Patient patient = PatientServices.GetPatientByID(patientNo);
                 if (patient == null)
                 {
-                    if (XtraMessageBox.Show("Bu Hasta Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?", "Hasta Kayıtı Arama", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (AskForNewPatientRecord("Bu Hasta Numaralı Bir Hasta Kayıtlı Değil, Yeni Hasta Kayıtı Yaratmak İster Misiniz?"))
                     {
                         (this.MdiParent as frmMain).OpenNewSGKPatient();
                     }
@@ -149,6 +139,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
             return false;
+        }
+
+        private bool AskForNewPatientRecord(string aMessage)
+        {
+            return SimpleMsgBoxForm.ShowYesNo(aMessage, "Hasta Kayıtı Arama", true) == DialogResult.Yes;
         }
         //private void AddPredicate(List<Expression<Func<Patient, bool>>> predicates, Control c, )
         private void AddCriteria(ref string aCriteria1, string aCriteria2)

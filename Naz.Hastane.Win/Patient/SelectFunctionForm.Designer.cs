@@ -156,6 +156,7 @@
             this.gvProducts.GridControl = this.gcProducts;
             this.gvProducts.Name = "gvProducts";
             this.gvProducts.OptionsBehavior.Editable = false;
+            this.gvProducts.OptionsFind.AlwaysVisible = true;
             this.gvProducts.OptionsView.ShowGroupPanel = false;
             this.gvProducts.DoubleClick += new System.EventHandler(this.gvProducts_DoubleClick);
             // 
@@ -416,6 +417,7 @@
             // 
             this.tlFunctionGroups.Location = new System.Drawing.Point(12, 28);
             this.tlFunctionGroups.Name = "tlFunctionGroups";
+            this.tlFunctionGroups.OptionsBehavior.AllowIncrementalSearch = true;
             this.tlFunctionGroups.OptionsBehavior.Editable = false;
             this.tlFunctionGroups.Size = new System.Drawing.Size(343, 323);
             this.tlFunctionGroups.TabIndex = 8;

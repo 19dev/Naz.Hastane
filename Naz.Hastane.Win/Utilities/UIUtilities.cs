@@ -20,6 +20,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Linq.Expressions;
 using Naz.Classes;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win
 {
@@ -49,6 +50,8 @@ namespace Naz.Hastane.Win
             lue.Properties.DataSource = dataSourceList;
             if (!String.IsNullOrWhiteSpace(initialValue))
                 lue.EditValue = initialValue;
+            else
+                lue.ItemIndex = 0;
         }
 
         //public static void BindComboBox<T>(System.Windows.Forms.ComboBox comboBox, IList<T> dataSourceList,
@@ -219,8 +222,8 @@ namespace Naz.Hastane.Win
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Fatura Yazma Hatası: " + e.Message);
-            }
+                SimpleMsgBoxForm.ShowMsgBox("Fatura Yazma Hatası: " + e.Message, "Uyarı Ekranı", true);
+            } 
         }
 
         public static User GetInvoiceUser()
@@ -278,7 +281,7 @@ namespace Naz.Hastane.Win
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Makbuz Yazma Hatası: " + e.Message);
+                SimpleMsgBoxForm.ShowMsgBox("Makbuz Yazma Hatası: " + e.Message, "Uyarı Ekranı", true);
             }
         }
 

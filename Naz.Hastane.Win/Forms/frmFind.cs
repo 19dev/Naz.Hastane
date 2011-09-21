@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win {
     public partial class frmFind : DevExpress.XtraEditors.XtraForm {
@@ -25,7 +26,7 @@ namespace Naz.Hastane.Win {
                 rtf |= RichTextBoxFinds.MatchCase;
             int p = rtb.Find(txtFind.Text, rtb.SelectionStart + rtb.SelectionLength, rtb.MaxLength, rtf);
             if(p == -1)
-                DevExpress.XtraEditors.XtraMessageBox.Show("The search text is not found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("The search text is not found.", "Information", true);
         }
 
         private void txtFind_TextChanged(object sender, System.EventArgs e) {

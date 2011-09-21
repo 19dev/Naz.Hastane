@@ -54,6 +54,27 @@ namespace Naz.Hastane.Data.Entities
                 return result;
             }
         }
+        public virtual string DoctorCode
+        {
+            get
+            {
+                string result = "";
+                try
+                {
+                    result = Doctor.Code;
+                }
+                catch
+                {
+                    result = "";
+                }
+                return result;
+                //if (Doctor == null)
+                //    return "";
+                //else
+                //    return Doctor.Code;
+            }
+        }
+
         /// <summary>
         /// ARZT2
         /// </summary>

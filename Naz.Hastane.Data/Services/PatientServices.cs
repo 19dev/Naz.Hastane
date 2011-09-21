@@ -459,6 +459,38 @@ namespace Naz.Hastane.Data.Services
             return pvd;
         }
 
+        public static PatientVisitDetail GetNewPatientVisitDetailFromStock(PatientVisit pv, Stock stock)
+        {
+            PatientVisitDetail pvd = new PatientVisitDetail();
+
+            pvd.TARIH = DateTime.Now;
+            pvd.TANIM = stock.TANIM;
+            pvd.GRUP = stock.GRUP;
+            pvd.CODE = stock.CODE;
+            pvd.NAME1 = stock.NAME1;
+            pvd.KDV = stock.KDV;
+            pvd.ADET = 1;
+            pvd.PatientPrice = 0;
+            pvd.CompanyPrice = stock.SATISF;
+            pvd.PSG = pv.PSG;
+            pvd.Doctor = pv.Doctor;
+            pvd.Doctor2 = pv.Doctor;
+            pvd.HZLNO = pv.HZLNO;
+            pvd.DATE_CREATE = DateTime.Now;
+            pvd.FATURAEDILSIN = "E";
+            pvd.KABUL = "0";
+            pvd.ISDURUM = "0";
+            pvd.HODENDI = "H";
+            pvd.HYATISTARIHI = pvd.DATE_CREATE;
+            pvd.HCIKISTARIHI = pvd.DATE_CREATE;
+            //pvd.MEDSIRANO = "";
+            pvd.MEDONAY = "0";
+            pvd.TG = 1;
+            pvd.MEDANOMALI = "0";
+
+            return pvd;
+        }
+
         public static void UpdatePatientVisitFromDetails(ISession session, User user, PatientVisit pv)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
@@ -836,10 +868,10 @@ namespace Naz.Hastane.Data.Services
                     transaction.Commit();
 
                 }
-                catch
+                catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    throw ex;
                 }
             }
         }
@@ -1124,10 +1156,10 @@ namespace Naz.Hastane.Data.Services
                     transaction.Commit();
 
                 }
-                catch
+                catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    throw ex;
                 }
             }
         }
@@ -1228,16 +1260,111 @@ namespace Naz.Hastane.Data.Services
 
                     transaction.Commit();
                 }
-                catch
+                catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    throw ex;
                 }
             }
 
         }
         #endregion
-        
+
+        #region İlaçSarf
+
+        public static void AddPatientVisitDetailsForStock(ISession session, User user, PatientVisit pv, IList<PatientVisitDetail> pvds)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                foreach (PatientVisitDetail pvd in pvds)
+                {
+                    pv.HZLNO++;
+
+                    pvd.PatientVisit = pv;
+                    pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
+                    pvd.Doctor = pv.Doctor;
+                    pvd.HZLNO = pv.HZLNO;
+                    pvd.USER_ID = user.USER_ID;
+                    pvd.DATE_CREATE = DateTime.Now;
+
+                    UpdateStock(session, pvd);
+
+                    session.Update(pv);
+                    session.Save(pvd);
+
+                    InsertStockTransferRecord(session, pvd, user);
+                    //session.Flush();
+                    try
+                    {
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
+
+                    pv.AddPatientVisitDetail(pvd);
+                }
+                UpdatePatientVisitFromDetails(session, user, pv);
+                return;
+            }
+
+        }
+
+        public static double GetInsuranceCompanyDiscountRate(ISession session, string companyCode, string tanim, string grup)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                InsuranceCompany ic = session.Get<InsuranceCompany>(companyCode);
+                if (ic == null) return 0;
+                InsuranceCompanyDiscount icd = (from icdp in session.Query<InsuranceCompanyDiscount>()
+                                                where icdp.KNR == ic.KNR && icdp.TANIM == tanim && icdp.GRUP == grup
+                                                select icdp).SingleOrDefault();
+                if (icd == null) return 0;
+
+                if (ic.ILACINDIRIM == "1")
+                    return icd.INDIRIMORANI;
+                else
+                    return 0;
+            }
+        }
+
+        public static void UpdateStock(ISession session, PatientVisitDetail pvd)
+        {
+            Stock stock = (from s in session.Query<Stock>()
+                           where s.AKOD == pvd.AKOD && s.TANIM == pvd.TANIM && s.GRUP == pvd.GRUP && s.CODE == pvd.CODE
+                           select s).SingleOrDefault<Stock>();
+            if (stock == null) return;
+
+            stock.TOPCIK -= pvd.ADET;
+            stock.TOPSAT += pvd.ADET * pvd.CompanyPrice;
+
+            session.Update(stock);
+        }
+
+        public static void InsertStockTransferRecord(ISession session, PatientVisitDetail pvd, User user)
+        {
+            StockTransfer st = new StockTransfer() 
+            {
+                AKOD = pvd.AKOD ,
+                TANIM = pvd.TANIM,
+                GRUP = pvd.GRUP,
+                CODE = pvd.CODE,
+                TARIH = pvd.TARIH,
+                EVRAKNO = pvd.PatientVisit.Patient.PatientNo + pvd.PatientVisit.VisitNo,
+                G_C = "P",
+                ADET = pvd.ADET,
+                BIRIMF = pvd.CompanyPrice,
+                TUTAR = pvd.ADET * pvd.CompanyPrice,
+                SERVIS = pvd.PatientVisit.Servis,
+                ARZT = pvd.DoctorCode,
+                USER_ID = user.USER_ID,
+                DATE_CREATE = DateTime.Now
+            };
+            session.Save(st);
+        }
+        #endregion
         // Hasta Borç Alacak
 
         //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR

@@ -11,6 +11,7 @@ using Naz.Mernis.Service;
 using Naz.Hastane.Medula.HastaKabulIslemleri;
 using Naz.Utilities.Classes;
 using Naz.Mernis.Utilities;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -128,7 +129,7 @@ namespace Naz.Hastane.Win.Controls
             else
             {
                 this.lcStatus.Text = "Mernis Sorgusu Yapılamadı!";
-                XtraMessageBox.Show("Mernis Sorgusu Yapılamadı!", "Mernis Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Mernis Sorgusu Yapılamadı!", "Mernis Hatası", true);
             }
 
             if (RunWorkerCompleted != null)

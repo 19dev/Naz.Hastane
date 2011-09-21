@@ -169,6 +169,8 @@
     <Compile Include="Entities\Personel\YabanciDil.cs" />
     <Compile Include="Entities\Personel\Personel.cs" />
     <Compile Include="Entities\Personel\OkulTipi.cs" />
+    <Compile Include="Entities\Pharmacy\Stock.cs" />
+    <Compile Include="Entities\Pharmacy\StockTransfer.cs" />
     <Compile Include="Entities\SummaryReports\OzetAYP.cs" />
     <Compile Include="Entities\SummaryReports\OzetAnaIslem.cs" />
     <Compile Include="Entities\SummaryReports\OzetDoktor.cs" />
@@ -312,6 +314,8 @@
     <Compile Include="Mappings\Personel\PersonelYabanciDilMap.cs" />
     <Compile Include="Mappings\Personel\OkulTipiMap.cs" />
     <Compile Include="Mappings\Patient\QueueStatusMap.cs" />
+    <Compile Include="Mappings\Pharmacy\StockMap.cs" />
+    <Compile Include="Mappings\Pharmacy\StockTransferMap.cs" />
     <Compile Include="Mappings\Product\ProductCoefficientMap.cs" />
     <Compile Include="Mappings\Product\ProductDoctorPercentMap.cs" />
     <Compile Include="Mappings\Product\ProductMap.cs" />

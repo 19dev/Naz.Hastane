@@ -72,6 +72,16 @@ namespace Naz.Hastane.Data.Entities
                     return Doctor.Value;
             }
         }
+        public virtual string DoctorCode
+        {
+            get
+            {
+                if (Doctor == null)
+                    return "";
+                else
+                    return Doctor.Code;
+            }
+        }
 
         public virtual string BranchCode
         {
@@ -167,12 +177,12 @@ namespace Naz.Hastane.Data.Entities
             }
             set{}
         }
-        public virtual char QueueStatusCode
+        public virtual int QueueStatusCode
         {
             get
             {
                 if (QueueStatus == null)
-                    return '0';
+                    return 0;
                 else
                     return QueueStatus.Code;
             }

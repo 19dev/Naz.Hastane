@@ -12,6 +12,7 @@ using NHibernate;
 using Naz.Hastane.Win.Utilities;
 using DevExpress.XtraGrid.Views.Base;
 using Naz.Hastane.Data.Entities.LookUp.General;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -323,7 +324,7 @@ namespace Naz.Hastane.Win.Controls
 
             if (String.IsNullOrWhiteSpace(NewTellerInvoiceNo))
             {
-                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı", true);
                 return;
             }
 
@@ -361,7 +362,7 @@ namespace Naz.Hastane.Win.Controls
 
             if (String.IsNullOrWhiteSpace(NewTellerVoucherNo))
             {
-                XtraMessageBox.Show("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı");
+                SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcıya Vezne Tanımlı Değildir!", "Vezne Uyarısı", true);
                 return;
             }
 

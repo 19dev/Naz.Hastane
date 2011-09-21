@@ -82,7 +82,7 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.ARACIKLAMA).Column("ARACIKLAMA");
             Map(x => x.ARGONDERILDI).Column("ARGONDERILDI");
             Map(x => x.ARHATA).Column("ARHATA");
-            References(x => x.QueueStatus).Column("DURUM");
+            //References(x => x.QueueStatus).Column("QueueStatus");
 
             Map(x => x.KONTROLTAR).Column("KONTROLTAR");
             Map(x => x.KONTROLT).Column("KONTROLT");
@@ -94,10 +94,10 @@ namespace Naz.Hastane.Data.Mappings
             Map(x => x.DATE_UPDATE).Column("DATE_UPDATE");
 
             HasMany(x => x.PatientVisitDetails)
-                .KeyColumns.Add("KNR", "SNR")
+                .KeyColumns.Add("KNR", "SNR").LazyLoad()
                 .Inverse();
             HasMany(x => x.PatientVisitRecords)
-                .KeyColumns.Add("KNR", "SNR")
+                .KeyColumns.Add("KNR", "SNR").LazyLoad()
                 .Inverse();
             //HasOne(x => x.MedulaDiabetReport);
         }

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win {
 	public partial class frmReplace : DevExpress.XtraEditors.XtraForm {	
@@ -30,7 +31,7 @@ namespace Naz.Hastane.Win {
 
 		protected void MessageNotFound(int p) {
 			if(p == -1)
-				DevExpress.XtraEditors.XtraMessageBox.Show("The search text is not found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				SimpleMsgBoxForm.ShowMsgBox("The search text is not found.", "Information", true);
 		}
 		
 		protected int Find() {

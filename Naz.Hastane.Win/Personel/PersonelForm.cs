@@ -4,6 +4,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -131,47 +132,47 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (String.IsNullOrWhiteSpace(Personel.TCID))
             {
-                XtraMessageBox.Show("Lütfen Personelin T.C. Kimlik Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin T.C. Kimlik Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (String.IsNullOrWhiteSpace(Personel.PersonelNo))
             {
-                XtraMessageBox.Show("Lütfen Personel Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personel Numarasını Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (String.IsNullOrWhiteSpace(Personel.Ad))
             {
-                XtraMessageBox.Show("Lütfen Personelin Adını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin Adını Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (String.IsNullOrWhiteSpace(Personel.Soyad))
             {
-                XtraMessageBox.Show("Lütfen Personelin Soyadını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin Soyadını Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (Personel.KanGrubu == null)
             {
-                XtraMessageBox.Show("Lütfen Personelin Kan Grubunu Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin Kan Grubunu Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (Personel.HastaneBolumu == null)
             {
-                XtraMessageBox.Show("Lütfen Personelin Çalıştığı Bölümü Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin Çalıştığı Bölümü Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (Personel.PersonelUnvani == null)
             {
-                XtraMessageBox.Show("Lütfen Personelin Ünvanını Kontrol Ediniz", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Personelin Ünvanını Kontrol Ediniz", "Personel Kayıt Hatası", true);
                 return;
             }
             if (PersonelServices.GetPersonelByPersonelNo(Personel.PersonelNo).Count > 0)
             {
-                XtraMessageBox.Show("Bu Personel No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Bu Personel No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", true);
                 return;
             }
             if (PersonelServices.GetPersonelByTCId(Personel.TCID).Count > 0)
             {
-                XtraMessageBox.Show("Bu TC Kimlik No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Bu TC Kimlik No İle Kayıtlı Bir Personel Var! ", "Personel Kayıt Hatası", true);
                 return;
             }
 
@@ -181,11 +182,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                 Personel.HasUnion = ceSendikali.EditValue.ToString();
                 LookUpServices.SaveOrUpdate(Session, Personel);
                 ReLoadForm();
-                XtraMessageBox.Show("Personel Kayıt Edilmiştir", "Personel Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Kayıt Edilmiştir", "Personel Kayıt Onayı");
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Kayıt Edilemedi:" + error.Message, "Personel Kayıt Hatası", true);
             }
         }
 
@@ -291,11 +292,11 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     LookUpServices.Delete(Session, o);
                     ReLoadForm();
-                    XtraMessageBox.Show(deleteSuccesful, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SimpleMsgBoxForm.ShowMsgBox(deleteSuccesful, msgCaption);
                 }
                 catch (Exception error)
                 {
-                    XtraMessageBox.Show(deleteFail + error.Message, msgCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SimpleMsgBoxForm.ShowMsgBox(deleteFail + error.Message, msgCaption, true);
                 }
             }
         }

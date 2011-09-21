@@ -3,6 +3,7 @@ using Naz.Hastane.Data.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -28,18 +29,18 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             if (TheObject.BaslangicTarihi == null || TheObject.BitisTarihi == null || TheObject.BaslangicTarihi > TheObject.BitisTarihi)
             {
-                XtraMessageBox.Show("Lütfen Tarihleri Kontrol Ediniz", "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Lütfen Tarihleri Kontrol Ediniz", "Personel Sertifikası Kayıt Hatası", true);
                 return false;
             }
             try
             {
                 LookUpServices.SaveOrUpdate(Session, TheObject);
-                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilmiştir", "Personel Sertifikası Kayıt Onayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Sertifikası Kayıt Edilmiştir", "Personel Sertifikası Kayıt Onayı");
                 return true;
             }
             catch (Exception error)
             {
-                XtraMessageBox.Show("Personel Sertifikası Kayıt Edilemedi:" + error.Message, "Personel Sertifikası Kayıt Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SimpleMsgBoxForm.ShowMsgBox("Personel Sertifikası Kayıt Edilemedi:" + error.Message, "Personel Sertifikası Kayıt Hatası", true);
                 return false;
             }
 
