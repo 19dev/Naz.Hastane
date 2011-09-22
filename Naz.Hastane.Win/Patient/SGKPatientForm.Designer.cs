@@ -287,6 +287,8 @@
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
+            this.sbChangeAmount = new DevExpress.XtraEditors.SimpleButton();
+            this.lciChangeAmount = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teSNO.Properties)).BeginInit();
@@ -490,10 +492,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddMedicine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sbChangeAmount);
             this.layoutControl1.Controls.Add(this.teSNO);
             this.layoutControl1.Controls.Add(this.sbAddMedicine);
             this.layoutControl1.Controls.Add(this.PatientVisitControl1);
@@ -1324,7 +1328,7 @@
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(945, 511);
+            this.sbClose.Location = new System.Drawing.Point(945, 499);
             this.sbClose.Name = "sbClose";
             this.sbClose.Size = new System.Drawing.Size(119, 22);
             this.sbClose.StyleController = this.layoutControl1;
@@ -3009,7 +3013,8 @@
             this.lciKurumCaridenSil,
             this.emptySpaceItem1,
             this.lciAddMedicine,
-            this.emptySpaceItem11});
+            this.emptySpaceItem11,
+            this.lciChangeAmount});
             this.lcgSagTuslar.Location = new System.Drawing.Point(928, 0);
             this.lcgSagTuslar.Name = "lcgSagTuslar";
             this.lcgSagTuslar.Size = new System.Drawing.Size(147, 698);
@@ -3044,7 +3049,7 @@
             // 
             this.lciClose.Control = this.sbClose;
             this.lciClose.CustomizationFormText = "Kapat";
-            this.lciClose.Location = new System.Drawing.Point(0, 494);
+            this.lciClose.Location = new System.Drawing.Point(0, 482);
             this.lciClose.Name = "lciClose";
             this.lciClose.Size = new System.Drawing.Size(123, 26);
             this.lciClose.Text = "Kapat";
@@ -3058,7 +3063,7 @@
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 448);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(123, 46);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(123, 34);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -3298,9 +3303,9 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 520);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 508);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(123, 24);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(123, 10);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -3340,6 +3345,28 @@
             // 
             this.timerHastaKabulOku.Interval = 200;
             this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // sbChangeAmount
+            // 
+            this.sbChangeAmount.Location = new System.Drawing.Point(945, 535);
+            this.sbChangeAmount.Name = "sbChangeAmount";
+            this.sbChangeAmount.Size = new System.Drawing.Size(119, 22);
+            this.sbChangeAmount.StyleController = this.layoutControl1;
+            this.sbChangeAmount.TabIndex = 152;
+            this.sbChangeAmount.Text = "Adet Değiştir";
+            this.sbChangeAmount.Click += new System.EventHandler(this.sbChangeAmount_Click);
+            // 
+            // lciChangeAmount
+            // 
+            this.lciChangeAmount.Control = this.sbChangeAmount;
+            this.lciChangeAmount.CustomizationFormText = "lciChangeAmount";
+            this.lciChangeAmount.Location = new System.Drawing.Point(0, 518);
+            this.lciChangeAmount.Name = "lciChangeAmount";
+            this.lciChangeAmount.Size = new System.Drawing.Size(123, 26);
+            this.lciChangeAmount.Text = "lciChangeAmount";
+            this.lciChangeAmount.TextSize = new System.Drawing.Size(0, 0);
+            this.lciChangeAmount.TextToControlDistance = 0;
+            this.lciChangeAmount.TextVisible = false;
             // 
             // SGKPatientForm
             // 
@@ -3558,6 +3585,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddMedicine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3822,5 +3850,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciAddMedicine;
         private DevExpress.XtraEditors.TextEdit teSNO;
         private DevExpress.XtraLayout.LayoutControlItem lciSNO;
+        private DevExpress.XtraEditors.SimpleButton sbChangeAmount;
+        private DevExpress.XtraLayout.LayoutControlItem lciChangeAmount;
     }
 }

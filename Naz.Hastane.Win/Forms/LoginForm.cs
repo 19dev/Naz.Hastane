@@ -57,7 +57,7 @@ namespace Naz.Hastane.Win.Forms
             {
                 Cursor.Current = Cursors.Default;
             }
-            if (User == null || User.USER_PASS != encrypter.Encrypt(this.teUserPassword.Text))
+            if (User == null || !User.USER_PASS.Equals(encrypter.Encrypt(this.teUserPassword.Text), StringComparison.CurrentCultureIgnoreCase))
             {
                 SimpleMsgBoxForm.ShowMsgBox("Bu Kullanıcı Geçerli Değil", "Kullanıcı Girişi Uyarısı", true);
                 return false;

@@ -1021,5 +1021,34 @@ namespace Naz.Hastane.Win.MDIChildForms
                 }
             }
         }
+
+        private void sbChangeAmount_Click(object sender, EventArgs e)
+        {
+            PatientVisitDetail pvd = currentPVD;
+            if (pvd != null)
+            {
+                if (!String.IsNullOrWhiteSpace(pvd.MAKNO))
+                {
+                    SimpleMsgBoxForm.ShowMsgBox("Bu Kayıta Fatura Kesilmiş, Miktarı Değiştiremezsiniz", "Miktar Değiştirme Uyarısı", true);
+                    return;
+                }
+
+                double Amount = pvd.ADET;
+                using (SimpleDialogForm frm = new SimpleDialogForm("Lütfen Adet Giriniz", Amount.ToString()))
+                {
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                    {
+                        if (Double.TryParse(frm.TheValue, out Amount))
+                        {
+                            pvd.ADET = Amount;
+                            //this.gcSelectedProducts.RefreshDataSource();
+                        }
+                    }
+                }
+
+            }
+
+        }
     }
 }

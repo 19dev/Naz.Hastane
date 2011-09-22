@@ -118,7 +118,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private bool SearchByPatientNo()
         {
             string patientNo = this.tePatientNo.Text;
-            if (patientNo.Length < 6)
+            if (!String.IsNullOrWhiteSpace(patientNo) && patientNo.Length < 6)
                 patientNo = patientNo.PadLeft(6, '0');
 
             if (PatientServices.IsValidPatientNo(patientNo))

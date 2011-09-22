@@ -9,6 +9,8 @@ using DevExpress.XtraTreeList;
 using System.Collections.Generic;
 using Naz.Hastane.Win.Utilities;
 using Naz.Hastane.Data.Entities;
+using Naz.Hastane.Win.Forms;
+using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -77,6 +79,8 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (p == pvd)
                     return;
             _SelectedProducts.Add(pvd);
+            CalculateProductTotals();
+
             this.gcSelectedProducts.RefreshDataSource();
         }
 
@@ -122,10 +126,17 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 PatientVisitDetail pvd = view.GetFocusedRow() as PatientVisitDetail;
                 if (pvd != null)
-                {
+                    RemoveSelectedProduct(pvd);
+            }
+        }
+
+        private void RemoveSelectedProduct(PatientVisitDetail pvd)
+        {
+            if (SimpleMsgBoxForm.ShowYesNo("Seçili Hizmeti Kaldırmak İstiyor Musunuz?", "Hizmet Silme Uyarısı", true) == System.Windows.Forms.DialogResult.Yes)
+            {
                     _SelectedProducts.Remove(pvd);
+                    CalculateProductTotals();
                     this.gcSelectedProducts.RefreshDataSource();
-                }
             }
         }
         private void CalculateProductTotals()
@@ -151,6 +162,18 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void SelectFunctionForm_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                Product product = gvProducts.GetFocusedRow() as Product;
+                if (product != null)
+                {
+                    AddToSelectedProducts(product);
+                    gvProducts.ApplyFindFilter("");
+                    gvProducts.ShowFindPanel();
+                    e.Handled = true;
+                }
+
+            }
             //string key = e.KeyChar.ToString();
             //key = key.ToUpper();
             //FindNode(this.tlFunctionGroups.FocusedNode, key[0]);
@@ -187,6 +210,30 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void tlFunctionGroups_AfterFocusNode(object sender, NodeEventArgs e)
         {
             DisplayFunctions();
+        }
+
+        private void sbChangeAmount_Click(object sender, EventArgs e)
+        {
+            PatientVisitDetail pvd = gvSelectedProducts.GetFocusedRow() as PatientVisitDetail;
+            if (pvd != null)
+            {
+                double Amount = pvd.ADET;
+                using (SimpleDialogForm frm = new SimpleDialogForm("Lütfen Adet Giriniz", Amount.ToString()))
+                {
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                    {
+                        if (Double.TryParse(frm.TheValue, out Amount))
+                        {
+                            pvd.ADET = Amount;
+                            //this.gcSelectedProducts.RefreshDataSource();
+                            CalculateProductTotals();
+                        }
+                    }
+                }
+
+            }
+
         }
     }
 }

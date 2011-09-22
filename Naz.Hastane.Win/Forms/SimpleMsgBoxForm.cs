@@ -52,6 +52,8 @@ namespace Naz.Hastane.Win.Forms
             {
                 frm.sbNo.Text = "Hayır";
                 frm.sbOK.Text = "Evet";
+                frm.sbNo.Visible = true;
+                frm.lciNo.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
                 frm.Text = aTitle;
                 frm.labelControl1.Text = aMessage;
                 if (aError)
