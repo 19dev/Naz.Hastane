@@ -416,15 +416,20 @@ namespace Naz.Hastane.Data.Services
                     pvd.DATE_CREATE = DateTime.Now;
 
                     session.Save(pvd);
-                    //session.Flush();
-                    transaction.Commit();
 
                     pv.AddPatientVisitDetail(pvd);
                 }
+                try
+                {
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
                 UpdatePatientVisitFromDetails(session, user, pv);
-                return;
             }
-
         }
 
         public static PatientVisitDetail GetNewPatientVisitDetailFromProduct(PatientVisit pv, Product product)
@@ -500,7 +505,15 @@ namespace Naz.Hastane.Data.Services
 
                 session.Update(pv);
                 //session.Flush();
-                transaction.Commit();
+                try
+                {
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
             }
 
         }

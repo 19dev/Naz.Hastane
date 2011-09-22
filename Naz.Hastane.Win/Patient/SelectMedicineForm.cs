@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using Naz.Hastane.Win.Utilities;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Win.Forms;
+using System.Windows.Forms;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -51,48 +52,50 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
         }
 
-        private void sbClose_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             _IsSelected = false;
             this.Close();
         }
-
-        private void AddToSelectedStocks(Stock stock, double aAmount)
+        private void sbClose_Click(object sender, EventArgs e)
         {
-            PatientVisitDetail pvd = PatientServices.GetNewPatientVisitDetailFromStock(PatientVisit, stock);
-            foreach (PatientVisitDetail p in _SelectedProducts)
-                if (p.CODE == pvd.CODE)
+            CloseForm();
+        }
+
+        private bool AddToSelectedStocks()
+        {
+            Stock stock = gvProducts.GetFocusedRow() as Stock;
+            if (stock != null)
+            {
+                double Amount = 1;
+                using (SimpleDialogForm frm = new SimpleDialogForm("Lütfen Adet Giriniz", Amount.ToString()))
                 {
-                    p.ADET += aAmount;
-                    return;
+                    frm.ShowDialog();
+                    if (frm.IsOK)
+                    {
+                        if (Double.TryParse(frm.TheValue, out Amount) == false)
+                            Amount = 1;
+                    }
                 }
-            pvd.ADET = aAmount;
-            _SelectedProducts.Add(pvd);
-            this.gcSelectedProducts.RefreshDataSource();
+                   
+                PatientVisitDetail pvd = PatientServices.GetNewPatientVisitDetailFromStock(PatientVisit, stock);
+                foreach (PatientVisitDetail p in _SelectedProducts)
+                    if (p.CODE == pvd.CODE)
+                    {
+                        p.ADET += Amount;
+                        return true;
+                    }
+                pvd.ADET = Amount;
+                _SelectedProducts.Add(pvd);
+                this.gcSelectedProducts.RefreshDataSource();
+                return true;
+            }
+            return false;
         }
 
         private void gvProducts_DoubleClick(object sender, EventArgs e)
         {
-            GridView view = sender as GridView;
-            if (view != null)
-            {
-                Stock stock = view.GetFocusedRow() as Stock;
-                if (stock != null)
-                {
-                    double Amount = 1;
-                    using (SimpleDialogForm frm = new SimpleDialogForm("Lütfen Adet Giriniz", Amount.ToString()))
-                    {
-                        frm.ShowDialog();
-                        if (frm.IsOK)
-                        {
-                            if (Double.TryParse(frm.TheValue, out Amount) == false)
-                                Amount = 1;
-                        }
-                    }
-                   
-                    AddToSelectedStocks(stock, Amount);
-                }
-            }
+            AddToSelectedStocks();
         }
 
         private void gvSelectedProducts_DoubleClick(object sender, EventArgs e)
@@ -123,15 +126,28 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.tePatientTotal.EditValue = patientTotal;
         }
 
-        private void sbSelect_Click(object sender, EventArgs e)
+        private void SelectAndClose()
         {
             _IsSelected = true;
             PatientServices.AddPatientVisitDetailsForStock(Session, UIUtilities.CurrentUser, PatientVisit, _SelectedProducts);
             this.Close();
         }
+        private void sbSelect_Click(object sender, EventArgs e)
+        {
+            SelectAndClose();
+        }
 
         private void SelectFunctionForm_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (AddToSelectedStocks())
+                {
+                    gvProducts.ApplyFindFilter("");
+                    gvProducts.ShowFindPanel();
+                    e.Handled = true;
+                }
+            }
         }
 
         private void rgSelection_EditValueChanged(object sender, EventArgs e)
@@ -165,6 +181,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             string stockType = (rgSelection.EditValue.ToString() == "İ") ? LookUpServices.GetMedicineTanim(Session) : LookUpServices.GetConsumableTanim(Session);
 
             gcProducts.DataSource = LookUpServices.GetStocks(Session, lueDepo.EditValue.ToString(), stockType, lbcUrunTipi.SelectedValue.ToString());
+        }
+
+        private void SelectMedicineForm_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F3)
+                CloseForm();
+            else if (e.KeyCode == Keys.F5)
+                SelectAndClose();
         }
     }
 }

@@ -156,7 +156,7 @@
             this.gcProducts.Location = new System.Drawing.Point(359, 28);
             this.gcProducts.MainView = this.gvProducts;
             this.gcProducts.Name = "gcProducts";
-            this.gcProducts.Size = new System.Drawing.Size(403, 323);
+            this.gcProducts.Size = new System.Drawing.Size(385, 323);
             this.gcProducts.TabIndex = 9;
             this.gcProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProducts});
@@ -207,9 +207,9 @@
             // 
             // sbClose
             // 
-            this.sbClose.Location = new System.Drawing.Point(766, 315);
+            this.sbClose.Location = new System.Drawing.Point(748, 315);
             this.sbClose.Name = "sbClose";
-            this.sbClose.Size = new System.Drawing.Size(72, 22);
+            this.sbClose.Size = new System.Drawing.Size(90, 22);
             this.sbClose.StyleController = this.layoutControl1;
             this.sbClose.TabIndex = 7;
             this.sbClose.Text = "Kapat";
@@ -217,12 +217,12 @@
             // 
             // sbSelect
             // 
-            this.sbSelect.Location = new System.Drawing.Point(766, 81);
+            this.sbSelect.Location = new System.Drawing.Point(748, 81);
             this.sbSelect.Name = "sbSelect";
-            this.sbSelect.Size = new System.Drawing.Size(72, 22);
+            this.sbSelect.Size = new System.Drawing.Size(90, 22);
             this.sbSelect.StyleController = this.layoutControl1;
             this.sbSelect.TabIndex = 6;
-            this.sbSelect.Text = "Seçilileri Ekle";
+            this.sbSelect.Text = "Seçilileri Ekle(F5)";
             this.sbSelect.Click += new System.EventHandler(this.sbSelect_Click);
             // 
             // gcSelectedProducts
@@ -467,9 +467,9 @@
             // 
             this.layoutControlItem3.Control = this.sbSelect;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(754, 69);
+            this.layoutControlItem3.Location = new System.Drawing.Point(736, 69);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(76, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(94, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -479,9 +479,9 @@
             // 
             this.layoutControlItem4.Control = this.sbClose;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(754, 303);
+            this.layoutControlItem4.Location = new System.Drawing.Point(736, 303);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(76, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(94, 26);
             this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
@@ -491,9 +491,9 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(754, 95);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(736, 95);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(76, 208);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(94, 208);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -501,9 +501,9 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(754, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(736, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(76, 69);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(94, 69);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -511,9 +511,9 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(754, 329);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(736, 329);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(76, 14);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(94, 14);
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -534,7 +534,7 @@
             this.lciProducts.CustomizationFormText = "İşlemler";
             this.lciProducts.Location = new System.Drawing.Point(347, 0);
             this.lciProducts.Name = "lciProducts";
-            this.lciProducts.Size = new System.Drawing.Size(407, 343);
+            this.lciProducts.Size = new System.Drawing.Size(389, 343);
             this.lciProducts.Text = "İşlemler";
             this.lciProducts.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciProducts.TextSize = new System.Drawing.Size(73, 13);
@@ -611,6 +611,7 @@
             this.KeyPreview = true;
             this.Name = "SelectFunctionForm";
             this.Text = "İşlem Seçim Formu";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SelectFunctionForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectFunctionForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

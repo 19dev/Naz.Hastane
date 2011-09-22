@@ -66,10 +66,14 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
         }
 
-        private void sbClose_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             _IsSelected = false;
             this.Close();
+        }
+        private void sbClose_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
 
         private void AddToSelectedProducts(Product product)
@@ -154,10 +158,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teCompanyTotal.EditValue = companyTotal;
         }
 
-        private void sbSelect_Click(object sender, EventArgs e)
+        private void SelectAndClose()
         {
             _IsSelected = true;
             this.Close();
+        }
+        private void sbSelect_Click(object sender, EventArgs e)
+        {
+            SelectAndClose();
         }
 
         private void SelectFunctionForm_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
@@ -174,9 +182,6 @@ namespace Naz.Hastane.Win.MDIChildForms
                 }
 
             }
-            //string key = e.KeyChar.ToString();
-            //key = key.ToUpper();
-            //FindNode(this.tlFunctionGroups.FocusedNode, key[0]);
         }
 
         private void FindNode(TreeListNode parentNode, char searchChar)
@@ -234,6 +239,14 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             }
 
+        }
+
+        private void SelectFunctionForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F3)
+                CloseForm();
+            else if (e.KeyCode == Keys.F5)
+                SelectAndClose();
         }
     }
 }

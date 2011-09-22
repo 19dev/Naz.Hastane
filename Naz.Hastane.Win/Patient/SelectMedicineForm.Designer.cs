@@ -706,6 +706,7 @@
             this.KeyPreview = true;
             this.Name = "SelectMedicineForm";
             this.Text = "İlaç/Sarf Malzemesi Seçim Formu";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SelectMedicineForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectFunctionForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
