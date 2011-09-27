@@ -1179,6 +1179,111 @@ namespace Naz.Hastane.Data.Services
         
         #endregion
 
+        #region DeleteInvoice
+
+        public static IList<Invoice> GetPatientInvoices(ISession session, Patient patient)
+        {
+            IList<Invoice> result = (from iv in session.Query<Invoice>()
+                                     where
+                                        iv.PatientNo == patient.PatientNo
+                                        && iv.FATURATIPI == "H"
+                                     orderby iv.FATURATARIHI descending
+                                     select iv
+                )
+                .ToList<Invoice>();
+            return result;
+
+        }
+
+        public static IList<PatientVisitDetail> GetProductsForInvoice(ISession session, Invoice currentInvoice)
+        {
+            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                                where
+                                                   pvd.MAKNO == currentInvoice.MAKNO
+                                                orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
+                                                select pvd
+                )
+                .ToList<PatientVisitDetail>();
+            return result;
+        }
+
+        public static IList<AdvancePaymentUsed> GetAdvancePaymentsForInvoice(ISession session, Invoice currentInvoice)
+        {
+            IList<AdvancePaymentUsed> result = (from apu in session.Query<AdvancePaymentUsed>()
+                                                where
+                                                   apu.FATURANO == currentInvoice.FATURA_ID
+                                                orderby apu.TARIH descending
+                                                select apu
+                )
+                .ToList<AdvancePaymentUsed>();
+            return result;
+        }
+
+        public static void DeleteInvoice(ISession session, User user, Invoice currentInvoice, IList<AdvancePaymentUsed> advancePaymentUseds)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    IList<DoctorInvoiceDetail> doctorInvoiceDetails = (from did in session.Query<DoctorInvoiceDetail>()
+                                                               where
+                                                                did.HAREKETTIPI == 'F' && did.FATNO == currentInvoice.FATURA_ID
+                                                               select did)
+                                                                   .ToList<DoctorInvoiceDetail>();
+                    foreach (DoctorInvoiceDetail did in doctorInvoiceDetails)
+                    {
+                        session.Delete(did);
+                    }
+
+                    IList<PatientVisitDetail> patientVisitDetails = (from pvd in session.Query<PatientVisitDetail>()
+                                                                     where
+                                                                     pvd.MAKNO == currentInvoice.MAKNO
+                                                                     select pvd)
+                                                                         .ToList<PatientVisitDetail>();
+                    foreach (PatientVisitDetail pvd in patientVisitDetails)
+                    {
+                        pvd.MAKNO = null;
+                        session.Update(pvd);
+                    }
+
+                    currentInvoice.ISIPTAL = "1";
+                    currentInvoice.USER_ID_UPDATE = user.USER_ID;
+                    currentInvoice.DATE_UPDATE = DateTime.Now;
+                    session.Update(currentInvoice);
+
+                    if (advancePaymentUseds.Count > 0)
+                    {
+                        advancePaymentUseds[0].AdvancePayment.KULLANILAN -= currentInvoice.FATURATUTARI;
+                        session.Update(advancePaymentUseds[0].AdvancePayment);
+                    }
+
+                    foreach (AdvancePaymentUsed advu in advancePaymentUseds)
+                    {
+                        session.Delete(advu);
+                    }
+
+
+                    transaction.Commit();
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
+        // DELETE
+
+        //DELETE DOKTORLAR_FATURA_DETAY where HAREKETTIPI='F' and FATNO='1864903'
+        //UPDATE HIZIL set MAKNO=NULL where KNR='870366' and MAKNO='3908217'
+        //UPDATE FATURA set ISIPTAL='1', USER_ID_UPDATE='AYDIN SAKAR', DATE_UPDATE='27.09.2011 12:51:17' where FATURA_ID='1864903'
+        //DELETE from AVANSLAR_KULLANILAN where AV_ID=1767845 and FATURANO='1864903'
+        //UPDATE AVANSLAR set KULLANILAN=KULLANILAN-17.5 where AV_ID=1767845
+
+        #endregion
+
         #region Insurance Company Change
         public static IList<PatientVisit> GetPatientVisitsForInsuranceCompanyChange(ISession session, Patient patient)
         {
@@ -1378,11 +1483,13 @@ namespace Naz.Hastane.Data.Services
             session.Save(st);
         }
         #endregion
+
         // Hasta Borç Alacak
 
         //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR
         //select SNR, TARIH, TUTAR, MAKBUZTIPI, BORCALACAK from KASA where KATILIM is NULL AND KNR='870366' and ISIPTAL is null order by SNR
         //select FATURATARIHI, INDIRIM, KDVTUTARI, YUVARLAMA from FATURA where KNR='870366' and ISIPTAL is null order by FATURATARIHI
+
     }
 
 }

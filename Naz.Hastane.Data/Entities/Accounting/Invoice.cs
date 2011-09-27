@@ -41,6 +41,18 @@ namespace Naz.Hastane.Data.Entities.Accounting
         /// Kurum Kodu
         /// </summary>
         public virtual string PSG { get; set; } // PSG; length(6); 1 
+        public virtual string Durum
+        {
+            get
+            {
+
+                if (ISIPTAL == "1")
+                    return "İptal";
+                else
+                    return "Geçerli";
+            }
+            set{}
+        }
         public virtual string ISIPTAL { get; set; } // ISIPTAL; length(1); 1 1: İptal, Null
         /// <summary>
         /// 1: Ödendi, 0, Null: Ödenmedi (Açık Fatura)

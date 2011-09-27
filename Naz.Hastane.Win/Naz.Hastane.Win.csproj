@@ -255,6 +255,12 @@
     <Compile Include="Controls\PatientBalanceControl.Designer.cs">
       <DependentUpon>PatientBalanceControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\InvoiceDeleteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InvoiceDeleteControl.Designer.cs">
+      <DependentUpon>InvoiceDeleteControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ColorBox.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -572,6 +578,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PatientBalanceControl.resx">
       <DependentUpon>PatientBalanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InvoiceDeleteControl.resx">
+      <DependentUpon>InvoiceDeleteControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
