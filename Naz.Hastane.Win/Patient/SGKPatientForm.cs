@@ -174,7 +174,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             PatientVisitControl1.gcPatientVisit.DataSource = Patient.PatientVisits;
             medulaFollowUpQueryControl.TCId = Patient.TCId;
             patientBalanceControl.Patient = Patient;
+
             invoiceDeleteControl.QueryInvoices(Session, Patient);
+            advancePaymentsControl.QueryPatientVisits(Session, Patient);
         }
 
         private void LoadLookUps()
@@ -1051,5 +1053,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
 
         }
+
     }
 }

@@ -1490,6 +1490,147 @@ namespace Naz.Hastane.Data.Services
         //select SNR, TARIH, TUTAR, MAKBUZTIPI, BORCALACAK from KASA where KATILIM is NULL AND KNR='870366' and ISIPTAL is null order by SNR
         //select FATURATARIHI, INDIRIM, KDVTUTARI, YUVARLAMA from FATURA where KNR='870366' and ISIPTAL is null order by FATURATARIHI
 
+
+        // AVANS
+
+        // select SNR, BHDAT, MTOPT, KTOPT from BEHAND where KNR='870366' order by SNR
+
+        // select AV_ID, TARIH, ODEMESEKLI, TUTAR, KULLANILAN, IADEEDILEN, USER_ID,MAKNO,TIPI,AFATNO from AVANSLAR where KNR='870366' and SNR='993' 
+        // union select AV_ID, TARIH, ODEMESEKLI, TUTAR, KULLANILAN, IADEEDILEN, USER_ID,MAKNO,TIPI,AFATNO from AVANSLAR where KNR='870366' and SNR='' order by 2 desc
+
+        //SELECT  TOP 2 *,KATILIM,ODEMESEKLI FROM KASA WHERE    KNR='870366' AND SNR='993' ORDER BY TARIH DESC
+
+        //DELETE
+        //UPDATE AVANSLAR set IADEEDILEN=IADEEDILEN+15 where AV_ID=1775911
+        //INSERT into AVANSLAR_IADE (AV_ID,   TARIH,                  IADEMAKNO, TUTAR, USER_ID,     DATE_CREATE) 
+        //                    values(1775911, '28.09.2011 08:36:41', '3927343',  15,   'AYDIN SAKAR', '28.09.2011 08:36:41')
+        //INSERT into KASA(MAKNO, KNR,       SNR, TARIH,                MAKBUZNO, MAKBUZTIPI, POSNO,ODEMESEKLI, TUTAR, BORCALACAK, VEZNE, USER_ID, DATE_CREATE)
+        // values (    '3927343', '870366','993', '28.09.2011 08:36:41','E476179','A',        '',   'N',        15,    'A',        '01',  'AYDIN SAKAR','28.09.2011 08:36:41')
+
+        //Avans Girişi
+        // INSERT into AVANSLAR (AV_ID, KNR,      SNR,    TARIH,                TUTAR, ODEMESEKLI, POSNO, MAKNO,    USER_ID,       HESAPKODU,ALTHESAPKODU, DATE_CREATE) 
+        // values             (1775913, '870366', '992', '29.09.2011 12:26:35', 100,   'N',        Null, '3927346', 'AYDIN SAKAR', '', '',                 '29.09.2011 12:26:35')
+
+        // INSERT into KASA(MAKNO,   KNR,     SNR,   ACIKLAMA,      HNEREYEODENDI,   TARIH,                MAKBUZNO, MAKBUZTIPI, ODEMESEKLI, POSNO, TUTAR, BORCALACAK, VEZNE,HESAPKODU,ALTHESAPKODU,USER_ID, DATE_CREATE)
+        // values (      '3927346', '870366', '992', 'Alınan Avans', 'AYDIN SAKAR', '29.09.2011 12:26:35', 'E476179', 'A',       'N',        Null,   100,  'B',        '01', '', '',               'AYDIN SAKAR', '29.09.2011 12:26:35')
+
+        #region AVANS
+
+        public static void RebateAdvancePayment(ISession session, User user, AdvancePayment advancePayment)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    string makNo = LookUpServices.GetNewVoucherNo();
+
+                    CashDeskRecord cdr = new CashDeskRecord()
+                    {
+                        MAKNO = makNo,
+                        KNR = advancePayment.PatientVisit.Patient.PatientNo,
+                        SNR = advancePayment.PatientVisit.VisitNo,
+                        TARIH = DateTime.Now,
+                        MAKBUZNO = advancePayment.MAKNO,
+                        MAKBUZTIPI = "A",
+                        POSNO = "",
+                        ODEMESEKLI = 'N',
+                        TUTAR = advancePayment.KALAN ?? default(double),
+                        BORCALACAK = 'A',
+                        VEZNE = user.VEZNE,
+                        USER_ID = user.USER_ID,
+                        DATE_CREATE = DateTime.Now
+                    };
+                    session.Save(cdr);
+
+                    AdvancePaymentRebate apr = new AdvancePaymentRebate()
+                    {
+                        AdvancePayment = advancePayment,
+                        TARIH = DateTime.Now,
+                        IADEMAKNO = makNo,
+                        TUTAR = cdr.TUTAR,
+                        USER_ID = user.USER_ID,
+                        DATE_CREATE = DateTime.Now
+                    };
+                    session.Save(apr);
+
+                    advancePayment.IADEEDILEN += cdr.TUTAR;
+                    session.Update(advancePayment);
+
+                    //session.Flush();
+                    transaction.Commit();
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+
+        }
+
+        public static void AddNewAdvancePayment(ISession session, User user, PatientVisit patientVisit,
+            string paymentType, string POSType, string tellerVoucherNo, double amount)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    string makNo = LookUpServices.GetNewVoucherNo();
+                    string apNo = LookUpServices.GetNewAdvancePaymentNo();
+
+
+                    CashDeskRecord cdr = new CashDeskRecord()
+                    {
+                        MAKNO = makNo,
+                        KNR = patientVisit.Patient.PatientNo,
+                        SNR = patientVisit.VisitNo,
+                        ACIKLAMA = "Alınan Avans",
+                        HNEREYEODENDI = patientVisit.Patient.FullName,
+                        TARIH = DateTime.Now,
+                        MAKBUZNO = tellerVoucherNo,
+                        MAKBUZTIPI = "A",
+                        ODEMESEKLI = paymentType[0],
+                        POSNO = POSType,
+                        TUTAR = amount,
+                        BORCALACAK = 'B',
+                        VEZNE = user.VEZNE,
+                        USER_ID = user.USER_ID,
+                        DATE_CREATE = DateTime.Now
+                    };
+                    session.Save(cdr);
+
+                    // INSERT into AVANSLAR (AV_ID, KNR,      SNR,    TARIH,                TUTAR, ODEMESEKLI, POSNO, MAKNO,    USER_ID,       HESAPKODU,ALTHESAPKODU, DATE_CREATE) 
+                    // values             (1775913, '870366', '992', '29.09.2011 12:26:35', 100,   'N',        Null, '3927346', 'AYDIN SAKAR', '', '',                 '29.09.2011 12:26:35')
+                    AdvancePayment ap = new AdvancePayment()
+                    {
+                        AV_ID = Convert.ToDouble(apNo),
+                        PatientVisit = patientVisit,
+                        TARIH = DateTime.Now,
+                        TUTAR = amount,
+                        ODEMESEKLI = paymentType,
+                        POSNO = POSType,
+                        MAKNO = cdr.MAKNO,
+                        USER_ID = user.USER_ID,
+                        DATE_CREATE = DateTime.Now
+                    };
+
+                    session.Save(ap);
+
+                    //session.Flush();
+                    transaction.Commit();
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+
+        }
+
+        #endregion
     }
 
 }

@@ -275,7 +275,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmServiceNo, "Text", "")});
             this.xrLabel51.Dpi = 254F;
             this.xrLabel51.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1943.896F);
+            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1983.896F);
             this.xrLabel51.Name = "xrLabel51";
             this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel51.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -283,6 +283,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel51.StylePriority.UseTextAlignment = false;
             this.xrLabel51.Text = "xrLabel51";
             this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel51.Visible = false;
             // 
             // prmServiceNo
             // 
@@ -504,11 +505,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel40.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.prmQueueNo, "Text", "")});
             this.xrLabel40.Dpi = 254F;
-            this.xrLabel40.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.xrLabel40.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(1060F, 1883.896F);
             this.xrLabel40.Name = "xrLabel40";
             this.xrLabel40.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel40.SizeF = new System.Drawing.SizeF(270F, 40F);
+            this.xrLabel40.SizeF = new System.Drawing.SizeF(270F, 80F);
             this.xrLabel40.StylePriority.UseFont = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
             this.xrLabel40.Text = "xrLabel40";
@@ -949,7 +950,7 @@ namespace Naz.Hastane.Reports
             new DevExpress.XtraReports.UI.XRBinding(this.prmServiceNo, "Text", "")});
             this.xrLabel12.Dpi = 254F;
             this.xrLabel12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 505.0625F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 555.0626F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -957,6 +958,7 @@ namespace Naz.Hastane.Reports
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "xrLabel12";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel12.Visible = false;
             // 
             // xrLabel11
             // 
@@ -1096,11 +1098,11 @@ namespace Naz.Hastane.Reports
             this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.prmQueueNo, "Text", "")});
             this.xrLabel3.Dpi = 254F;
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(1065.292F, 445.0625F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(270F, 40F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(270F, 79.99994F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.Text = "xrLabel3";

@@ -99,6 +99,9 @@ namespace Naz.Hastane.Data.Mappings
             HasMany(x => x.PatientVisitRecords)
                 .KeyColumns.Add("KNR", "SNR").LazyLoad()
                 .Inverse();
+            HasMany(x => x.AdvancePayments)
+                .KeyColumns.Add("KNR", "SNR").LazyLoad()
+                .Inverse();
             //HasOne(x => x.MedulaDiabetReport);
         }
     }

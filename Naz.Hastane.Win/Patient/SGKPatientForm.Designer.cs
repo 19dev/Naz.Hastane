@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.invoiceDeleteControl = new Naz.Hastane.Win.Controls.InvoiceDeleteControl();
             this.sbChangeAmount = new DevExpress.XtraEditors.SimpleButton();
             this.teSNO = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -167,6 +168,8 @@
             this.teHomeAddress = new DevExpress.XtraEditors.MemoEdit();
             this.lcgHastaIslemleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tbcHastaBilgileri = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciinvoiceDeleteControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgHastaBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIDNO = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIDDate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -289,9 +292,9 @@
             this.lciChangeAmount = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
-            this.invoiceDeleteControl = new Naz.Hastane.Win.Controls.InvoiceDeleteControl();
-            this.lciinvoiceDeleteControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.advancePaymentsControl = new Naz.Hastane.Win.Controls.AdvancePaymentsControl();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teSNO.Properties)).BeginInit();
@@ -375,6 +378,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciinvoiceDeleteControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).BeginInit();
@@ -496,12 +501,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciinvoiceDeleteControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.advancePaymentsControl);
             this.layoutControl1.Controls.Add(this.invoiceDeleteControl);
             this.layoutControl1.Controls.Add(this.sbChangeAmount);
             this.layoutControl1.Controls.Add(this.teSNO);
@@ -608,6 +614,13 @@
             this.layoutControl1.Size = new System.Drawing.Size(1081, 704);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // invoiceDeleteControl
+            // 
+            this.invoiceDeleteControl.Location = new System.Drawing.Point(17, 37);
+            this.invoiceDeleteControl.Name = "invoiceDeleteControl";
+            this.invoiceDeleteControl.Size = new System.Drawing.Size(900, 650);
+            this.invoiceDeleteControl.TabIndex = 153;
             // 
             // sbChangeAmount
             // 
@@ -1885,8 +1898,8 @@
             this.tbcHastaBilgileri.CustomizationFormText = "Patient Bilgileri";
             this.tbcHastaBilgileri.Location = new System.Drawing.Point(0, 0);
             this.tbcHastaBilgileri.Name = "tbcHastaBilgileri";
-            this.tbcHastaBilgileri.SelectedTabPage = this.layoutControlGroup1;
-            this.tbcHastaBilgileri.SelectedTabPageIndex = 6;
+            this.tbcHastaBilgileri.SelectedTabPage = this.layoutControlGroup2;
+            this.tbcHastaBilgileri.SelectedTabPageIndex = 7;
             this.tbcHastaBilgileri.Size = new System.Drawing.Size(928, 698);
             this.tbcHastaBilgileri.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgHastaBilgileri,
@@ -1896,11 +1909,35 @@
             this.lcgmedulaFollowUpQueryControl,
             this.lcgBorcAlacak,
             this.layoutControlGroup1,
+            this.layoutControlGroup2,
             this.lcgAnamnesis,
             this.lcgAnamnesisHistory,
             this.lcgLabResults,
             this.lcgRadiologyResults});
             this.tbcHastaBilgileri.Text = "Hasta Bilgileri";
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "Kesilmiş Faturalar";
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciinvoiceDeleteControl});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(904, 654);
+            this.layoutControlGroup1.Text = "Kesilmiş Faturalar";
+            // 
+            // lciinvoiceDeleteControl
+            // 
+            this.lciinvoiceDeleteControl.Control = this.invoiceDeleteControl;
+            this.lciinvoiceDeleteControl.CustomizationFormText = "lciinvoiceDeleteControl";
+            this.lciinvoiceDeleteControl.Location = new System.Drawing.Point(0, 0);
+            this.lciinvoiceDeleteControl.Name = "lciinvoiceDeleteControl";
+            this.lciinvoiceDeleteControl.Size = new System.Drawing.Size(904, 654);
+            this.lciinvoiceDeleteControl.Text = "lciinvoiceDeleteControl";
+            this.lciinvoiceDeleteControl.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciinvoiceDeleteControl.TextSize = new System.Drawing.Size(0, 0);
+            this.lciinvoiceDeleteControl.TextToControlDistance = 0;
+            this.lciinvoiceDeleteControl.TextVisible = false;
             // 
             // lcgHastaBilgileri
             // 
@@ -3375,35 +3412,34 @@
             this.timerHastaKabulOku.Interval = 200;
             this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // invoiceDeleteControl
+            // advancePaymentsControl
             // 
-            this.invoiceDeleteControl.Location = new System.Drawing.Point(17, 37);
-            this.invoiceDeleteControl.Name = "invoiceDeleteControl";
-            this.invoiceDeleteControl.Size = new System.Drawing.Size(900, 650);
-            this.invoiceDeleteControl.TabIndex = 153;
+            this.advancePaymentsControl.Location = new System.Drawing.Point(17, 37);
+            this.advancePaymentsControl.Name = "advancePaymentsControl";
+            this.advancePaymentsControl.Size = new System.Drawing.Size(900, 650);
+            this.advancePaymentsControl.TabIndex = 154;
             // 
-            // lciinvoiceDeleteControl
+            // layoutControlItem3
             // 
-            this.lciinvoiceDeleteControl.Control = this.invoiceDeleteControl;
-            this.lciinvoiceDeleteControl.CustomizationFormText = "lciinvoiceDeleteControl";
-            this.lciinvoiceDeleteControl.Location = new System.Drawing.Point(0, 0);
-            this.lciinvoiceDeleteControl.Name = "lciinvoiceDeleteControl";
-            this.lciinvoiceDeleteControl.Size = new System.Drawing.Size(904, 654);
-            this.lciinvoiceDeleteControl.Text = "lciinvoiceDeleteControl";
-            this.lciinvoiceDeleteControl.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciinvoiceDeleteControl.TextSize = new System.Drawing.Size(0, 0);
-            this.lciinvoiceDeleteControl.TextToControlDistance = 0;
-            this.lciinvoiceDeleteControl.TextVisible = false;
+            this.layoutControlItem3.Control = this.advancePaymentsControl;
+            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(904, 654);
+            this.layoutControlItem3.Text = "layoutControlItem3";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextToControlDistance = 0;
+            this.layoutControlItem3.TextVisible = false;
             // 
-            // layoutControlGroup1
+            // layoutControlGroup2
             // 
-            this.layoutControlGroup1.CustomizationFormText = "Kesilmiş Faturalar";
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciinvoiceDeleteControl});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(904, 654);
-            this.layoutControlGroup1.Text = "Kesilmiş Faturalar";
+            this.layoutControlGroup2.CustomizationFormText = "Avanslar";
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(904, 654);
+            this.layoutControlGroup2.Text = "Avanslar";
             // 
             // SGKPatientForm
             // 
@@ -3502,6 +3538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teHomeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaIslemleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcHastaBilgileri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciinvoiceDeleteControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgHastaBilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDNO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIDDate)).EndInit();
@@ -3623,8 +3661,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciinvoiceDeleteControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3894,5 +3932,8 @@
         private Controls.InvoiceDeleteControl invoiceDeleteControl;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem lciinvoiceDeleteControl;
+        private Controls.AdvancePaymentsControl advancePaymentsControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

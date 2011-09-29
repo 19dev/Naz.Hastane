@@ -207,6 +207,12 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\AdvancePaymentsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AdvancePaymentsControl.Designer.cs">
+      <DependentUpon>AdvancePaymentsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InvoiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -561,6 +567,9 @@
     <Compile Include="Utilities\GridCheckMarksSelection.cs" />
     <Compile Include="Utilities\GridCheckMarksSelectionWeb.cs" />
     <Compile Include="Utilities\UIUtilities.cs" />
+    <EmbeddedResource Include="Controls\AdvancePaymentsControl.resx">
+      <DependentUpon>AdvancePaymentsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\InvoiceControl.resx">
       <DependentUpon>InvoiceControl.cs</DependentUpon>
     </EmbeddedResource>

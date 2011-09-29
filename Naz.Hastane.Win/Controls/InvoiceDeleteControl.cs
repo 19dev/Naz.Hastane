@@ -10,6 +10,7 @@ using NHibernate;
 using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
 using Naz.Hastane.Data.Entities.Accounting;
+using Naz.Hastane.Win.Forms;
 
 namespace Naz.Hastane.Win.Controls
 {
@@ -18,6 +19,7 @@ namespace Naz.Hastane.Win.Controls
         private ISession _Session;
         private Patient _Patient;
         private IList<AdvancePaymentUsed> _AdvancePaymentUseds;
+        private Invoice currentInvoice;
 
         public InvoiceDeleteControl()
         {
@@ -32,52 +34,90 @@ namespace Naz.Hastane.Win.Controls
         }
 
           private void QueryInvoices()
-        {
+          {
 
-            gvInvoices.BeginDataUpdate();
-            this.gcInvoices.DataSource = PatientServices.GetPatientInvoices(_Session, _Patient);
             try
             {
-                gvInvoices.ClearSorting();
-                gvInvoices.Columns["FATURATARIHI"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+                gvInvoices.BeginDataUpdate();
+                this.gcInvoices.DataSource = PatientServices.GetPatientInvoices(_Session, _Patient);
+                try
+                {
+                    gvInvoices.ClearSorting();
+                    gvInvoices.Columns["FATURATARIHI"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+                }
+                finally
+                {
+                    gvInvoices.EndDataUpdate();
+                }
+                QueryProducts();
             }
-            finally
+            catch (Exception ex)
             {
-                gvInvoices.EndDataUpdate();
+                SimpleMsgBoxForm.ShowMsgBox("Kayıtlar Okunamadı:" + ex.Message, "Fatura Kayıtları Okuma Uyarısı", true);
             }
-            QueryProducts();
 
         }
 
-          private void gvInvoices_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-          {
-              QueryProducts();
-          }
+        private void gvInvoices_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            QueryProducts();
+        }
 
-          private void QueryProducts()
-          {
-              Invoice currentInvoice = (Invoice)gvInvoices.GetFocusedRow();
-              if (currentInvoice != null)
-              {
-                  gcProducts.DataSource = PatientServices.GetProductsForInvoice(_Session, currentInvoice);
+        private void QueryProducts()
+        {
+            currentInvoice = (Invoice)gvInvoices.GetFocusedRow();
+            sbCancelInvoice.Enabled = (currentInvoice.ISIPTAL != "1");
+
+            if (currentInvoice != null)
+            {
+                gcProducts.DataSource = PatientServices.GetProductsForInvoice(_Session, currentInvoice);
                     
-                  _AdvancePaymentUseds = PatientServices.GetAdvancePaymentsForInvoice(_Session, currentInvoice);
-                  gcAdvancePayments.DataSource = _AdvancePaymentUseds;
-              }
-          }
+                _AdvancePaymentUseds = PatientServices.GetAdvancePaymentsForInvoice(_Session, currentInvoice);
+                gcAdvancePayments.DataSource = _AdvancePaymentUseds;
+            }
+        }
 
-          private void sbCancelInvoice_Click(object sender, EventArgs e)
-          {
-              Invoice currentInvoice = (Invoice)gvInvoices.GetFocusedRow();
-              if (currentInvoice != null)
-                  PatientServices.DeleteInvoice(_Session, UIUtilities.CurrentUser, currentInvoice, _AdvancePaymentUseds);
+        private void sbCancelInvoice_Click(object sender, EventArgs e)
+        {
+            CancelInvoice();
+        }
 
-          }
+        private void CancelInvoice()
+        {
+            if (SimpleMsgBoxForm.ShowYesNo(String.Format("{0} Nolu Faturanın İptal Edilmesini İstiyor musunuz?", currentInvoice.FATURANO), "Fatura İptal Uyarısı", true) != DialogResult.Yes)
+                return;
 
-          private void sbRefresh_Click(object sender, EventArgs e)
-          {
-              QueryInvoices();
-          }
+            try
+            {
+                if (currentInvoice != null)
+                {
+                    PatientServices.DeleteInvoice(_Session, UIUtilities.CurrentUser, currentInvoice, _AdvancePaymentUseds);
+                    if (SimpleMsgBoxForm.ShowYesNo("Faturaya Ait Avans Kaydının İade Edilmesini İstiyor musunuz?", "Avas İade Uyarısı", true) == DialogResult.Yes)
+                    {
+                        foreach (AdvancePaymentUsed apu in _AdvancePaymentUseds)
+                        {
+                            try
+                            {
+                                PatientServices.RebateAdvancePayment(_Session, UIUtilities.CurrentUser, apu.AdvancePayment);
+                            }
+                            catch (Exception ex)
+                            {
+                                SimpleMsgBoxForm.ShowMsgBox(String.Format("{0} Numaralı Avans İadesi Yapılamadı:", apu.AdvancePayment.AV_ID) + ex.Message, "Fatura İptal Uyarısı", true);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                SimpleMsgBoxForm.ShowMsgBox("Fatura İptal Edilemedi:" + ex.Message, "Fatura İptal Uyarısı", true);
+            }
+        }
+
+        private void sbRefresh_Click(object sender, EventArgs e)
+        {
+            QueryInvoices();
+        }
     }
 
 

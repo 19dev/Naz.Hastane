@@ -62,9 +62,11 @@ namespace Naz.Hastane.Win.Controls
         private void LoadLookUps()
         {
             UIUtilities.BindLookUpEdit(this.luePaymentType, LookUpServices.PaymentTypes);
-            this.luePaymentType.EditValue = VAT.DefaultValue;
+            this.luePaymentType.EditValue = PaymentType.DefaultValue;
+
             UIUtilities.BindLookUpEdit(this.lueVAT, LookUpServices.VATs);
-            this.lueVAT.EditValue = PaymentType.DefaultValue;
+            this.lueVAT.EditValue = VAT.DefaultValue;
+            
             UIUtilities.BindLookUpEdit(this.luePOS, LookUpServices.POSs);
         }
 
@@ -318,6 +320,11 @@ namespace Naz.Hastane.Win.Controls
 
         private void sbInvoice_Click(object sender, EventArgs e)
         {
+            AddInvoice();
+        }
+
+        private void AddInvoice()
+        {
             string NewTellerInvoiceNo = this.teInvoiceNo.Text;
             string paymentType = this.luePaymentType.EditValue.ToString();
             string POSType = "";
@@ -336,7 +343,7 @@ namespace Naz.Hastane.Win.Controls
             if (pvs.Count > 0)
                 pv = pvs[0];
             IList<PatientVisitDetail> pvds = GetSelectedVisitDetails();
-            if (pv != null && pvds.Count>0)
+            if (pv != null && pvds.Count > 0)
             {
                 UIUtilities.PrintInvoice(_Session, _Patient, pvds,
                     paymentType, POSType,
@@ -353,7 +360,6 @@ namespace Naz.Hastane.Win.Controls
                 QueryPatientVisits();
             }
         }
-
         private void sbVoucher_Click(object sender, EventArgs e)
         {
             string NewTellerVoucherNo = this.teVoucherNo.Text;

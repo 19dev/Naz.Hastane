@@ -40,13 +40,13 @@ namespace Naz.Hastane.Win.Forms
         }
 
 
-        public static void ShowMsgBox(string aMessage, string aTitle = "Uyarı Ekranı", bool aError = true)
+        public static void ShowMsgBox(string aMessage, string aTitle = "Uyarı Ekranı", bool aError = false)
         {
             using (SimpleMsgBoxForm frm = new SimpleMsgBoxForm(aMessage, aTitle, aError))
             {
             }
         }
-        public static DialogResult ShowYesNo(string aMessage, string aTitle = "Uyarı Ekranı", bool aError = true)
+        public static DialogResult ShowYesNo(string aMessage, string aTitle = "Uyarı Ekranı", bool aError = false)
         {
             using (SimpleMsgBoxForm frm = new SimpleMsgBoxForm())
             {

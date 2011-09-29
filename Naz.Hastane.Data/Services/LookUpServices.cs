@@ -897,18 +897,39 @@ namespace Naz.Hastane.Data.Services
             return d.QueueNo;
         }
 
+        /// <summary>
+        /// Genel Fatura Numarası, Fatura Dosyasında Key
+        /// </summary>
+        /// <param name="updateDB"></param>
+        /// <returns></returns>
         public static string GetNewInvoiceNo(bool updateDB = true)
         {
             return GetNewSystemSettingNo("FATNO", updateDB);
         }
+        /// <summary>
+        /// Genel Makbuz Numarası, Kasa Dosyasında Key
+        /// </summary>
+        /// <param name="updateDB"></param>
+        /// <returns></returns>
         public static string GetNewVoucherNo(bool updateDB = true)
         {
             return GetNewSystemSettingNo("MAKNO", updateDB);
         }
+        /// <summary>
+        /// Genel Avans Numarası, Avans Dosyasında Key
+        /// </summary>
+        /// <param name="updateDB"></param>
+        /// <returns></returns>
         public static string GetNewAdvancePaymentNo(bool updateDB = true)
         {
             return GetNewSystemSettingNo("AVANS_ID", updateDB);
         }
+        /// <summary>
+        /// Vezne Fiziki Fatura Numarası
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="updateDB"></param>
+        /// <returns></returns>
         public static string GetNewTellerInvoiceNo(User user, bool updateDB = true)
         {
             return GetNewSystemSettingNo("KELEGNUM" + user.VEZNE, updateDB);
@@ -917,6 +938,12 @@ namespace Naz.Hastane.Data.Services
         {
             UpdateSystemSettingNo("KELEGNUM" + user.VEZNE, value);
         }
+        /// <summary>
+        /// Vezne Fiziki Makbuz Numarası
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="updateDB"></param>
+        /// <returns></returns>
         public static string GetNewTellerVoucherNo(User user, bool updateDB = true)
         {
             return GetNewSystemSettingNo("MAKNUM" + user.VEZNE, updateDB);
