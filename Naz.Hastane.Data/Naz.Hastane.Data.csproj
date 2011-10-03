@@ -37,10 +37,10 @@
     <Reference Include="Castle.Core">
       <HintPath>..\Naz.Shared\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FluentNHibernate">
       <HintPath>..\Naz.Shared\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -93,6 +93,11 @@
     <Compile Include="Entities\InsuranceCompany\InsuranceCompanyDiscount.cs" />
     <Compile Include="Entities\Accounting\Invoice.cs" />
     <Compile Include="Entities\Accounting\InvoiceTemp.cs" />
+    <Compile Include="Entities\Lab\LabDefinition.cs" />
+    <Compile Include="Entities\Lab\LabDefinitionNormal.cs" />
+    <Compile Include="Entities\Lab\LabRequest.cs" />
+    <Compile Include="Entities\Lab\LabResult.cs" />
+    <Compile Include="Entities\Lab\LabText.cs" />
     <Compile Include="Entities\Logs\LOGKURUM_DEGISTI.cs" />
     <Compile Include="Entities\Logs\LOGTCKIMLIKNOSORGU.cs" />
     <Compile Include="Entities\IDBase.cs" />
@@ -178,6 +183,11 @@
     <Compile Include="Entities\SummaryReports\OzetServis.cs" />
     <Compile Include="Entities\SummaryReports\SummaryReportKey1Item.cs" />
     <Compile Include="Entities\YNType.cs" />
+    <Compile Include="Mappings\Lab\LabDefinitionMap.cs" />
+    <Compile Include="Mappings\Lab\LabDefinitionNormalMap.cs" />
+    <Compile Include="Mappings\Lab\LabRequestMap.cs" />
+    <Compile Include="Mappings\Lab\LabResultMap.cs" />
+    <Compile Include="Mappings\Lab\LabTextMap.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />

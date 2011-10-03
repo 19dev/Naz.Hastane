@@ -6,7 +6,7 @@
       <Value Profile="(Default)">UfukOzturk.jpg</Value>
     </Setting>
     <Setting Name="DoctorID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0137</Value>
+      <Value Profile="(Default)">0243;0244;0108;0247</Value>
     </Setting>
   </Settings>
 </SettingsFile>

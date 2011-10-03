@@ -61,7 +61,7 @@ namespace Naz.Hastane.QueueDisplay
             var messages = s.Split(';');
             if (messages.Length > 1)
             {
-                if (messages[0] == Properties.Settings.Default.DoctorID)
+                if (Properties.Settings.Default.DoctorID.Contains(messages[0]))
                 {
                     message = messages[1];
                     lblQueue.Text = message;

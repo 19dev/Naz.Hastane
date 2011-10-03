@@ -37,6 +37,7 @@
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.chkAll = new System.Windows.Forms.CheckBox();
             this.sbCall = new DevExpress.XtraEditors.SimpleButton();
             this.sbRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.deDate = new DevExpress.XtraEditors.DateEdit();
@@ -50,6 +51,7 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.lstDoctors = new DevExpress.XtraEditors.ListBoxControl();
@@ -65,6 +67,7 @@
             this.lciDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciRefresh = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciCall = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciAll = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.VistaTimeProperties)).BeginInit();
@@ -85,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAll)).BeginInit();
             this.SuspendLayout();
             // 
             // colStatus
@@ -93,8 +97,8 @@
             this.colStatus.FieldName = "QueueStatusValue";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 4;
-            this.colStatus.Width = 83;
+            this.colStatus.VisibleIndex = 5;
+            this.colStatus.Width = 70;
             // 
             // colKurum
             // 
@@ -102,11 +106,12 @@
             this.colKurum.FieldName = "PSG";
             this.colKurum.Name = "colKurum";
             this.colKurum.Visible = true;
-            this.colKurum.VisibleIndex = 5;
-            this.colKurum.Width = 155;
+            this.colKurum.VisibleIndex = 6;
+            this.colKurum.Width = 92;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.chkAll);
             this.layoutControl1.Controls.Add(this.sbCall);
             this.layoutControl1.Controls.Add(this.sbRefresh);
             this.layoutControl1.Controls.Add(this.deDate);
@@ -124,6 +129,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(932, 476);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // chkAll
+            // 
+            this.chkAll.Location = new System.Drawing.Point(12, 38);
+            this.chkAll.Name = "chkAll";
+            this.chkAll.Size = new System.Drawing.Size(272, 20);
+            this.chkAll.TabIndex = 15;
+            this.chkAll.Text = "Hepsi";
+            this.chkAll.UseVisualStyleBackColor = true;
+            this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
             // 
             // sbCall
             // 
@@ -219,7 +234,8 @@
             this.gridColumn2,
             this.gridColumn3,
             this.colKurum,
-            this.colStatus});
+            this.colStatus,
+            this.gridColumn4});
             this.gvPatients.CustomizationFormBounds = new System.Drawing.Rectangle(1150, 101, 216, 178);
             styleFormatCondition1.Appearance.ForeColor = System.Drawing.Color.Red;
             styleFormatCondition1.Appearance.Options.UseForeColor = true;
@@ -283,16 +299,16 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 46;
+            this.gridColumn1.Width = 40;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Protokol";
-            this.gridColumn6.FieldName = "PatientVisit.Patient.PatientNo";
+            this.gridColumn6.FieldName = "Patient.PatientNo";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
-            this.gridColumn6.Width = 64;
+            this.gridColumn6.Width = 57;
             // 
             // gridColumn2
             // 
@@ -301,7 +317,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 127;
+            this.gridColumn2.Width = 109;
             // 
             // gridColumn3
             // 
@@ -310,7 +326,16 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 139;
+            this.gridColumn3.Width = 114;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Doktor";
+            this.gridColumn4.FieldName = "DoctorName";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 132;
             // 
             // repositoryItemComboBox1
             // 
@@ -329,9 +354,9 @@
             // lstDoctors
             // 
             this.lstDoctors.DisplayMember = "Value";
-            this.lstDoctors.Location = new System.Drawing.Point(12, 54);
+            this.lstDoctors.Location = new System.Drawing.Point(12, 78);
             this.lstDoctors.Name = "lstDoctors";
-            this.lstDoctors.Size = new System.Drawing.Size(272, 384);
+            this.lstDoctors.Size = new System.Drawing.Size(272, 360);
             this.lstDoctors.StyleController = this.layoutControl1;
             this.lstDoctors.TabIndex = 4;
             this.lstDoctors.Click += new System.EventHandler(this.lstDoctors_Click);
@@ -361,7 +386,8 @@
             this.lciPatientAbsent,
             this.lciDate,
             this.lciRefresh,
-            this.lciCall});
+            this.lciCall,
+            this.lciAll});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(932, 476);
@@ -372,9 +398,9 @@
             // 
             this.lciDoctors.Control = this.lstDoctors;
             this.lciDoctors.CustomizationFormText = "Doktorlar";
-            this.lciDoctors.Location = new System.Drawing.Point(0, 26);
+            this.lciDoctors.Location = new System.Drawing.Point(0, 50);
             this.lciDoctors.Name = "lciDoctors";
-            this.lciDoctors.Size = new System.Drawing.Size(276, 404);
+            this.lciDoctors.Size = new System.Drawing.Size(276, 380);
             this.lciDoctors.Text = "Doktorlar";
             this.lciDoctors.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciDoctors.TextSize = new System.Drawing.Size(44, 13);
@@ -484,6 +510,18 @@
             this.lciCall.TextToControlDistance = 0;
             this.lciCall.TextVisible = false;
             // 
+            // lciAll
+            // 
+            this.lciAll.Control = this.chkAll;
+            this.lciAll.CustomizationFormText = "lciAll";
+            this.lciAll.Location = new System.Drawing.Point(0, 26);
+            this.lciAll.Name = "lciAll";
+            this.lciAll.Size = new System.Drawing.Size(276, 24);
+            this.lciAll.Text = "lciAll";
+            this.lciAll.TextSize = new System.Drawing.Size(0, 0);
+            this.lciAll.TextToControlDistance = 0;
+            this.lciAll.TextVisible = false;
+            // 
             // DoctorPatientCallListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +550,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAll)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +588,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKurum;
         private DevExpress.XtraEditors.SimpleButton sbCall;
         private DevExpress.XtraLayout.LayoutControlItem lciCall;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private System.Windows.Forms.CheckBox chkAll;
+        private DevExpress.XtraLayout.LayoutControlItem lciAll;
     }
 }

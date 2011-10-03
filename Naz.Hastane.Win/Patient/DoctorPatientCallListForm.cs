@@ -25,6 +25,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private IList<PatientVisit> _PatientVisits;
         private String[] doctorCodeList;
+        private IList<Doctor> doctors;
 
         public DoctorPatientCallListForm()
         {
@@ -32,7 +33,8 @@ namespace Naz.Hastane.Win.MDIChildForms
 
             string doctorCodes = UIUtilities.CurrentUser.Doctors;
             doctorCodeList = doctorCodes.Split(';');
-            lstDoctors.DataSource = LookUpServices.GetDoctorsInList(doctorCodeList);
+            doctors = LookUpServices.GetDoctorsInList(doctorCodeList);
+            lstDoctors.DataSource = doctors;
 
             deDate.DateTime = DateTime.Today;
         }
@@ -44,14 +46,22 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void DisplayDoctorPatients()
         {
-            Doctor doctor = lstDoctors.SelectedItem as Doctor;
+            if (doctors.Count == 0)
+                return;
 
-            if (doctor != null)
+            if (chkAll.Checked)
             {
                 Cursor.Current = Cursors.WaitCursor;
                 try
                 {
-                    _PatientVisits = PatientServices.GetPatientVisitsForDoctor(Session, doctor, deDate.DateTime.Date, deDate.DateTime.Date);
+                    _PatientVisits = PatientServices.GetPatientVisitsForDoctor(Session, doctors[0], deDate.DateTime.Date, deDate.DateTime.Date);
+                    for (int i = 1; i < doctors.Count; i++)
+                    {
+                        Doctor d = doctors[i];
+                        IList<PatientVisit> pvs = PatientServices.GetPatientVisitsForDoctor(Session, d, deDate.DateTime.Date, deDate.DateTime.Date);
+                        foreach (PatientVisit pv in pvs)
+                            _PatientVisits.Add(pv);
+                    }
                     foreach (PatientVisit pv in _PatientVisits)
                     {
                         if (pv.QueueStatusCode == '0')
@@ -65,6 +75,32 @@ namespace Naz.Hastane.Win.MDIChildForms
                 finally
                 {
                     Cursor.Current = Cursors.Default;
+                }
+            }
+            else
+            {
+                Doctor doctor = lstDoctors.SelectedItem as Doctor;
+
+                if (doctor != null)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    try
+                    {
+                        _PatientVisits = PatientServices.GetPatientVisitsForDoctor(Session, doctor, deDate.DateTime.Date, deDate.DateTime.Date);
+                        foreach (PatientVisit pv in _PatientVisits)
+                        {
+                            if (pv.QueueStatusCode == '0')
+                            {
+                                pv.QueueStatus = LookUpServices.GetQueueStatus(QueueStatus.Waiting);
+                                Session.Update(pv);
+                            }
+                        }
+                        gcPatients.DataSource = _PatientVisits;
+                    }
+                    finally
+                    {
+                        Cursor.Current = Cursors.Default;
+                    }
                 }
             }
         }
@@ -169,6 +205,11 @@ namespace Naz.Hastane.Win.MDIChildForms
         }
 
         private void deDate_DateTimeChanged(object sender, EventArgs e)
+        {
+            DisplayDoctorPatients();
+        }
+
+        private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
             DisplayDoctorPatients();
         }

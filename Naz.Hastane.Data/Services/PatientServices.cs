@@ -1631,6 +1631,17 @@ namespace Naz.Hastane.Data.Services
         }
 
         #endregion
+
+        #region Laboratuvar
+
+        // SELECT DISTINCT L.KNR, L.SNR, A.HASTAADI, A.HASTASOYADI, A.SIGORTANO, B.ODANO, B.SERVIS, B.ARZT 
+        // from LBISTE L, ADRES A, BEHAND B, HIZIL H
+        // where A.KNR=L.KNR and B.KNR=L.KNR and B.SNR=L.SNR and H.KNR=B.KNR and H.SNR=B.SNR and H.TANIM=L.TANIM and H.GRUP=L.GRUP and H.CODE=L.CODE 
+        //      and H.TARIH=L.TARIH and ( ((B.AMBU=''P'' and (H.SATISF>0 and (H.LRGOR IS NOT NULL OR H.MAKNO is not null)) or H.SATISF=0)) or (B.AMBU=''Y'') or (B.AMBU=''A'') ) 
+        //      and L.TANIM=''06'' and L.KABUL=''0'' and L.ONAY = ''0'' AND L.TARIH >= ''01.08.2011'' and L.TARIH <  ''03.08.2011'' ORDER BY A.HASTAADI, A.HASTASOYADI
+
+        #endregion
+
     }
 
 }
