@@ -105,6 +105,7 @@
     <Compile Include="Entities\LookUp\General\PaymentType.cs" />
     <Compile Include="Entities\LookUp\General\YesNo.cs" />
     <Compile Include="Entities\IDValueBase.cs" />
+    <Compile Include="Entities\LookUp\General\AYP.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\EffectiveSubstance.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyStoneLocalisationCode.cs" />
     <Compile Include="Entities\LookUp\MedulaReport\KidneyType.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Mappings\Lab\LabRequestMap.cs" />
     <Compile Include="Mappings\Lab\LabResultMap.cs" />
     <Compile Include="Mappings\Lab\LabTextMap.cs" />
+    <Compile Include="Mappings\LookUp\General\AYPMap.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisMap.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesisDetail.cs" />
     <Compile Include="Mappings\Patient\PatientAnamnesisDetailMap.cs" />

@@ -159,6 +159,7 @@ namespace Naz.Hastane.Win {
             this.iHastaneBolumleri = new DevExpress.XtraBars.BarButtonItem();
             this.iUnvan = new DevExpress.XtraBars.BarButtonItem();
             this.iDoctorPatientCallList = new DevExpress.XtraBars.BarButtonItem();
+            this.iLaboratuvarKabul = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -205,6 +206,7 @@ namespace Naz.Hastane.Win {
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.iLabInvoice = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -505,10 +507,12 @@ namespace Naz.Hastane.Win {
             this.iHizmetIciEgitimler,
             this.iHastaneBolumleri,
             this.iUnvan,
-            this.iDoctorPatientCallList});
+            this.iDoctorPatientCallList,
+            this.iLaboratuvarKabul,
+            this.iLabInvoice});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 332;
+            this.rcMain.MaxItemId = 336;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -531,7 +535,6 @@ namespace Naz.Hastane.Win {
             this.repositoryItemPictureEdit1,
             this.riicStyle});
             this.rcMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.rcMain.SelectedPage = this.rpPatients;
             this.rcMain.Size = new System.Drawing.Size(1274, 149);
             this.rcMain.StatusBar = this.ribbonStatusBar1;
             this.rcMain.Toolbar.ItemLinks.Add(this.iSakla);
@@ -1601,6 +1604,12 @@ namespace Naz.Hastane.Win {
             this.iDoctorPatientCallList.Id = 330;
             this.iDoctorPatientCallList.Name = "iDoctorPatientCallList";
             // 
+            // iLaboratuvarKabul
+            // 
+            this.iLaboratuvarKabul.Caption = "Laboratuvar Kabul";
+            this.iLaboratuvarKabul.Id = 333;
+            this.iLaboratuvarKabul.Name = "iLaboratuvarKabul";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1651,6 +1660,8 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iPrinterSettings);
             this.rpgSGK.ItemLinks.Add(this.iDailyTellerReport);
             this.rpgSGK.ItemLinks.Add(this.iUserPatientVisits);
+            this.rpgSGK.ItemLinks.Add(this.iLabInvoice);
+            this.rpgSGK.ItemLinks.Add(this.iLaboratuvarKabul);
             this.rpgSGK.ItemLinks.Add(this.iDoctorPatientCallList);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
@@ -2020,6 +2031,12 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
+            // iLabInvoice
+            // 
+            this.iLabInvoice.Caption = "Laboratuvar Fiþ Basým";
+            this.iLabInvoice.Id = 335;
+            this.iLabInvoice.Name = "iLabInvoice";
+            // 
             // frmMain
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
@@ -2247,7 +2264,9 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iHizmetIciEgitimler;
         private DevExpress.XtraBars.BarButtonItem iHastaneBolumleri;
         private DevExpress.XtraBars.BarButtonItem iUnvan;
+        private DevExpress.XtraBars.BarButtonItem iLaboratuvarKabul;
         private DevExpress.XtraBars.BarButtonItem iDoctorPatientCallList;
+        private DevExpress.XtraBars.BarButtonItem iLabInvoice;
 
     }
 }

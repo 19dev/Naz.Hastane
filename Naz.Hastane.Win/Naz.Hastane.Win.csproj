@@ -220,6 +220,12 @@
     <Compile Include="Controls\InvoiceControl.Designer.cs">
       <DependentUpon>InvoiceControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LabInvoiceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LabInvoiceControl.Designer.cs">
+      <DependentUpon>LabInvoiceControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MedulaDiabetReportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -366,6 +372,12 @@
     </Compile>
     <Compile Include="Patient\DoctorPatientCallListForm.Designer.cs">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\LabInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\LabInvoiceForm.Designer.cs">
+      <DependentUpon>LabInvoiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\SelectLabEntryForm.cs">
       <SubType>Form</SubType>
@@ -598,6 +610,9 @@
     <EmbeddedResource Include="Controls\InvoiceControl.resx">
       <DependentUpon>InvoiceControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabInvoiceControl.resx">
+      <DependentUpon>LabInvoiceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MedulaDiabetReportControl.resx">
       <DependentUpon>MedulaDiabetReportControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -657,6 +672,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\DoctorPatientCallListForm.resx">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\LabInvoiceForm.resx">
+      <DependentUpon>LabInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\SelectLabEntryForm.resx">
       <DependentUpon>SelectLabEntryForm.cs</DependentUpon>

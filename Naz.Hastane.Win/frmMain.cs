@@ -828,6 +828,9 @@ namespace Naz.Hastane.Win {
 
             //iPersonelAra.ItemClick += (o, args) => ShowNewDocument<PersonelAraForm>();
             iDoctorPatientCallList.ItemClick += (o, args) => ShowNewDocument<DoctorPatientCallListForm>();
+
+            iLabInvoice.ItemClick += (o, args) => ShowNewDocument<LabInvoiceForm>();
+            iLaboratuvarKabul.ItemClick += (o, args) => ShowNewDocument<LaboratuvarKabulForm>();
         }
 
         private void OpenLastVisitedPatientsForm()

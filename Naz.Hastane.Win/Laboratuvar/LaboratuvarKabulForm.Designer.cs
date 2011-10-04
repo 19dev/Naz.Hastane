@@ -57,10 +57,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPatientVisitType = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -79,6 +78,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.luePatientVisitType = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
@@ -93,11 +93,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -116,6 +114,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePatientVisitType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -136,7 +135,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl1.Controls.Add(this.comboBox1);
             this.layoutControl1.Controls.Add(this.dateEdit3);
             this.layoutControl1.Controls.Add(this.dateEdit2);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
+            this.layoutControl1.Controls.Add(this.luePatientVisitType);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -371,35 +370,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit3.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit3.Size = new System.Drawing.Size(163, 20);
+            this.dateEdit3.Size = new System.Drawing.Size(115, 20);
             this.dateEdit3.StyleController = this.layoutControl1;
             this.dateEdit3.TabIndex = 7;
             // 
             // dateEdit2
             // 
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(345, 24);
+            this.dateEdit2.Location = new System.Drawing.Point(297, 24);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit2.Size = new System.Drawing.Size(68, 20);
+            this.dateEdit2.Size = new System.Drawing.Size(116, 20);
             this.dateEdit2.StyleController = this.layoutControl1;
             this.dateEdit2.TabIndex = 6;
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(24, 24);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(150, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -420,7 +406,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
+            this.lciPatientVisitType,
             this.layoutControlItem3,
             this.layoutControlItem1,
             this.layoutControlItem6,
@@ -433,25 +419,25 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlGroup2.Text = "layoutControlGroup2";
             this.layoutControlGroup2.TextVisible = false;
             // 
-            // layoutControlItem2
+            // lciPatientVisitType
             // 
-            this.layoutControlItem2.Control = this.dateEdit1;
-            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(154, 24);
-            this.layoutControlItem2.Text = "layoutControlItem2";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
-            this.layoutControlItem2.TextVisible = false;
+            this.lciPatientVisitType.Control = this.luePatientVisitType;
+            this.lciPatientVisitType.CustomizationFormText = "layoutControlItem2";
+            this.lciPatientVisitType.Location = new System.Drawing.Point(0, 0);
+            this.lciPatientVisitType.Name = "lciPatientVisitType";
+            this.lciPatientVisitType.Size = new System.Drawing.Size(154, 24);
+            this.lciPatientVisitType.Text = "lciPatientVisitType";
+            this.lciPatientVisitType.TextSize = new System.Drawing.Size(0, 0);
+            this.lciPatientVisitType.TextToControlDistance = 0;
+            this.lciPatientVisitType.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dateEdit2;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(321, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(273, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(72, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(120, 24);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -463,7 +449,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(154, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(167, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(119, 24);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -661,6 +647,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem17.TextToControlDistance = 0;
             this.layoutControlItem17.TextVisible = false;
             // 
+            // luePatientVisitType
+            // 
+            this.luePatientVisitType.Location = new System.Drawing.Point(24, 24);
+            this.luePatientVisitType.Name = "luePatientVisitType";
+            this.luePatientVisitType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePatientVisitType.Properties.DisplayFormat.FormatString = "d";
+            this.luePatientVisitType.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.luePatientVisitType.Properties.EditFormat.FormatString = "d";
+            this.luePatientVisitType.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.luePatientVisitType.Properties.NullText = "";
+            this.luePatientVisitType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.luePatientVisitType.Size = new System.Drawing.Size(150, 20);
+            this.luePatientVisitType.StyleController = this.layoutControl1;
+            this.luePatientVisitType.TabIndex = 5;
+            // 
             // LaboratuvarKabulForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,6 +671,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.Controls.Add(this.layoutControl1);
             this.Name = "LaboratuvarKabulForm";
             this.Text = "Laboratuvar Kabul";
+            this.Load += new System.EventHandler(this.LaboratuvarKabulForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
@@ -683,11 +686,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatientVisitType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -706,6 +707,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePatientVisitType.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -732,9 +734,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraEditors.DateEdit dateEdit3;
         private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatientVisitType;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
@@ -763,5 +764,6 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.LookUpEdit luePatientVisitType;
     }
 }

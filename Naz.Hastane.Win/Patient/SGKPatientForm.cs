@@ -1054,5 +1054,20 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         }
 
+        private void sbLabEntry_Click(object sender, EventArgs e)
+        {
+            currentPatientVisit = PatientVisitControl1.gvPatientVisit.GetFocusedRow() as PatientVisit;
+            if (Patient != null && Patient.InsuranceCompany != null && currentPatientVisit != null)
+            {
+                using (SelectLabEntryForm frm = new SelectLabEntryForm() { PatientVisit = currentPatientVisit, PriceListCode = Patient.InsuranceCompany.GetPriceList(currentPatientVisit.VisitType) })
+                {
+                    frm.InitForm();
+                    frm.ShowDialog();
+                    //if (frm.IsSelected)
+                    //    ChangeInsuranceCompany(frm.InsuranceCompany);
+                }
+            }
+        }
+
     }
 }

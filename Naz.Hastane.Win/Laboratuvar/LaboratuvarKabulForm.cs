@@ -15,5 +15,21 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             InitializeComponent();
         }
+
+        private void LaboratuvarKabulForm_Load(object sender, EventArgs e)
+        {
+                LoadLookUps();
+        }
+
+        private void LoadLookUps()
+        {
+            //UIUtilities.BindLookUpEdit(this.luePaymentType, LookUpServices.PaymentTypes);
+            //this.luePaymentType.EditValue = PaymentType.DefaultValue;
+
+            //UIUtilities.BindLookUpEdit(this.lueVAT, LookUpServices.VATs);
+            //this.lueVAT.EditValue = VAT.DefaultValue;
+            
+            //UIUtilities.BindLookUpEdit(this.luePOS, LookUpServices.POSs);
+        }
     }
 }

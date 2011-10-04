@@ -1,6 +1,6 @@
 namespace Naz.Hastane.Win.MDIChildForms
 {
-    partial class LabEntryForm
+    partial class SelectLabEntryForm
     {
         /// <summary>
         /// Clean up any resources being used.
@@ -26,6 +26,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
             this.checkEdit194 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit193 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit192 = new DevExpress.XtraEditors.CheckEdit();
@@ -85,8 +86,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit103 = new DevExpress.XtraEditors.CheckEdit();
@@ -187,11 +186,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit66 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit74 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit65 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit46 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit64 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit75 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit63 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit62 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit46 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit61 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit60 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit59 = new DevExpress.XtraEditors.CheckEdit();
@@ -220,60 +219,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit19 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit70 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit18 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit67 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit71 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit68 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit68 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit70 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit67 = new DevExpress.XtraEditors.CheckEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem95 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem97 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem119 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem120 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem121 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem122 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem123 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem124 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem125 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem126 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem127 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem128 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem129 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem130 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem131 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem135 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem136 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem137 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem138 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem139 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem140 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem141 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem142 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem143 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem144 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem145 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem146 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem147 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem148 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem149 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem155 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem156 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem157 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem158 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem159 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem160 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem161 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem162 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem163 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem164 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup9 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem109 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem110 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -433,7 +386,52 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem117 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem77 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem95 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem97 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem119 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem120 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem121 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem122 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem123 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem124 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem125 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem126 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem127 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem128 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem129 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem130 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem131 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem135 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem136 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem137 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem138 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem139 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem140 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem141 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem142 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem143 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem144 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem145 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem146 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem147 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem148 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem149 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem155 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem156 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem157 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem158 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem159 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem160 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem161 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem162 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem163 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem164 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem98 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem111 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem154 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -441,6 +439,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem96 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem108 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem201 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.checkEdit43 = new DevExpress.XtraEditors.CheckEdit();
@@ -449,6 +448,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit194.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit193.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit192.Properties)).BeginInit();
@@ -505,8 +505,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit97.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit94.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit103.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit102.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit101.Properties)).BeginInit();
@@ -605,11 +603,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit66.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit74.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit65.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit64.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit75.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit63.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit62.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit61.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit60.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit59.Properties)).BeginInit();
@@ -638,60 +636,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit71.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem95)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem97)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem119)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem121)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem122)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem123)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem124)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem125)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem126)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem127)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem128)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem129)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem130)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem131)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem135)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem136)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem137)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem138)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem139)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem140)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem141)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem142)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem143)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem144)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem145)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem146)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem147)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem148)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem149)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem155)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem156)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem157)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem158)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem159)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem160)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem162)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem163)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem164)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem109)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem110)).BeginInit();
@@ -851,7 +803,52 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem117)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem77)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem95)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem97)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem119)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem120)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem121)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem122)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem123)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem124)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem125)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem126)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem127)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem128)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem129)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem130)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem131)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem135)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem136)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem137)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem138)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem139)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem140)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem141)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem142)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem143)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem144)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem145)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem146)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem147)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem148)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem149)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem155)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem156)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem157)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem158)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem159)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem160)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem162)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem163)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem164)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem98)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem154)).BeginInit();
@@ -859,6 +856,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem96)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem108)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem201)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit43.Properties)).BeginInit();
@@ -878,6 +876,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.listBoxControl1);
             this.layoutControl2.Controls.Add(this.checkEdit194);
             this.layoutControl2.Controls.Add(this.checkEdit193);
             this.layoutControl2.Controls.Add(this.checkEdit192);
@@ -937,7 +936,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.Controls.Add(this.simpleButton4);
             this.layoutControl2.Controls.Add(this.simpleButton3);
             this.layoutControl2.Controls.Add(this.simpleButton2);
-            this.layoutControl2.Controls.Add(this.gridControl1);
             this.layoutControl2.Controls.Add(this.labelControl1);
             this.layoutControl2.Controls.Add(this.simpleButton1);
             this.layoutControl2.Controls.Add(this.checkEdit103);
@@ -1038,11 +1036,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.Controls.Add(this.checkEdit66);
             this.layoutControl2.Controls.Add(this.checkEdit74);
             this.layoutControl2.Controls.Add(this.checkEdit65);
-            this.layoutControl2.Controls.Add(this.checkEdit46);
             this.layoutControl2.Controls.Add(this.checkEdit64);
             this.layoutControl2.Controls.Add(this.checkEdit75);
             this.layoutControl2.Controls.Add(this.checkEdit63);
             this.layoutControl2.Controls.Add(this.checkEdit62);
+            this.layoutControl2.Controls.Add(this.checkEdit46);
             this.layoutControl2.Controls.Add(this.checkEdit61);
             this.layoutControl2.Controls.Add(this.checkEdit60);
             this.layoutControl2.Controls.Add(this.checkEdit59);
@@ -1071,12 +1069,12 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.Controls.Add(this.checkEdit19);
             this.layoutControl2.Controls.Add(this.checkEdit8);
             this.layoutControl2.Controls.Add(this.checkEdit1);
-            this.layoutControl2.Controls.Add(this.checkEdit70);
             this.layoutControl2.Controls.Add(this.checkEdit18);
-            this.layoutControl2.Controls.Add(this.checkEdit67);
             this.layoutControl2.Controls.Add(this.checkEdit71);
-            this.layoutControl2.Controls.Add(this.checkEdit68);
             this.layoutControl2.Controls.Add(this.checkEdit13);
+            this.layoutControl2.Controls.Add(this.checkEdit68);
+            this.layoutControl2.Controls.Add(this.checkEdit70);
+            this.layoutControl2.Controls.Add(this.checkEdit67);
             this.layoutControl2.Location = new System.Drawing.Point(2, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1642, 142, 694, 804);
@@ -1085,335 +1083,371 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.TabIndex = 5;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // listBoxControl1
+            // 
+            this.listBoxControl1.Location = new System.Drawing.Point(1171, 2);
+            this.listBoxControl1.Name = "listBoxControl1";
+            this.listBoxControl1.Size = new System.Drawing.Size(283, 706);
+            this.listBoxControl1.StyleController = this.layoutControl2;
+            this.listBoxControl1.TabIndex = 310;
+            // 
             // checkEdit194
             // 
-            this.checkEdit194.Location = new System.Drawing.Point(778, 740);
+            this.checkEdit194.Location = new System.Drawing.Point(784, 740);
             this.checkEdit194.Name = "checkEdit194";
             this.checkEdit194.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit194.Properties.Appearance.Options.UseFont = true;
             this.checkEdit194.Properties.Caption = "Albumin";
-            this.checkEdit194.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit194.Size = new System.Drawing.Size(371, 45);
             this.checkEdit194.StyleController = this.layoutControl2;
             this.checkEdit194.TabIndex = 309;
             // 
             // checkEdit193
             // 
-            this.checkEdit193.Location = new System.Drawing.Point(425, 740);
+            this.checkEdit193.Location = new System.Drawing.Point(429, 740);
             this.checkEdit193.Name = "checkEdit193";
             this.checkEdit193.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit193.Properties.Appearance.Options.UseFont = true;
             this.checkEdit193.Properties.Caption = "Folik Asid";
-            this.checkEdit193.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit193.Size = new System.Drawing.Size(351, 45);
             this.checkEdit193.StyleController = this.layoutControl2;
             this.checkEdit193.TabIndex = 308;
             // 
             // checkEdit192
             // 
-            this.checkEdit192.Location = new System.Drawing.Point(778, 691);
+            this.checkEdit192.Location = new System.Drawing.Point(784, 691);
             this.checkEdit192.Name = "checkEdit192";
             this.checkEdit192.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit192.Properties.Appearance.Options.UseFont = true;
             this.checkEdit192.Properties.Caption = "FSH";
-            this.checkEdit192.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit192.Size = new System.Drawing.Size(371, 45);
             this.checkEdit192.StyleController = this.layoutControl2;
             this.checkEdit192.TabIndex = 307;
+            this.checkEdit192.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit191
             // 
-            this.checkEdit191.Location = new System.Drawing.Point(778, 642);
+            this.checkEdit191.Location = new System.Drawing.Point(784, 642);
             this.checkEdit191.Name = "checkEdit191";
             this.checkEdit191.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit191.Properties.Appearance.Options.UseFont = true;
             this.checkEdit191.Properties.Caption = "HSV Tip l lg G";
-            this.checkEdit191.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit191.Size = new System.Drawing.Size(371, 45);
             this.checkEdit191.StyleController = this.layoutControl2;
             this.checkEdit191.TabIndex = 306;
+            this.checkEdit191.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit190
             // 
-            this.checkEdit190.Location = new System.Drawing.Point(778, 593);
+            this.checkEdit190.Location = new System.Drawing.Point(784, 593);
             this.checkEdit190.Name = "checkEdit190";
             this.checkEdit190.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit190.Properties.Appearance.Options.UseFont = true;
             this.checkEdit190.Properties.Caption = "HSV Tip l lg M";
-            this.checkEdit190.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit190.Size = new System.Drawing.Size(371, 45);
             this.checkEdit190.StyleController = this.layoutControl2;
             this.checkEdit190.TabIndex = 305;
+            this.checkEdit190.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit189
             // 
-            this.checkEdit189.Location = new System.Drawing.Point(778, 544);
+            this.checkEdit189.Location = new System.Drawing.Point(784, 544);
             this.checkEdit189.Name = "checkEdit189";
             this.checkEdit189.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit189.Properties.Appearance.Options.UseFont = true;
             this.checkEdit189.Properties.Caption = "Protrombin Zamaný";
-            this.checkEdit189.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit189.Size = new System.Drawing.Size(371, 45);
             this.checkEdit189.StyleController = this.layoutControl2;
             this.checkEdit189.TabIndex = 304;
+            this.checkEdit189.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit188
             // 
-            this.checkEdit188.Location = new System.Drawing.Point(778, 495);
+            this.checkEdit188.Location = new System.Drawing.Point(784, 495);
             this.checkEdit188.Name = "checkEdit188";
             this.checkEdit188.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit188.Properties.Appearance.Options.UseFont = true;
             this.checkEdit188.Properties.Caption = "DHEA - SO4";
-            this.checkEdit188.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit188.Size = new System.Drawing.Size(371, 45);
             this.checkEdit188.StyleController = this.layoutControl2;
             this.checkEdit188.TabIndex = 303;
+            this.checkEdit188.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit187
             // 
-            this.checkEdit187.Location = new System.Drawing.Point(778, 446);
+            this.checkEdit187.Location = new System.Drawing.Point(784, 446);
             this.checkEdit187.Name = "checkEdit187";
             this.checkEdit187.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit187.Properties.Appearance.Options.UseFont = true;
             this.checkEdit187.Properties.Caption = "GGT";
-            this.checkEdit187.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit187.Size = new System.Drawing.Size(371, 45);
             this.checkEdit187.StyleController = this.layoutControl2;
             this.checkEdit187.TabIndex = 302;
+            this.checkEdit187.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit186
             // 
-            this.checkEdit186.Location = new System.Drawing.Point(778, 397);
+            this.checkEdit186.Location = new System.Drawing.Point(784, 397);
             this.checkEdit186.Name = "checkEdit186";
             this.checkEdit186.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit186.Properties.Appearance.Options.UseFont = true;
             this.checkEdit186.Properties.Caption = "Anti - HIV";
-            this.checkEdit186.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit186.Size = new System.Drawing.Size(371, 45);
             this.checkEdit186.StyleController = this.layoutControl2;
             this.checkEdit186.TabIndex = 301;
+            this.checkEdit186.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit185
             // 
-            this.checkEdit185.Location = new System.Drawing.Point(778, 348);
+            this.checkEdit185.Location = new System.Drawing.Point(784, 348);
             this.checkEdit185.Name = "checkEdit185";
             this.checkEdit185.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit185.Properties.Appearance.Options.UseFont = true;
             this.checkEdit185.Properties.Caption = "Hemaglutinatic";
-            this.checkEdit185.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit185.Size = new System.Drawing.Size(371, 45);
             this.checkEdit185.StyleController = this.layoutControl2;
             this.checkEdit185.TabIndex = 300;
+            this.checkEdit185.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit184
             // 
-            this.checkEdit184.Location = new System.Drawing.Point(778, 299);
+            this.checkEdit184.Location = new System.Drawing.Point(784, 299);
             this.checkEdit184.Name = "checkEdit184";
             this.checkEdit184.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit184.Properties.Appearance.Options.UseFont = true;
             this.checkEdit184.Properties.Caption = "Anti - HCV";
-            this.checkEdit184.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit184.Size = new System.Drawing.Size(371, 45);
             this.checkEdit184.StyleController = this.layoutControl2;
             this.checkEdit184.TabIndex = 299;
+            this.checkEdit184.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit183
             // 
-            this.checkEdit183.Location = new System.Drawing.Point(778, 250);
+            this.checkEdit183.Location = new System.Drawing.Point(784, 250);
             this.checkEdit183.Name = "checkEdit183";
             this.checkEdit183.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit183.Properties.Appearance.Options.UseFont = true;
             this.checkEdit183.Properties.Caption = "Kolesterol - LDL";
-            this.checkEdit183.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit183.Size = new System.Drawing.Size(371, 45);
             this.checkEdit183.StyleController = this.layoutControl2;
             this.checkEdit183.TabIndex = 298;
+            this.checkEdit183.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit182
             // 
-            this.checkEdit182.Location = new System.Drawing.Point(778, 201);
+            this.checkEdit182.Location = new System.Drawing.Point(784, 201);
             this.checkEdit182.Name = "checkEdit182";
             this.checkEdit182.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit182.Properties.Appearance.Options.UseFont = true;
             this.checkEdit182.Properties.Caption = "Kolesterol - HDL";
-            this.checkEdit182.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit182.Size = new System.Drawing.Size(371, 45);
             this.checkEdit182.StyleController = this.layoutControl2;
             this.checkEdit182.TabIndex = 297;
+            this.checkEdit182.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit181
             // 
-            this.checkEdit181.Location = new System.Drawing.Point(778, 152);
+            this.checkEdit181.Location = new System.Drawing.Point(784, 152);
             this.checkEdit181.Name = "checkEdit181";
             this.checkEdit181.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit181.Properties.Appearance.Options.UseFont = true;
             this.checkEdit181.Properties.Caption = "T3 Serbest (Free T3)";
-            this.checkEdit181.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit181.Size = new System.Drawing.Size(371, 45);
             this.checkEdit181.StyleController = this.layoutControl2;
             this.checkEdit181.TabIndex = 296;
+            this.checkEdit181.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit180
             // 
-            this.checkEdit180.Location = new System.Drawing.Point(778, 103);
+            this.checkEdit180.Location = new System.Drawing.Point(784, 103);
             this.checkEdit180.Name = "checkEdit180";
             this.checkEdit180.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit180.Properties.Appearance.Options.UseFont = true;
             this.checkEdit180.Properties.Caption = "T4 Serbest (Free T4)";
-            this.checkEdit180.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit180.Size = new System.Drawing.Size(371, 45);
             this.checkEdit180.StyleController = this.layoutControl2;
             this.checkEdit180.TabIndex = 295;
+            this.checkEdit180.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit179
             // 
-            this.checkEdit179.Location = new System.Drawing.Point(778, 54);
+            this.checkEdit179.Location = new System.Drawing.Point(784, 54);
             this.checkEdit179.Name = "checkEdit179";
             this.checkEdit179.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit179.Properties.Appearance.Options.UseFont = true;
             this.checkEdit179.Properties.Caption = "Ds Anti - DNA";
-            this.checkEdit179.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit179.Size = new System.Drawing.Size(371, 45);
             this.checkEdit179.StyleController = this.layoutControl2;
             this.checkEdit179.TabIndex = 294;
+            this.checkEdit179.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit178
             // 
-            this.checkEdit178.Location = new System.Drawing.Point(425, 691);
+            this.checkEdit178.Location = new System.Drawing.Point(429, 691);
             this.checkEdit178.Name = "checkEdit178";
             this.checkEdit178.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit178.Properties.Appearance.Options.UseFont = true;
             this.checkEdit178.Properties.Caption = "HBsAg";
-            this.checkEdit178.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit178.Size = new System.Drawing.Size(351, 45);
             this.checkEdit178.StyleController = this.layoutControl2;
             this.checkEdit178.TabIndex = 293;
+            this.checkEdit178.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit177
             // 
-            this.checkEdit177.Location = new System.Drawing.Point(425, 642);
+            this.checkEdit177.Location = new System.Drawing.Point(429, 642);
             this.checkEdit177.Name = "checkEdit177";
             this.checkEdit177.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit177.Properties.Appearance.Options.UseFont = true;
             this.checkEdit177.Properties.Caption = "Vitamin H (Biotin)";
-            this.checkEdit177.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit177.Size = new System.Drawing.Size(351, 45);
             this.checkEdit177.StyleController = this.layoutControl2;
             this.checkEdit177.TabIndex = 292;
+            this.checkEdit177.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit176
             // 
-            this.checkEdit176.Location = new System.Drawing.Point(425, 593);
+            this.checkEdit176.Location = new System.Drawing.Point(429, 593);
             this.checkEdit176.Name = "checkEdit176";
             this.checkEdit176.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit176.Properties.Appearance.Options.UseFont = true;
             this.checkEdit176.Properties.Caption = "Vitamin B12";
-            this.checkEdit176.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit176.Size = new System.Drawing.Size(351, 45);
             this.checkEdit176.StyleController = this.layoutControl2;
             this.checkEdit176.TabIndex = 291;
+            this.checkEdit176.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit175
             // 
-            this.checkEdit175.Location = new System.Drawing.Point(425, 544);
+            this.checkEdit175.Location = new System.Drawing.Point(429, 544);
             this.checkEdit175.Name = "checkEdit175";
             this.checkEdit175.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit175.Properties.Appearance.Options.UseFont = true;
             this.checkEdit175.Properties.Caption = "VDRL";
-            this.checkEdit175.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit175.Size = new System.Drawing.Size(351, 45);
             this.checkEdit175.StyleController = this.layoutControl2;
             this.checkEdit175.TabIndex = 290;
+            this.checkEdit175.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit174
             // 
-            this.checkEdit174.Location = new System.Drawing.Point(425, 495);
+            this.checkEdit174.Location = new System.Drawing.Point(429, 495);
             this.checkEdit174.Name = "checkEdit174";
             this.checkEdit174.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit174.Properties.Appearance.Options.UseFont = true;
             this.checkEdit174.Properties.Caption = "Dýþkýda Tam Muayene";
-            this.checkEdit174.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit174.Size = new System.Drawing.Size(351, 45);
             this.checkEdit174.StyleController = this.layoutControl2;
             this.checkEdit174.TabIndex = 289;
+            this.checkEdit174.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit173
             // 
-            this.checkEdit173.Location = new System.Drawing.Point(425, 446);
+            this.checkEdit173.Location = new System.Drawing.Point(429, 446);
             this.checkEdit173.Name = "checkEdit173";
             this.checkEdit173.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit173.Properties.Appearance.Options.UseFont = true;
             this.checkEdit173.Properties.Caption = "Çinko";
-            this.checkEdit173.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit173.Size = new System.Drawing.Size(351, 45);
             this.checkEdit173.StyleController = this.layoutControl2;
             this.checkEdit173.TabIndex = 288;
+            this.checkEdit173.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit172
             // 
-            this.checkEdit172.Location = new System.Drawing.Point(425, 397);
+            this.checkEdit172.Location = new System.Drawing.Point(429, 397);
             this.checkEdit172.Name = "checkEdit172";
             this.checkEdit172.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit172.Properties.Appearance.Options.UseFont = true;
             this.checkEdit172.Properties.Caption = "Ana Fana";
-            this.checkEdit172.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit172.Size = new System.Drawing.Size(351, 45);
             this.checkEdit172.StyleController = this.layoutControl2;
             this.checkEdit172.TabIndex = 287;
+            this.checkEdit172.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit171
             // 
-            this.checkEdit171.Location = new System.Drawing.Point(425, 348);
+            this.checkEdit171.Location = new System.Drawing.Point(429, 348);
             this.checkEdit171.Name = "checkEdit171";
             this.checkEdit171.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit171.Properties.Appearance.Options.UseFont = true;
             this.checkEdit171.Properties.Caption = "Bilirubin Ýndirekt";
-            this.checkEdit171.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit171.Size = new System.Drawing.Size(351, 45);
             this.checkEdit171.StyleController = this.layoutControl2;
             this.checkEdit171.TabIndex = 286;
+            this.checkEdit171.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit170
             // 
-            this.checkEdit170.Location = new System.Drawing.Point(425, 299);
+            this.checkEdit170.Location = new System.Drawing.Point(429, 299);
             this.checkEdit170.Name = "checkEdit170";
             this.checkEdit170.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit170.Properties.Appearance.Options.UseFont = true;
             this.checkEdit170.Properties.Caption = "Bilirubin Direkt";
-            this.checkEdit170.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit170.Size = new System.Drawing.Size(351, 45);
             this.checkEdit170.StyleController = this.layoutControl2;
             this.checkEdit170.TabIndex = 285;
+            this.checkEdit170.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit169
             // 
-            this.checkEdit169.Location = new System.Drawing.Point(425, 250);
+            this.checkEdit169.Location = new System.Drawing.Point(429, 250);
             this.checkEdit169.Name = "checkEdit169";
             this.checkEdit169.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit169.Properties.Appearance.Options.UseFont = true;
             this.checkEdit169.Properties.Caption = "Bilirubin Total";
-            this.checkEdit169.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit169.Size = new System.Drawing.Size(351, 45);
             this.checkEdit169.StyleController = this.layoutControl2;
             this.checkEdit169.TabIndex = 284;
+            this.checkEdit169.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit168
             // 
-            this.checkEdit168.Location = new System.Drawing.Point(425, 201);
+            this.checkEdit168.Location = new System.Drawing.Point(429, 201);
             this.checkEdit168.Name = "checkEdit168";
             this.checkEdit168.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit168.Properties.Appearance.Options.UseFont = true;
             this.checkEdit168.Properties.Caption = "Romatoid Factor";
-            this.checkEdit168.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit168.Size = new System.Drawing.Size(351, 45);
             this.checkEdit168.StyleController = this.layoutControl2;
             this.checkEdit168.TabIndex = 283;
+            this.checkEdit168.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit167
             // 
-            this.checkEdit167.Location = new System.Drawing.Point(425, 152);
+            this.checkEdit167.Location = new System.Drawing.Point(429, 152);
             this.checkEdit167.Name = "checkEdit167";
             this.checkEdit167.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit167.Properties.Appearance.Options.UseFont = true;
             this.checkEdit167.Properties.Caption = "Anti - Tpo";
-            this.checkEdit167.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit167.Size = new System.Drawing.Size(351, 45);
             this.checkEdit167.StyleController = this.layoutControl2;
             this.checkEdit167.TabIndex = 282;
+            this.checkEdit167.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit166
             // 
-            this.checkEdit166.Location = new System.Drawing.Point(425, 103);
+            this.checkEdit166.Location = new System.Drawing.Point(429, 103);
             this.checkEdit166.Name = "checkEdit166";
             this.checkEdit166.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit166.Properties.Appearance.Options.UseFont = true;
             this.checkEdit166.Properties.Caption = "Ferritin";
-            this.checkEdit166.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit166.Size = new System.Drawing.Size(351, 45);
             this.checkEdit166.StyleController = this.layoutControl2;
             this.checkEdit166.TabIndex = 281;
+            this.checkEdit166.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit165
             // 
-            this.checkEdit165.Location = new System.Drawing.Point(425, 54);
+            this.checkEdit165.Location = new System.Drawing.Point(429, 54);
             this.checkEdit165.Name = "checkEdit165";
             this.checkEdit165.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit165.Properties.Appearance.Options.UseFont = true;
             this.checkEdit165.Properties.Caption = "CRP";
-            this.checkEdit165.Size = new System.Drawing.Size(349, 45);
+            this.checkEdit165.Size = new System.Drawing.Size(351, 45);
             this.checkEdit165.StyleController = this.layoutControl2;
             this.checkEdit165.TabIndex = 280;
+            this.checkEdit165.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit164
             // 
@@ -1422,9 +1456,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit164.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit164.Properties.Appearance.Options.UseFont = true;
             this.checkEdit164.Properties.Caption = "Mantar Aramasý ve Kültürü";
-            this.checkEdit164.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit164.Size = new System.Drawing.Size(411, 45);
             this.checkEdit164.StyleController = this.layoutControl2;
             this.checkEdit164.TabIndex = 279;
+            this.checkEdit164.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit163
             // 
@@ -1433,9 +1468,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit163.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit163.Properties.Appearance.Options.UseFont = true;
             this.checkEdit163.Properties.Caption = "Açlýk Kan Þekeri";
-            this.checkEdit163.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit163.Size = new System.Drawing.Size(411, 45);
             this.checkEdit163.StyleController = this.layoutControl2;
             this.checkEdit163.TabIndex = 278;
+            this.checkEdit163.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit162
             // 
@@ -1444,9 +1480,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit162.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit162.Properties.Appearance.Options.UseFont = true;
             this.checkEdit162.Properties.Caption = "Dýþkýda Parazit";
-            this.checkEdit162.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit162.Size = new System.Drawing.Size(411, 45);
             this.checkEdit162.StyleController = this.layoutControl2;
             this.checkEdit162.TabIndex = 277;
+            this.checkEdit162.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit161
             // 
@@ -1455,9 +1492,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit161.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit161.Properties.Appearance.Options.UseFont = true;
             this.checkEdit161.Properties.Caption = "Sedimantasyon";
-            this.checkEdit161.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit161.Size = new System.Drawing.Size(411, 45);
             this.checkEdit161.StyleController = this.layoutControl2;
             this.checkEdit161.TabIndex = 276;
+            this.checkEdit161.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit160
             // 
@@ -1466,9 +1504,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit160.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit160.Properties.Appearance.Options.UseFont = true;
             this.checkEdit160.Properties.Caption = "Direct Mantar Aramasý";
-            this.checkEdit160.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit160.Size = new System.Drawing.Size(411, 45);
             this.checkEdit160.StyleController = this.layoutControl2;
             this.checkEdit160.TabIndex = 275;
+            this.checkEdit160.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit159
             // 
@@ -1477,9 +1516,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit159.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit159.Properties.Appearance.Options.UseFont = true;
             this.checkEdit159.Properties.Caption = "TSH";
-            this.checkEdit159.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit159.Size = new System.Drawing.Size(411, 45);
             this.checkEdit159.StyleController = this.layoutControl2;
             this.checkEdit159.TabIndex = 274;
+            this.checkEdit159.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit152
             // 
@@ -1488,9 +1528,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit152.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.checkEdit152.Properties.Appearance.Options.UseFont = true;
             this.checkEdit152.Properties.Caption = "Trigliserid";
-            this.checkEdit152.Size = new System.Drawing.Size(407, 43);
+            this.checkEdit152.Size = new System.Drawing.Size(411, 43);
             this.checkEdit152.StyleController = this.layoutControl2;
             this.checkEdit152.TabIndex = 273;
+            this.checkEdit152.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit151
             // 
@@ -1499,9 +1540,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit151.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit151.Properties.Appearance.Options.UseFont = true;
             this.checkEdit151.Properties.Caption = "Kolesterol, Total";
-            this.checkEdit151.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit151.Size = new System.Drawing.Size(411, 45);
             this.checkEdit151.StyleController = this.layoutControl2;
             this.checkEdit151.TabIndex = 272;
+            this.checkEdit151.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit150
             // 
@@ -1510,9 +1552,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit150.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit150.Properties.Appearance.Options.UseFont = true;
             this.checkEdit150.Properties.Caption = "Kan Sayýmý";
-            this.checkEdit150.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit150.Size = new System.Drawing.Size(411, 45);
             this.checkEdit150.StyleController = this.layoutControl2;
             this.checkEdit150.TabIndex = 271;
+            this.checkEdit150.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit149
             // 
@@ -1521,9 +1564,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit149.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit149.Properties.Appearance.Options.UseFont = true;
             this.checkEdit149.Properties.Caption = "lgE";
-            this.checkEdit149.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit149.Size = new System.Drawing.Size(411, 45);
             this.checkEdit149.StyleController = this.layoutControl2;
             this.checkEdit149.TabIndex = 270;
+            this.checkEdit149.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit133
             // 
@@ -1532,9 +1576,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit133.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit133.Properties.Appearance.Options.UseFont = true;
             this.checkEdit133.Properties.Caption = "Kreatinin";
-            this.checkEdit133.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit133.Size = new System.Drawing.Size(411, 45);
             this.checkEdit133.StyleController = this.layoutControl2;
             this.checkEdit133.TabIndex = 269;
+            this.checkEdit133.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit132
             // 
@@ -1543,9 +1588,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit132.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit132.Properties.Appearance.Options.UseFont = true;
             this.checkEdit132.Properties.Caption = "Üre";
-            this.checkEdit132.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit132.Size = new System.Drawing.Size(411, 45);
             this.checkEdit132.StyleController = this.layoutControl2;
             this.checkEdit132.TabIndex = 268;
+            this.checkEdit132.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit131
             // 
@@ -1554,9 +1600,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit131.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit131.Properties.Appearance.Options.UseFont = true;
             this.checkEdit131.Properties.Caption = "Sgpt (Alt)";
-            this.checkEdit131.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit131.Size = new System.Drawing.Size(411, 45);
             this.checkEdit131.StyleController = this.layoutControl2;
             this.checkEdit131.TabIndex = 267;
+            this.checkEdit131.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit109
             // 
@@ -1565,9 +1612,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit109.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit109.Properties.Appearance.Options.UseFont = true;
             this.checkEdit109.Properties.Caption = "Sgot (Ast)";
-            this.checkEdit109.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit109.Size = new System.Drawing.Size(411, 45);
             this.checkEdit109.StyleController = this.layoutControl2;
             this.checkEdit109.TabIndex = 266;
+            this.checkEdit109.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit108
             // 
@@ -1576,7 +1624,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit108.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit108.Properties.Appearance.Options.UseFont = true;
             this.checkEdit108.Properties.Caption = "ASO";
-            this.checkEdit108.Size = new System.Drawing.Size(407, 45);
+            this.checkEdit108.Size = new System.Drawing.Size(411, 45);
             this.checkEdit108.StyleController = this.layoutControl2;
             this.checkEdit108.TabIndex = 265;
             // 
@@ -1591,113 +1639,123 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // checkEdit158
             // 
-            this.checkEdit158.Location = new System.Drawing.Point(759, 495);
+            this.checkEdit158.Location = new System.Drawing.Point(764, 495);
             this.checkEdit158.Name = "checkEdit158";
             this.checkEdit158.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit158.Properties.Appearance.Options.UseFont = true;
             this.checkEdit158.Properties.Caption = "CMV lg M";
-            this.checkEdit158.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit158.Size = new System.Drawing.Size(391, 45);
             this.checkEdit158.StyleController = this.layoutControl2;
             this.checkEdit158.TabIndex = 263;
+            this.checkEdit158.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit157
             // 
-            this.checkEdit157.Location = new System.Drawing.Point(759, 446);
+            this.checkEdit157.Location = new System.Drawing.Point(764, 446);
             this.checkEdit157.Name = "checkEdit157";
             this.checkEdit157.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit157.Properties.Appearance.Options.UseFont = true;
             this.checkEdit157.Properties.Caption = "CMV lg G";
-            this.checkEdit157.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit157.Size = new System.Drawing.Size(391, 45);
             this.checkEdit157.StyleController = this.layoutControl2;
             this.checkEdit157.TabIndex = 262;
+            this.checkEdit157.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit156
             // 
-            this.checkEdit156.Location = new System.Drawing.Point(759, 397);
+            this.checkEdit156.Location = new System.Drawing.Point(764, 397);
             this.checkEdit156.Name = "checkEdit156";
             this.checkEdit156.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit156.Properties.Appearance.Options.UseFont = true;
             this.checkEdit156.Properties.Caption = "Rubella lg M";
-            this.checkEdit156.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit156.Size = new System.Drawing.Size(391, 45);
             this.checkEdit156.StyleController = this.layoutControl2;
             this.checkEdit156.TabIndex = 261;
+            this.checkEdit156.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit155
             // 
-            this.checkEdit155.Location = new System.Drawing.Point(759, 348);
+            this.checkEdit155.Location = new System.Drawing.Point(764, 348);
             this.checkEdit155.Name = "checkEdit155";
             this.checkEdit155.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit155.Properties.Appearance.Options.UseFont = true;
             this.checkEdit155.Properties.Caption = "Rubella lg G";
-            this.checkEdit155.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit155.Size = new System.Drawing.Size(391, 45);
             this.checkEdit155.StyleController = this.layoutControl2;
             this.checkEdit155.TabIndex = 260;
+            this.checkEdit155.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit154
             // 
-            this.checkEdit154.Location = new System.Drawing.Point(759, 299);
+            this.checkEdit154.Location = new System.Drawing.Point(764, 299);
             this.checkEdit154.Name = "checkEdit154";
             this.checkEdit154.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit154.Properties.Appearance.Options.UseFont = true;
             this.checkEdit154.Properties.Caption = "Toksoplazma lg M";
-            this.checkEdit154.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit154.Size = new System.Drawing.Size(391, 45);
             this.checkEdit154.StyleController = this.layoutControl2;
             this.checkEdit154.TabIndex = 259;
+            this.checkEdit154.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit153
             // 
-            this.checkEdit153.Location = new System.Drawing.Point(759, 250);
+            this.checkEdit153.Location = new System.Drawing.Point(764, 250);
             this.checkEdit153.Name = "checkEdit153";
             this.checkEdit153.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit153.Properties.Appearance.Options.UseFont = true;
             this.checkEdit153.Properties.Caption = "Toksoplazma lg G";
-            this.checkEdit153.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit153.Size = new System.Drawing.Size(391, 45);
             this.checkEdit153.StyleController = this.layoutControl2;
             this.checkEdit153.TabIndex = 258;
+            this.checkEdit153.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit110
             // 
-            this.checkEdit110.Location = new System.Drawing.Point(759, 201);
+            this.checkEdit110.Location = new System.Drawing.Point(764, 201);
             this.checkEdit110.Name = "checkEdit110";
             this.checkEdit110.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit110.Properties.Appearance.Options.UseFont = true;
             this.checkEdit110.Properties.Caption = "HSV Tip 2 lg M";
-            this.checkEdit110.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit110.Size = new System.Drawing.Size(391, 45);
             this.checkEdit110.StyleController = this.layoutControl2;
             this.checkEdit110.TabIndex = 257;
+            this.checkEdit110.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit97
             // 
-            this.checkEdit97.Location = new System.Drawing.Point(759, 152);
+            this.checkEdit97.Location = new System.Drawing.Point(764, 152);
             this.checkEdit97.Name = "checkEdit97";
             this.checkEdit97.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit97.Properties.Appearance.Options.UseFont = true;
             this.checkEdit97.Properties.Caption = "HSV Tip 2 lg G";
-            this.checkEdit97.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit97.Size = new System.Drawing.Size(391, 45);
             this.checkEdit97.StyleController = this.layoutControl2;
             this.checkEdit97.TabIndex = 256;
+            this.checkEdit97.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit94
             // 
-            this.checkEdit94.Location = new System.Drawing.Point(759, 103);
+            this.checkEdit94.Location = new System.Drawing.Point(764, 103);
             this.checkEdit94.Name = "checkEdit94";
             this.checkEdit94.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit94.Properties.Appearance.Options.UseFont = true;
             this.checkEdit94.Properties.Caption = "HSV Tip 1 lg M";
-            this.checkEdit94.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit94.Size = new System.Drawing.Size(391, 45);
             this.checkEdit94.StyleController = this.layoutControl2;
             this.checkEdit94.TabIndex = 255;
+            this.checkEdit94.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit7
             // 
-            this.checkEdit7.Location = new System.Drawing.Point(759, 54);
+            this.checkEdit7.Location = new System.Drawing.Point(764, 54);
             this.checkEdit7.Name = "checkEdit7";
             this.checkEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit7.Properties.Appearance.Options.UseFont = true;
             this.checkEdit7.Properties.Caption = "HSV Tip 1 lg G";
-            this.checkEdit7.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit7.Size = new System.Drawing.Size(391, 45);
             this.checkEdit7.StyleController = this.layoutControl2;
             this.checkEdit7.TabIndex = 254;
+            this.checkEdit7.Click += new System.EventHandler(this.check_Click);
             // 
             // simpleButton4
             // 
@@ -1732,21 +1790,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.simpleButton2.TabIndex = 251;
             this.simpleButton2.Text = "KAYDET";
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(1171, 18);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(283, 690);
-            this.gridControl1.TabIndex = 249;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
@@ -1770,234 +1813,254 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // checkEdit103
             // 
-            this.checkEdit103.Location = new System.Drawing.Point(801, 495);
+            this.checkEdit103.Location = new System.Drawing.Point(809, 495);
             this.checkEdit103.Name = "checkEdit103";
             this.checkEdit103.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit103.Properties.Appearance.Options.UseFont = true;
             this.checkEdit103.Properties.Caption = "AFP";
-            this.checkEdit103.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit103.Size = new System.Drawing.Size(346, 45);
             this.checkEdit103.StyleController = this.layoutControl2;
             this.checkEdit103.TabIndex = 244;
+            this.checkEdit103.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit102
             // 
-            this.checkEdit102.Location = new System.Drawing.Point(801, 250);
+            this.checkEdit102.Location = new System.Drawing.Point(809, 250);
             this.checkEdit102.Name = "checkEdit102";
             this.checkEdit102.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit102.Properties.Appearance.Options.UseFont = true;
             this.checkEdit102.Properties.Caption = "Ferritin";
-            this.checkEdit102.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit102.Size = new System.Drawing.Size(346, 45);
             this.checkEdit102.StyleController = this.layoutControl2;
             this.checkEdit102.TabIndex = 243;
+            this.checkEdit102.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit101
             // 
-            this.checkEdit101.Location = new System.Drawing.Point(801, 446);
+            this.checkEdit101.Location = new System.Drawing.Point(809, 446);
             this.checkEdit101.Name = "checkEdit101";
             this.checkEdit101.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit101.Properties.Appearance.Options.UseFont = true;
             this.checkEdit101.Properties.Caption = "DHEA - S";
-            this.checkEdit101.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit101.Size = new System.Drawing.Size(346, 45);
             this.checkEdit101.StyleController = this.layoutControl2;
             this.checkEdit101.TabIndex = 242;
+            this.checkEdit101.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit100
             // 
-            this.checkEdit100.Location = new System.Drawing.Point(801, 593);
+            this.checkEdit100.Location = new System.Drawing.Point(809, 593);
             this.checkEdit100.Name = "checkEdit100";
             this.checkEdit100.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit100.Properties.Appearance.Options.UseFont = true;
             this.checkEdit100.Properties.Caption = "Ca - 125";
-            this.checkEdit100.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit100.Size = new System.Drawing.Size(346, 45);
             this.checkEdit100.StyleController = this.layoutControl2;
             this.checkEdit100.TabIndex = 241;
+            this.checkEdit100.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit99
             // 
-            this.checkEdit99.Location = new System.Drawing.Point(801, 691);
+            this.checkEdit99.Location = new System.Drawing.Point(809, 691);
             this.checkEdit99.Name = "checkEdit99";
             this.checkEdit99.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit99.Properties.Appearance.Options.UseFont = true;
             this.checkEdit99.Properties.Caption = "Ca 72-4";
-            this.checkEdit99.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit99.Size = new System.Drawing.Size(346, 45);
             this.checkEdit99.StyleController = this.layoutControl2;
             this.checkEdit99.TabIndex = 240;
+            this.checkEdit99.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit76
             // 
-            this.checkEdit76.Location = new System.Drawing.Point(801, 201);
+            this.checkEdit76.Location = new System.Drawing.Point(809, 201);
             this.checkEdit76.Name = "checkEdit76";
             this.checkEdit76.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit76.Properties.Appearance.Options.UseFont = true;
             this.checkEdit76.Properties.Caption = "C - peptid";
-            this.checkEdit76.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit76.Size = new System.Drawing.Size(346, 45);
             this.checkEdit76.StyleController = this.layoutControl2;
             this.checkEdit76.TabIndex = 239;
+            this.checkEdit76.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit148
             // 
-            this.checkEdit148.Location = new System.Drawing.Point(384, 740);
+            this.checkEdit148.Location = new System.Drawing.Point(387, 740);
             this.checkEdit148.Name = "checkEdit148";
             this.checkEdit148.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit148.Properties.Appearance.Options.UseFont = true;
             this.checkEdit148.Properties.Caption = "HCV RNA,Kantitatif";
-            this.checkEdit148.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit148.Size = new System.Drawing.Size(373, 45);
             this.checkEdit148.StyleController = this.layoutControl2;
             this.checkEdit148.TabIndex = 234;
             // 
             // checkEdit147
             // 
-            this.checkEdit147.Location = new System.Drawing.Point(384, 691);
+            this.checkEdit147.Location = new System.Drawing.Point(387, 691);
             this.checkEdit147.Name = "checkEdit147";
             this.checkEdit147.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit147.Properties.Appearance.Options.UseFont = true;
             this.checkEdit147.Properties.Caption = "HBV DNA, Kantitatif";
-            this.checkEdit147.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit147.Size = new System.Drawing.Size(373, 45);
             this.checkEdit147.StyleController = this.layoutControl2;
             this.checkEdit147.TabIndex = 233;
+            this.checkEdit147.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit146
             // 
-            this.checkEdit146.Location = new System.Drawing.Point(384, 642);
+            this.checkEdit146.Location = new System.Drawing.Point(387, 642);
             this.checkEdit146.Name = "checkEdit146";
             this.checkEdit146.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit146.Properties.Appearance.Options.UseFont = true;
             this.checkEdit146.Properties.Caption = "Anti HDV";
-            this.checkEdit146.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit146.Size = new System.Drawing.Size(373, 45);
             this.checkEdit146.StyleController = this.layoutControl2;
             this.checkEdit146.TabIndex = 232;
+            this.checkEdit146.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit145
             // 
-            this.checkEdit145.Location = new System.Drawing.Point(384, 593);
+            this.checkEdit145.Location = new System.Drawing.Point(387, 593);
             this.checkEdit145.Name = "checkEdit145";
             this.checkEdit145.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit145.Properties.Appearance.Options.UseFont = true;
             this.checkEdit145.Properties.Caption = "Anti HAV lg G";
-            this.checkEdit145.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit145.Size = new System.Drawing.Size(373, 45);
             this.checkEdit145.StyleController = this.layoutControl2;
             this.checkEdit145.TabIndex = 231;
+            this.checkEdit145.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit144
             // 
-            this.checkEdit144.Location = new System.Drawing.Point(384, 544);
+            this.checkEdit144.Location = new System.Drawing.Point(387, 544);
             this.checkEdit144.Name = "checkEdit144";
             this.checkEdit144.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit144.Properties.Appearance.Options.UseFont = true;
             this.checkEdit144.Properties.Caption = "Anti HAV lg M";
-            this.checkEdit144.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit144.Size = new System.Drawing.Size(373, 45);
             this.checkEdit144.StyleController = this.layoutControl2;
             this.checkEdit144.TabIndex = 230;
+            this.checkEdit144.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit143
             // 
-            this.checkEdit143.Location = new System.Drawing.Point(384, 495);
+            this.checkEdit143.Location = new System.Drawing.Point(387, 495);
             this.checkEdit143.Name = "checkEdit143";
             this.checkEdit143.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit143.Properties.Appearance.Options.UseFont = true;
             this.checkEdit143.Properties.Caption = "Anti HIV";
-            this.checkEdit143.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit143.Size = new System.Drawing.Size(373, 45);
             this.checkEdit143.StyleController = this.layoutControl2;
             this.checkEdit143.TabIndex = 229;
+            this.checkEdit143.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit142
             // 
-            this.checkEdit142.Location = new System.Drawing.Point(384, 446);
+            this.checkEdit142.Location = new System.Drawing.Point(387, 446);
             this.checkEdit142.Name = "checkEdit142";
             this.checkEdit142.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit142.Properties.Appearance.Options.UseFont = true;
             this.checkEdit142.Properties.Caption = "Anti HCV";
-            this.checkEdit142.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit142.Size = new System.Drawing.Size(373, 45);
             this.checkEdit142.StyleController = this.layoutControl2;
             this.checkEdit142.TabIndex = 228;
+            this.checkEdit142.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit141
             // 
-            this.checkEdit141.Location = new System.Drawing.Point(384, 397);
+            this.checkEdit141.Location = new System.Drawing.Point(387, 397);
             this.checkEdit141.Name = "checkEdit141";
             this.checkEdit141.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit141.Properties.Appearance.Options.UseFont = true;
             this.checkEdit141.Properties.Caption = "Anti HBe";
-            this.checkEdit141.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit141.Size = new System.Drawing.Size(373, 45);
             this.checkEdit141.StyleController = this.layoutControl2;
             this.checkEdit141.TabIndex = 227;
+            this.checkEdit141.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit140
             // 
-            this.checkEdit140.Location = new System.Drawing.Point(384, 348);
+            this.checkEdit140.Location = new System.Drawing.Point(387, 348);
             this.checkEdit140.Name = "checkEdit140";
             this.checkEdit140.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit140.Properties.Appearance.Options.UseFont = true;
             this.checkEdit140.Properties.Caption = "HBe Ag";
-            this.checkEdit140.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit140.Size = new System.Drawing.Size(373, 45);
             this.checkEdit140.StyleController = this.layoutControl2;
             this.checkEdit140.TabIndex = 226;
+            this.checkEdit140.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit139
             // 
-            this.checkEdit139.Location = new System.Drawing.Point(384, 299);
+            this.checkEdit139.Location = new System.Drawing.Point(387, 299);
             this.checkEdit139.Name = "checkEdit139";
             this.checkEdit139.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit139.Properties.Appearance.Options.UseFont = true;
             this.checkEdit139.Properties.Caption = "Anti HAV Ig G";
-            this.checkEdit139.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit139.Size = new System.Drawing.Size(373, 45);
             this.checkEdit139.StyleController = this.layoutControl2;
             this.checkEdit139.TabIndex = 225;
+            this.checkEdit139.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit138
             // 
-            this.checkEdit138.Location = new System.Drawing.Point(384, 250);
+            this.checkEdit138.Location = new System.Drawing.Point(387, 250);
             this.checkEdit138.Name = "checkEdit138";
             this.checkEdit138.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit138.Properties.Appearance.Options.UseFont = true;
             this.checkEdit138.Properties.Caption = "Anti HBc lg M";
-            this.checkEdit138.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit138.Size = new System.Drawing.Size(373, 45);
             this.checkEdit138.StyleController = this.layoutControl2;
             this.checkEdit138.TabIndex = 224;
+            this.checkEdit138.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit137
             // 
-            this.checkEdit137.Location = new System.Drawing.Point(384, 201);
+            this.checkEdit137.Location = new System.Drawing.Point(387, 201);
             this.checkEdit137.Name = "checkEdit137";
             this.checkEdit137.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit137.Properties.Appearance.Options.UseFont = true;
             this.checkEdit137.Properties.Caption = "Anti HBs";
-            this.checkEdit137.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit137.Size = new System.Drawing.Size(373, 45);
             this.checkEdit137.StyleController = this.layoutControl2;
             this.checkEdit137.TabIndex = 223;
+            this.checkEdit137.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit136
             // 
-            this.checkEdit136.Location = new System.Drawing.Point(384, 152);
+            this.checkEdit136.Location = new System.Drawing.Point(387, 152);
             this.checkEdit136.Name = "checkEdit136";
             this.checkEdit136.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit136.Properties.Appearance.Options.UseFont = true;
             this.checkEdit136.Properties.Caption = "HBsAg";
-            this.checkEdit136.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit136.Size = new System.Drawing.Size(373, 45);
             this.checkEdit136.StyleController = this.layoutControl2;
             this.checkEdit136.TabIndex = 222;
+            this.checkEdit136.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit135
             // 
-            this.checkEdit135.Location = new System.Drawing.Point(384, 103);
+            this.checkEdit135.Location = new System.Drawing.Point(387, 103);
             this.checkEdit135.Name = "checkEdit135";
             this.checkEdit135.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit135.Properties.Appearance.Options.UseFont = true;
             this.checkEdit135.Properties.Caption = "TPHA";
-            this.checkEdit135.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit135.Size = new System.Drawing.Size(373, 45);
             this.checkEdit135.StyleController = this.layoutControl2;
             this.checkEdit135.TabIndex = 221;
+            this.checkEdit135.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit134
             // 
-            this.checkEdit134.Location = new System.Drawing.Point(384, 54);
+            this.checkEdit134.Location = new System.Drawing.Point(387, 54);
             this.checkEdit134.Name = "checkEdit134";
             this.checkEdit134.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit134.Properties.Appearance.Options.UseFont = true;
             this.checkEdit134.Properties.Caption = "VDRL";
-            this.checkEdit134.Size = new System.Drawing.Size(371, 45);
+            this.checkEdit134.Size = new System.Drawing.Size(373, 45);
             this.checkEdit134.StyleController = this.layoutControl2;
             this.checkEdit134.TabIndex = 220;
+            this.checkEdit134.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit130
             // 
@@ -2006,7 +2069,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit130.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit130.Properties.Appearance.Options.UseFont = true;
             this.checkEdit130.Properties.Caption = "HLA B-27";
-            this.checkEdit130.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit130.Size = new System.Drawing.Size(369, 45);
             this.checkEdit130.StyleController = this.layoutControl2;
             this.checkEdit130.TabIndex = 216;
             // 
@@ -2017,9 +2080,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit129.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit129.Properties.Appearance.Options.UseFont = true;
             this.checkEdit129.Properties.Caption = "Anti ds DNA";
-            this.checkEdit129.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit129.Size = new System.Drawing.Size(369, 45);
             this.checkEdit129.StyleController = this.layoutControl2;
             this.checkEdit129.TabIndex = 215;
+            this.checkEdit129.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit128
             // 
@@ -2028,9 +2092,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit128.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit128.Properties.Appearance.Options.UseFont = true;
             this.checkEdit128.Properties.Caption = "ANA (FANA)";
-            this.checkEdit128.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit128.Size = new System.Drawing.Size(369, 45);
             this.checkEdit128.StyleController = this.layoutControl2;
             this.checkEdit128.TabIndex = 214;
+            this.checkEdit128.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit127
             // 
@@ -2039,9 +2104,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit127.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit127.Properties.Appearance.Options.UseFont = true;
             this.checkEdit127.Properties.Caption = "Protein S Aktivitesi";
-            this.checkEdit127.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit127.Size = new System.Drawing.Size(369, 45);
             this.checkEdit127.StyleController = this.layoutControl2;
             this.checkEdit127.TabIndex = 213;
+            this.checkEdit127.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit126
             // 
@@ -2050,9 +2116,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit126.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit126.Properties.Appearance.Options.UseFont = true;
             this.checkEdit126.Properties.Caption = "Protein C Aktivitesi";
-            this.checkEdit126.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit126.Size = new System.Drawing.Size(369, 45);
             this.checkEdit126.StyleController = this.layoutControl2;
             this.checkEdit126.TabIndex = 212;
+            this.checkEdit126.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit125
             // 
@@ -2061,9 +2128,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit125.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit125.Properties.Appearance.Options.UseFont = true;
             this.checkEdit125.Properties.Caption = "Aldosteron";
-            this.checkEdit125.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit125.Size = new System.Drawing.Size(369, 45);
             this.checkEdit125.StyleController = this.layoutControl2;
             this.checkEdit125.TabIndex = 211;
+            this.checkEdit125.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit124
             // 
@@ -2072,9 +2140,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit124.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit124.Properties.Appearance.Options.UseFont = true;
             this.checkEdit124.Properties.Caption = "Renin (Angiotensin - l)";
-            this.checkEdit124.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit124.Size = new System.Drawing.Size(369, 45);
             this.checkEdit124.StyleController = this.layoutControl2;
             this.checkEdit124.TabIndex = 210;
+            this.checkEdit124.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit123
             // 
@@ -2083,9 +2152,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit123.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit123.Properties.Appearance.Options.UseFont = true;
             this.checkEdit123.Properties.Caption = "ACE";
-            this.checkEdit123.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit123.Size = new System.Drawing.Size(369, 45);
             this.checkEdit123.StyleController = this.layoutControl2;
             this.checkEdit123.TabIndex = 209;
+            this.checkEdit123.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit122
             // 
@@ -2094,9 +2164,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit122.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit122.Properties.Appearance.Options.UseFont = true;
             this.checkEdit122.Properties.Caption = "ACTH";
-            this.checkEdit122.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit122.Size = new System.Drawing.Size(369, 45);
             this.checkEdit122.StyleController = this.layoutControl2;
             this.checkEdit122.TabIndex = 208;
+            this.checkEdit122.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit121
             // 
@@ -2105,9 +2176,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit121.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit121.Properties.Appearance.Options.UseFont = true;
             this.checkEdit121.Properties.Caption = "Ig E";
-            this.checkEdit121.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit121.Size = new System.Drawing.Size(369, 45);
             this.checkEdit121.StyleController = this.layoutControl2;
             this.checkEdit121.TabIndex = 207;
+            this.checkEdit121.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit120
             // 
@@ -2116,9 +2188,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit120.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit120.Properties.Appearance.Options.UseFont = true;
             this.checkEdit120.Properties.Caption = "Ig M";
-            this.checkEdit120.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit120.Size = new System.Drawing.Size(369, 45);
             this.checkEdit120.StyleController = this.layoutControl2;
             this.checkEdit120.TabIndex = 206;
+            this.checkEdit120.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit119
             // 
@@ -2127,9 +2200,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit119.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit119.Properties.Appearance.Options.UseFont = true;
             this.checkEdit119.Properties.Caption = "Ig A";
-            this.checkEdit119.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit119.Size = new System.Drawing.Size(369, 45);
             this.checkEdit119.StyleController = this.layoutControl2;
             this.checkEdit119.TabIndex = 205;
+            this.checkEdit119.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit118
             // 
@@ -2138,108 +2212,116 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit118.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit118.Properties.Appearance.Options.UseFont = true;
             this.checkEdit118.Properties.Caption = "Ig G";
-            this.checkEdit118.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit118.Size = new System.Drawing.Size(369, 45);
             this.checkEdit118.StyleController = this.layoutControl2;
             this.checkEdit118.TabIndex = 204;
+            this.checkEdit118.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit117
             // 
-            this.checkEdit117.Location = new System.Drawing.Point(801, 103);
+            this.checkEdit117.Location = new System.Drawing.Point(809, 103);
             this.checkEdit117.Name = "checkEdit117";
             this.checkEdit117.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit117.Properties.Appearance.Options.UseFont = true;
             this.checkEdit117.Properties.Caption = "Kortizol";
-            this.checkEdit117.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit117.Size = new System.Drawing.Size(346, 45);
             this.checkEdit117.StyleController = this.layoutControl2;
             this.checkEdit117.TabIndex = 203;
+            this.checkEdit117.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit116
             // 
-            this.checkEdit116.Location = new System.Drawing.Point(435, 299);
+            this.checkEdit116.Location = new System.Drawing.Point(439, 299);
             this.checkEdit116.Name = "checkEdit116";
             this.checkEdit116.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit116.Properties.Appearance.Options.UseFont = true;
             this.checkEdit116.Properties.Caption = "Estradiol";
-            this.checkEdit116.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit116.Size = new System.Drawing.Size(366, 45);
             this.checkEdit116.StyleController = this.layoutControl2;
             this.checkEdit116.TabIndex = 202;
+            this.checkEdit116.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit115
             // 
-            this.checkEdit115.Location = new System.Drawing.Point(435, 740);
+            this.checkEdit115.Location = new System.Drawing.Point(439, 740);
             this.checkEdit115.Name = "checkEdit115";
             this.checkEdit115.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit115.Properties.Appearance.Options.UseFont = true;
             this.checkEdit115.Properties.Caption = "Homosistein";
-            this.checkEdit115.Size = new System.Drawing.Size(720, 45);
+            this.checkEdit115.Size = new System.Drawing.Size(716, 45);
             this.checkEdit115.StyleController = this.layoutControl2;
             this.checkEdit115.TabIndex = 201;
             // 
             // checkEdit114
             // 
-            this.checkEdit114.Location = new System.Drawing.Point(435, 691);
+            this.checkEdit114.Location = new System.Drawing.Point(439, 691);
             this.checkEdit114.Name = "checkEdit114";
             this.checkEdit114.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit114.Properties.Appearance.Options.UseFont = true;
             this.checkEdit114.Properties.Caption = "Lp (a)";
-            this.checkEdit114.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit114.Size = new System.Drawing.Size(366, 45);
             this.checkEdit114.StyleController = this.layoutControl2;
             this.checkEdit114.TabIndex = 200;
+            this.checkEdit114.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit113
             // 
-            this.checkEdit113.Location = new System.Drawing.Point(435, 642);
+            this.checkEdit113.Location = new System.Drawing.Point(439, 642);
             this.checkEdit113.Name = "checkEdit113";
             this.checkEdit113.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit113.Properties.Appearance.Options.UseFont = true;
             this.checkEdit113.Properties.Caption = "Serbest PSA (Free PSA)";
-            this.checkEdit113.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit113.Size = new System.Drawing.Size(366, 45);
             this.checkEdit113.StyleController = this.layoutControl2;
             this.checkEdit113.TabIndex = 199;
+            this.checkEdit113.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit112
             // 
-            this.checkEdit112.Location = new System.Drawing.Point(435, 593);
+            this.checkEdit112.Location = new System.Drawing.Point(439, 593);
             this.checkEdit112.Name = "checkEdit112";
             this.checkEdit112.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit112.Properties.Appearance.Options.UseFont = true;
             this.checkEdit112.Properties.Caption = "Total PSA";
-            this.checkEdit112.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit112.Size = new System.Drawing.Size(366, 45);
             this.checkEdit112.StyleController = this.layoutControl2;
             this.checkEdit112.TabIndex = 198;
+            this.checkEdit112.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit111
             // 
-            this.checkEdit111.Location = new System.Drawing.Point(435, 544);
+            this.checkEdit111.Location = new System.Drawing.Point(439, 544);
             this.checkEdit111.Name = "checkEdit111";
             this.checkEdit111.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit111.Properties.Appearance.Options.UseFont = true;
             this.checkEdit111.Properties.Caption = "Serbest Testosteron";
-            this.checkEdit111.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit111.Size = new System.Drawing.Size(366, 45);
             this.checkEdit111.StyleController = this.layoutControl2;
             this.checkEdit111.TabIndex = 197;
+            this.checkEdit111.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit105
             // 
-            this.checkEdit105.Location = new System.Drawing.Point(437, 740);
+            this.checkEdit105.Location = new System.Drawing.Point(441, 740);
             this.checkEdit105.Name = "checkEdit105";
             this.checkEdit105.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit105.Properties.Appearance.Options.UseFont = true;
             this.checkEdit105.Properties.Caption = "CK";
-            this.checkEdit105.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit105.Size = new System.Drawing.Size(319, 45);
             this.checkEdit105.StyleController = this.layoutControl2;
             this.checkEdit105.TabIndex = 191;
             // 
             // checkEdit104
             // 
-            this.checkEdit104.Location = new System.Drawing.Point(437, 691);
+            this.checkEdit104.Location = new System.Drawing.Point(441, 691);
             this.checkEdit104.Name = "checkEdit104";
             this.checkEdit104.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit104.Properties.Appearance.Options.UseFont = true;
             this.checkEdit104.Properties.Caption = "GGT";
-            this.checkEdit104.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit104.Size = new System.Drawing.Size(319, 45);
             this.checkEdit104.StyleController = this.layoutControl2;
             this.checkEdit104.TabIndex = 190;
+            this.checkEdit104.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit96
             // 
@@ -2248,9 +2330,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit96.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit96.Properties.Appearance.Options.UseFont = true;
             this.checkEdit96.Properties.Caption = "Beta-2 Mikroglobulin";
-            this.checkEdit96.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit96.Size = new System.Drawing.Size(369, 45);
             this.checkEdit96.StyleController = this.layoutControl2;
             this.checkEdit96.TabIndex = 182;
+            this.checkEdit96.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit95
             // 
@@ -2259,46 +2342,50 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit95.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit95.Properties.Appearance.Options.UseFont = true;
             this.checkEdit95.Properties.Caption = "NSE";
-            this.checkEdit95.Size = new System.Drawing.Size(366, 45);
+            this.checkEdit95.Size = new System.Drawing.Size(369, 45);
             this.checkEdit95.StyleController = this.layoutControl2;
             this.checkEdit95.TabIndex = 181;
+            this.checkEdit95.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit106
             // 
-            this.checkEdit106.Location = new System.Drawing.Point(759, 54);
+            this.checkEdit106.Location = new System.Drawing.Point(764, 54);
             this.checkEdit106.Name = "checkEdit106";
             this.checkEdit106.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit106.Properties.Appearance.Options.UseFont = true;
             this.checkEdit106.Properties.Caption = "CK - MB";
-            this.checkEdit106.Size = new System.Drawing.Size(396, 45);
+            this.checkEdit106.Size = new System.Drawing.Size(391, 45);
             this.checkEdit106.StyleController = this.layoutControl2;
             this.checkEdit106.TabIndex = 192;
+            this.checkEdit106.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit93
             // 
-            this.checkEdit93.Location = new System.Drawing.Point(435, 495);
+            this.checkEdit93.Location = new System.Drawing.Point(439, 495);
             this.checkEdit93.Name = "checkEdit93";
             this.checkEdit93.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit93.Properties.Appearance.Options.UseFont = true;
             this.checkEdit93.Properties.Caption = "Total Testosteron";
-            this.checkEdit93.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit93.Size = new System.Drawing.Size(366, 45);
             this.checkEdit93.StyleController = this.layoutControl2;
             this.checkEdit93.TabIndex = 178;
+            this.checkEdit93.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit92
             // 
-            this.checkEdit92.Location = new System.Drawing.Point(435, 446);
+            this.checkEdit92.Location = new System.Drawing.Point(439, 446);
             this.checkEdit92.Name = "checkEdit92";
             this.checkEdit92.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit92.Properties.Appearance.Options.UseFont = true;
             this.checkEdit92.Properties.Caption = "Beta - HCG";
-            this.checkEdit92.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit92.Size = new System.Drawing.Size(366, 45);
             this.checkEdit92.StyleController = this.layoutControl2;
             this.checkEdit92.TabIndex = 177;
+            this.checkEdit92.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit98
             // 
-            this.checkEdit98.Location = new System.Drawing.Point(396, 104);
+            this.checkEdit98.Location = new System.Drawing.Point(399, 104);
             this.checkEdit98.Name = "checkEdit98";
             this.checkEdit98.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit98.Properties.Appearance.Options.UseFont = true;
@@ -2306,28 +2393,31 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit98.Size = new System.Drawing.Size(400, 45);
             this.checkEdit98.StyleController = this.layoutControl2;
             this.checkEdit98.TabIndex = 184;
+            this.checkEdit98.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit91
             // 
-            this.checkEdit91.Location = new System.Drawing.Point(435, 397);
+            this.checkEdit91.Location = new System.Drawing.Point(439, 397);
             this.checkEdit91.Name = "checkEdit91";
             this.checkEdit91.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit91.Properties.Appearance.Options.UseFont = true;
             this.checkEdit91.Properties.Caption = "17 - OH Progesteron";
-            this.checkEdit91.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit91.Size = new System.Drawing.Size(366, 45);
             this.checkEdit91.StyleController = this.layoutControl2;
             this.checkEdit91.TabIndex = 176;
+            this.checkEdit91.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit90
             // 
-            this.checkEdit90.Location = new System.Drawing.Point(435, 348);
+            this.checkEdit90.Location = new System.Drawing.Point(439, 348);
             this.checkEdit90.Name = "checkEdit90";
             this.checkEdit90.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit90.Properties.Appearance.Options.UseFont = true;
             this.checkEdit90.Properties.Caption = "Progesteron";
-            this.checkEdit90.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit90.Size = new System.Drawing.Size(366, 45);
             this.checkEdit90.StyleController = this.layoutControl2;
             this.checkEdit90.TabIndex = 175;
+            this.checkEdit90.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit89
             // 
@@ -2336,20 +2426,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit89.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit89.Properties.Appearance.Options.UseFont = true;
             this.checkEdit89.Properties.Caption = "Gaitada Gizli Kan";
-            this.checkEdit89.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit89.Size = new System.Drawing.Size(421, 45);
             this.checkEdit89.StyleController = this.layoutControl2;
             this.checkEdit89.TabIndex = 174;
+            this.checkEdit89.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit88
             // 
-            this.checkEdit88.Location = new System.Drawing.Point(435, 250);
+            this.checkEdit88.Location = new System.Drawing.Point(439, 250);
             this.checkEdit88.Name = "checkEdit88";
             this.checkEdit88.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit88.Properties.Appearance.Options.UseFont = true;
             this.checkEdit88.Properties.Caption = "Prolaktin";
-            this.checkEdit88.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit88.Size = new System.Drawing.Size(366, 45);
             this.checkEdit88.StyleController = this.layoutControl2;
             this.checkEdit88.TabIndex = 173;
+            this.checkEdit88.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit87
             // 
@@ -2358,123 +2450,134 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit87.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit87.Properties.Appearance.Options.UseFont = true;
             this.checkEdit87.Properties.Caption = "Retikulosit";
-            this.checkEdit87.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit87.Size = new System.Drawing.Size(421, 45);
             this.checkEdit87.StyleController = this.layoutControl2;
             this.checkEdit87.TabIndex = 172;
+            this.checkEdit87.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit85
             // 
-            this.checkEdit85.Location = new System.Drawing.Point(801, 642);
+            this.checkEdit85.Location = new System.Drawing.Point(809, 642);
             this.checkEdit85.Name = "checkEdit85";
             this.checkEdit85.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit85.Properties.Appearance.Options.UseFont = true;
             this.checkEdit85.Properties.Caption = "Ca 19-9";
-            this.checkEdit85.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit85.Size = new System.Drawing.Size(346, 45);
             this.checkEdit85.StyleController = this.layoutControl2;
             this.checkEdit85.TabIndex = 170;
+            this.checkEdit85.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit84
             // 
-            this.checkEdit84.Location = new System.Drawing.Point(801, 544);
+            this.checkEdit84.Location = new System.Drawing.Point(809, 544);
             this.checkEdit84.Name = "checkEdit84";
             this.checkEdit84.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit84.Properties.Appearance.Options.UseFont = true;
             this.checkEdit84.Properties.Caption = "CEA";
-            this.checkEdit84.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit84.Size = new System.Drawing.Size(346, 45);
             this.checkEdit84.StyleController = this.layoutControl2;
             this.checkEdit84.TabIndex = 169;
+            this.checkEdit84.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit83
             // 
-            this.checkEdit83.Location = new System.Drawing.Point(801, 397);
+            this.checkEdit83.Location = new System.Drawing.Point(809, 397);
             this.checkEdit83.Name = "checkEdit83";
             this.checkEdit83.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit83.Properties.Appearance.Options.UseFont = true;
             this.checkEdit83.Properties.Caption = "PTH (intact)";
-            this.checkEdit83.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit83.Size = new System.Drawing.Size(346, 45);
             this.checkEdit83.StyleController = this.layoutControl2;
             this.checkEdit83.TabIndex = 168;
+            this.checkEdit83.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit82
             // 
-            this.checkEdit82.Location = new System.Drawing.Point(801, 152);
+            this.checkEdit82.Location = new System.Drawing.Point(809, 152);
             this.checkEdit82.Name = "checkEdit82";
             this.checkEdit82.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit82.Properties.Appearance.Options.UseFont = true;
             this.checkEdit82.Properties.Caption = "Ýnsülin";
-            this.checkEdit82.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit82.Size = new System.Drawing.Size(346, 45);
             this.checkEdit82.StyleController = this.layoutControl2;
             this.checkEdit82.TabIndex = 167;
+            this.checkEdit82.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit86
             // 
-            this.checkEdit86.Location = new System.Drawing.Point(435, 152);
+            this.checkEdit86.Location = new System.Drawing.Point(439, 152);
             this.checkEdit86.Name = "checkEdit86";
             this.checkEdit86.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit86.Properties.Appearance.Options.UseFont = true;
             this.checkEdit86.Properties.Caption = "LH";
-            this.checkEdit86.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit86.Size = new System.Drawing.Size(366, 45);
             this.checkEdit86.StyleController = this.layoutControl2;
             this.checkEdit86.TabIndex = 171;
+            this.checkEdit86.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit81
             // 
-            this.checkEdit81.Location = new System.Drawing.Point(801, 348);
+            this.checkEdit81.Location = new System.Drawing.Point(809, 348);
             this.checkEdit81.Name = "checkEdit81";
             this.checkEdit81.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit81.Properties.Appearance.Options.UseFont = true;
             this.checkEdit81.Properties.Caption = "Folik Asit";
-            this.checkEdit81.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit81.Size = new System.Drawing.Size(346, 45);
             this.checkEdit81.StyleController = this.layoutControl2;
             this.checkEdit81.TabIndex = 166;
+            this.checkEdit81.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit80
             // 
-            this.checkEdit80.Location = new System.Drawing.Point(801, 299);
+            this.checkEdit80.Location = new System.Drawing.Point(809, 299);
             this.checkEdit80.Name = "checkEdit80";
             this.checkEdit80.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit80.Properties.Appearance.Options.UseFont = true;
             this.checkEdit80.Properties.Caption = "Vit. B12";
-            this.checkEdit80.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit80.Size = new System.Drawing.Size(346, 45);
             this.checkEdit80.StyleController = this.layoutControl2;
             this.checkEdit80.TabIndex = 165;
+            this.checkEdit80.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit52
             // 
-            this.checkEdit52.Location = new System.Drawing.Point(801, 54);
+            this.checkEdit52.Location = new System.Drawing.Point(809, 54);
             this.checkEdit52.Name = "checkEdit52";
             this.checkEdit52.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit52.Properties.Appearance.Options.UseFont = true;
             this.checkEdit52.Properties.Caption = "Hassas CRP";
-            this.checkEdit52.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit52.Size = new System.Drawing.Size(346, 45);
             this.checkEdit52.StyleController = this.layoutControl2;
             this.checkEdit52.TabIndex = 163;
+            this.checkEdit52.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit42
             // 
-            this.checkEdit42.Location = new System.Drawing.Point(435, 201);
+            this.checkEdit42.Location = new System.Drawing.Point(439, 201);
             this.checkEdit42.Name = "checkEdit42";
             this.checkEdit42.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit42.Properties.Appearance.Options.UseFont = true;
             this.checkEdit42.Properties.Caption = "FSH";
-            this.checkEdit42.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit42.Size = new System.Drawing.Size(366, 45);
             this.checkEdit42.StyleController = this.layoutControl2;
             this.checkEdit42.TabIndex = 162;
+            this.checkEdit42.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit41
             // 
-            this.checkEdit41.Location = new System.Drawing.Point(800, 55);
+            this.checkEdit41.Location = new System.Drawing.Point(803, 55);
             this.checkEdit41.Name = "checkEdit41";
             this.checkEdit41.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit41.Properties.Appearance.Options.UseFont = true;
             this.checkEdit41.Properties.Caption = "MetHb";
-            this.checkEdit41.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit41.Size = new System.Drawing.Size(351, 45);
             this.checkEdit41.StyleController = this.layoutControl2;
             this.checkEdit41.TabIndex = 161;
+            this.checkEdit41.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit40
             // 
-            this.checkEdit40.Location = new System.Drawing.Point(396, 741);
+            this.checkEdit40.Location = new System.Drawing.Point(399, 741);
             this.checkEdit40.Name = "checkEdit40";
             this.checkEdit40.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit40.Properties.Appearance.Options.UseFont = true;
@@ -2485,18 +2588,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // checkEdit79
             // 
-            this.checkEdit79.Location = new System.Drawing.Point(435, 54);
+            this.checkEdit79.Location = new System.Drawing.Point(439, 54);
             this.checkEdit79.Name = "checkEdit79";
             this.checkEdit79.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit79.Properties.Appearance.Options.UseFont = true;
             this.checkEdit79.Properties.Caption = "Anti - Tg";
-            this.checkEdit79.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit79.Size = new System.Drawing.Size(366, 45);
             this.checkEdit79.StyleController = this.layoutControl2;
             this.checkEdit79.TabIndex = 164;
+            this.checkEdit79.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit39
             // 
-            this.checkEdit39.Location = new System.Drawing.Point(396, 692);
+            this.checkEdit39.Location = new System.Drawing.Point(399, 692);
             this.checkEdit39.Name = "checkEdit39";
             this.checkEdit39.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit39.Properties.Appearance.Options.UseFont = true;
@@ -2504,10 +2608,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit39.Size = new System.Drawing.Size(400, 45);
             this.checkEdit39.StyleController = this.layoutControl2;
             this.checkEdit39.TabIndex = 159;
+            this.checkEdit39.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit38
             // 
-            this.checkEdit38.Location = new System.Drawing.Point(396, 643);
+            this.checkEdit38.Location = new System.Drawing.Point(399, 643);
             this.checkEdit38.Name = "checkEdit38";
             this.checkEdit38.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit38.Properties.Appearance.Options.UseFont = true;
@@ -2515,10 +2620,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit38.Size = new System.Drawing.Size(400, 45);
             this.checkEdit38.StyleController = this.layoutControl2;
             this.checkEdit38.TabIndex = 158;
+            this.checkEdit38.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit37
             // 
-            this.checkEdit37.Location = new System.Drawing.Point(396, 594);
+            this.checkEdit37.Location = new System.Drawing.Point(399, 594);
             this.checkEdit37.Name = "checkEdit37";
             this.checkEdit37.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit37.Properties.Appearance.Options.UseFont = true;
@@ -2526,10 +2632,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit37.Size = new System.Drawing.Size(400, 45);
             this.checkEdit37.StyleController = this.layoutControl2;
             this.checkEdit37.TabIndex = 157;
+            this.checkEdit37.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit36
             // 
-            this.checkEdit36.Location = new System.Drawing.Point(396, 545);
+            this.checkEdit36.Location = new System.Drawing.Point(399, 545);
             this.checkEdit36.Name = "checkEdit36";
             this.checkEdit36.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit36.Properties.Appearance.Options.UseFont = true;
@@ -2537,10 +2644,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit36.Size = new System.Drawing.Size(400, 45);
             this.checkEdit36.StyleController = this.layoutControl2;
             this.checkEdit36.TabIndex = 156;
+            this.checkEdit36.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit35
             // 
-            this.checkEdit35.Location = new System.Drawing.Point(396, 496);
+            this.checkEdit35.Location = new System.Drawing.Point(399, 496);
             this.checkEdit35.Name = "checkEdit35";
             this.checkEdit35.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit35.Properties.Appearance.Options.UseFont = true;
@@ -2548,10 +2656,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit35.Size = new System.Drawing.Size(400, 45);
             this.checkEdit35.StyleController = this.layoutControl2;
             this.checkEdit35.TabIndex = 155;
+            this.checkEdit35.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit34
             // 
-            this.checkEdit34.Location = new System.Drawing.Point(396, 447);
+            this.checkEdit34.Location = new System.Drawing.Point(399, 447);
             this.checkEdit34.Name = "checkEdit34";
             this.checkEdit34.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit34.Properties.Appearance.Options.UseFont = true;
@@ -2559,10 +2668,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit34.Size = new System.Drawing.Size(400, 45);
             this.checkEdit34.StyleController = this.layoutControl2;
             this.checkEdit34.TabIndex = 154;
+            this.checkEdit34.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit33
             // 
-            this.checkEdit33.Location = new System.Drawing.Point(396, 398);
+            this.checkEdit33.Location = new System.Drawing.Point(399, 398);
             this.checkEdit33.Name = "checkEdit33";
             this.checkEdit33.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit33.Properties.Appearance.Options.UseFont = true;
@@ -2570,10 +2680,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit33.Size = new System.Drawing.Size(400, 45);
             this.checkEdit33.StyleController = this.layoutControl2;
             this.checkEdit33.TabIndex = 153;
+            this.checkEdit33.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit32
             // 
-            this.checkEdit32.Location = new System.Drawing.Point(396, 349);
+            this.checkEdit32.Location = new System.Drawing.Point(399, 349);
             this.checkEdit32.Name = "checkEdit32";
             this.checkEdit32.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit32.Properties.Appearance.Options.UseFont = true;
@@ -2581,10 +2692,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit32.Size = new System.Drawing.Size(400, 45);
             this.checkEdit32.StyleController = this.layoutControl2;
             this.checkEdit32.TabIndex = 152;
+            this.checkEdit32.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit31
             // 
-            this.checkEdit31.Location = new System.Drawing.Point(396, 300);
+            this.checkEdit31.Location = new System.Drawing.Point(399, 300);
             this.checkEdit31.Name = "checkEdit31";
             this.checkEdit31.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit31.Properties.Appearance.Options.UseFont = true;
@@ -2592,10 +2704,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit31.Size = new System.Drawing.Size(400, 45);
             this.checkEdit31.StyleController = this.layoutControl2;
             this.checkEdit31.TabIndex = 151;
+            this.checkEdit31.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit29
             // 
-            this.checkEdit29.Location = new System.Drawing.Point(396, 202);
+            this.checkEdit29.Location = new System.Drawing.Point(399, 202);
             this.checkEdit29.Name = "checkEdit29";
             this.checkEdit29.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit29.Properties.Appearance.Options.UseFont = true;
@@ -2603,21 +2716,23 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit29.Size = new System.Drawing.Size(400, 45);
             this.checkEdit29.StyleController = this.layoutControl2;
             this.checkEdit29.TabIndex = 149;
+            this.checkEdit29.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit26
             // 
-            this.checkEdit26.Location = new System.Drawing.Point(437, 642);
+            this.checkEdit26.Location = new System.Drawing.Point(441, 642);
             this.checkEdit26.Name = "checkEdit26";
             this.checkEdit26.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit26.Properties.Appearance.Options.UseFont = true;
             this.checkEdit26.Properties.Caption = "LDH";
-            this.checkEdit26.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit26.Size = new System.Drawing.Size(319, 45);
             this.checkEdit26.StyleController = this.layoutControl2;
             this.checkEdit26.TabIndex = 146;
+            this.checkEdit26.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit30
             // 
-            this.checkEdit30.Location = new System.Drawing.Point(396, 251);
+            this.checkEdit30.Location = new System.Drawing.Point(399, 251);
             this.checkEdit30.Name = "checkEdit30";
             this.checkEdit30.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit30.Properties.Appearance.Options.UseFont = true;
@@ -2625,32 +2740,35 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit30.Size = new System.Drawing.Size(400, 45);
             this.checkEdit30.StyleController = this.layoutControl2;
             this.checkEdit30.TabIndex = 150;
+            this.checkEdit30.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit25
             // 
-            this.checkEdit25.Location = new System.Drawing.Point(437, 593);
+            this.checkEdit25.Location = new System.Drawing.Point(441, 593);
             this.checkEdit25.Name = "checkEdit25";
             this.checkEdit25.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit25.Properties.Appearance.Options.UseFont = true;
             this.checkEdit25.Properties.Caption = "ALT (SGPT)";
-            this.checkEdit25.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit25.Size = new System.Drawing.Size(319, 45);
             this.checkEdit25.StyleController = this.layoutControl2;
             this.checkEdit25.TabIndex = 145;
+            this.checkEdit25.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit24
             // 
-            this.checkEdit24.Location = new System.Drawing.Point(437, 544);
+            this.checkEdit24.Location = new System.Drawing.Point(441, 544);
             this.checkEdit24.Name = "checkEdit24";
             this.checkEdit24.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit24.Properties.Appearance.Options.UseFont = true;
             this.checkEdit24.Properties.Caption = "AST (SGOT)";
-            this.checkEdit24.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit24.Size = new System.Drawing.Size(319, 45);
             this.checkEdit24.StyleController = this.layoutControl2;
             this.checkEdit24.TabIndex = 144;
+            this.checkEdit24.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit28
             // 
-            this.checkEdit28.Location = new System.Drawing.Point(396, 153);
+            this.checkEdit28.Location = new System.Drawing.Point(399, 153);
             this.checkEdit28.Name = "checkEdit28";
             this.checkEdit28.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit28.Properties.Appearance.Options.UseFont = true;
@@ -2658,83 +2776,91 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit28.Size = new System.Drawing.Size(400, 45);
             this.checkEdit28.StyleController = this.layoutControl2;
             this.checkEdit28.TabIndex = 148;
+            this.checkEdit28.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit12
             // 
-            this.checkEdit12.Location = new System.Drawing.Point(437, 495);
+            this.checkEdit12.Location = new System.Drawing.Point(441, 495);
             this.checkEdit12.Name = "checkEdit12";
             this.checkEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit12.Properties.Appearance.Options.UseFont = true;
             this.checkEdit12.Properties.Caption = "Alkalen Fosfazat";
-            this.checkEdit12.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit12.Size = new System.Drawing.Size(319, 45);
             this.checkEdit12.StyleController = this.layoutControl2;
             this.checkEdit12.TabIndex = 143;
+            this.checkEdit12.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit11
             // 
-            this.checkEdit11.Location = new System.Drawing.Point(437, 446);
+            this.checkEdit11.Location = new System.Drawing.Point(441, 446);
             this.checkEdit11.Name = "checkEdit11";
             this.checkEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit11.Properties.Appearance.Options.UseFont = true;
             this.checkEdit11.Properties.Caption = "Mg";
-            this.checkEdit11.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit11.Size = new System.Drawing.Size(319, 45);
             this.checkEdit11.StyleController = this.layoutControl2;
             this.checkEdit11.TabIndex = 142;
+            this.checkEdit11.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit10
             // 
-            this.checkEdit10.Location = new System.Drawing.Point(437, 397);
+            this.checkEdit10.Location = new System.Drawing.Point(441, 397);
             this.checkEdit10.Name = "checkEdit10";
             this.checkEdit10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit10.Properties.Appearance.Options.UseFont = true;
             this.checkEdit10.Properties.Caption = "P";
-            this.checkEdit10.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit10.Size = new System.Drawing.Size(319, 45);
             this.checkEdit10.StyleController = this.layoutControl2;
             this.checkEdit10.TabIndex = 141;
+            this.checkEdit10.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit9
             // 
-            this.checkEdit9.Location = new System.Drawing.Point(437, 348);
+            this.checkEdit9.Location = new System.Drawing.Point(441, 348);
             this.checkEdit9.Name = "checkEdit9";
             this.checkEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit9.Properties.Appearance.Options.UseFont = true;
             this.checkEdit9.Properties.Caption = "Ýyonize Ca";
-            this.checkEdit9.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit9.Size = new System.Drawing.Size(319, 45);
             this.checkEdit9.StyleController = this.layoutControl2;
             this.checkEdit9.TabIndex = 140;
+            this.checkEdit9.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit5
             // 
-            this.checkEdit5.Location = new System.Drawing.Point(437, 250);
+            this.checkEdit5.Location = new System.Drawing.Point(441, 250);
             this.checkEdit5.Name = "checkEdit5";
             this.checkEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit5.Properties.Appearance.Options.UseFont = true;
             this.checkEdit5.Properties.Caption = "Cl";
-            this.checkEdit5.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit5.Size = new System.Drawing.Size(319, 45);
             this.checkEdit5.StyleController = this.layoutControl2;
             this.checkEdit5.TabIndex = 138;
+            this.checkEdit5.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit4
             // 
-            this.checkEdit4.Location = new System.Drawing.Point(437, 201);
+            this.checkEdit4.Location = new System.Drawing.Point(441, 201);
             this.checkEdit4.Name = "checkEdit4";
             this.checkEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit4.Properties.Appearance.Options.UseFont = true;
             this.checkEdit4.Properties.Caption = "K";
-            this.checkEdit4.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit4.Size = new System.Drawing.Size(319, 45);
             this.checkEdit4.StyleController = this.layoutControl2;
             this.checkEdit4.TabIndex = 137;
+            this.checkEdit4.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit3
             // 
-            this.checkEdit3.Location = new System.Drawing.Point(437, 152);
+            this.checkEdit3.Location = new System.Drawing.Point(441, 152);
             this.checkEdit3.Name = "checkEdit3";
             this.checkEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit3.Properties.Appearance.Options.UseFont = true;
             this.checkEdit3.Properties.Caption = "Na";
-            this.checkEdit3.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit3.Size = new System.Drawing.Size(319, 45);
             this.checkEdit3.StyleController = this.layoutControl2;
             this.checkEdit3.TabIndex = 136;
+            this.checkEdit3.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit78
             // 
@@ -2743,13 +2869,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit78.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit78.Properties.Appearance.Options.UseFont = true;
             this.checkEdit78.Properties.Caption = "Protein Elektroforezi";
-            this.checkEdit78.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit78.Size = new System.Drawing.Size(380, 45);
             this.checkEdit78.StyleController = this.layoutControl2;
             this.checkEdit78.TabIndex = 135;
             // 
             // checkEdit27
             // 
-            this.checkEdit27.Location = new System.Drawing.Point(396, 55);
+            this.checkEdit27.Location = new System.Drawing.Point(399, 55);
             this.checkEdit27.Name = "checkEdit27";
             this.checkEdit27.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit27.Properties.Appearance.Options.UseFont = true;
@@ -2757,17 +2883,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit27.Size = new System.Drawing.Size(400, 45);
             this.checkEdit27.StyleController = this.layoutControl2;
             this.checkEdit27.TabIndex = 147;
+            this.checkEdit27.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit6
             // 
-            this.checkEdit6.Location = new System.Drawing.Point(437, 299);
+            this.checkEdit6.Location = new System.Drawing.Point(441, 299);
             this.checkEdit6.Name = "checkEdit6";
             this.checkEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit6.Properties.Appearance.Options.UseFont = true;
             this.checkEdit6.Properties.Caption = "Ca++";
-            this.checkEdit6.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit6.Size = new System.Drawing.Size(319, 45);
             this.checkEdit6.StyleController = this.layoutControl2;
             this.checkEdit6.TabIndex = 139;
+            this.checkEdit6.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit77
             // 
@@ -2776,9 +2904,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit77.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit77.Properties.Appearance.Options.UseFont = true;
             this.checkEdit77.Properties.Caption = "Albumin";
-            this.checkEdit77.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit77.Size = new System.Drawing.Size(380, 45);
             this.checkEdit77.StyleController = this.layoutControl2;
             this.checkEdit77.TabIndex = 134;
+            this.checkEdit77.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit73
             // 
@@ -2787,7 +2916,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit73.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit73.Properties.Appearance.Options.UseFont = true;
             this.checkEdit73.Properties.Caption = "Kreatinin";
-            this.checkEdit73.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit73.Size = new System.Drawing.Size(423, 45);
             this.checkEdit73.StyleController = this.layoutControl2;
             this.checkEdit73.TabIndex = 130;
             // 
@@ -2798,9 +2927,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit72.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit72.Properties.Appearance.Options.UseFont = true;
             this.checkEdit72.Properties.Caption = "Üre";
-            this.checkEdit72.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit72.Size = new System.Drawing.Size(423, 45);
             this.checkEdit72.StyleController = this.layoutControl2;
             this.checkEdit72.TabIndex = 129;
+            this.checkEdit72.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit69
             // 
@@ -2809,9 +2939,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit69.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit69.Properties.Appearance.Options.UseFont = true;
             this.checkEdit69.Properties.Caption = "Fruktozamin";
-            this.checkEdit69.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit69.Size = new System.Drawing.Size(423, 45);
             this.checkEdit69.StyleController = this.layoutControl2;
             this.checkEdit69.TabIndex = 128;
+            this.checkEdit69.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit66
             // 
@@ -2820,20 +2951,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit66.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit66.Properties.Appearance.Options.UseFont = true;
             this.checkEdit66.Properties.Caption = "OGTT 100 gr. (Hamile Ýçin)";
-            this.checkEdit66.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit66.Size = new System.Drawing.Size(423, 45);
             this.checkEdit66.StyleController = this.layoutControl2;
             this.checkEdit66.TabIndex = 127;
+            this.checkEdit66.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit74
             // 
-            this.checkEdit74.Location = new System.Drawing.Point(437, 54);
+            this.checkEdit74.Location = new System.Drawing.Point(441, 54);
             this.checkEdit74.Name = "checkEdit74";
             this.checkEdit74.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit74.Properties.Appearance.Options.UseFont = true;
             this.checkEdit74.Properties.Caption = "Kreatinin Klirensi";
-            this.checkEdit74.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit74.Size = new System.Drawing.Size(319, 45);
             this.checkEdit74.StyleController = this.layoutControl2;
             this.checkEdit74.TabIndex = 131;
+            this.checkEdit74.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit65
             // 
@@ -2842,42 +2975,34 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit65.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit65.Properties.Appearance.Options.UseFont = true;
             this.checkEdit65.Properties.Caption = "OGTT 50 gr. (Hamile Ýçin)";
-            this.checkEdit65.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit65.Size = new System.Drawing.Size(423, 45);
             this.checkEdit65.StyleController = this.layoutControl2;
             this.checkEdit65.TabIndex = 126;
-            // 
-            // checkEdit46
-            // 
-            this.checkEdit46.Location = new System.Drawing.Point(14, 201);
-            this.checkEdit46.Name = "checkEdit46";
-            this.checkEdit46.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit46.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit46.Properties.Caption = "Glukoz (Açlýk)";
-            this.checkEdit46.Size = new System.Drawing.Size(419, 45);
-            this.checkEdit46.StyleController = this.layoutControl2;
-            this.checkEdit46.TabIndex = 125;
+            this.checkEdit65.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit64
             // 
-            this.checkEdit64.Location = new System.Drawing.Point(435, 103);
+            this.checkEdit64.Location = new System.Drawing.Point(439, 103);
             this.checkEdit64.Name = "checkEdit64";
             this.checkEdit64.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit64.Properties.Appearance.Options.UseFont = true;
             this.checkEdit64.Properties.Caption = "Anti - TPO";
-            this.checkEdit64.Size = new System.Drawing.Size(362, 45);
+            this.checkEdit64.Size = new System.Drawing.Size(366, 45);
             this.checkEdit64.StyleController = this.layoutControl2;
             this.checkEdit64.TabIndex = 124;
+            this.checkEdit64.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit75
             // 
-            this.checkEdit75.Location = new System.Drawing.Point(437, 103);
+            this.checkEdit75.Location = new System.Drawing.Point(441, 103);
             this.checkEdit75.Name = "checkEdit75";
             this.checkEdit75.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit75.Properties.Appearance.Options.UseFont = true;
             this.checkEdit75.Properties.Caption = "Ürik Asit";
-            this.checkEdit75.Size = new System.Drawing.Size(318, 45);
+            this.checkEdit75.Size = new System.Drawing.Size(319, 45);
             this.checkEdit75.StyleController = this.layoutControl2;
             this.checkEdit75.TabIndex = 132;
+            this.checkEdit75.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit63
             // 
@@ -2886,7 +3011,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit63.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit63.Properties.Appearance.Options.UseFont = true;
             this.checkEdit63.Properties.Caption = "TSH";
-            this.checkEdit63.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit63.Size = new System.Drawing.Size(421, 45);
             this.checkEdit63.StyleController = this.layoutControl2;
             this.checkEdit63.TabIndex = 123;
             // 
@@ -2897,9 +3022,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit62.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit62.Properties.Appearance.Options.UseFont = true;
             this.checkEdit62.Properties.Caption = "FT4";
-            this.checkEdit62.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit62.Size = new System.Drawing.Size(421, 45);
             this.checkEdit62.StyleController = this.layoutControl2;
             this.checkEdit62.TabIndex = 122;
+            this.checkEdit62.Click += new System.EventHandler(this.check_Click);
+            // 
+            // checkEdit46
+            // 
+            this.checkEdit46.Location = new System.Drawing.Point(14, 201);
+            this.checkEdit46.Name = "checkEdit46";
+            this.checkEdit46.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.checkEdit46.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit46.Properties.Caption = "Glukoz (Açlýk)";
+            this.checkEdit46.Size = new System.Drawing.Size(423, 45);
+            this.checkEdit46.StyleController = this.layoutControl2;
+            this.checkEdit46.TabIndex = 125;
+            this.checkEdit46.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit61
             // 
@@ -2908,9 +3046,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit61.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit61.Properties.Appearance.Options.UseFont = true;
             this.checkEdit61.Properties.Caption = "FT3";
-            this.checkEdit61.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit61.Size = new System.Drawing.Size(421, 45);
             this.checkEdit61.StyleController = this.layoutControl2;
             this.checkEdit61.TabIndex = 121;
+            this.checkEdit61.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit60
             // 
@@ -2919,9 +3058,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit60.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit60.Properties.Appearance.Options.UseFont = true;
             this.checkEdit60.Properties.Caption = "T4";
-            this.checkEdit60.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit60.Size = new System.Drawing.Size(421, 45);
             this.checkEdit60.StyleController = this.layoutControl2;
             this.checkEdit60.TabIndex = 120;
+            this.checkEdit60.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit59
             // 
@@ -2930,9 +3070,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit59.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit59.Properties.Appearance.Options.UseFont = true;
             this.checkEdit59.Properties.Caption = "T3";
-            this.checkEdit59.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit59.Size = new System.Drawing.Size(421, 45);
             this.checkEdit59.StyleController = this.layoutControl2;
             this.checkEdit59.TabIndex = 119;
+            this.checkEdit59.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit58
             // 
@@ -2941,9 +3082,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit58.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit58.Properties.Appearance.Options.UseFont = true;
             this.checkEdit58.Properties.Caption = "Dýþkýda Rotavirüs Antijeni";
-            this.checkEdit58.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit58.Size = new System.Drawing.Size(421, 45);
             this.checkEdit58.StyleController = this.layoutControl2;
             this.checkEdit58.TabIndex = 118;
+            this.checkEdit58.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit57
             // 
@@ -2952,9 +3094,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit57.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit57.Properties.Appearance.Options.UseFont = true;
             this.checkEdit57.Properties.Caption = "Helicobakter Pylori (Dýþký)";
-            this.checkEdit57.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit57.Size = new System.Drawing.Size(421, 45);
             this.checkEdit57.StyleController = this.layoutControl2;
             this.checkEdit57.TabIndex = 117;
+            this.checkEdit57.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit56
             // 
@@ -2963,9 +3106,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit56.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit56.Properties.Appearance.Options.UseFont = true;
             this.checkEdit56.Properties.Caption = "Helicobakter Pylori (Kanda)";
-            this.checkEdit56.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit56.Size = new System.Drawing.Size(421, 45);
             this.checkEdit56.StyleController = this.layoutControl2;
             this.checkEdit56.TabIndex = 116;
+            this.checkEdit56.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit55
             // 
@@ -2974,9 +3118,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit55.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit55.Properties.Appearance.Options.UseFont = true;
             this.checkEdit55.Properties.Caption = "Gaitada Parazit";
-            this.checkEdit55.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit55.Size = new System.Drawing.Size(421, 45);
             this.checkEdit55.StyleController = this.layoutControl2;
             this.checkEdit55.TabIndex = 115;
+            this.checkEdit55.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit54
             // 
@@ -2985,9 +3130,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit54.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit54.Properties.Appearance.Options.UseFont = true;
             this.checkEdit54.Properties.Caption = "Kan Grubu";
-            this.checkEdit54.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit54.Size = new System.Drawing.Size(421, 45);
             this.checkEdit54.StyleController = this.layoutControl2;
             this.checkEdit54.TabIndex = 114;
+            this.checkEdit54.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit53
             // 
@@ -2996,9 +3142,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit53.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit53.Properties.Appearance.Options.UseFont = true;
             this.checkEdit53.Properties.Caption = "Tam Dýþký Tetkiki";
-            this.checkEdit53.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit53.Size = new System.Drawing.Size(421, 45);
             this.checkEdit53.StyleController = this.layoutControl2;
             this.checkEdit53.TabIndex = 113;
+            this.checkEdit53.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit49
             // 
@@ -3007,9 +3154,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit49.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit49.Properties.Appearance.Options.UseFont = true;
             this.checkEdit49.Properties.Caption = "Total Protein";
-            this.checkEdit49.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit49.Size = new System.Drawing.Size(380, 45);
             this.checkEdit49.StyleController = this.layoutControl2;
             this.checkEdit49.TabIndex = 110;
+            this.checkEdit49.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit48
             // 
@@ -3018,9 +3166,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit48.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit48.Properties.Appearance.Options.UseFont = true;
             this.checkEdit48.Properties.Caption = "Lipoprotein Elektroforezi";
-            this.checkEdit48.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit48.Size = new System.Drawing.Size(380, 45);
             this.checkEdit48.StyleController = this.layoutControl2;
             this.checkEdit48.TabIndex = 109;
+            this.checkEdit48.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit47
             // 
@@ -3029,9 +3178,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit47.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit47.Properties.Appearance.Options.UseFont = true;
             this.checkEdit47.Properties.Caption = "VLDL - Kolesterol";
-            this.checkEdit47.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit47.Size = new System.Drawing.Size(380, 45);
             this.checkEdit47.StyleController = this.layoutControl2;
             this.checkEdit47.TabIndex = 108;
+            this.checkEdit47.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit51
             // 
@@ -3040,9 +3190,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit51.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit51.Properties.Appearance.Options.UseFont = true;
             this.checkEdit51.Properties.Caption = "Osmolarite (Ýdrar)";
-            this.checkEdit51.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit51.Size = new System.Drawing.Size(421, 45);
             this.checkEdit51.StyleController = this.layoutControl2;
             this.checkEdit51.TabIndex = 112;
+            this.checkEdit51.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit50
             // 
@@ -3051,9 +3202,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit50.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit50.Properties.Appearance.Options.UseFont = true;
             this.checkEdit50.Properties.Caption = "Osmolarite (Kan)";
-            this.checkEdit50.Size = new System.Drawing.Size(417, 45);
+            this.checkEdit50.Size = new System.Drawing.Size(421, 45);
             this.checkEdit50.StyleController = this.layoutControl2;
             this.checkEdit50.TabIndex = 111;
+            this.checkEdit50.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit45
             // 
@@ -3062,9 +3214,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit45.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit45.Properties.Appearance.Options.UseFont = true;
             this.checkEdit45.Properties.Caption = "LDL - Kolesterol";
-            this.checkEdit45.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit45.Size = new System.Drawing.Size(380, 45);
             this.checkEdit45.StyleController = this.layoutControl2;
             this.checkEdit45.TabIndex = 105;
+            this.checkEdit45.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit44
             // 
@@ -3073,9 +3226,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit44.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit44.Properties.Appearance.Options.UseFont = true;
             this.checkEdit44.Properties.Caption = "HDL - Kolesterol";
-            this.checkEdit44.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit44.Size = new System.Drawing.Size(380, 45);
             this.checkEdit44.StyleController = this.layoutControl2;
             this.checkEdit44.TabIndex = 104;
+            this.checkEdit44.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit23
             // 
@@ -3084,9 +3238,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit23.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit23.Properties.Appearance.Options.UseFont = true;
             this.checkEdit23.Properties.Caption = "Trigliserid";
-            this.checkEdit23.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit23.Size = new System.Drawing.Size(380, 45);
             this.checkEdit23.StyleController = this.layoutControl2;
             this.checkEdit23.TabIndex = 103;
+            this.checkEdit23.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit22
             // 
@@ -3095,9 +3250,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit22.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit22.Properties.Appearance.Options.UseFont = true;
             this.checkEdit22.Properties.Caption = "Kolesterol";
-            this.checkEdit22.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit22.Size = new System.Drawing.Size(380, 45);
             this.checkEdit22.StyleController = this.layoutControl2;
             this.checkEdit22.TabIndex = 102;
+            this.checkEdit22.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit21
             // 
@@ -3106,9 +3262,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit21.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit21.Properties.Appearance.Options.UseFont = true;
             this.checkEdit21.Properties.Caption = "Ýndirekt Bilirubin";
-            this.checkEdit21.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit21.Size = new System.Drawing.Size(380, 45);
             this.checkEdit21.StyleController = this.layoutControl2;
             this.checkEdit21.TabIndex = 101;
+            this.checkEdit21.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit17
             // 
@@ -3117,9 +3274,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit17.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit17.Properties.Appearance.Options.UseFont = true;
             this.checkEdit17.Properties.Caption = "Direkt Bilirubin";
-            this.checkEdit17.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit17.Size = new System.Drawing.Size(380, 45);
             this.checkEdit17.StyleController = this.layoutControl2;
             this.checkEdit17.TabIndex = 100;
+            this.checkEdit17.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit15
             // 
@@ -3128,9 +3286,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit15.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit15.Properties.Appearance.Options.UseFont = true;
             this.checkEdit15.Properties.Caption = "Total Bilirubin";
-            this.checkEdit15.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit15.Size = new System.Drawing.Size(380, 45);
             this.checkEdit15.StyleController = this.layoutControl2;
             this.checkEdit15.TabIndex = 98;
+            this.checkEdit15.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit14
             // 
@@ -3139,9 +3298,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit14.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit14.Properties.Appearance.Options.UseFont = true;
             this.checkEdit14.Properties.Caption = "Lipaz";
-            this.checkEdit14.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit14.Size = new System.Drawing.Size(380, 45);
             this.checkEdit14.StyleController = this.layoutControl2;
             this.checkEdit14.TabIndex = 97;
+            this.checkEdit14.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit2
             // 
@@ -3150,9 +3310,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit2.Properties.Appearance.Options.UseFont = true;
             this.checkEdit2.Properties.Caption = "Troponin - T";
-            this.checkEdit2.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit2.Size = new System.Drawing.Size(380, 45);
             this.checkEdit2.StyleController = this.layoutControl2;
             this.checkEdit2.TabIndex = 95;
+            this.checkEdit2.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit20
             // 
@@ -3162,20 +3323,22 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit20.Properties.Appearance.Options.UseFont = true;
             this.checkEdit20.Properties.Caption = "5 saatlik";
             this.checkEdit20.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit20.Size = new System.Drawing.Size(236, 45);
+            this.checkEdit20.Size = new System.Drawing.Size(240, 45);
             this.checkEdit20.StyleController = this.layoutControl2;
             this.checkEdit20.TabIndex = 92;
+            this.checkEdit20.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit16
             // 
-            this.checkEdit16.Location = new System.Drawing.Point(800, 104);
+            this.checkEdit16.Location = new System.Drawing.Point(803, 104);
             this.checkEdit16.Name = "checkEdit16";
             this.checkEdit16.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit16.Properties.Appearance.Options.UseFont = true;
             this.checkEdit16.Properties.Caption = "Kolloid Ostomik Basýnç";
-            this.checkEdit16.Size = new System.Drawing.Size(354, 45);
+            this.checkEdit16.Size = new System.Drawing.Size(351, 45);
             this.checkEdit16.StyleController = this.layoutControl2;
             this.checkEdit16.TabIndex = 99;
+            this.checkEdit16.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit19
             // 
@@ -3185,9 +3348,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit19.Properties.Appearance.Options.UseFont = true;
             this.checkEdit19.Properties.Caption = "4 saatlik";
             this.checkEdit19.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit19.Size = new System.Drawing.Size(236, 45);
+            this.checkEdit19.Size = new System.Drawing.Size(240, 45);
             this.checkEdit19.StyleController = this.layoutControl2;
             this.checkEdit19.TabIndex = 91;
+            this.checkEdit19.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit8
             // 
@@ -3197,9 +3361,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit8.Properties.Appearance.Options.UseFont = true;
             this.checkEdit8.Properties.Caption = "3 saatlik";
             this.checkEdit8.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit8.Size = new System.Drawing.Size(236, 45);
+            this.checkEdit8.Size = new System.Drawing.Size(240, 45);
             this.checkEdit8.StyleController = this.layoutControl2;
             this.checkEdit8.TabIndex = 90;
+            this.checkEdit8.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit1
             // 
@@ -3208,20 +3373,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit1.Properties.Appearance.Options.UseFont = true;
             this.checkEdit1.Properties.Caption = "HbA1c";
-            this.checkEdit1.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit1.Size = new System.Drawing.Size(423, 45);
             this.checkEdit1.StyleController = this.layoutControl2;
             this.checkEdit1.TabIndex = 84;
-            // 
-            // checkEdit70
-            // 
-            this.checkEdit70.Location = new System.Drawing.Point(14, 152);
-            this.checkEdit70.Name = "checkEdit70";
-            this.checkEdit70.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit70.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit70.Properties.Caption = "Tam Ýdrar Tahlili";
-            this.checkEdit70.Size = new System.Drawing.Size(419, 45);
-            this.checkEdit70.StyleController = this.layoutControl2;
-            this.checkEdit70.TabIndex = 82;
+            this.checkEdit1.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit18
             // 
@@ -3231,20 +3386,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit18.Properties.Appearance.Options.UseFont = true;
             this.checkEdit18.Properties.Caption = "2 saatlik";
             this.checkEdit18.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit18.Size = new System.Drawing.Size(236, 45);
+            this.checkEdit18.Size = new System.Drawing.Size(240, 45);
             this.checkEdit18.StyleController = this.layoutControl2;
             this.checkEdit18.TabIndex = 89;
-            // 
-            // checkEdit67
-            // 
-            this.checkEdit67.Location = new System.Drawing.Point(14, 54);
-            this.checkEdit67.Name = "checkEdit67";
-            this.checkEdit67.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit67.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit67.Properties.Caption = "Tam Kan Sayýmý";
-            this.checkEdit67.Size = new System.Drawing.Size(419, 45);
-            this.checkEdit67.StyleController = this.layoutControl2;
-            this.checkEdit67.TabIndex = 80;
+            this.checkEdit18.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit71
             // 
@@ -3253,20 +3398,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit71.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit71.Properties.Appearance.Options.UseFont = true;
             this.checkEdit71.Properties.Caption = "Glukoz (2 saatlik tokluk)";
-            this.checkEdit71.Size = new System.Drawing.Size(419, 45);
+            this.checkEdit71.Size = new System.Drawing.Size(423, 45);
             this.checkEdit71.StyleController = this.layoutControl2;
             this.checkEdit71.TabIndex = 83;
-            // 
-            // checkEdit68
-            // 
-            this.checkEdit68.Location = new System.Drawing.Point(14, 103);
-            this.checkEdit68.Name = "checkEdit68";
-            this.checkEdit68.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit68.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit68.Properties.Caption = "Sedimantasyon Hýzý";
-            this.checkEdit68.Size = new System.Drawing.Size(419, 45);
-            this.checkEdit68.StyleController = this.layoutControl2;
-            this.checkEdit68.TabIndex = 81;
+            this.checkEdit71.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit13
             // 
@@ -3275,9 +3410,46 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
             this.checkEdit13.Properties.Appearance.Options.UseFont = true;
             this.checkEdit13.Properties.Caption = "Amilaz";
-            this.checkEdit13.Size = new System.Drawing.Size(377, 45);
+            this.checkEdit13.Size = new System.Drawing.Size(380, 45);
             this.checkEdit13.StyleController = this.layoutControl2;
             this.checkEdit13.TabIndex = 96;
+            this.checkEdit13.Click += new System.EventHandler(this.check_Click);
+            // 
+            // checkEdit68
+            // 
+            this.checkEdit68.Location = new System.Drawing.Point(14, 103);
+            this.checkEdit68.Name = "checkEdit68";
+            this.checkEdit68.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.checkEdit68.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit68.Properties.Caption = "Sedimantasyon Hýzý";
+            this.checkEdit68.Size = new System.Drawing.Size(423, 45);
+            this.checkEdit68.StyleController = this.layoutControl2;
+            this.checkEdit68.TabIndex = 81;
+            this.checkEdit68.Click += new System.EventHandler(this.check_Click);
+            // 
+            // checkEdit70
+            // 
+            this.checkEdit70.Location = new System.Drawing.Point(14, 152);
+            this.checkEdit70.Name = "checkEdit70";
+            this.checkEdit70.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.checkEdit70.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit70.Properties.Caption = "Tam Ýdrar Tahlili";
+            this.checkEdit70.Size = new System.Drawing.Size(423, 45);
+            this.checkEdit70.StyleController = this.layoutControl2;
+            this.checkEdit70.TabIndex = 82;
+            this.checkEdit70.Click += new System.EventHandler(this.check_Click);
+            // 
+            // checkEdit67
+            // 
+            this.checkEdit67.Location = new System.Drawing.Point(14, 54);
+            this.checkEdit67.Name = "checkEdit67";
+            this.checkEdit67.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.checkEdit67.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit67.Properties.Caption = "Tam Kan Sayýmý";
+            this.checkEdit67.Size = new System.Drawing.Size(423, 45);
+            this.checkEdit67.StyleController = this.layoutControl2;
+            this.checkEdit67.TabIndex = 80;
+            this.checkEdit67.Click += new System.EventHandler(this.check_Click);
             // 
             // Root
             // 
@@ -3286,14 +3458,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.tabbedControlGroup1,
-            this.layoutControlItem4,
             this.layoutControlItem98,
             this.layoutControlItem111,
             this.layoutControlItem154,
             this.emptySpaceItem3,
             this.emptySpaceItem2,
             this.layoutControlItem96,
-            this.layoutControlItem108});
+            this.layoutControlItem108,
+            this.layoutControlItem201});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -3307,8 +3479,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup7;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 4;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup9;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1169, 801);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup9,
@@ -3317,590 +3489,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlGroup6,
             this.layoutControlGroup7});
             this.tabbedControlGroup1.Text = "tabbedControlGroup1";
-            // 
-            // layoutControlGroup7
-            // 
-            this.layoutControlGroup7.CustomizationFormText = "layoutControlGroup7";
-            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem95,
-            this.layoutControlItem97,
-            this.layoutControlItem119,
-            this.layoutControlItem120,
-            this.layoutControlItem121,
-            this.layoutControlItem122,
-            this.layoutControlItem123,
-            this.layoutControlItem124,
-            this.layoutControlItem125,
-            this.layoutControlItem126,
-            this.layoutControlItem127,
-            this.layoutControlItem128,
-            this.layoutControlItem129,
-            this.layoutControlItem130,
-            this.layoutControlItem131,
-            this.layoutControlItem135,
-            this.layoutControlItem136,
-            this.layoutControlItem137,
-            this.layoutControlItem138,
-            this.layoutControlItem139,
-            this.layoutControlItem140,
-            this.layoutControlItem141,
-            this.layoutControlItem142,
-            this.layoutControlItem143,
-            this.layoutControlItem144,
-            this.layoutControlItem145,
-            this.layoutControlItem146,
-            this.layoutControlItem147,
-            this.layoutControlItem148,
-            this.layoutControlItem149,
-            this.layoutControlItem155,
-            this.layoutControlItem156,
-            this.layoutControlItem157,
-            this.layoutControlItem158,
-            this.layoutControlItem159,
-            this.layoutControlItem160,
-            this.layoutControlItem161,
-            this.layoutControlItem162,
-            this.layoutControlItem163,
-            this.layoutControlItem164,
-            this.emptySpaceItem5,
-            this.emptySpaceItem6,
-            this.emptySpaceItem7,
-            this.emptySpaceItem8,
-            this.emptySpaceItem9});
-            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup7.Name = "layoutControlGroup7";
-            this.layoutControlGroup7.Size = new System.Drawing.Size(1145, 737);
-            this.layoutControlGroup7.Text = "Sayfa-4";
-            // 
-            // layoutControlItem95
-            // 
-            this.layoutControlItem95.Control = this.checkEdit95;
-            this.layoutControlItem95.CustomizationFormText = "layoutControlItem95";
-            this.layoutControlItem95.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem95.Name = "layoutControlItem95";
-            this.layoutControlItem95.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem95.Text = "layoutControlItem95";
-            this.layoutControlItem95.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem95.TextToControlDistance = 0;
-            this.layoutControlItem95.TextVisible = false;
-            // 
-            // layoutControlItem97
-            // 
-            this.layoutControlItem97.Control = this.checkEdit96;
-            this.layoutControlItem97.CustomizationFormText = "layoutControlItem97";
-            this.layoutControlItem97.Location = new System.Drawing.Point(0, 49);
-            this.layoutControlItem97.Name = "layoutControlItem97";
-            this.layoutControlItem97.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem97.Text = "layoutControlItem97";
-            this.layoutControlItem97.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem97.TextToControlDistance = 0;
-            this.layoutControlItem97.TextVisible = false;
-            // 
-            // layoutControlItem119
-            // 
-            this.layoutControlItem119.Control = this.checkEdit118;
-            this.layoutControlItem119.CustomizationFormText = "layoutControlItem119";
-            this.layoutControlItem119.Location = new System.Drawing.Point(0, 98);
-            this.layoutControlItem119.Name = "layoutControlItem119";
-            this.layoutControlItem119.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem119.Text = "layoutControlItem119";
-            this.layoutControlItem119.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem119.TextToControlDistance = 0;
-            this.layoutControlItem119.TextVisible = false;
-            // 
-            // layoutControlItem120
-            // 
-            this.layoutControlItem120.Control = this.checkEdit119;
-            this.layoutControlItem120.CustomizationFormText = "layoutControlItem120";
-            this.layoutControlItem120.Location = new System.Drawing.Point(0, 147);
-            this.layoutControlItem120.Name = "layoutControlItem120";
-            this.layoutControlItem120.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem120.Text = "layoutControlItem120";
-            this.layoutControlItem120.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem120.TextToControlDistance = 0;
-            this.layoutControlItem120.TextVisible = false;
-            // 
-            // layoutControlItem121
-            // 
-            this.layoutControlItem121.Control = this.checkEdit120;
-            this.layoutControlItem121.CustomizationFormText = "layoutControlItem121";
-            this.layoutControlItem121.Location = new System.Drawing.Point(0, 196);
-            this.layoutControlItem121.Name = "layoutControlItem121";
-            this.layoutControlItem121.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem121.Text = "layoutControlItem121";
-            this.layoutControlItem121.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem121.TextToControlDistance = 0;
-            this.layoutControlItem121.TextVisible = false;
-            // 
-            // layoutControlItem122
-            // 
-            this.layoutControlItem122.Control = this.checkEdit121;
-            this.layoutControlItem122.CustomizationFormText = "layoutControlItem122";
-            this.layoutControlItem122.Location = new System.Drawing.Point(0, 245);
-            this.layoutControlItem122.Name = "layoutControlItem122";
-            this.layoutControlItem122.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem122.Text = "layoutControlItem122";
-            this.layoutControlItem122.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem122.TextToControlDistance = 0;
-            this.layoutControlItem122.TextVisible = false;
-            // 
-            // layoutControlItem123
-            // 
-            this.layoutControlItem123.Control = this.checkEdit122;
-            this.layoutControlItem123.CustomizationFormText = "layoutControlItem123";
-            this.layoutControlItem123.Location = new System.Drawing.Point(0, 294);
-            this.layoutControlItem123.Name = "layoutControlItem123";
-            this.layoutControlItem123.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem123.Text = "layoutControlItem123";
-            this.layoutControlItem123.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem123.TextToControlDistance = 0;
-            this.layoutControlItem123.TextVisible = false;
-            // 
-            // layoutControlItem124
-            // 
-            this.layoutControlItem124.Control = this.checkEdit123;
-            this.layoutControlItem124.CustomizationFormText = "layoutControlItem124";
-            this.layoutControlItem124.Location = new System.Drawing.Point(0, 343);
-            this.layoutControlItem124.Name = "layoutControlItem124";
-            this.layoutControlItem124.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem124.Text = "layoutControlItem124";
-            this.layoutControlItem124.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem124.TextToControlDistance = 0;
-            this.layoutControlItem124.TextVisible = false;
-            // 
-            // layoutControlItem125
-            // 
-            this.layoutControlItem125.Control = this.checkEdit124;
-            this.layoutControlItem125.CustomizationFormText = "layoutControlItem125";
-            this.layoutControlItem125.Location = new System.Drawing.Point(0, 392);
-            this.layoutControlItem125.Name = "layoutControlItem125";
-            this.layoutControlItem125.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem125.Text = "layoutControlItem125";
-            this.layoutControlItem125.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem125.TextToControlDistance = 0;
-            this.layoutControlItem125.TextVisible = false;
-            // 
-            // layoutControlItem126
-            // 
-            this.layoutControlItem126.Control = this.checkEdit125;
-            this.layoutControlItem126.CustomizationFormText = "layoutControlItem126";
-            this.layoutControlItem126.Location = new System.Drawing.Point(0, 441);
-            this.layoutControlItem126.Name = "layoutControlItem126";
-            this.layoutControlItem126.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem126.Text = "layoutControlItem126";
-            this.layoutControlItem126.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem126.TextToControlDistance = 0;
-            this.layoutControlItem126.TextVisible = false;
-            // 
-            // layoutControlItem127
-            // 
-            this.layoutControlItem127.Control = this.checkEdit126;
-            this.layoutControlItem127.CustomizationFormText = "layoutControlItem127";
-            this.layoutControlItem127.Location = new System.Drawing.Point(0, 490);
-            this.layoutControlItem127.Name = "layoutControlItem127";
-            this.layoutControlItem127.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem127.Text = "layoutControlItem127";
-            this.layoutControlItem127.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem127.TextToControlDistance = 0;
-            this.layoutControlItem127.TextVisible = false;
-            // 
-            // layoutControlItem128
-            // 
-            this.layoutControlItem128.Control = this.checkEdit127;
-            this.layoutControlItem128.CustomizationFormText = "layoutControlItem128";
-            this.layoutControlItem128.Location = new System.Drawing.Point(0, 539);
-            this.layoutControlItem128.Name = "layoutControlItem128";
-            this.layoutControlItem128.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem128.Text = "layoutControlItem128";
-            this.layoutControlItem128.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem128.TextToControlDistance = 0;
-            this.layoutControlItem128.TextVisible = false;
-            // 
-            // layoutControlItem129
-            // 
-            this.layoutControlItem129.Control = this.checkEdit128;
-            this.layoutControlItem129.CustomizationFormText = "layoutControlItem129";
-            this.layoutControlItem129.Location = new System.Drawing.Point(0, 588);
-            this.layoutControlItem129.Name = "layoutControlItem129";
-            this.layoutControlItem129.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem129.Text = "layoutControlItem129";
-            this.layoutControlItem129.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem129.TextToControlDistance = 0;
-            this.layoutControlItem129.TextVisible = false;
-            // 
-            // layoutControlItem130
-            // 
-            this.layoutControlItem130.Control = this.checkEdit129;
-            this.layoutControlItem130.CustomizationFormText = "layoutControlItem130";
-            this.layoutControlItem130.Location = new System.Drawing.Point(0, 637);
-            this.layoutControlItem130.Name = "layoutControlItem130";
-            this.layoutControlItem130.Size = new System.Drawing.Size(370, 49);
-            this.layoutControlItem130.Text = "layoutControlItem130";
-            this.layoutControlItem130.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem130.TextToControlDistance = 0;
-            this.layoutControlItem130.TextVisible = false;
-            // 
-            // layoutControlItem131
-            // 
-            this.layoutControlItem131.Control = this.checkEdit130;
-            this.layoutControlItem131.CustomizationFormText = "layoutControlItem131";
-            this.layoutControlItem131.Location = new System.Drawing.Point(0, 686);
-            this.layoutControlItem131.Name = "layoutControlItem131";
-            this.layoutControlItem131.Size = new System.Drawing.Size(370, 51);
-            this.layoutControlItem131.Text = "layoutControlItem131";
-            this.layoutControlItem131.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem131.TextToControlDistance = 0;
-            this.layoutControlItem131.TextVisible = false;
-            // 
-            // layoutControlItem135
-            // 
-            this.layoutControlItem135.Control = this.checkEdit134;
-            this.layoutControlItem135.CustomizationFormText = "layoutControlItem135";
-            this.layoutControlItem135.Location = new System.Drawing.Point(370, 0);
-            this.layoutControlItem135.Name = "layoutControlItem135";
-            this.layoutControlItem135.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem135.Text = "layoutControlItem135";
-            this.layoutControlItem135.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem135.TextToControlDistance = 0;
-            this.layoutControlItem135.TextVisible = false;
-            // 
-            // layoutControlItem136
-            // 
-            this.layoutControlItem136.Control = this.checkEdit135;
-            this.layoutControlItem136.CustomizationFormText = "layoutControlItem136";
-            this.layoutControlItem136.Location = new System.Drawing.Point(370, 49);
-            this.layoutControlItem136.Name = "layoutControlItem136";
-            this.layoutControlItem136.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem136.Text = "layoutControlItem136";
-            this.layoutControlItem136.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem136.TextToControlDistance = 0;
-            this.layoutControlItem136.TextVisible = false;
-            // 
-            // layoutControlItem137
-            // 
-            this.layoutControlItem137.Control = this.checkEdit136;
-            this.layoutControlItem137.CustomizationFormText = "layoutControlItem137";
-            this.layoutControlItem137.Location = new System.Drawing.Point(370, 98);
-            this.layoutControlItem137.Name = "layoutControlItem137";
-            this.layoutControlItem137.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem137.Text = "layoutControlItem137";
-            this.layoutControlItem137.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem137.TextToControlDistance = 0;
-            this.layoutControlItem137.TextVisible = false;
-            // 
-            // layoutControlItem138
-            // 
-            this.layoutControlItem138.Control = this.checkEdit137;
-            this.layoutControlItem138.CustomizationFormText = "layoutControlItem138";
-            this.layoutControlItem138.Location = new System.Drawing.Point(370, 147);
-            this.layoutControlItem138.Name = "layoutControlItem138";
-            this.layoutControlItem138.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem138.Text = "layoutControlItem138";
-            this.layoutControlItem138.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem138.TextToControlDistance = 0;
-            this.layoutControlItem138.TextVisible = false;
-            // 
-            // layoutControlItem139
-            // 
-            this.layoutControlItem139.Control = this.checkEdit138;
-            this.layoutControlItem139.CustomizationFormText = "layoutControlItem139";
-            this.layoutControlItem139.Location = new System.Drawing.Point(370, 196);
-            this.layoutControlItem139.Name = "layoutControlItem139";
-            this.layoutControlItem139.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem139.Text = "layoutControlItem139";
-            this.layoutControlItem139.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem139.TextToControlDistance = 0;
-            this.layoutControlItem139.TextVisible = false;
-            // 
-            // layoutControlItem140
-            // 
-            this.layoutControlItem140.Control = this.checkEdit139;
-            this.layoutControlItem140.CustomizationFormText = "layoutControlItem140";
-            this.layoutControlItem140.Location = new System.Drawing.Point(370, 245);
-            this.layoutControlItem140.Name = "layoutControlItem140";
-            this.layoutControlItem140.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem140.Text = "layoutControlItem140";
-            this.layoutControlItem140.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem140.TextToControlDistance = 0;
-            this.layoutControlItem140.TextVisible = false;
-            // 
-            // layoutControlItem141
-            // 
-            this.layoutControlItem141.Control = this.checkEdit140;
-            this.layoutControlItem141.CustomizationFormText = "layoutControlItem141";
-            this.layoutControlItem141.Location = new System.Drawing.Point(370, 294);
-            this.layoutControlItem141.Name = "layoutControlItem141";
-            this.layoutControlItem141.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem141.Text = "layoutControlItem141";
-            this.layoutControlItem141.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem141.TextToControlDistance = 0;
-            this.layoutControlItem141.TextVisible = false;
-            // 
-            // layoutControlItem142
-            // 
-            this.layoutControlItem142.Control = this.checkEdit141;
-            this.layoutControlItem142.CustomizationFormText = "layoutControlItem142";
-            this.layoutControlItem142.Location = new System.Drawing.Point(370, 343);
-            this.layoutControlItem142.Name = "layoutControlItem142";
-            this.layoutControlItem142.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem142.Text = "layoutControlItem142";
-            this.layoutControlItem142.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem142.TextToControlDistance = 0;
-            this.layoutControlItem142.TextVisible = false;
-            // 
-            // layoutControlItem143
-            // 
-            this.layoutControlItem143.Control = this.checkEdit142;
-            this.layoutControlItem143.CustomizationFormText = "layoutControlItem143";
-            this.layoutControlItem143.Location = new System.Drawing.Point(370, 392);
-            this.layoutControlItem143.Name = "layoutControlItem143";
-            this.layoutControlItem143.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem143.Text = "layoutControlItem143";
-            this.layoutControlItem143.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem143.TextToControlDistance = 0;
-            this.layoutControlItem143.TextVisible = false;
-            // 
-            // layoutControlItem144
-            // 
-            this.layoutControlItem144.Control = this.checkEdit143;
-            this.layoutControlItem144.CustomizationFormText = "layoutControlItem144";
-            this.layoutControlItem144.Location = new System.Drawing.Point(370, 441);
-            this.layoutControlItem144.Name = "layoutControlItem144";
-            this.layoutControlItem144.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem144.Text = "layoutControlItem144";
-            this.layoutControlItem144.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem144.TextToControlDistance = 0;
-            this.layoutControlItem144.TextVisible = false;
-            // 
-            // layoutControlItem145
-            // 
-            this.layoutControlItem145.Control = this.checkEdit144;
-            this.layoutControlItem145.CustomizationFormText = "layoutControlItem145";
-            this.layoutControlItem145.Location = new System.Drawing.Point(370, 490);
-            this.layoutControlItem145.Name = "layoutControlItem145";
-            this.layoutControlItem145.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem145.Text = "layoutControlItem145";
-            this.layoutControlItem145.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem145.TextToControlDistance = 0;
-            this.layoutControlItem145.TextVisible = false;
-            // 
-            // layoutControlItem146
-            // 
-            this.layoutControlItem146.Control = this.checkEdit145;
-            this.layoutControlItem146.CustomizationFormText = "layoutControlItem146";
-            this.layoutControlItem146.Location = new System.Drawing.Point(370, 539);
-            this.layoutControlItem146.Name = "layoutControlItem146";
-            this.layoutControlItem146.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem146.Text = "layoutControlItem146";
-            this.layoutControlItem146.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem146.TextToControlDistance = 0;
-            this.layoutControlItem146.TextVisible = false;
-            // 
-            // layoutControlItem147
-            // 
-            this.layoutControlItem147.Control = this.checkEdit146;
-            this.layoutControlItem147.CustomizationFormText = "layoutControlItem147";
-            this.layoutControlItem147.Location = new System.Drawing.Point(370, 588);
-            this.layoutControlItem147.Name = "layoutControlItem147";
-            this.layoutControlItem147.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem147.Text = "layoutControlItem147";
-            this.layoutControlItem147.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem147.TextToControlDistance = 0;
-            this.layoutControlItem147.TextVisible = false;
-            // 
-            // layoutControlItem148
-            // 
-            this.layoutControlItem148.Control = this.checkEdit147;
-            this.layoutControlItem148.CustomizationFormText = "layoutControlItem148";
-            this.layoutControlItem148.Location = new System.Drawing.Point(370, 637);
-            this.layoutControlItem148.Name = "layoutControlItem148";
-            this.layoutControlItem148.Size = new System.Drawing.Size(375, 49);
-            this.layoutControlItem148.Text = "layoutControlItem148";
-            this.layoutControlItem148.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem148.TextToControlDistance = 0;
-            this.layoutControlItem148.TextVisible = false;
-            // 
-            // layoutControlItem149
-            // 
-            this.layoutControlItem149.Control = this.checkEdit148;
-            this.layoutControlItem149.CustomizationFormText = "layoutControlItem149";
-            this.layoutControlItem149.Location = new System.Drawing.Point(370, 686);
-            this.layoutControlItem149.Name = "layoutControlItem149";
-            this.layoutControlItem149.Size = new System.Drawing.Size(375, 51);
-            this.layoutControlItem149.Text = "layoutControlItem149";
-            this.layoutControlItem149.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem149.TextToControlDistance = 0;
-            this.layoutControlItem149.TextVisible = false;
-            // 
-            // layoutControlItem155
-            // 
-            this.layoutControlItem155.Control = this.checkEdit7;
-            this.layoutControlItem155.CustomizationFormText = "layoutControlItem155";
-            this.layoutControlItem155.Location = new System.Drawing.Point(745, 0);
-            this.layoutControlItem155.Name = "layoutControlItem155";
-            this.layoutControlItem155.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem155.Text = "layoutControlItem155";
-            this.layoutControlItem155.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem155.TextToControlDistance = 0;
-            this.layoutControlItem155.TextVisible = false;
-            // 
-            // layoutControlItem156
-            // 
-            this.layoutControlItem156.Control = this.checkEdit94;
-            this.layoutControlItem156.CustomizationFormText = "layoutControlItem156";
-            this.layoutControlItem156.Location = new System.Drawing.Point(745, 49);
-            this.layoutControlItem156.Name = "layoutControlItem156";
-            this.layoutControlItem156.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem156.Text = "layoutControlItem156";
-            this.layoutControlItem156.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem156.TextToControlDistance = 0;
-            this.layoutControlItem156.TextVisible = false;
-            // 
-            // layoutControlItem157
-            // 
-            this.layoutControlItem157.Control = this.checkEdit97;
-            this.layoutControlItem157.CustomizationFormText = "layoutControlItem157";
-            this.layoutControlItem157.Location = new System.Drawing.Point(745, 98);
-            this.layoutControlItem157.Name = "layoutControlItem157";
-            this.layoutControlItem157.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem157.Text = "layoutControlItem157";
-            this.layoutControlItem157.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem157.TextToControlDistance = 0;
-            this.layoutControlItem157.TextVisible = false;
-            // 
-            // layoutControlItem158
-            // 
-            this.layoutControlItem158.Control = this.checkEdit110;
-            this.layoutControlItem158.CustomizationFormText = "layoutControlItem158";
-            this.layoutControlItem158.Location = new System.Drawing.Point(745, 147);
-            this.layoutControlItem158.Name = "layoutControlItem158";
-            this.layoutControlItem158.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem158.Text = "layoutControlItem158";
-            this.layoutControlItem158.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem158.TextToControlDistance = 0;
-            this.layoutControlItem158.TextVisible = false;
-            // 
-            // layoutControlItem159
-            // 
-            this.layoutControlItem159.Control = this.checkEdit153;
-            this.layoutControlItem159.CustomizationFormText = "layoutControlItem159";
-            this.layoutControlItem159.Location = new System.Drawing.Point(745, 196);
-            this.layoutControlItem159.Name = "layoutControlItem159";
-            this.layoutControlItem159.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem159.Text = "layoutControlItem159";
-            this.layoutControlItem159.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem159.TextToControlDistance = 0;
-            this.layoutControlItem159.TextVisible = false;
-            // 
-            // layoutControlItem160
-            // 
-            this.layoutControlItem160.Control = this.checkEdit154;
-            this.layoutControlItem160.CustomizationFormText = "layoutControlItem160";
-            this.layoutControlItem160.Location = new System.Drawing.Point(745, 245);
-            this.layoutControlItem160.Name = "layoutControlItem160";
-            this.layoutControlItem160.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem160.Text = "layoutControlItem160";
-            this.layoutControlItem160.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem160.TextToControlDistance = 0;
-            this.layoutControlItem160.TextVisible = false;
-            // 
-            // layoutControlItem161
-            // 
-            this.layoutControlItem161.Control = this.checkEdit155;
-            this.layoutControlItem161.CustomizationFormText = "layoutControlItem161";
-            this.layoutControlItem161.Location = new System.Drawing.Point(745, 294);
-            this.layoutControlItem161.Name = "layoutControlItem161";
-            this.layoutControlItem161.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem161.Text = "layoutControlItem161";
-            this.layoutControlItem161.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem161.TextToControlDistance = 0;
-            this.layoutControlItem161.TextVisible = false;
-            // 
-            // layoutControlItem162
-            // 
-            this.layoutControlItem162.Control = this.checkEdit156;
-            this.layoutControlItem162.CustomizationFormText = "layoutControlItem162";
-            this.layoutControlItem162.Location = new System.Drawing.Point(745, 343);
-            this.layoutControlItem162.Name = "layoutControlItem162";
-            this.layoutControlItem162.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem162.Text = "layoutControlItem162";
-            this.layoutControlItem162.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem162.TextToControlDistance = 0;
-            this.layoutControlItem162.TextVisible = false;
-            // 
-            // layoutControlItem163
-            // 
-            this.layoutControlItem163.Control = this.checkEdit157;
-            this.layoutControlItem163.CustomizationFormText = "layoutControlItem163";
-            this.layoutControlItem163.Location = new System.Drawing.Point(745, 392);
-            this.layoutControlItem163.Name = "layoutControlItem163";
-            this.layoutControlItem163.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem163.Text = "layoutControlItem163";
-            this.layoutControlItem163.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem163.TextToControlDistance = 0;
-            this.layoutControlItem163.TextVisible = false;
-            // 
-            // layoutControlItem164
-            // 
-            this.layoutControlItem164.Control = this.checkEdit158;
-            this.layoutControlItem164.CustomizationFormText = "layoutControlItem164";
-            this.layoutControlItem164.Location = new System.Drawing.Point(745, 441);
-            this.layoutControlItem164.Name = "layoutControlItem164";
-            this.layoutControlItem164.Size = new System.Drawing.Size(400, 49);
-            this.layoutControlItem164.Text = "layoutControlItem164";
-            this.layoutControlItem164.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem164.TextToControlDistance = 0;
-            this.layoutControlItem164.TextVisible = false;
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(745, 490);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(400, 49);
-            this.emptySpaceItem5.Text = "emptySpaceItem5";
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(745, 539);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(400, 49);
-            this.emptySpaceItem6.Text = "emptySpaceItem6";
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(745, 588);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(400, 49);
-            this.emptySpaceItem7.Text = "emptySpaceItem7";
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem8
-            // 
-            this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
-            this.emptySpaceItem8.Location = new System.Drawing.Point(745, 637);
-            this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(400, 49);
-            this.emptySpaceItem8.Text = "emptySpaceItem8";
-            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem9
-            // 
-            this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
-            this.emptySpaceItem9.Location = new System.Drawing.Point(745, 686);
-            this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(400, 51);
-            this.emptySpaceItem9.Text = "emptySpaceItem9";
-            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup9
             // 
@@ -3962,7 +3550,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem109.CustomizationFormText = "layoutControlItem109";
             this.layoutControlItem109.Location = new System.Drawing.Point(0, 686);
             this.layoutControlItem109.Name = "layoutControlItem109";
-            this.layoutControlItem109.Size = new System.Drawing.Size(411, 51);
+            this.layoutControlItem109.Size = new System.Drawing.Size(415, 51);
             this.layoutControlItem109.Text = "layoutControlItem109";
             this.layoutControlItem109.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem109.TextToControlDistance = 0;
@@ -3974,7 +3562,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem110.CustomizationFormText = "layoutControlItem110";
             this.layoutControlItem110.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem110.Name = "layoutControlItem110";
-            this.layoutControlItem110.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem110.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem110.Text = "layoutControlItem110";
             this.layoutControlItem110.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem110.TextToControlDistance = 0;
@@ -3986,7 +3574,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem132.CustomizationFormText = "layoutControlItem132";
             this.layoutControlItem132.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem132.Name = "layoutControlItem132";
-            this.layoutControlItem132.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem132.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem132.Text = "layoutControlItem132";
             this.layoutControlItem132.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem132.TextToControlDistance = 0;
@@ -3998,7 +3586,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem133.CustomizationFormText = "layoutControlItem133";
             this.layoutControlItem133.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem133.Name = "layoutControlItem133";
-            this.layoutControlItem133.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem133.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem133.Text = "layoutControlItem133";
             this.layoutControlItem133.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem133.TextToControlDistance = 0;
@@ -4010,7 +3598,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem134.CustomizationFormText = "layoutControlItem134";
             this.layoutControlItem134.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem134.Name = "layoutControlItem134";
-            this.layoutControlItem134.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem134.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem134.Text = "layoutControlItem134";
             this.layoutControlItem134.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem134.TextToControlDistance = 0;
@@ -4022,7 +3610,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem150.CustomizationFormText = "layoutControlItem150";
             this.layoutControlItem150.Location = new System.Drawing.Point(0, 196);
             this.layoutControlItem150.Name = "layoutControlItem150";
-            this.layoutControlItem150.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem150.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem150.Text = "layoutControlItem150";
             this.layoutControlItem150.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem150.TextToControlDistance = 0;
@@ -4034,7 +3622,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem151.CustomizationFormText = "layoutControlItem151";
             this.layoutControlItem151.Location = new System.Drawing.Point(0, 245);
             this.layoutControlItem151.Name = "layoutControlItem151";
-            this.layoutControlItem151.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem151.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem151.Text = "layoutControlItem151";
             this.layoutControlItem151.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem151.TextToControlDistance = 0;
@@ -4046,7 +3634,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem152.CustomizationFormText = "layoutControlItem152";
             this.layoutControlItem152.Location = new System.Drawing.Point(0, 294);
             this.layoutControlItem152.Name = "layoutControlItem152";
-            this.layoutControlItem152.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem152.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem152.Text = "layoutControlItem152";
             this.layoutControlItem152.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem152.TextToControlDistance = 0;
@@ -4058,7 +3646,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem153.CustomizationFormText = "layoutControlItem153";
             this.layoutControlItem153.Location = new System.Drawing.Point(0, 343);
             this.layoutControlItem153.Name = "layoutControlItem153";
-            this.layoutControlItem153.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem153.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem153.Text = "layoutControlItem153";
             this.layoutControlItem153.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem153.TextToControlDistance = 0;
@@ -4070,7 +3658,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem165.CustomizationFormText = "layoutControlItem165";
             this.layoutControlItem165.Location = new System.Drawing.Point(0, 392);
             this.layoutControlItem165.Name = "layoutControlItem165";
-            this.layoutControlItem165.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem165.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem165.Text = "layoutControlItem165";
             this.layoutControlItem165.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem165.TextToControlDistance = 0;
@@ -4082,7 +3670,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem166.CustomizationFormText = "layoutControlItem166";
             this.layoutControlItem166.Location = new System.Drawing.Point(0, 441);
             this.layoutControlItem166.Name = "layoutControlItem166";
-            this.layoutControlItem166.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem166.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem166.Text = "layoutControlItem166";
             this.layoutControlItem166.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem166.TextToControlDistance = 0;
@@ -4094,7 +3682,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem167.CustomizationFormText = "layoutControlItem167";
             this.layoutControlItem167.Location = new System.Drawing.Point(0, 490);
             this.layoutControlItem167.Name = "layoutControlItem167";
-            this.layoutControlItem167.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem167.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem167.Text = "layoutControlItem167";
             this.layoutControlItem167.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem167.TextToControlDistance = 0;
@@ -4106,7 +3694,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem168.CustomizationFormText = "layoutControlItem168";
             this.layoutControlItem168.Location = new System.Drawing.Point(0, 539);
             this.layoutControlItem168.Name = "layoutControlItem168";
-            this.layoutControlItem168.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem168.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem168.Text = "layoutControlItem168";
             this.layoutControlItem168.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem168.TextToControlDistance = 0;
@@ -4118,7 +3706,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem169.CustomizationFormText = "layoutControlItem169";
             this.layoutControlItem169.Location = new System.Drawing.Point(0, 588);
             this.layoutControlItem169.Name = "layoutControlItem169";
-            this.layoutControlItem169.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem169.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem169.Text = "layoutControlItem169";
             this.layoutControlItem169.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem169.TextToControlDistance = 0;
@@ -4130,7 +3718,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem170.CustomizationFormText = "layoutControlItem170";
             this.layoutControlItem170.Location = new System.Drawing.Point(0, 637);
             this.layoutControlItem170.Name = "layoutControlItem170";
-            this.layoutControlItem170.Size = new System.Drawing.Size(411, 49);
+            this.layoutControlItem170.Size = new System.Drawing.Size(415, 49);
             this.layoutControlItem170.Text = "layoutControlItem170";
             this.layoutControlItem170.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem170.TextToControlDistance = 0;
@@ -4140,9 +3728,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem171.Control = this.checkEdit165;
             this.layoutControlItem171.CustomizationFormText = "layoutControlItem171";
-            this.layoutControlItem171.Location = new System.Drawing.Point(411, 0);
+            this.layoutControlItem171.Location = new System.Drawing.Point(415, 0);
             this.layoutControlItem171.Name = "layoutControlItem171";
-            this.layoutControlItem171.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem171.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem171.Text = "layoutControlItem171";
             this.layoutControlItem171.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem171.TextToControlDistance = 0;
@@ -4152,9 +3740,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem172.Control = this.checkEdit166;
             this.layoutControlItem172.CustomizationFormText = "layoutControlItem172";
-            this.layoutControlItem172.Location = new System.Drawing.Point(411, 49);
+            this.layoutControlItem172.Location = new System.Drawing.Point(415, 49);
             this.layoutControlItem172.Name = "layoutControlItem172";
-            this.layoutControlItem172.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem172.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem172.Text = "layoutControlItem172";
             this.layoutControlItem172.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem172.TextToControlDistance = 0;
@@ -4164,9 +3752,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem173.Control = this.checkEdit167;
             this.layoutControlItem173.CustomizationFormText = "layoutControlItem173";
-            this.layoutControlItem173.Location = new System.Drawing.Point(411, 98);
+            this.layoutControlItem173.Location = new System.Drawing.Point(415, 98);
             this.layoutControlItem173.Name = "layoutControlItem173";
-            this.layoutControlItem173.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem173.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem173.Text = "layoutControlItem173";
             this.layoutControlItem173.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem173.TextToControlDistance = 0;
@@ -4176,9 +3764,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem174.Control = this.checkEdit168;
             this.layoutControlItem174.CustomizationFormText = "layoutControlItem174";
-            this.layoutControlItem174.Location = new System.Drawing.Point(411, 147);
+            this.layoutControlItem174.Location = new System.Drawing.Point(415, 147);
             this.layoutControlItem174.Name = "layoutControlItem174";
-            this.layoutControlItem174.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem174.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem174.Text = "layoutControlItem174";
             this.layoutControlItem174.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem174.TextToControlDistance = 0;
@@ -4188,9 +3776,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem175.Control = this.checkEdit169;
             this.layoutControlItem175.CustomizationFormText = "layoutControlItem175";
-            this.layoutControlItem175.Location = new System.Drawing.Point(411, 196);
+            this.layoutControlItem175.Location = new System.Drawing.Point(415, 196);
             this.layoutControlItem175.Name = "layoutControlItem175";
-            this.layoutControlItem175.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem175.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem175.Text = "layoutControlItem175";
             this.layoutControlItem175.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem175.TextToControlDistance = 0;
@@ -4200,9 +3788,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem176.Control = this.checkEdit170;
             this.layoutControlItem176.CustomizationFormText = "layoutControlItem176";
-            this.layoutControlItem176.Location = new System.Drawing.Point(411, 245);
+            this.layoutControlItem176.Location = new System.Drawing.Point(415, 245);
             this.layoutControlItem176.Name = "layoutControlItem176";
-            this.layoutControlItem176.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem176.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem176.Text = "layoutControlItem176";
             this.layoutControlItem176.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem176.TextToControlDistance = 0;
@@ -4212,9 +3800,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem177.Control = this.checkEdit171;
             this.layoutControlItem177.CustomizationFormText = "layoutControlItem177";
-            this.layoutControlItem177.Location = new System.Drawing.Point(411, 294);
+            this.layoutControlItem177.Location = new System.Drawing.Point(415, 294);
             this.layoutControlItem177.Name = "layoutControlItem177";
-            this.layoutControlItem177.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem177.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem177.Text = "layoutControlItem177";
             this.layoutControlItem177.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem177.TextToControlDistance = 0;
@@ -4224,9 +3812,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem178.Control = this.checkEdit172;
             this.layoutControlItem178.CustomizationFormText = "layoutControlItem178";
-            this.layoutControlItem178.Location = new System.Drawing.Point(411, 343);
+            this.layoutControlItem178.Location = new System.Drawing.Point(415, 343);
             this.layoutControlItem178.Name = "layoutControlItem178";
-            this.layoutControlItem178.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem178.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem178.Text = "layoutControlItem178";
             this.layoutControlItem178.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem178.TextToControlDistance = 0;
@@ -4236,9 +3824,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem179.Control = this.checkEdit173;
             this.layoutControlItem179.CustomizationFormText = "layoutControlItem179";
-            this.layoutControlItem179.Location = new System.Drawing.Point(411, 392);
+            this.layoutControlItem179.Location = new System.Drawing.Point(415, 392);
             this.layoutControlItem179.Name = "layoutControlItem179";
-            this.layoutControlItem179.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem179.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem179.Text = "layoutControlItem179";
             this.layoutControlItem179.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem179.TextToControlDistance = 0;
@@ -4248,9 +3836,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem180.Control = this.checkEdit174;
             this.layoutControlItem180.CustomizationFormText = "layoutControlItem180";
-            this.layoutControlItem180.Location = new System.Drawing.Point(411, 441);
+            this.layoutControlItem180.Location = new System.Drawing.Point(415, 441);
             this.layoutControlItem180.Name = "layoutControlItem180";
-            this.layoutControlItem180.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem180.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem180.Text = "layoutControlItem180";
             this.layoutControlItem180.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem180.TextToControlDistance = 0;
@@ -4260,9 +3848,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem181.Control = this.checkEdit175;
             this.layoutControlItem181.CustomizationFormText = "layoutControlItem181";
-            this.layoutControlItem181.Location = new System.Drawing.Point(411, 490);
+            this.layoutControlItem181.Location = new System.Drawing.Point(415, 490);
             this.layoutControlItem181.Name = "layoutControlItem181";
-            this.layoutControlItem181.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem181.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem181.Text = "layoutControlItem181";
             this.layoutControlItem181.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem181.TextToControlDistance = 0;
@@ -4272,9 +3860,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem182.Control = this.checkEdit176;
             this.layoutControlItem182.CustomizationFormText = "layoutControlItem182";
-            this.layoutControlItem182.Location = new System.Drawing.Point(411, 539);
+            this.layoutControlItem182.Location = new System.Drawing.Point(415, 539);
             this.layoutControlItem182.Name = "layoutControlItem182";
-            this.layoutControlItem182.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem182.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem182.Text = "layoutControlItem182";
             this.layoutControlItem182.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem182.TextToControlDistance = 0;
@@ -4284,9 +3872,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem183.Control = this.checkEdit177;
             this.layoutControlItem183.CustomizationFormText = "layoutControlItem183";
-            this.layoutControlItem183.Location = new System.Drawing.Point(411, 588);
+            this.layoutControlItem183.Location = new System.Drawing.Point(415, 588);
             this.layoutControlItem183.Name = "layoutControlItem183";
-            this.layoutControlItem183.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem183.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem183.Text = "layoutControlItem183";
             this.layoutControlItem183.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem183.TextToControlDistance = 0;
@@ -4296,9 +3884,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem184.Control = this.checkEdit178;
             this.layoutControlItem184.CustomizationFormText = "layoutControlItem184";
-            this.layoutControlItem184.Location = new System.Drawing.Point(411, 637);
+            this.layoutControlItem184.Location = new System.Drawing.Point(415, 637);
             this.layoutControlItem184.Name = "layoutControlItem184";
-            this.layoutControlItem184.Size = new System.Drawing.Size(353, 49);
+            this.layoutControlItem184.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem184.Text = "layoutControlItem184";
             this.layoutControlItem184.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem184.TextToControlDistance = 0;
@@ -4308,9 +3896,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem185.Control = this.checkEdit179;
             this.layoutControlItem185.CustomizationFormText = "layoutControlItem185";
-            this.layoutControlItem185.Location = new System.Drawing.Point(764, 0);
+            this.layoutControlItem185.Location = new System.Drawing.Point(770, 0);
             this.layoutControlItem185.Name = "layoutControlItem185";
-            this.layoutControlItem185.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem185.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem185.Text = "layoutControlItem185";
             this.layoutControlItem185.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem185.TextToControlDistance = 0;
@@ -4320,9 +3908,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem186.Control = this.checkEdit180;
             this.layoutControlItem186.CustomizationFormText = "layoutControlItem186";
-            this.layoutControlItem186.Location = new System.Drawing.Point(764, 49);
+            this.layoutControlItem186.Location = new System.Drawing.Point(770, 49);
             this.layoutControlItem186.Name = "layoutControlItem186";
-            this.layoutControlItem186.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem186.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem186.Text = "layoutControlItem186";
             this.layoutControlItem186.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem186.TextToControlDistance = 0;
@@ -4332,9 +3920,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem187.Control = this.checkEdit181;
             this.layoutControlItem187.CustomizationFormText = "layoutControlItem187";
-            this.layoutControlItem187.Location = new System.Drawing.Point(764, 98);
+            this.layoutControlItem187.Location = new System.Drawing.Point(770, 98);
             this.layoutControlItem187.Name = "layoutControlItem187";
-            this.layoutControlItem187.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem187.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem187.Text = "layoutControlItem187";
             this.layoutControlItem187.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem187.TextToControlDistance = 0;
@@ -4344,9 +3932,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem188.Control = this.checkEdit182;
             this.layoutControlItem188.CustomizationFormText = "layoutControlItem188";
-            this.layoutControlItem188.Location = new System.Drawing.Point(764, 147);
+            this.layoutControlItem188.Location = new System.Drawing.Point(770, 147);
             this.layoutControlItem188.Name = "layoutControlItem188";
-            this.layoutControlItem188.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem188.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem188.Text = "layoutControlItem188";
             this.layoutControlItem188.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem188.TextToControlDistance = 0;
@@ -4356,9 +3944,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem189.Control = this.checkEdit183;
             this.layoutControlItem189.CustomizationFormText = "layoutControlItem189";
-            this.layoutControlItem189.Location = new System.Drawing.Point(764, 196);
+            this.layoutControlItem189.Location = new System.Drawing.Point(770, 196);
             this.layoutControlItem189.Name = "layoutControlItem189";
-            this.layoutControlItem189.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem189.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem189.Text = "layoutControlItem189";
             this.layoutControlItem189.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem189.TextToControlDistance = 0;
@@ -4368,9 +3956,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem190.Control = this.checkEdit184;
             this.layoutControlItem190.CustomizationFormText = "layoutControlItem190";
-            this.layoutControlItem190.Location = new System.Drawing.Point(764, 245);
+            this.layoutControlItem190.Location = new System.Drawing.Point(770, 245);
             this.layoutControlItem190.Name = "layoutControlItem190";
-            this.layoutControlItem190.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem190.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem190.Text = "layoutControlItem190";
             this.layoutControlItem190.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem190.TextToControlDistance = 0;
@@ -4380,9 +3968,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem191.Control = this.checkEdit185;
             this.layoutControlItem191.CustomizationFormText = "layoutControlItem191";
-            this.layoutControlItem191.Location = new System.Drawing.Point(764, 294);
+            this.layoutControlItem191.Location = new System.Drawing.Point(770, 294);
             this.layoutControlItem191.Name = "layoutControlItem191";
-            this.layoutControlItem191.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem191.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem191.Text = "layoutControlItem191";
             this.layoutControlItem191.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem191.TextToControlDistance = 0;
@@ -4392,9 +3980,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem192.Control = this.checkEdit186;
             this.layoutControlItem192.CustomizationFormText = "layoutControlItem192";
-            this.layoutControlItem192.Location = new System.Drawing.Point(764, 343);
+            this.layoutControlItem192.Location = new System.Drawing.Point(770, 343);
             this.layoutControlItem192.Name = "layoutControlItem192";
-            this.layoutControlItem192.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem192.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem192.Text = "layoutControlItem192";
             this.layoutControlItem192.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem192.TextToControlDistance = 0;
@@ -4404,9 +3992,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem193.Control = this.checkEdit187;
             this.layoutControlItem193.CustomizationFormText = "layoutControlItem193";
-            this.layoutControlItem193.Location = new System.Drawing.Point(764, 392);
+            this.layoutControlItem193.Location = new System.Drawing.Point(770, 392);
             this.layoutControlItem193.Name = "layoutControlItem193";
-            this.layoutControlItem193.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem193.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem193.Text = "layoutControlItem193";
             this.layoutControlItem193.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem193.TextToControlDistance = 0;
@@ -4416,9 +4004,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem194.Control = this.checkEdit188;
             this.layoutControlItem194.CustomizationFormText = "layoutControlItem194";
-            this.layoutControlItem194.Location = new System.Drawing.Point(764, 441);
+            this.layoutControlItem194.Location = new System.Drawing.Point(770, 441);
             this.layoutControlItem194.Name = "layoutControlItem194";
-            this.layoutControlItem194.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem194.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem194.Text = "layoutControlItem194";
             this.layoutControlItem194.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem194.TextToControlDistance = 0;
@@ -4428,9 +4016,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem195.Control = this.checkEdit189;
             this.layoutControlItem195.CustomizationFormText = "layoutControlItem195";
-            this.layoutControlItem195.Location = new System.Drawing.Point(764, 490);
+            this.layoutControlItem195.Location = new System.Drawing.Point(770, 490);
             this.layoutControlItem195.Name = "layoutControlItem195";
-            this.layoutControlItem195.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem195.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem195.Text = "layoutControlItem195";
             this.layoutControlItem195.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem195.TextToControlDistance = 0;
@@ -4440,9 +4028,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem196.Control = this.checkEdit190;
             this.layoutControlItem196.CustomizationFormText = "layoutControlItem196";
-            this.layoutControlItem196.Location = new System.Drawing.Point(764, 539);
+            this.layoutControlItem196.Location = new System.Drawing.Point(770, 539);
             this.layoutControlItem196.Name = "layoutControlItem196";
-            this.layoutControlItem196.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem196.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem196.Text = "layoutControlItem196";
             this.layoutControlItem196.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem196.TextToControlDistance = 0;
@@ -4452,9 +4040,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem197.Control = this.checkEdit191;
             this.layoutControlItem197.CustomizationFormText = "layoutControlItem197";
-            this.layoutControlItem197.Location = new System.Drawing.Point(764, 588);
+            this.layoutControlItem197.Location = new System.Drawing.Point(770, 588);
             this.layoutControlItem197.Name = "layoutControlItem197";
-            this.layoutControlItem197.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem197.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem197.Text = "layoutControlItem197";
             this.layoutControlItem197.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem197.TextToControlDistance = 0;
@@ -4464,9 +4052,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem198.Control = this.checkEdit192;
             this.layoutControlItem198.CustomizationFormText = "layoutControlItem198";
-            this.layoutControlItem198.Location = new System.Drawing.Point(764, 637);
+            this.layoutControlItem198.Location = new System.Drawing.Point(770, 637);
             this.layoutControlItem198.Name = "layoutControlItem198";
-            this.layoutControlItem198.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem198.Size = new System.Drawing.Size(375, 49);
             this.layoutControlItem198.Text = "layoutControlItem198";
             this.layoutControlItem198.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem198.TextToControlDistance = 0;
@@ -4476,9 +4064,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem199.Control = this.checkEdit193;
             this.layoutControlItem199.CustomizationFormText = "layoutControlItem199";
-            this.layoutControlItem199.Location = new System.Drawing.Point(411, 686);
+            this.layoutControlItem199.Location = new System.Drawing.Point(415, 686);
             this.layoutControlItem199.Name = "layoutControlItem199";
-            this.layoutControlItem199.Size = new System.Drawing.Size(353, 51);
+            this.layoutControlItem199.Size = new System.Drawing.Size(355, 51);
             this.layoutControlItem199.Text = "layoutControlItem199";
             this.layoutControlItem199.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem199.TextToControlDistance = 0;
@@ -4488,9 +4076,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem200.Control = this.checkEdit194;
             this.layoutControlItem200.CustomizationFormText = "layoutControlItem200";
-            this.layoutControlItem200.Location = new System.Drawing.Point(764, 686);
+            this.layoutControlItem200.Location = new System.Drawing.Point(770, 686);
             this.layoutControlItem200.Name = "layoutControlItem200";
-            this.layoutControlItem200.Size = new System.Drawing.Size(381, 51);
+            this.layoutControlItem200.Size = new System.Drawing.Size(375, 51);
             this.layoutControlItem200.Text = "layoutControlItem200";
             this.layoutControlItem200.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem200.TextToControlDistance = 0;
@@ -4544,7 +4132,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem70.CustomizationFormText = "layoutControlItem70";
             this.layoutControlItem70.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem70.Name = "layoutControlItem70";
-            this.layoutControlItem70.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem70.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem70.Text = "layoutControlItem70";
             this.layoutControlItem70.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem70.TextToControlDistance = 0;
@@ -4556,7 +4144,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem73.CustomizationFormText = "layoutControlItem73";
             this.layoutControlItem73.Location = new System.Drawing.Point(0, 196);
             this.layoutControlItem73.Name = "layoutControlItem73";
-            this.layoutControlItem73.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem73.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem73.Text = "layoutControlItem73";
             this.layoutControlItem73.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem73.TextToControlDistance = 0;
@@ -4566,9 +4154,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem76.Control = this.checkEdit75;
             this.layoutControlItem76.CustomizationFormText = "layoutControlItem76";
-            this.layoutControlItem76.Location = new System.Drawing.Point(423, 49);
+            this.layoutControlItem76.Location = new System.Drawing.Point(427, 49);
             this.layoutControlItem76.Name = "layoutControlItem76";
-            this.layoutControlItem76.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem76.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem76.Text = "layoutControlItem76";
             this.layoutControlItem76.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem76.TextToControlDistance = 0;
@@ -4578,9 +4166,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem6.Control = this.checkEdit4;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(423, 147);
+            this.layoutControlItem6.Location = new System.Drawing.Point(427, 147);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem6.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem6.Text = "layoutControlItem6";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
@@ -4590,9 +4178,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem5.Control = this.checkEdit3;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(423, 98);
+            this.layoutControlItem5.Location = new System.Drawing.Point(427, 98);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem5.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
@@ -4602,9 +4190,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem7.Control = this.checkEdit5;
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
-            this.layoutControlItem7.Location = new System.Drawing.Point(423, 196);
+            this.layoutControlItem7.Location = new System.Drawing.Point(427, 196);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem7.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem7.Text = "layoutControlItem7";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
@@ -4614,9 +4202,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem8.Control = this.checkEdit6;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
-            this.layoutControlItem8.Location = new System.Drawing.Point(423, 245);
+            this.layoutControlItem8.Location = new System.Drawing.Point(427, 245);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem8.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem8.Text = "layoutControlItem8";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
@@ -4626,9 +4214,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem12.Control = this.checkEdit10;
             this.layoutControlItem12.CustomizationFormText = "layoutControlItem12";
-            this.layoutControlItem12.Location = new System.Drawing.Point(423, 343);
+            this.layoutControlItem12.Location = new System.Drawing.Point(427, 343);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem12.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem12.Text = "layoutControlItem12";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextToControlDistance = 0;
@@ -4638,9 +4226,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem14.Control = this.checkEdit12;
             this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
-            this.layoutControlItem14.Location = new System.Drawing.Point(423, 441);
+            this.layoutControlItem14.Location = new System.Drawing.Point(427, 441);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem14.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem14.Text = "layoutControlItem14";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextToControlDistance = 0;
@@ -4650,9 +4238,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem26.Control = this.checkEdit24;
             this.layoutControlItem26.CustomizationFormText = "layoutControlItem26";
-            this.layoutControlItem26.Location = new System.Drawing.Point(423, 490);
+            this.layoutControlItem26.Location = new System.Drawing.Point(427, 490);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem26.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem26.Text = "layoutControlItem26";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem26.TextToControlDistance = 0;
@@ -4662,9 +4250,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem27.Control = this.checkEdit25;
             this.layoutControlItem27.CustomizationFormText = "layoutControlItem27";
-            this.layoutControlItem27.Location = new System.Drawing.Point(423, 539);
+            this.layoutControlItem27.Location = new System.Drawing.Point(427, 539);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem27.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem27.Text = "layoutControlItem27";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem27.TextToControlDistance = 0;
@@ -4674,9 +4262,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem28.Control = this.checkEdit26;
             this.layoutControlItem28.CustomizationFormText = "layoutControlItem28";
-            this.layoutControlItem28.Location = new System.Drawing.Point(423, 588);
+            this.layoutControlItem28.Location = new System.Drawing.Point(427, 588);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem28.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem28.Text = "layoutControlItem28";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextToControlDistance = 0;
@@ -4686,9 +4274,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem105.Control = this.checkEdit104;
             this.layoutControlItem105.CustomizationFormText = "layoutControlItem105";
-            this.layoutControlItem105.Location = new System.Drawing.Point(423, 637);
+            this.layoutControlItem105.Location = new System.Drawing.Point(427, 637);
             this.layoutControlItem105.Name = "layoutControlItem105";
-            this.layoutControlItem105.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem105.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem105.Text = "layoutControlItem105";
             this.layoutControlItem105.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem105.TextToControlDistance = 0;
@@ -4698,9 +4286,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem106.Control = this.checkEdit105;
             this.layoutControlItem106.CustomizationFormText = "layoutControlItem106";
-            this.layoutControlItem106.Location = new System.Drawing.Point(423, 686);
+            this.layoutControlItem106.Location = new System.Drawing.Point(427, 686);
             this.layoutControlItem106.Name = "layoutControlItem106";
-            this.layoutControlItem106.Size = new System.Drawing.Size(322, 51);
+            this.layoutControlItem106.Size = new System.Drawing.Size(323, 51);
             this.layoutControlItem106.Text = "layoutControlItem106";
             this.layoutControlItem106.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem106.TextToControlDistance = 0;
@@ -4710,9 +4298,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem75.Control = this.checkEdit74;
             this.layoutControlItem75.CustomizationFormText = "layoutControlItem75";
-            this.layoutControlItem75.Location = new System.Drawing.Point(423, 0);
+            this.layoutControlItem75.Location = new System.Drawing.Point(427, 0);
             this.layoutControlItem75.Name = "layoutControlItem75";
-            this.layoutControlItem75.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem75.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem75.Text = "layoutControlItem75";
             this.layoutControlItem75.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem75.TextToControlDistance = 0;
@@ -4724,7 +4312,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem69.CustomizationFormText = "layoutControlItem69";
             this.layoutControlItem69.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem69.Name = "layoutControlItem69";
-            this.layoutControlItem69.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem69.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem69.Text = "layoutControlItem69";
             this.layoutControlItem69.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem69.TextToControlDistance = 0;
@@ -4736,7 +4324,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem72.CustomizationFormText = "layoutControlItem72";
             this.layoutControlItem72.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem72.Name = "layoutControlItem72";
-            this.layoutControlItem72.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem72.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem72.Text = "layoutControlItem72";
             this.layoutControlItem72.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem72.TextToControlDistance = 0;
@@ -4748,7 +4336,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem48.CustomizationFormText = "layoutControlItem48";
             this.layoutControlItem48.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem48.Name = "layoutControlItem48";
-            this.layoutControlItem48.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem48.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem48.Text = "layoutControlItem48";
             this.layoutControlItem48.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem48.TextToControlDistance = 0;
@@ -4770,7 +4358,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
             this.layoutControlItem21.Location = new System.Drawing.Point(183, 245);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(240, 49);
+            this.layoutControlItem21.Size = new System.Drawing.Size(244, 49);
             this.layoutControlItem21.Text = "layoutControlItem21";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextToControlDistance = 0;
@@ -4782,7 +4370,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem9";
             this.layoutControlItem9.Location = new System.Drawing.Point(183, 294);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(240, 49);
+            this.layoutControlItem9.Size = new System.Drawing.Size(244, 49);
             this.layoutControlItem9.Text = "layoutControlItem9";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextToControlDistance = 0;
@@ -4808,7 +4396,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem20.CustomizationFormText = "layoutControlItem20";
             this.layoutControlItem20.Location = new System.Drawing.Point(183, 343);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(240, 49);
+            this.layoutControlItem20.Size = new System.Drawing.Size(244, 49);
             this.layoutControlItem20.Text = "layoutControlItem20";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextToControlDistance = 0;
@@ -4820,7 +4408,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem22.CustomizationFormText = "layoutControlItem22";
             this.layoutControlItem22.Location = new System.Drawing.Point(183, 392);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(240, 49);
+            this.layoutControlItem22.Size = new System.Drawing.Size(244, 49);
             this.layoutControlItem22.Text = "layoutControlItem22";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextToControlDistance = 0;
@@ -4830,9 +4418,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem11.Control = this.checkEdit9;
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem11";
-            this.layoutControlItem11.Location = new System.Drawing.Point(423, 294);
+            this.layoutControlItem11.Location = new System.Drawing.Point(427, 294);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem11.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem11.Text = "layoutControlItem11";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 0;
@@ -4842,9 +4430,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem13.Control = this.checkEdit11;
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem13";
-            this.layoutControlItem13.Location = new System.Drawing.Point(423, 392);
+            this.layoutControlItem13.Location = new System.Drawing.Point(427, 392);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(322, 49);
+            this.layoutControlItem13.Size = new System.Drawing.Size(323, 49);
             this.layoutControlItem13.Text = "layoutControlItem13";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextToControlDistance = 0;
@@ -4856,7 +4444,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem49.CustomizationFormText = "layoutControlItem49";
             this.layoutControlItem49.Location = new System.Drawing.Point(0, 441);
             this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem49.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem49.Text = "layoutControlItem49";
             this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem49.TextToControlDistance = 0;
@@ -4868,7 +4456,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem67.CustomizationFormText = "layoutControlItem67";
             this.layoutControlItem67.Location = new System.Drawing.Point(0, 490);
             this.layoutControlItem67.Name = "layoutControlItem67";
-            this.layoutControlItem67.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem67.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem67.Text = "layoutControlItem67";
             this.layoutControlItem67.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem67.TextToControlDistance = 0;
@@ -4880,7 +4468,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 539);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem1.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -4892,7 +4480,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem68.CustomizationFormText = "layoutControlItem68";
             this.layoutControlItem68.Location = new System.Drawing.Point(0, 588);
             this.layoutControlItem68.Name = "layoutControlItem68";
-            this.layoutControlItem68.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem68.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem68.Text = "layoutControlItem68";
             this.layoutControlItem68.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem68.TextToControlDistance = 0;
@@ -4904,7 +4492,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem71.CustomizationFormText = "layoutControlItem71";
             this.layoutControlItem71.Location = new System.Drawing.Point(0, 637);
             this.layoutControlItem71.Name = "layoutControlItem71";
-            this.layoutControlItem71.Size = new System.Drawing.Size(423, 49);
+            this.layoutControlItem71.Size = new System.Drawing.Size(427, 49);
             this.layoutControlItem71.Text = "layoutControlItem71";
             this.layoutControlItem71.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem71.TextToControlDistance = 0;
@@ -4916,7 +4504,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem74.CustomizationFormText = "layoutControlItem74";
             this.layoutControlItem74.Location = new System.Drawing.Point(0, 686);
             this.layoutControlItem74.Name = "layoutControlItem74";
-            this.layoutControlItem74.Size = new System.Drawing.Size(423, 51);
+            this.layoutControlItem74.Size = new System.Drawing.Size(427, 51);
             this.layoutControlItem74.Text = "layoutControlItem74";
             this.layoutControlItem74.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem74.TextToControlDistance = 0;
@@ -4926,9 +4514,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem107.Control = this.checkEdit106;
             this.layoutControlItem107.CustomizationFormText = "layoutControlItem107";
-            this.layoutControlItem107.Location = new System.Drawing.Point(745, 0);
+            this.layoutControlItem107.Location = new System.Drawing.Point(750, 0);
             this.layoutControlItem107.Name = "layoutControlItem107";
-            this.layoutControlItem107.Size = new System.Drawing.Size(400, 737);
+            this.layoutControlItem107.Size = new System.Drawing.Size(395, 737);
             this.layoutControlItem107.Text = "layoutControlItem107";
             this.layoutControlItem107.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem107.TextToControlDistance = 0;
@@ -4995,7 +4583,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem16.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem16.Text = "layoutControlItem16";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextToControlDistance = 0;
@@ -5005,7 +4593,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem42.Control = this.checkEdit40;
             this.layoutControlItem42.CustomizationFormText = "layoutControlItem42";
-            this.layoutControlItem42.Location = new System.Drawing.Point(381, 686);
+            this.layoutControlItem42.Location = new System.Drawing.Point(384, 686);
             this.layoutControlItem42.Name = "layoutControlItem42";
             this.layoutControlItem42.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem42.Text = "layoutControlItem42";
@@ -5017,7 +4605,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem41.Control = this.checkEdit39;
             this.layoutControlItem41.CustomizationFormText = "layoutControlItem41";
-            this.layoutControlItem41.Location = new System.Drawing.Point(381, 637);
+            this.layoutControlItem41.Location = new System.Drawing.Point(384, 637);
             this.layoutControlItem41.Name = "layoutControlItem41";
             this.layoutControlItem41.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem41.Text = "layoutControlItem41";
@@ -5029,7 +4617,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem40.Control = this.checkEdit38;
             this.layoutControlItem40.CustomizationFormText = "layoutControlItem40";
-            this.layoutControlItem40.Location = new System.Drawing.Point(381, 588);
+            this.layoutControlItem40.Location = new System.Drawing.Point(384, 588);
             this.layoutControlItem40.Name = "layoutControlItem40";
             this.layoutControlItem40.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem40.Text = "layoutControlItem40";
@@ -5041,7 +4629,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem39.Control = this.checkEdit37;
             this.layoutControlItem39.CustomizationFormText = "layoutControlItem39";
-            this.layoutControlItem39.Location = new System.Drawing.Point(381, 539);
+            this.layoutControlItem39.Location = new System.Drawing.Point(384, 539);
             this.layoutControlItem39.Name = "layoutControlItem39";
             this.layoutControlItem39.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem39.Text = "layoutControlItem39";
@@ -5053,7 +4641,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem38.Control = this.checkEdit36;
             this.layoutControlItem38.CustomizationFormText = "layoutControlItem38";
-            this.layoutControlItem38.Location = new System.Drawing.Point(381, 490);
+            this.layoutControlItem38.Location = new System.Drawing.Point(384, 490);
             this.layoutControlItem38.Name = "layoutControlItem38";
             this.layoutControlItem38.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem38.Text = "layoutControlItem38";
@@ -5065,7 +4653,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem37.Control = this.checkEdit35;
             this.layoutControlItem37.CustomizationFormText = "layoutControlItem37";
-            this.layoutControlItem37.Location = new System.Drawing.Point(381, 441);
+            this.layoutControlItem37.Location = new System.Drawing.Point(384, 441);
             this.layoutControlItem37.Name = "layoutControlItem37";
             this.layoutControlItem37.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem37.Text = "layoutControlItem37";
@@ -5077,7 +4665,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem36.Control = this.checkEdit34;
             this.layoutControlItem36.CustomizationFormText = "layoutControlItem36";
-            this.layoutControlItem36.Location = new System.Drawing.Point(381, 392);
+            this.layoutControlItem36.Location = new System.Drawing.Point(384, 392);
             this.layoutControlItem36.Name = "layoutControlItem36";
             this.layoutControlItem36.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem36.Text = "layoutControlItem36";
@@ -5089,7 +4677,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem35.Control = this.checkEdit33;
             this.layoutControlItem35.CustomizationFormText = "layoutControlItem35";
-            this.layoutControlItem35.Location = new System.Drawing.Point(381, 343);
+            this.layoutControlItem35.Location = new System.Drawing.Point(384, 343);
             this.layoutControlItem35.Name = "layoutControlItem35";
             this.layoutControlItem35.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem35.Text = "layoutControlItem35";
@@ -5101,7 +4689,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem34.Control = this.checkEdit32;
             this.layoutControlItem34.CustomizationFormText = "layoutControlItem34";
-            this.layoutControlItem34.Location = new System.Drawing.Point(381, 294);
+            this.layoutControlItem34.Location = new System.Drawing.Point(384, 294);
             this.layoutControlItem34.Name = "layoutControlItem34";
             this.layoutControlItem34.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem34.Text = "layoutControlItem34";
@@ -5113,7 +4701,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem33.Control = this.checkEdit31;
             this.layoutControlItem33.CustomizationFormText = "layoutControlItem33";
-            this.layoutControlItem33.Location = new System.Drawing.Point(381, 245);
+            this.layoutControlItem33.Location = new System.Drawing.Point(384, 245);
             this.layoutControlItem33.Name = "layoutControlItem33";
             this.layoutControlItem33.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem33.Text = "layoutControlItem33";
@@ -5125,7 +4713,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem32.Control = this.checkEdit30;
             this.layoutControlItem32.CustomizationFormText = "layoutControlItem32";
-            this.layoutControlItem32.Location = new System.Drawing.Point(381, 196);
+            this.layoutControlItem32.Location = new System.Drawing.Point(384, 196);
             this.layoutControlItem32.Name = "layoutControlItem32";
             this.layoutControlItem32.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem32.Text = "layoutControlItem32";
@@ -5137,7 +4725,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem31.Control = this.checkEdit29;
             this.layoutControlItem31.CustomizationFormText = "layoutControlItem31";
-            this.layoutControlItem31.Location = new System.Drawing.Point(381, 147);
+            this.layoutControlItem31.Location = new System.Drawing.Point(384, 147);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem31.Text = "layoutControlItem31";
@@ -5149,7 +4737,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem99.Control = this.checkEdit98;
             this.layoutControlItem99.CustomizationFormText = "layoutControlItem99";
-            this.layoutControlItem99.Location = new System.Drawing.Point(381, 49);
+            this.layoutControlItem99.Location = new System.Drawing.Point(384, 49);
             this.layoutControlItem99.Name = "layoutControlItem99";
             this.layoutControlItem99.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem99.Text = "layoutControlItem99";
@@ -5161,7 +4749,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem29.Control = this.checkEdit27;
             this.layoutControlItem29.CustomizationFormText = "layoutControlItem29";
-            this.layoutControlItem29.Location = new System.Drawing.Point(381, 0);
+            this.layoutControlItem29.Location = new System.Drawing.Point(384, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem29.Text = "layoutControlItem29";
@@ -5175,7 +4763,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem17.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem17.Text = "layoutControlItem17";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
@@ -5187,7 +4775,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem18.CustomizationFormText = "layoutControlItem18";
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem18.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem18.Text = "layoutControlItem18";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
@@ -5197,7 +4785,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem30.Control = this.checkEdit28;
             this.layoutControlItem30.CustomizationFormText = "layoutControlItem30";
-            this.layoutControlItem30.Location = new System.Drawing.Point(381, 98);
+            this.layoutControlItem30.Location = new System.Drawing.Point(384, 98);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.Size = new System.Drawing.Size(404, 49);
             this.layoutControlItem30.Text = "layoutControlItem30";
@@ -5211,7 +4799,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem19.CustomizationFormText = "layoutControlItem19";
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem19.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem19.Text = "layoutControlItem19";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextToControlDistance = 0;
@@ -5223,7 +4811,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 196);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem15.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem15.Text = "layoutControlItem15";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextToControlDistance = 0;
@@ -5235,7 +4823,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem24.CustomizationFormText = "layoutControlItem24";
             this.layoutControlItem24.Location = new System.Drawing.Point(0, 245);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem24.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem24.Text = "layoutControlItem24";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextToControlDistance = 0;
@@ -5247,7 +4835,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem25.CustomizationFormText = "layoutControlItem25";
             this.layoutControlItem25.Location = new System.Drawing.Point(0, 294);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem25.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem25.Text = "layoutControlItem25";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextToControlDistance = 0;
@@ -5259,7 +4847,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem45.CustomizationFormText = "layoutControlItem45";
             this.layoutControlItem45.Location = new System.Drawing.Point(0, 343);
             this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem45.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem45.Text = "layoutControlItem45";
             this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem45.TextToControlDistance = 0;
@@ -5271,7 +4859,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem46.CustomizationFormText = "layoutControlItem46";
             this.layoutControlItem46.Location = new System.Drawing.Point(0, 392);
             this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem46.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem46.Text = "layoutControlItem46";
             this.layoutControlItem46.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem46.TextToControlDistance = 0;
@@ -5283,7 +4871,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem47.CustomizationFormText = "layoutControlItem47";
             this.layoutControlItem47.Location = new System.Drawing.Point(0, 441);
             this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem47.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem47.Text = "layoutControlItem47";
             this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem47.TextToControlDistance = 0;
@@ -5295,7 +4883,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem50.CustomizationFormText = "layoutControlItem50";
             this.layoutControlItem50.Location = new System.Drawing.Point(0, 490);
             this.layoutControlItem50.Name = "layoutControlItem50";
-            this.layoutControlItem50.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem50.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem50.Text = "layoutControlItem50";
             this.layoutControlItem50.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem50.TextToControlDistance = 0;
@@ -5307,7 +4895,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem51.CustomizationFormText = "layoutControlItem51";
             this.layoutControlItem51.Location = new System.Drawing.Point(0, 539);
             this.layoutControlItem51.Name = "layoutControlItem51";
-            this.layoutControlItem51.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem51.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem51.Text = "layoutControlItem51";
             this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem51.TextToControlDistance = 0;
@@ -5319,7 +4907,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem52.CustomizationFormText = "layoutControlItem52";
             this.layoutControlItem52.Location = new System.Drawing.Point(0, 588);
             this.layoutControlItem52.Name = "layoutControlItem52";
-            this.layoutControlItem52.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem52.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem52.Text = "layoutControlItem52";
             this.layoutControlItem52.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem52.TextToControlDistance = 0;
@@ -5331,7 +4919,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem78.CustomizationFormText = "layoutControlItem78";
             this.layoutControlItem78.Location = new System.Drawing.Point(0, 637);
             this.layoutControlItem78.Name = "layoutControlItem78";
-            this.layoutControlItem78.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem78.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem78.Text = "layoutControlItem78";
             this.layoutControlItem78.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem78.TextToControlDistance = 0;
@@ -5343,7 +4931,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem79.CustomizationFormText = "layoutControlItem79";
             this.layoutControlItem79.Location = new System.Drawing.Point(0, 686);
             this.layoutControlItem79.Name = "layoutControlItem79";
-            this.layoutControlItem79.Size = new System.Drawing.Size(381, 49);
+            this.layoutControlItem79.Size = new System.Drawing.Size(384, 49);
             this.layoutControlItem79.Text = "layoutControlItem79";
             this.layoutControlItem79.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem79.TextToControlDistance = 0;
@@ -5353,9 +4941,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem43.Control = this.checkEdit41;
             this.layoutControlItem43.CustomizationFormText = "layoutControlItem43";
-            this.layoutControlItem43.Location = new System.Drawing.Point(785, 0);
+            this.layoutControlItem43.Location = new System.Drawing.Point(788, 0);
             this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem43.Size = new System.Drawing.Size(355, 49);
             this.layoutControlItem43.Text = "layoutControlItem43";
             this.layoutControlItem43.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem43.TextToControlDistance = 0;
@@ -5365,9 +4953,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem23.Control = this.checkEdit16;
             this.layoutControlItem23.CustomizationFormText = "layoutControlItem23";
-            this.layoutControlItem23.Location = new System.Drawing.Point(785, 49);
+            this.layoutControlItem23.Location = new System.Drawing.Point(788, 49);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(358, 686);
+            this.layoutControlItem23.Size = new System.Drawing.Size(355, 686);
             this.layoutControlItem23.Text = "layoutControlItem23";
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextToControlDistance = 0;
@@ -5432,7 +5020,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem53.CustomizationFormText = "layoutControlItem53";
             this.layoutControlItem53.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem53.Name = "layoutControlItem53";
-            this.layoutControlItem53.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem53.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem53.Text = "layoutControlItem53";
             this.layoutControlItem53.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem53.TextToControlDistance = 0;
@@ -5444,7 +5032,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem56.CustomizationFormText = "layoutControlItem56";
             this.layoutControlItem56.Location = new System.Drawing.Point(0, 196);
             this.layoutControlItem56.Name = "layoutControlItem56";
-            this.layoutControlItem56.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem56.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem56.Text = "layoutControlItem56";
             this.layoutControlItem56.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem56.TextToControlDistance = 0;
@@ -5456,7 +5044,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem58.CustomizationFormText = "layoutControlItem58";
             this.layoutControlItem58.Location = new System.Drawing.Point(0, 294);
             this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem58.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem58.Text = "layoutControlItem58";
             this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem58.TextToControlDistance = 0;
@@ -5468,7 +5056,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem59.CustomizationFormText = "layoutControlItem59";
             this.layoutControlItem59.Location = new System.Drawing.Point(0, 343);
             this.layoutControlItem59.Name = "layoutControlItem59";
-            this.layoutControlItem59.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem59.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem59.Text = "layoutControlItem59";
             this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem59.TextToControlDistance = 0;
@@ -5480,7 +5068,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem60.CustomizationFormText = "layoutControlItem60";
             this.layoutControlItem60.Location = new System.Drawing.Point(0, 392);
             this.layoutControlItem60.Name = "layoutControlItem60";
-            this.layoutControlItem60.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem60.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem60.Text = "layoutControlItem60";
             this.layoutControlItem60.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem60.TextToControlDistance = 0;
@@ -5492,7 +5080,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem61.CustomizationFormText = "layoutControlItem61";
             this.layoutControlItem61.Location = new System.Drawing.Point(0, 441);
             this.layoutControlItem61.Name = "layoutControlItem61";
-            this.layoutControlItem61.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem61.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem61.Text = "layoutControlItem61";
             this.layoutControlItem61.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem61.TextToControlDistance = 0;
@@ -5504,7 +5092,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem62.CustomizationFormText = "layoutControlItem62";
             this.layoutControlItem62.Location = new System.Drawing.Point(0, 490);
             this.layoutControlItem62.Name = "layoutControlItem62";
-            this.layoutControlItem62.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem62.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem62.Text = "layoutControlItem62";
             this.layoutControlItem62.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem62.TextToControlDistance = 0;
@@ -5516,7 +5104,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem63.CustomizationFormText = "layoutControlItem63";
             this.layoutControlItem63.Location = new System.Drawing.Point(0, 539);
             this.layoutControlItem63.Name = "layoutControlItem63";
-            this.layoutControlItem63.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem63.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem63.Text = "layoutControlItem63";
             this.layoutControlItem63.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem63.TextToControlDistance = 0;
@@ -5528,7 +5116,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem64.CustomizationFormText = "layoutControlItem64";
             this.layoutControlItem64.Location = new System.Drawing.Point(0, 588);
             this.layoutControlItem64.Name = "layoutControlItem64";
-            this.layoutControlItem64.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem64.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem64.Text = "layoutControlItem64";
             this.layoutControlItem64.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem64.TextToControlDistance = 0;
@@ -5540,7 +5128,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem65.CustomizationFormText = "layoutControlItem65";
             this.layoutControlItem65.Location = new System.Drawing.Point(0, 637);
             this.layoutControlItem65.Name = "layoutControlItem65";
-            this.layoutControlItem65.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem65.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem65.Text = "layoutControlItem65";
             this.layoutControlItem65.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem65.TextToControlDistance = 0;
@@ -5552,7 +5140,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 686);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(421, 51);
+            this.layoutControlItem3.Size = new System.Drawing.Size(425, 51);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -5562,9 +5150,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem87.Control = this.checkEdit86;
             this.layoutControlItem87.CustomizationFormText = "layoutControlItem87";
-            this.layoutControlItem87.Location = new System.Drawing.Point(421, 98);
+            this.layoutControlItem87.Location = new System.Drawing.Point(425, 98);
             this.layoutControlItem87.Name = "layoutControlItem87";
-            this.layoutControlItem87.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem87.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem87.Text = "layoutControlItem87";
             this.layoutControlItem87.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem87.TextToControlDistance = 0;
@@ -5574,9 +5162,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem89.Control = this.checkEdit88;
             this.layoutControlItem89.CustomizationFormText = "layoutControlItem89";
-            this.layoutControlItem89.Location = new System.Drawing.Point(421, 196);
+            this.layoutControlItem89.Location = new System.Drawing.Point(425, 196);
             this.layoutControlItem89.Name = "layoutControlItem89";
-            this.layoutControlItem89.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem89.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem89.Text = "layoutControlItem89";
             this.layoutControlItem89.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem89.TextToControlDistance = 0;
@@ -5588,7 +5176,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem90.CustomizationFormText = "layoutControlItem90";
             this.layoutControlItem90.Location = new System.Drawing.Point(0, 245);
             this.layoutControlItem90.Name = "layoutControlItem90";
-            this.layoutControlItem90.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem90.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem90.Text = "layoutControlItem90";
             this.layoutControlItem90.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem90.TextToControlDistance = 0;
@@ -5598,9 +5186,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem91.Control = this.checkEdit90;
             this.layoutControlItem91.CustomizationFormText = "layoutControlItem91";
-            this.layoutControlItem91.Location = new System.Drawing.Point(421, 294);
+            this.layoutControlItem91.Location = new System.Drawing.Point(425, 294);
             this.layoutControlItem91.Name = "layoutControlItem91";
-            this.layoutControlItem91.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem91.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem91.Text = "layoutControlItem91";
             this.layoutControlItem91.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem91.TextToControlDistance = 0;
@@ -5610,9 +5198,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem92.Control = this.checkEdit91;
             this.layoutControlItem92.CustomizationFormText = "layoutControlItem92";
-            this.layoutControlItem92.Location = new System.Drawing.Point(421, 343);
+            this.layoutControlItem92.Location = new System.Drawing.Point(425, 343);
             this.layoutControlItem92.Name = "layoutControlItem92";
-            this.layoutControlItem92.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem92.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem92.Text = "layoutControlItem92";
             this.layoutControlItem92.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem92.TextToControlDistance = 0;
@@ -5622,9 +5210,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem93.Control = this.checkEdit92;
             this.layoutControlItem93.CustomizationFormText = "layoutControlItem93";
-            this.layoutControlItem93.Location = new System.Drawing.Point(421, 392);
+            this.layoutControlItem93.Location = new System.Drawing.Point(425, 392);
             this.layoutControlItem93.Name = "layoutControlItem93";
-            this.layoutControlItem93.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem93.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem93.Text = "layoutControlItem93";
             this.layoutControlItem93.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem93.TextToControlDistance = 0;
@@ -5634,9 +5222,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem94.Control = this.checkEdit93;
             this.layoutControlItem94.CustomizationFormText = "layoutControlItem94";
-            this.layoutControlItem94.Location = new System.Drawing.Point(421, 441);
+            this.layoutControlItem94.Location = new System.Drawing.Point(425, 441);
             this.layoutControlItem94.Name = "layoutControlItem94";
-            this.layoutControlItem94.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem94.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem94.Text = "layoutControlItem94";
             this.layoutControlItem94.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem94.TextToControlDistance = 0;
@@ -5646,9 +5234,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem112.Control = this.checkEdit111;
             this.layoutControlItem112.CustomizationFormText = "layoutControlItem112";
-            this.layoutControlItem112.Location = new System.Drawing.Point(421, 490);
+            this.layoutControlItem112.Location = new System.Drawing.Point(425, 490);
             this.layoutControlItem112.Name = "layoutControlItem112";
-            this.layoutControlItem112.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem112.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem112.Text = "layoutControlItem112";
             this.layoutControlItem112.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem112.TextToControlDistance = 0;
@@ -5658,9 +5246,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem113.Control = this.checkEdit112;
             this.layoutControlItem113.CustomizationFormText = "layoutControlItem113";
-            this.layoutControlItem113.Location = new System.Drawing.Point(421, 539);
+            this.layoutControlItem113.Location = new System.Drawing.Point(425, 539);
             this.layoutControlItem113.Name = "layoutControlItem113";
-            this.layoutControlItem113.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem113.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem113.Text = "layoutControlItem113";
             this.layoutControlItem113.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem113.TextToControlDistance = 0;
@@ -5670,9 +5258,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem114.Control = this.checkEdit113;
             this.layoutControlItem114.CustomizationFormText = "layoutControlItem114";
-            this.layoutControlItem114.Location = new System.Drawing.Point(421, 588);
+            this.layoutControlItem114.Location = new System.Drawing.Point(425, 588);
             this.layoutControlItem114.Name = "layoutControlItem114";
-            this.layoutControlItem114.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem114.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem114.Text = "layoutControlItem114";
             this.layoutControlItem114.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem114.TextToControlDistance = 0;
@@ -5682,9 +5270,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem115.Control = this.checkEdit114;
             this.layoutControlItem115.CustomizationFormText = "layoutControlItem115";
-            this.layoutControlItem115.Location = new System.Drawing.Point(421, 637);
+            this.layoutControlItem115.Location = new System.Drawing.Point(425, 637);
             this.layoutControlItem115.Name = "layoutControlItem115";
-            this.layoutControlItem115.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem115.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem115.Text = "layoutControlItem115";
             this.layoutControlItem115.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem115.TextToControlDistance = 0;
@@ -5694,9 +5282,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem116.Control = this.checkEdit115;
             this.layoutControlItem116.CustomizationFormText = "layoutControlItem116";
-            this.layoutControlItem116.Location = new System.Drawing.Point(421, 686);
+            this.layoutControlItem116.Location = new System.Drawing.Point(425, 686);
             this.layoutControlItem116.Name = "layoutControlItem116";
-            this.layoutControlItem116.Size = new System.Drawing.Size(724, 51);
+            this.layoutControlItem116.Size = new System.Drawing.Size(720, 51);
             this.layoutControlItem116.Text = "layoutControlItem116";
             this.layoutControlItem116.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem116.TextToControlDistance = 0;
@@ -5706,9 +5294,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem80.Control = this.checkEdit79;
             this.layoutControlItem80.CustomizationFormText = "layoutControlItem80";
-            this.layoutControlItem80.Location = new System.Drawing.Point(421, 0);
+            this.layoutControlItem80.Location = new System.Drawing.Point(425, 0);
             this.layoutControlItem80.Name = "layoutControlItem80";
-            this.layoutControlItem80.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem80.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem80.Text = "layoutControlItem80";
             this.layoutControlItem80.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem80.TextToControlDistance = 0;
@@ -5718,9 +5306,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem66.Control = this.checkEdit64;
             this.layoutControlItem66.CustomizationFormText = "layoutControlItem66";
-            this.layoutControlItem66.Location = new System.Drawing.Point(421, 49);
+            this.layoutControlItem66.Location = new System.Drawing.Point(425, 49);
             this.layoutControlItem66.Name = "layoutControlItem66";
-            this.layoutControlItem66.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem66.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem66.Text = "layoutControlItem66";
             this.layoutControlItem66.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem66.TextToControlDistance = 0;
@@ -5732,7 +5320,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem55.CustomizationFormText = "layoutControlItem55";
             this.layoutControlItem55.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem55.Name = "layoutControlItem55";
-            this.layoutControlItem55.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem55.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem55.Text = "layoutControlItem55";
             this.layoutControlItem55.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem55.TextToControlDistance = 0;
@@ -5744,7 +5332,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem88.CustomizationFormText = "layoutControlItem88";
             this.layoutControlItem88.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem88.Name = "layoutControlItem88";
-            this.layoutControlItem88.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem88.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem88.Text = "layoutControlItem88";
             this.layoutControlItem88.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem88.TextToControlDistance = 0;
@@ -5754,9 +5342,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem54.Control = this.checkEdit52;
             this.layoutControlItem54.CustomizationFormText = "layoutControlItem54";
-            this.layoutControlItem54.Location = new System.Drawing.Point(787, 0);
+            this.layoutControlItem54.Location = new System.Drawing.Point(795, 0);
             this.layoutControlItem54.Name = "layoutControlItem54";
-            this.layoutControlItem54.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem54.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem54.Text = "layoutControlItem54";
             this.layoutControlItem54.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem54.TextToControlDistance = 0;
@@ -5766,9 +5354,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem118.Control = this.checkEdit117;
             this.layoutControlItem118.CustomizationFormText = "layoutControlItem118";
-            this.layoutControlItem118.Location = new System.Drawing.Point(787, 49);
+            this.layoutControlItem118.Location = new System.Drawing.Point(795, 49);
             this.layoutControlItem118.Name = "layoutControlItem118";
-            this.layoutControlItem118.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem118.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem118.Text = "layoutControlItem118";
             this.layoutControlItem118.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem118.TextToControlDistance = 0;
@@ -5778,9 +5366,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem83.Control = this.checkEdit82;
             this.layoutControlItem83.CustomizationFormText = "layoutControlItem83";
-            this.layoutControlItem83.Location = new System.Drawing.Point(787, 98);
+            this.layoutControlItem83.Location = new System.Drawing.Point(795, 98);
             this.layoutControlItem83.Name = "layoutControlItem83";
-            this.layoutControlItem83.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem83.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem83.Text = "layoutControlItem83";
             this.layoutControlItem83.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem83.TextToControlDistance = 0;
@@ -5790,9 +5378,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem103.Control = this.checkEdit102;
             this.layoutControlItem103.CustomizationFormText = "layoutControlItem103";
-            this.layoutControlItem103.Location = new System.Drawing.Point(787, 196);
+            this.layoutControlItem103.Location = new System.Drawing.Point(795, 196);
             this.layoutControlItem103.Name = "layoutControlItem103";
-            this.layoutControlItem103.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem103.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem103.Text = "layoutControlItem103";
             this.layoutControlItem103.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem103.TextToControlDistance = 0;
@@ -5802,9 +5390,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem81.Control = this.checkEdit80;
             this.layoutControlItem81.CustomizationFormText = "layoutControlItem81";
-            this.layoutControlItem81.Location = new System.Drawing.Point(787, 245);
+            this.layoutControlItem81.Location = new System.Drawing.Point(795, 245);
             this.layoutControlItem81.Name = "layoutControlItem81";
-            this.layoutControlItem81.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem81.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem81.Text = "layoutControlItem81";
             this.layoutControlItem81.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem81.TextToControlDistance = 0;
@@ -5814,9 +5402,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem82.Control = this.checkEdit81;
             this.layoutControlItem82.CustomizationFormText = "layoutControlItem82";
-            this.layoutControlItem82.Location = new System.Drawing.Point(787, 294);
+            this.layoutControlItem82.Location = new System.Drawing.Point(795, 294);
             this.layoutControlItem82.Name = "layoutControlItem82";
-            this.layoutControlItem82.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem82.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem82.Text = "layoutControlItem82";
             this.layoutControlItem82.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem82.TextToControlDistance = 0;
@@ -5826,9 +5414,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem84.Control = this.checkEdit83;
             this.layoutControlItem84.CustomizationFormText = "layoutControlItem84";
-            this.layoutControlItem84.Location = new System.Drawing.Point(787, 343);
+            this.layoutControlItem84.Location = new System.Drawing.Point(795, 343);
             this.layoutControlItem84.Name = "layoutControlItem84";
-            this.layoutControlItem84.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem84.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem84.Text = "layoutControlItem84";
             this.layoutControlItem84.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem84.TextToControlDistance = 0;
@@ -5838,9 +5426,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem102.Control = this.checkEdit101;
             this.layoutControlItem102.CustomizationFormText = "layoutControlItem102";
-            this.layoutControlItem102.Location = new System.Drawing.Point(787, 392);
+            this.layoutControlItem102.Location = new System.Drawing.Point(795, 392);
             this.layoutControlItem102.Name = "layoutControlItem102";
-            this.layoutControlItem102.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem102.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem102.Text = "layoutControlItem102";
             this.layoutControlItem102.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem102.TextToControlDistance = 0;
@@ -5850,9 +5438,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem104.Control = this.checkEdit103;
             this.layoutControlItem104.CustomizationFormText = "layoutControlItem104";
-            this.layoutControlItem104.Location = new System.Drawing.Point(787, 441);
+            this.layoutControlItem104.Location = new System.Drawing.Point(795, 441);
             this.layoutControlItem104.Name = "layoutControlItem104";
-            this.layoutControlItem104.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem104.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem104.Text = "layoutControlItem104";
             this.layoutControlItem104.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem104.TextToControlDistance = 0;
@@ -5862,9 +5450,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem85.Control = this.checkEdit84;
             this.layoutControlItem85.CustomizationFormText = "layoutControlItem85";
-            this.layoutControlItem85.Location = new System.Drawing.Point(787, 490);
+            this.layoutControlItem85.Location = new System.Drawing.Point(795, 490);
             this.layoutControlItem85.Name = "layoutControlItem85";
-            this.layoutControlItem85.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem85.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem85.Text = "layoutControlItem85";
             this.layoutControlItem85.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem85.TextToControlDistance = 0;
@@ -5874,9 +5462,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem101.Control = this.checkEdit100;
             this.layoutControlItem101.CustomizationFormText = "layoutControlItem101";
-            this.layoutControlItem101.Location = new System.Drawing.Point(787, 539);
+            this.layoutControlItem101.Location = new System.Drawing.Point(795, 539);
             this.layoutControlItem101.Name = "layoutControlItem101";
-            this.layoutControlItem101.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem101.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem101.Text = "layoutControlItem101";
             this.layoutControlItem101.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem101.TextToControlDistance = 0;
@@ -5886,9 +5474,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem86.Control = this.checkEdit85;
             this.layoutControlItem86.CustomizationFormText = "layoutControlItem86";
-            this.layoutControlItem86.Location = new System.Drawing.Point(787, 588);
+            this.layoutControlItem86.Location = new System.Drawing.Point(795, 588);
             this.layoutControlItem86.Name = "layoutControlItem86";
-            this.layoutControlItem86.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem86.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem86.Text = "layoutControlItem86";
             this.layoutControlItem86.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem86.TextToControlDistance = 0;
@@ -5898,9 +5486,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem100.Control = this.checkEdit99;
             this.layoutControlItem100.CustomizationFormText = "layoutControlItem100";
-            this.layoutControlItem100.Location = new System.Drawing.Point(787, 637);
+            this.layoutControlItem100.Location = new System.Drawing.Point(795, 637);
             this.layoutControlItem100.Name = "layoutControlItem100";
-            this.layoutControlItem100.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem100.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem100.Text = "layoutControlItem100";
             this.layoutControlItem100.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem100.TextToControlDistance = 0;
@@ -5912,7 +5500,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem57.CustomizationFormText = "layoutControlItem57";
             this.layoutControlItem57.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem57.Name = "layoutControlItem57";
-            this.layoutControlItem57.Size = new System.Drawing.Size(421, 49);
+            this.layoutControlItem57.Size = new System.Drawing.Size(425, 49);
             this.layoutControlItem57.Text = "layoutControlItem57";
             this.layoutControlItem57.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem57.TextToControlDistance = 0;
@@ -5922,9 +5510,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem117.Control = this.checkEdit116;
             this.layoutControlItem117.CustomizationFormText = "layoutControlItem117";
-            this.layoutControlItem117.Location = new System.Drawing.Point(421, 245);
+            this.layoutControlItem117.Location = new System.Drawing.Point(425, 245);
             this.layoutControlItem117.Name = "layoutControlItem117";
-            this.layoutControlItem117.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem117.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem117.Text = "layoutControlItem117";
             this.layoutControlItem117.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem117.TextToControlDistance = 0;
@@ -5934,9 +5522,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem44.Control = this.checkEdit42;
             this.layoutControlItem44.CustomizationFormText = "layoutControlItem44";
-            this.layoutControlItem44.Location = new System.Drawing.Point(421, 147);
+            this.layoutControlItem44.Location = new System.Drawing.Point(425, 147);
             this.layoutControlItem44.Name = "layoutControlItem44";
-            this.layoutControlItem44.Size = new System.Drawing.Size(366, 49);
+            this.layoutControlItem44.Size = new System.Drawing.Size(370, 49);
             this.layoutControlItem44.Text = "layoutControlItem44";
             this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem44.TextToControlDistance = 0;
@@ -5946,24 +5534,597 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlItem77.Control = this.checkEdit76;
             this.layoutControlItem77.CustomizationFormText = "layoutControlItem77";
-            this.layoutControlItem77.Location = new System.Drawing.Point(787, 147);
+            this.layoutControlItem77.Location = new System.Drawing.Point(795, 147);
             this.layoutControlItem77.Name = "layoutControlItem77";
-            this.layoutControlItem77.Size = new System.Drawing.Size(358, 49);
+            this.layoutControlItem77.Size = new System.Drawing.Size(350, 49);
             this.layoutControlItem77.Text = "layoutControlItem77";
             this.layoutControlItem77.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem77.TextToControlDistance = 0;
             this.layoutControlItem77.TextVisible = false;
             // 
-            // layoutControlItem4
+            // layoutControlGroup7
             // 
-            this.layoutControlItem4.Control = this.gridControl1;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(1169, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(287, 710);
-            this.layoutControlItem4.Text = "Seçilen Tahlil Listesi";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(92, 13);
+            this.layoutControlGroup7.CustomizationFormText = "layoutControlGroup7";
+            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem95,
+            this.layoutControlItem97,
+            this.layoutControlItem119,
+            this.layoutControlItem120,
+            this.layoutControlItem121,
+            this.layoutControlItem122,
+            this.layoutControlItem123,
+            this.layoutControlItem124,
+            this.layoutControlItem125,
+            this.layoutControlItem126,
+            this.layoutControlItem127,
+            this.layoutControlItem128,
+            this.layoutControlItem129,
+            this.layoutControlItem130,
+            this.layoutControlItem131,
+            this.layoutControlItem135,
+            this.layoutControlItem136,
+            this.layoutControlItem137,
+            this.layoutControlItem138,
+            this.layoutControlItem139,
+            this.layoutControlItem140,
+            this.layoutControlItem141,
+            this.layoutControlItem142,
+            this.layoutControlItem143,
+            this.layoutControlItem144,
+            this.layoutControlItem145,
+            this.layoutControlItem146,
+            this.layoutControlItem147,
+            this.layoutControlItem148,
+            this.layoutControlItem149,
+            this.layoutControlItem155,
+            this.layoutControlItem156,
+            this.layoutControlItem157,
+            this.layoutControlItem158,
+            this.layoutControlItem159,
+            this.layoutControlItem160,
+            this.layoutControlItem161,
+            this.layoutControlItem162,
+            this.layoutControlItem163,
+            this.layoutControlItem164,
+            this.emptySpaceItem5,
+            this.emptySpaceItem6,
+            this.emptySpaceItem7,
+            this.emptySpaceItem8,
+            this.emptySpaceItem9});
+            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup7.Name = "layoutControlGroup7";
+            this.layoutControlGroup7.Size = new System.Drawing.Size(1145, 737);
+            this.layoutControlGroup7.Text = "Sayfa-4";
+            // 
+            // layoutControlItem95
+            // 
+            this.layoutControlItem95.Control = this.checkEdit95;
+            this.layoutControlItem95.CustomizationFormText = "layoutControlItem95";
+            this.layoutControlItem95.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem95.Name = "layoutControlItem95";
+            this.layoutControlItem95.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem95.Text = "layoutControlItem95";
+            this.layoutControlItem95.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem95.TextToControlDistance = 0;
+            this.layoutControlItem95.TextVisible = false;
+            // 
+            // layoutControlItem97
+            // 
+            this.layoutControlItem97.Control = this.checkEdit96;
+            this.layoutControlItem97.CustomizationFormText = "layoutControlItem97";
+            this.layoutControlItem97.Location = new System.Drawing.Point(0, 49);
+            this.layoutControlItem97.Name = "layoutControlItem97";
+            this.layoutControlItem97.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem97.Text = "layoutControlItem97";
+            this.layoutControlItem97.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem97.TextToControlDistance = 0;
+            this.layoutControlItem97.TextVisible = false;
+            // 
+            // layoutControlItem119
+            // 
+            this.layoutControlItem119.Control = this.checkEdit118;
+            this.layoutControlItem119.CustomizationFormText = "layoutControlItem119";
+            this.layoutControlItem119.Location = new System.Drawing.Point(0, 98);
+            this.layoutControlItem119.Name = "layoutControlItem119";
+            this.layoutControlItem119.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem119.Text = "layoutControlItem119";
+            this.layoutControlItem119.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem119.TextToControlDistance = 0;
+            this.layoutControlItem119.TextVisible = false;
+            // 
+            // layoutControlItem120
+            // 
+            this.layoutControlItem120.Control = this.checkEdit119;
+            this.layoutControlItem120.CustomizationFormText = "layoutControlItem120";
+            this.layoutControlItem120.Location = new System.Drawing.Point(0, 147);
+            this.layoutControlItem120.Name = "layoutControlItem120";
+            this.layoutControlItem120.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem120.Text = "layoutControlItem120";
+            this.layoutControlItem120.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem120.TextToControlDistance = 0;
+            this.layoutControlItem120.TextVisible = false;
+            // 
+            // layoutControlItem121
+            // 
+            this.layoutControlItem121.Control = this.checkEdit120;
+            this.layoutControlItem121.CustomizationFormText = "layoutControlItem121";
+            this.layoutControlItem121.Location = new System.Drawing.Point(0, 196);
+            this.layoutControlItem121.Name = "layoutControlItem121";
+            this.layoutControlItem121.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem121.Text = "layoutControlItem121";
+            this.layoutControlItem121.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem121.TextToControlDistance = 0;
+            this.layoutControlItem121.TextVisible = false;
+            // 
+            // layoutControlItem122
+            // 
+            this.layoutControlItem122.Control = this.checkEdit121;
+            this.layoutControlItem122.CustomizationFormText = "layoutControlItem122";
+            this.layoutControlItem122.Location = new System.Drawing.Point(0, 245);
+            this.layoutControlItem122.Name = "layoutControlItem122";
+            this.layoutControlItem122.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem122.Text = "layoutControlItem122";
+            this.layoutControlItem122.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem122.TextToControlDistance = 0;
+            this.layoutControlItem122.TextVisible = false;
+            // 
+            // layoutControlItem123
+            // 
+            this.layoutControlItem123.Control = this.checkEdit122;
+            this.layoutControlItem123.CustomizationFormText = "layoutControlItem123";
+            this.layoutControlItem123.Location = new System.Drawing.Point(0, 294);
+            this.layoutControlItem123.Name = "layoutControlItem123";
+            this.layoutControlItem123.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem123.Text = "layoutControlItem123";
+            this.layoutControlItem123.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem123.TextToControlDistance = 0;
+            this.layoutControlItem123.TextVisible = false;
+            // 
+            // layoutControlItem124
+            // 
+            this.layoutControlItem124.Control = this.checkEdit123;
+            this.layoutControlItem124.CustomizationFormText = "layoutControlItem124";
+            this.layoutControlItem124.Location = new System.Drawing.Point(0, 343);
+            this.layoutControlItem124.Name = "layoutControlItem124";
+            this.layoutControlItem124.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem124.Text = "layoutControlItem124";
+            this.layoutControlItem124.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem124.TextToControlDistance = 0;
+            this.layoutControlItem124.TextVisible = false;
+            // 
+            // layoutControlItem125
+            // 
+            this.layoutControlItem125.Control = this.checkEdit124;
+            this.layoutControlItem125.CustomizationFormText = "layoutControlItem125";
+            this.layoutControlItem125.Location = new System.Drawing.Point(0, 392);
+            this.layoutControlItem125.Name = "layoutControlItem125";
+            this.layoutControlItem125.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem125.Text = "layoutControlItem125";
+            this.layoutControlItem125.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem125.TextToControlDistance = 0;
+            this.layoutControlItem125.TextVisible = false;
+            // 
+            // layoutControlItem126
+            // 
+            this.layoutControlItem126.Control = this.checkEdit125;
+            this.layoutControlItem126.CustomizationFormText = "layoutControlItem126";
+            this.layoutControlItem126.Location = new System.Drawing.Point(0, 441);
+            this.layoutControlItem126.Name = "layoutControlItem126";
+            this.layoutControlItem126.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem126.Text = "layoutControlItem126";
+            this.layoutControlItem126.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem126.TextToControlDistance = 0;
+            this.layoutControlItem126.TextVisible = false;
+            // 
+            // layoutControlItem127
+            // 
+            this.layoutControlItem127.Control = this.checkEdit126;
+            this.layoutControlItem127.CustomizationFormText = "layoutControlItem127";
+            this.layoutControlItem127.Location = new System.Drawing.Point(0, 490);
+            this.layoutControlItem127.Name = "layoutControlItem127";
+            this.layoutControlItem127.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem127.Text = "layoutControlItem127";
+            this.layoutControlItem127.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem127.TextToControlDistance = 0;
+            this.layoutControlItem127.TextVisible = false;
+            // 
+            // layoutControlItem128
+            // 
+            this.layoutControlItem128.Control = this.checkEdit127;
+            this.layoutControlItem128.CustomizationFormText = "layoutControlItem128";
+            this.layoutControlItem128.Location = new System.Drawing.Point(0, 539);
+            this.layoutControlItem128.Name = "layoutControlItem128";
+            this.layoutControlItem128.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem128.Text = "layoutControlItem128";
+            this.layoutControlItem128.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem128.TextToControlDistance = 0;
+            this.layoutControlItem128.TextVisible = false;
+            // 
+            // layoutControlItem129
+            // 
+            this.layoutControlItem129.Control = this.checkEdit128;
+            this.layoutControlItem129.CustomizationFormText = "layoutControlItem129";
+            this.layoutControlItem129.Location = new System.Drawing.Point(0, 588);
+            this.layoutControlItem129.Name = "layoutControlItem129";
+            this.layoutControlItem129.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem129.Text = "layoutControlItem129";
+            this.layoutControlItem129.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem129.TextToControlDistance = 0;
+            this.layoutControlItem129.TextVisible = false;
+            // 
+            // layoutControlItem130
+            // 
+            this.layoutControlItem130.Control = this.checkEdit129;
+            this.layoutControlItem130.CustomizationFormText = "layoutControlItem130";
+            this.layoutControlItem130.Location = new System.Drawing.Point(0, 637);
+            this.layoutControlItem130.Name = "layoutControlItem130";
+            this.layoutControlItem130.Size = new System.Drawing.Size(373, 49);
+            this.layoutControlItem130.Text = "layoutControlItem130";
+            this.layoutControlItem130.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem130.TextToControlDistance = 0;
+            this.layoutControlItem130.TextVisible = false;
+            // 
+            // layoutControlItem131
+            // 
+            this.layoutControlItem131.Control = this.checkEdit130;
+            this.layoutControlItem131.CustomizationFormText = "layoutControlItem131";
+            this.layoutControlItem131.Location = new System.Drawing.Point(0, 686);
+            this.layoutControlItem131.Name = "layoutControlItem131";
+            this.layoutControlItem131.Size = new System.Drawing.Size(373, 51);
+            this.layoutControlItem131.Text = "layoutControlItem131";
+            this.layoutControlItem131.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem131.TextToControlDistance = 0;
+            this.layoutControlItem131.TextVisible = false;
+            // 
+            // layoutControlItem135
+            // 
+            this.layoutControlItem135.Control = this.checkEdit134;
+            this.layoutControlItem135.CustomizationFormText = "layoutControlItem135";
+            this.layoutControlItem135.Location = new System.Drawing.Point(373, 0);
+            this.layoutControlItem135.Name = "layoutControlItem135";
+            this.layoutControlItem135.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem135.Text = "layoutControlItem135";
+            this.layoutControlItem135.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem135.TextToControlDistance = 0;
+            this.layoutControlItem135.TextVisible = false;
+            // 
+            // layoutControlItem136
+            // 
+            this.layoutControlItem136.Control = this.checkEdit135;
+            this.layoutControlItem136.CustomizationFormText = "layoutControlItem136";
+            this.layoutControlItem136.Location = new System.Drawing.Point(373, 49);
+            this.layoutControlItem136.Name = "layoutControlItem136";
+            this.layoutControlItem136.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem136.Text = "layoutControlItem136";
+            this.layoutControlItem136.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem136.TextToControlDistance = 0;
+            this.layoutControlItem136.TextVisible = false;
+            // 
+            // layoutControlItem137
+            // 
+            this.layoutControlItem137.Control = this.checkEdit136;
+            this.layoutControlItem137.CustomizationFormText = "layoutControlItem137";
+            this.layoutControlItem137.Location = new System.Drawing.Point(373, 98);
+            this.layoutControlItem137.Name = "layoutControlItem137";
+            this.layoutControlItem137.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem137.Text = "layoutControlItem137";
+            this.layoutControlItem137.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem137.TextToControlDistance = 0;
+            this.layoutControlItem137.TextVisible = false;
+            // 
+            // layoutControlItem138
+            // 
+            this.layoutControlItem138.Control = this.checkEdit137;
+            this.layoutControlItem138.CustomizationFormText = "layoutControlItem138";
+            this.layoutControlItem138.Location = new System.Drawing.Point(373, 147);
+            this.layoutControlItem138.Name = "layoutControlItem138";
+            this.layoutControlItem138.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem138.Text = "layoutControlItem138";
+            this.layoutControlItem138.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem138.TextToControlDistance = 0;
+            this.layoutControlItem138.TextVisible = false;
+            // 
+            // layoutControlItem139
+            // 
+            this.layoutControlItem139.Control = this.checkEdit138;
+            this.layoutControlItem139.CustomizationFormText = "layoutControlItem139";
+            this.layoutControlItem139.Location = new System.Drawing.Point(373, 196);
+            this.layoutControlItem139.Name = "layoutControlItem139";
+            this.layoutControlItem139.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem139.Text = "layoutControlItem139";
+            this.layoutControlItem139.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem139.TextToControlDistance = 0;
+            this.layoutControlItem139.TextVisible = false;
+            // 
+            // layoutControlItem140
+            // 
+            this.layoutControlItem140.Control = this.checkEdit139;
+            this.layoutControlItem140.CustomizationFormText = "layoutControlItem140";
+            this.layoutControlItem140.Location = new System.Drawing.Point(373, 245);
+            this.layoutControlItem140.Name = "layoutControlItem140";
+            this.layoutControlItem140.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem140.Text = "layoutControlItem140";
+            this.layoutControlItem140.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem140.TextToControlDistance = 0;
+            this.layoutControlItem140.TextVisible = false;
+            // 
+            // layoutControlItem141
+            // 
+            this.layoutControlItem141.Control = this.checkEdit140;
+            this.layoutControlItem141.CustomizationFormText = "layoutControlItem141";
+            this.layoutControlItem141.Location = new System.Drawing.Point(373, 294);
+            this.layoutControlItem141.Name = "layoutControlItem141";
+            this.layoutControlItem141.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem141.Text = "layoutControlItem141";
+            this.layoutControlItem141.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem141.TextToControlDistance = 0;
+            this.layoutControlItem141.TextVisible = false;
+            // 
+            // layoutControlItem142
+            // 
+            this.layoutControlItem142.Control = this.checkEdit141;
+            this.layoutControlItem142.CustomizationFormText = "layoutControlItem142";
+            this.layoutControlItem142.Location = new System.Drawing.Point(373, 343);
+            this.layoutControlItem142.Name = "layoutControlItem142";
+            this.layoutControlItem142.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem142.Text = "layoutControlItem142";
+            this.layoutControlItem142.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem142.TextToControlDistance = 0;
+            this.layoutControlItem142.TextVisible = false;
+            // 
+            // layoutControlItem143
+            // 
+            this.layoutControlItem143.Control = this.checkEdit142;
+            this.layoutControlItem143.CustomizationFormText = "layoutControlItem143";
+            this.layoutControlItem143.Location = new System.Drawing.Point(373, 392);
+            this.layoutControlItem143.Name = "layoutControlItem143";
+            this.layoutControlItem143.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem143.Text = "layoutControlItem143";
+            this.layoutControlItem143.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem143.TextToControlDistance = 0;
+            this.layoutControlItem143.TextVisible = false;
+            // 
+            // layoutControlItem144
+            // 
+            this.layoutControlItem144.Control = this.checkEdit143;
+            this.layoutControlItem144.CustomizationFormText = "layoutControlItem144";
+            this.layoutControlItem144.Location = new System.Drawing.Point(373, 441);
+            this.layoutControlItem144.Name = "layoutControlItem144";
+            this.layoutControlItem144.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem144.Text = "layoutControlItem144";
+            this.layoutControlItem144.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem144.TextToControlDistance = 0;
+            this.layoutControlItem144.TextVisible = false;
+            // 
+            // layoutControlItem145
+            // 
+            this.layoutControlItem145.Control = this.checkEdit144;
+            this.layoutControlItem145.CustomizationFormText = "layoutControlItem145";
+            this.layoutControlItem145.Location = new System.Drawing.Point(373, 490);
+            this.layoutControlItem145.Name = "layoutControlItem145";
+            this.layoutControlItem145.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem145.Text = "layoutControlItem145";
+            this.layoutControlItem145.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem145.TextToControlDistance = 0;
+            this.layoutControlItem145.TextVisible = false;
+            // 
+            // layoutControlItem146
+            // 
+            this.layoutControlItem146.Control = this.checkEdit145;
+            this.layoutControlItem146.CustomizationFormText = "layoutControlItem146";
+            this.layoutControlItem146.Location = new System.Drawing.Point(373, 539);
+            this.layoutControlItem146.Name = "layoutControlItem146";
+            this.layoutControlItem146.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem146.Text = "layoutControlItem146";
+            this.layoutControlItem146.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem146.TextToControlDistance = 0;
+            this.layoutControlItem146.TextVisible = false;
+            // 
+            // layoutControlItem147
+            // 
+            this.layoutControlItem147.Control = this.checkEdit146;
+            this.layoutControlItem147.CustomizationFormText = "layoutControlItem147";
+            this.layoutControlItem147.Location = new System.Drawing.Point(373, 588);
+            this.layoutControlItem147.Name = "layoutControlItem147";
+            this.layoutControlItem147.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem147.Text = "layoutControlItem147";
+            this.layoutControlItem147.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem147.TextToControlDistance = 0;
+            this.layoutControlItem147.TextVisible = false;
+            // 
+            // layoutControlItem148
+            // 
+            this.layoutControlItem148.Control = this.checkEdit147;
+            this.layoutControlItem148.CustomizationFormText = "layoutControlItem148";
+            this.layoutControlItem148.Location = new System.Drawing.Point(373, 637);
+            this.layoutControlItem148.Name = "layoutControlItem148";
+            this.layoutControlItem148.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem148.Text = "layoutControlItem148";
+            this.layoutControlItem148.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem148.TextToControlDistance = 0;
+            this.layoutControlItem148.TextVisible = false;
+            // 
+            // layoutControlItem149
+            // 
+            this.layoutControlItem149.Control = this.checkEdit148;
+            this.layoutControlItem149.CustomizationFormText = "layoutControlItem149";
+            this.layoutControlItem149.Location = new System.Drawing.Point(373, 686);
+            this.layoutControlItem149.Name = "layoutControlItem149";
+            this.layoutControlItem149.Size = new System.Drawing.Size(377, 51);
+            this.layoutControlItem149.Text = "layoutControlItem149";
+            this.layoutControlItem149.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem149.TextToControlDistance = 0;
+            this.layoutControlItem149.TextVisible = false;
+            // 
+            // layoutControlItem155
+            // 
+            this.layoutControlItem155.Control = this.checkEdit7;
+            this.layoutControlItem155.CustomizationFormText = "layoutControlItem155";
+            this.layoutControlItem155.Location = new System.Drawing.Point(750, 0);
+            this.layoutControlItem155.Name = "layoutControlItem155";
+            this.layoutControlItem155.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem155.Text = "layoutControlItem155";
+            this.layoutControlItem155.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem155.TextToControlDistance = 0;
+            this.layoutControlItem155.TextVisible = false;
+            // 
+            // layoutControlItem156
+            // 
+            this.layoutControlItem156.Control = this.checkEdit94;
+            this.layoutControlItem156.CustomizationFormText = "layoutControlItem156";
+            this.layoutControlItem156.Location = new System.Drawing.Point(750, 49);
+            this.layoutControlItem156.Name = "layoutControlItem156";
+            this.layoutControlItem156.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem156.Text = "layoutControlItem156";
+            this.layoutControlItem156.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem156.TextToControlDistance = 0;
+            this.layoutControlItem156.TextVisible = false;
+            // 
+            // layoutControlItem157
+            // 
+            this.layoutControlItem157.Control = this.checkEdit97;
+            this.layoutControlItem157.CustomizationFormText = "layoutControlItem157";
+            this.layoutControlItem157.Location = new System.Drawing.Point(750, 98);
+            this.layoutControlItem157.Name = "layoutControlItem157";
+            this.layoutControlItem157.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem157.Text = "layoutControlItem157";
+            this.layoutControlItem157.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem157.TextToControlDistance = 0;
+            this.layoutControlItem157.TextVisible = false;
+            // 
+            // layoutControlItem158
+            // 
+            this.layoutControlItem158.Control = this.checkEdit110;
+            this.layoutControlItem158.CustomizationFormText = "layoutControlItem158";
+            this.layoutControlItem158.Location = new System.Drawing.Point(750, 147);
+            this.layoutControlItem158.Name = "layoutControlItem158";
+            this.layoutControlItem158.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem158.Text = "layoutControlItem158";
+            this.layoutControlItem158.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem158.TextToControlDistance = 0;
+            this.layoutControlItem158.TextVisible = false;
+            // 
+            // layoutControlItem159
+            // 
+            this.layoutControlItem159.Control = this.checkEdit153;
+            this.layoutControlItem159.CustomizationFormText = "layoutControlItem159";
+            this.layoutControlItem159.Location = new System.Drawing.Point(750, 196);
+            this.layoutControlItem159.Name = "layoutControlItem159";
+            this.layoutControlItem159.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem159.Text = "layoutControlItem159";
+            this.layoutControlItem159.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem159.TextToControlDistance = 0;
+            this.layoutControlItem159.TextVisible = false;
+            // 
+            // layoutControlItem160
+            // 
+            this.layoutControlItem160.Control = this.checkEdit154;
+            this.layoutControlItem160.CustomizationFormText = "layoutControlItem160";
+            this.layoutControlItem160.Location = new System.Drawing.Point(750, 245);
+            this.layoutControlItem160.Name = "layoutControlItem160";
+            this.layoutControlItem160.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem160.Text = "layoutControlItem160";
+            this.layoutControlItem160.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem160.TextToControlDistance = 0;
+            this.layoutControlItem160.TextVisible = false;
+            // 
+            // layoutControlItem161
+            // 
+            this.layoutControlItem161.Control = this.checkEdit155;
+            this.layoutControlItem161.CustomizationFormText = "layoutControlItem161";
+            this.layoutControlItem161.Location = new System.Drawing.Point(750, 294);
+            this.layoutControlItem161.Name = "layoutControlItem161";
+            this.layoutControlItem161.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem161.Text = "layoutControlItem161";
+            this.layoutControlItem161.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem161.TextToControlDistance = 0;
+            this.layoutControlItem161.TextVisible = false;
+            // 
+            // layoutControlItem162
+            // 
+            this.layoutControlItem162.Control = this.checkEdit156;
+            this.layoutControlItem162.CustomizationFormText = "layoutControlItem162";
+            this.layoutControlItem162.Location = new System.Drawing.Point(750, 343);
+            this.layoutControlItem162.Name = "layoutControlItem162";
+            this.layoutControlItem162.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem162.Text = "layoutControlItem162";
+            this.layoutControlItem162.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem162.TextToControlDistance = 0;
+            this.layoutControlItem162.TextVisible = false;
+            // 
+            // layoutControlItem163
+            // 
+            this.layoutControlItem163.Control = this.checkEdit157;
+            this.layoutControlItem163.CustomizationFormText = "layoutControlItem163";
+            this.layoutControlItem163.Location = new System.Drawing.Point(750, 392);
+            this.layoutControlItem163.Name = "layoutControlItem163";
+            this.layoutControlItem163.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem163.Text = "layoutControlItem163";
+            this.layoutControlItem163.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem163.TextToControlDistance = 0;
+            this.layoutControlItem163.TextVisible = false;
+            // 
+            // layoutControlItem164
+            // 
+            this.layoutControlItem164.Control = this.checkEdit158;
+            this.layoutControlItem164.CustomizationFormText = "layoutControlItem164";
+            this.layoutControlItem164.Location = new System.Drawing.Point(750, 441);
+            this.layoutControlItem164.Name = "layoutControlItem164";
+            this.layoutControlItem164.Size = new System.Drawing.Size(395, 49);
+            this.layoutControlItem164.Text = "layoutControlItem164";
+            this.layoutControlItem164.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem164.TextToControlDistance = 0;
+            this.layoutControlItem164.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(750, 490);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(395, 49);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
+            this.emptySpaceItem6.Location = new System.Drawing.Point(750, 539);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(395, 49);
+            this.emptySpaceItem6.Text = "emptySpaceItem6";
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
+            this.emptySpaceItem7.Location = new System.Drawing.Point(750, 588);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(395, 49);
+            this.emptySpaceItem7.Text = "emptySpaceItem7";
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem8
+            // 
+            this.emptySpaceItem8.AllowHotTrack = false;
+            this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
+            this.emptySpaceItem8.Location = new System.Drawing.Point(750, 637);
+            this.emptySpaceItem8.Name = "emptySpaceItem8";
+            this.emptySpaceItem8.Size = new System.Drawing.Size(395, 49);
+            this.emptySpaceItem8.Text = "emptySpaceItem8";
+            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem9
+            // 
+            this.emptySpaceItem9.AllowHotTrack = false;
+            this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
+            this.emptySpaceItem9.Location = new System.Drawing.Point(750, 686);
+            this.emptySpaceItem9.Name = "emptySpaceItem9";
+            this.emptySpaceItem9.Size = new System.Drawing.Size(395, 51);
+            this.emptySpaceItem9.Text = "emptySpaceItem9";
+            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem98
             // 
@@ -6045,6 +6206,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem108.TextToControlDistance = 0;
             this.layoutControlItem108.TextVisible = false;
             // 
+            // layoutControlItem201
+            // 
+            this.layoutControlItem201.Control = this.listBoxControl1;
+            this.layoutControlItem201.CustomizationFormText = "layoutControlItem201";
+            this.layoutControlItem201.Location = new System.Drawing.Point(1169, 0);
+            this.layoutControlItem201.Name = "layoutControlItem201";
+            this.layoutControlItem201.Size = new System.Drawing.Size(287, 710);
+            this.layoutControlItem201.Text = "layoutControlItem201";
+            this.layoutControlItem201.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem201.TextToControlDistance = 0;
+            this.layoutControlItem201.TextVisible = false;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
@@ -6090,18 +6263,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem4.Text = "emptySpaceItem1";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // LabEntryForm
+            // SelectLabEntryForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
             this.ClientSize = new System.Drawing.Size(1477, 750);
             this.Controls.Add(this.layoutControl1);
             this.IsMdiContainer = true;
-            this.Name = "LabEntryForm";
+            this.Name = "SelectLabEntryForm";
             this.Text = "Laboratuvar Ýstek Formu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit194.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit193.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit192.Properties)).EndInit();
@@ -6158,8 +6332,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit97.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit94.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit103.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit102.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit101.Properties)).EndInit();
@@ -6258,11 +6430,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit66.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit74.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit65.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit64.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit75.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit63.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit62.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit61.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit60.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit59.Properties)).EndInit();
@@ -6291,60 +6463,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit71.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem95)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem97)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem119)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem121)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem122)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem123)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem124)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem125)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem126)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem127)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem128)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem129)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem130)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem131)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem135)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem136)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem137)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem138)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem139)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem140)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem141)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem142)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem143)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem144)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem145)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem146)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem147)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem148)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem149)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem155)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem156)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem157)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem158)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem159)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem160)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem162)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem163)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem164)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem109)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem110)).EndInit();
@@ -6504,7 +6630,52 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem117)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem77)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem95)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem97)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem119)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem120)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem121)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem122)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem123)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem124)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem125)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem126)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem127)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem128)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem129)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem130)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem131)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem135)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem136)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem137)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem138)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem139)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem140)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem141)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem142)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem143)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem144)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem145)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem146)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem147)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem148)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem149)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem155)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem156)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem157)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem158)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem159)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem160)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem162)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem163)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem164)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem98)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem111)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem154)).EndInit();
@@ -6512,6 +6683,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem96)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem108)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem201)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit43.Properties)).EndInit();
@@ -6815,10 +6987,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem98;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem111;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem154;
@@ -6944,6 +7113,8 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem199;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem200;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem108;
+        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem201;
 
     }
 }
