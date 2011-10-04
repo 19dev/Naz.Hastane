@@ -10,11 +10,8 @@ namespace Naz.Hastane.Data.Entities
 			LazyLoad();
 		
 			CompositeId()
-				.KeyProperty(x => x.TANIM)
-				.KeyProperty(x => x.GRUP)
-				.KeyProperty(x => x.CODE)
-				.KeyProperty(x => x.KNR)
-				.KeyProperty(x => x.SNR)
+				.KeyReference(x => x.Product, "TANIM", "GRUP", "CODE")
+				.KeyReference(x => x.PatientVisit, "KNR", "SNR")
 				.KeyProperty(x => x.TARIH);
 			
 			Map(x => x.TOOLTIPTEXT).Column("TOOLTIPTEXT").Length(75);

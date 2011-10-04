@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.luePOS = new DevExpress.XtraEditors.LookUpEdit();
             this.sbCancelAdvancePayment = new DevExpress.XtraEditors.SimpleButton();
             this.sbRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -66,14 +67,14 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciRefresh = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciPOS = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciCancelAdvancePayment = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.luePOS = new DevExpress.XtraEditors.LookUpEdit();
-            this.lciPOS = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.luePOS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePaymentType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teVoucherNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teAmount.Properties)).BeginInit();
@@ -94,12 +95,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancelAdvancePayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePOS.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPOS)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -121,6 +121,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(693, 514);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // luePOS
+            // 
+            this.luePOS.Location = new System.Drawing.Point(510, 60);
+            this.luePOS.Name = "luePOS";
+            this.luePOS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePOS.Size = new System.Drawing.Size(84, 20);
+            this.luePOS.StyleController = this.layoutControl1;
+            this.luePOS.TabIndex = 14;
             // 
             // sbCancelAdvancePayment
             // 
@@ -271,7 +281,7 @@
             this.gridColumn10.Caption = "Kalan";
             this.gridColumn10.DisplayFormat.FormatString = "{0:#,##0.00}";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn10.FieldName = "KALAN";
+            this.gridColumn10.FieldName = "RemainingAmount";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 5;
@@ -524,6 +534,26 @@
             this.lciRefresh.TextToControlDistance = 0;
             this.lciRefresh.TextVisible = false;
             // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 96);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(329, 28);
+            this.emptySpaceItem6.Text = "emptySpaceItem6";
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciPOS
+            // 
+            this.lciPOS.Control = this.luePOS;
+            this.lciPOS.CustomizationFormText = "POS";
+            this.lciPOS.Location = new System.Drawing.Point(0, 24);
+            this.lciPOS.Name = "lciPOS";
+            this.lciPOS.Size = new System.Drawing.Size(246, 24);
+            this.lciPOS.Text = "POS";
+            this.lciPOS.TextSize = new System.Drawing.Size(154, 13);
+            // 
             // lciCancelAdvancePayment
             // 
             this.lciCancelAdvancePayment.Control = this.sbCancelAdvancePayment;
@@ -556,36 +586,6 @@
             this.emptySpaceItem5.Text = "emptySpaceItem5";
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 96);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(329, 28);
-            this.emptySpaceItem6.Text = "emptySpaceItem6";
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // luePOS
-            // 
-            this.luePOS.Location = new System.Drawing.Point(510, 60);
-            this.luePOS.Name = "luePOS";
-            this.luePOS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luePOS.Size = new System.Drawing.Size(84, 20);
-            this.luePOS.StyleController = this.layoutControl1;
-            this.luePOS.TabIndex = 14;
-            // 
-            // lciPOS
-            // 
-            this.lciPOS.Control = this.luePOS;
-            this.lciPOS.CustomizationFormText = "POS";
-            this.lciPOS.Location = new System.Drawing.Point(0, 24);
-            this.lciPOS.Name = "lciPOS";
-            this.lciPOS.Size = new System.Drawing.Size(246, 24);
-            this.lciPOS.Text = "POS";
-            this.lciPOS.TextSize = new System.Drawing.Size(154, 13);
-            // 
             // AdvancePaymentsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +596,7 @@
             this.Load += new System.EventHandler(this.AdvancePaymentsControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.luePOS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePaymentType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teVoucherNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teAmount.Properties)).EndInit();
@@ -616,12 +617,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPOS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciCancelAdvancePayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePOS.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciPOS)).EndInit();
             this.ResumeLayout(false);
 
         }

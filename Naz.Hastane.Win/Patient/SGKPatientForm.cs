@@ -828,7 +828,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     frm.ShowDialog();
                     if (frm.IsSelected)
                     {
-                        PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, Patient, currentPatientVisit, frm.SelectedProducts);
+                        PatientServices.AddPatientVisitDetails(Session, UIUtilities.CurrentUser, currentPatientVisit, frm.SelectedProducts);
                         ReLoadPatient();
                     }
                 }

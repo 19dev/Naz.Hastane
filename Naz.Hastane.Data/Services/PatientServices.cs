@@ -18,6 +18,10 @@ namespace Naz.Hastane.Data.Services
 {
     public static class PatientServices
     {
+        //TODO "MAKBUZ" Tablosu nerede kullanılıyor?
+        //TODO Hastaya atılan İlaç ve Malzemeler Fatura Edilmezse nasıl kontrol ediliyor?
+        // Birden çok karta ait işlemlere fatura kesilince Anavs tablosu nasıl işleniyor?
+        
         #region Patient
         public static bool IsValidPatientNo(string aPatientNo)
         {
@@ -258,7 +262,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     if (IsAutoExamItemValid(patient, sae))
                     {
-                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, pv, sae.Product);
                     }
                 }
             else
@@ -266,7 +270,7 @@ namespace Naz.Hastane.Data.Services
                 {
                     if (IsAutoExamItemValid(patient, sae))
                     {
-                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, patient, pv, sae.Product);
+                        PatientVisitDetail pvd = AddNewPatientVisitDetail(session, user, pv, sae.Product);
                     }
                 }
 
@@ -376,7 +380,7 @@ namespace Naz.Hastane.Data.Services
 
         }
 
-        public static PatientVisitDetail AddNewPatientVisitDetail(ISession session, User user, Patient patient, PatientVisit pv, Product product)
+        public static PatientVisitDetail AddNewPatientVisitDetail(ISession session, User user, PatientVisit pv, Product product)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
@@ -386,7 +390,7 @@ namespace Naz.Hastane.Data.Services
                 pvd.PatientVisit = pv;
                 pvd.DetailNo = GetNewPatientVisitDetailNo(session, pv);
 
-                string priceListCode = patient.InsuranceCompany.GetPriceList(pv.VisitType);
+                string priceListCode = pv.Patient.InsuranceCompany.GetPriceList(pv.VisitType);
 
                 pvd.PatientPrice = product.GetPatientPrice(priceListCode);
                 pvd.CompanyPrice = product.GetCompanyPrice(priceListCode);
@@ -398,12 +402,16 @@ namespace Naz.Hastane.Data.Services
                 transaction.Commit();
 
                 pv.AddPatientVisitDetail(pvd);
+
+                if (pvd.TANIM == "06")
+                    AddNewLabRequest(session, user, pvd);
+
                 return pvd;
             }
 
         }
 
-        public static void AddPatientVisitDetails(ISession session, User user, Patient patient, PatientVisit pv, IList<PatientVisitDetail> pvds)
+        public static void AddPatientVisitDetails(ISession session, User user, PatientVisit pv, IList<PatientVisitDetail> pvds)
         {
             //using (var session = NHibernateSessionManager.Instance.GetSessionFactory().OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
@@ -418,6 +426,9 @@ namespace Naz.Hastane.Data.Services
                     session.Save(pvd);
 
                     pv.AddPatientVisitDetail(pvd);
+
+                    if (pvd.TANIM == "06")
+                        AddNewLabRequest(session, user, pvd);
                 }
                 try
                 {
@@ -430,6 +441,25 @@ namespace Naz.Hastane.Data.Services
                 }
                 UpdatePatientVisitFromDetails(session, user, pv);
             }
+        }
+
+        public static LabRequest AddNewLabRequest(ISession session, User user, PatientVisitDetail pvd)
+        {
+            LabRequest lr = new LabRequest()
+            {
+                Product = LookUpServices.GetProduct(session, pvd.TANIM, pvd.GRUP, pvd.CODE),
+                PatientVisit = pvd.PatientVisit,
+                TARIH = pvd.TARIH,
+                KABUL = "0",
+                ONAY = "0",
+                DRONAY = "1",
+                USER_ID = pvd.USER_ID,
+                DATE_CREATE = pvd.DATE_CREATE
+            };
+
+            session.Save(lr);
+
+            return lr;
         }
 
         public static PatientVisitDetail GetNewPatientVisitDetailFromProduct(PatientVisit pv, Product product)
@@ -954,6 +984,8 @@ namespace Naz.Hastane.Data.Services
 
             session.Save(ap);
 
+            pv.AddAdvancePayment(ap);
+
             AdvancePaymentUsed apu = new AdvancePaymentUsed() { 
                 AdvancePayment     = ap, 
                 TARIH              = DateTime.Now,
@@ -963,6 +995,8 @@ namespace Naz.Hastane.Data.Services
                 DATE_CREATE        = DateTime.Now };
 
             session.Save(apu);
+
+            ap.AddAdvancePaymentUsed(apu);
         }
 
         private static CashDeskRecord AddNewCashDeskRecord(ISession session, User user,
@@ -1421,8 +1455,8 @@ namespace Naz.Hastane.Data.Services
                         transaction.Rollback();
                         throw ex;
                     }
-
                     pv.AddPatientVisitDetail(pvd);
+
                 }
                 UpdatePatientVisitFromDetails(session, user, pv);
                 return;
@@ -1534,7 +1568,7 @@ namespace Naz.Hastane.Data.Services
                         MAKBUZTIPI = "A",
                         POSNO = "",
                         ODEMESEKLI = 'N',
-                        TUTAR = advancePayment.KALAN ?? default(double),
+                        TUTAR = advancePayment.RemainingAmount,
                         BORCALACAK = 'A',
                         VEZNE = user.VEZNE,
                         USER_ID = user.USER_ID,
@@ -1552,6 +1586,7 @@ namespace Naz.Hastane.Data.Services
                         DATE_CREATE = DateTime.Now
                     };
                     session.Save(apr);
+                    advancePayment.AddAdvancePaymentRebate(apr);
 
                     advancePayment.IADEEDILEN += cdr.TUTAR;
                     session.Update(advancePayment);
@@ -1616,6 +1651,7 @@ namespace Naz.Hastane.Data.Services
                     };
 
                     session.Save(ap);
+                    patientVisit.AddAdvancePayment(ap);
 
                     //session.Flush();
                     transaction.Commit();
@@ -1642,6 +1678,15 @@ namespace Naz.Hastane.Data.Services
 
         #endregion
 
+        // Makbuz Görüntüleme
+        // select K.TARIH, K.MAKBUZNO, K.TUTAR, K.USER_ID, K.FATURANO, F.FATURANO AS FATNO, K.MAKNO, K.SNR from KASA K LEFT OUTER JOIN FATURA F ON (K.FATURANO = F.FATURA_ID) 
+        //      where K.KNR = '870366' and K.ISIPTAL is NULL and K.MAKBUZTIPI='V' order by K.TARIH DESC
+
+        // SELECT TARIH, MAKBUZNO, TUTAR, USER_ID, DATE_UPDATE, USER_ID_UPDATE FROM KASA where KNR='870366' and ISIPTAL is not NULL and MAKBUZTIPI='V' order by TARIH DESC
+
+        // SELECT FATURATARIHI, FATURA_ID, FATURANO, FATURATUTARI, USER_ID, ISIPTAL FROM FATURA where KNR='870366' and FATURATIPI = 'M' order by FATURATARIHI DESC
+
+    
     }
 
 }

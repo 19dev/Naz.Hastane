@@ -3,12 +3,13 @@ namespace Naz.Hastane.Data.Entities
 {
     public class LabResult 
     {
-        public virtual string KNR { get; set; }
-        public virtual string SNR { get; set; }
-        public virtual string TANIM { get; set; }
-        public virtual string GRUP { get; set; }
-        public virtual string CODE { get; set; }
-        public virtual System.DateTime TARIH { get; set; }
+        //public virtual string KNR { get; set; }
+        //public virtual string SNR { get; set; }
+        //public virtual string TANIM { get; set; }
+        //public virtual string GRUP { get; set; }
+        //public virtual string CODE { get; set; }
+        //public virtual System.DateTime TARIH { get; set; }
+        public virtual LabRequest LabRequest { get; set; }
         public virtual int IND { get; set; }
         
         public virtual string OZELKOD { get; set; }
@@ -27,7 +28,7 @@ namespace Naz.Hastane.Data.Entities
             LabResult lb = obj as LabResult;
             if (lb == null)
                 return false;
-            if (this.TANIM == lb.TANIM && this.GRUP == lb.GRUP && this.CODE == lb.CODE && this.KNR == lb.KNR && this.SNR == lb.SNR && this.TARIH == lb.TARIH && this.IND == lb.IND)
+            if (this.LabRequest == lb.LabRequest && this.IND == lb.IND)
                 return true;
             else
                 return false;
@@ -36,13 +37,8 @@ namespace Naz.Hastane.Data.Entities
         public override int GetHashCode()
         {
             int hash = 13;
-            hash += (null == this.TANIM ? 0 : this.TANIM.GetHashCode());
-            hash += (null == this.GRUP ? 0 : this.GRUP.GetHashCode());
-            hash += (null == this.CODE ? 0 : this.CODE.GetHashCode());
-            hash += (null == this.KNR ? 0 : this.KNR.GetHashCode());
-            hash += (null == this.SNR ? 0 : this.SNR.GetHashCode());
-            hash += (null == this.TARIH ? 0 : this.TARIH.GetHashCode());
-            hash += (null == this.IND ? 0 : this.IND.GetHashCode());
+            hash += (null == this.LabRequest ? 0 : this.LabRequest.GetHashCode());
+            hash += this.IND.GetHashCode();
 
             return hash;
         }

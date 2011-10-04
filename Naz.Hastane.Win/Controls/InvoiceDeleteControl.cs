@@ -39,6 +39,7 @@ namespace Naz.Hastane.Win.Controls
             try
             {
                 gvInvoices.BeginDataUpdate();
+                
                 this.gcInvoices.DataSource = PatientServices.GetPatientInvoices(_Session, _Patient);
                 try
                 {
@@ -84,29 +85,30 @@ namespace Naz.Hastane.Win.Controls
 
         private void CancelInvoice()
         {
+            if (currentInvoice == null)
+                return;
+
             if (SimpleMsgBoxForm.ShowYesNo(String.Format("{0} Nolu Faturanın İptal Edilmesini İstiyor musunuz?", currentInvoice.FATURANO), "Fatura İptal Uyarısı", true) != DialogResult.Yes)
                 return;
 
             try
             {
-                if (currentInvoice != null)
+                PatientServices.DeleteInvoice(_Session, UIUtilities.CurrentUser, currentInvoice, _AdvancePaymentUseds);
+                if (SimpleMsgBoxForm.ShowYesNo("Faturaya Ait Avans Kaydının İade Edilmesini İstiyor musunuz?", "Avas İade Uyarısı", true) == DialogResult.Yes)
                 {
-                    PatientServices.DeleteInvoice(_Session, UIUtilities.CurrentUser, currentInvoice, _AdvancePaymentUseds);
-                    if (SimpleMsgBoxForm.ShowYesNo("Faturaya Ait Avans Kaydının İade Edilmesini İstiyor musunuz?", "Avas İade Uyarısı", true) == DialogResult.Yes)
+                    foreach (AdvancePaymentUsed apu in _AdvancePaymentUseds)
                     {
-                        foreach (AdvancePaymentUsed apu in _AdvancePaymentUseds)
+                        try
                         {
-                            try
-                            {
-                                PatientServices.RebateAdvancePayment(_Session, UIUtilities.CurrentUser, apu.AdvancePayment);
-                            }
-                            catch (Exception ex)
-                            {
-                                SimpleMsgBoxForm.ShowMsgBox(String.Format("{0} Numaralı Avans İadesi Yapılamadı:", apu.AdvancePayment.AV_ID) + ex.Message, "Fatura İptal Uyarısı", true);
-                            }
+                            PatientServices.RebateAdvancePayment(_Session, UIUtilities.CurrentUser, apu.AdvancePayment);
+                        }
+                        catch (Exception ex)
+                        {
+                            SimpleMsgBoxForm.ShowMsgBox(String.Format("{0} Numaralı Avans İadesi Yapılamadı:", apu.AdvancePayment.AV_ID) + ex.Message, "Fatura İptal Uyarısı", true);
                         }
                     }
                 }
+                QueryInvoices();
             }
             catch (Exception ex)
             {

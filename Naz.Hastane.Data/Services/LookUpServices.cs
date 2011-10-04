@@ -648,13 +648,19 @@ namespace Naz.Hastane.Data.Services
 
         public static Product GetProduct(ISession session, string tanim, string grup, string code, string priceList)
         {
-            Product product = (from p in session.Query<Product>()
-                        where p.TANIM == tanim && p.GRUP == grup && p.CODE == code
-                        select p
-                            )
-                            .SingleOrDefault<Product>();
+            Product product = GetProduct(session, tanim, grup, code);
             if (product != null)
                 product.SetPriceList(priceList);
+            return product;
+        }
+
+        public static Product GetProduct(ISession session, string tanim, string grup, string code)
+        {
+            Product product = (from p in session.Query<Product>()
+                               where p.TANIM == tanim && p.GRUP == grup && p.CODE == code
+                               select p
+                            )
+                            .SingleOrDefault<Product>();
             return product;
         }
 

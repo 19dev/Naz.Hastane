@@ -38,7 +38,7 @@ namespace Naz.Hastane.Data.Entities
             hash += (null == this.TANIM ? 0 : this.TANIM.GetHashCode());
             hash += (null == this.GRUP ? 0 : this.GRUP.GetHashCode());
             hash += (null == this.CODE ? 0 : this.CODE.GetHashCode());
-            hash += (null == this.IND ? 0 : this.IND.GetHashCode());
+            hash += this.IND.GetHashCode();
             hash += (null == this.CINSIYET ? 0 : this.CINSIYET.GetHashCode());
 
             return hash;

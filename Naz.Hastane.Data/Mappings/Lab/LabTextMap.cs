@@ -9,12 +9,7 @@ namespace Naz.Hastane.Data.Entities
 			LazyLoad();
 
 			CompositeId()
-				.KeyProperty(x => x.KNR)
-				.KeyProperty(x => x.SNR)
-				.KeyProperty(x => x.TANIM)
-				.KeyProperty(x => x.GRUP)
-				.KeyProperty(x => x.CODE)
-				.KeyProperty(x => x.TARIH);
+				.KeyReference(x => x.LabRequest, "TANIM", "GRUP", "CODE", "KNR", "SNR", "TARIH");
 			
 			Map(x => x.LABTEXT).Column("LABTEXT").Length(2147483647);
 		}

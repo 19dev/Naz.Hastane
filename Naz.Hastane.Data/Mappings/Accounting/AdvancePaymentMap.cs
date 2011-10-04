@@ -38,6 +38,15 @@ namespace Naz.Hastane.Data.Entities {
 			Map(x => x.AFATNO).Column("AFATNO").Length(50);
 			Map(x => x.KALAN).Column("KALAN");
 			Map(x => x.AMAKNO).Column("AMAKNO").Length(50);
+
+            HasMany(x => x.AdvancePaymentUseds)
+                .KeyColumn("AV_ID").LazyLoad()
+                .Inverse();
+
+            HasMany(x => x.AdvancePaymentRebates)
+                .KeyColumn("AV_ID").LazyLoad()
+                .Inverse();
+
         }
     }
 }

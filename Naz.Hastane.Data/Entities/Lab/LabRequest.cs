@@ -3,11 +3,13 @@ namespace Naz.Hastane.Data.Entities
 {
     public class LabRequest 
     {
-        public virtual string TANIM { get; set; }
-        public virtual string GRUP { get; set; }
-        public virtual string CODE { get; set; }
-        public virtual string KNR { get; set; }
-        public virtual string SNR { get; set; }
+        //public virtual string TANIM { get; set; }
+        //public virtual string GRUP { get; set; }
+        //public virtual string CODE { get; set; }
+        //public virtual string KNR { get; set; }
+        //public virtual string SNR { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual PatientVisit PatientVisit { get; set; }
         public virtual System.DateTime TARIH { get; set; }
 
         public virtual string TOOLTIPTEXT { get; set; }
@@ -36,7 +38,7 @@ namespace Naz.Hastane.Data.Entities
             LabRequest lb = obj as LabRequest;
             if (lb == null)
                 return false;
-            if (this.TANIM == lb.TANIM && this.GRUP == lb.GRUP && this.CODE == lb.CODE && this.KNR == lb.KNR && this.SNR == lb.SNR && this.TARIH == lb.TARIH)
+            if (this.Product == lb.Product && this.PatientVisit == lb.PatientVisit && this.TARIH == lb.TARIH)
                 return true;
             else
                 return false;
@@ -45,11 +47,8 @@ namespace Naz.Hastane.Data.Entities
         public override int GetHashCode()
         {
             int hash = 13;
-            hash += (null == this.TANIM ? 0 : this.TANIM.GetHashCode());
-            hash += (null == this.GRUP ? 0 : this.GRUP.GetHashCode());
-            hash += (null == this.CODE ? 0 : this.CODE.GetHashCode());
-            hash += (null == this.KNR ? 0 : this.KNR.GetHashCode());
-            hash += (null == this.SNR ? 0 : this.SNR.GetHashCode());
+            hash += (null == this.Product ? 0 : this.Product.GetHashCode());
+            hash += (null == this.PatientVisit ? 0 : this.PatientVisit.GetHashCode());
             hash += (null == this.TARIH ? 0 : this.TARIH.GetHashCode());
 
             return hash;

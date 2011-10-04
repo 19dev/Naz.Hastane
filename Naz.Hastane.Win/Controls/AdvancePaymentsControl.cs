@@ -23,8 +23,6 @@ namespace Naz.Hastane.Win.Controls
         public AdvancePaymentsControl()
         {
             InitializeComponent();
-            teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.GetVoucherUser(), false);
-            teAmount.Text = "0";
         }
 
         private void AdvancePaymentsControl_Load(object sender, EventArgs e)
@@ -32,6 +30,8 @@ namespace Naz.Hastane.Win.Controls
             if (!DesignMode)
             {
                 LoadLookUps();
+                teVoucherNo.Text = LookUpServices.GetNewTellerVoucherNo(UIUtilities.GetVoucherUser(), false);
+                teAmount.Text = "0";
             }
         }
 

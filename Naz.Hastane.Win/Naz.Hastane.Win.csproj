@@ -367,11 +367,11 @@
     <Compile Include="Patient\DoctorPatientCallListForm.Designer.cs">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient\LabEntryForm.cs">
+    <Compile Include="Patient\SelectLabEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient\LabEntryForm.designer.cs">
-      <DependentUpon>LabEntryForm.cs</DependentUpon>
+    <Compile Include="Patient\SelectLabEntryForm.designer.cs">
+      <DependentUpon>SelectLabEntryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\SelectMedicineForm.cs">
       <SubType>Form</SubType>
@@ -658,8 +658,8 @@
     <EmbeddedResource Include="Patient\DoctorPatientCallListForm.resx">
       <DependentUpon>DoctorPatientCallListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient\LabEntryForm.resx">
-      <DependentUpon>LabEntryForm.cs</DependentUpon>
+    <EmbeddedResource Include="Patient\SelectLabEntryForm.resx">
+      <DependentUpon>SelectLabEntryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\SelectMedicineForm.resx">
       <DependentUpon>SelectMedicineForm.cs</DependentUpon>
