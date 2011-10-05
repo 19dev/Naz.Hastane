@@ -69,5 +69,17 @@ namespace Naz.Hastane.Win.MDIChildForms
                 listBoxControl1.Items.Add(text);
             }
         }
+
+        private void listBoxControl1_DoubleClick(object sender, EventArgs e)
+        {
+            string item = (string)listBoxControl1.SelectedItem;
+            listBoxControl1.Items.Remove(item);
+            foreach (Control c in layoutControl2.Controls)
+            {
+                CheckEdit ce = c as CheckEdit;
+                if (ce != null && ce.Text == item)
+                    ce.Checked = false;
+            }
+        }
     }
 }

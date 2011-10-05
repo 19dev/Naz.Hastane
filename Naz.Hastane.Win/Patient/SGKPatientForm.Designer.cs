@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbLabEntry = new DevExpress.XtraEditors.SimpleButton();
             this.advancePaymentsControl = new Naz.Hastane.Win.Controls.AdvancePaymentsControl();
             this.invoiceDeleteControl = new Naz.Hastane.Win.Controls.InvoiceDeleteControl();
             this.sbChangeAmount = new DevExpress.XtraEditors.SimpleButton();
@@ -293,10 +294,9 @@
             this.lciAddMedicine = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciChangeAmount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciLabEntry = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.timerHastaKabulOku = new System.Windows.Forms.Timer(this.components);
-            this.sbLabEntry = new DevExpress.XtraEditors.SimpleButton();
-            this.lciLabEntry = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teSNO.Properties)).BeginInit();
@@ -504,8 +504,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddMedicine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLabEntry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -618,6 +618,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(1081, 704);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // sbLabEntry
+            // 
+            this.sbLabEntry.Location = new System.Drawing.Point(945, 259);
+            this.sbLabEntry.Name = "sbLabEntry";
+            this.sbLabEntry.Size = new System.Drawing.Size(119, 22);
+            this.sbLabEntry.StyleController = this.layoutControl1;
+            this.sbLabEntry.TabIndex = 155;
+            this.sbLabEntry.Text = "Laboratuvar İşlemleri";
+            this.sbLabEntry.Click += new System.EventHandler(this.sbLabEntry_Click);
             // 
             // advancePaymentsControl
             // 
@@ -3431,6 +3441,18 @@
             this.lciChangeAmount.TextToControlDistance = 0;
             this.lciChangeAmount.TextVisible = false;
             // 
+            // lciLabEntry
+            // 
+            this.lciLabEntry.Control = this.sbLabEntry;
+            this.lciLabEntry.CustomizationFormText = "lciLabEntry";
+            this.lciLabEntry.Location = new System.Drawing.Point(0, 242);
+            this.lciLabEntry.Name = "lciLabEntry";
+            this.lciLabEntry.Size = new System.Drawing.Size(123, 26);
+            this.lciLabEntry.Text = "lciLabEntry";
+            this.lciLabEntry.TextSize = new System.Drawing.Size(0, 0);
+            this.lciLabEntry.TextToControlDistance = 0;
+            this.lciLabEntry.TextVisible = false;
+            // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
@@ -3445,28 +3467,6 @@
             // 
             this.timerHastaKabulOku.Interval = 200;
             this.timerHastaKabulOku.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // sbLabEntry
-            // 
-            this.sbLabEntry.Location = new System.Drawing.Point(945, 259);
-            this.sbLabEntry.Name = "sbLabEntry";
-            this.sbLabEntry.Size = new System.Drawing.Size(119, 22);
-            this.sbLabEntry.StyleController = this.layoutControl1;
-            this.sbLabEntry.TabIndex = 155;
-            this.sbLabEntry.Text = "Laboratuvar İşlemleri";
-            this.sbLabEntry.Click += new System.EventHandler(this.sbLabEntry_Click);
-            // 
-            // lciLabEntry
-            // 
-            this.lciLabEntry.Control = this.sbLabEntry;
-            this.lciLabEntry.CustomizationFormText = "lciLabEntry";
-            this.lciLabEntry.Location = new System.Drawing.Point(0, 242);
-            this.lciLabEntry.Name = "lciLabEntry";
-            this.lciLabEntry.Size = new System.Drawing.Size(123, 26);
-            this.lciLabEntry.Text = "lciLabEntry";
-            this.lciLabEntry.TextSize = new System.Drawing.Size(0, 0);
-            this.lciLabEntry.TextToControlDistance = 0;
-            this.lciLabEntry.TextVisible = false;
             // 
             // SGKPatientForm
             // 
@@ -3689,8 +3689,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciAddMedicine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciChangeAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLabEntry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
