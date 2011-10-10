@@ -67,10 +67,10 @@ namespace Naz.Hastane.Win.Controls
         private void QueryProducts()
         {
             currentInvoice = (Invoice)gvInvoices.GetFocusedRow();
-            sbCancelInvoice.Enabled = (currentInvoice.ISIPTAL != "1");
 
             if (currentInvoice != null)
             {
+                sbCancelInvoice.Enabled = (currentInvoice.ISIPTAL != "1");
                 gcProducts.DataSource = PatientServices.GetProductsForInvoice(_Session, currentInvoice);
                     
                 _AdvancePaymentUseds = PatientServices.GetAdvancePaymentsForInvoice(_Session, currentInvoice);

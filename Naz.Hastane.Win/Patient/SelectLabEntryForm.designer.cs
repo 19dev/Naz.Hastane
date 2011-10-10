@@ -70,11 +70,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.ce004 = new DevExpress.XtraEditors.CheckEdit();
             this.ce003 = new DevExpress.XtraEditors.CheckEdit();
             this.ce002 = new DevExpress.XtraEditors.CheckEdit();
-            this.ce001 = new DevExpress.XtraEditors.CheckEdit();
             this.ce015 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit158 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit157 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit156 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce001 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit155 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit154 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit153 = new DevExpress.XtraEditors.CheckEdit();
@@ -150,13 +150,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit80 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit52 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit42 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit41 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit79 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit38 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit37 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit36 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit35 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit34 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit41 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit33 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit32 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit31 = new DevExpress.XtraEditors.CheckEdit();
@@ -187,7 +187,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit75 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit63 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit62 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit46 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce104 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit61 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit60 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit59 = new DevExpress.XtraEditors.CheckEdit();
@@ -214,18 +214,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit20 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit16 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit19 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce108 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit18 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit71 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce107 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce105 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit68 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit70 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit67 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce102 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce103 = new DevExpress.XtraEditors.CheckEdit();
+            this.ce101 = new DevExpress.XtraEditors.CheckEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem70 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lci101 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem73 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem76 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -486,11 +486,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.ce004.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce003.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce002.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ce001.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce015.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit158.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit157.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit156.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce001.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit155.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit154.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit153.Properties)).BeginInit();
@@ -561,13 +561,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit80.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit52.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit42.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit79.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit38.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit37.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit36.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit35.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit34.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit33.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit32.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit31.Properties)).BeginInit();
@@ -598,7 +598,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit75.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit63.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit62.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce104.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit61.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit60.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit59.Properties)).BeginInit();
@@ -625,18 +625,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit20.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit16.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce108.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit71.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce107.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce105.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce102.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce103.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce101.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem70)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lci101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem73)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem76)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -1025,7 +1025,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.Controls.Add(this.checkEdit75);
             this.layoutControl2.Controls.Add(this.checkEdit63);
             this.layoutControl2.Controls.Add(this.checkEdit62);
-            this.layoutControl2.Controls.Add(this.checkEdit46);
+            this.layoutControl2.Controls.Add(this.ce104);
             this.layoutControl2.Controls.Add(this.checkEdit61);
             this.layoutControl2.Controls.Add(this.checkEdit60);
             this.layoutControl2.Controls.Add(this.checkEdit59);
@@ -1052,14 +1052,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl2.Controls.Add(this.checkEdit20);
             this.layoutControl2.Controls.Add(this.checkEdit16);
             this.layoutControl2.Controls.Add(this.checkEdit19);
-            this.layoutControl2.Controls.Add(this.checkEdit8);
+            this.layoutControl2.Controls.Add(this.ce108);
             this.layoutControl2.Controls.Add(this.checkEdit1);
-            this.layoutControl2.Controls.Add(this.checkEdit18);
-            this.layoutControl2.Controls.Add(this.checkEdit71);
+            this.layoutControl2.Controls.Add(this.ce107);
+            this.layoutControl2.Controls.Add(this.ce105);
             this.layoutControl2.Controls.Add(this.checkEdit13);
-            this.layoutControl2.Controls.Add(this.checkEdit68);
-            this.layoutControl2.Controls.Add(this.checkEdit70);
-            this.layoutControl2.Controls.Add(this.checkEdit67);
+            this.layoutControl2.Controls.Add(this.ce102);
+            this.layoutControl2.Controls.Add(this.ce103);
+            this.layoutControl2.Controls.Add(this.ce101);
             this.layoutControl2.Location = new System.Drawing.Point(2, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1642, 142, 694, 804);
@@ -1638,19 +1638,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.ce002.Tag = "9015";
             this.ce002.Click += new System.EventHandler(this.check_Click);
             // 
-            // ce001
-            // 
-            this.ce001.Location = new System.Drawing.Point(14, 54);
-            this.ce001.Name = "ce001";
-            this.ce001.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.ce001.Properties.Appearance.Options.UseFont = true;
-            this.ce001.Properties.Caption = "Sgot (Ast)";
-            this.ce001.Size = new System.Drawing.Size(573, 45);
-            this.ce001.StyleController = this.layoutControl2;
-            this.ce001.TabIndex = 266;
-            this.ce001.Tag = "9014";
-            this.ce001.Click += new System.EventHandler(this.check_Click);
-            // 
             // ce015
             // 
             this.ce015.Location = new System.Drawing.Point(14, 740);
@@ -1702,6 +1689,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit156.TabIndex = 261;
             this.checkEdit156.Tag = "9502";
             this.checkEdit156.Click += new System.EventHandler(this.check_Click);
+            // 
+            // ce001
+            // 
+            this.ce001.Location = new System.Drawing.Point(14, 54);
+            this.ce001.Name = "ce001";
+            this.ce001.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce001.Properties.Appearance.Options.UseFont = true;
+            this.ce001.Properties.Caption = "Sgot (Ast)";
+            this.ce001.Size = new System.Drawing.Size(573, 45);
+            this.ce001.StyleController = this.layoutControl2;
+            this.ce001.TabIndex = 266;
+            this.ce001.Tag = "9014";
+            this.ce001.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit155
             // 
@@ -2664,19 +2664,6 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit42.Tag = "9612-1";
             this.checkEdit42.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit41
-            // 
-            this.checkEdit41.Location = new System.Drawing.Point(483, 692);
-            this.checkEdit41.Name = "checkEdit41";
-            this.checkEdit41.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit41.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit41.Properties.Caption = "MetHb";
-            this.checkEdit41.Size = new System.Drawing.Size(939, 45);
-            this.checkEdit41.StyleController = this.layoutControl2;
-            this.checkEdit41.TabIndex = 161;
-            this.checkEdit41.Tag = "9843";
-            this.checkEdit41.Click += new System.EventHandler(this.check_Click);
-            // 
             // checkEdit79
             // 
             this.checkEdit79.Location = new System.Drawing.Point(588, 54);
@@ -2754,6 +2741,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit34.TabIndex = 154;
             this.checkEdit34.Tag = "9415";
             this.checkEdit34.Click += new System.EventHandler(this.check_Click);
+            // 
+            // checkEdit41
+            // 
+            this.checkEdit41.Location = new System.Drawing.Point(483, 692);
+            this.checkEdit41.Name = "checkEdit41";
+            this.checkEdit41.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.checkEdit41.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit41.Properties.Caption = "MetHb";
+            this.checkEdit41.Size = new System.Drawing.Size(939, 45);
+            this.checkEdit41.StyleController = this.layoutControl2;
+            this.checkEdit41.TabIndex = 161;
+            this.checkEdit41.Tag = "9843";
+            this.checkEdit41.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit33
             // 
@@ -3142,18 +3142,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit62.Tag = "9604";
             this.checkEdit62.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit46
+            // ce104
             // 
-            this.checkEdit46.Location = new System.Drawing.Point(14, 201);
-            this.checkEdit46.Name = "checkEdit46";
-            this.checkEdit46.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit46.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit46.Properties.Caption = "Glukoz (Açlýk)";
-            this.checkEdit46.Size = new System.Drawing.Size(523, 45);
-            this.checkEdit46.StyleController = this.layoutControl2;
-            this.checkEdit46.TabIndex = 125;
-            this.checkEdit46.Tag = "9008";
-            this.checkEdit46.Click += new System.EventHandler(this.check_Click);
+            this.ce104.Location = new System.Drawing.Point(14, 201);
+            this.ce104.Name = "ce104";
+            this.ce104.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce104.Properties.Appearance.Options.UseFont = true;
+            this.ce104.Properties.Caption = "Glukoz (Açlýk)";
+            this.ce104.Size = new System.Drawing.Size(523, 45);
+            this.ce104.StyleController = this.layoutControl2;
+            this.ce104.TabIndex = 125;
+            this.ce104.Tag = "9008";
+            this.ce104.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit61
             // 
@@ -3495,19 +3495,19 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit19.Tag = "9008-2";
             this.checkEdit19.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit8
+            // ce108
             // 
-            this.checkEdit8.Location = new System.Drawing.Point(197, 348);
-            this.checkEdit8.Name = "checkEdit8";
-            this.checkEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit8.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit8.Properties.Caption = "3 saatlik";
-            this.checkEdit8.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit8.Size = new System.Drawing.Size(340, 45);
-            this.checkEdit8.StyleController = this.layoutControl2;
-            this.checkEdit8.TabIndex = 90;
-            this.checkEdit8.Tag = "9008-2";
-            this.checkEdit8.Click += new System.EventHandler(this.check_Click);
+            this.ce108.Location = new System.Drawing.Point(197, 348);
+            this.ce108.Name = "ce108";
+            this.ce108.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce108.Properties.Appearance.Options.UseFont = true;
+            this.ce108.Properties.Caption = "3 saatlik";
+            this.ce108.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.ce108.Size = new System.Drawing.Size(340, 45);
+            this.ce108.StyleController = this.layoutControl2;
+            this.ce108.TabIndex = 90;
+            this.ce108.Tag = "9008-2";
+            this.ce108.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit1
             // 
@@ -3522,32 +3522,32 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit1.Tag = "9204";
             this.checkEdit1.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit18
+            // ce107
             // 
-            this.checkEdit18.Location = new System.Drawing.Point(197, 299);
-            this.checkEdit18.Name = "checkEdit18";
-            this.checkEdit18.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit18.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit18.Properties.Caption = "2 saatlik";
-            this.checkEdit18.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit18.Size = new System.Drawing.Size(340, 45);
-            this.checkEdit18.StyleController = this.layoutControl2;
-            this.checkEdit18.TabIndex = 89;
-            this.checkEdit18.Tag = "9008-2";
-            this.checkEdit18.Click += new System.EventHandler(this.check_Click);
+            this.ce107.Location = new System.Drawing.Point(197, 299);
+            this.ce107.Name = "ce107";
+            this.ce107.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce107.Properties.Appearance.Options.UseFont = true;
+            this.ce107.Properties.Caption = "2 saatlik";
+            this.ce107.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.ce107.Size = new System.Drawing.Size(340, 45);
+            this.ce107.StyleController = this.layoutControl2;
+            this.ce107.TabIndex = 89;
+            this.ce107.Tag = "9008-2";
+            this.ce107.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit71
+            // ce105
             // 
-            this.checkEdit71.Location = new System.Drawing.Point(14, 250);
-            this.checkEdit71.Name = "checkEdit71";
-            this.checkEdit71.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit71.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit71.Properties.Caption = "Glukoz (2 saatlik tokluk)";
-            this.checkEdit71.Size = new System.Drawing.Size(523, 45);
-            this.checkEdit71.StyleController = this.layoutControl2;
-            this.checkEdit71.TabIndex = 83;
-            this.checkEdit71.Tag = "9009";
-            this.checkEdit71.Click += new System.EventHandler(this.check_Click);
+            this.ce105.Location = new System.Drawing.Point(14, 250);
+            this.ce105.Name = "ce105";
+            this.ce105.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce105.Properties.Appearance.Options.UseFont = true;
+            this.ce105.Properties.Caption = "Glukoz (2 saatlik tokluk)";
+            this.ce105.Size = new System.Drawing.Size(523, 45);
+            this.ce105.StyleController = this.layoutControl2;
+            this.ce105.TabIndex = 83;
+            this.ce105.Tag = "9009";
+            this.ce105.Click += new System.EventHandler(this.check_Click);
             // 
             // checkEdit13
             // 
@@ -3562,44 +3562,44 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.checkEdit13.Tag = "9035";
             this.checkEdit13.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit68
+            // ce102
             // 
-            this.checkEdit68.Location = new System.Drawing.Point(14, 103);
-            this.checkEdit68.Name = "checkEdit68";
-            this.checkEdit68.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit68.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit68.Properties.Caption = "Sedimantasyon Hýzý";
-            this.checkEdit68.Size = new System.Drawing.Size(523, 45);
-            this.checkEdit68.StyleController = this.layoutControl2;
-            this.checkEdit68.TabIndex = 81;
-            this.checkEdit68.Tag = "9410";
-            this.checkEdit68.Click += new System.EventHandler(this.check_Click);
+            this.ce102.Location = new System.Drawing.Point(14, 103);
+            this.ce102.Name = "ce102";
+            this.ce102.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce102.Properties.Appearance.Options.UseFont = true;
+            this.ce102.Properties.Caption = "Sedimantasyon Hýzý";
+            this.ce102.Size = new System.Drawing.Size(523, 45);
+            this.ce102.StyleController = this.layoutControl2;
+            this.ce102.TabIndex = 81;
+            this.ce102.Tag = "9410";
+            this.ce102.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit70
+            // ce103
             // 
-            this.checkEdit70.Location = new System.Drawing.Point(14, 152);
-            this.checkEdit70.Name = "checkEdit70";
-            this.checkEdit70.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit70.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit70.Properties.Caption = "Tam Ýdrar Tahlili";
-            this.checkEdit70.Size = new System.Drawing.Size(523, 45);
-            this.checkEdit70.StyleController = this.layoutControl2;
-            this.checkEdit70.TabIndex = 82;
-            this.checkEdit70.Tag = "9301";
-            this.checkEdit70.Click += new System.EventHandler(this.check_Click);
+            this.ce103.Location = new System.Drawing.Point(14, 152);
+            this.ce103.Name = "ce103";
+            this.ce103.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce103.Properties.Appearance.Options.UseFont = true;
+            this.ce103.Properties.Caption = "Tam Ýdrar Tahlili";
+            this.ce103.Size = new System.Drawing.Size(523, 45);
+            this.ce103.StyleController = this.layoutControl2;
+            this.ce103.TabIndex = 82;
+            this.ce103.Tag = "9301";
+            this.ce103.Click += new System.EventHandler(this.check_Click);
             // 
-            // checkEdit67
+            // ce101
             // 
-            this.checkEdit67.Location = new System.Drawing.Point(14, 54);
-            this.checkEdit67.Name = "checkEdit67";
-            this.checkEdit67.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.checkEdit67.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit67.Properties.Caption = "Tam Kan Sayýmý";
-            this.checkEdit67.Size = new System.Drawing.Size(523, 45);
-            this.checkEdit67.StyleController = this.layoutControl2;
-            this.checkEdit67.TabIndex = 80;
-            this.checkEdit67.Tag = "9058";
-            this.checkEdit67.Click += new System.EventHandler(this.check_Click);
+            this.ce101.Location = new System.Drawing.Point(14, 54);
+            this.ce101.Name = "ce101";
+            this.ce101.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.ce101.Properties.Appearance.Options.UseFont = true;
+            this.ce101.Properties.Caption = "Tam Kan Sayýmý";
+            this.ce101.Size = new System.Drawing.Size(523, 45);
+            this.ce101.StyleController = this.layoutControl2;
+            this.ce101.TabIndex = 80;
+            this.ce101.Tag = "9058";
+            this.ce101.Click += new System.EventHandler(this.check_Click);
             // 
             // Root
             // 
@@ -3632,8 +3632,8 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup8;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 2;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 1;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1437, 801);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup9,
@@ -3647,7 +3647,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.layoutControlGroup4.CustomizationFormText = "layoutControlGroup4";
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem70,
+            this.lci101,
             this.layoutControlItem73,
             this.layoutControlItem76,
             this.layoutControlItem6,
@@ -3685,21 +3685,21 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlGroup4.Size = new System.Drawing.Size(1413, 737);
             this.layoutControlGroup4.Text = "Sayfa-1";
             // 
-            // layoutControlItem70
+            // lci101
             // 
-            this.layoutControlItem70.Control = this.checkEdit67;
-            this.layoutControlItem70.CustomizationFormText = "layoutControlItem70";
-            this.layoutControlItem70.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem70.Name = "layoutControlItem70";
-            this.layoutControlItem70.Size = new System.Drawing.Size(527, 49);
-            this.layoutControlItem70.Text = "layoutControlItem70";
-            this.layoutControlItem70.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem70.TextToControlDistance = 0;
-            this.layoutControlItem70.TextVisible = false;
+            this.lci101.Control = this.ce101;
+            this.lci101.CustomizationFormText = "layoutControlItem70";
+            this.lci101.Location = new System.Drawing.Point(0, 0);
+            this.lci101.Name = "lci101";
+            this.lci101.Size = new System.Drawing.Size(527, 49);
+            this.lci101.Text = "lci101";
+            this.lci101.TextSize = new System.Drawing.Size(0, 0);
+            this.lci101.TextToControlDistance = 0;
+            this.lci101.TextVisible = false;
             // 
             // layoutControlItem73
             // 
-            this.layoutControlItem73.Control = this.checkEdit71;
+            this.layoutControlItem73.Control = this.ce105;
             this.layoutControlItem73.CustomizationFormText = "layoutControlItem73";
             this.layoutControlItem73.Location = new System.Drawing.Point(0, 196);
             this.layoutControlItem73.Name = "layoutControlItem73";
@@ -3867,7 +3867,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControlItem69
             // 
-            this.layoutControlItem69.Control = this.checkEdit68;
+            this.layoutControlItem69.Control = this.ce102;
             this.layoutControlItem69.CustomizationFormText = "layoutControlItem69";
             this.layoutControlItem69.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem69.Name = "layoutControlItem69";
@@ -3879,7 +3879,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControlItem72
             // 
-            this.layoutControlItem72.Control = this.checkEdit70;
+            this.layoutControlItem72.Control = this.ce103;
             this.layoutControlItem72.CustomizationFormText = "layoutControlItem72";
             this.layoutControlItem72.Location = new System.Drawing.Point(0, 98);
             this.layoutControlItem72.Name = "layoutControlItem72";
@@ -3891,7 +3891,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControlItem48
             // 
-            this.layoutControlItem48.Control = this.checkEdit46;
+            this.layoutControlItem48.Control = this.ce104;
             this.layoutControlItem48.CustomizationFormText = "layoutControlItem48";
             this.layoutControlItem48.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem48.Name = "layoutControlItem48";
@@ -3913,7 +3913,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControlItem21
             // 
-            this.layoutControlItem21.Control = this.checkEdit18;
+            this.layoutControlItem21.Control = this.ce107;
             this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
             this.layoutControlItem21.Location = new System.Drawing.Point(183, 245);
             this.layoutControlItem21.Name = "layoutControlItem21";
@@ -3925,7 +3925,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.checkEdit8;
+            this.layoutControlItem9.Control = this.ce108;
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem9";
             this.layoutControlItem9.Location = new System.Drawing.Point(183, 294);
             this.layoutControlItem9.Name = "layoutControlItem9";
@@ -6434,11 +6434,11 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.ce004.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce003.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce002.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ce001.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ce015.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit158.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit157.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit156.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce001.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit155.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit154.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit153.Properties)).EndInit();
@@ -6509,13 +6509,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit80.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit52.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit42.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit79.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit38.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit37.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit36.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit35.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit34.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit33.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit32.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit31.Properties)).EndInit();
@@ -6546,7 +6546,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit75.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit63.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit62.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit46.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce104.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit61.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit60.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit59.Properties)).EndInit();
@@ -6573,18 +6573,18 @@ namespace Naz.Hastane.Win.MDIChildForms
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit20.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit16.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce108.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit71.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce107.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce105.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit68.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit70.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit67.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce102.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce103.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ce101.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem70)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lci101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem73)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem76)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -6822,13 +6822,13 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraEditors.CheckEdit checkEdit2;
         private DevExpress.XtraEditors.CheckEdit checkEdit20;
         private DevExpress.XtraEditors.CheckEdit checkEdit19;
-        private DevExpress.XtraEditors.CheckEdit checkEdit8;
-        private DevExpress.XtraEditors.CheckEdit checkEdit18;
+        private DevExpress.XtraEditors.CheckEdit ce108;
+        private DevExpress.XtraEditors.CheckEdit ce107;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit71;
-        private DevExpress.XtraEditors.CheckEdit checkEdit70;
-        private DevExpress.XtraEditors.CheckEdit checkEdit68;
-        private DevExpress.XtraEditors.CheckEdit checkEdit67;
+        private DevExpress.XtraEditors.CheckEdit ce105;
+        private DevExpress.XtraEditors.CheckEdit ce103;
+        private DevExpress.XtraEditors.CheckEdit ce102;
+        private DevExpress.XtraEditors.CheckEdit ce101;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
@@ -6914,7 +6914,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraEditors.CheckEdit checkEdit69;
         private DevExpress.XtraEditors.CheckEdit checkEdit66;
         private DevExpress.XtraEditors.CheckEdit checkEdit65;
-        private DevExpress.XtraEditors.CheckEdit checkEdit46;
+        private DevExpress.XtraEditors.CheckEdit ce104;
         private DevExpress.XtraEditors.CheckEdit checkEdit64;
         private DevExpress.XtraEditors.CheckEdit checkEdit63;
         private DevExpress.XtraEditors.CheckEdit checkEdit62;
@@ -7054,7 +7054,7 @@ namespace Naz.Hastane.Win.MDIChildForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem104;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem70;
+        private DevExpress.XtraLayout.LayoutControlItem lci101;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem69;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem73;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;

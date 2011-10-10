@@ -8,6 +8,7 @@ using Naz.Hastane.Data.Entities;
 using System.Collections.Generic;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using Naz.Hastane.Data.Services;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -28,14 +29,23 @@ namespace Naz.Hastane.Win.MDIChildForms
             InitializeComponent();
         }
 
-        public void InitForm()
+        public void InitForm(IList<PatientVisitDetail> selectedVisitDetails)
         {
-            //deDate.DateTime = DateTime.Today;
-            //lueDoktor.EditValue = PatientVisit.DoctorCode;
-            //lueServis.EditValue = PatientVisit.Servis;
-            //rgSelection.EditValue = "Ý";
-
-            //this.gcSelectedProducts.DataSource = _SelectedProducts;
+            foreach (PatientVisitDetail pvd in selectedVisitDetails)
+            {
+                if (pvd.TANIM == "06")
+                {
+                    foreach (Control c in layoutControl2.Controls)
+                    {
+                        CheckEdit ce = c as CheckEdit;
+                        if (ce != null && ce.Tag == pvd.CODE)
+                        {
+                            ce.Checked = true;
+                            FillListBox(ce.Text, true);
+                        }
+                    }
+                }
+            }
         }
 
         private void check_Click(object sender, EventArgs e)
@@ -43,14 +53,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             CheckEdit ce = (CheckEdit)sender;
             if (ce != null)
             {
-                FillListBox(ce);
+                FillListBox(ce.Text, !ce.Checked);
             }
         }
 
-        private void FillListBox(CheckEdit ce)
+        private void FillListBox(string text, bool add)
         {
-            String text = ce.Text;
-            if (ce.Checked)
+            if (!add)
                 foreach (string item in listBoxControl1.Items)
                 {
                     if (item == text)
@@ -81,5 +90,21 @@ namespace Naz.Hastane.Win.MDIChildForms
                     ce.Checked = false;
             }
         }
+
+        private void AddToSelectedProducts(Product product)
+        {
+            PatientVisitDetail pvd = PatientServices.GetNewPatientVisitDetailFromProduct(PatientVisit, product);
+            foreach (PatientVisitDetail p in _SelectedProducts)
+                if (p == pvd)
+                    return;
+            _SelectedProducts.Add(pvd);
+
+        }
+
+        private void RemoveFromSelectedProducts()
+        {
+
+        }
+
     }
 }

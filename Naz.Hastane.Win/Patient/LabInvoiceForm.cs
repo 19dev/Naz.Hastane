@@ -38,13 +38,13 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 if (String.IsNullOrWhiteSpace(this.tePatientNo.Text))
                 {
-                    this.Text = String.Format("Fatura Makbuz Basma Ekranı ({0})", GetSelectedInsuranceCompanyName());
-                    this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session, _InsuranceCompany, deStartDate.DateTime.Date, deEndDate.DateTime.Date);
+                    this.Text = String.Format("Laboratuvar Fiş Basma Ekranı ({0})", GetSelectedInsuranceCompanyName());
+                    this.gcPatients.DataSource = PatientServices.GetPatientsForLabInvoice(Session, _InsuranceCompany, deStartDate.DateTime.Date, deEndDate.DateTime.Date);
                 }
                 else
                 {
-                    this.Text = String.Format("Fatura Makbuz Basma Ekranı ({0})", this.tePatientNo.Text);
-                    this.gcPatients.DataSource = PatientServices.GetPatientsForInvoice(Session, this.tePatientNo.Text);
+                    this.Text = String.Format("Laboratuvar Fiş Basma Ekranı ({0})", this.tePatientNo.Text);
+                    this.gcPatients.DataSource = PatientServices.GetPatientsForLabInvoice(Session, this.tePatientNo.Text);
                 }
                 RefreshDetails();
             }

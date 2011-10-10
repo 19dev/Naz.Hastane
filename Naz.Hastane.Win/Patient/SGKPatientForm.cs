@@ -1061,7 +1061,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             {
                 using (SelectLabEntryForm frm = new SelectLabEntryForm() { PatientVisit = currentPatientVisit, PriceListCode = Patient.InsuranceCompany.GetPriceList(currentPatientVisit.VisitType) })
                 {
-                    frm.InitForm();
+                    frm.InitForm(currentPatientVisit.PatientVisitDetails);
                     frm.ShowDialog();
                     //if (frm.IsSelected)
                     //    ChangeInsuranceCompany(frm.InsuranceCompany);

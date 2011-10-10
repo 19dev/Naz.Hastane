@@ -13,7 +13,13 @@ namespace Naz.Hastane.Data.Entities
         /// </summary>
         public virtual string PatientNo { get; set; } 
 
+        /// <summary>
+        /// HASTAADI
+        /// </summary>
         public virtual string FirstName { get; set; } //HASTAADI
+        /// <summary>
+        /// HASTASOYADI
+        /// </summary>
         public virtual string LastName { get; set; } //HASTASOYADI
         public virtual string TCId { get; set; } //TCKIMLIKNO
         public virtual string FatherName { get; set; } //BABAADI

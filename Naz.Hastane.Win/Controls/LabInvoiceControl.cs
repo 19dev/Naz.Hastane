@@ -79,8 +79,6 @@ namespace Naz.Hastane.Win.Controls
 
         private void QueryPatientVisits()
         {
-            //selectionVisit.ClearSelection();
-
             this.ceAdvancePayment.Checked = false;
             this.cePayment.Checked = false;
             this.luePaymentType.EditValue = VAT.DefaultValue;
@@ -89,17 +87,9 @@ namespace Naz.Hastane.Win.Controls
 
         public void QueryPatientVisitDetails()
         {
-            IList<PatientVisit> pvs = new List<PatientVisit>();
-
-            //for (int i = 0; i < selectionVisit.SelectedCount; i++)
-            //{
-            //    PatientVisit pv = (PatientVisit)selectionVisit.GetSelectedRow(i);
-            //    pvs.Add(pv);
-            //}
-
             selectionVisitDetail.ClearSelection();
             gvPatientVisitDetails.BeginDataUpdate();
-            this.gcPatientVisitDetails.DataSource = PatientServices.GetPatientVisitDetailsForInvoice(_Session, pvs);
+            this.gcPatientVisitDetails.DataSource = PatientServices.GetPatientVisitDetailsForLabInvoice(_Session, _Patient);
             try
             {
                 gvPatientVisitDetails.ClearSorting();
@@ -238,7 +228,7 @@ namespace Naz.Hastane.Win.Controls
                 sbInvoice.Enabled = false;
             }
 
-            this.tePatientVisitDetailTotal.EditValue = ProductTotal;
+            this.tePatientVisitDetailTotal.EditValue = InvoiceTotal;
 
             this.teProductTotal.EditValue = ProductTotal;
             this.teVATTotal.EditValue = VATTotal;
@@ -280,7 +270,7 @@ namespace Naz.Hastane.Win.Controls
 
         private void sbInvoice_Click(object sender, EventArgs e)
         {
-            AddInvoice();
+            //AddInvoice();
         }
 
         private void AddInvoice()

@@ -776,6 +776,41 @@ namespace Naz.Hastane.Data.Services
             return result;
         }
 
+        public static IList<Patient> GetPatientsForLabInvoice(ISession session, InsuranceCompany insuranceCompany, DateTime startDate, DateTime endDate)
+        {
+            IList<Patient> result = (from p in session.Query<Patient>()
+                                     join pv in session.Query<PatientVisit>() on p equals pv.Patient
+                                     join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                                     where pvd.MAKNO == null && pvd.AMAKNO == null
+                                     && pvd.TANIM == "06"
+                                     && pvd.ADET != 0
+                                     && pvd.PatientPrice != 0
+                                     && pvd.TARIH >= startDate && pvd.TARIH <= endDate.AddDays(1)
+                                     && ((insuranceCompany == null) || (p.InsuranceCompany == insuranceCompany))
+                                     orderby p.FirstName ascending, p.LastName ascending
+                                     select p
+                            )
+                .Distinct<Patient>().ToList<Patient>();
+            return result;
+        }
+
+        public static IList<Patient> GetPatientsForLabInvoice(ISession session, string patientNo)
+        {
+            IList<Patient> result = (from p in session.Query<Patient>()
+                                     join pv in session.Query<PatientVisit>() on p equals pv.Patient
+                                     join pvd in session.Query<PatientVisitDetail>() on pv equals pvd.PatientVisit
+                                     where pvd.MAKNO == null && pvd.AMAKNO == null
+                                     && pvd.TANIM == "06"
+                                     && pvd.ADET != 0
+                                     && pvd.PatientPrice != 0
+                                     && p.PatientNo == patientNo
+                                     orderby p.FirstName ascending, p.LastName ascending
+                                     select p
+                            )
+                .Distinct<Patient>().ToList<Patient>();
+            return result;
+        }
+
         public static IList<object> GetPatientVisitsForInvoice(ISession session)
         {
             Patient patient = null;
@@ -851,6 +886,23 @@ namespace Naz.Hastane.Data.Services
                                                 where
                                                     pvd.PatientVisit.Patient == pvs[0].Patient
                                                     && pvIDs.Contains(pvd.PatientVisit.VisitNo)
+                                                    && pvd.MAKNO == null && pvd.AMAKNO == null
+                                                    && pvd.ADET != 0 && pvd.PatientPrice != 0
+                                                join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv
+                                                //orderby pvd.PatientVisit.VisitNo descending, pvd.DetailNo ascending
+                                                select pvd
+                                                )
+                                                .Distinct<PatientVisitDetail>()
+                                                .ToList<PatientVisitDetail>();
+            return result;
+        }
+
+        public static IList<PatientVisitDetail> GetPatientVisitDetailsForLabInvoice(ISession session, Patient patient)
+        {
+            IList<PatientVisitDetail> result = (from pvd in session.Query<PatientVisitDetail>()
+                                                where
+                                                    pvd.PatientVisit.Patient == patient
+                                                    && pvd.TANIM == "06"
                                                     && pvd.MAKNO == null && pvd.AMAKNO == null
                                                     && pvd.ADET != 0 && pvd.PatientPrice != 0
                                                 join pv in session.Query<PatientVisit>() on pvd.PatientVisit equals pv

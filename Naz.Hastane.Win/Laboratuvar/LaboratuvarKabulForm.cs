@@ -31,5 +31,10 @@ namespace Naz.Hastane.Win.MDIChildForms
             
             //UIUtilities.BindLookUpEdit(this.luePOS, LookUpServices.POSs);
         }
+
+        private void sbRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
