@@ -38,7 +38,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     foreach (Control c in layoutControl2.Controls)
                     {
                         CheckEdit ce = c as CheckEdit;
-                        if (ce != null && ce.Tag == pvd.CODE)
+                        if (ce != null && ce.Tag.ToString() == pvd.CODE)
                         {
                             ce.Checked = true;
                             FillListBox(ce.Text, true);

@@ -160,6 +160,7 @@ namespace Naz.Hastane.Win {
             this.iUnvan = new DevExpress.XtraBars.BarButtonItem();
             this.iDoctorPatientCallList = new DevExpress.XtraBars.BarButtonItem();
             this.iLaboratuvarKabul = new DevExpress.XtraBars.BarButtonItem();
+            this.iLabInvoice = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -206,7 +207,7 @@ namespace Naz.Hastane.Win {
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.iLabInvoice = new DevExpress.XtraBars.BarButtonItem();
+            this.iAmeliyatListesi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -509,10 +510,11 @@ namespace Naz.Hastane.Win {
             this.iUnvan,
             this.iDoctorPatientCallList,
             this.iLaboratuvarKabul,
-            this.iLabInvoice});
+            this.iLabInvoice,
+            this.iAmeliyatListesi});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 336;
+            this.rcMain.MaxItemId = 338;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1610,6 +1612,12 @@ namespace Naz.Hastane.Win {
             this.iLaboratuvarKabul.Id = 333;
             this.iLaboratuvarKabul.Name = "iLaboratuvarKabul";
             // 
+            // iLabInvoice
+            // 
+            this.iLabInvoice.Caption = "Laboratuvar Fiþ Basým";
+            this.iLabInvoice.Id = 335;
+            this.iLabInvoice.Name = "iLabInvoice";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1663,6 +1671,7 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iLabInvoice);
             this.rpgSGK.ItemLinks.Add(this.iLaboratuvarKabul);
             this.rpgSGK.ItemLinks.Add(this.iDoctorPatientCallList);
+            this.rpgSGK.ItemLinks.Add(this.iAmeliyatListesi);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
             // 
@@ -2031,11 +2040,11 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // iLabInvoice
+            // iAmeliyatListesi
             // 
-            this.iLabInvoice.Caption = "Laboratuvar Fiþ Basým";
-            this.iLabInvoice.Id = 335;
-            this.iLabInvoice.Name = "iLabInvoice";
+            this.iAmeliyatListesi.Caption = "Ameliyat Listesi";
+            this.iAmeliyatListesi.Id = 337;
+            this.iAmeliyatListesi.Name = "iAmeliyatListesi";
             // 
             // frmMain
             // 
@@ -2267,6 +2276,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iLaboratuvarKabul;
         private DevExpress.XtraBars.BarButtonItem iDoctorPatientCallList;
         private DevExpress.XtraBars.BarButtonItem iLabInvoice;
+        private DevExpress.XtraBars.BarButtonItem iAmeliyatListesi;
 
     }
 }

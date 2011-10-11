@@ -213,42 +213,42 @@ namespace Naz.Hastane.Win.MDIChildForms
         private void AttachEventHandlers()
         {
             sbAddPersonelHastaneBolumu.Click += (o, args) => AddDetail<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>();
-            sbChangePersonelHastaneBolumu.Click += (o, args) => ChangeDetail<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>(gvHastaneBolumu);
+            sbChangePersonelHastaneBolumu.Click += (o, args) => EditDetail<PersonelHastaneBolumuEditForm, PersonelHastaneBolumu>(gvHastaneBolumu);
             sbDeletePersonelHastaneBolumu.Click += (o, args) => DeleteDetail<PersonelHastaneBolumu>(gvHastaneBolumu, "Personel Hastane Bölümü Kaydı Silinmiştir.", 
                 "Personel Hastane Bölümü Kaydı Silinemedi:", "Personel Hastane Bölümü Kaydı Silme İşlemi");
 
             sbAddPersonelUnvan.Click += (o, args) => AddDetail<PersonelUnvanEditForm, PersonelUnvan>();
-            sbChangePersonelUnvan.Click += (o, args) => ChangeDetail<PersonelUnvanEditForm, PersonelUnvan>(gvUnvanlar);
+            sbChangePersonelUnvan.Click += (o, args) => EditDetail<PersonelUnvanEditForm, PersonelUnvan>(gvUnvanlar);
             sbDeletePersonelUnvan.Click += (o, args) => DeleteDetail<PersonelUnvan>(gvUnvanlar, "Personel Ünvan Kaydı Silinmiştir.",
                 "Personel Ünvan Kaydı Silinemedi:", "Personel Ünvan Kaydı Silme İşlemi");
 
             sbAddPersonelEgitim.Click += (o, args) => AddDetail<PersonelEgitimEditForm, PersonelEgitim>();
-            sbChangePersonelEgitim.Click += (o, args) => ChangeDetail<PersonelEgitimEditForm, PersonelEgitim>(gvPersonelEgitim);
+            sbChangePersonelEgitim.Click += (o, args) => EditDetail<PersonelEgitimEditForm, PersonelEgitim>(gvPersonelEgitim);
             sbDeletePersonelEgitim.Click += (o, args) => DeleteDetail<PersonelEgitim>(gvPersonelEgitim, "Personel Eğitimi Silinmiştir.",
                 "Personel Eğitimi Silinemedi:", "Personel Eğitimi Silme İşlemi");
 
             sbAddPersonelHizmetIciEgitim.Click += (o, args) => AddDetail<PersonelHizmetIciEgitimEditForm, PersonelHizmetIciEgitim>();
-            sbChangePersonelHizmetIciEgitim.Click += (o, args) => ChangeDetail<PersonelHizmetIciEgitimEditForm, PersonelHizmetIciEgitim>(gvHizmetIciEgitim);
+            sbChangePersonelHizmetIciEgitim.Click += (o, args) => EditDetail<PersonelHizmetIciEgitimEditForm, PersonelHizmetIciEgitim>(gvHizmetIciEgitim);
             sbDeletePersonelHizmetIciEgitim.Click += (o, args) => DeleteDetail<PersonelHizmetIciEgitim>(gvHizmetIciEgitim, "Personel Hizmet İçi Eğitim Kaydı Silinmiştir.",
                 "Personel Hizmet İçi Eğitim Kaydı Silinemedi:", "Personel Hizmet İçi Eğitim Kaydı Silme İşlemi");
 
             sbAddPersonelRapor.Click += (o, args) => AddDetail<PersonelRaporEditForm, PersonelRapor>();
-            sbChangePersonelRapor.Click += (o, args) => ChangeDetail<PersonelRaporEditForm, PersonelRapor>(gvRaporlar);
+            sbChangePersonelRapor.Click += (o, args) => EditDetail<PersonelRaporEditForm, PersonelRapor>(gvRaporlar);
             sbDeletePersonelRapor.Click += (o, args) => DeleteDetail<PersonelRapor>(gvRaporlar, "Personel Rapor Kaydı Silinmiştir.",
                 "Personel Rapor Kaydı Silinemedi:", "Personel Rapor Kaydı Silme İşlemi");
 
             sbAddPersonelIzin.Click += (o, args) => AddDetail<PersonelIzinEditForm, PersonelIzin>();
-            sbChangePersonelIzin.Click += (o, args) => ChangeDetail<PersonelIzinEditForm, PersonelIzin>(gvIzinler);
+            sbChangePersonelIzin.Click += (o, args) => EditDetail<PersonelIzinEditForm, PersonelIzin>(gvIzinler);
             sbDeletePersonelIzin.Click += (o, args) => DeleteDetail<PersonelIzin>(gvIzinler, "Personel İzin Kaydı Silinmiştir.",
                 "Personel İzin Kaydı Silinemedi:", "Personel İzin Kaydı Silme İşlemi");
 
             sbAddPersonelYabanciDil.Click += (o, args) => AddDetail<PersonelYabanciDilEditForm, PersonelYabanciDil>();
-            sbChangePersonelYabanciDil.Click += (o, args) => ChangeDetail<PersonelYabanciDilEditForm, PersonelYabanciDil>(gvYabanciDil);
+            sbChangePersonelYabanciDil.Click += (o, args) => EditDetail<PersonelYabanciDilEditForm, PersonelYabanciDil>(gvYabanciDil);
             sbDeletePersonelYabanciDil.Click += (o, args) => DeleteDetail<PersonelYabanciDil>(gvYabanciDil, "Personel Yabancı Dil Kaydı Silinmiştir.",
                 "Personel Yabancı Dil Kaydı Silinemedi:", "Personel Yabancı Dil Kaydı Silme İşlemi");
 
             sbAddPersonelSertifika.Click += (o, args) => AddDetail<PersonelSertifikaEditForm, PersonelSertifika>();
-            sbChangePersonelSertifika.Click += (o, args) => ChangeDetail<PersonelSertifikaEditForm, PersonelSertifika>(gvSertifikalar);
+            sbChangePersonelSertifika.Click += (o, args) => EditDetail<PersonelSertifikaEditForm, PersonelSertifika>(gvSertifikalar);
             sbDeletePersonelSertifika.Click += (o, args) => DeleteDetail<PersonelSertifika>(gvSertifikalar, "Personel Sertifika Kaydı Silinmiştir.",
                 "Personel Sertifika Kaydı Silinemedi:", "Personel Sertifika Kaydı Silme İşlemi");
 
@@ -268,7 +268,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             }
         }
 
-        private new void ChangeDetail<TForm, T>(GridView gv)
+        private new void EditDetail<TForm, T>(GridView gv)
             where TForm : PersonelDetailEditForm<T>, new()
             where T : PersonelDetail, new()
         {
@@ -283,7 +283,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 }
         }
 
-        private new void DeleteDetail<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
+        private void DeleteDetail<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
         {
             TObject o = gv.GetFocusedRow() as TObject;
             if (o != null)

@@ -1570,6 +1570,17 @@ namespace Naz.Hastane.Data.Services
         }
         #endregion
 
+        #region Ameliyathane
+
+        public static IList<AmeliyatListe> GetDailyAmeliyatListe(ISession session, DateTime date)
+        {
+            IList<AmeliyatListe> result = (from al in session.Query<AmeliyatListe>()
+                                           where al.Tarih == date
+                                           select al
+                                           ).ToList<AmeliyatListe>();
+            return result;
+        }
+        #endregion
         // Hasta Borç Alacak
 
         //select SNR, BHDAT, MTOPT from BEHAND where KNR='870366' and MTOPT>0 order by SNR

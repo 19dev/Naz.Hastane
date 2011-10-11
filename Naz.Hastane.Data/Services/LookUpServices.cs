@@ -397,6 +397,10 @@ namespace Naz.Hastane.Data.Services
         public static IList<Unvan> Unvans
         { get { return LookUpTable(ref _Unvans); } }
 
+        private static IList<AmeliyatDurumTipi> _AmeliyatDurumTipis;
+        public static IList<AmeliyatDurumTipi> AmeliyatDurumTipis
+        { get { return LookUpTable(ref _AmeliyatDurumTipis); } }
+
         #endregion
 
         #region Pharmacy

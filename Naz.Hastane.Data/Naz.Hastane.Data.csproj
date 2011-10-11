@@ -163,6 +163,8 @@
     <Compile Include="Entities\Medula\MedulaProvisionResult.cs" />
     <Compile Include="Entities\Medula\PatientVisitExtraBase.cs" />
     <Compile Include="Entities\Patient\PatientAnamnesis.cs" />
+    <Compile Include="Entities\Patient\AmeliyatListe.cs" />
+    <Compile Include="Entities\Patient\AmeliyatDurumTipi.cs" />
     <Compile Include="Entities\Patient\UserPatientVisit.cs" />
     <Compile Include="Entities\Personel\HastaneBolumu.cs" />
     <Compile Include="Entities\Personel\HizmetIciEgitimTipi.cs" />
@@ -308,6 +310,8 @@
     <Compile Include="Mappings\Medula\MEDRAPORDOKTORMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORETKENMADDEMap.cs" />
     <Compile Include="Mappings\Medula\MEDRAPORTESHISMap.cs" />
+    <Compile Include="Mappings\Patient\AmeliyatListeMap.cs" />
+    <Compile Include="Mappings\Patient\AmeliyatDurumTipiMap.cs" />
     <Compile Include="Mappings\Patient\UserPatientVisitMap.cs" />
     <Compile Include="Mappings\Personel\HastaneBolumuMap.cs" />
     <Compile Include="Mappings\Personel\HizmetIciEgitimTipiMap.cs" />

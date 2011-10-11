@@ -1,14 +1,10 @@
 using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
 using System.Windows.Forms;
-using NHibernate;
-using Naz.Hastane.Data.Entities;
 using DevExpress.XtraGrid.Views.Grid;
+using Naz.Hastane.Data.Entities;
 using Naz.Hastane.Data.Services;
-using DevExpress.XtraEditors;
 using Naz.Hastane.Win.Forms;
+using NHibernate;
 
 namespace Naz.Hastane.Win.MDIChildForms
 {
@@ -162,7 +158,7 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
             }
         }
 
-        protected void ChangeDetail<TForm, T>(GridView gv)
+        protected void EditDetail<TForm, T>(GridView gv)
             where TForm : DetailEditForm<T>, new()
             where T : IDBase, new()
         {
@@ -177,10 +173,10 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
                 }
         }
 
-        protected void DeleteDetail<TObject>(GridView gv, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
+        protected void DeleteDetail<TObject>(GridView gv, string deleteMessage, string deleteSuccesful, string deleteFail, string msgCaption) where TObject : IDBase
         {
             TObject o = gv.GetFocusedRow() as TObject;
-            if (o != null)
+            if (o != null && SimpleMsgBoxForm.ShowYesNo(deleteMessage, msgCaption, true) == System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {

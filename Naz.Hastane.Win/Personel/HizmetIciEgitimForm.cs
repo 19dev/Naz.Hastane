@@ -31,19 +31,19 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbChangeHizmetIciEgitim_Click(object sender, System.EventArgs e)
         {
-            ChangeDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
+            EditDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
         }
 
         private void sbDeleteHizmetIciEgitim_Click(object sender, System.EventArgs e)
         {
-            DeleteDetail<HizmetIciEgitim>(gvHizmetIciEgitim, "Hizmetiçi Eğitim Kaydı Silinmiştir.",
+            DeleteDetail<HizmetIciEgitim>(gvHizmetIciEgitim, "Hizmetiçi Eğitim Kaydı Silmek İstiyor Musunuz?", "Hizmetiçi Eğitim Kaydı Silinmiştir.",
                 "Hizmetiçi Eğitim Kaydı Silinemedi:", "Hizmetiçi Eğitim Kaydı Silme İşlemi");
         }
         #endregion
 
         private void gvHizmetIciEgitim_DoubleClick(object sender, EventArgs e)
         {
-            ChangeDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
+            EditDetail<HizmetIciEgitimEditForm, HizmetIciEgitim>(gvHizmetIciEgitim);
         }
 
         private void gvPersonel_DoubleClick(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void sbDeletePersonel_Click(object sender, EventArgs e)
         {
-            DeleteDetail<PersonelHizmetIciEgitim>(gvPersonel, "Hizmetiçi Eğitim Personel Kaydı Silinmiştir.",
+            DeleteDetail<PersonelHizmetIciEgitim>(gvPersonel, "Hizmetiçi Eğitim Personel Kaydı Silmek İstiyor Musunuz?", "Hizmetiçi Eğitim Personel Kaydı Silinmiştir.",
                 "Hizmetiçi Eğitim Personel Kaydı Silinemedi:", "Hizmetiçi Eğitim Personel Kaydı Silme İşlemi");
         }
         
