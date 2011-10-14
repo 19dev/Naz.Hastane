@@ -72,9 +72,12 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
 
         public void ReOpenSession()
         {
-            session.Clear();
-            session.Close();
-            session.Dispose();
+            if (session != null)
+            {
+                session.Clear();
+                session.Close();
+                session.Dispose();
+            }
             session = SessionFactory.OpenSession();
         }
 
@@ -154,7 +157,10 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
                 frm.DetailFormParams(0);
                 frm.ShowDialog();
                 if (frm.IsOK)
+                {
+                    //session.Flush();
                     ReLoadForm();
+                }
             }
         }
 
@@ -169,7 +175,10 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
                     frm.DetailFormParams(o.ID);
                     frm.ShowDialog();
                     if (frm.IsOK)
+                    {
+                        //session.Flush();
                         ReLoadForm();
+                    }
                 }
         }
 
@@ -181,8 +190,9 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
                 try
                 {
                     LookUpServices.Delete(Session, o);
-                    ReLoadForm();
                     SimpleMsgBoxForm.ShowMsgBox(deleteSuccesful, msgCaption, false);
+                    //session.Flush();
+                    ReLoadForm();
                 }
                 catch (Exception error)
                 {

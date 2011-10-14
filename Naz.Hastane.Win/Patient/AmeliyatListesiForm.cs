@@ -38,8 +38,38 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         protected override void ReLoadForm()
         {
+            ReOpenSession();
             gcAmeliyatListe.DataSource = PatientServices.GetDailyAmeliyatListe(Session, deDate.DateTime.Date);
         }
 
+        private void sbBasladi_Click(object sender, EventArgs e)
+        {
+            SetStatus(2);
+        }
+
+        private void sbBitti_Click(object sender, EventArgs e)
+        {
+            SetStatus(3);
+        }
+
+        private void sbIptal_Click(object sender, EventArgs e)
+        {
+            SetStatus(4);
+        }
+
+        private void SetStatus(int statusCode)
+        {
+            AmeliyatListe al = gvAmeliyatListe.GetFocusedRow() as AmeliyatListe;
+            if (al != null)
+            {
+                PatientServices.UpdateAmeliyatListeStatus(Session, UIUtilities.CurrentUser, al, statusCode);
+                ReLoadForm();
+            }
+        }
+
+        private void deDate_DateTimeChanged(object sender, EventArgs e)
+        {
+            ReLoadForm();
+        }
     }
 }

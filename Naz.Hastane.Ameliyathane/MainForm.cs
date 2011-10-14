@@ -82,7 +82,7 @@ namespace Naz.Hastane.Ameliyathane
         {
             lciAmeliyatListe.Text = "Ameliyat Listesi (" + DateTime.Now + ")";
             counter++;
-            if (counter > 30)
+            if (counter > 10)
             {
                 counter = 0;
                 ReLoadForm();
@@ -96,6 +96,7 @@ namespace Naz.Hastane.Ameliyathane
 
         protected void ReLoadForm()
         {
+            ReOpenSession();
             gcAmeliyatListe.DataSource = PatientServices.GetDailyAmeliyatListe(Session, DateTime.Today);
         }
 
@@ -150,10 +151,13 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
 
         public void ReOpenSession()
         {
-            session.Clear();
-            session.Close();
-            session.Dispose();
-            session = SessionFactory.OpenSession();
+            if (session != null)
+            {
+                session.Clear();
+                session.Close();
+                session.Dispose();
+                session = SessionFactory.OpenSession();
+            }
         }
 
         public virtual void MyDispose()
@@ -175,15 +179,22 @@ You must override ReplaceEntitiesLoadedByFaultedSession to call ReplaceSessionAf
         {
             get
             {
+                string appPath = Application.StartupPath;
+                appPath = Path.Combine(appPath, "Naz.Hastane.Ameliyathane.ini");
                 if (_Configuration == null)
                 {
-                    string appPath = Application.StartupPath;
-                    appPath = Path.Combine(appPath, "Naz.Hastane.Ameliyathane.ini");
-                    _Configuration = new IniConfigSource(appPath);
-                    if (_Configuration.Configs["User"] == null)
+                    try
                     {
-                        _Configuration.AddConfig("User");
-                        _Configuration.Save();
+                        _Configuration = new IniConfigSource(appPath);
+                        if (_Configuration.Configs["User"] == null)
+                        {
+                            _Configuration.AddConfig("User");
+                            _Configuration.Save();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata: " + ex.Message + "\n\r" + appPath);
                     }
 
                 }

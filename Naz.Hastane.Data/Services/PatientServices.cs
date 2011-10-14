@@ -1580,6 +1580,25 @@ namespace Naz.Hastane.Data.Services
                                            ).ToList<AmeliyatListe>();
             return result;
         }
+
+        public static void UpdateAmeliyatListeStatus(ISession session, User user, AmeliyatListe ameliyatListe, int statusCode)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    ameliyatListe.Durum = session.Get<AmeliyatDurumTipi>(statusCode);
+                    session.Update(ameliyatListe);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
         #endregion
         // Hasta Borç Alacak
 

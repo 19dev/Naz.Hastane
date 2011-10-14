@@ -18,13 +18,14 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.sbSaveAndNew.Click += new System.EventHandler(base.sbSaveAndNew_Click);
             this.sbSaveAndClose.Click += new System.EventHandler(base.sbSaveAndClose_Click);
             this.sbCancel.Click += new System.EventHandler(base.sbCancel_Click);
-
-            deTarih.DateTime = DateTime.Today;
         }
 
         protected override void InitBindings()
         {
             UIUtilities.BindControl(deTarih, TheObject, x => x.Tarih);
+            if (deTarih.EditValue == null)
+                deTarih.EditValue = DateTime.Today;
+
             UIUtilities.BindControl(teOda, TheObject, x => x.Oda);
             UIUtilities.BindControl(teHasta, TheObject, x => x.Hasta);
             UIUtilities.BindControl(teDoktor, TheObject, x => x.Doktor);
