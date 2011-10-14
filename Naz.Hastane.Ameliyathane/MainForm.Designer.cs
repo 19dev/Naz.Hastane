@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition3 = new DevExpress.XtraGrid.StyleFormatCondition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gcAmeliyatListe = new DevExpress.XtraGrid.GridControl();
             this.gvAmeliyatListe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,16 +45,15 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciAmeliyatListe = new DevExpress.XtraLayout.LayoutControlItem();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAmeliyatListe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAmeliyatListe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAmeliyatListe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,7 @@
             this.colDurum.Name = "colDurum";
             this.colDurum.Visible = true;
             this.colDurum.VisibleIndex = 3;
+            this.colDurum.Width = 163;
             // 
             // layoutControl1
             // 
@@ -81,6 +82,15 @@
             this.layoutControl1.Size = new System.Drawing.Size(986, 699);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(978, 94);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // gcAmeliyatListe
             // 
@@ -143,6 +153,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 163;
             // 
             // gridColumn2
             // 
@@ -155,6 +166,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 215;
             // 
             // gridColumn3
             // 
@@ -167,6 +179,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 248;
             // 
             // gridColumn5
             // 
@@ -175,12 +188,13 @@
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Başlangış Saati";
-            this.gridColumn5.DisplayFormat.FormatString = "t";
+            this.gridColumn5.DisplayFormat.FormatString = "{0:HH:mm}";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn5.FieldName = "BaslangicSaati";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 171;
             // 
             // gridColumn6
             // 
@@ -193,8 +207,6 @@
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn6.FieldName = "BitisSaati";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -224,21 +236,6 @@
             this.lciAmeliyatListe.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciAmeliyatListe.TextSize = new System.Drawing.Size(143, 25);
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(978, 94);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.pictureBox1;
@@ -250,6 +247,12 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // MainForm
             // 
@@ -267,11 +270,11 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAmeliyatListe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAmeliyatListe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAmeliyatListe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 

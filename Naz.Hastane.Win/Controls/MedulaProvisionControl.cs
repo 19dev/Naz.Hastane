@@ -114,13 +114,16 @@ namespace Naz.Hastane.Win.Controls
 
                 if (e.Result.sonucKodu == "0000" || e.Result.sonucKodu == "9000")
                 {
-                    mpr.Ad = e.Result.hastaBilgileri.ad;
-                    mpr.Soyad = e.Result.hastaBilgileri.soyad;
-                    mpr.Cinsiyet = e.Result.hastaBilgileri.cinsiyet;
-                    mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
-                    mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
-                    mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
-                    lueInsuranceType.EditValue = e.Result.hastaBilgileri.sigortaliTuru;
+                    if (e.Result.hastaBilgileri != null && !String.IsNullOrWhiteSpace(e.Result.hastaBilgileri.ad))
+                    {
+                        mpr.Ad = e.Result.hastaBilgileri.ad;
+                        mpr.Soyad = e.Result.hastaBilgileri.soyad;
+                        mpr.Cinsiyet = e.Result.hastaBilgileri.cinsiyet;
+                        mpr.DogumTarihi = e.Result.hastaBilgileri.dogumTarihi;
+                        mpr.TCKimlikNo = e.Result.hastaBilgileri.tcKimlikNo;
+                        mpr.SigortaliTuru = e.Result.hastaBilgileri.sigortaliTuru;
+                        lueInsuranceType.EditValue = e.Result.hastaBilgileri.sigortaliTuru;
+                    }
 
                     mpr.HastaBasvuruNo = e.Result.hastaBasvuruNo;
                     mpr.TakipNo = e.Result.takipNo;

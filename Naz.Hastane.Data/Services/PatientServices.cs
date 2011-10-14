@@ -599,16 +599,19 @@ namespace Naz.Hastane.Data.Services
 
         public static void UpdatePatientRecordsFromMedula(ISession session, User user, Patient patient, PatientVisit pv, MedulaProvisionResult mpr)
         {
-            using (ITransaction transaction = session.BeginTransaction())
+            if (!String.IsNullOrWhiteSpace(mpr.SigortaliTuru))
             {
-                patient.InsuranceType = mpr.SigortaliTuru;
-                patient.TransferorInstitution = mpr.TransferorInstitution;
-                patient.USER_ID_UPDATE = user.USER_ID;
-                patient.DATE_UPDATE = DateTime.Now;
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    patient.InsuranceType = mpr.SigortaliTuru;
+                    patient.TransferorInstitution = mpr.TransferorInstitution;
+                    patient.USER_ID_UPDATE = user.USER_ID;
+                    patient.DATE_UPDATE = DateTime.Now;
 
-                session.Update(patient);
-                //session.Flush();
-                transaction.Commit();
+                    session.Update(patient);
+                    //session.Flush();
+                    transaction.Commit();
+                }
             }
             UpdatePatientVisitWithMedulaProvision(session, user, pv, mpr);
             UpdatePatientVisitRecordWithMedulaProvision(session, user, pv.PatientVisitRecords[0], mpr);

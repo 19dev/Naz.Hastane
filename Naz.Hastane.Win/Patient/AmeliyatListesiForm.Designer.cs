@@ -291,7 +291,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Başlangıç Saati";
-            this.gridColumn6.DisplayFormat.FormatString = "t";
+            this.gridColumn6.DisplayFormat.FormatString = "{0:HH:mm}";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn6.FieldName = "BaslangicSaati";
             this.gridColumn6.Name = "gridColumn6";
@@ -301,7 +301,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Bitiş Saati";
-            this.gridColumn7.DisplayFormat.FormatString = "t";
+            this.gridColumn7.DisplayFormat.FormatString = "{0:HH:mm}";
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn7.FieldName = "BitisSaati";
             this.gridColumn7.Name = "gridColumn7";

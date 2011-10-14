@@ -80,7 +80,7 @@ namespace Naz.Hastane.Ameliyathane
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            lciAmeliyatListe.Text = "Ameliyat Listesi (" + DateTime.Now + ")";
+            lciAmeliyatListe.Text = String.Format("Ameliyat Listesi ({0:dd/MM/yyyy HH:mm:ss})", DateTime.Now);
             counter++;
             if (counter > 10)
             {
