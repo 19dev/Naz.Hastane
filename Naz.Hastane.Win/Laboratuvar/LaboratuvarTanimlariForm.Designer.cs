@@ -168,142 +168,142 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(959, 496);
+            this.layoutControl1.Size = new System.Drawing.Size(928, 684);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // textEdit16
             // 
-            this.textEdit16.Location = new System.Drawing.Point(36, 368);
+            this.textEdit16.Location = new System.Drawing.Point(36, 556);
             this.textEdit16.Name = "textEdit16";
-            this.textEdit16.Size = new System.Drawing.Size(157, 20);
+            this.textEdit16.Size = new System.Drawing.Size(151, 20);
             this.textEdit16.StyleController = this.layoutControl1;
             this.textEdit16.TabIndex = 31;
             // 
             // textEdit15
             // 
-            this.textEdit15.Location = new System.Drawing.Point(221, 344);
+            this.textEdit15.Location = new System.Drawing.Point(215, 532);
             this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(158, 20);
+            this.textEdit15.Size = new System.Drawing.Size(152, 20);
             this.textEdit15.StyleController = this.layoutControl1;
             this.textEdit15.TabIndex = 30;
             // 
             // textEdit14
             // 
-            this.textEdit14.Location = new System.Drawing.Point(36, 392);
+            this.textEdit14.Location = new System.Drawing.Point(36, 580);
             this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(157, 20);
+            this.textEdit14.Size = new System.Drawing.Size(151, 20);
             this.textEdit14.StyleController = this.layoutControl1;
             this.textEdit14.TabIndex = 29;
             // 
             // textEdit13
             // 
-            this.textEdit13.Location = new System.Drawing.Point(221, 368);
+            this.textEdit13.Location = new System.Drawing.Point(215, 556);
             this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(158, 20);
+            this.textEdit13.Size = new System.Drawing.Size(152, 20);
             this.textEdit13.StyleController = this.layoutControl1;
             this.textEdit13.TabIndex = 28;
             // 
             // textEdit12
             // 
-            this.textEdit12.Location = new System.Drawing.Point(36, 344);
+            this.textEdit12.Location = new System.Drawing.Point(36, 532);
             this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(157, 20);
+            this.textEdit12.Size = new System.Drawing.Size(151, 20);
             this.textEdit12.StyleController = this.layoutControl1;
             this.textEdit12.TabIndex = 27;
             // 
             // textEdit11
             // 
-            this.textEdit11.Location = new System.Drawing.Point(221, 392);
+            this.textEdit11.Location = new System.Drawing.Point(215, 580);
             this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(158, 20);
+            this.textEdit11.Size = new System.Drawing.Size(152, 20);
             this.textEdit11.StyleController = this.layoutControl1;
             this.textEdit11.TabIndex = 26;
             // 
             // textEdit10
             // 
-            this.textEdit10.Location = new System.Drawing.Point(36, 416);
+            this.textEdit10.Location = new System.Drawing.Point(36, 604);
             this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(157, 20);
+            this.textEdit10.Size = new System.Drawing.Size(151, 20);
             this.textEdit10.StyleController = this.layoutControl1;
             this.textEdit10.TabIndex = 25;
             // 
             // textEdit9
             // 
-            this.textEdit9.Location = new System.Drawing.Point(221, 320);
+            this.textEdit9.Location = new System.Drawing.Point(215, 508);
             this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(158, 20);
+            this.textEdit9.Size = new System.Drawing.Size(152, 20);
             this.textEdit9.StyleController = this.layoutControl1;
             this.textEdit9.TabIndex = 24;
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(221, 416);
+            this.textEdit8.Location = new System.Drawing.Point(215, 604);
             this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(158, 20);
+            this.textEdit8.Size = new System.Drawing.Size(152, 20);
             this.textEdit8.StyleController = this.layoutControl1;
             this.textEdit8.TabIndex = 23;
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(36, 320);
+            this.textEdit7.Location = new System.Drawing.Point(36, 508);
             this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(157, 20);
+            this.textEdit7.Size = new System.Drawing.Size(151, 20);
             this.textEdit7.StyleController = this.layoutControl1;
             this.textEdit7.TabIndex = 22;
             // 
             // textEdit6
             // 
-            this.textEdit6.Location = new System.Drawing.Point(221, 296);
+            this.textEdit6.Location = new System.Drawing.Point(215, 484);
             this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(158, 20);
+            this.textEdit6.Size = new System.Drawing.Size(152, 20);
             this.textEdit6.StyleController = this.layoutControl1;
             this.textEdit6.TabIndex = 21;
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(36, 296);
+            this.textEdit3.Location = new System.Drawing.Point(36, 484);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(157, 20);
+            this.textEdit3.Size = new System.Drawing.Size(151, 20);
             this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 20;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(221, 440);
+            this.textEdit2.Location = new System.Drawing.Point(215, 628);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(158, 20);
+            this.textEdit2.Size = new System.Drawing.Size(152, 20);
             this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 19;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(36, 440);
+            this.textEdit1.Location = new System.Drawing.Point(36, 628);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(157, 20);
+            this.textEdit1.Size = new System.Drawing.Size(151, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 18;
             // 
             // sbNormaller
             // 
-            this.sbNormaller.Location = new System.Drawing.Point(407, 272);
+            this.sbNormaller.Location = new System.Drawing.Point(395, 460);
             this.sbNormaller.Name = "sbNormaller";
-            this.sbNormaller.Size = new System.Drawing.Size(196, 22);
+            this.sbNormaller.Size = new System.Drawing.Size(188, 22);
             this.sbNormaller.StyleController = this.layoutControl1;
             this.sbNormaller.TabIndex = 17;
             this.sbNormaller.Text = "Normaller";
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(36, 272);
+            this.textEdit5.Location = new System.Drawing.Point(36, 460);
             this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(157, 20);
+            this.textEdit5.Size = new System.Drawing.Size(151, 20);
             this.textEdit5.StyleController = this.layoutControl1;
             this.textEdit5.TabIndex = 13;
             // 
             // sbKapat
             // 
-            this.sbKapat.Location = new System.Drawing.Point(819, 292);
+            this.sbKapat.Location = new System.Drawing.Point(788, 480);
             this.sbKapat.Name = "sbKapat";
             this.sbKapat.Size = new System.Drawing.Size(116, 22);
             this.sbKapat.StyleController = this.layoutControl1;
@@ -312,7 +312,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // sbTanimlaDegistir
             // 
-            this.sbTanimlaDegistir.Location = new System.Drawing.Point(819, 266);
+            this.sbTanimlaDegistir.Location = new System.Drawing.Point(788, 454);
             this.sbTanimlaDegistir.Name = "sbTanimlaDegistir";
             this.sbTanimlaDegistir.Size = new System.Drawing.Size(116, 22);
             this.sbTanimlaDegistir.StyleController = this.layoutControl1;
@@ -321,7 +321,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // sbSil
             // 
-            this.sbSil.Location = new System.Drawing.Point(819, 240);
+            this.sbSil.Location = new System.Drawing.Point(788, 428);
             this.sbSil.Name = "sbSil";
             this.sbSil.Size = new System.Drawing.Size(116, 22);
             this.sbSil.StyleController = this.layoutControl1;
@@ -333,7 +333,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.gridControl1.Location = new System.Drawing.Point(12, 37);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(935, 187);
+            this.gridControl1.Size = new System.Drawing.Size(904, 375);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -395,9 +395,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(221, 272);
+            this.textEdit4.Location = new System.Drawing.Point(215, 460);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(158, 20);
+            this.textEdit4.Size = new System.Drawing.Size(152, 20);
             this.textEdit4.StyleController = this.layoutControl1;
             this.textEdit4.TabIndex = 12;
             // 
@@ -406,7 +406,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.cmbLaboratuvarKodu.FormattingEnabled = true;
             this.cmbLaboratuvarKodu.Location = new System.Drawing.Point(102, 12);
             this.cmbLaboratuvarKodu.Name = "cmbLaboratuvarKodu";
-            this.cmbLaboratuvarKodu.Size = new System.Drawing.Size(200, 21);
+            this.cmbLaboratuvarKodu.Size = new System.Drawing.Size(190, 21);
             this.cmbLaboratuvarKodu.TabIndex = 4;
             // 
             // layoutControlGroup1
@@ -423,7 +423,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.emptySpaceItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(959, 496);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(928, 684);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -433,7 +433,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(939, 191);
+            this.layoutControlItem1.Size = new System.Drawing.Size(908, 379);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -443,9 +443,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(294, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(284, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(645, 25);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(624, 25);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -455,7 +455,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.lciLaboratuvarKodu.CustomizationFormText = "Laboratuvar Kodu";
             this.lciLaboratuvarKodu.Location = new System.Drawing.Point(0, 0);
             this.lciLaboratuvarKodu.Name = "lciLaboratuvarKodu";
-            this.lciLaboratuvarKodu.Size = new System.Drawing.Size(294, 25);
+            this.lciLaboratuvarKodu.Size = new System.Drawing.Size(284, 25);
             this.lciLaboratuvarKodu.Text = "Laboratuvar Kodu";
             this.lciLaboratuvarKodu.TextSize = new System.Drawing.Size(86, 13);
             // 
@@ -466,9 +466,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlGroup2,
             this.layoutControlGroup4,
             this.layoutControlGroup6});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 216);
+            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 404);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(619, 260);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(599, 260);
             this.layoutControlGroup5.Text = "layoutControlGroup5";
             this.layoutControlGroup5.TextVisible = false;
             // 
@@ -477,9 +477,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlGroup2.CustomizationFormText = "Normal Değerler";
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem13});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(371, 0);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(359, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(224, 236);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(216, 236);
             this.layoutControlGroup2.Text = "Normal Değerler";
             // 
             // layoutControlItem13
@@ -488,7 +488,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem13";
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(200, 192);
+            this.layoutControlItem13.Size = new System.Drawing.Size(192, 192);
             this.layoutControlItem13.Text = "layoutControlItem13";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextToControlDistance = 0;
@@ -506,9 +506,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem16,
             this.layoutControlItem18,
             this.layoutControlItem20});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(185, 0);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(179, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(186, 236);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(180, 236);
             this.layoutControlGroup4.Text = "Birimi";
             // 
             // layoutControlItem8
@@ -517,7 +517,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem8.Text = "layoutControlItem8";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
@@ -529,7 +529,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem6.Text = "layoutControlItem6";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
@@ -541,7 +541,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem10.CustomizationFormText = "layoutControlItem10";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem10.Text = "layoutControlItem10";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
@@ -553,7 +553,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem12.CustomizationFormText = "layoutControlItem12";
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem12.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem12.Text = "layoutControlItem12";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextToControlDistance = 0;
@@ -565,7 +565,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem14.Text = "layoutControlItem14";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextToControlDistance = 0;
@@ -577,7 +577,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem16.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem16.Text = "layoutControlItem16";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextToControlDistance = 0;
@@ -589,7 +589,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem18.CustomizationFormText = "layoutControlItem18";
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem18.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem18.Text = "layoutControlItem18";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
@@ -601,7 +601,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem20.CustomizationFormText = "layoutControlItem20";
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem20.Size = new System.Drawing.Size(156, 24);
             this.layoutControlItem20.Text = "layoutControlItem20";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextToControlDistance = 0;
@@ -621,7 +621,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem21});
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(185, 236);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(179, 236);
             this.layoutControlGroup6.Text = "Parametre Adı";
             // 
             // layoutControlItem9
@@ -630,7 +630,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem9";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem9.Text = "layoutControlItem9";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextToControlDistance = 0;
@@ -642,7 +642,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -654,7 +654,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem7.Text = "layoutControlItem7";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
@@ -666,7 +666,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem11";
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem11.Text = "layoutControlItem11";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 0;
@@ -678,7 +678,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem15.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem15.Text = "layoutControlItem15";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextToControlDistance = 0;
@@ -690,7 +690,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem17.Text = "layoutControlItem17";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
@@ -702,7 +702,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem19.CustomizationFormText = "layoutControlItem19";
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem19.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem19.Text = "layoutControlItem19";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextToControlDistance = 0;
@@ -714,7 +714,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
             this.layoutControlItem21.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem21.Size = new System.Drawing.Size(155, 24);
             this.layoutControlItem21.Text = "layoutControlItem21";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextToControlDistance = 0;
@@ -727,7 +727,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(795, 216);
+            this.layoutControlGroup3.Location = new System.Drawing.Point(764, 404);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(144, 260);
             this.layoutControlGroup3.Text = "layoutControlGroup3";
@@ -773,9 +773,9 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(619, 216);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(599, 404);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(176, 260);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(165, 260);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -783,7 +783,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 496);
+            this.ClientSize = new System.Drawing.Size(928, 684);
             this.Controls.Add(this.layoutControl1);
             this.Name = "LaboratuvarTanimlariForm";
             this.Text = "Laboratuvar Tanımları";

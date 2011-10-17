@@ -161,6 +161,7 @@ namespace Naz.Hastane.Win {
             this.iDoctorPatientCallList = new DevExpress.XtraBars.BarButtonItem();
             this.iLaboratuvarKabul = new DevExpress.XtraBars.BarButtonItem();
             this.iLabInvoice = new DevExpress.XtraBars.BarButtonItem();
+            this.iAmeliyatListesi = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -207,7 +208,7 @@ namespace Naz.Hastane.Win {
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.iAmeliyatListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.iSearchPatientArchive = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gddFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
@@ -511,10 +512,11 @@ namespace Naz.Hastane.Win {
             this.iDoctorPatientCallList,
             this.iLaboratuvarKabul,
             this.iLabInvoice,
-            this.iAmeliyatListesi});
+            this.iAmeliyatListesi,
+            this.iSearchPatientArchive});
             this.rcMain.LargeImages = this.imageCollection1;
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 338;
+            this.rcMain.MaxItemId = 340;
             this.rcMain.Name = "rcMain";
             this.rcMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1618,6 +1620,12 @@ namespace Naz.Hastane.Win {
             this.iLabInvoice.Id = 335;
             this.iLabInvoice.Name = "iLabInvoice";
             // 
+            // iAmeliyatListesi
+            // 
+            this.iAmeliyatListesi.Caption = "Ameliyat Listesi";
+            this.iAmeliyatListesi.Id = 337;
+            this.iAmeliyatListesi.Name = "iAmeliyatListesi";
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1672,6 +1680,7 @@ namespace Naz.Hastane.Win {
             this.rpgSGK.ItemLinks.Add(this.iLaboratuvarKabul);
             this.rpgSGK.ItemLinks.Add(this.iDoctorPatientCallList);
             this.rpgSGK.ItemLinks.Add(this.iAmeliyatListesi);
+            this.rpgSGK.ItemLinks.Add(this.iSearchPatientArchive);
             this.rpgSGK.Name = "rpgSGK";
             this.rpgSGK.Text = "SGK";
             // 
@@ -2040,11 +2049,11 @@ namespace Naz.Hastane.Win {
             this.xtraTabbedMdiManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // iAmeliyatListesi
+            // iSearchPatientArchive
             // 
-            this.iAmeliyatListesi.Caption = "Ameliyat Listesi";
-            this.iAmeliyatListesi.Id = 337;
-            this.iAmeliyatListesi.Name = "iAmeliyatListesi";
+            this.iSearchPatientArchive.Caption = "Arþiv Ara";
+            this.iSearchPatientArchive.Id = 339;
+            this.iSearchPatientArchive.Name = "iSearchPatientArchive";
             // 
             // frmMain
             // 
@@ -2277,6 +2286,7 @@ namespace Naz.Hastane.Win {
         private DevExpress.XtraBars.BarButtonItem iDoctorPatientCallList;
         private DevExpress.XtraBars.BarButtonItem iLabInvoice;
         private DevExpress.XtraBars.BarButtonItem iAmeliyatListesi;
+        private DevExpress.XtraBars.BarButtonItem iSearchPatientArchive;
 
     }
 }

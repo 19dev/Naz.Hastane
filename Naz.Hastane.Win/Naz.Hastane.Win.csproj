@@ -391,6 +391,12 @@
     <Compile Include="Patient\AmeliyatListeEditForm.Designer.cs">
       <DependentUpon>AmeliyatListeEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\SearchPatientArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\SearchPatientArchiveForm.Designer.cs">
+      <DependentUpon>SearchPatientArchiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\SelectLabEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -693,6 +699,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\AmeliyatListeEditForm.resx">
       <DependentUpon>AmeliyatListeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\SearchPatientArchiveForm.resx">
+      <DependentUpon>SearchPatientArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\SelectLabEntryForm.resx">
       <DependentUpon>SelectLabEntryForm.cs</DependentUpon>

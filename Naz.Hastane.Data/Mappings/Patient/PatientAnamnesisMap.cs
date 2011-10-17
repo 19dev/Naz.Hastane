@@ -8,12 +8,12 @@ namespace Naz.Hastane.Data.Mappings
 		public PatientAnamnesisMap() 
 		{
 			Table("TET_ANAMNEZ");
-            //Id(x => x.PatientVisitRecord).UniqueKey("KNR, SNR, GELIS_TARIHI");
-            CompositeId()
-                .KeyReference(x => x.PatientVisitRecord, "KNR", "SNR", "GELIS_TARIHI");
-            //    .KeyProperty(x => x.KNR, "KNR")
-            //    .KeyProperty(x => x.SNR, "SNR")
-            //    .KeyProperty(x => x.GELIS_TARIHI, "GELIS_TARIHI");
+			//Id(x => x.PatientVisitRecord).UniqueKey("KNR, SNR, GELIS_TARIHI");
+			CompositeId()
+				.KeyReference(x => x.PatientVisitRecord, "KNR", "SNR", "GELIS_TARIHI");
+			//    .KeyProperty(x => x.KNR, "KNR")
+			//    .KeyProperty(x => x.SNR, "SNR")
+			//    .KeyProperty(x => x.GELIS_TARIHI, "GELIS_TARIHI");
 
 			Map(x => x.OZSOYGECMIS).Column("OZSOYGECMIS");
 			Map(x => x.SISTEMSORGULARI).Column("SISTEMSORGULARI");
@@ -33,9 +33,9 @@ namespace Naz.Hastane.Data.Mappings
 			Map(x => x.USER_ID_UPDATE).Column("USER_ID_UPDATE").Length(20);
 			Map(x => x.DATE_UPDATE).Column("DATE_UPDATE");
 
-            HasMany(x => x.PatientAnamnesisDetails)
-                .KeyColumns.Add("KNR", "SNR", "GELIS_TARIHI")
-                .Inverse();
-        }
+			HasMany(x => x.PatientAnamnesisDetails)
+				.KeyColumns.Add("KNR", "SNR", "GELIS_TARIHI")
+				.Inverse();
+		}
 	}
 }

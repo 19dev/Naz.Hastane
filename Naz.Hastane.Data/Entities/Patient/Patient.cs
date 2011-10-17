@@ -24,6 +24,12 @@ namespace Naz.Hastane.Data.Entities
         public virtual string TCId { get; set; } //TCKIMLIKNO
         public virtual string FatherName { get; set; } //BABAADI
         public virtual string MotherName { get; set; } //ANAADI
+
+        public virtual string Yer { get; set; } // ORAN1; length(150); 1
+        public virtual string Oda { get; set; } // ORAN2; length(150); 1
+        public virtual string Raf { get; set; } // ORAN1; length(150); 1
+        public virtual string Kutu { get; set; } // ORAN2; length(150); 1
+
         /// <summary>
         /// CINSIYETI 1:Male, 2:Female
         /// </summary>

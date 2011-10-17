@@ -63,6 +63,35 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
+        public static IList<PatientArchive> GetPatientArchiveByWhere(ISession session, string aWhere)
+        {
+            return session.CreateQuery("From PatientArchive as pa join pa.Patient patient where " + aWhere)
+                .SetMaxResults(100)
+                .List<PatientArchive>();
+        }
+
+        public static IList<PatientArchive> GetPatientArchiveByTCId(ISession session, string aTCID)
+        {
+            IList<PatientArchive> result = (from pa in session.Query<PatientArchive>()
+                                            join p in session.Query<Patient>() on pa.Patient equals p
+                                            where p.TCId == aTCID
+                                            select pa
+                                            ).ToList<PatientArchive>();
+            return result;
+        }
+
+        public static IList<Patient> GetByPatientNo(string aPatientNo)
+        {
+            using (IStatelessSession session = NHibernateSessionManager.Instance.GetSessionFactory().OpenStatelessSession())
+            {
+                IList<Patient> result = (from p in session.Query<Patient>()
+                                         where p.PatientNo == aPatientNo
+                                         select p
+                                                ).ToList<Patient>();
+                return result;
+            }
+        }
+
         public static void SavePatient(ISession session, Patient patient, User user)
         {
             using (ITransaction transaction = session.BeginTransaction())

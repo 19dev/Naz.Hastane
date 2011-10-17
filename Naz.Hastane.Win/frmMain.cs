@@ -833,6 +833,7 @@ namespace Naz.Hastane.Win {
             iLaboratuvarKabul.ItemClick += (o, args) => ShowNewDocument<LaboratuvarKabulForm>();
 
             iAmeliyatListesi.ItemClick += (o, args) => ShowNewDocument<AmeliyatListesiForm>();
+            iSearchPatientArchive.ItemClick += (o, args) => ShowNewDocument<SearchPatientArchiveForm>();
         }
 
         private void OpenLastVisitedPatientsForm()
