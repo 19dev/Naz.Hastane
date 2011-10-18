@@ -218,16 +218,12 @@ namespace Naz.Hastane.Win.MDIChildForms
                 if (String.IsNullOrWhiteSpace(Patient.PatientNo))
                 {
                     teFirstName.Focus();
-                    Patient.USER_ID = UIUtilities.CurrentUser.USER_ID;
-                    Patient.DATE_CREATE = DateTime.Now;
-                    PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
+                    PatientServices.SavePatient(Session, UIUtilities.CurrentUser, Patient);
                     OpenNewForm();
                 }
                 else
                 {
-                    Patient.USER_ID_UPDATE = UIUtilities.CurrentUser.USER_ID;
-                    Patient.DATE_UPDATE = DateTime.Now;
-                    PatientServices.SavePatient(Session, Patient, UIUtilities.CurrentUser);
+                    PatientServices.SavePatient(Session, UIUtilities.CurrentUser, Patient);
                 }
             }
             catch (Exception error)

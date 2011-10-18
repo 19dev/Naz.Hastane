@@ -38,8 +38,8 @@
             this.teLastName = new DevExpress.XtraEditors.TextEdit();
             this.teFirstName = new DevExpress.XtraEditors.TextEdit();
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.gridHastaArama = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcPatients = new DevExpress.XtraGrid.GridControl();
+            this.gvPatients = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colKNR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +52,7 @@
             this.tePatientNo = new DevExpress.XtraEditors.TextEdit();
             this.teTCId = new DevExpress.XtraEditors.TextEdit();
             this.lcgSayfa = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciBulunanHastalar = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPatients = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcgAramaKriterleri = new DevExpress.XtraLayout.LayoutControlGroup();
             this.grpHastaNo = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciPatientNo = new DevExpress.XtraLayout.LayoutControlItem();
@@ -74,12 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFatherName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHastaArama)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPatients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePatientNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAramaKriterleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHastaNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).BeginInit();
@@ -108,7 +108,7 @@
             this.layoutControl1.Controls.Add(this.teLastName);
             this.layoutControl1.Controls.Add(this.teFirstName);
             this.layoutControl1.Controls.Add(this.sbSearch);
-            this.layoutControl1.Controls.Add(this.gridHastaArama);
+            this.layoutControl1.Controls.Add(this.gcPatients);
             this.layoutControl1.Controls.Add(this.tePatientNo);
             this.layoutControl1.Controls.Add(this.teTCId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -209,20 +209,20 @@
             this.sbSearch.Text = "Ara";
             this.sbSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // gridHastaArama
+            // gcPatients
             // 
-            this.gridHastaArama.Location = new System.Drawing.Point(12, 132);
-            this.gridHastaArama.MainView = this.gridView1;
-            this.gridHastaArama.Name = "gridHastaArama";
-            this.gridHastaArama.Size = new System.Drawing.Size(930, 477);
-            this.gridHastaArama.TabIndex = 11;
-            this.gridHastaArama.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridHastaArama.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridHastaArama_MouseDoubleClick);
+            this.gcPatients.Location = new System.Drawing.Point(12, 132);
+            this.gcPatients.MainView = this.gvPatients;
+            this.gcPatients.Name = "gcPatients";
+            this.gcPatients.Size = new System.Drawing.Size(930, 477);
+            this.gcPatients.TabIndex = 11;
+            this.gcPatients.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPatients});
+            this.gcPatients.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridHastaArama_MouseDoubleClick);
             // 
-            // gridView1
+            // gvPatients
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvPatients.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colKNR,
             this.colSoyadi,
             this.colAdi,
@@ -232,10 +232,10 @@
             this.colDogumTarihi,
             this.colDurum,
             this.colKT});
-            this.gridView1.GridControl = this.gridHastaArama;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gvPatients.GridControl = this.gcPatients;
+            this.gvPatients.Name = "gvPatients";
+            this.gvPatients.OptionsBehavior.Editable = false;
+            this.gvPatients.OptionsView.ShowGroupPanel = false;
             // 
             // colKNR
             // 
@@ -344,7 +344,7 @@
             this.lcgSayfa.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.lcgSayfa.GroupBordersVisible = false;
             this.lcgSayfa.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciBulunanHastalar,
+            this.lciPatients,
             this.lcgAramaKriterleri,
             this.lcgTuslar,
             this.lciHastaAdeti});
@@ -354,17 +354,17 @@
             this.lcgSayfa.Text = "Sayfa";
             this.lcgSayfa.TextVisible = false;
             // 
-            // lciBulunanHastalar
+            // lciPatients
             // 
-            this.lciBulunanHastalar.Control = this.gridHastaArama;
-            this.lciBulunanHastalar.CustomizationFormText = "Bulunan Hastalar";
-            this.lciBulunanHastalar.Location = new System.Drawing.Point(0, 120);
-            this.lciBulunanHastalar.Name = "lciBulunanHastalar";
-            this.lciBulunanHastalar.Size = new System.Drawing.Size(934, 481);
-            this.lciBulunanHastalar.Text = "Bulunan Hastalar";
-            this.lciBulunanHastalar.TextSize = new System.Drawing.Size(0, 0);
-            this.lciBulunanHastalar.TextToControlDistance = 0;
-            this.lciBulunanHastalar.TextVisible = false;
+            this.lciPatients.Control = this.gcPatients;
+            this.lciPatients.CustomizationFormText = "Bulunan Hastalar";
+            this.lciPatients.Location = new System.Drawing.Point(0, 120);
+            this.lciPatients.Name = "lciPatients";
+            this.lciPatients.Size = new System.Drawing.Size(934, 481);
+            this.lciPatients.Text = "Bulunan Hastalar";
+            this.lciPatients.TextSize = new System.Drawing.Size(0, 0);
+            this.lciPatients.TextToControlDistance = 0;
+            this.lciPatients.TextVisible = false;
             // 
             // lcgAramaKriterleri
             // 
@@ -556,12 +556,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFatherName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHastaArama)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPatients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePatientNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTCId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSayfa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBulunanHastalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgAramaKriterleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHastaNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPatientNo)).EndInit();
@@ -584,8 +584,8 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridHastaArama;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcPatients;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPatients;
         private DevExpress.XtraEditors.SimpleButton sbSearch;
         private DevExpress.XtraEditors.TextEdit tePatientNo;
         private DevExpress.XtraEditors.TextEdit teTCId;
@@ -593,7 +593,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciPatientNo;
         private DevExpress.XtraLayout.LayoutControlItem lciTCId;
         private DevExpress.XtraLayout.LayoutControlItem lciSearch;
-        private DevExpress.XtraLayout.LayoutControlItem lciBulunanHastalar;
+        private DevExpress.XtraLayout.LayoutControlItem lciPatients;
         private DevExpress.XtraEditors.TextEdit teFatherName;
         private DevExpress.XtraEditors.TextEdit teLastName;
         private DevExpress.XtraEditors.TextEdit teFirstName;

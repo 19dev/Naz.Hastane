@@ -92,7 +92,7 @@ namespace Naz.Hastane.Data.Services
             }
         }
 
-        public static void SavePatient(ISession session, Patient patient, User user)
+        public static void SavePatient(ISession session, User user, Patient patient)
         {
             using (ITransaction transaction = session.BeginTransaction())
             {

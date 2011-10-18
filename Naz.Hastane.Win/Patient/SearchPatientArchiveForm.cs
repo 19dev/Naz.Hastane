@@ -22,19 +22,13 @@ namespace Naz.Hastane.Win.MDIChildForms
 
         private void OpenDetail()
         {
-            if (gridView1.GetFocusedRow() != null)
+            Patient patient = gvPatients.GetFocusedRow() as Patient;
+            if (patient != null)
             {
-                Cursor.Current = Cursors.WaitCursor;
-
-                try
+                using (PatientArchiveEditForm paef = new PatientArchiveEditForm())
                 {
-                    string patientNo;
-                    patientNo = gridView1.GetFocusedRowCellDisplayText("PatientNo");
-                    (this.MdiParent as frmMain).OpenSGKPatient(patientNo);
-                }
-                finally
-                {
-                    Cursor.Current = Cursors.Default;
+                    paef.Patient = patient;
+                    paef.ShowDialog();
                 }
             }
         }
@@ -69,7 +63,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                 {
                     IList<Patient> patients = PatientServices.GetByWhere(criteriaString);
                     this.lcHastaAdeti.Text = "Bulunan:" + patients.Count.ToString();
-                    this.gridHastaArama.DataSource = patients;
+                    this.gcPatients.DataSource = patients;
                 }
                 //this.AcceptButton = this.sbSec;
             }
@@ -91,7 +85,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     NoPatientRecord();
                 }
                 else
-                    this.gridHastaArama.DataSource = result;
+                    this.gcPatients.DataSource = result;
 
                 return true;
             }
@@ -113,7 +107,7 @@ namespace Naz.Hastane.Win.MDIChildForms
                     NoPatientRecord();
                 }
                 else
-                    this.gridHastaArama.DataSource = result;
+                    this.gcPatients.DataSource = result;
                 return true;
             }
 
@@ -151,7 +145,7 @@ namespace Naz.Hastane.Win.MDIChildForms
             this.teLastName.Text = "";
             this.teFatherName.Text = "";
 
-            this.gridHastaArama.DataSource = new List<Patient>();
+            this.gcPatients.DataSource = new List<Patient>();
 
             this.AcceptButton = this.sbSearch;
         }
